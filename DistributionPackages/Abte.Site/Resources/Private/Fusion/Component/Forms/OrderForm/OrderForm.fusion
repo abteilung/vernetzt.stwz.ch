@@ -1,0 +1,58 @@
+prototype(Abte.Site:Content.Form.Druckservice) < prototype(Neos.Fusion.Form:Runtime.RuntimeForm) {
+
+    namespace = "selfix_orderform"
+
+    attributes.class = 'selfix-orderForm'
+
+    process {
+
+        content = afx`
+            <div class="space-y-8">
+                <Abte.Site:OrderForm.MengeUndSorten />
+                <hr />
+                <Abte.Site:OrderForm.Material />
+                <hr />
+                <Abte.Site:OrderForm.Format />
+                <hr />
+                <Abte.Site:OrderForm.Wickelrichtung />
+                <hr />
+                <Abte.Site:OrderForm.Farbe />
+                <hr />
+                <Abte.Site:OrderForm.Beschichtung />
+                <hr />
+                <Abte.Site:OrderForm.Veredelung />
+                <hr />
+                <Abte.Site:OrderForm.Personal />
+            </div>
+        `
+
+        schema {
+            firstName = ${Form.Schema.string().isRequired()}
+            lastName = ${Form.Schema.string().isRequired()}
+            // sports = ${Form.Schema.arrayOf( Form.Schema.string() ).validator('Count', {minimum: 1, maximum: 2})}
+            // lastName = ${Form.Schema.string().isRequired().validator('StringLength', {minimum: 6, maximum: 12})}
+            // picture = ${Form.Schema.resource().isRequired().validator('Neos\Fusion\Form\Runtime\Validation\Validator\FileTypeValidator', {allowedExtensions:['txt', 'jpg']})}
+            // birthDate =  ${Form.Schema.date().isRequired()}
+        }
+    }
+
+    action {
+        message {
+            type = 'Neos.Fusion.Form.Runtime:Message'
+            options.message = afx`<h1>Thank you {data.firstName} {data.lastName}</h1>`
+        }
+        email {
+            type = 'Neos.Fusion.Form.Runtime:Email'
+            options {
+                senderAddress = ${q(node).property('mailFrom')}
+                recipientAddress = ${q(node).property('mailTo')}
+                subject = ${q(node).property('mailSubject')}
+                text = afx`Thank you {data.firstName} {data.lastName}`
+                html = afx`<h1>Thank you {data.firstName} {data.lastName}</h1>`
+                attachments {
+                    upload = ${data.file}
+                }
+            }
+        }
+    }
+}

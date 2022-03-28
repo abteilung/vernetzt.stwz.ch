@@ -1,0 +1,23 @@
+prototype(Sitegeist.Kaleidoscope:DummyImageSource) {
+    @class = 'Sitegeist\\Kaleidoscope\\FusionObjects\\DummyImageSourceImplementation'
+
+    baseWidth = 600
+    baseHeight = 400
+    backgroundColor = '385888'
+    foregroundColor = 'fff'
+    text = null
+
+    thumbnailPreset = null
+    variantPreset = null
+    width = null
+    height = null
+    format = null
+}
+
+
+// Defaults for responsive images
+prototype(Sitegeist.Lazybones:Image) {
+    srcset="320w, 600w, 800w, 1200w, 2600w"
+    sizes="(min-width: 800px) 1000px, (min-width: 480px) 800px, (min-width: 320px) 440px, 100vw"
+    format="webp"
+}

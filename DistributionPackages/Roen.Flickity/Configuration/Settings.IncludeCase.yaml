@@ -1,0 +1,7 @@
+Roen:
+  Flickity:
+    alwaysInclude: false
+    selector:
+      onDocument: '[instanceof Roen.Flickity:Include]'
+      collection: '[instanceof Neos.Neos:ContentCollection]'
+      content: '[instanceof Roen.Flickity:Include],[instanceof Roen.Flickity:LightboxMixin][lightbox=true],[instanceof Carbon.Image:Lightbox][lightbox=true]'

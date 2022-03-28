@@ -1,0 +1,10 @@
+prototype(Abteilung.Gridsystem:Content.Row) < prototype(Abteilung.Gridsystem:Component.ContentCollection) {
+
+    class = Abteilung.Gridsystem:Prototype.Class.Row
+
+  	renderer = afx`
+        <div class={props.class}>
+            <Neos.Neos:ContentCollectionRenderer/>
+        </div>
+    `
+}

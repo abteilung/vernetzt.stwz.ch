@@ -1,0 +1,29 @@
+prototype(Roen.Flickity:Content.ImageSlider.TextBox) < prototype(Neos.Neos:ContentComponent) {
+
+    title = Neos.Neos:Editable {
+        property = 'title'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+  	renderer = afx`
+        <div class={i.isFirst ? 'group cellButton is-selected' : 'group cellButton'}>
+            <p class="font-bold">{props.title}</p>
+            <p class="hidden md:block">{props.subTitle}</p>
+            <!-- 
+                <div class="absolute bottom-0 flex justify-between w-full text-sm">
+                    <a href="#" class="">Weiter zum Projekt</a>
+                    <a href="#" class="text-white">Arrow</a>
+                </div>
+            -->
+        </div>
+    `
+}

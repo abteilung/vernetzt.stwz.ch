@@ -1,0 +1,9 @@
+json = Neos.Fusion:Http.Message {
+    httpResponseHead {
+        headers.Content-Type = 'application/json'
+    }
+
+    nodeTypeCase = Neos.Fusion:Renderer {
+        type = ${q(node).property('_nodeType.name') + '.Json'}
+    }
+}

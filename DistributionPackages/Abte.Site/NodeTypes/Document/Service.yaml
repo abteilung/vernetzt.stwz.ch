@@ -1,0 +1,16 @@
+'Abte.Site:Document.Service':
+    superTypes:
+        'Abte.Site:Document.AbstractPage': true
+        'Abte.Site:Mixin.Image': true
+        'Selfix.Flickity:Include': true
+        'Abte.Site:Constraint.Document.Restricted': true
+        'Abte.Site:Mixin.Searchable.SiteSearch': true
+    ui:
+        label: i18n
+        icon: hand-holding-heart
+        position: 300
+    constraints:
+        nodeTypes:
+            '*': false
+            'Abte.Site:Document.Category': true
+            'Abte.Site:Document.Person': true

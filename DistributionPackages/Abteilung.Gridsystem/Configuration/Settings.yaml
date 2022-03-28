@@ -1,0 +1,9 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Abteilung.Gridsystem: true
+    userInterface:
+      translation:
+        autoInclude:
+          Abteilung.Gridsystem: ['Main', 'NodeTypes/*']

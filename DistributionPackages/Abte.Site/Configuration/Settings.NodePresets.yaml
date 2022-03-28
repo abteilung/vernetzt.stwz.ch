@@ -1,0 +1,273 @@
+Neos:
+  Neos:
+    nodeTypes:
+      presets:
+        properties:
+          'text':
+            'title':
+              type: string
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    placeholder: 'Enter headline here...'
+                    hyphens: true
+                    formatting:
+                      h1: true
+                      h2: true
+                      h3: true
+                      h4: true
+                      h5: true
+                      a: true
+            'plain':
+              type: string
+              defaultValue: ''
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    placeholder: 'Enter Text here...'
+                    autoparagraph: false
+                    hyphens: true
+            'inspector':
+              type: string
+              defaultValue: ''
+              ui:
+                inspector:
+                  group: 'general'
+                label: 'Text (plain)'
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    blockStyling:
+                      lists: true
+                    placeholder: 'Enter Text here...'
+                    autoparagraph: false
+                    hyphens: true
+            'free':
+              type: string
+              defaultValue: ''
+              ui:
+                inlineEditable: true
+                inline:
+                  editorOptions:
+                    blockStyling:
+                      lists: true
+                    placeholder: 'Enter text here...'
+                    autoparagraph: true
+                    hyphens: true
+                    formatting:
+                      strong: true
+                      em: true
+                      sub: true
+                      sup: true
+                      p: true
+                      h1: true
+                      h2: true
+                      h3: true
+                      h4: true
+                      h5: true
+                      h6: false
+                      pre: false
+                      table: true
+                      ol: true
+                      ul: true
+                      a: true
+            'link':
+              type: string
+              ui:
+                label: 'Link'
+                reloadPageIfChanged: false
+                inspector:
+                  group: 'general'
+                  editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+            'email':
+              type: string
+              ui:
+                label: 'E-Mail'
+                reloadPageIfChanged: false
+                inspector:
+                  group: 'general'
+                  editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+              inline:
+                editorOptions:
+                  assets: false
+                  placeholder: 'Enter a valid E-Mail-Address'
+              validation:
+                Neos.Neos/Validation/EmailAddressValidator
+
+          'image':
+            asset:
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 50
+            'assets':
+              type: array<Neos\Media\Domain\Model\Asset>
+              ui:
+                label: 'Images'
+                editor: Neos.Neos/Inspector/Editors/AssetEditor
+                editorOptions:
+                  multiple: true
+                  features:
+                    upload: true
+                    mediaBrowser: true
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 50
+            'squareAsset':
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 50
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        forceCrop: true
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 1
+                          height: 1
+            'cinemaAsset':
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image (16:9)'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 55
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        forceCrop: true
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 16
+                          height: 9 
+            'tvAsset':
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image (16:9)'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 55
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        forceCrop: true
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 274
+                          height: 200
+            'headerAsset':
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image (Header)'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 56
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        forceCrop: true
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 16
+                          height: 6
+            'storyAsset':
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image (8:5)'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 57
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        forceCrop: true
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 8
+                          height: 5                                                    
+            'portrait':
+              type: Neos\Media\Domain\Model\ImageInterface
+              ui:
+                label: 'Image'
+                reloadIfChanged: true
+                inspector:
+                  group: 'general'
+                  position: 60
+                  editorOptions:
+                    crop:
+                      aspectRatio:
+                        forceCrop: true
+                        enableOriginal: false
+                        allowCustom: false
+                        locked:
+                          width: 4
+                          height: 5                          
+            'alternativeText':
+              type: string
+              ui:
+                label: 'Alternative image text'
+                help:
+                  message: 'This text is used for accessibility and for search engine optimization.'
+                reloadIfChanged: false
+                inspector:
+                  group: 'general'
+                  position: 100
+          'date':
+            createdAt:
+              type: DateTime
+              defaultValue: now
+              ui:
+                label: 'Publication date'
+                reloadIfChanged: true
+                inspector:
+                  group: 'document'
+                  position: 'after uriPathSegment'
+                  editorOptions:
+                    format: 'd.m.Y'
+              validation:
+                Neos.Neos/Validation/NotEmptyValidator: {  }
+                Neos.Neos/Validation/DateTimeValidator: {  }
+          'vcf':
+            type: 'Neos\Media\Domain\Model\Asset'
+            ui:
+              label: 'vcf File'
+              reloadIfChanged: true
+              inspector:
+                group: 'document'
+                position: 'after uriPathSegment'
+            constraints:
+              mediaTypes: ['application/vcf']
+          'phone':
+            type: string
+            ui:
+              label: 'Phone'
+              reloadPageIfChanged: false
+              inspector:
+                group: 'document'
+          'boolean':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+              label: 'Boolean'
+              reloadPageIfChanged: true
+              inspector:
+                group: visibility                

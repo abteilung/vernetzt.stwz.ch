@@ -1,0 +1,138 @@
+prototype(Abte.Site:Component.ProductUpdates) < prototype(Neos.Fusion:Component) {
+
+    // Important class 'product-updates' for Slider initiation
+    itemsToShow = ${ Array.slice( q(site).find('[instanceof Abte.Site:Document.Product]').sort('datePublished', 'DESC').get(), 0, 11 )  }
+
+    @context {
+        itemsToShow = ${ this.itemsToShow }
+    }
+
+    productUpdates = Neos.Neos:MenuItems {
+        itemCollection = ${ itemsToShow }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+    title = ''
+    further = ''
+    renderStyle = ''
+    target = ''
+    class = 'gridPadding'
+
+    icon        = Abte.Site:Icon.ArrowRight {
+        class = 'relative left-0 duration-150 text-secondary'
+    }
+
+    renderer = afx`
+        <div class={props.class}>
+            <div class="container flex items-center justify-between mb-8">
+                <h2>{props.title}</h2>
+                <div class="cursor-pointer h3 group">
+                    <Carbon.Link:Link 
+                        @if.hasLink={props.target}
+                        node={props.target}
+                        renderDefaultTagIfNoLink="true"
+                        attributes.class="flex items-center space-x-2 truncate duration-100"
+                    >
+                        <div class="hidden md:block">{props.further}</div> {props.icon}
+                    </Carbon.Link:Link>                    
+                </div>
+            </div>
+            
+            <div class="container mb-36" data-flickity='{"pageDots": true, "groupCells": true, "prevNextButtons": false, "cellSelector": ".product"}'>
+                <div class="flex flex-wrap">
+                    <Neos.Fusion:Loop items={props.productUpdates}>
+                        <Abte.Site:Component.renderCardType node={item.node} renderStyle={props.renderStyle} />
+                    </Neos.Fusion:Loop>
+                </div>
+            </div>
+        </div>
+     `
+}
+
+
+prototype(Abte.Site:Component.renderCardType) < prototype(Neos.Neos:ContentComponent) {
+
+    node = ${ node }
+
+    renderStyle = 'products'
+
+    @context {
+        node = ${ this.node }
+        renderStyle = ${ this.renderStyle }
+    }
+
+    renderCardType = Neos.Fusion:Case {
+        ItemCards {
+            condition = ${ renderStyle == 'items' }
+            renderer = Abte.Site:Component.ItemCard
+        }
+
+        NewsCards {
+            condition = ${ renderStyle == 'news' }
+            renderer = Abte.Site:Component.NewsCard
+        }
+        
+        TeamCards {
+            condition = ${ renderStyle == 'team' }
+            renderer = Abte.Site:Component.Portrait {
+                filterClass = 'product relative block w-full sm:w-1/2 md:w-1/3 lg:w-1/4 pr-4 md:pr-8 xl:pr-12 mb-4 md:mb-8 lg:mb-12'
+            }
+        }
+        
+        fallback {
+            condition = ${ true }
+            renderer = Abte.Site:Component.ServiceCard
+        }
+    }
+
+    renderer = afx`
+        {props.renderCardType}
+    `
+
+}
+
+// prototype(Abte.Site:Component.LatestProductCard) < prototype(Neos.Neos:ContentComponent) {
+
+//     node = ${ node }
+//     @context {
+//         node = ${ this.node }
+//     }
+
+//     imageSource = Neos.Fusion:Case {
+//         image {
+//             condition = ${q(node).property('image') ? true : false}
+//             renderer = Sitegeist.Kaleidoscope:AssetImageSource {
+//                 asset = ${q(node).property('image')}
+//             }
+//         }
+//         dummyImage {
+//             condition = ${site.context.inBackend}
+//             renderer = Sitegeist.Kaleidoscope:DummyImageSource
+//         }
+//     }
+
+//     renderer = afx`
+
+//         <Carbon.Link:Link 
+//             node={node}
+//             attributes.class="block w-1/3 px-2 pb-4 lg:w-1/4 sm:px-4 lg:px-4 product"
+//         >
+
+//             <Sitegeist.Lazybones:Image 
+//                 imageSource={props.imageSource} 
+//                 width="640"
+//                 height="480"
+//                 class=""
+//             />
+
+//             <div class="divide-x-2 divide-base-100">
+//                 <h3>{q(node).property('title')}</h3>
+//                 <p>{q(node).property('productID')}</p>
+//                 <div class="font-bold text-secondary">{q(node).property('producPrice')}</div>
+//             </div>
+//         </Carbon.Link:Link>
+//     `
+// }

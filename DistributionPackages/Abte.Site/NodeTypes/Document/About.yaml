@@ -1,0 +1,18 @@
+'Abte.Site:Document.About':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Selfix.Flickity:Include': true
+    'Abte.Site:Mixin.TeaserText': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: i18n
+    icon: building
+    position: 100
+  properties:
+    image:
+      options:
+        preset: 'image.headerAsset'
+  childNodes:
+    aside:
+      type: 'Neos.Neos:ContentCollection'

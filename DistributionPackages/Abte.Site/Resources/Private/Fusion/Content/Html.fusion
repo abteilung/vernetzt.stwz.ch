@@ -1,0 +1,5 @@
+prototype(Abte.Site:Content.Html) < prototype(Neos.Fusion:Tag) {
+	attributes.class = 'html'
+	content = ${node.properties.source}
+	@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+}

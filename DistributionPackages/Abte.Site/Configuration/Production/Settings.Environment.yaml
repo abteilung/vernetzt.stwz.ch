@@ -1,0 +1,8 @@
+Neos:
+  Neos:
+    Ui:
+      frontendConfiguration:
+        'PunktDe.NeosEnvironmentDisplay':
+          backgroundColor: '#00ADEE'
+          label: 'PROD'
+          icon: 'running'

@@ -1,0 +1,45 @@
+
+prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
+
+    removePadding = ${ q(node).property('removePadding') }
+    
+    fullWidth = ${ q(node).property('fullWidth') }
+
+    class = ${this.removePadding ? 'container' : 'container gridPadding' }
+    
+    fullWidthClass = ${this.fullWidth ? 'cnt-container gridPaddingBig' : 'container' }
+    
+    dropShadow = ${ q(node).property('dropShadow') }
+
+    bgColor = Abte.Site:Mixin.BgColor
+    
+    containerClass = ${ (this.dropShadow ? 'box-shadow' : null ) + ' ' + this.bgColor }
+
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }
+
+	content = Neos.Neos:ContentCollectionRenderer {
+		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+	}
+
+  	renderer = afx`
+        <div class={'relative containerMargin' + ' ' + props.containerClass + ' ' + props.fullWidthClass}>
+            <Abte.Site:Component.Heading 
+                style="enlarged" 
+                title={props.title} 
+                subTitle={props.subTitle} 
+                @if.hasDropShadow={props.title}
+            />
+
+            <div class={props.class}>
+                {props.content}
+            </div>
+            
+        </div>
+    `
+}

@@ -1,0 +1,17 @@
+prototype(Abte.Site:Content.UL) < prototype(Neos.Neos:ContentComponent) {
+
+    isLead = ${ q(node).property('isLead') ? 'lead' : null }
+
+    tagOpen = ${ q(node).property('list_ol') ? '<ol class="' + this.isLead + '">': '<ul class="' + this.isLead + '">' }
+    tagClose = ${ q(node).property('list_ol') ? '</ol>': '</ul>' }
+
+    renderer =  Neos.Fusion:Collection {
+        collection = ${ q(node).children('[instanceof Abte.Site:Content.LI]') }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Abte.Site:Content.LI
+        @process.tmpl = ${ props.tagOpen + value + props.tagClose }
+    }
+
+    @process.tmpl = ${ '<div class="mb-4 ordered-list lg:mb-8">' + value + '</div>' }
+}

@@ -1,0 +1,26 @@
+prototype(Abte.Site:Icon.CartSmall) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class}  width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Shop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Etikettenshop-3" transform="translate(-956.000000, -652.000000)" stroke="currentColor" stroke-width="2">
+                    <g id="Group-6" transform="translate(745.000000, 638.000000)">
+                        <g id="button/icon" transform="translate(50.000000, 0.000000)">
+                            <g id="basket" transform="translate(162.000000, 15.000000)">
+                                <line x1="11" y1="12" x2="11" y2="16" id="Path"></line>
+                                <line x1="7" y1="12" x2="7" y2="16" id="Path"></line>
+                                <line x1="15" y1="12" x2="15" y2="16" id="Path"></line>
+                                <path d="M4,7 L8,0 M18,7 L14,0 M0,7 L22,7" id="Combined-Shape"></path>
+                                <path d="M20,11 L20,19 C20,20.1045695 19.1045695,21 18,21 L4,21 C2.8954305,21 2,20.1045695 2,19 L2,11" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}
+
+

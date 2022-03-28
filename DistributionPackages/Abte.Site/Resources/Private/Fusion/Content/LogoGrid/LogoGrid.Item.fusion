@@ -1,0 +1,41 @@
+prototype(Abte.Site:Content.LogoGrid.Item) < prototype(Neos.Neos:ContentComponent) {
+
+    thumbnailAllowCropping = false
+
+	title = ${ q(node).property('title') }
+	
+    alternativeText = ${ q(node).property('alternativeText') || q(node).property('title') }
+
+    link = ${ q(node).property('link') }
+    link.@process.convertUris = Neos.Neos:ConvertUris {
+            forceConversion = true
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+ 
+
+	renderer = afx`
+        <Carbon.Link:Link
+            link={props.link}
+            renderDefaultTagIfNoLink='true'
+            attributes.class="flex justify-center p-6 bg-white sm:p-10"
+        >
+            <div>
+                <Sitegeist.Lazybones:Image 
+                    @if.hasImage={props.imageSource}
+                    imageSource={props.imageSource} 
+                    maximumWidth="325"
+                    maximumHeight="325"
+                    class="!w-full h-auto"
+                />
+
+                <img src="https://via.placeholder.com/325x100" alt={props.title} width="640" height="640"
+                    @if.hasNoImage={!props.imageSource}
+                />
+            </div>
+
+        </Carbon.Link:Link>
+ 	`
+}

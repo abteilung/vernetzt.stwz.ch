@@ -1,0 +1,17 @@
+'Abte.Site:Content.Accordion.Item':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Constraint.Content.Restricted': TRUE
+  label: "${q(node).property('accordion_title') || 'Accordion-Item'}"
+  ui:
+    label: Accordion Item
+    icon: 'hand-point-right'
+    position: 50
+  properties:
+    'accordion_title':
+      options:
+        preset: 'text.title'
+  childNodes:
+    content:
+      position: 'end'
+      type: 'Neos.Neos:ContentCollection'

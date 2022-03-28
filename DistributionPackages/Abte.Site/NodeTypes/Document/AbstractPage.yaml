@@ -1,0 +1,43 @@
+'Abte.Site:Document.AbstractPage':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+    'Abte.Site:Mixin.HideHeader': true
+    'Abte.Site:Mixin.FooterImage': true
+    'Abte.Site:Mixin.InspectorGeneral': true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'Abte.Site:Constraint.Content.Restricted': false
+  constraints:
+    nodeTypes:
+      'Abte.Site:Document.HomePage': false
+      'Abte.Site:Constraint.Document.Restricted': false
+  properties:
+    'subTitle':
+      options:
+        preset: 'text.title'
+      ui:
+        label: 'Subtitle'
+        position: '5'
+        inspector:
+          group: document
+    'hideSubPages':
+      type: boolean
+      ui:
+        label: 'Hide Subpages in Menu'
+        reloadPageIfChanged: true
+        inspector:
+          group: visibility
+    'zitatUser':
+      type: reference
+      ui:
+        label: Footer-Zitat
+        reloadIfChanged: true
+        inspector:
+          group: featureImages
+          position: 77
+          editorOptions:
+            nodeTypes: ['Abte.Site:Document.Person']

@@ -1,0 +1,9 @@
+// Add Teaser Short to OG as Fallback
+prototype(Neos.Seo:MetaDescriptionTag) < prototype(Neos.Fusion:Tag) {
+    tagName = 'meta'
+    attributes {
+        name = 'description'
+        content = ${q(node).property('metaDescription') || q(node).property('teaser_short')}
+    }
+    @if.isNotBlank = ${!String.isBlank(q(node).property('metaDescription'))}
+}

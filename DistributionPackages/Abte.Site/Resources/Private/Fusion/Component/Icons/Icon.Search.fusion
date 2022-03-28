@@ -1,0 +1,19 @@
+prototype(Abte.Site:Icon.Search) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Home-Copy" transform="translate(-1181.000000, -85.000000)" stroke="currentColor" stroke-width="2">
+                    <g id="Group-25" transform="translate(316.000000, 73.000000)">
+                        <g id="search" transform="translate(866.000000, 13.000000)">
+                            <circle id="Oval" cx="11" cy="11" r="11"></circle>
+                            <line x1="27" y1="27" x2="22" y2="22" id="Path"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

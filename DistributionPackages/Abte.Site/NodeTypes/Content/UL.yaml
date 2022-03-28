@@ -1,0 +1,36 @@
+'Abte.Site:Content.UL':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+    'Abte.Site:Mixin.IsLead': true
+  ui:
+    label: i18n
+    icon: list-ul
+    inspector:
+      groups:
+        style:
+          label: 'Style'
+          position: 200
+          icon: text-center
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Content.LI': true
+  properties:
+    'list_ol':
+      type: boolean
+      ui:
+        label: 'Ordered List'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'style'
+  options:
+    template:
+      childNodes:
+        multipleListItems:
+          type: 'Abte.Site:Content.LI'
+          properties:
+            li_text: '${"" + item + ""}'
+          withItems:
+            - 'List Item'
+            - 'List Item'
+            - 'List Item'

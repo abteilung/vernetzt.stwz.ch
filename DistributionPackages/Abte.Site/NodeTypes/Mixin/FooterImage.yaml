@@ -1,0 +1,12 @@
+'Abte.Site:Mixin.FooterImage':
+  abstract: true
+  ui:
+    label: i18n
+  properties:
+    footerImage:
+      ui:
+        label: 'Footer Image'
+        inspector:
+          group: 'featureImages'
+      options:
+        preset: 'image.squareAsset'

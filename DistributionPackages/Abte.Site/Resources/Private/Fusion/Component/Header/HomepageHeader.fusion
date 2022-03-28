@@ -1,0 +1,24 @@
+prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component) {
+
+    headerContent = Neos.Neos:ContentCollection {
+        nodePath = ${ q(site).children('header').property('_path') }
+        collection = ${ q(site).children('header').children() }
+    }
+    
+    renderer = afx`
+        <!-- mt-8 for top header spacing -->
+        <div class="mt-4 container-x">
+            {props.headerContent}
+        </div>
+    `
+
+	// @cache {
+	// 	mode = 'cached'
+	// 	entryIdentifier {
+	// 		documentNode = ${documentNode}
+	// 	}
+	// 	entryTags {
+	// 		1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+	// 	}
+	// }
+}

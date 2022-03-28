@@ -1,0 +1,26 @@
+prototype(Abte.Site:OrderForm.Farbe) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="">
+            <div>
+                <h3 class="text-primary">
+                    Veredelung
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-6">
+
+                <div class="sm:col-span-6">
+                    <Neos.Fusion.Form:FieldContainer field.name="farbe" label="Farbe:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="4-farbig Euroskala" />
+                            <Neos.Fusion.Form:Select.Option option.value="X" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+
+            </div>
+        </div>
+    `
+}

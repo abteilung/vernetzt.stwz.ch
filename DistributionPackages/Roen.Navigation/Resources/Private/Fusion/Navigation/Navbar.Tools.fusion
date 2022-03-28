@@ -1,0 +1,60 @@
+prototype(Roen.Navigation:Component.Tools) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+
+        <div class="flex items-center h-24 space-x-4 md:space-x-8 md:h-32 navigation-tools text-accent ">
+
+            <div 
+                class="scale-75 md:scale-100 search-box"
+                "@click"="$nextTick(() => { $refs.searchInput.focus(); });"
+                "@click.prevent"="showSearch = !showSearch;"
+            >
+                <Abte.Site:Icon.Search class="cursor-pointer" />
+            </div>
+            
+            <div class="scale-100 cart-with-count md:scale-100 group"
+                "@click.prevent"="showBasket = !showBasket" 
+                class="cursor-pointer text-accent group-hover:text-primary">
+                <button class="relative">
+                    <Abte.Site:Icon.Cart />
+                    <span class="absolute -top-4 -right-4 inline-flex items-center px-3 py-0.5 rounded-full text-xs bg-gradient-to-bl from-accent to-accent-focus group-hover:to-accent group-hover:from-accent-focus text-white">3</span>
+                </button>
+            </div>
+
+            <Roen.Navigation:Component.Navbar.Language caretColor="text-white" />
+
+        </div>
+
+    `
+}
+
+
+
+
+
+
+prototype(Roen.Navigation:Component.Navbar.Basket.CloseButton) < prototype(Neos.Fusion:Component) {
+  
+	renderer = afx`
+        <div class="absolute cursor-pointer top-8 right-12"
+            "@click"="showBasket = false" 
+        >
+            <button 
+                class="w-auto px-6 text-lg text-white pill focus:outline-none"
+                aria-expanded="false"
+            >
+                <div class="relative flex items-center justify-center w-6">
+                    <span 
+                        class="absolute w-full h-[2px] transition translate-y-0 rotate-45 transform bg-current">
+                    </span>
+                    <span 
+                        class="absolute w-full h-[2px] opacity-0 translate-x-3 transition transform bg-current">
+                    </span>
+                    <span 
+                        class="absolute w-full h-[2px] translate-y-0 -rotate-45 transition transform bg-current">
+                    </span>
+                </div>
+            </button>
+        </div>    
+    `
+}

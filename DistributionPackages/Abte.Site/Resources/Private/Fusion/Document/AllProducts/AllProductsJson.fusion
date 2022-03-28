@@ -1,0 +1,105 @@
+prototype(Abte.Site:Document.AllProducts.Json) < prototype(Neos.Fusion:Component) {
+    
+    renderer = Neos.Fusion:Map {
+        items = ${ q(node).parents('[instanceof Abte.Site:Document.HomePage]').find('[instanceof Abte.Site:Document.Product]').get() }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Abte.Site:DefaultView.Json {
+
+            nodeId >
+            nodeType >
+            pageImage.@if.has = ${ q(node).property('image') }
+
+            // i = ${ i.cycle }
+            // i.@position = "start 999"
+            // nodePath = ${ q(node).property('_path') }
+            nodeTitle = ${ q(node).property('titleOverride') || q(node).property('title') }
+            subTitle = ${ q(node).property('subTitle') }
+            subTitle.@if.has = ${ q(node).property('subTitle') }
+
+            description = ${ q(node).property('productDescription') }
+            description.@if.has = ${ q(node).property('productDescription') }
+
+            nodeUri = Neos.Neos:NodeUri {
+                node = ${node}
+            }
+
+            productPrice = ${ String.format( "%01.2f", String.split( q(node).property('productPrice'), '.') ) }
+            productPrice.@if.has=${q(node).property('productPrice')}
+
+            discountPrice = ${ q(node).property('productPriceDiscount') }
+            discountPrice.@if.has=${q(node).property('discountPrice')}
+
+            visibility = ${ q(node).property('productVisiblity') }
+
+            dimensions = Neos.Fusion:DataStructure {
+                width = ${ q(node).property('productWidth') }
+                width.@if.has = ${ q(node).property('productWidth') }
+
+                height = ${ q(node).property('productHeight') }
+                height.@if.has = ${ q(node).property('productHeight') }
+                
+                length = ${ q(node).property('productLength') }
+                length.@if.has = ${ q(node).property('productLength') }
+
+                weight = ${ q(node).property('productWeight') }
+                weight.@if.has = ${ q(node).property('productWeight') }
+
+                coreWidth = ${ q(node).property('productCoreWidth') }
+                coreWidth.@if.has = ${ q(node).property('productCoreWidth') }
+
+                coreDiameter = ${ q(node).property('productCoreDiameter') }
+                coreDiameter.@if.has = ${ q(node).property('productCoreDiameter') }
+            }
+
+            salesFeatures = Neos.Fusion:DataStructure {
+                crossSells = ${ q(node).property('productCrossSells') }
+                crossSells.@if.has = ${ q(node).property('productCrossSells') }
+
+                upSells = ${ q(node).property('productUpSells') }
+                upSells.@if.has = ${ q(node).property('productUpSells') }
+            }
+
+            ribbon = Neos.Fusion:DataStructure {
+                ribbonQuality = ${ q(node).property('ribbonQuality') }
+                ribbonQuality.@if.has=${ q(node).property('ribbonQuality') }
+                ribbonLength = ${ q(node).property('ribbonLength') }
+                ribbonLength.@if.has=${ q(node).property('ribbonLength') }
+                ribbonWidth = ${ q(node).property('ribbonWidth') }
+                ribbonWidth.@if.has=${ q(node).property('ribbonWidth') }
+                ribbonOritentation = ${ q(node).property('ribbonOritentation') }
+                ribbonOritentation.@if.has=${ q(node).property('ribbonOritentation') }
+                ribbonColor = ${ q(node).property('ribbonColor') }
+                ribbonColor.@if.has=${ q(node).property('ribbonColor') }
+                ribbonPrinthead = ${ q(node).property('ribbonPrinthead') }
+                ribbonPrinthead.@if.has=${ q(node).property('ribbonPrinthead') }
+                ribbonNotches = ${ q(node).property('ribbonNotches') }
+                ribbonNotches.@if.has=${ q(node).property('ribbonNotches') }
+                ribbonCoreWidth = ${ q(node).property('ribbonCoreWidth') }
+                ribbonCoreWidth.@if.has=${ q(node).property('ribbonCoreWidth') }
+                ribbonCoreDiameter = ${ q(node).property('ribbonCoreDiameter') }
+                ribbonCoreDiameter.@if.has=${ q(node).property('ribbonCoreDiameter') }
+                ribbonWinding = ${ q(node).property('ribbonWinding') }
+                ribbonWinding.@if.has=${ q(node).property('ribbonWinding') }
+                ribbonPackaging = ${ q(node).property('ribbonPackaging') }
+                ribbonPackaging.@if.has=${ q(node).property('ribbonPackaging') }
+                ribbonOuterPackaging = ${ q(node).property('ribbonOuterPackaging') }
+                ribbonOuterPackaging.@if.has=${ q(node).property('ribbonOuterPackaging') }
+                ribbonTrailing = ${ q(node).property('ribbonTrailing') }
+                ribbonTrailing.@if.has=${ q(node).property('ribbonTrailing') }
+                ribbonLead = ${ q(node).property('ribbonLead') }
+                ribbonLead.@if.has=${ q(node).property('ribbonLead') }
+            }
+
+        }
+    }
+    @process.stringify = ${ Json.stringify(value) }
+
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
+}

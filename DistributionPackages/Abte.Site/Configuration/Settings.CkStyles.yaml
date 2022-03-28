@@ -1,0 +1,45 @@
+# TechDivision:
+#     CkStyles:
+#         InlineStyles:
+#             presets:
+#                 #     'fontColor':
+#                 #       label: 'Font color'
+#                 #       options:
+#                 #         'primary':
+#                 #           label: 'Red'
+#                 #           cssClass: 'my-class-red'
+#                 #         'secondary':
+#                 #           label: 'Green'
+#                 #           cssClass: 'my-class-green'
+#                 #     'fontSize':
+#                 #       label: 'Font size'
+#                 #       options:
+#                 #         'small':
+#                 #           label: 'Small'
+#                 #           cssClass: 'my-class-size-small'
+#                 #         'big':
+#                 #           label: 'Large'
+#                 #           cssClass: 'my-class-size-large'
+#                 # 'lists':
+#                 #     label: 'List Styles'
+#                 #     options:
+#                 #         'checks':
+#                 #             label: 'Checks'
+#                 #             cssClass: 'list-check'
+#         BlockStyles:
+#             presets:
+#                 # 'indent':
+#                 #   label: 'Indentation'
+#                 #   options:
+#                 #     'primary':
+#                 #       label: '2 rem'
+#                 #       cssClass: 'my-class-indent-2'
+#                 #     'secondary':
+#                 #       label: '4 rem'
+#                 #       cssClass: 'my-class-indent-4'
+#                 # 'lists':
+#                 #     label: 'List Styles'
+#                 #     options:
+#                 #         'checks':
+#                 #             label: 'Checks'
+#                 #             cssClass: 'list-check'

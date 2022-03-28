@@ -1,0 +1,38 @@
+prototype(Abte.Site:Component.ProductKates) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    renderer = Neos.Fusion:Join {
+        @glue = ' '
+
+        categories = Neos.Fusion:Loop {
+
+            items = Neos.Fusion:Map {
+                items = ${ q(node).property('categories') }
+                itemRenderer = ${ q(item).get(0) }
+                @process.removeDuplicates = ${Array.unique(value)}
+            }
+
+            itemName = 'pcat'
+            itemRenderer = ${ q(pcat).parent('[instanceof Abte.Site:Document.Category]') ? Carbon.String.urlize(q(pcat).parent().property('title')) + '-' + Carbon.String.urlize(q(pcat).property('title')) + ' '  : Carbon.String.urlize(q(pcat).parent().property('title')) + '-' + Carbon.String.urlize(q(pcat).property('title')) + ' ' }
+
+        } 
+
+        parentCategory = Neos.Fusion:Loop {
+
+            items = Neos.Fusion:Map {
+                items = ${ q(node).property('categories') }
+                itemRenderer = ${ q(item).parent().get(0) }
+                @process.removeDuplicates = ${Array.unique(value)}
+            }
+
+            itemName = 'pcat'
+            itemRenderer = ${ Carbon.String.urlize(q(pcat).property('title')) + ' '}
+
+        } 
+    }
+
+}

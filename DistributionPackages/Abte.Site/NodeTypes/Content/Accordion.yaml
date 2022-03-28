@@ -1,0 +1,50 @@
+'Abte.Site:Content.Accordion':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'Abte.Site:Mixin.DropShadow': true
+    'Abte.Site:Mixin.BgColor': true
+    'Abte.Site:Mixin.Image': true
+  ui:
+    label: Accordion
+    position: 100
+    inlineEditable: true
+    group: general
+    icon: grip-lines
+    inspector:
+      groups:
+        accordion:
+          label: Accordion
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Content.Accordion.Item': true
+  properties:
+    'title':
+      options:
+        preset: 'text.title'
+    'subTitle':
+      options:
+        preset: 'text.title'
+    'image':
+      options:
+        preset: 'image.squareAsset'
+    'accordion_firstOpen':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: Open first item
+        reloadPageIfChanged: true
+        inspector:
+          group: accordion
+  options:
+    template:
+      childNodes:
+        multipleAccordionNodes:
+          type: 'Abte.Site:Content.Accordion.Item'
+          properties:
+            title: '${"" + item + ""}'
+          withItems:
+            - 'Accordion'
+            - 'Accordion'
+            - 'Accordion'

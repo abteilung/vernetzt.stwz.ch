@@ -1,0 +1,67 @@
+.gdpr-cookieconsent-overlay {
+    @apply hidden !important;
+    @apply absolute z-10 bottom-0 right-0 text-white w-full md:w-72 !important;
+  }
+  
+  .gdpr-cookieconsent-settings {
+    @apply z-10 left-full -translate-x-full text-white w-full md:w-72 shadow-2xl bg-primary !important;
+  
+    h2 {
+      @apply pb-0 mb-5 text-white !important;
+    }
+    
+    .button {
+      @apply border-2 border-primary text-primary bg-white mr-4 !important;
+    }
+  
+    .gdpr-cookieconsent-settings__content {
+      @apply p-4 md:p-8 max-w-full block !important;
+  
+      h2 {
+        @apply text-lg md:text-xl mb-2 md:mb-4 !tracking-normal;
+      }
+      .gdpr-cookieconsent-settings__content__info {
+        @apply w-full;
+      }
+  
+      .gdpr-cookieconsent-settings__content__info__main-description {
+        @apply leading-normal	text-xs md:text-sm mb-2 md:mb-4 !tracking-normal;
+      }
+  
+      .gdpr-cookieconsent-settings__content__cta {
+        @apply w-full mt-4 mb-2 md:mb-4 block;
+        button {  
+          @apply text-xs md:text-sm hover:shadow-xl w-auto mb-0 px-6 md:py-2;
+        }
+      }
+
+      .gdpr-cookieconsent-settings__content__cta a {
+          @apply block text-sm text-left mt-5 !tracking-normal;
+      }
+      .gdpr-cookieconsent-settings__content__links {
+        @apply hidden w-full;
+      }
+      .gdpr-cookieconsent-settings__content__individual-switch {
+        @apply hidden !important;
+      }
+    }
+  
+    .gdpr-cookieconsent-settings__content__individual-switch {
+      @apply m-0 pb-0 block !important;
+      a {
+        @apply text-sm !important;
+      }
+    }
+    a {
+      @apply text-base font-normal text-current underline !important;
+    }
+    .gdpr-cookieconsent-settings__content__links {
+      a {
+        @apply text-sm !important;
+      }
+    }
+  }
+
+  #kd_gdpr_cc-close svg {
+    @apply fill-white opacity-70;
+  }

@@ -1,0 +1,39 @@
+
+##
+# This prototypes object are sequenctially rendered as strings
+# and output to form the the html response.
+#
+# For all the base data, see Neos.Neos:Page
+##
+prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
+    head {
+        headTags = Neos.Fusion:Join {
+            @glue = ''
+            comp = '<meta http-equiv="x-ua-compatible" content="ie=edge" />''
+            scale = '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
+        }
+    }
+
+    htmlTag {
+        attributes {
+            lang = ${ node.context.targetDimensions.language }
+        }
+    }
+
+    bodyTag {
+        attributes {
+            data-theme="selfix"
+            x-data="\{ showModal : false, showMenu : false \}"
+        }
+    }
+
+
+    body = Abte.Site:Component.DefaultLayout {
+        content {
+            main = Neos.Neos:ContentCollection {
+                nodePath = 'main'
+                default.renderer.attributes.class = ''
+            }
+        }
+    }
+}

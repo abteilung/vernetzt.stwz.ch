@@ -1,0 +1,28 @@
+prototype(Abte.Site:Icon.Calendar) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Home-Copy" transform="translate(-980.000000, -929.000000)" stroke="currentColor" stroke-width="1.75">
+                    <g id="Group-18" transform="translate(100.000000, 700.000000)">
+                        <g id="Group-13" transform="translate(524.000000, 103.000000)">
+                            <g id="button/link" transform="translate(357.000000, 125.000000)">
+                                <g id="icon/arrow-right" transform="translate(0.000000, 1.440000)">
+                                    <g id="icon-calendar-red" transform="translate(0.350649, 0.704082)">
+                                        <polyline id="Path" points="7 12.25 8.75 14 13.125 9.625"></polyline>
+                                        <rect id="Rectangle" x="0" y="2.625" width="19.25" height="15.75"></rect>
+                                        <line x1="14" y1="2.625" x2="14" y2="0" id="Path"></line>
+                                        <line x1="5.25" y1="2.625" x2="5.25" y2="0" id="Path"></line>
+                                        <line x1="0" y1="6.125" x2="19.25" y2="6.125" id="Path"></line>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

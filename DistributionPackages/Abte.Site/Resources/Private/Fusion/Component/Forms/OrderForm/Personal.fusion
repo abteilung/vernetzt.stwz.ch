@@ -1,0 +1,71 @@
+prototype(Abte.Site:OrderForm.Personal) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="">
+            <div>
+                <h3 class="text-primary">
+                    Kontakt
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-6">
+
+                <div class="sm:col-span-6">
+                    <Neos.Fusion.Form:FieldContainer field.name="material" label="Gewünschte Dienstleistung:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="Unverbindliche Offerte" />
+                            <Neos.Fusion.Form:Select.Option option.value="Folgeauftrag" />
+                            <Neos.Fusion.Form:Select.Option option.value="Anderes…" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="firstName" label="" >
+                        <Neos.Fusion.Form:Input attributes.placeholder="Vorname*" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="lastName" label="">
+                        <Neos.Fusion.Form:Input attributes.placeholder="Nachname*" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="eMail" label="" >
+                        <Neos.Fusion.Form:Input attributes.placeholder="E-Mail*" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="phone" label="" >
+                        <Neos.Fusion.Form:Input attributes.placeholder="Telefon*" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-6">
+                    <Neos.Fusion.Form:FieldContainer field.name="address" label="">
+                        <Neos.Fusion.Form:Input attributes.placeholder="Strasse / Nr.*" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-1">
+                    <Neos.Fusion.Form:FieldContainer field.name="zip" label="" >
+                        <Neos.Fusion.Form:Input attributes.placeholder="PLZ*" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <div class="sm:col-span-5">
+                    <Neos.Fusion.Form:FieldContainer field.name="city" label="">
+                        <Neos.Fusion.Form:Input attributes.placeholder="Ort*" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-6">
+                    <Neos.Fusion.Form:FieldContainer field.name="messgae" label="Ihre Mitteilung…">
+                        <Neos.Fusion.Form:Textarea />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+
+            </div>
+        </div>
+    `
+}

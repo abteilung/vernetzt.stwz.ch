@@ -1,0 +1,26 @@
+'Abte.Site:Content.Html':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: HTML
+    icon: code
+    position: 100
+    group: structure
+    inspector:
+      groups:
+        html:
+          label: HTML
+          icon: code
+          position: 10
+  properties:
+    source:
+      type: string
+      defaultValue: '<p>HTML Code</p>'
+      ui:
+        label: HTML
+        reloadIfChanged: true
+        inspector:
+          group: html
+          editor: Neos.Neos/Inspector/Editors/CodeEditor
+          editorOptions:
+            buttonLabel: 'HTML bearbeiten'

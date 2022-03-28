@@ -1,0 +1,136 @@
+'Abte.Site:Mixin.Product.Farbband':
+  ui:
+    inspector:
+      groups:
+        farbband:
+          label: Farbband
+          position: 22
+          icon: ribbon
+          collapsed: true
+  properties:
+    ribbonQuality:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Farbband-Qualität
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    ribbonLength:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Farbband-Länge
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    ribbonWidth:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Farbband-Breite
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    ribbonOritentation:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Farbband-Ausrichtung
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    ribbonColor:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Farbband-Farbe
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    ribbonPrinthead:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Farbband-Druckkopf
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    ribbonNotches:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Farbband-Kerben
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    # ribbonCoreWidth:
+    #   options:
+    #     preset: 'text.plain'
+    #   ui:
+    #     label: Farbband-Kernbreite
+    #     inspector:
+    #       group: farbband
+    #       editorOptions:
+    #         disabled: true
+    # ribbonCoreDiameter:
+    #   options:
+    #     preset: 'text.plain'
+    #   ui:
+    #     label: Farbband-Kerndurchmesser
+    #     inspector:
+    #       group: farbband
+    #       editorOptions:
+    #         disabled: true
+    ribbonWinding:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Farbband-Wicklung
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    # ribbonPackaging:
+    #   options:
+    #     preset: 'text.plain'
+    #   ui:
+    #     label: Farbband-Verpackung
+    #     inspector:
+    #       group: farbband
+    #       editorOptions:
+    #         disabled: true
+    # ribbonOuterPackaging:
+    #   options:
+    #     preset: 'text.plain'
+    #   ui:
+    #     label: Farbband-Umverpackung
+    #     inspector:
+    #       group: farbband
+    #       editorOptions:
+    #         disabled: true
+    ribbonTrailing:
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Nachlauf'
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true
+    ribbonLead:
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Vorlauf'
+        inspector:
+          group: farbband
+          editorOptions:
+            disabled: true

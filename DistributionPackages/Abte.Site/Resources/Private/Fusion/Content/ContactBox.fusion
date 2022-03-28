@@ -1,0 +1,62 @@
+prototype(Abte.Site:Content.ContactBox) < prototype(Neos.Neos:ContentComponent) {
+    
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(site).property('helpdeskPic') }
+    }
+
+    title = Neos.Neos:Editable {
+        property = 'helpdeskTitle'
+        node = ${ site }
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'helpdeskSubTitle'
+        node = ${ site }
+    }
+
+    phone = ${ q(site).property('helpdeskPhone') }
+    
+    email = ${ q(site).property('helpdeskEmail') }
+
+    renderer = afx`
+        <div class="relative block w-full font-light mix box-shadow containerMargin">
+
+            <Abte.Site:Component.Heading 
+                style="enlarged"
+                title={props.title}
+                subTitle={props.subTitle} 
+            />
+
+            <Sitegeist.Lazybones:Image 
+                @if.hasImage={props.imageSource}
+                imageSource={props.imageSource} 
+                width="720"
+                height="480"
+                class=""
+            />
+            <div class="p-6">
+                <div class="h3">
+        
+                    <Carbon.Link:Link 
+                        additionalClass="hover:underline" 
+                        link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
+                        renderDefaultTagIfNoLink='true'
+                    >
+                        <div class="flex items-center">
+                            <Abte.Site:Icon.ColorPhone class="mr-2" />
+                            <Neos.Neos:Editable property="helpdeskPhone" node={site} />
+                        </div>
+                    </Carbon.Link:Link>
+
+                </div>
+                <div class="">
+                    <div "@click.prevent"="showModal = !showModal" class="text-lg underline !tracking-normal">
+                        { I18n.translate('Abte.Site:Main:getInTouch') }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    `
+}
+                   

@@ -1,0 +1,12 @@
+prototype(Abte.Site:Content.Text) < prototype(Neos.Neos:ContentComponent) {
+
+    isLead = ${ q(node).property('isLead') ? 'lead' : null }
+
+    text = Neos.Neos:Editable {
+        property = 'text'
+    }
+
+    renderer = afx`
+        <div class={'ce-text' + ' ' + props.isLead }>{props.text}</div>
+    `
+}

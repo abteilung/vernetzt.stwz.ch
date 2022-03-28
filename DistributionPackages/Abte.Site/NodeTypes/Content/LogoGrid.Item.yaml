@@ -1,0 +1,24 @@
+'Abte.Site:Content.LogoGrid.Item':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+    'Abte.Site:Mixin.Image': TRUE
+    'Abte.Site:Constraint.Content.Restricted': TRUE
+  # label: "${q(node).property('title') || 'Neuer Kunde'}"
+  # label: "${q(node).property('title') + ' ' + q(node).property('client_last') + q(node).property('client_department') || 'Neue Person'}"
+  ui:
+    label: Client
+    icon: address-card
+    position: 40
+    inspector:
+      groups:
+        company:
+          label: Company props
+          position: 10
+          icon: building
+  properties:
+    'title':
+      options:
+        preset: 'text.title'
+    'link':
+      options:
+        preset: 'text.link'

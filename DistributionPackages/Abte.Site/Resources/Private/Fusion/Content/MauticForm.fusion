@@ -1,0 +1,25 @@
+##
+# "<script type="text/javascript" src="//mautic.abteilung.ch/form/generate.js?id=7"></script>
+#
+prototype(Abte.Site:Content.MauticForm) < prototype(Neos.Neos:ContentComponent) {
+
+    class = Abte.Site:Component.AdditionalClass {
+        class = 'mautic--form'
+    }
+
+    formID = ${ q(node).property('formID') }
+
+    form = Neos.Fusion:Tag {
+        tagName = 'script'
+        attributes.src = ${ '//' + q(site).property('mauticLink') + '/form/generate.js' + '?id=' + q(node).property('formID')}
+        attributes.type = 'text/javascript'
+        // attributes.defer = 'true'
+        // attributes.async = ${true}
+    }
+    
+    renderer = afx`
+        <div class={props.class}>
+            {props.form}
+        </div>
+    `
+}

@@ -1,0 +1,33 @@
+prototype(Abte.Site:Component.Link) < prototype(Neos.Neos:ContentComponent) {
+    
+    class = ''
+
+    align = ''
+
+    linkClass = 'flex flex-row items-center space-x-2 text-lg lg:text-xl font-bold !tracking-normal'
+    
+    text = ''
+
+    target = ${ q(node).property('target') }
+
+    iconAfter = Abte.Site:Icon.ArrowRight {
+        class='relative left-0 duration-150 text-secondary group-hover:left-2'
+        @if.buttonIsBefore=${!this.positionBefore}
+    }
+
+    renderer = afx`
+        <div class={props.align + ' ' + 'block'}>
+            <div class="inline-block group">
+                <Carbon.Link:Link 
+                    additionalClass={'cursor-pointer' + ' ' + props.class + ' ' + props.linkClass } 
+                    node={props.target} 
+                    renderDefaultTagIfNoLink='true' 
+                    attributes.data-smooth-scroll='true'
+                >
+                    <span>{props.text}</span>
+                    {props.iconAfter}
+                </Carbon.Link:Link>
+            </div>
+        </div>
+    `
+}

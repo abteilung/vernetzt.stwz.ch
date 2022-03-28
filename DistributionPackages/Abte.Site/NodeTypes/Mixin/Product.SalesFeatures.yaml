@@ -1,0 +1,28 @@
+'Abte.Site:Mixin.Product.SalesFeatures':
+  ui:
+    inspector:
+      groups:
+        sales:
+          label: Verkauf
+          position: 50
+          icon: expand-arrows-alt
+          collapsed: true
+  properties:
+    productCrossSells:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Cross-Sells
+        inspector:
+          group: sales
+          editorOptions:
+            disabled: true
+    productUpSells:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Up-Sells
+        inspector:
+          group: sales
+          editorOptions:
+            disabled: true

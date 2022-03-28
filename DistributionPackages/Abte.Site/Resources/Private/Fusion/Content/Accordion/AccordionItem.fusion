@@ -1,0 +1,55 @@
+
+prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentComponent) {
+
+    header = Neos.Neos:Editable {
+        property = 'accordion_title'
+    }
+
+    headerClass = 'h3 text-primary'
+
+    accordion_title = ${ q(node).property('accordion_title') }
+
+	content = Neos.Neos:ContentCollectionRenderer {
+		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+	}
+
+    cycle       = ''
+    buttonClass = 'w-full py-2 text-left'
+    itemClass   = 'relative border-t-2 border-primary'
+    caretColor  = 'text-secondary scale-75 lg:scale-100'
+
+    accordion_firstOpen = ${ q(node).closest('[instanceof Abte.Site:Content.Accordion]').property('accordion_firstOpen') ? 'show' : 'collapsed' }
+
+
+  	renderer = afx`
+        <div class={props.itemClass}>
+            <button
+                type="button"
+                class={props.buttonClass}
+                "@click"={'selected !== ' + i.cycle + ' ? selected = ' + i.cycle + ' : selected = null'}
+            >
+
+                <div class="flex items-center justify-between">
+                    <div class={props.headerClass}>{props.header}</div>
+                    <div class={props.caretColor}>
+                        <Neos.Fusion:Augmenter x-bind:class={'selected == ' + i.cycle + ' ? \'transform rotate-45\' : \'\' '}>
+                            <Abte.Site:Icon.Plus class="transition" />
+                        </Neos.Fusion:Augmenter>
+                    </div>
+                </div>
+            </button>
+
+            <div
+                class="relative overflow-hidden transition-all duration-700 max-h-0"
+                x-ref={'container' + i.cycle}
+                x-bind:style={'selected == ' + i.cycle + ' ? \'max-height: \' + $refs.container' + i.cycle + '.scrollHeight + \'px\' : \'\' '}
+            >
+                <div
+                    class="py-4 text-primary"
+                >
+                    {props.content}
+                </div>
+            </div>
+        </div>
+    `
+}

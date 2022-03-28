@@ -1,0 +1,92 @@
+prototype(Abte.Site:Component.ShopCardForScan) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    pageURL = Neos.Neos:NodeUri {
+        node = ${ node }
+        absolute = true
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+        width = 800
+        height = 800
+    }
+
+    id = ${ q(node).property('productID')}
+    productPrice = ${ String.format( "%01.2f", String.split( q(node).property('productPrice'), '.') ) }
+
+    productWidth = ${ q(node).property('productWidth')}
+    productHeight = ${ q(node).property('productHeight')}
+    productLength = ${ q(node).property('productLength')}
+    productStock = ${ q(node).property('productStock')}
+    productForm = ${ q(node).property('productForm')}
+    productLowStock = ${ q(node).property('productLowStock') ? true : false }
+    description = ${ q(node).property('productDescription')}
+    descriptionShort = ${ q(node).property('productDescriptionShort')}
+
+    title = ${ q(node).property('title') }
+    subTitle = ${ q(node).property('subTitle') }
+    teaser_short = ${ q(node).property('teaser_short') }
+
+    kates = Abte.Site:Component.ProductKates
+
+    productItemClass = 'relative block w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-8 mb-4 md:mb-8 lg:mb-12'
+
+
+    renderer = afx`
+
+        <Neos.Neos:NodeLink 
+            node={node} 
+            attributes.data-item-id={props.id}
+            attributes.data-item-name={props.title}
+            attributes.data-item-price={props.productPrice}
+
+            attributes.data-item-url={props.pageURL}
+            attributes.data-item-image={props.imageSource ? props.imageSource : null}
+            
+            attributes.data-item-width={props.productWidth ? props.productWidth : null}
+            attributes.data-item-height={props.productHeight ? props.productHeight : null}
+            attributes.data-item-length={props.productLength ? String.toInteger(props.productLength) : null}
+            
+            attributes.data-item-quantity="1"
+
+            attributes.class="snipcart-add-item"
+        >
+            <Neos.Fusion:Augmenter class="mb-3">
+                <Sitegeist.Lazybones:Image 
+                    @if.hasImage={props.imageSource}
+                    imageSource={props.imageSource} 
+                />
+
+                <img src="https://via.placeholder.com/800x800" alt={props.title} width="800" height="800"
+                    @if.hasNoImage={!props.imageSource}
+                />
+            </Neos.Fusion:Augmenter>
+
+
+            <div>
+                <h3 class="h4 title">{props.title}</h3>
+            </div>
+
+            {props.descriptionShort}
+
+            <!-- <Abte.Site:Component.ProductFeatures.Short node={node}/> -->
+
+            <Neos.Fusion:Augmenter class="">
+                {props.teaser_short}
+            </Neos.Fusion:Augmenter>
+            <p class="font-bold h4 productPrice text-secondary"
+                @if.hasPrice={props.productPrice}
+            >
+                CHF {Math.round(props.productPrice,2)} 
+            </p>
+
+        </Neos.Neos:NodeLink>
+    `
+}
+
+

@@ -1,0 +1,2 @@
+prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
+}

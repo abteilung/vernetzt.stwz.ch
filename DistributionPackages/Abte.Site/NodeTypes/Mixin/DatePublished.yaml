@@ -1,0 +1,21 @@
+'Abte.Site:Mixin.DatePublished':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        publication:
+          label: 'Publikationseinstellungen'
+          position: 1
+          icon: 'calendar'
+  properties:
+    'datePublished':
+      type: DateTime
+      defaultValue: 'now'
+      ui:
+        label: 'Publication Date'
+        reloadIfChanged: true
+        inspector:
+          group: 'publication'
+          position: 12
+          editorOptions:
+            format: 'd.m.Y'

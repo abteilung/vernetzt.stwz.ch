@@ -1,0 +1,110 @@
+prototype(Abte.Site:Content.DownloadBox) < prototype(Neos.Neos:ContentComponent) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('downloadPic') ? q(node).property('downloadPic') : q(site).property('downloadPic') }
+    }
+
+    title = Neos.Neos:Editable {
+        property = 'title'
+        node = ${ node }
+    }
+    
+    @context {
+        imageSource = ${ this.imageSource }
+        title = ${ this.title }
+    }
+
+    downloads = Neos.Fusion:Loop {
+        items = ${q(node).property('downloads')}
+        itemRenderer = Neos.Fusion:Tag {
+            tagName = 'div'
+            content = Carbon.Link:Link {
+                link = Neos.Fusion:ResourceUri {
+                    resource = ${item.resource}  
+                }
+                content = Abte.Site:Content.DownloadCard {
+                    node = ${item}
+                }
+            }
+        }
+        @glue = " "
+    }
+
+    renderer = afx`
+        {props.downloads}
+    `
+}
+
+
+prototype(Abte.Site:Content.DownloadCard) < prototype(Neos.Neos:ContentComponent) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    title = Neos.Neos:Editable {
+        property = 'title'
+        node = ${ node }
+    }
+
+    renderer = afx`
+
+        <div class="relative block w-full font-light mix box-shadow group mb-12">
+
+            <Sitegeist.Lazybones:Image 
+                @if.hasImage={imageSource}
+                imageSource={imageSource} 
+                width="720"
+                height="480"
+                class=""
+            />
+
+            <div class="p-6 relative">
+                <div class="w-14 h-14 bg-primary -translate-y-7 rounded-full absolute top-0 flex justify-center items-center right-2">
+                    <div class="text-white font-sansCondensed text-lg">PDF</div>
+                </div>
+        
+                <p>{ I18n.translate('Abte.Site:Main:download') }</p>
+                <h3>
+                    {item.title}
+                </h3>
+
+                <Abte.Site:Icon.Download class="absolute bottom-4 group-hover:bottom-2 duration-150 right-2" />
+            
+            </div>
+
+        </div>
+    `
+}
+
+
+
+prototype(Abte.Site:Content.DownloadLink) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    resource = ''
+    @context {
+        node = ${ this.node }
+        resource = ${ this.resource }
+    }
+
+
+    downloadFile = Neos.Fusion:Tag {
+        content = Carbon.Link:Link {
+            link = Neos.Fusion:ResourceUri {
+                resource = ${resource}  
+            }
+            content = ${ this.value }
+        }
+    }
+
+    renderer = afx`
+        {props.downloadFile}
+    `
+}

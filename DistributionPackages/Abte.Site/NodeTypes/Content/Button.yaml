@@ -1,0 +1,55 @@
+'Abte.Site:Content.Button':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: i18n
+    icon: icon-external-link
+    position: 15
+    group: media
+    inspector:
+      groups:
+        link:
+          label: Link
+          position: 20
+  'properties':
+    'target':
+      options:
+        preset: 'text.link'
+    'blank':
+      type: boolean
+      ui:
+        label: Open in new Tab/Frame
+        reloadIfChanged: false
+        inspector:
+          group: 'link'
+    'icon':
+      type: boolean
+      ui:
+        label: Show Icon
+        reloadIfChanged: true
+        inspector:
+          group: 'link'
+    'iconPosition':
+      type: boolean
+      ui:
+        label: Icon left
+        reloadIfChanged: true
+        inspector:
+          group: 'link'
+    'text':
+      options:
+        preset: 'text.plain'
+    'hollow':
+      type: boolean
+      ui:
+        label: Hollow
+        reloadIfChanged: true
+        inspector:
+          group: 'link'
+    'onDark':
+      type: boolean
+      ui:
+        label: On Dark BG
+        reloadIfChanged: true
+        inspector:
+          group: 'link'          

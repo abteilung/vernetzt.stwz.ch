@@ -1,0 +1,20 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "roen/navigation",
+    "require": {
+        "neos/flow": "*",
+        "carbon/link": "^1.7",
+        "carbon/includeassets": "^5.3"        
+    },
+    "autoload": {
+        "psr-4": {
+            "Roen\\Navigation\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Roen.Navigation"
+        }
+    }
+}

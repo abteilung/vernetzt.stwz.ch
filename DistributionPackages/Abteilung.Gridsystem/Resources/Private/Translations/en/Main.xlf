@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Abteilung.Gridsystem" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="span.all" xml:space="preserve">
+                <source>All spans</source>
+            </trans-unit>
+            <trans-unit id="span.xs" xml:space="preserve">
+                <source>Smartphone</source>
+            </trans-unit>
+            <trans-unit id="span.sm" xml:space="preserve">
+                <source>Smartphone Landscape (≥576px)</source>
+            </trans-unit>
+            <trans-unit id="span.md" xml:space="preserve">
+                <source>Tablet (≥768px)</source>
+            </trans-unit>
+            <trans-unit id="span.lg" xml:space="preserve">
+                <source>Tablet Landscape (≥992px)</source>
+            </trans-unit>
+            <trans-unit id="span.xl" xml:space="preserve">
+                <source>Desktops (≥1200px)</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

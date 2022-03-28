@@ -1,0 +1,93 @@
+
+prototype(Abte.Site:Component.Portrait) < prototype(Neos.Fusion:Component) {
+
+    node        = ${ node }
+    @context {
+        node    = ${ this.node }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+    
+    title       = ${ q(node).property('title') }
+    jobTitle    = ${ q(node).property('jobTitle') }
+    phone       = ${ q(node).property('phone') }
+    email       = ${ q(node).property('email') }
+    
+    vcf = Neos.Fusion:ResourceUri {
+        resource = ${ q(node).property('vcf').resource }  
+    }
+
+    filterClass = ${ 'mix' + ' ' + Carbon.String.urlize(q(node).parents('[instanceof Abte.Site:Document.Category]').property('title') ) }
+
+    renderer = afx`
+        <div 
+            data-ref="mix"
+            class={props.filterClass}
+        >
+            <div class="relative flex duration-100 bg-base-100">
+                <div class="leading-normal">
+                    
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        width="546"
+                        height="638"
+                        alt={props.title}
+                    />
+                    <img src="https://via.placeholder.com/546x638" alt={props.title} width="546" height="638"
+                        @if.hasNoImage={!props.imageSource}
+                    />
+
+                    <div class="relative px-4 py-6">
+                        <header class="absolute left-0 z-10 flex flex-col max-w-full mt-10 font-bold text-white uppercase -top-10 heading">
+                            <div>
+                                <div class="left-0 inline-block absolute h-9 lg:h-12 w-auto px-4 py-1 lg:text-xl bg-primary -translate-y-9 lg:-translate-y-12 !tracking-normal">
+                                    <div class="block whitespace-nowrap">
+                                        {props.title}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="top-0 left-0 inline-block px-3 py-1 pt-1 tracking-normal bg-primary-focus">
+                                <div class="block truncate whitespace-nowrap">
+                                    {props.jobTitle}
+                                </div>
+                            </div>
+                        </header>
+                        
+                        <div class="mt-8 space-y-2">
+                            <div>
+                                <Carbon.Link:Link 
+                                    link={'tel:' + props.phone} 
+                                    renderDefaultTagIfNoLink='true' 
+                                    additionalClass="flex space-x-2 items-center"
+                                >
+                                    <Abte.Site:Icon.ColorPhone />
+                                    <div class="font-bold">{props.phone}</div>
+                                </Carbon.Link:Link>
+                            </div>
+                            <div>
+                                <Carbon.Link:Link 
+                                    link={props.email} 
+                                    renderDefaultTagIfNoLink='true' 
+                                    additionalClass="underline"
+                                >                                    
+                                    { I18n.translate('Abte.Site:Main:writeUs') }
+                                </Carbon.Link:Link>
+                            </div>
+                            <div>
+                                <a href={props.vcf} class="underline" target="_blank">
+                                    { I18n.translate('Abte.Site:Main:downloadVCard') }
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>    
+    `
+
+}

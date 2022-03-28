@@ -1,0 +1,9 @@
+'Abte.Site:Content.ContactBox':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Contactbox
+    position: 150
+    inlineEditable: true
+    group: general
+    icon: headset

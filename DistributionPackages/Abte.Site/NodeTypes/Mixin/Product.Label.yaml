@@ -1,0 +1,73 @@
+'Abte.Site:Mixin.Product.Label':
+  ui:
+    inspector:
+      groups:
+        label:
+          label: Label
+          position: 22
+          icon: sticky-note
+          collapsed: true
+  properties:
+    productLabelWidth:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Label Width (mm)
+        inspector:
+          group: label
+          editorOptions:
+            disabled: true
+    productLabelHeight:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Label Height (mm)
+        inspector:
+          group: label
+          editorOptions:
+            disabled: true
+    productLabelLength:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Label Length (mm)
+        inspector:
+          group: label
+          editorOptions:
+            disabled: true
+    productLabelLanesCrosswise:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Label Lanes Crosswise
+        inspector:
+          group: label
+          editorOptions:
+            disabled: true
+    productLabelLanesLengthwise:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Label Lanes Lengthwise
+        inspector:
+          group: label
+          editorOptions:
+            disabled: true
+    productLabelPrintColor:
+      options:
+          preset: 'text.plain'
+      ui:
+        label: Label Print Color
+        inspector:
+          group: label
+          editorOptions:
+            disabled: true  
+    productLabelPrintProcess:
+      options:
+          preset: 'text.plain'
+      ui:
+        label: Label Print Process
+        inspector:
+          group: label
+          editorOptions:
+            disabled: true                 

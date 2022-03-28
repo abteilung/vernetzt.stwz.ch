@@ -1,0 +1,13 @@
+'Abte.Site:Content.LI':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Mixin.Icons': true
+    'Abte.Site:Mixin.TextColor': true
+    'Abte.Site:Constraint.Content.Restricted': true
+  ui:
+    label: i18n
+    icon: circle
+  properties:
+    li_text:
+      options:
+        preset: 'text.free'

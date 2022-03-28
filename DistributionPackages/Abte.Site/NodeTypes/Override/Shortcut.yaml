@@ -1,0 +1,8 @@
+'Neos.Neos:Shortcut':
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Category': true
+      'Abte.Site:Document.Products': true
+      'Abte.Site:Document.About': true
+      'Selfix.Navigation:Document.MegaMenu': true

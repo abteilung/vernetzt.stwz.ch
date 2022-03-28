@@ -1,0 +1,48 @@
+'Abte.Site:Document.Person':
+    superTypes:
+        'Neos.Neos:Shortcut': true
+        'Abte.Site:Mixin.Image': true
+        'Abte.Site:Constraint.Document.Restricted': true
+        'Abte.Site:Mixin.Searchable.SiteSearch': true
+    ui:
+        label: i18n
+        icon: user
+        position: 300
+    properties:
+        targetMode:
+            type: string
+            defaultValue: 'parentNode'
+        vcf:
+            options:
+                preset: 'vcf'
+            ui:
+                label: 'V-Card'
+                inspector:
+                    group: 'document'
+        image:
+            options:
+                preset: 'image.portrait'
+        phone:
+            options:
+                preset: 'phone'
+        email:
+            options:
+                preset: 'text.link'
+            ui:
+                label: 'E-Mail'
+                inspector:
+                    group: 'document'
+        jobTitle:
+            options:
+                preset: 'text.plain'
+            ui:
+                label: 'Job Title'
+                inspector:
+                    group: 'document'
+        quote:
+            options:
+                preset: 'text.free'
+            ui:
+                label: 'Zitat'
+                inspector:
+                    group: 'document'

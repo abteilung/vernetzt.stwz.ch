@@ -1,0 +1,59 @@
+prototype(Abte.Site:Component.NewsCard) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+        width = 800
+        height = 450
+    }
+
+    title = ${ q(node).property('title') }
+    subTitle = ${ q(node).property('subTitle') }
+    teaser_short = ${ q(node).property('teaser_short') }
+
+    kates = Neos.Fusion:Join {
+        @glue = ' '
+        self = ${ Carbon.String.urlize( q(node).parent('[instanceof Abte.Site:Document.Category]').property('title') ) }
+        subs = Neos.Fusion:Loop {
+            items = ${ q(node).parent('[instanceof Abte.Site:Document.Category]').parent('[instanceof Abte.Site:Document.Category]') }
+            itemRenderer = ${ Carbon.String.urlize( q(item).property('title') )}
+            // @if.hasParentParent=${ q(node).parent('[instanceof Abte.Site:Document.Category]').parent('[instanceof Abte.Site:Document.Category]') }
+        }
+    }
+
+
+    renderer = afx`
+
+    <div class={props.kates + ' ' + 'group relative mix pb-8 lg:h-full lg:min-h-[450px]' }>
+        <Neos.Neos:NodeLink 
+            node={element} 
+            attributes.class="space-y-4"
+        >   
+            <div class="overflow-hidden">
+                <Sitegeist.Lazybones:Image 
+                    @if.hasImage={props.imageSource}
+                    imageSource={props.imageSource} 
+                    class="duration-300 scale-105 group-hover:scale-100"
+                />
+                <img src="https://via.placeholder.com/800x450" alt={props.title} width="800" height="450"
+                    @if.hasNoImage={!props.imageSource}
+                />
+            </div>
+
+            <div class="text-base">{q(node).parent('[instanceof Abte.Site:Document.Category]').property('title')}</div>
+            <h3>{props.title}</h3>
+            <p class="">
+                {String.stripTags(String.cropAtWord(props.teaser_short, 175, '…'))}
+            </p>
+
+            <Abte.Site:Icon.ArrowRight class="absolute bottom-0 left-0 duration-150 text-secondary group-hover:left-2" />
+
+        </Neos.Neos:NodeLink>
+        </div>
+    `
+}
+                   

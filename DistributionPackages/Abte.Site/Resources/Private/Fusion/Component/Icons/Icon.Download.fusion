@@ -1,0 +1,76 @@
+prototype(Abte.Site:Icon.Download) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+
+        <svg class={props.class} width="22px" height="23px" viewBox="0 0 22 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Shop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Etikettenshop-3" transform="translate(-1299.000000, -1539.000000)" stroke="#E64545" stroke-width="2">
+                    <g id="teaser/story" transform="translate(1067.000000, 1187.000000)">
+                        <g id="move-layer-down" transform="translate(233.000000, 353.000000)">
+                            <line x1="10" y1="0" x2="10" y2="16" id="Path"></line>
+                            <polyline id="Path" points="16 10 10 16 4 10"></polyline>
+                            <line x1="20" y1="21" x2="0" y2="21" id="Path"></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+  
+        `
+}
+
+
+
+
+
+
+
+prototype(Abte.Site:Icon.WhitePhone) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Shop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Etikettenshop-1" transform="translate(-99.000000, -3879.000000)" stroke="currentColor" stroke-width="2">
+                    <g id="footer" transform="translate(0.000000, 3829.000000)">
+                        <g id="Group-24" transform="translate(100.000000, 50.000000)">
+                            <g id="icon-phone" transform="translate(0.000000, 1.000000)">
+                                <path d="M16,0 C22.627417,0 28,5.372583 28,12" id="Path"></path>
+                                <path d="M22,12 C22,8.6862915 19.3137085,6 16,6" id="Path"></path>
+                                <path d="M18.693,17.293 L16.411,20.146 C12.876682,18.0686827 9.93131733,15.123318 7.854,11.589 L10.707,9.307 C11.394291,8.75644687 11.6242721,7.81188152 11.267,7.007 L8.667,1.152 C8.28195378,0.284526454 7.32557257,-0.176737051 6.407,0.062 L1.457,1.346 C0.500823076,1.59564191 -0.117435383,2.5210962 0.018,3.5 C1.80264168,16.2087688 11.7912312,26.1973583 24.5,27.982 C25.4785511,28.1168883 26.4033977,27.4987488 26.653,26.543 L27.937,21.593 C28.1747762,20.6753235 27.7141644,19.7202623 26.848,19.335 L20.993,16.735 C20.1885598,16.377281 19.244084,16.606419 18.693,17.293 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+
+    `
+}
+
+
+prototype(Abte.Site:Icon.ColorPhone) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Shop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g id="Etikettenshop-1" transform="translate(-1092.000000, -475.000000)" stroke-width="2">
+                    <g id="teaser/support" transform="translate(1067.000000, 225.000000)">
+                        <g id="button/link-icon" transform="translate(26.000000, 250.000000)">
+                            <g id="icon-phone" transform="translate(0.000000, 1.000000)">
+                                <path d="M16,0 C22.627417,0 28,5.372583 28,12" id="Path" stroke="#E64545"></path>
+                                <path d="M22,12 C22,8.6862915 19.3137085,6 16,6" id="Path" stroke="#E64545"></path>
+                                <path d="M18.693,17.293 L16.411,20.146 C12.876682,18.0686827 9.93131733,15.123318 7.854,11.589 L10.707,9.307 C11.394291,8.75644687 11.6242721,7.81188152 11.267,7.007 L8.667,1.152 C8.28195378,0.284526454 7.32557257,-0.176737051 6.407,0.062 L1.457,1.346 C0.500823076,1.59564191 -0.117435383,2.5210962 0.018,3.5 C1.80264168,16.2087688 11.7912312,26.1973583 24.5,27.982 C25.4785511,28.1168883 26.4033977,27.4987488 26.653,26.543 L27.937,21.593 C28.1747762,20.6753235 27.7141644,19.7202623 26.848,19.335 L20.993,16.735 C20.1885598,16.377281 19.244084,16.606419 18.693,17.293 Z" id="Path" stroke="#24447B"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

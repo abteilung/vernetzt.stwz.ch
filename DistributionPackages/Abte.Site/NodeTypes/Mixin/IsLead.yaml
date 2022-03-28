@@ -1,0 +1,21 @@
+'Abte.Site:Mixin.IsLead':
+  abstract: true
+  ui:
+    label: i18n
+    icon: tag
+    position: 300
+    inspector:
+      groups:
+        style:
+          label: 'Style'
+          position: 15
+          icon: 'clone'
+  properties:
+    'isLead':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Is Lead'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'

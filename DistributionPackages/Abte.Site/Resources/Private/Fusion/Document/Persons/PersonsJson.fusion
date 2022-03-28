@@ -1,0 +1,61 @@
+prototype(Abte.Site:Document.Persons.Json) < prototype(Neos.Fusion:Component) {
+    renderer = Abte.Site:DefaultView.Json {
+
+        nodeTitle = ${ q(node).property('title') }
+        nodeUri = Neos.Neos:NodeUri {
+            node = ${node}
+        }
+        nodePath = ${ q(node).property('_path') }
+
+
+        content = Abte.Site:ContentCollectionJson {
+            nodePath = 'main'
+        }
+
+        # TODO: Make recursive instead of 1 Level childpages.
+        # @process.stringify is only allowed on entry page.
+        childPages = Neos.Fusion:Map {
+            items = ${ q(node).children('[instanceof Abte.Site:Document.Category]').children('[instanceof Abte.Site:Document.Person]') }
+            itemName = 'node'
+            itemRenderer = Abte.Site:DefaultView.Json {
+
+                pageImage = Neos.Neos:ImageUri {
+                    asset = ${ q(node).property('image') ? q(node).property('image') : null }
+                    width = 546
+                    height = 638
+                    allowCropping = true
+                    quality = 80
+                    format = 'webp'
+                }
+
+
+                nodeTitle = ${ q(node).property('title') }
+                phone = ${ q(node).property('phone') }
+                email = ${ q(node).property('email') }
+                jobTitle = ${ q(node).property('jobTitle') }
+                vcf = Carbon.Link:URI {
+                    link = ${ q(node).property('vcf') }
+                }
+                nodeCat = ${ q(node).parents('[instanceof Abte.Site:Document.Category]').property('title') }
+                nodeCatId = ${ q(node).parents('[instanceof Abte.Site:Document.Category]').property('_identifier') }
+                nodePath = ${ q(node).property('_path') }
+
+                content = Abte.Site:ContentCollectionJson {
+                    nodePath = 'main'
+                }
+
+            }
+
+        }
+
+        @process.stringify = ${ Json.stringify(value) }
+
+        // @cache {
+        //     mode = 'uncached'
+        //     context {
+        //         1 = 'node'
+        //         2 = 'documentNode'
+        //     }
+        // }
+    }
+}

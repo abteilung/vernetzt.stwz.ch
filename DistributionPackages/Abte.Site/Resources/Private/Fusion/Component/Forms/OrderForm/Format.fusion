@@ -1,0 +1,48 @@
+prototype(Abte.Site:OrderForm.Format) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="">
+            <div>
+                <h3 class="text-primary">
+                    Format
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-6">
+
+                <div class="sm:col-span-6">
+                    <Neos.Fusion.Form:FieldContainer field.name="etikettenform" label="Etikettenform:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="Rechteckig" />
+                            <Neos.Fusion.Form:Select.Option option.value="Rund" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="breite" label="Breite (in mm)" >
+                        <Neos.Fusion.Form:Input attributes.placeholder="Breite" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="hoehe" label="Höhe (in mm)">
+                        <Neos.Fusion.Form:Input attributes.placeholder="Höhe" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-6">
+                    <Neos.Fusion.Form:FieldContainer field.name="stanzformen" label="Stanzformen:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="Ecken (0mm abgerundet)" />
+                            <Neos.Fusion.Form:Select.Option option.value="5 mm abgerundet" />
+                            <Neos.Fusion.Form:Select.Option option.value="10 mm abgerundet" />
+                            <Neos.Fusion.Form:Select.Option option.value="eigene Form" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+
+            </div>
+        </div>
+    `
+}

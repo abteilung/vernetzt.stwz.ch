@@ -1,0 +1,8 @@
+Neos:
+  Neos:
+    Ui:
+      frontendConfiguration:
+        'PunktDe.NeosEnvironmentDisplay':
+          backgroundColor: '#ff8700'
+          label: 'DEV'
+          icon: 'exclamation-triangle'

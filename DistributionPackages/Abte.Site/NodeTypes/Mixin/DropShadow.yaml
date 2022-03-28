@@ -1,0 +1,21 @@
+'Abte.Site:Mixin.DropShadow':
+  abstract: true
+  ui:
+    label: i18n
+    icon: tag
+    position: 300
+    inspector:
+      groups:
+        style:
+          label: 'Style'
+          position: 15
+          icon: 'clone'
+  properties:
+    'dropShadow':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Drop Shadow'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'

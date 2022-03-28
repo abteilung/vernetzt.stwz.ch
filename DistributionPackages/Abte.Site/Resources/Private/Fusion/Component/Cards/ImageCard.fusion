@@ -1,0 +1,40 @@
+prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+    title = ${ q(node).property('title') }
+    subTitle = ${ q(node).parents('[instanceof Abte.Site:Document.Products]').property('title') }
+
+    kates = Abte.Site:Component.ProductKates
+
+    renderer = afx`
+        <Neos.Neos:NodeLink 
+            node={node} 
+            attributes.class={props.kates + ' ' + 'relative block group w-full h-full mix font-light' }
+        >
+
+            <Abte.Site:Component.Heading style="" title={props.title} subTitle={props.subTitle} />
+            <div class="overflow-hidden">
+                <Sitegeist.Lazybones:Image 
+                    @if.hasImage={props.imageSource}
+                    imageSource={props.imageSource} 
+                    width="700"
+                    height="700"
+                    class="object-cover object-center w-full h-full duration-300 scale-105 aspect-square group-hover:scale-100 bg-tertiary-focus"
+                />
+            </div>
+
+        </Neos.Neos:NodeLink>
+    `
+}
+
+
+
+

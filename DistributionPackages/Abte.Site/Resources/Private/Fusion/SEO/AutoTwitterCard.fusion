@@ -1,0 +1,37 @@
+// Add Teaser Short to OG as Fallback
+prototype(Neos.Seo:TwitterCard) < prototype(Neos.Fusion:Component) {
+    description = ${q(node).property('twitterCardDescription') || q(node).property('openGraphDescription') || q(node).property('metaDescription') || q(node).property('teaser_short')}
+    image = Neos.Neos:ImageUri {
+        asset = Neos.Fusion:Case {
+            default {
+                @position = 'start'
+                condition = ${Type.instance(q(node).property('twitterCardImage'), 'Neos\Media\Domain\Model\ImageInterface')}
+                renderer = ${q(node).property('twitterCardImage')}
+            }
+
+            documentNodeImage {
+                @position = 'start'
+                condition = ${ q(documentNode).property('image') }
+                renderer = ${ q(documentNode).property('image') }
+            }
+
+            opengraph {
+                @position = 'after default'
+                condition = ${Type.instance(q(node).property('openGraphImage'), 'Neos\Media\Domain\Model\ImageInterface')}
+                renderer = ${q(node).property('openGraphImage')}
+            }
+        }
+        preset = Neos.Fusion:Case {
+            summaryCardLargeImage {
+                condition = ${type == 'summary_large_image'}
+                renderer = 'Neos.Seo:TwitterCard.SummaryCardLargeImage'
+            }
+
+            default {
+                condition = true
+                renderer = 'Neos.Seo:TwitterCard.SummaryCard'
+            }
+        }
+        @if.isImageSet = ${this.asset}
+    }
+}

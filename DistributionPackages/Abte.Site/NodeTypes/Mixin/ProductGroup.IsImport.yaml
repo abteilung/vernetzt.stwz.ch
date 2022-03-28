@@ -1,0 +1,12 @@
+'Abte.Site:Mixin.ProductGroup.IsImport':
+  label: "${ q(node).property('isImport') && node.context.inBackend ? '<span class=\"hidden\">🔄 </span>' + q(node).property('title') : q(node).property('title') }"
+  properties:
+    isImport:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: Entry node for Import
+        inspector:
+          group: general
+          editorOptions:
+            disabled: false

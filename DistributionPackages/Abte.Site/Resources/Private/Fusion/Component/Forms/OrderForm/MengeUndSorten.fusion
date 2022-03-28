@@ -1,0 +1,27 @@
+prototype(Abte.Site:OrderForm.MengeUndSorten) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="">
+            <div>
+                <h3 class="text-primary">
+                    Menge & Sorten
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-6">
+
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="auflage" label="Gesamtauflage" >
+                        <Neos.Fusion.Form:Input attributes.placeholder="1000" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="sorten" label="Anzahl Sorten">
+                        <Neos.Fusion.Form:Input attributes.placeholder="1" />
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+
+            </div>
+        </div>
+    `
+}

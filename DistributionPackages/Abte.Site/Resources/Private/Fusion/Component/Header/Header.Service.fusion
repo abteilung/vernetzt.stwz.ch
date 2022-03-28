@@ -1,0 +1,42 @@
+prototype(Abte.Site:Component.HeaderService) < prototype(Neos.Fusion:Component) {
+    
+    pageTitle = Neos.Neos:Editable {
+        property = 'titleOverride'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    renderer = afx`
+
+        <div class="container">
+            <div class="space-y-8">
+                <Selfix.Navigation:Component.Nav.Breadcrumb />
+                <h1 class="mb-8"
+                    @if.hasPageTitle={props.pageTitle}
+                >
+                    {props.pageTitle}
+                </h1>
+
+            </div>
+        </div>
+
+    `
+
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			documentNode = ${documentNode}
+		}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
+}

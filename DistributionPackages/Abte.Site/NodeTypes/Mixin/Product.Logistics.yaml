@@ -1,0 +1,38 @@
+'Abte.Site:Mixin.Product.Logistics':
+  ui:
+    inspector:
+      groups:
+        logistics:
+          label: Logistik
+          position: 25
+          icon: pallet
+          collapsed: true
+  properties:
+    productInStock:
+      options:
+        preset: 'boolean'
+      defaultValue: 'true'
+      ui:
+        label: 'Product is in Stock'
+        inspector:
+          group: logistics
+          editorOptions:
+            disabled: true
+    productStock:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Stock
+        inspector:
+          group: logistics
+          editorOptions:
+            disabled: true
+    productLowStock:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Low Stock
+        inspector:
+          group: logistics
+          editorOptions:
+            disabled: true

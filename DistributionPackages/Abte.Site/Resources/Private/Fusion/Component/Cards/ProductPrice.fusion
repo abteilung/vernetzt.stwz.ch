@@ -1,0 +1,16 @@
+prototype(Abte.Site:Component.ProductPrice) < prototype(Neos.Neos:ContentComponent) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    prepend = 'CHF '
+
+    productPrice = ${ q(node).property('productPrice') }
+
+  	renderer = afx`
+        {props.prepend}{  (props.productPrice + String.toInteger(0.1) ) }
+    `
+
+}

@@ -1,0 +1,7 @@
+'Neos.Seo:TitleTagMixin':
+  abstract: true
+  properties:
+    titleOverride:
+      validation:
+        'Neos.Neos/Validation/StringLengthValidator':
+          maximum: 160

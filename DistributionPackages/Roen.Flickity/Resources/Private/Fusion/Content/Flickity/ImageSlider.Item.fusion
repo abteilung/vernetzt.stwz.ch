@@ -1,0 +1,59 @@
+prototype(Roen.Flickity:Content.ImageSlider.Item) < prototype(Neos.Neos:ContentComponent) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+    caption = Neos.Neos:Editable {
+        property = 'caption'
+    }
+
+    target = ${ q(node).property('target') }
+    target.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
+  	renderer = afx`
+        <div 
+            class="w-full h-full carousel-cell bg-tertiary"
+        >
+            <div class="absolute z-20 w-full text-left pt-36 md:pt-48 lg:pt-48 xl:pt-64 2xl:pt-80 containerPadding">
+                <div class="container grid md:grid-cols-2 gridgap">
+                    <div>
+                        <h2 class="!text-white h1">{props.subTitle}</h2>
+                    </div>
+                    <div class="space-y-6 text-white">
+                        <Neos.Fusion:Augmenter class="lead">
+                            {props.caption}
+                        </Neos.Fusion:Augmenter>
+
+                        <Abte.Site:Content.Button 
+                            target={q(node).property('target')} 
+                            class="!bg-transparent text-white border-2 relative z-20 border-white" 
+                            text={ I18n.translate('Abte.Site:Main:keepReading') } 
+                        />
+                    </div>
+                </div>
+            </div>
+            <Sitegeist.Lazybones:Image 
+                @if.hasImage={props.imageSource}
+                imageSource={props.imageSource} 
+                width="1920"
+                height="1080"
+                class="absolute top-0 left-0 z-10 object-cover object-center w-full h-full slide-image aspect-video mix-blend-multiply saturate-20"
+            />
+        </div>
+    `
+}

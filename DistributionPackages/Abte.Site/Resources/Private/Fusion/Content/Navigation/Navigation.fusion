@@ -1,0 +1,82 @@
+prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) {
+  
+    class       = 'navigation-element'
+    liClass     = ''
+    ulClass     = ${ q(node).property('threeCols') ? 'grid md:grid-cols-2 lg:grid-cols-3 gridgap-x' : q(node).property('twoCols') ? 'grid lg:grid-cols-2 gridgap-x' : null }
+    icon        = Abte.Site:Icon.ArrowRight {
+        class = 'relative left-0 duration-150 text-secondary group-hover:left-2'
+    }
+    arrowIcon   = ${ q(node).property('arrowIcon') ? this.icon : false }
+    iconRight   = ${ q(node).property('iconRight') ? true : false }
+
+
+    showTitleOverride   = ${ q(node).property('showTitleOverride') }
+
+    menuItemsArray = ${ q(node).property('startingPoint') }
+    
+    @context {
+        menuItemsArray = ${ this.menuItemsArray }
+    }
+
+	menuItems = Neos.Neos:MenuItems {
+        startingPoint = ${ q(node).property('startingPoint') }
+        startingPoint.@if.hasStartingpoint = ${ q(node).property('startingPoint') }
+
+        itemCollection = ${ q(node).property('navigationItems') }
+        itemCollection.@if.navigationItems = ${ q(node).property('navigationItems') }
+
+        renderHiddenInIndex = ${ false }
+
+        filter = '!Selfix.Navigation:Document.MegaMenu, !Neos.Neos:ContentCollection'
+    }
+
+    hasMenuItems = ${!!menuItemsArray}
+
+    limit = ${ q(node).property('limit') ? q(node).property('limit') : 999 }
+
+	renderer = afx`
+        <nav class={props.class}>
+            <ul class={props.ulClass}>
+                <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+                    <li class={ q(item.node).is('[instanceof Abte.Site:Document.Product]') ? 'productLinks' : 'linkItems' }
+                        @if.isWithinRange={i.index < props.limit}
+                    >
+                        <Carbon.Link:Link 
+                            node={ item.node }
+                            attributes.class="whitespace-nowrap"
+                        >
+                            
+                            <div class="flex items-center justify-between group"
+                                @if.isProduct={ q(item.node).is('[instanceof !Abte.Site:Document.Product]') }
+                            >
+                                <div class="tracking-normal hover:text-primary-focus ">{ props.showTitleOverride ? q(item.node).property('titleOverride') : item.label }</div> {props.arrowIcon}
+                            </div>
+
+                            
+                            <div
+                                @if.isProduct={ q(item.node).is('[instanceof Abte.Site:Document.Product]') }
+                            >
+                                <Abte.Site:Component.ItemCard productItemClass="" node={item.node} />
+                            </div>
+
+
+                        </Carbon.Link:Link>
+                    </li>
+                </Neos.Fusion:Loop>
+            </ul>
+        </nav>
+	`
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.nodeTag(menuItemsArray)}
+            3 = ${Neos.Caching.descendantOfTag(menuItemsArray)}
+        }
+    }
+
+}

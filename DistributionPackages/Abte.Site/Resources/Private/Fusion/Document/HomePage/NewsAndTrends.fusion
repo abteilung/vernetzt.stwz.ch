@@ -1,0 +1,43 @@
+prototype(Abte.Site:Component.NewsAndTrends) < prototype(Neos.Fusion:Component) {
+
+    class = "container mt-8 stories-updates lg:mt-16"
+
+    latestStories = Neos.Neos:MenuItems {
+        itemCollection = ${ Array.slice( q(site).find('[instanceof Abte.Site:Document.Story]').remove(documentNode).sort('datePublished', 'DESC').get(), 0, 3 )  }
+    }
+
+    title = ${ q( q(site).find('[instanceof Abte.Site:Document.Story]').get(0)).parent().parent().property('title') }
+    more = ${ }
+
+    renderer = afx`
+        <div class={props.class}>
+            <div class="flex items-center justify-between">
+                <h2>{props.title}</h2>
+                <div class="h3"><!--Zur Übersicht--></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gridgap">
+                <Neos.Fusion:Loop items={props.latestStories}>
+                    <div class="">
+                        <Neos.Neos:NodeLink 
+                            node={item.node}
+                            attributes.class="relative block pb-8 space-y-4 overflow-hidden group mix"
+                        >
+
+                            <div class="overflow-hidden">
+                                <Abte.Site:Content.Image node={item.node} class="duration-500 scale-105 group-hover:scale-100" />
+                            </div>
+                            <div class="text-base">{ q(item.node).parents('[instanceof Abte.Site:Document.Category]').property('title') }</div>
+                            <h3>{ q(item.node).property('title') }</h3>
+                            <p class="">
+                                {String.stripTags( String.cropAtWord( q(item.node).property('teaser_short'), 175, '…'))}
+                            </p>
+                                <Abte.Site:Icon.ArrowRight class="absolute bottom-0 left-0 duration-150 text-secondary group-hover:left-2" />
+                        </Neos.Neos:NodeLink>
+                    </div>
+                </Neos.Fusion:Loop>
+
+            </div>
+        </div>
+     `
+}

@@ -1,0 +1,32 @@
+'Roen.Flickity:Content.ImageSlider.Item':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Mixin.Image': true
+    'Roen.Flickity:Constraint.Content.Restricted': TRUE
+  ui:
+    label: Slider-Bild
+    icon: image
+    group: general
+    position: 50
+    inspector:
+      groups:
+        content:
+          label: content
+          position: 100
+  properties:
+    'title':
+      options:
+        preset: 'text.title'
+    'subTitle':
+      options:
+        preset: 'text.subTitle'
+    'caption':
+      options:
+        preset: 'text.free'
+    'image':
+      options:
+        preset: 'image.cinemaAsset'
+    'target':
+      options:
+        preset: 'text.link'        

@@ -1,0 +1,17 @@
+'Abteilung.Gridsystem:Content.Row':
+  superTypes:
+    'Abteilung.Gridsystem:Mixin.Row': true
+    'Neos.Neos:ContentCollection': true
+  ui:
+    label: i18n
+    position: 100
+    inlineEditable: true
+    group: structure
+    icon: columns
+  options:
+    template:
+      childNodes:
+        column:
+          type: 'Abteilung.Gridsystem:Content.Column'
+          withItems: '${Array.range(0, (data.count ? data.count - 1 : 1))}'
+          when: '${data.count}'

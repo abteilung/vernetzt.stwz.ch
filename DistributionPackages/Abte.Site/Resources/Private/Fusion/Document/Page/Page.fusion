@@ -1,0 +1,11 @@
+prototype(Abte.Site:Document.Page) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        
+        renderer = afx`
+            <main class="container main">
+                {props.main}
+                <!-- <Abte.Site:Component.SubMenuAsCards /> -->
+            </main>
+        `
+    }
+}

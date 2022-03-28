@@ -1,0 +1,17 @@
+prototype(Abte.Site:Content.LogoGrid) < prototype(Neos.Neos:ContentComponent) {
+    
+    items = Neos.Fusion:Collection {
+        collection = ${q(node).children('[instanceof Abte.Site:Content.LogoGrid.Item]')}
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Abte.Site:Content.LogoGrid.Item
+    }
+
+    renderer = afx`
+        <div class="bg-gray-50">
+            <div class="grid grid-cols-2 gap-0.5 md:grid-cols-3">
+                {props.items}
+            </div>	
+        </div>	
+    `
+}

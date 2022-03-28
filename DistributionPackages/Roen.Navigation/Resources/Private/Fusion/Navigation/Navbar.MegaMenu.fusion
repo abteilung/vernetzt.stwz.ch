@@ -1,0 +1,32 @@
+prototype(Roen.Navigation:Navbar.MegaMenu) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    menuContent = Neos.Neos:ContentCollection {
+        nodePath = ${ q(node).children('main').property('_path') }
+        collection = ${ q(node).children('main').children() }
+    }
+
+    theme = ${ q(node).closest("[instanceof Neos.Neos:Document][colorWorld][colorWorld != '']").property('colorWorld') }
+
+    renderer = afx`
+
+        <div 
+            x-show="megaMenu"
+            x-transition:enter="transition ease-out duration-150"
+            x-transition:enter-start="transform opacity-0"
+            x-transition:enter-end="transform opacity-150"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-150"
+            x-transition:leave-end="transform opacity-0"
+            class="absolute left-0 z-20 w-full megaMenu top-48"
+        >
+            <Neos.Fusion:Augmenter class="container p-12 bg-white box-shadow text-primary" "@click.away"="megaMenu = false" data-theme={props.theme}>
+                {props.menuContent}
+            </Neos.Fusion:Augmenter>
+        </div>
+    `
+}

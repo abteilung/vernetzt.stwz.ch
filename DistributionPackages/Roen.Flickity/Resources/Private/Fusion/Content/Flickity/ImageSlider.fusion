@@ -1,0 +1,42 @@
+prototype(Roen.Flickity:Content.ImageSlider) < prototype(Neos.Neos:ContentComponent) {
+ 
+    sliderItems = ${ q(node).children('[instanceof Roen.Flickity:Content.ImageSlider.Item]') }
+
+    @context {
+        sliderItems = ${ this.sliderItems}
+    }
+
+    slides = Neos.Fusion:Collection {
+        collection = ${ sliderItems }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Roen.Flickity:Content.ImageSlider.Item
+    }
+
+    textBoxSlides = Neos.Fusion:Collection {
+        collection = ${ sliderItems }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Roen.Flickity:Content.ImageSlider.TextBox 
+    }
+
+
+    renderer = afx`
+        <div class="relative isolate">
+        
+            <div class="relative z-10 text-4xl text-center text-white overflow-hidden  headerSlider xl:h-screen 2xl:h-[980px] h-[768px]">
+                {props.slides}
+            </div>
+
+            <div class="textBoxContainer containerPadding">
+                <div class="container textBox">
+                    <div class="carousel-status"></div>
+                    <div class="grid grid-cols-3 lg:grid-cols-4 button-group--cells gridgap">
+                        {props.textBoxSlides}
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    `
+}

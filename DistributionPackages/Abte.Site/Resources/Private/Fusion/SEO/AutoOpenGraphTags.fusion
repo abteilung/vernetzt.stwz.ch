@@ -1,0 +1,24 @@
+// Add Teaser Short to OG as Fallback
+prototype(Neos.Seo:OpenGraphMetaTags) < prototype(Neos.Fusion:Component) {
+    description = ${q(node).property('openGraphDescription') || q(node).property('metaDescription') || q(node).property('teaser_short') || q(node).property('subTitle')}
+    image = Neos.Fusion:Case {
+        documentNodeImage {
+            @position = 'start'
+            condition = ${ q(documentNode).property('image') }
+            renderer = ${ q(documentNode).property('image') }
+        }
+
+        contentImage {
+            @position = 'start'
+            firstContentWithImage = ${ q(node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Neos:Content][image instanceof "Neos\Media\Domain\Model\ImageInterface"]') }
+            condition = ${this.firstContentWithImage.count()}
+            renderer = ${this.firstContentWithImage.property('image')}
+        }
+
+        default {
+            @position = 'start'
+            condition = ${Type.instance(q(node).property('openGraphImage'), 'Neos\Media\Domain\Model\ImageInterface')}
+            renderer = ${q(node).property('openGraphImage')}
+        }
+    }
+}

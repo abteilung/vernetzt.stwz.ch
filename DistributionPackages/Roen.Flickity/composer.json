@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "roen/flickity",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Roen\\Flickity\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Roen.Flickity"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+'Abte.Site:Mixin.Icons':
+    abstract: true
+    properties:
+        'icon':
+            type: string
+            defaultValue: 'none'
+            ui:
+                label: 'Icon'
+                position: 99
+                inspector:
+                    group: 'general'
+                    editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+                    editorOptions:
+                        values:
+                            none:
+                                label: ''
+                                icon: ''
+                            check:
+                                label: 'Check'
+                                icon: 'check'
+                            times:
+                                label: 'Cross'
+                                icon: 'times'
+                            basket:
+                                label: 'Basket'
+                                icon: 'shopping-basket'
+                            arrowRight:
+                                label: 'Arrow Right'
+                                icon: 'arrow-right'
+                            arrowLeft:
+                                label: 'Arrow Left'
+                                icon: 'arrow-left'
+                            phone:
+                                label: 'Phone'
+                                icon: 'phone'
+                            envelope:
+                                label: 'Envelope'
+                                icon: 'envelope'

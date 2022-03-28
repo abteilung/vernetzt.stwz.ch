@@ -1,0 +1,8 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Roen.Privacy':
+        Package: 'Roen.Privacy'
+        General:
+          Head: Privacy.css

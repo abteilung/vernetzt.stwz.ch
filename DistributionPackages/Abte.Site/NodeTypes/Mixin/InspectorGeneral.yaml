@@ -1,0 +1,28 @@
+'Abte.Site:Mixin.InspectorGeneral':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        general:
+          label: i18n
+          icon: icon-cogs
+        productSpecific:
+          label: i18n
+          icon: icon-box
+        featureImages:
+          label: 'Images'
+          icon: 'image'
+          tab: 'features'
+        downloads:
+          label: 'Downloads'
+          icon: 'download'
+          tab: 'downloads'
+      tabs:
+        features:
+          icon: 'carrot'
+          position: 99
+          label: 'Page Features'
+        downloads:
+          icon: 'download'
+          position: 77
+          label: 'Downloads'

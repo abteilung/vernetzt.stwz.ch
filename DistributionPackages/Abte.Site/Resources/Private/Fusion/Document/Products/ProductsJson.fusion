@@ -1,0 +1,37 @@
+prototype(Abte.Site:Document.Products.Json) < prototype(Neos.Fusion:Component) {
+    renderer = Neos.Fusion:Map {
+        items = ${ q(documentNode).find('[instanceof Abte.Site:Document.Product]') }
+        itemName = 'node'
+        itemRenderer = Abte.Site:DefaultView.Json {
+
+            pageImage >
+            nodeType >
+
+            productID = ${ q(node).property('productID') }
+            nodeTitle = ${ q(node).property('title') }
+
+
+            Material = Neos.Fusion:Join {
+                @if.hasValue = ${ q(node).property('productMaterial') }
+                value = ${ q(node).property('productMaterial') }
+            }
+        
+      // description = ${ String.stripTags( q(node).property('teaser_short') ) }
+            // nodeUri = Neos.Neos:NodeUri {
+            //     node = ${node}
+            // }
+            // nodePath = ${ q(node).property('_path') }
+        }
+
+    }
+
+    @process.stringify = ${ Json.stringify(value) }
+
+    // @cache {
+    //     mode = 'uncached'
+    //     context {
+    //         1 = 'node'
+    //         2 = 'documentNode'
+    //     }
+    // }
+}

@@ -1,0 +1,56 @@
+prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
+
+    class = ''
+
+    dropShadow = ${ q(node).property('dropShadow') }
+
+    bgColor = Abte.Site:Mixin.BgColor
+
+    accordionClass = ${ this.class + ' ' +  (this.dropShadow ? 'box-shadow' : null) + ' ' + this.bgColor + ' ' + (q(node).property('image') ? 'grid grid-cols-3 gridgap' : null) }
+
+    accordionItems = Neos.Fusion:Collection {
+        collection = ${ q(node).children('[instanceof Abte.Site:Content.Accordion.Item]') }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Abte.Site:Content.Accordion.Item
+    }
+
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+
+  	renderer = afx`
+        <div class={props.accordionClass}>
+
+            <div
+                class={ props.imageSource ? 'relative col-span-2' : 'relative' }
+            >
+                <div
+                    x-data="\{selected:null\}"
+                    class={props.dropShadow ? 'accordion pt-24 pl-5 md:pl-8 lg:pl-12' : 'accordion pt-4'}
+                >
+                    {props.accordionItems}
+                </div>
+            </div>
+            <div class="h-full">
+                <Sitegeist.Lazybones:Image 
+                    @if.hasImage={props.imageSource}
+                    imageSource={props.imageSource} 
+                    width="700"
+                    height="700"
+                    class="object-cover object-center w-full h-full"
+                />
+            </div>
+        </div>
+    `
+
+}

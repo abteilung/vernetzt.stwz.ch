@@ -1,0 +1,26 @@
+prototype(Abte.Site:DefaultView.Json) < prototype(Neos.Fusion:DataStructure) {
+
+    nodeId = ${node.identifier}
+    nodeId.@position = "start 200"
+
+    nodeType = ${q(node).property('_nodeType.name')}
+    nodeType.@position = "start 190"
+
+    pagePath = Neos.Neos:NodeUri {
+        node = ${ node }
+        absolute = true
+    }
+    pagePath.@position = "start 170"
+    pagePath.@process.RemoveJson = ${ String.replace(value, '.json', '') }
+
+    pageImage = Neos.Neos:ImageUri {
+        asset = ${ q(node).property('image') ? q(node).property('image') : null }
+        width = 640
+        height = 640
+        allowCropping = true
+        quality = 40
+        format = 'webp'
+    }
+    pageImage.@position = "start 150"
+
+}

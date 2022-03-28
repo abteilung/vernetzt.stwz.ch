@@ -1,0 +1,16 @@
+'Abteilung.Gridsystem:Mixin.Row':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abteilung.Gridsystem:Mixin.Column.Count': true
+    'Abteilung.Gridsystem:Mixin.Row.CreationDialog': true
+  ui:
+    label: i18n
+    position: 100
+    inlineEditable: true
+    group: general
+    icon: columns
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Content': false
+      'Abteilung.Gridsystem:Mixin.Column': true

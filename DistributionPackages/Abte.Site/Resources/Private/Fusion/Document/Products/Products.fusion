@@ -1,0 +1,81 @@
+prototype(Abte.Site:Document.Products) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        aside = Neos.Neos:ContentCollection {
+            nodePath = 'aside'
+        }
+
+        pageTitle = Neos.Neos:Editable {
+            property = 'titleOverride'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        subTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        teaser_short = Neos.Neos:Editable {
+            property = 'teaser_short'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        productItems = Neos.Neos:MenuItems {
+            itemCollection = ${ q(documentNode).children('[instanceof Abte.Site:Document.Product]').get() }
+            maximumLevels = 1
+        }
+   
+        // Output Mapping queries: <Abte.Site:Component.ImportMapping />
+
+        renderer = afx`
+            <!-- <header class="pt-32 mb-32">
+                
+            </header> -->
+            <div class="gridPadding">
+                <div class="container grid grid-cols-12 gridgap">
+                    <main class="col-span-12 space-y-16 md:space-y-24 lg:col-span-8">
+                        <div>
+                            <Selfix.Navigation:Component.Nav.Breadcrumb />
+                            <h2 class="h1">{props.pageTitle}</h2>
+                            <Neos.Fusion:Augmenter class="lead">
+                                {props.teaser_short}
+                            </Neos.Fusion:Augmenter>
+                        </div>
+
+                        <!-- <Selfix.Navigation:Component.ProductSearch /> -->
+                        <Selfix.Navigation:Component.ProductFilter />
+                        <Carbon.IncludeAssets:File file="ProductFilter.js" />
+
+                        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gridgap mixitupContent">
+                            <Neos.Fusion:Loop items={props.productItems} iterationName="i">
+                                <Abte.Site:Component.ItemCard node={item.node} productItemClass='' />
+                            </Neos.Fusion:Loop>
+                        </div>
+                        
+                        {props.main}
+
+                    </main>
+                    <aside class="col-span-12 lg:col-end-13 lg:col-span-3">
+                        <div class="sticky grid md:grid-cols-2 gridPadding-top top-24 lg:grid-cols-1 gridgap">
+                            <Abte.Site:Content.ContactBox />
+                            <!--
+                            <Abte.Site:Component.ProductUpdates 
+                                title="Neu im Sortiment" 
+                                further="…" 
+                            />
+                            -->
+                            <Abte.Site:Component.SiblingsDropdown label="Weitere Ettiketierlösungen" />
+
+                            {props.aside}
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        `
+    }
+}

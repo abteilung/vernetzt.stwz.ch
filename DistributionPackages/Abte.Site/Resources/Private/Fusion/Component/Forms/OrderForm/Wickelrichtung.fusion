@@ -1,0 +1,112 @@
+prototype(Abte.Site:OrderForm.Wickelrichtung) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="">
+            <div>
+                <h3 class="text-primary">
+                    Wickelrichtung
+                </h3>
+            </div>
+        
+            <fieldset x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })" x-init="init()">
+                <Neos.Fusion.Form:FieldContainer field.name="user[roles]" label="" attributes.class="radiogroup">
+                    <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-8">
+
+                        <div class="sm:col-span-2">
+                            <Abte.Site:RadioGroup.Item value="xxxx" name="xxx"/>
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <Abte.Site:RadioGroup.Item value="asdf" name="xxx"/>
+                        </div>
+
+                    </div>
+                </Neos.Fusion.Form:FieldContainer>
+            </fieldset>
+
+            <fieldset x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })" x-init="init()">
+                <Neos.Fusion.Form:FieldContainer field.name="user[roles]" label="" attributes.class="radiogroup">
+                    <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-8">
+
+                        <div class="sm:col-span-2">
+                            <Abte.Site:RadioGroup.Item value="gaga" name="xxy"/>
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <Abte.Site:RadioGroup.Item value="adha" name="xxy"/>
+                        </div>
+
+                    </div>
+                </Neos.Fusion.Form:FieldContainer>
+            </fieldset>
+
+
+            <fieldset x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })" x-init="init()">
+                <Neos.Fusion.Form:FieldContainer field.name="user[roles]" label="" attributes.class="radiogroup">
+                    <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-8">
+
+                        <div class="sm:col-span-2">
+                            <Abte.Site:RadioGroup.Item value="taz" name="asdf"/>
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <Abte.Site:RadioGroup.Item value="36agfs" name="asdf"/>
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <Abte.Site:RadioGroup.Item value="asfag43" name="asdf"/>
+                        </div>
+
+                        <div class="sm:col-span-2">
+                            <Abte.Site:RadioGroup.Item value="asfdaga3z" name="asdf"/>
+                        </div>
+
+                    </div>
+                </Neos.Fusion.Form:FieldContainer>
+            </fieldset>
+
+            </div>
+        </div>
+    `
+}
+
+
+
+prototype(Abte.Site:RadioGroup.Item) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    title = 'Titel'
+    name = ''
+    value = ''
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+
+    renderer = afx`
+        <Neos.Fusion.Form:Radio field.value={props.value} attributes.name={props.name}>
+            <div class="flex flex-1">
+                <div class="flex flex-col">
+                    <h3>
+                        {props.title}
+                    </h3>
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        width="350"
+                        height="350"
+                        class=""
+                    />
+                </div>
+            </div>
+            <svg class="w-5 h-5 text-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <div class="absolute border-2 rounded-lg pointer-events-none -inset-px" aria-hidden="true"></div>
+        </Neos.Fusion.Form:Radio>
+    `
+}

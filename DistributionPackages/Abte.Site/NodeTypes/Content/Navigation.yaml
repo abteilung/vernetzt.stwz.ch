@@ -1,0 +1,77 @@
+'Abte.Site:Content.Navigation':
+    superTypes:
+        'Neos.Neos:Content': true
+    ui:
+        label: Navigation
+        icon: directions
+        group: structure
+        position: 250
+        inlineEditable: true
+    properties:
+        'startingPoint':
+            type: reference
+            ui:
+                label: Starting Point
+                reloadIfChanged: true
+                inspector:
+                    group: general
+                    position: 50
+                    editorOptions:
+                        nodeTypes: ['Neos.Neos:Document']
+        'navigationItems':
+            type: references
+            ui:
+                label: Navigation Items
+                reloadIfChanged: true
+                inspector:
+                    group: general
+                    position: 55
+                    editorOptions:
+                        nodeTypes: ['Neos.Neos:Document']
+        'limit':
+            options:
+                preset: 'text.inspector'
+            ui:
+                label: 'Limit'
+            validation:
+                Neos.Neos/Validation/IntegerValidator: []
+        'arrowIcon':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+                label: 'Show Arrow'
+                reloadIfChanged: true
+                inspector:
+                    group: general
+        'iconRight':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+                label: 'Arrow right'
+                reloadIfChanged: true
+                inspector:
+                    group: general
+        'showTitleOverride':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+                label: 'Show Title Override'
+                reloadIfChanged: true
+                inspector:
+                    group: general
+        'twoCols':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+                label: 'Render as 2 columns (md)'
+                reloadIfChanged: true
+                inspector:
+                    group: general
+        'threeCols':
+            type: boolean
+            defaultValue: 'false'
+            ui:
+                label: 'Render as 3 columns (md)'
+                reloadIfChanged: true
+                inspector:
+                    group: general

@@ -1,0 +1,26 @@
+Abteilung.Gridsystem:Mixin.Row.CreationDialog:
+  abstract: true
+  ui:
+    creationDialog:
+      elements:
+        count:
+          type: string
+          defaultValue: 2
+          ui:
+            label: 'Abteilung.Gridsystem:NodeTypes.Content.Row:creationDialog.count'
+            editor: 'Neos.Neos/Inspector/Editors/TextFieldEditor'
+          validation:
+            Neos.Neos/Validation/IntegerValidator: true
+            Neos.Neos/Validation/NumberRangeValidator:
+              minimum: 1
+  options:
+    template:
+      properties:
+        count-md: '${data.count}'
+      childNodes:
+        column:
+          type: 'Abteilung.Gridsystem:Content.Column'
+          properties:
+            span-md: 1
+          withItems: '${Array.range(0, (data.count ? data.count - 1 : 1))}'
+          when: '${data.count}'

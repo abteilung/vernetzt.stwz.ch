@@ -1,0 +1,56 @@
+
+prototype(Abte.Site:Component.ImageBox) < prototype(Neos.Neos:ContentComponent) {
+
+    class = 'mb-20'
+
+    dropShadow = ${ q(node).property('dropShadow') }
+
+    bgColor = Abte.Site:Mixin.BgColor
+    
+    containerClass = ${ this.class + ' ' + (this.dropShadow ? 'box-shadow' : null ) + ' ' + this.bgLight + ' ' + (q(node).property('image') ? 'grid md:grid-cols-3 gridgap' : null) }
+
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+	content = Neos.Neos:ContentCollectionRenderer {
+		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+	}
+
+  	renderer = afx`
+        <div class={'cnt-container relative' + ' ' + props.containerClass}>
+            <div
+                class={ props.imageSource ? 'relative md:col-span-2' : 'relative' }
+            >
+
+                <Abte.Site:Component.Heading 
+                    class="mb-5" 
+                    style="enlarged" 
+                    title={props.title} 
+                    subTitle={props.subTitle} 
+                    @if.hasDropShadow={props.title}
+                />
+
+                {props.content}
+            </div>
+
+            <div class="max-h-full">
+                <Sitegeist.Lazybones:Image 
+                    @if.hasImage={props.imageSource}
+                    imageSource={props.imageSource} 
+                    class="object-cover object-center w-full h-full"
+                />
+
+            </div>
+
+        </div>
+    `
+}

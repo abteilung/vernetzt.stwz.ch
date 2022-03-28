@@ -1,0 +1,21 @@
+prototype(Roen.Navigation:Component.Navbar.SubNavigation) < prototype(Neos.Fusion:Component) {
+    
+  subMenuItems = Neos.Neos:MenuItems {
+    entryLevel = 2
+    maximumLevels = 1
+    filter = ${ 'Neos.Neos:Document, !Roen.Navigation:Document.MegaMenu, !Abte.Site:Document.Category' }
+  }
+
+  renderer = afx`
+    <nav 
+      @if.hasItems={props.subMenuItems}
+      class="bg-opacity-80 bg-base-100 backdrop-blur-sm subNavigation"
+    >
+      <div class="container flex flex-row py-2 space-x-6 gridPadding-x">
+        <Neos.Fusion:Loop items={props.subMenuItems} iterationName="i">
+          <Roen.Navigation:Navbar.LinkItem />
+        </Neos.Fusion:Loop>
+      </div>
+    </nav>
+  `
+}

@@ -1,0 +1,3 @@
+'Neos.Neos:Content':
+    superTypes:
+        'Abte.Site:Mixin.InspectorGeneral': true

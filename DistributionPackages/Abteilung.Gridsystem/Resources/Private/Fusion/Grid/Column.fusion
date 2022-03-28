@@ -1,0 +1,15 @@
+
+prototype(Abteilung.Gridsystem:Content.Column) < prototype(Abteilung.Gridsystem:Component.ContentCollection) {
+
+    class = Abteilung.Gridsystem:Prototype.Class.Column
+
+    renderer = afx`
+        <div class={props.class}>
+            <Neos.Neos:ContentCollectionRenderer/>
+        </div>
+    `
+    @cache.entryTags.parent = ${Neos.Caching.nodeTag(q(node).parent())}
+
+}
+
+

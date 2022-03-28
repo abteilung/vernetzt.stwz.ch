@@ -1,0 +1,30 @@
+prototype(Roen.Navigation:Component.Nav.Social) < prototype(Neos.Fusion:Component) {
+
+	menuItems = Neos.Neos:MenuItems {
+		startingPoint = ${ q(site).children('[uriPathSegment="social"]').get(0) }
+	}
+
+	class = 'social' //class = 'social social-sm social-hover-bg-brand'
+
+	renderer = afx`
+        <ul class="flex mt-6 space-x-4 lg:mt-0 justify-items-end">
+            <Neos.Fusion:Loop items={props.menuItems}>
+                <li class="flex items-center justify-center w-10 h-10 p-1 bg-white">
+                    <Neos.Neos:NodeLink node={item.node}>
+                        <Neos.Fusion:Augmenter class="w-full h-full text-primary hover:text-black">
+                            {q(item.node).property('SVGIcon')}
+                        </Neos.Fusion:Augmenter>
+                    </Neos.Neos:NodeLink>
+                </li>
+            </Neos.Fusion:Loop>
+        </ul>
+	`
+
+	@cache {
+		mode = 'cached'
+		entryIdentifier.node = ${documentNode}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
+}

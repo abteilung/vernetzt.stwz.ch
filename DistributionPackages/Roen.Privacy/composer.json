@@ -1,0 +1,19 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "roen/privacy",
+    "require": {
+        "neos/flow": "*",
+        "kaufmanndigital/gdpr-cookieconsent": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Roen\\Privacy\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Roen.Privacy"
+        }
+    }
+}

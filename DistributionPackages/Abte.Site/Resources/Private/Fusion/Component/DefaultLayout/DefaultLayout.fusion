@@ -1,0 +1,53 @@
+prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) {
+    content = ''
+
+    pageHeader = Neos.Fusion:Case {
+
+		HomePage {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.HomePage]') }
+			renderer = Abte.Site:Component.HomepageHeader
+		}
+
+		ProductPage {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Product]') }
+			renderer = Abte.Site:Component.HeaderProduct
+		}
+
+		ArticlePage {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Story]') }
+			renderer = Abte.Site:Component.HeaderStories
+		}
+
+		// ServicePage {
+		// 	condition = ${ q(node).is('[instanceof Abte.Site:Document.Service]') }
+		// 	renderer = Abte.Site:Component.HeaderService
+		// }
+
+		TextHeader {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.FilterPage]') }
+			renderer = Abte.Site:Component.TextHeader
+		}
+
+		Default {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Page],[instanceof Abte.Site:Document.PageWithAside],[instanceof Abte.Site:Document.Persons],[instanceof Abte.Site:Document.About],[instanceof Abte.Site:Document.Markets],[instanceof Abte.Site:Document.Market]') }
+			renderer = Abte.Site:Component.Header
+		}
+
+		fallback {
+			condition = ${true}
+			renderer = '<header class="headerMargin"></div>'
+		}		
+	}
+
+    renderer = afx`
+		<Abte.Site:TrackingScript.Ackee/>
+        <header>
+            <Selfix.Navigation:Component.Navbar />
+            {props.pageHeader}
+        </header>
+        {props.content}
+        <Abte.Site:Component.Footer />
+
+		
+    `
+}

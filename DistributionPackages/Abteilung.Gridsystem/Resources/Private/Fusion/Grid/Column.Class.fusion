@@ -1,0 +1,71 @@
+prototype(Abteilung.Gridsystem:Prototype.Class.Column) < prototype(Neos.Fusion:Component) {
+    span = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('span')}
+        sm = ${q(node).property('span-sm')}
+        md = ${q(node).property('span-md')}
+        lg = ${q(node).property('span-lg')}
+        xl = ${q(node).property('span-xl')}
+    }
+    
+    paddingY = ${q(node).property('paddingY') ? 'col-spacing-y' : null}
+    // offset = Neos.Fusion:DataStructure {
+    //     xs = null
+    //     sm = null
+    //     md = null
+    //     lg = null
+    //     xl = null
+    // }
+
+    renderer = Neos.Fusion:DataStructure {
+        element = 'multicolumn-col'
+        full = ${props.width.xs != 'auto' ? 'w-full' : null}
+        backendBorder = ${node.context.inBackend ? 'min-h-[20px] block border-2 border-dashed border-gray-100 ' : null }
+
+        span = Neos.Fusion:Join {
+            @glue = ' '
+
+            paddingY = ${props.paddingY}
+
+            xs = ${props.span.xs == 'col' ? 'flex-1' : 'col-span-' + props.span.xs}
+            xs.@if.props = ${props.span.xs}
+
+            sm = ${props.span.sm == 'col' ? 'sm:flex-1' : 'sm:col-span-' + props.span.sm}
+            sm.@if.props = ${props.span.sm}
+
+            md = ${props.span.md == 'col' ? 'md:flex-1' : 'md:col-span-' + props.span.md}
+            md.@if.props = ${props.span.md}
+
+            lg = ${props.span.lg == 'col' ? 'lg:flex-1' : 'lg:col-span-' + props.span.lg}
+            lg.@if.props = ${props.span.lg}
+
+            xl = ${props.span.xl == 'col' ? 'xl:flex-1' : 'xl:col-span-' + props.span.xl}
+            xl.@if.props = ${props.width.xl}
+        }
+
+        // offset = Neos.Fusion:Join {
+        //     @glue = ' '
+
+        //     xs = ${props.offset.xs == 'reset' ? 'ml-0' : 'ml-' + props.offset.xs + '/12'}
+        //     xs.@if.props = ${props.offset.xs}
+
+        //     sm = ${props.offset.sm == 'reset' ? 'sm:ml-0' : 'sm:ml-' + props.offset.sm + '/12'}
+        //     sm.@if.props = ${props.offset.sm}
+
+        //     md = ${props.offset.md == 'reset' ? 'md:ml-0' : 'md:ml-' + props.offset.md + '/12'}
+        //     md.@if.props = ${props.offset.md}
+
+        //     lg = ${props.offset.lg == 'reset' ? 'lg:ml-0' : 'lg:ml-' + props.offset.lg + '/12'}
+        //     lg.@if.props = ${props.offset.lg}
+
+        //     xl = ${props.offset.xl == 'reset' ? 'xl:ml-0' : 'xl:ml-' + props.offset.xl + '/12'}
+        //     xl.@if.props = ${props.offset.xl}
+        // }
+    }
+}
+
+// Classes for SafeListing
+// 'col-span-1 col-span-2 col-span-3 col-span-4 col-span-5 col-span-6 col-span-7 col-span-8 col-span-9 col-span-1/12 col-span-1/12 col-span-1/12'
+// 'sm:col-span-1 sm:col-span-2 sm:col-span-3 sm:col-span-4 sm:col-span-5 sm:col-span-6 sm:col-span-7 sm:col-span-8 sm:col-span-9 sm:col-span-1/12 sm:col-span-1/12 sm:col-span-1/12'
+// 'md:col-span-1 md:col-span-2 md:col-span-3 md:col-span-4 md:col-span-5 md:col-span-6 md:col-span-7 md:col-span-8 md:col-span-9 md:col-span-1/12 md:col-span-1/12 md:col-span-1/12'
+// 'lg:col-span-1 lg:col-span-2 lg:col-span-3 lg:col-span-4 lg:col-span-5 lg:col-span-6 lg:col-span-7 lg:col-span-8 lg:col-span-9 lg:col-span-1/12 lg:col-span-1/12 lg:col-span-1/12'
+// 'xl:col-span-1 xl:col-span-2 xl:col-span-3 xl:col-span-4 xl:col-span-5 xl:col-span-6 xl:col-span-7 xl:col-span-8 xl:col-span-9 xl:col-span-1/12 xl:col-span-1/12 xl:col-span-1/12'

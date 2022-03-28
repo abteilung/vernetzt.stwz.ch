@@ -1,0 +1,12 @@
+'Abteilung.Gridsystem:Content.Column':
+  superTypes:
+    'Abteilung.Gridsystem:Mixin.Column': true
+  properties:
+    paddingY:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: Add Space-Y
+        reloadIfChanged: true
+        inspector:
+          group: 'span'

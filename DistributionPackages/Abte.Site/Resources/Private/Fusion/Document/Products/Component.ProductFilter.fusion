@@ -1,0 +1,84 @@
+prototype(Selfix.Navigation:Component.ProductFilter) < prototype(Neos.Fusion:Component) {
+
+    filter = Neos.Fusion:Case {
+        printer {
+            condition = ${ q(documentNode).property('_identifier') == '3cdb3f73-fd1a-4b9f-8736-05674f3f82f1' }
+            renderer = Selfix.PrinterFilter
+        }
+        etikettenspender {
+            condition = ${ q(documentNode).property('_identifier') == '1d8aab99-33f7-419e-8461-2448a0f53976' }
+            renderer = Selfix.EtikettenSpenderFilter
+        }
+        software {
+            condition = ${ q(documentNode).property('_identifier') == '856c2152-4549-4be1-92fd-ea7c24c28d7e' }
+            renderer = Selfix.SoftwareFilter
+        }
+        keinFilter {
+            condition = ${ q(documentNode).property('_identifier') == 'cf7f8f43-2cab-42cc-b603-b9d2e400bc8f' }
+            renderer = Selfix.KeinFilter
+        }
+        fallback {
+            condition = ${ true }
+            renderer = Selfix.LabelFilter
+        }
+    }
+
+    renderer = afx`
+        <div class="relative z-10 border-t-2 isolate articleFilter border-primary">
+            
+        
+            <div class="relative pb-4 accordion"
+                x-data="\{show:null\}"
+            >
+
+                <button
+                    type="button"
+                    class="w-full py-2 text-left"
+                    "@click"="show = !show"
+                >
+                    <div class="flex items-center justify-between">
+                        <div class="h3 text-primary">{ I18n.translate('Abte.Site:Main:filterProducts') }</div>
+                        <div class="scale-75 text-secondary lg:scale-100">
+                            <Neos.Fusion:Augmenter x-bind:class="show ? 'transform rotate-45' : ''">
+                                <Abte.Site:Icon.Plus class="transition" />
+                            </Neos.Fusion:Augmenter>
+                        </div>
+                    </div>
+                </button>
+
+                <div
+                    class="relative transition-all"
+                    x-show="show"
+                    x-transition:enter="transition duration-150"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition duration-150"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                >
+                    <div
+                        class="relative z-20 grid grid-cols-2 mb-4 md:grid-cols-4 md:mb-8 gridgap-filter"
+                    >
+                        {props.filter}
+                    </div>
+
+                    <div class="flex items-center justify-end w-full my-6 space-x-2">
+                            
+                        <Carbon.Link:Link 
+                            node={ documentNode }
+                            attributes.class="whitespace-nowrap text-sm block font-bold cursor-pointer text-error !text-primary"
+                        >
+                            { I18n.translate('Abte.Site:Main:resetFilter') }
+                        </Carbon.Link:Link>
+
+                        <Abte.Site:Icon.Refresh class="scale-100 text-secondary" />
+                    </div>
+
+                </div>
+            </div>
+
+
+            <Selfix.Navigation:Component.ProductSearch />
+        </div>
+    `
+}

@@ -1,0 +1,38 @@
+Neos:
+  Flow:
+    # other configs...
+    mvc:
+      routes:
+        'Abte.Site':
+          position: 'before Neos.Neos'
+        'Neos.Neos':
+          variables:
+            # We prefer URLs without the ".html" suffix
+            defaultUriSuffix: ''
+    # http:
+    #   chain:
+    #     'preprocess':
+    #       chain:
+    #         'allowCors':
+    #           component: 'Abte\Site\Http\CorsComponent'
+    #           componentOptions:
+    #             origin: '%env:CORS_ORIGIN%'
+  Neos:
+    eventLog:
+      enabled: true
+    userInterface:
+      backendLoginForm:
+        backgroundImage: 'resource://Abte.Site/Public/Images/LoginPatternSTar.jpg'
+      navigateComponent:
+        nodeTree:
+          # number of levels inside the node tree which shall be loaded eagerly, at start.
+          # if you have lots of nodes you should maybe reduce this number of elements.
+          loadingDepth: 1
+        structureTree:
+          loadingDepth: 2
+      translation:
+        autoInclude:
+          Abte.Site: ['NodeTypes/*']
+    fusion:
+      autoInclude:
+        Abte.Site: true

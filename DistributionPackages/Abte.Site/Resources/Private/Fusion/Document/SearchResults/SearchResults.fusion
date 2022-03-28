@@ -1,0 +1,10 @@
+prototype(Abte.Site:Document.SearchResults) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        
+        renderer = afx`
+            <main class="main">
+                <h3>Check JSON Page for results rendering</h3>
+            </main>
+        `
+    }
+}

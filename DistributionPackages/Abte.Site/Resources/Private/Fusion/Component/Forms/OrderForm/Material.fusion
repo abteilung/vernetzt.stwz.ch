@@ -1,0 +1,61 @@
+prototype(Abte.Site:OrderForm.Material) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="">
+            <div>
+                <h3 class="text-primary">
+                    Material
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-6">
+
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="material" label="Material:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="Etikettenpapier, weiss" />
+                            <Neos.Fusion.Form:Select.Option option.value="X" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="material" label="Gummierung:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="Etikettenpapier, weiss" />
+                            <Neos.Fusion.Form:Select.Option option.value="X" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="einsatzbereich" label="Einsatzbereich:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="x" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="gebinde" label="Gebinde:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="X" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="zusatz" label="Zusatz:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="x" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+
+            </div>
+        </div>
+    `
+}

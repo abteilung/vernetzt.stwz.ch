@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "abteilung/gridsystem",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abteilung\\Gridsystem\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Abteilung.Gridsystem"
+        }
+    }
+}

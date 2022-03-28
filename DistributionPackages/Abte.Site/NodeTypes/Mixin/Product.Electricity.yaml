@@ -1,0 +1,28 @@
+'Abte.Site:Mixin.Product.Electricity':
+  ui:
+    inspector:
+      groups:
+        electricity:
+          label: Stromversorgung
+          position: 90
+          icon: bolt
+          collapsed: true
+  properties:
+    productOutput:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Product Output
+        inspector:
+          group: electricity
+          editorOptions:
+            disabled: true
+    productPowerSupply:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Power Supply
+        inspector:
+          group: electricity
+          editorOptions:
+            disabled: true

@@ -1,0 +1,37 @@
+'Abte.Site:Mixin.Product.Rolls':
+  ui:
+    inspector:
+      groups:
+        rolls:
+          label: Etikettenrolle
+          position: 25
+          icon: tape
+          collapsed: true
+  properties:
+    productCoreWidth:
+      options:
+        preset: 'text.free'
+      ui:
+        label: Kernbreite Etikettenrolle
+        inspector:
+          group: rolls
+          editorOptions:
+            disabled: true
+    productCoreDiameter:
+      options:
+        preset: 'text.free'
+      ui:
+        label: Kerndurchmesser Etikettenrolle
+        inspector:
+          group: rolls
+          editorOptions:
+            disabled: true
+    productRollDiameter:
+      options:
+        preset: 'text.free'
+      ui:
+        label: Rollendurchmesser Etikettenrolle
+        inspector:
+          group: rolls
+          editorOptions:
+            disabled: true

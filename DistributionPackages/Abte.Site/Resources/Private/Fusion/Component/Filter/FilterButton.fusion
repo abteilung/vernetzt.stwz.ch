@@ -1,0 +1,20 @@
+prototype(Abte.Site:Component.filterButton) < prototype(Neos.Fusion:Component) {
+    
+    node = ''
+
+    renderer = Neos.Fusion:Tag {
+        tagName = 'button'
+
+        content = ${ q(props.node).property('title') }
+        
+        attributes {
+            class = Neos.Fusion:DataStructure {
+                style=${'border-b-2 pb-4 mb-[-2px] duration-150 hover:border-primary border-base-100 cursor-pointer block text-primary-focus hover:text-primary'} 
+            }
+
+            data-filter = Neos.Fusion:DataStructure {
+                Kate  = ${ q(props.node).parent().is('[instanceof Abte.Site:Document.Category]') ? '.' + Carbon.String.urlize( q(props.node).parent().property('title') ) + '-' + Carbon.String.urlize(q(props.node).property('title')) : '.' + Carbon.String.urlize(q(props.node).property('title')) }
+            }
+        }
+    }
+}

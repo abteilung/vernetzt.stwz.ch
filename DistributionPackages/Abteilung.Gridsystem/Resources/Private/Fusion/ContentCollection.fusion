@@ -1,0 +1,15 @@
+prototype(Abteilung.Gridsystem:Component.ContentCollection) < prototype(Neos.Neos:ContentComponent) {
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            collection = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.descendantOfTag(node)}
+            2 = ${Neos.Caching.nodeTag(node)}
+        }
+        maximumLifetime = ${q(node).context({'invisibleContentShown': true}).children().cacheLifetime()}
+    }
+
+    @exceptionHandler = 'Neos\\Neos\\Fusion\\ExceptionHandlers\\NodeWrappingHandler'
+}

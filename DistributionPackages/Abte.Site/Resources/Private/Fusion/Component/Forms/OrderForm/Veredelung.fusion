@@ -1,0 +1,38 @@
+prototype(Abte.Site:OrderForm.Veredelung) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="">
+            <div>
+                <h3 class="text-primary">
+                    Veredelung
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 mt-6 gap-y-8 gridgap sm:grid-cols-6">
+
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="laminierung" label="Laminierung:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="Keine Laminierung" />
+                            <Neos.Fusion.Form:Select.Option option.value="X" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <div class="sm:col-span-3">
+                    <Neos.Fusion.Form:FieldContainer field.name="lackierung" label="Lackierung:">
+                        <Neos.Fusion.Form:Select>
+                            <Neos.Fusion.Form:Select.Option option.value="Keine Lackierung" />
+                            <Neos.Fusion.Form:Select.Option option.value="X" />
+                            <Neos.Fusion.Form:Select.Option option.value="Y" />
+                        </Neos.Fusion.Form:Select>
+                    </Neos.Fusion.Form:FieldContainer>
+                </div>
+                <!-- -->
+
+                Prägung Radiogroup
+
+            </div>
+        </div>
+    `
+}

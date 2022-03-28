@@ -1,0 +1,18 @@
+'Abte.Site:Document.ProductOverview':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.TeaserText': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: i18n
+    icon: truck
+    position: 600
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Products': true
+      'Selfix.Navigation:Document.MegaMenu': true
+  childNodes:
+    aside:
+      type: 'Neos.Neos:ContentCollection'

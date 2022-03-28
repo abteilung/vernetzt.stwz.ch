@@ -1,0 +1,18 @@
+prototype(Abte.Site:Content.ButtonIcon) < prototype(Neos.Fusion:Component) {
+        
+    class = ''
+
+    renderer = afx`
+        <Abte.Site:Icon.ArrowRight class={props.class} />
+
+<!-- 
+Abte.Site:Icon.Calendar
+Abte.Site:Icon.ArrowRight
+Abte.Site:Icon.Phone
+Abte.Site:Icon.Cart
+Abte.Site:Icon.Search
+-->
+    `
+}
+
+

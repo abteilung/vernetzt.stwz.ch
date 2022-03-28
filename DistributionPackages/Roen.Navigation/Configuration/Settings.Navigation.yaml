@@ -1,0 +1,7 @@
+# Roen:
+#   Navigation:
+#     selector:
+#       onDocument: false
+#       collection: '[instanceof Neos.Neos:ContentCollection]'
+#       nodetype: 'Abte.Site:Document.Project'
+#       content: '[instanceof Jonnitto.PrettyEmbedYoutube:Content.Youtube]'

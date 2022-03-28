@@ -1,0 +1,120 @@
+prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
+
+
+    categoryItems = Neos.Neos:MenuItems {
+        // itemCollection = ${ q(documentNode).children('[instanceof Abte.Site:Document.Category]').get() }
+        itemCollection = ${ q(documentNode).children('[uriPathSegment="kategorien"]').children('[instanceof Abte.Site:Document.Category]').get() }
+        // filter = ${ 'Abte.Site:Document.Category' }
+    }
+
+    renderer =  afx`
+        <!--
+        <div class="">
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                items={ q(documentNode).children('[uriPathSegment="kategorien"]').children('[instanceof Abte.Site:Document.Category]').get() }
+                filterProperty="title"
+            />
+                 <Neos.Fusion:Loop 
+                items={props.categoryItems} 
+                iterationName='i'
+                @if.hasCats={props.categoryItems}
+            >
+                <option 
+                    value={ '.' + Carbon.String.urlize( q(item.node).property('title') ) }
+                >
+                  {q(item.node).property('title')}
+                </option>
+            </Neos.Fusion:Loop>
+        </div>
+                -->
+        <div class="">
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="printerType" 
+                filterTitle={ I18n.translate('Abte.Site:Main:printerType') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="printerHead" 
+                filterTitle={ I18n.translate('Abte.Site:Main:printerHead') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="inkQuality" 
+                filterTitle={ I18n.translate('Abte.Site:Main:inkQuality') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="productMinOutlet" 
+                filterTitle={ I18n.translate('Abte.Site:Main:passthroughMin') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="productMaxOutlet" 
+                filterTitle={ I18n.translate('Abte.Site:Main:passthroughMax') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="printerResolution" 
+                filterTitle={ I18n.translate('Abte.Site:Main:printerResolution') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="printerSpeed" 
+                filterTitle={ I18n.translate('Abte.Site:Main:printingSpeed') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="productInterfaces" 
+                filterTitle={ I18n.translate('Abte.Site:Main:Interface') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="printerMedia" 
+                filterTitle={ I18n.translate('Abte.Site:Main:Media') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                filterProperty="productCompatability" 
+                filterTitle={ I18n.translate('Abte.Site:Main:Compatibility') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+        <div>
+            <Selfix.Navigation:Component.ProductFilter.Item 
+                @if.hasFilter={q(item).property('productOptions') }
+                filterProperty="productOptions" 
+                filterTitle={ I18n.translate('Abte.Site:Main:Options') }
+                noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
+                unit=""
+            />
+        </div>
+    `
+}

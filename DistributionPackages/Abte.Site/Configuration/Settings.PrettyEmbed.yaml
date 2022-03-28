@@ -1,0 +1,5 @@
+Jonnitto:
+  PrettyEmbedVideoPlatforms:
+    defaults:
+      # Should the video be opened on a lightbox? Per default this is set via the node properties
+      lightbox: true

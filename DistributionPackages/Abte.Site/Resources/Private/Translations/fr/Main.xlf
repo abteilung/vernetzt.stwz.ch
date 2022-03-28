@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" source-language="en" datatype="plaintext" target-language="de">
+        <body>
+            <trans-unit id="4xx.errorMessage">
+                <source>This page could not be found.</source>
+                <target>Malheureusement, cette page est introuvable.</target>
+            </trans-unit>
+
+            <trans-unit id="4xx.backHome">
+                <source>Back to homepage</source>
+                <target>Retour à la page d'accueil</target>
+            </trans-unit>
+
+            <trans-unit id="weitereEtikettierLoeseungen">
+                <source>More Labelling solutions:</source>
+                <target>Autres solutions d'étiquetage:</target>
+            </trans-unit>
+            
+            <trans-unit id="dieMenschen">
+                <source>The People of Selfix</source>
+                <target>Les gens derrière Selfix</target>
+            </trans-unit>
+            
+            <trans-unit id="neuImSortiment">
+                <source>New in Stock:</source>
+                <target>Nouveau en stock:</target>
+            </trans-unit>
+
+            <trans-unit id="inStock">
+                <source>In Stock:</source>
+                <target>En stock:</target>
+            </trans-unit>
+
+            <trans-unit id="categories">
+                <source>Categories</source>
+                <target>Catégories</target>
+            </trans-unit>
+
+            <trans-unit id="category">
+                <source>Category</source>
+                <target>Catégorie</target>
+            </trans-unit>
+
+            <trans-unit id="druckService">
+                <source>Label Printing Service</source>
+                <target>Service d'impression d'étiquettes</target>
+            </trans-unit>
+
+            <trans-unit id="passendeEtikettenloesungen">
+                <source>More Labelling Solutions:</source>
+                <target>Plus de solutions d'étiquetage:</target>
+            </trans-unit>
+
+            <trans-unit id="passendeBlanko">
+                <source>Other Blanko Labels:</source>
+                <target>Étiquettes vierges assorties:</target>
+            </trans-unit>
+
+            <trans-unit id="readMore">
+                <source>Read more</source>
+                <target>Lire la suite</target>
+            </trans-unit>
+
+            <trans-unit id="keepReading">
+                <source>Read more…</source>
+                <target>Continuer la lecture…</target>
+            </trans-unit>
+
+            <trans-unit id="toTop">
+                <source>Overview</source>
+                <target>Vers l'aperçu</target>
+            </trans-unit>
+
+            <trans-unit id="similarProducts">
+                <source>Similar products</source>
+                <target>Produits similaires</target>
+            </trans-unit>
+
+            <trans-unit id="matchingProducts">
+                <source>Fitting Products</source>
+                <target>Produits applicables</target>
+            </trans-unit>
+
+            <trans-unit id="allProducts">
+                <source>All products</source>
+                <target>Tous les produits</target>
+            </trans-unit>
+
+            <trans-unit id="resetFilter">
+                <source>Reset Filter</source>
+                <target>Réinitialiser le filtre</target>
+            </trans-unit>
+
+            <trans-unit id="filterProducts">
+                <source>Filer Products</source>
+                <target>Filtrer les articles</target>
+            </trans-unit>
+
+            <trans-unit id="printerHead">
+                <source>Printer Head Type</source>
+                <target>Type de tête d'impression</target>
+            </trans-unit>
+
+            <trans-unit id="inkQuality">
+                <source>Quality of Ink</source>
+                <target>Qualité de l'encre</target>
+            </trans-unit>
+
+            <trans-unit id="passthroughMin">
+                <source>Min. Passthrough</source>
+                <target>Passage minimal</target>
+            </trans-unit>
+
+            <trans-unit id="passthroughMax">
+                <source>Max. Passthrough</source>
+                <target>Passage maximale</target>
+            </trans-unit>
+
+            <trans-unit id="printingSpeed">
+                <source>Printing Speed</source>
+                <target>Vitesse d'impression</target>
+            </trans-unit>
+
+            <trans-unit id="Interface">
+                <source>Interface</source>
+                <target>Interface</target>
+            </trans-unit>
+
+            <trans-unit id="Media">
+                <source>Media</source>
+                <target>Médias</target>
+            </trans-unit>
+
+            <trans-unit id="Compatibility">
+                <source>Compatibility</source>
+                <target>Compatibilité</target>
+            </trans-unit>
+
+            <trans-unit id="CompatibilityGroup">
+                <source>Compatibility Group</source>
+                <target>Grouppe de compatibilité</target>
+            </trans-unit>
+
+            <trans-unit id="Emulator">
+                <source>Emulator</source>
+                <target>Emulateur</target>
+            </trans-unit>
+
+            <trans-unit id="powerSupply">
+                <source>Power Supply</source>
+                <target>Source de courant</target>
+            </trans-unit>
+
+            <trans-unit id="Options">
+                <source>Options</source>
+                <target>Options</target>
+            </trans-unit>
+
+
+            <trans-unit id="noMatchingFilter">
+                <source>No matching Filter</source>
+                <target>Pas de filtre adapté</target>
+            </trans-unit>
+
+           <trans-unit id="videos">
+                <source>Videos</source>
+                <target>Vidéos</target>
+            </trans-unit>
+
+           <trans-unit id="downloads">
+                <source>Downloads</source>
+                <target>Téléchargements</target>
+            </trans-unit>
+
+           <trans-unit id="download">
+                <source>Download</source>
+                <target>Téléchargement</target>
+            </trans-unit>
+
+           <trans-unit id="downloadVCard">
+                <source>Download V-Card</source>
+                <target>Télécharger la V-Card</target>
+            </trans-unit>
+
+           <trans-unit id="writeUs">
+                <source>Write us an E-Mail</source>
+                <target>Écrire un email</target>
+            </trans-unit>
+
+           <trans-unit id="getInTouch">
+                <source>Get in Touch</source>
+                <target>Écrivez-nous</target>
+            </trans-unit>
+
+           <trans-unit id="FactSheet">
+                <source>FactSheet</source>
+                <target>Fiche technique</target>
+            </trans-unit>
+
+
+           <trans-unit id="individuelleBeratung">
+                <source>Personal Consulting</source>
+                <target>Conseil personnel</target>
+            </trans-unit>
+
+           <trans-unit id="grossesKnowHow">
+                <source>Extensive Know How</source>
+                <target>Grand savoir-faire</target>
+            </trans-unit>
+
+           <trans-unit id="eigeneHerstellung">
+                <source>In-House Production</source>
+                <target>Propre fabrication</target>
+            </trans-unit>
+
+           <trans-unit id="since1949">
+                <source>Operating since 1949</source>
+                <target>En affaires depuis 1949</target>
+            </trans-unit>
+
+           <trans-unit id="customMade">
+                <source>Customized Labels</source>
+                <target>Solutions d'étiquetage sur mesure</target>
+            </trans-unit>
+
+           <trans-unit id="Specs">
+                <source>Specifications</source>
+                <target>Caractéristiques</target>
+            </trans-unit>
+
+           <trans-unit id="Desc">
+                <source>Description</source>
+                <target>Description</target>
+            </trans-unit>
+
+           <trans-unit id="moreAboutUs">
+                <source>More about us</source>
+                <target>En savoir plus sur nous</target>
+            </trans-unit>
+
+
+           <trans-unit id="artNr">
+                <source>Article Nr.</source>
+                <target>Numéro d'article</target>
+            </trans-unit>
+
+           <trans-unit id="dimensions">
+                <source>Label Size</source>
+                <target>Taille de l'étiquette</target>
+            </trans-unit>
+
+           <trans-unit id="printerDimensions">
+                <source>Dimensions</source>
+                <target>Dimensions</target>
+            </trans-unit>
+
+           <trans-unit id="price">
+                <source>Price</source>
+                <target>Prix</target>
+            </trans-unit>
+
+           <trans-unit id="width">
+                <source>Width</source>
+                <target>Large</target>
+            </trans-unit>
+
+           <trans-unit id="height">
+                <source>Height</source>
+                <target>Hauteur</target>
+            </trans-unit>
+
+           <trans-unit id="weight">
+                <source>Weight</source>
+                <target>Poids</target>
+            </trans-unit>
+
+           <trans-unit id="diameter">
+                <source>Diameter</source>
+                <target>Diamètre</target>
+            </trans-unit>
+
+           <trans-unit id="coreWidth">
+                <source>Core Width</source>
+                <target>Largeur de noyau</target>
+            </trans-unit>
+
+           <trans-unit id="coreDiameter">
+                <source>Core Diameter</source>
+                <target>Diamètre du noyau</target>
+            </trans-unit>
+
+           <trans-unit id="rollDiameter">
+                <source>Roll Diameter</source>
+                <target>Diamètre du rouleau</target>
+            </trans-unit>
+
+           <trans-unit id="form">
+                <source>Form</source>
+                <target>Forme</target>
+            </trans-unit>
+
+           <trans-unit id="color">
+                <source>Color</source>
+                <target>Couleur</target>
+            </trans-unit>
+
+           <trans-unit id="material">
+                <source>Material</source>
+                <target>Matériel</target>
+            </trans-unit>
+
+           <trans-unit id="gumming">
+                <source>Gumming</source>
+                <target>Gommage</target>
+            </trans-unit>
+
+           <trans-unit id="execution">
+                <source>Execution</source>
+                <target>Exécution</target>
+            </trans-unit>
+
+           <trans-unit id="printerCutter">
+                <source>Cutter</source>
+                <target>Coupeur</target>
+            </trans-unit>
+
+           <trans-unit id="printerCartridge">
+                <source>Printer Cartridge</source>
+                <target>Cartouche</target>
+            </trans-unit>
+
+           <trans-unit id="printerType">
+                <source>Printer Type</source>
+                <target>Type d'imprimante</target>
+            </trans-unit>
+
+           <trans-unit id="printerResolution">
+                <source>Printer Resolution</source>
+                <target>Résolution de l'imprimante</target>
+            </trans-unit>
+
+           <trans-unit id="productSoftware">
+                <source>Software</source>
+                <target>Logiciel</target>
+            </trans-unit>
+
+           <trans-unit id="all">
+                <source>All</source>
+                <target>Tous</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

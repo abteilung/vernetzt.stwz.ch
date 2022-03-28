@@ -1,0 +1,62 @@
+prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
+        
+    class = ''
+    buttonClass = 'flex flex-row items-center px-5 py-3 space-x-2 text-lg font-bold tracking-normal bg-primary'
+    icon = ${ q(node).property('icon') ? '' : '' }
+    iconPosition = ${ q(node).property('iconPosition') ? true : false }
+    
+    onDark = ${ q(node).property('onDark') ? 'border-white border-2 text-white' : 'border-primary text-primary' }
+    iconClass = 'text-secondary relative group-hover:left-2 duration-300'
+    style = ${ q(node).property('hollow') ? 'border-2 border-white text-white !bg-transparent' : 'text-white'  }
+
+    text = Neos.Neos:Editable {
+        property = 'text'
+        block = ${ false }
+    }
+
+    target = ${ q(node).property('target') }
+    target.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
+    iconBefore = Abte.Site:Icon.ArrowRight {
+        class='relative left-0 duration-300 text-secondary group-hover:left-2'
+        @if.buttonIsBefore=${this.positionBefore}
+    }
+
+    iconAfter = Abte.Site:Icon.ArrowRight {
+        class='relative left-0 duration-300 text-secondary group-hover:left-2'
+        @if.buttonIsBefore=${!this.positionBefore}
+    }
+
+    pageURL = Neos.Neos:NodeUri {
+        absolute = true
+    }
+
+    cartImage = ''
+
+
+    blank = ${ q(node).property('blank') ? true : false }
+
+    renderer = afx`
+        <div class="block">
+            <div class="inline-block group">
+                <Carbon.Link:Link 
+                    additionalClass={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style} 
+                    link={props.target} 
+                    renderDefaultTagIfNoLink='true' 
+                    attributes.data-smooth-scroll='true'
+                    attributes.data-item-name={q(node).property('title')}
+                    attributes.data-item-id={q(node).property('productID')}
+                    attributes.data-item-price={q(node).property('productPrice')}
+                    attributes.data-item-url={props.pageURL}
+                    attributes.data-item-image={props.cartImage}
+                >
+                    {props.iconBefore}
+                    <span>{props.text}</span>
+                    {props.iconAfter}
+                </Carbon.Link:Link>
+            </div>
+        </div>
+    `
+}

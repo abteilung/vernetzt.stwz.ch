@@ -1,0 +1,62 @@
+
+prototype(Abte.Site:Mixin.Icons) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+    @context {
+        class = ${ this.class }
+    }
+
+    icon = Neos.Fusion:Case {
+        check {
+            condition = ${ q(node).property('icon') == 'check' }
+            renderer = Abte.Site:Icon.Check {
+                class = ${ class }
+            }
+        }
+
+        times {
+            condition = ${ q(node).property('icon') == 'times' }
+            renderer = Abte.Site:Icon.X {
+                class = ${ class }
+            }
+        }
+
+        basket {
+            condition = ${ q(node).property('icon') == 'basket' }
+            renderer = Abte.Site:Icon.Cart {
+                class = ${ class }
+            }
+        }
+
+        arrowRight {
+            condition = ${ q(node).property('icon') == 'arrowRight' }
+            renderer = Abte.Site:Icon.ArrowRight {
+                class = ${ class }
+            }
+        }
+
+        phone {
+            condition = ${ q(node).property('icon') == 'phone' }
+            renderer = Abte.Site:Icon.Phone {
+                class = ${ class }
+            }
+        }
+
+        envelope {
+            condition = ${ q(node).property('icon') == 'envelope' }
+            renderer = Abte.Site:Icon.Envelope {
+                class = ${ class }
+            }
+        }
+
+        none {
+            condition = ${ true }
+            renderer = ''
+        }
+    }
+
+    renderer = afx`
+        {props.icon}
+
+    `
+}

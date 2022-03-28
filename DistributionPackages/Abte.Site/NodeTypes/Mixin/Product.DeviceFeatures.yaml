@@ -1,0 +1,73 @@
+'Abte.Site:Mixin.Product.DeviceFeatures':
+  ui:
+    inspector:
+      groups:
+        device:
+          label: Device
+          position: 70
+          icon: memory
+          collapsed: true
+  properties:
+    productInterfaces:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Schnittstellen
+        inspector:
+          group: device
+          editorOptions:
+            disabled: true  
+    productFlashStorage:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Flashspeicher
+        inspector:
+          group: device
+          editorOptions:
+            disabled: true  
+    productRam:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Arbeitsspeicher
+        inspector:
+          group: device
+          editorOptions:
+            disabled: true  
+    productCards:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Kartenslots
+        inspector:
+          group: device
+          editorOptions:
+            disabled: true  
+    productOptions:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Optionen
+        inspector:
+          group: device
+          editorOptions:
+            disabled: true  
+    productSoftware:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Software
+        inspector:
+          group: device
+          editorOptions:
+            disabled: true  
+    productEmulator:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Emulator
+        inspector:
+          group: device
+          editorOptions:
+            disabled: true  

@@ -1,0 +1,242 @@
+Abteilung.Gridsystem:Mixin.Column.Count:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Count.All: true
+    Abteilung.Gridsystem:Mixin.Column.Count.SM: true
+    Abteilung.Gridsystem:Mixin.Column.Count.MD: true
+    Abteilung.Gridsystem:Mixin.Column.Count.LG: true
+    Abteilung.Gridsystem:Mixin.Column.Count.XL: true
+
+Abteilung.Gridsystem:Mixin.Column.Count.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        width:
+          label: 'Abteilung.Gridsystem:NodeTypes.Content.Column:groups.width'
+
+Abteilung.Gridsystem:Mixin.Column.Count.All:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Count.Group: true
+  properties:
+    count:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.all'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1 Column'
+              2:
+                label: '2 Columns'
+              3:
+                label: '3 Columns'
+              4:
+                label: '4 Columns'
+              5:
+                label: '5 Columns'
+              6:
+                label: '6 Columns'
+              7:
+                label: '7 Columns'
+              8:
+                label: '8 Columns'
+              9:
+                label: '9 Columns'
+              10:
+                label: '10 Columns'
+              11:
+                label: '11 Columns'
+              12:
+                label: '12 Columns'
+              auto:
+                label: 'auto'
+
+Abteilung.Gridsystem:Mixin.Column.Count.SM:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Count.Group: true
+  properties:
+    count-sm:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1 Column'
+              2:
+                label: '2 Columns'
+              3:
+                label: '3 Columns'
+              4:
+                label: '4 Columns'
+              5:
+                label: '5 Columns'
+              6:
+                label: '6 Columns'
+              7:
+                label: '7 Columns'
+              8:
+                label: '8 Columns'
+              9:
+                label: '9 Columns'
+              10:
+                label: '10 Columns'
+              11:
+                label: '11 Columns'
+              12:
+                label: '12 Columns'
+              auto:
+                label: 'auto'
+
+Abteilung.Gridsystem:Mixin.Column.Count.MD:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Count.Group: true
+  properties:
+    count-md:
+      type: string
+      # defaultValue: '2'
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1 Column'
+              2:
+                label: '2 Columns'
+              3:
+                label: '3 Columns'
+              4:
+                label: '4 Columns'
+              5:
+                label: '5 Columns'
+              6:
+                label: '6 Columns'
+              7:
+                label: '7 Columns'
+              8:
+                label: '8 Columns'
+              9:
+                label: '9 Columns'
+              10:
+                label: '10 Columns'
+              11:
+                label: '11 Columns'
+              12:
+                label: '12 Columns'
+              auto:
+                label: 'auto'
+
+Abteilung.Gridsystem:Mixin.Column.Count.LG:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Count.Group: true
+  properties:
+    count-lg:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1 Column'
+              2:
+                label: '2 Columns'
+              3:
+                label: '3 Columns'
+              4:
+                label: '4 Columns'
+              5:
+                label: '5 Columns'
+              6:
+                label: '6 Columns'
+              7:
+                label: '7 Columns'
+              8:
+                label: '8 Columns'
+              9:
+                label: '9 Columns'
+              10:
+                label: '10 Columns'
+              11:
+                label: '11 Columns'
+              12:
+                label: '12 Columns'
+              auto:
+                label: 'auto'
+
+Abteilung.Gridsystem:Mixin.Column.Count.XL:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Count.Group: true
+  properties:
+    count-xl:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.xl'
+        reloadIfChanged: true
+        inspector:
+          group: 'width'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              col:
+                label: 'col'
+              1:
+                label: '1 Column'
+              2:
+                label: '2 Columns'
+              3:
+                label: '3 Columns'
+              4:
+                label: '4 Columns'
+              5:
+                label: '5 Columns'
+              6:
+                label: '6 Columns'
+              7:
+                label: '7 Columns'
+              8:
+                label: '8 Columns'
+              9:
+                label: '9 Columns'
+              10:
+                label: '10 Columns'
+              11:
+                label: '11 Columns'
+              12:
+                label: '12 Columns'
+              auto:
+                label: 'auto'

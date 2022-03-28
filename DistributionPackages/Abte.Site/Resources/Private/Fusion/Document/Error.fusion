@@ -1,0 +1,18 @@
+#
+# Extend error matcher to render the document with uriPathSegment `notfound`
+# for exceptions with 4xx status code
+#
+error {
+    @context.notfoundDocument = ${q(site).children('[uriPathSegment="404"]').get(0)}
+
+    4xx {
+        @position = 'start'
+        condition = ${statusCode >= 400 && statusCode < 500 && notfoundDocument}
+        renderer = Neos.Fusion:Renderer {
+            @context.node = ${notfoundDocument}
+            @context.documentNode = ${notfoundDocument}
+
+            renderPath = '/root'
+        }
+    }
+}

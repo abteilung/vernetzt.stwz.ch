@@ -1,0 +1,28 @@
+'Abte.Site:Mixin.Product.Packaging':
+  ui:
+    inspector:
+      groups:
+        packaging:
+          label: Verpackung
+          position: 30
+          icon: box
+          collapsed: true
+  properties:
+    productPackaging:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Packaging
+        inspector:
+          group: packaging
+          editorOptions:
+            disabled: true
+    productOuterPackaging:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Outer packaging (Lot)
+        inspector:
+          group: packaging
+          editorOptions:
+            disabled: true

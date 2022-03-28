@@ -1,0 +1,17 @@
+prototype(Abte.Site:Document.FilterPage) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+  
+        filter = Abte.Site:Component.PageFilter {
+            showAllFilter = true
+        }
+
+        renderer = afx`
+            <main class="gridPadding">
+                <div class="container teamFilter">
+                    {props.filter}
+                </div>
+                {props.main}
+            </main>
+        `
+    }
+}

@@ -1,0 +1,7 @@
+prototype(Abte.Site:TrackingScript.Ackee) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <script async src="https://ackee-noh4.onrender.com/tracker.js" data-ackee-server="https://ackee-noh4.onrender.com" data-ackee-domain-id="ac33baf0-52fb-411d-bac9-20bdc5a9e4c1"></script>
+    `
+}
+

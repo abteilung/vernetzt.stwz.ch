@@ -1,0 +1,33 @@
+'Abte.Site:Mixin.TextColor':
+    abstract: true
+    properties:
+        'textColor':
+            type: string
+            defaultValue: 'none'
+            ui:
+                label: 'Text Color'
+                position: 9
+                reloadIfChanged: true
+                inspector:
+                    group: 'style'
+                    editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+                    editorOptions:
+                        values:
+                            none:
+                                label: ''
+                                icon: ''
+                            text-black:
+                                label: 'Text'
+                                icon: 'paint-roller'
+                            text-white:
+                                label: 'White'
+                                icon: 'paint-roller'
+                            text-primary:
+                                label: 'Primary'
+                                icon: 'paint-roller'
+                            text-primary-focus:
+                                label: 'Primary Focus'
+                                icon: 'paint-roller'
+                            text-secondary:
+                                label: 'Secondary'
+                                icon: 'paint-roller'

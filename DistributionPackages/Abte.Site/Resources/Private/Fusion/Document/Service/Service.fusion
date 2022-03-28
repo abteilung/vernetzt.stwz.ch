@@ -1,0 +1,36 @@
+prototype(Abte.Site:Document.Service) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        
+        renderer = afx`
+            <div class="gridPadding">
+                <div class="container grid grid-cols-12 gridgap">
+                    <main class="col-span-12 space-y-8 lg:col-span-8">
+                        <Abte.Site:Component.HeaderService />
+                        {props.main}
+                    </main>
+                    <aside class="col-span-12 lg:col-end-13 lg:col-span-3">
+                        <div class="sticky grid md:grid-cols-2 gridPadding-top top-24 lg:grid-cols-1 gridgap">
+                            <Abte.Site:Content.ContactBox />
+                            <!--<hr/>
+                            ((Beispiele))
+                            <hr/>
+                            ((Success Story))
+                            <hr/>
+                            -->
+                            <Abte.Site:Component.SiblingsDropdown label="Weitere Etiketten" />
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <Abte.Site:Component.ProductUpdates 
+                itemsToShow={ Array.slice( q(site).find('#e76cab82-58d9-4a77-8ae4-964dd7a87939').children().children('[instanceof Abte.Site:Document.Product]').sort('datePublished', 'DESC').get(), 0, 11 )  }  
+                renderStyle="items"
+                title={ I18n.translate('Abte.Site:Main:passendeBlanko') }
+                further={ I18n.translate('Abte.Site:Main:allProducts') }
+                target={ q(site).find('#e76cab82-58d9-4a77-8ae4-964dd7a87939').get(0) }
+            />
+
+        `
+    }
+}

@@ -1,0 +1,51 @@
+
+prototype(Abte.Site:Component.Avatar) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    
+    class = ''
+    
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+    classTitleEnlarged = 'inline-block relative h-12 w-auto pt-1 px-3 text-xl bg-primary tracking-normal'
+    classSubTitleEnlarged = 'relative inline-block w-auto h-8 pt-0.5 px-3 bg-primary-focus'
+
+    title = ${ q(node).property('title')}
+    jobTitle = ${ q(node).property('jobTitle')}
+
+    enlarged = ${ true }
+    
+
+    renderer = afx`
+        <div class="flex avatar">
+            <div class="w-20 h-20">
+                <Sitegeist.Lazybones:Image 
+                    @if.hasImage={props.imageSource}
+                    imageSource={props.imageSource} 
+                    width="240"
+                    height="240"
+                    class="object-cover object-center w-full h-full"
+                />
+            </div>
+
+            <div class={props.class + ' ' + 'flex flex-col z-0 font-bold text-white uppercase heading'}>
+                <div>
+                    <div class={ props.classTitleEnlarged }>
+                        <div class="block whitespace-nowrap">{props.title}</div>
+                    </div>
+                </div>
+                <div>
+                    <div class={props.classSubTitleEnlarged }>
+                        <div class="block whitespace-nowrap">{props.jobTitle}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    `
+}

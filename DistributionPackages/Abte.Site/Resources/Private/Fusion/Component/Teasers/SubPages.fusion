@@ -1,0 +1,63 @@
+// https://w3collective.com/tag/alpine/
+
+prototype(Abte.Site:Component.SubPages) < prototype(Neos.Neos:ContentComponent) {
+
+    fetchSource = Neos.Neos:NodeUri {
+        absolute = true
+    }
+
+    renderer = afx`
+
+        <div class="relative" 
+            x-cloak
+            x-data="{childPages: [], 'isLoading': true}"
+            x-init={'fetch(\'' +  props.fetchSource + '.json\')' + '.then(response => response.json()).then(response => { childPages = response.childPages; isLoading = false; }).catch((error) => {console.log(error)})' }
+        />
+        
+            <div class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" x-show="isLoading">Loading...</div>
+            <div 
+                class="grid grid-cols-4 gap-6"
+                x-show="!isLoading"                
+            >
+                <!-- begin: user card -->
+                <template x-for="page in childPages" :key="page.nodeId">
+                    <div 
+                        class="relative w-full h-full font-light"
+                    >
+                        
+                        <header class="flex flex-col font-bold text-white uppercase heading">
+                            <div>
+                                <div class="absolute left-0 z-20 inline-block w-auto h-8 px-3 pt-1 -top-8 bg-primary">
+                                    <div class="block whitespace-nowrap" x-text="page.nodeTitle"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="absolute top-0 left-0 inline-block w-auto h-8 px-3 pt-1 bg-primary-focus">
+                                    <div class="block whitespace-nowrap">Bedrucken</div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="relative flex duration-100 bg-white shadow-md cursor-pointer hover:shadow-2xl">
+                            <div class="leading-normal">
+                                <a href="#" :href="page.pagePath">
+                                    <img 
+                                        :src="page.pageImage ? page.pageImage : 'https://via.placeholder.com/400'" 
+                                        :alt="page.nodeTitle" 
+                                        width="640"
+                                        height="640"
+                                    />
+                                    <div class="p-4 text-xl" x-text="page.nodeTitle"></div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </template>
+                <!-- end: user card -->
+            </div>
+        </div>    
+    `
+}
+
+

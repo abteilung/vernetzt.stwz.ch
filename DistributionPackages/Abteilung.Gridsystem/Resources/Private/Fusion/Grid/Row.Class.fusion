@@ -1,0 +1,40 @@
+
+
+prototype(Abteilung.Gridsystem:Prototype.Class.Row) < prototype(Neos.Fusion:Component) {
+    columnCount = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('count')}
+        sm = ${q(node).property('count-sm')}
+        md = ${q(node).property('count-md')}
+        lg = ${q(node).property('count-lg')}
+        xl = ${q(node).property('count-xl')}
+    }
+
+    renderer = Neos.Fusion:DataStructure {
+        element = 'multicolumn-row'
+        row = 'grid'
+        gap = 'gridgap'
+        // backendBorder = ${node.context.inBackend ? 'min-h-4 bg-cyan-100' : null }
+
+        xs = ${'grid-cols-' + props.columnCount.xs}
+        xs.@if.props = ${props.columnCount.xs && props.columnCount.xs != 'start'}
+
+        sm = ${'sm:grid-cols-' + props.columnCount.sm}
+        sm.@if.props = ${props.columnCount.sm && props.columnCount.sm != 'start'}
+
+        md = ${'md:grid-cols-' + props.columnCount.md}
+        md.@if.props = ${props.columnCount.md && props.columnCount.md != 'start'}
+
+        lg = ${'lg:grid-cols-' + props.columnCount.lg}
+        lg.@if.props = ${props.columnCount.lg && props.columnCount.lg != 'start'}
+
+        xl = ${'xl:grid-cols-' + props.columnCount.xl}
+        xl.@if.props = ${props.columnCount.xl && props.columnCount.xl != 'start'}
+    }
+}
+
+// Classes for SafeListing
+// 'grid-cols-1 grid-cols-2 grid-cols-3 grid-cols-4 grid-cols-5 grid-cols-6 grid-cols-7 grid-cols-8 grid-cols-9 grid-cols-1/12 grid-cols-1/12 grid-cols-1/12'
+// 'sm:grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 sm:grid-cols-4 sm:grid-cols-5 sm:grid-cols-6 sm:grid-cols-7 sm:grid-cols-8 sm:grid-cols-9 sm:grid-cols-1/12 sm:grid-cols-1/12 sm:grid-cols-1/12'
+// 'md:grid-cols-1 md:grid-cols-2 md:grid-cols-3 md:grid-cols-4 md:grid-cols-5 md:grid-cols-6 md:grid-cols-7 md:grid-cols-8 md:grid-cols-9 md:grid-cols-1/12 md:grid-cols-1/12 md:grid-cols-1/12'
+// 'lg:grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 lg:grid-cols-4 lg:grid-cols-5 lg:grid-cols-6 lg:grid-cols-7 lg:grid-cols-8 lg:grid-cols-9 lg:grid-cols-1/12 lg:grid-cols-1/12 lg:grid-cols-1/12'
+// 'xl:grid-cols-1 xl:grid-cols-2 xl:grid-cols-3 xl:grid-cols-4 xl:grid-cols-5 xl:grid-cols-6 xl:grid-cols-7 xl:grid-cols-8 xl:grid-cols-9 xl:grid-cols-1/12 xl:grid-cols-1/12 xl:grid-cols-1/12'

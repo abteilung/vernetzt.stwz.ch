@@ -1,0 +1,61 @@
+{
+    "i18n-ally.localesPaths": [
+        "Packages/Sites/Abte.Site/Resources/Private/Translations",
+        "Packages/Application/Neos.Media.Browser/Resources/Public/Libraries/plupload/i18n",
+        "Packages/Application/Neos.Neos.Ui/Resources/Public/Plugins/ckeditor/lang",
+        "Packages/Application/Neos.Neos.Ui/Resources/Public/Plugins/ckeditor/plugins/a11yhelp/dialogs/lang",
+        "Packages/Application/Neos.Neos.Ui/Resources/Public/Plugins/ckeditor/plugins/specialchar/dialogs/lang",
+        "Packages/Libraries/ezyang/htmlpurifier/library/HTMLPurifier/Language/messages",
+        "Packages/Libraries/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale"
+    ],
+
+    "i18n-ally.pathMatcher": "{locale}/Main.{ext}",
+
+    // Sort keys alphabetically when saving
+    // Only works for json and yaml
+    "i18n-ally.sortKeys": false,
+
+    // Locale files indentation size
+    "i18n-ally.indent": 2,
+
+    // Locale files tab style
+    "i18n-ally.tabStyle": "space",
+
+    // File encoding for reading and writing locale files. 
+    // Set to "auto" to let it decide for you.
+    "i18n-ally.tabStyle": "utf-8",
+    "i18n-ally.enabledParsers": ["js", "ts", "pot", "fusion"],
+
+
+    // Parser options for extracting HTML, see https://github.com/lokalise/i18n-ally/blob/master/src/extraction/parsers/options.ts
+    "i18n-ally.extract.parsers.html": {
+        "attributes": ["text", "title", "alt", "placeholder", "label", "aria-label"],
+        "ignoredTags": ["script", "style"],
+        "vBind": true,
+        "inlineText": true
+    },
+
+    // Enables hard-coded strings detection automatically whenever opening supported a file
+    "i18n-ally.extract.autoDetect": false,
+
+    // Make sure that particular refactoring templates would be picked up be the bulk extraction depending on the context
+    "i18n-ally.refactor.templates": [
+    {
+        // affect scope (optional)
+        // see https://github.com/lokalise/i18n-ally/blob/master/src/core/types.ts#L156-L156
+        "source": "js-string",
+        "templates": [
+            "i18n.translate('{key}'{args})",
+            "I18n.translate('{key}'{args})",
+        ],
+        // accept globs, resolved to project root (optional)
+        "include": [
+        "src/**/*.{vue,ts,js}",
+        "index.html",
+        "Packages/Sites/Abte.Site/Resources/Private/**.*.{fusion}"
+        ]
+    },
+    // ...
+    ]
+
+}

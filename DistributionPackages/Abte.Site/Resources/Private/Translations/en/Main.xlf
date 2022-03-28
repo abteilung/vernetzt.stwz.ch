@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="4xx.errorMessage">
+                <source>This page could not be found.</source>
+            </trans-unit>
+            <trans-unit id="4xx.backHome">
+                <source>Back to homepage</source>
+            </trans-unit>
+
+            <trans-unit id="dieMenschen">
+                <source>The People of Selfix</source>
+            </trans-unit>
+
+            <trans-unit id="weitereEtikettierLoeseungen">
+                <source>More Labelling solutions:</source>
+            </trans-unit>
+
+            <trans-unit id="neuImSortiment">
+                <target>New in Stock:</target>
+            </trans-unit>
+
+            <trans-unit id="inStock">
+                <source>In Stock:</source>
+            </trans-unit>
+
+            <trans-unit id="categories">
+                <source>Categories</source>
+            </trans-unit>
+
+            <trans-unit id="category">
+                <source>Category</source>
+            </trans-unit>
+
+            <trans-unit id="druckService">
+                <source>Label Printing Service</source>
+            </trans-unit>
+
+            <trans-unit id="passendeEtikettenloesungen">
+                <target>More Labelling Solutions:</target>
+            </trans-unit>
+
+            <trans-unit id="passendeBlanko">
+                <source>Other Blanko Labels:</source>
+            </trans-unit>
+
+            <trans-unit id="readMore">
+                <source>Read more</source>
+            </trans-unit>
+
+            <trans-unit id="keepReading">
+                <source>Read more…</source>
+            </trans-unit>
+
+            <trans-unit id="toTop">
+                <source>Overview</source>
+            </trans-unit>
+
+            <trans-unit id="similarProducts">
+                <source>Similar products</source>
+            </trans-unit>
+
+            <trans-unit id="matchingProducts">
+                <source>Fitting Products</source>
+            </trans-unit>
+
+            <trans-unit id="allProducts">
+                <target>Alle Produkte</target>
+            </trans-unit>
+
+            <trans-unit id="resetFilter">
+                <target>Reset Filter</target>
+            </trans-unit>
+
+            <trans-unit id="filterProducts">
+                <source>Filer Products</source>
+            </trans-unit>
+
+            <trans-unit id="printerHead">
+                <source>Printer Head Type</source>
+            </trans-unit>
+
+            <trans-unit id="inkQuality">
+                <source>Quality of Ink</source>
+            </trans-unit>
+
+            <trans-unit id="passthroughMin">
+                <source>Min. throughput</source>
+            </trans-unit>
+
+            <trans-unit id="passthroughMax">
+                <source>Max. throughput</source>
+            </trans-unit>
+
+            <trans-unit id="printingSpeed">
+                <source>Printing Speed</source>
+            </trans-unit>
+
+            <trans-unit id="Interface">
+                <source>Interface</source>
+            </trans-unit>
+
+            <trans-unit id="Media">
+                <source>Media</source>
+            </trans-unit>
+
+            <trans-unit id="Compatibility">
+                <source>Compatibility</source>
+            </trans-unit>
+
+            <trans-unit id="CompatibilityGroup">
+                <source>Compatibility Group</source>
+            </trans-unit>
+
+            <trans-unit id="Emulator">
+                <source>Emulator</source>
+            </trans-unit>
+
+            <trans-unit id="Options">
+                <source>Options</source>
+            </trans-unit>
+
+            <trans-unit id="powerSupply">
+                <source>Power Supply</source>
+            </trans-unit>
+
+            <trans-unit id="noMatchingFilter">
+                <source>No matching Filter</source>
+            </trans-unit>
+
+           <trans-unit id="videos">
+                <source>Videos</source>
+            </trans-unit>
+
+           <trans-unit id="downloads">
+                <source>Downloads</source>
+            </trans-unit>
+
+           <trans-unit id="download">
+                <source>Download</source>
+            </trans-unit>
+
+           <trans-unit id="downloadVCard">
+                <source>Download V-Card</source>
+            </trans-unit>
+
+           <trans-unit id="writeUs">
+                <source>Write us an E-Mail</source>
+            </trans-unit>
+
+           <trans-unit id="getInTouch">
+                <source>Get in Touch</source>
+            </trans-unit>
+
+            <trans-unit id="FactSheet">
+                <source>FactSheet</source>
+            </trans-unit>
+
+            
+           <trans-unit id="individuelleBeratung">
+                <source>Personal Consulting</source>
+            </trans-unit>
+
+           <trans-unit id="grossesKnowHow">
+                <source>Extensive Know How</source>
+            </trans-unit>
+
+           <trans-unit id="eigeneHerstellung">
+                <source>In-House Production</source>
+            </trans-unit>
+
+           <trans-unit id="since1949">
+                <source>Operating since 1949</source>
+            </trans-unit>
+
+           <trans-unit id="customMade">
+                <source>Customized Labels</source>
+            </trans-unit>
+
+           <trans-unit id="specs">
+                <source>Specifications</source>
+            </trans-unit>
+
+           <trans-unit id="desc">
+                <source>Description</source>
+            </trans-unit>
+
+           <trans-unit id="moreAboutUs">
+                <source>More about us</source>
+            </trans-unit>
+
+
+           <trans-unit id="artNr">
+                <source>Article Nr.</source>
+            </trans-unit>
+
+           <trans-unit id="dimensions">
+                <source>Label Size</source>
+            </trans-unit>
+
+           <trans-unit id="printerDimensions">
+                <source>Dimensions</source>
+            </trans-unit>
+
+           <trans-unit id="price">
+                <source>Price</source>
+            </trans-unit>
+
+           <trans-unit id="width">
+                <source>Width</source>
+            </trans-unit>
+
+           <trans-unit id="height">
+                <source>Height</source>
+            </trans-unit>
+
+           <trans-unit id="weight">
+                <source>Weight</source>
+            </trans-unit>
+
+           <trans-unit id="diameter">
+                <source>Diameter</source>
+            </trans-unit>
+
+           <trans-unit id="coreWidth">
+                <source>Core Width</source>
+            </trans-unit>
+
+           <trans-unit id="coreDiameter">
+                <source>Core Diameter</source>
+            </trans-unit>
+
+           <trans-unit id="rollDiameter">
+                <source>Roll Diameter</source>
+            </trans-unit>
+
+           <trans-unit id="form">
+                <source>Form</source>
+            </trans-unit>
+
+           <trans-unit id="color">
+                <source>Color</source>
+            </trans-unit>
+
+           <trans-unit id="material">
+                <source>Material</source>
+            </trans-unit>
+
+           <trans-unit id="gumming">
+                <source>Gumming</source>
+            </trans-unit>
+
+           <trans-unit id="execution">
+                <source>Execution</source>
+            </trans-unit>
+
+           <trans-unit id="printerCutter">
+                <source>Cutter</source>
+            </trans-unit>
+
+           <trans-unit id="printerCartridge">
+                <source>Printer Cartridge</source>
+            </trans-unit>
+
+           <trans-unit id="printerType">
+                <source>Printer Type</source>
+            </trans-unit>
+
+           <trans-unit id="printerResolution">
+                <source>Printer Resolution</source>
+            </trans-unit>
+
+           <trans-unit id="productSoftware">
+                <source>Software</source>
+            </trans-unit>
+
+           <trans-unit id="all">
+                <source>All</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

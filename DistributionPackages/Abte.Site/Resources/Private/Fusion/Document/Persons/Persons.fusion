@@ -1,0 +1,42 @@
+prototype(Abte.Site:Document.Persons) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+
+        pageTitle = Neos.Neos:Editable {
+            property = 'titleOverride'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        filter = Abte.Site:Component.PageFilter {
+            showAllFilter = true
+            filterItems = Neos.Fusion:Loop {
+                items = ${ q(node).children('[instanceof Abte.Site:Document.Category]').children('[instanceof Abte.Site:Document.Person]').get() }
+                itemName = 'element'
+                iterationName = 'i'
+                itemRenderer = Abte.Site:Component.Portrait {
+                    node = ${ element }
+                }
+            }
+        }
+
+        renderer = afx`
+            <div class="gridPadding">
+
+                <main class="container main">
+
+                    <Selfix.Navigation:Component.Nav.Breadcrumb />
+                    <h2 class="h1">{props.pageTitle}</h2>
+
+                    <div id="filterContainer" data-ref="filterContainer" class="mt-8 mb-24 lg:mt-12 teamFilter">
+                        {props.filter}
+
+                    </div>
+                        {props.main}
+                </main>
+                
+            </div>
+        `
+    }
+}
+

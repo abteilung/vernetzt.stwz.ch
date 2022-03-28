@@ -1,0 +1,221 @@
+Abteilung.Gridsystem:Mixin.Column.Span:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Span.All: true
+    Abteilung.Gridsystem:Mixin.Column.Span.SM: true
+    Abteilung.Gridsystem:Mixin.Column.Span.MD: true
+    Abteilung.Gridsystem:Mixin.Column.Span.LG: true
+    Abteilung.Gridsystem:Mixin.Column.Span.XL: true
+
+Abteilung.Gridsystem:Mixin.Column.Span.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        span:
+          label: 'Abteilung.Grid:NodeTypes.Content.Column:groups.span'
+
+Abteilung.Gridsystem:Mixin.Column.Span.All:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Span.Group: true
+  properties:
+    span:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.all'
+        reloadIfChanged: true
+        inspector:
+          group: 'span'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'Col-Span 0'
+              1:
+                label: 'Col-Span 1'
+              2:
+                label: 'Col-Span 2'
+              3:
+                label: 'Col-Span 3'
+              4:
+                label: 'Col-Span 4'
+              5:
+                label: 'Col-Span 5'
+              6:
+                label: 'Col-Span 6'
+              7:
+                label: 'Col-Span 7'
+              8:
+                label: 'Col-Span 8'
+              9:
+                label: 'Col-Span 9'
+              10:
+                label: 'Col-Span 10'
+              11:
+                label: 'Col-Span 11'
+
+Abteilung.Gridsystem:Mixin.Column.Span.SM:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Span.Group: true
+  properties:
+    span-sm:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'span'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'Col-Span sm-0'
+              1:
+                label: 'Col-Span sm-1'
+              2:
+                label: 'Col-Span sm-2'
+              3:
+                label: 'Col-Span sm-3'
+              4:
+                label: 'Col-Span sm-4'
+              5:
+                label: 'Col-Span sm-5'
+              6:
+                label: 'Col-Span sm-6'
+              7:
+                label: 'Col-Span sm-7'
+              8:
+                label: 'Col-Span sm-8'
+              9:
+                label: 'Col-Span sm-9'
+              10:
+                label: 'Col-Span sm-10'
+              11:
+                label: 'Col-Span sm-11'
+
+Abteilung.Gridsystem:Mixin.Column.Span.MD:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Span.Group: true
+  properties:
+    span-md:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'span'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'Col-Span md-0'
+              1:
+                label: 'Col-Span md-1'
+              2:
+                label: 'Col-Span md-2'
+              3:
+                label: 'Col-Span md-3'
+              4:
+                label: 'Col-Span md-4'
+              5:
+                label: 'Col-Span md-5'
+              6:
+                label: 'Col-Span md-6'
+              7:
+                label: 'Col-Span md-7'
+              8:
+                label: 'Col-Span md-8'
+              9:
+                label: 'Col-Span md-9'
+              10:
+                label: 'Col-Span md-10'
+              11:
+                label: 'Col-Span md-11'
+
+Abteilung.Gridsystem:Mixin.Column.Span.LG:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Span.Group: true
+  properties:
+    span-lg:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'span'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'Col-Span lg-0'
+              1:
+                label: 'Col-Span lg-1'
+              2:
+                label: 'Col-Span lg-2'
+              3:
+                label: 'Col-Span lg-3'
+              4:
+                label: 'Col-Span lg-4'
+              5:
+                label: 'Col-Span lg-5'
+              6:
+                label: 'Col-Span lg-6'
+              7:
+                label: 'Col-Span lg-7'
+              8:
+                label: 'Col-Span lg-8'
+              9:
+                label: 'Col-Span lg-9'
+              10:
+                label: 'Col-Span lg-10'
+              11:
+                label: 'Col-Span lg-11'
+
+Abteilung.Gridsystem:Mixin.Column.Span.XL:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Span.Group: true
+  properties:
+    span-xl:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.xl'
+        reloadIfChanged: true
+        inspector:
+          group: 'span'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'Col-Span xl-0'
+              1:
+                label: 'Col-Span xl-1'
+              2:
+                label: 'Col-Span xl-2'
+              3:
+                label: 'Col-Span xl-3'
+              4:
+                label: 'Col-Span xl-4'
+              5:
+                label: 'Col-Span xl-5'
+              6:
+                label: 'Col-Span xl-6'
+              7:
+                label: 'Col-Span xl-7'
+              8:
+                label: 'Col-Span xl-8'
+              9:
+                label: 'Col-Span xl-9'
+              10:
+                label: 'Col-Span xl-10'
+              11:
+                label: 'Col-Span xl-11'

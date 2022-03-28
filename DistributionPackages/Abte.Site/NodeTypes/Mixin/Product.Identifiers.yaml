@@ -1,0 +1,64 @@
+'Abte.Site:Mixin.Product.Identifiers':
+  ui:
+    inspector:
+      groups:
+        identifiers:
+          label: Identifikatoren
+          position: 11
+          icon: slack-hash
+          collapsed: true
+  properties:
+    __externalIdentifier:
+      type: string
+      options:
+        preset: 'text.plain'
+      ui:
+        label: 'Externer Identifier'
+        inspector:
+          group: identifiers
+          position: 0
+    erpID:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: ERP ID
+        inspector:
+          group: identifiers
+          editorOptions:
+            disabled: true
+    productID:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Prduct ID (SKU)
+        inspector:
+          group: identifiers
+          editorOptions:
+            disabled: true
+    parentID:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: Parent ID
+        inspector:
+          group: identifiers
+          editorOptions:
+            disabled: true
+    productEAN:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: EAN
+        inspector:
+          group: identifiers
+          editorOptions:
+            disabled: true
+    productOEM:
+      options:
+        preset: 'text.plain'
+      ui:
+        label: OEM
+        inspector:
+          group: identifiers
+          editorOptions:
+            disabled: true

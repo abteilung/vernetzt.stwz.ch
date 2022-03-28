@@ -1,1 +1,0 @@
-# vernetzt.stwz.ch

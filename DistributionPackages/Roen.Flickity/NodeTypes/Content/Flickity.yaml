@@ -1,0 +1,35 @@
+'Roen.Flickity:Content.Flickity':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+    'Roen.Flickity:Include': true
+  ui:
+    label: Slides
+    position: 50
+    inlineEditable: true
+    group: media
+    icon: photo-video
+    inspector:
+      groups:
+        quites:
+          label: Slides
+  constraints:
+    nodeTypes:
+      '*': false
+      'Roen.Flickity:Content.Slide': true
+  properties:
+    'title':
+      options:
+        preset: 'text.title'
+  options:
+    template:
+      childNodes:
+        multipleQuoteNodes:
+          type: 'Roen.Flickity:Content.Slide'
+          properties:
+            title: '${"" + item + ""}'
+          withItems:
+            - 'Slide 1'
+            - 'Slide 2'
+            - 'Slide 3'

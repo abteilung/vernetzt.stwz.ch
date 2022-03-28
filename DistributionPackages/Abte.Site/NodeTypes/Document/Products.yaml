@@ -1,0 +1,22 @@
+'Abte.Site:Document.Products':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.TeaserText': true
+    'Selfix.MixitUp:Include': true
+    'Abte.Site:Constraint.Document.Restricted': true
+    'Abte.Site:Mixin.ProductGroup.IsImport': true
+  ui:
+    label: i18n
+    icon: archive
+    position: 700
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Category': true
+      'Abte.Site:Document.Service': true
+      'Abte.Site:Document.Product': true
+      'Selfix.Navigation:Document.MegaMenu': true
+  childNodes:
+    aside:
+      type: 'Neos.Neos:ContentCollection'

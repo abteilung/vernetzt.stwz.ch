@@ -1,0 +1,42 @@
+'Abte.Site:Mixin.BgColor':
+  abstract: true
+  ui:
+    label: i18n
+    icon: square-full
+    position: 300
+    inspector:
+      groups:
+        style:
+          label: 'Style'
+          position: 25
+          icon: 'clone'
+  properties:
+    'bgColor':
+      type: string
+      defaultValue: 'none'
+      ui:
+        label: 'Background Color'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              none:
+                label: 'None'
+                icon: ''
+              bg-light:
+                label: 'BG Light'
+                icon: ''
+              bg-primary:
+                label: 'BG Primary'
+                icon: ''
+              bg-primary-focus:
+                label: 'BG Primary Focus'
+                icon: ''
+              bg-secondary:
+                label: 'BG Secondary'
+                icon: ''
+              bg-tertiary:
+                label: 'BG Tertiary'
+                icon: ''

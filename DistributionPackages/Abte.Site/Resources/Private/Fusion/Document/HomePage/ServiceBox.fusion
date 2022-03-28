@@ -1,0 +1,36 @@
+prototype(Abte.Site:Component.ServiceBox) < prototype(Neos.Fusion:Component) {
+
+    menuItems = Neos.Neos:MenuItems {
+        startingPoint = ${ q(site).children('[uriPathSegment="service"]').get(0) }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(site).property('image') }
+    }
+
+    renderer = afx`
+        <Abte.Site:Component.ImageBox
+            class="mb-20"
+            title="Unser Service"
+            subTitle="in der Übersicht"
+            bgLight={false}
+            dropShadow={true}
+            imageSource={props.imageSource}
+        >
+            <div class="gridPadding md:pr-0 lg:pr-0">
+                <ul class="">
+                    <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+                        <li class="py-1 border-b-2 last:border-b-0 border-base-100 first:hidden">
+                            <Neos.Neos:NodeLink node={item.node} attributes.class="">
+                                <div class="flex items-center justify-between space-x-4 group">
+                                    <div class="h3">{item.label}</div>
+                                    <Abte.Site:Icon.ArrowRight class="relative left-0 duration-150 scale-75 lg:scale-100 text-secondary group-hover:left-2" />
+                                </div>
+                            </Neos.Neos:NodeLink>
+                        </li>
+                    </Neos.Fusion:Loop>
+                </ul>
+            </div>
+        </Abte.Site:Component.ImageBox>
+    `
+}

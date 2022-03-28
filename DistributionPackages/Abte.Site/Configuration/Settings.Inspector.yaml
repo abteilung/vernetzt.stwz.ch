@@ -1,0 +1,29 @@
+Neos:
+  Neos:
+    headerComment: |
+
+      <!--
+
+        +-+-+-+-+-+-+-+-+-+-+-+-+
+        |a|b|t|e|i|l|u|n|g|.|c|h|
+        +-+-+-+-+-+-+-+-+-+-+-+-+
+
+        This website is powered by Neos, the Open Source Content Application Platform licensed under the GNU/GPL.
+        Neos is based on Flow, a powerful PHP application framework licensed under the MIT license.
+
+        More information and contribution opportunities at https://www.neos.io
+      
+      -->
+
+    nodeTypes:
+      groups:
+        media:
+          position: 50
+          label: 'Media'
+          collapsed: false
+        forms:
+          position: 55
+          label: 'Forms'
+          collapsed: false
+        structure:
+          position: 40

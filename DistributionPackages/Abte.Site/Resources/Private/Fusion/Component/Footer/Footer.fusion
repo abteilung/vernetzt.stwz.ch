@@ -1,0 +1,114 @@
+prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
+    @context.node = ${site}
+    
+    year = ${Date.format(Date.now(), 'Y')}
+    
+    footerInfo = Neos.Neos:Editable {
+        node = ${site}
+        property = 'footerInfo'
+    }
+
+    footerContent = Neos.Neos:ContentCollection {
+        nodePath = ${ q(site).children('footer').property('_path') }
+        collection = ${ q(site).children('footer').children() }
+    }
+    
+    metaItems = Selfix.Navigation:Component.Nav.Meta {
+        menuItems {
+            itemCollection >
+            startingPoint = ${ q(site).children('[uriPathSegment="meta"]').get(0) }
+        }
+    }
+
+    etikettenShopNav = Selfix.Navigation:Component.Nav.Footer {
+        itemCollection = ${ q(site).children('[uriPathSegment="etiketten-shop"]').children('[instanceof Abte.Site:Document.Page]').get() }
+    }
+
+    serviceNav = Selfix.Navigation:Component.Nav.Footer {
+        itemCollection = ${ q(site).children('[uriPathSegment="druckservice"]').children('[instanceof Abte.Site:Document.Page]').get() }
+    }
+
+    aboutUsNav = Selfix.Navigation:Component.Nav.Footer {
+        itemCollection = ${ q(site).children('[uriPathSegment="ueber-uns"]').children('[instanceof Abte.Site:Document.Page]').get() }
+    }
+
+
+    phone = ${ q(site).property('helpdeskPhone') }
+    
+    email = ${ q(site).property('helpdeskEmail') }
+
+    renderer = afx`
+
+        <Abte.Site:Component.MoreAboutUs 
+            @if.isNoMarket={q(documentNode).is('[!instanceof Abte.Site:Document.Market]')}
+            @if.isNoService={q(documentNode).is('[!instanceof Abte.Site:Document.Service]')}
+        />
+        <Abte.Site:Component.UnsereMaerkte class="mt-24 mb-0" 
+            @if.isMarket={q(documentNode).is('[instanceof Abte.Site:Document.Market]')}
+        />
+
+        <footer class="z-10">
+            <div class="px-5 text-white bg-primary md:px-8 lg:px-12">
+                <div class="container flex justify-between py-5 md:py-8 lg:py-12">
+                    <div class="flex items-center">
+                        <Abte.Site:Icon.WhitePhone class="mr-2 text-white" />
+                            <Carbon.Link:Link 
+                                additionalClass="hover:underline" 
+                                link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
+                                renderDefaultTagIfNoLink='true'
+                            >
+                                <h3 class="hidden text-white md:flex">
+                                    <Neos.Neos:Editable property="helpdeskPhone" node={site} />
+                                </h3>
+                        </Carbon.Link:Link>
+                    </div>
+                    <div class="flex items-center">
+                        <Abte.Site:Icon.Envelope class="mr-2 text-white" />
+                        <Carbon.Link:Link 
+                            additionalClass="hover:underline" 
+                            link={'mailto:' + props.email} 
+                            renderDefaultTagIfNoLink='true'
+                        >
+                            <h3 class="hidden text-white md:flex">
+                                <Neos.Neos:Editable property="helpdeskEmail" node={site} />
+                            </h3>
+                        </Carbon.Link:Link>
+                    </div>
+                    <Selfix.Navigation:Component.Navbar.Language caretColor="text-white" />
+                </div>
+                <div class="container border-t-2 border-primary-focus"></div>
+            </div>
+
+            <div class="pt-8 pb-16 text-white bg-primary gridPadding">
+                <div class="container">{props.footerContent}</div>
+            </div>
+            
+            <div class="bg-white text-primary gridPadding">
+                <div class="container">
+                    <div class="items-center justify-between flex-none lg:flex gridgap">
+                        <div class="flex justify-center w-full lg:w-auto">
+                            <Abte.Site:Component.Logo class="h-12" />
+                        </div>
+                        <div class="justify-center py-4 text-center lg:py-0">
+                            <div class="inline-block">{props.metaItems}</div>
+                        </div>
+                        <div class="flex justify-center w-full text-right lg:w-auto">
+                            © {props.year} {props.footerInfo}
+                        </div>                
+                    </div>
+                </div>
+            </div>
+        </footer>
+    `
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            site = ${site}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(site)}
+        }
+    }
+    
+}
