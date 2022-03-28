@@ -10,13 +10,13 @@ prototype(Selfix.SoftwareFilter) < prototype(Neos.Fusion:Component) {
     renderer =  afx`
       
         <div class="">
-            <Selfix.Navigation:Component.ProductFilter.Item 
+            <Roen.Navigation:Component.ProductFilter.Item 
                 items={ q(documentNode).children('[uriPathSegment="kategorien"]').children('[instanceof Abte.Site:Document.Category]').get() }
                 filterProperty="title"
             />
         </div>
         <div>
-            <Selfix.Navigation:Component.ProductFilter.Item 
+            <Roen.Navigation:Component.ProductFilter.Item 
                 filterProperty="passthroughMin" 
                 filterTitle={ I18n.translate('Abte.Site:Main:passthroughMin') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -24,7 +24,7 @@ prototype(Selfix.SoftwareFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Selfix.Navigation:Component.ProductFilter.Item 
+            <Roen.Navigation:Component.ProductFilter.Item 
                 filterProperty="passthroughMax" 
                 filterTitle={ I18n.translate('Abte.Site:Main:passthroughMax') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }

@@ -2,7 +2,6 @@
   superTypes:
     'Abte.Site:Document.AbstractPage': true
     'Abte.Site:Mixin.Image': true
-    'Selfix.Flickity:Include': true
     'Abte.Site:Constraint.Document.Restricted': true
     'Abte.Site:Mixin.Searchable.SiteSearch': true
     'Abte.Site:Mixin.Product.Price': true

@@ -2,7 +2,6 @@
   superTypes:
     'Abte.Site:Document.AbstractPage': true
     'Abte.Site:Constraint.Document.Restricted': true
-    'Selfix.Flickity:Include': true
     'Abte.Site:Mixin.Image': true
     'Abte.Site:Mixin.Helpdesk': true
     'Abte.Site:Mixin.InspectorGeneral': true

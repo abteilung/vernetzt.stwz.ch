@@ -6,8 +6,8 @@ Carbon:
       'Abte.Site':
         Package: 'Abte.Site'
         General:
-          Head: Selfix.css
-          Body: Selfix.js[defer]
+          Head: Stwz.css
+          Body: Stwz.js[defer]
         Backend:
           Head:
             # - Backend.css

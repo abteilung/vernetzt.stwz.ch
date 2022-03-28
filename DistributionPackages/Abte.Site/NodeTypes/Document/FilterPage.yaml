@@ -2,7 +2,6 @@
   superTypes:
     'Abte.Site:Document.AbstractPage': true
     'Abte.Site:Mixin.Image': true
-    'Selfix.MixitUp:Include': true
     'Abte.Site:Constraint.Document.Restricted': true
   ui:
     label: i18n

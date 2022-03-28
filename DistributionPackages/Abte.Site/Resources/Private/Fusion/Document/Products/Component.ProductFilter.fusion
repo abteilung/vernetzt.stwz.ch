@@ -1,4 +1,4 @@
-prototype(Selfix.Navigation:Component.ProductFilter) < prototype(Neos.Fusion:Component) {
+prototype(Roen.Navigation:Component.ProductFilter) < prototype(Neos.Fusion:Component) {
 
     filter = Neos.Fusion:Case {
         printer {
@@ -78,7 +78,7 @@ prototype(Selfix.Navigation:Component.ProductFilter) < prototype(Neos.Fusion:Com
             </div>
 
 
-            <Selfix.Navigation:Component.ProductSearch />
+            <Roen.Navigation:Component.ProductSearch />
         </div>
     `
 }

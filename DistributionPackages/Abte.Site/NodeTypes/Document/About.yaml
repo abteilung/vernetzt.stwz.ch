@@ -2,7 +2,6 @@
   superTypes:
     'Abte.Site:Document.AbstractPage': true
     'Abte.Site:Mixin.Image': true
-    'Selfix.Flickity:Include': true
     'Abte.Site:Mixin.TeaserText': true
     'Abte.Site:Constraint.Document.Restricted': true
   ui:

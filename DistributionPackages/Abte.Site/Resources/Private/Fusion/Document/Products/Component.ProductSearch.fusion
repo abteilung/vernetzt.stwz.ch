@@ -1,5 +1,5 @@
 
-prototype(Selfix.Navigation:Component.ProductSearch) < prototype(Neos.Fusion:Component) {
+prototype(Roen.Navigation:Component.ProductSearch) < prototype(Neos.Fusion:Component) {
 
     node = ${ node }
     @context {

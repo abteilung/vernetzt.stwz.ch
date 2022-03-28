@@ -25,7 +25,7 @@ prototype(Abte.Site:Document.Persons) < prototype(Abte.Site:Document.AbstractPag
 
                 <main class="container main">
 
-                    <Selfix.Navigation:Component.Nav.Breadcrumb />
+                    <Roen.Navigation:Component.Nav.Breadcrumb />
                     <h2 class="h1">{props.pageTitle}</h2>
 
                     <div id="filterContainer" data-ref="filterContainer" class="mt-8 mb-24 lg:mt-12 teamFilter">

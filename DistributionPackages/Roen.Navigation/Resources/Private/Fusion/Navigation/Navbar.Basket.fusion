@@ -39,8 +39,6 @@ prototype(Roen.Navigation:Component.Navbar.Basket) < prototype(Neos.Fusion:Compo
                         x-init="$watch('formOrder', value => {localStorage.setItem('orderValue', value)})"
                     >
                         <h2 class="text-primary">{ I18n.translate('Abte.Site:Main:yourProducts') }</h2>
-                        <Carbon.IncludeAssets:File file="resource://Onedrop.AjaxForm/Public/JavaScript/form.js" />
-                        <Onedrop.AjaxForm:Form formIdentifier="order-form" />
                     </div>
                 </div>
             </div>

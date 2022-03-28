@@ -12,19 +12,16 @@
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abte.Site",
-                "reference": "7b198225b62f172ffa88b6e82875a76905a9fff5"
+                "reference": "bbd6ce1737e9da08869971334f4f6fa5269cf2fc"
             },
             "require": {
                 "carbon/includeassets": "^5.3",
                 "carbon/link": "^1.7",
                 "flowpack/nodetemplates": "^1.3",
                 "jonnitto/prettyembedvideoplatforms": "^2.0",
-                "medienreaktor/import": "^1.1",
-                "neos/form-builder": "^2.2",
                 "neos/neos": "*",
                 "neos/nodetypes-contentreferences": "^7.2",
-                "sitegeist/lazybones": "^3.1",
-                "techdivision/ckstyles": "^1.3.1"
+                "sitegeist/lazybones": "^3.1"
             },
             "suggest": {
                 "neos/seo": "*"
@@ -2968,47 +2965,6 @@
             "time": "2022-01-04T00:13:07+00:00"
         },
         {
-            "name": "medienreaktor/import",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/medienreaktor/Medienreaktor.Import.git",
-                "reference": "664a20ddff8c95a8272619b696d3c4e228b9f596"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/medienreaktor/Medienreaktor.Import/zipball/664a20ddff8c95a8272619b696d3c4e228b9f596",
-                "reference": "664a20ddff8c95a8272619b696d3c4e228b9f596",
-                "shasum": ""
-            },
-            "require": {
-                "neos/eel": "*",
-                "neos/flow": "*",
-                "neos/neos": "*"
-            },
-            "type": "neos-package",
-            "extra": {
-                "neos": {
-                    "package-key": "Medienreaktor.Import"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Medienreaktor\\Import\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Import module for Neos CMS",
-            "support": {
-                "issues": "https://github.com/medienreaktor/Medienreaktor.Import/issues",
-                "source": "https://github.com/medienreaktor/Medienreaktor.Import/tree/1.1.0"
-            },
-            "time": "2021-01-20T09:55:17+00:00"
-        },
-        {
             "name": "neos/cache",
             "version": "7.3.2",
             "source": {
@@ -3739,52 +3695,6 @@
                 }
             ],
             "time": "2021-08-05T11:19:05+00:00"
-        },
-        {
-            "name": "neos/form-builder",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/neos/form-builder.git",
-                "reference": "eb8f4b8e743b28a51ddc237e8d9799159da68405"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/neos/form-builder/zipball/eb8f4b8e743b28a51ddc237e8d9799159da68405",
-                "reference": "eb8f4b8e743b28a51ddc237e8d9799159da68405",
-                "shasum": ""
-            },
-            "require": {
-                "neos/form": "^5.0",
-                "neos/neos": "^5.0 || ^7.0"
-            },
-            "type": "neos-package",
-            "extra": {
-                "neos": {
-                    "package-key": "Neos.Form.Builder"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Neos\\Form\\Builder\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0+"
-            ],
-            "description": "Flow Form Framework integration into Neos CMS",
-            "support": {
-                "issues": "https://github.com/neos/form-builder/issues",
-                "source": "https://github.com/neos/form-builder/tree/2.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://neosfunding.sandstorm.de/en",
-                    "type": "custom"
-                }
-            ],
-            "time": "2020-12-07T16:05:17+00:00"
         },
         {
             "name": "neos/fusion",
@@ -9128,64 +9038,6 @@
                 }
             ],
             "time": "2022-01-26T16:32:32+00:00"
-        },
-        {
-            "name": "techdivision/ckstyles",
-            "version": "v1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/techdivision/ckstyles.git",
-                "reference": "965f9c36e0b97a90145b1af8235b68c9c4ec8101"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/techdivision/ckstyles/zipball/965f9c36e0b97a90145b1af8235b68c9c4ec8101",
-                "reference": "965f9c36e0b97a90145b1af8235b68c9c4ec8101",
-                "shasum": ""
-            },
-            "require": {
-                "neos/neos-ui": ">=3.8 <8.0"
-            },
-            "type": "neos-plugin",
-            "extra": {
-                "neos": {
-                    "package-key": "TechDivision.CkStyles",
-                    "loading-order": {
-                        "after": [
-                            "neos/neos"
-                        ]
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Neos developer team",
-                    "email": "neos@techdivision.com",
-                    "homepage": "https://www.techdivision.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Neos package which enables you adding your custom style classes for the CkEditor with a simple Yaml configuration",
-            "homepage": "https://www.techdivision.com",
-            "keywords": [
-                "CKEditor",
-                "Neos",
-                "classes",
-                "editing",
-                "flow",
-                "inline",
-                "styling",
-                "wysiwyg"
-            ],
-            "support": {
-                "issues": "https://github.com/techdivision/ckstyles/issues",
-                "source": "https://github.com/techdivision/ckstyles/tree/v1.4.0"
-            },
-            "time": "2022-03-21T12:40:39+00:00"
         },
         {
             "name": "typo3fluid/fluid",

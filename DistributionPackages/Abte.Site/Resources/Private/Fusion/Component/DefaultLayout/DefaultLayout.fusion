@@ -42,7 +42,7 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
     renderer = afx`
 		<Abte.Site:TrackingScript.Ackee/>
         <header>
-            <Selfix.Navigation:Component.Navbar />
+            <Roen.Navigation:Component.Navbar />
             {props.pageHeader}
         </header>
         {props.content}

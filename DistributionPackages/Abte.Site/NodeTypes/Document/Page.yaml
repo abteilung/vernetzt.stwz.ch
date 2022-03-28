@@ -15,7 +15,6 @@
       'Abte.Site:Document.Category': true
       'Abte.Site:Document.Products': true
       'Abte.Site:Document.Services': true
-      'Selfix.Navigation:Document.MegaMenu': true
   properties:
     image:
       options:
