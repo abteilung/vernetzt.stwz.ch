@@ -1,0 +1,31 @@
+
+prototype(Stwz.Navigation:Navbar.SubItems) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+
+        <div 
+            x-show="open"
+            x-transition:enter="transition ease-out duration-150"
+            x-transition:enter-start="transform opacity-0"
+            x-transition:enter-end="transform opacity-150"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-150"
+            x-transition:leave-end="transform opacity-0"
+            class="absolute left-0 z-20 w-full megaMenu top-48"
+        >
+            <div class="container p-12 bg-white box-shadow text-primary">
+                <Neos.Fusion:Loop items={item.subItems}>
+                    <Carbon.Link:Link 
+                        node={item.node} 
+                        attributes.class="flex items-start whitespace-nowrap group"
+                        attributes.target={props.linkTarget}
+                    >
+                        <p class={item.state == 'current' ? 'transition-all duration-300 text-primary opacity-100' : 'transition-all duration-300 text-primary group-hover:text-black'}>
+                            {q(item.node).property('title')}
+                        </p>
+                    </Carbon.Link:Link>
+                </Neos.Fusion:Loop>
+            </div>
+        </div>
+    `
+}

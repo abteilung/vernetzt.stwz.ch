@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "stwz/flickity",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stwz\\Flickity\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Stwz.Flickity"
+        }
+    }
+}

@@ -18,7 +18,7 @@ prototype(Abte.Site:Component.HeaderService) < prototype(Neos.Fusion:Component) 
 
         <div class="container">
             <div class="space-y-8">
-                <Roen.Navigation:Component.Nav.Breadcrumb />
+                <Stwz.Navigation:Component.Nav.Breadcrumb />
                 <h1 class="mb-8"
                     @if.hasPageTitle={props.pageTitle}
                 >

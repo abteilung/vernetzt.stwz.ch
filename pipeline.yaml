@@ -17,30 +17,30 @@
 packages:
   - package: Abte.Site
     files:
-      - Roentgen.pcss
-      - Roentgen.js
-  - package: Roen.FuzzySearch
-    files:
-      - fuzzySearch.js
+      - Stwz.pcss
+      - Stwz.js
+  # - package: Stwz.FuzzySearch
+  #   files:
+  #     - fuzzySearch.js
   - package: Abteilung.Gridsystem
-  - package: Roen.Navigation
+  - package: Stwz.Navigation
     files:
       - Navigation.js
       - Navigation.pcss
-  - package: Roen.MixitUp
-    files:
-      - MixitUp.js
-  - package: Roen.Flickity
+  # - package: Stwz.MixitUp
+  #   files:
+  #     - MixitUp.js
+  - package: Stwz.Flickity
     files:
       - Flickity.js
       - Flickity.pcss
-  - package: Roen.Forms
-    files:
-      - Forms.js
-      - Forms.pcss
-      - Styles/choices.base.scss
-      - Styles/choices.scss
-  - package: Roen.Privacy
+  # - package: Stwz.Forms
+  #   files:
+  #     - Forms.js
+  #     - Forms.pcss
+  #     - Styles/choices.base.scss
+  #     - Styles/choices.scss
+  - package: Stwz.Privacy
     files:
       - Privacy.pcss
 # If you want to use esbuild features or plugins, you can enable them here.

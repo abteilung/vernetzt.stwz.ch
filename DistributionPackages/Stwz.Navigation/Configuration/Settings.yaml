@@ -1,0 +1,9 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Stwz.Navigation: true
+    userInterface:
+      translation:
+        autoInclude:
+          Stwz.Navigation: ['NodeTypes/*']

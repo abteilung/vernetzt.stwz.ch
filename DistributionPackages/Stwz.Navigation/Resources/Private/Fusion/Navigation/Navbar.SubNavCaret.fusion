@@ -1,0 +1,25 @@
+prototype(Stwz.Navigation:Component.SubNavCaret) < prototype(Neos.Fusion:Component) {
+
+    class = "inline w-4 h-4 ml-1 -mt-1 transition-transform duration-200 transform fill-current md:mt-1 md:-mt-1"
+
+    renderer = afx`
+        <svg 
+            :class="\{'rotate-180': open, 'rotate-0': !open\}"
+            class={props.class}
+            width="20px" height="14px" viewBox="0 0 20 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                <g transform="translate(-415.000000, -1071.000000)" id="Group-6" stroke="currentColor" stroke-width="2">
+                    <g transform="translate(100.000000, 860.000000)">
+                        <g id="button/icon" transform="translate(30.000000, 193.000000)">
+                            <g id="icon-arrow-right" transform="translate(285.000000, 18.000000)">
+                                <g id="Group" transform="translate(5.000000, 4.888889)">
+                                    <polyline id="Path" points="10 0 5 5 0 0"></polyline>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

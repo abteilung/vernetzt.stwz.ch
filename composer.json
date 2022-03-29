@@ -35,10 +35,10 @@
         
         "abte/site": "@dev",
         "abteilung/gridsystem": "@dev",
-        "roen/navigation": "@dev",
+        "stwz/navigation": "@dev",
 
-        "roen/flickity": "@dev",
-        "roen/privacy": "@dev"
+        "stwz/flickity": "@dev",
+        "stwz/privacy": "@dev"
     },
     "require-dev": {
         "neos/buildessentials": "~7.3.0",

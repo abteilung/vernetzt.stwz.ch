@@ -1,0 +1,7 @@
+Stwz:
+  Flickity:
+    alwaysInclude: false
+    selector:
+      onDocument: '[instanceof Stwz.Flickity:Include]'
+      collection: '[instanceof Neos.Neos:ContentCollection]'
+      content: '[instanceof Stwz.Flickity:Include],[instanceof Stwz.Flickity:LightboxMixin][lightbox=true],[instanceof Carbon.Image:Lightbox][lightbox=true]'

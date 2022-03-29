@@ -1,9 +1,0 @@
-Neos:
-  Neos:
-    fusion:
-      autoInclude:
-        Roen.Navigation: true
-    userInterface:
-      translation:
-        autoInclude:
-          Roen.Navigation: ['NodeTypes/*']

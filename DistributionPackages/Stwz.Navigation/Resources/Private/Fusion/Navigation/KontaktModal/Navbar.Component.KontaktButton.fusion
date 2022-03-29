@@ -1,0 +1,11 @@
+prototype(Stwz.Navigation:Component.Navbar.KontaktButton) < prototype(Neos.Neos:ContentComponent) {
+  
+    modalButtonLabel = Neos.Neos:Editable {
+        property = 'modalButtonLabel'
+        node = ${ site }
+    }
+
+	renderer = afx`
+      
+    `
+}

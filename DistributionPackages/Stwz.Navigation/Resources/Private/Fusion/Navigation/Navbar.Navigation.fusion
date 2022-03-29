@@ -1,0 +1,22 @@
+prototype(Stwz.Navigation:Component.Navbar.Navigation) < prototype(Neos.Fusion:Component) {
+    
+    menuItems = Neos.Neos:MenuItems {
+        itemCollection = ${ q(site).children('[instanceof Abte.Site:Document.World]').get() }
+        maximumLevels = 2
+        // filter = ${ 'Neos.Neos:Shortcut,Neos.Neos:Document,Abte.Site:Document.Categories' }
+    }
+
+    renderer = afx`
+      <nav 
+        class="items-center hidden mr-8 space-x-6 2xl:space-x-10 lg:flex md:text-xl 2xl:text-xl"
+      >
+
+        <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+          <Stwz.Navigation:Navbar.LinkItem />
+          <Stwz.Navigation:Navbar.LinkItemWithSub />
+          <Stwz.Navigation:Navbar.MegaMenuItem />
+        </Neos.Fusion:Loop>
+
+      </nav>
+    `
+}

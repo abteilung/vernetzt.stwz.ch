@@ -1,4 +1,4 @@
-prototype(Roen.Navigation:Component.ProductFilter.Item) < prototype(Neos.Fusion:Component) {
+prototype(Stwz.Navigation:Component.ProductFilter.Item) < prototype(Neos.Fusion:Component) {
 
     filterProperty =''
     filterTitle = ''
@@ -25,7 +25,7 @@ prototype(Roen.Navigation:Component.ProductFilter.Item) < prototype(Neos.Fusion:
             @process.removeEmtpy = ${ Array.filter(value, (x, index) => x != '') }
         }
         iterationName = 'i'
-        itemRenderer = Roen.Navigation:Component.ProductFilter.LI {
+        itemRenderer = Stwz.Navigation:Component.ProductFilter.LI {
             node=${ item }
             item=${ item }
         }
@@ -118,7 +118,7 @@ prototype(Roen.Navigation:Component.ProductFilter.Item) < prototype(Neos.Fusion:
 }
 
 
-prototype(Roen.Navigation:Component.ProductFilter.LI) < prototype(Neos.Fusion:Component) {
+prototype(Stwz.Navigation:Component.ProductFilter.LI) < prototype(Neos.Fusion:Component) {
 
     node = ${ node }
 

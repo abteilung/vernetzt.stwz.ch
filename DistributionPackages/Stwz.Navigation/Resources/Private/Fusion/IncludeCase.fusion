@@ -1,0 +1,20 @@
+
+// prototype(Stwz.Navigation:YouTube.IncludeCase) <  prototype(Neos.Fusion:Value) {
+//     configuration = ${Configuration.setting('Stwz.Video')}
+//     @context.configuration = ${this.configuration}
+
+//     value = Carbon.Condition:Case {
+//         context.live = ${configuration.include.always}
+      
+//         content {
+//             collection = ${configuration.selector.collection}
+//             filter = ${configuration.selector.content}
+//         }
+
+//         document {
+//             nodeType = ${configuration.selector.nodetype}
+//         }
+
+//         // document.filter = ${configuration.selector.onDocument}
+//     }
+// }

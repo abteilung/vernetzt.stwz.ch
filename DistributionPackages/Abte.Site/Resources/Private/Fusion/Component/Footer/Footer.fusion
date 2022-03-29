@@ -13,22 +13,22 @@ prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
         collection = ${ q(site).children('footer').children() }
     }
     
-    metaItems = Roen.Navigation:Component.Nav.Meta {
+    metaItems = Stwz.Navigation:Component.Nav.Meta {
         menuItems {
             itemCollection >
             startingPoint = ${ q(site).children('[uriPathSegment="meta"]').get(0) }
         }
     }
 
-    etikettenShopNav = Roen.Navigation:Component.Nav.Footer {
+    etikettenShopNav = Stwz.Navigation:Component.Nav.Footer {
         itemCollection = ${ q(site).children('[uriPathSegment="etiketten-shop"]').children('[instanceof Abte.Site:Document.Page]').get() }
     }
 
-    serviceNav = Roen.Navigation:Component.Nav.Footer {
+    serviceNav = Stwz.Navigation:Component.Nav.Footer {
         itemCollection = ${ q(site).children('[uriPathSegment="druckservice"]').children('[instanceof Abte.Site:Document.Page]').get() }
     }
 
-    aboutUsNav = Roen.Navigation:Component.Nav.Footer {
+    aboutUsNav = Stwz.Navigation:Component.Nav.Footer {
         itemCollection = ${ q(site).children('[uriPathSegment="ueber-uns"]').children('[instanceof Abte.Site:Document.Page]').get() }
     }
 
@@ -74,7 +74,7 @@ prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
                             </h3>
                         </Carbon.Link:Link>
                     </div>
-                    <Roen.Navigation:Component.Navbar.Language caretColor="text-white" />
+                    <Stwz.Navigation:Component.Navbar.Language caretColor="text-white" />
                 </div>
                 <div class="container border-t-2 border-primary-focus"></div>
             </div>

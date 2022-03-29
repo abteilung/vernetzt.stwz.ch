@@ -1,8 +1,0 @@
-prototype(Roen.Navigation:Component.DefaultLayout) < prototype(Neos.Fusion:Component) {
-    content = ''
-
-    renderer = afx`
-        {props.content}
-    `
-}
-

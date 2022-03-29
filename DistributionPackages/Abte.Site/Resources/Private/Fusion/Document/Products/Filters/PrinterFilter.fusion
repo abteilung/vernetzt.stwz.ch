@@ -10,7 +10,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
     renderer =  afx`
         <!--
         <div class="">
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 items={ q(documentNode).children('[uriPathSegment="kategorien"]').children('[instanceof Abte.Site:Document.Category]').get() }
                 filterProperty="title"
             />
@@ -28,7 +28,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
         </div>
                 -->
         <div class="">
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="printerType" 
                 filterTitle={ I18n.translate('Abte.Site:Main:printerType') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -36,7 +36,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="printerHead" 
                 filterTitle={ I18n.translate('Abte.Site:Main:printerHead') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -44,7 +44,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="inkQuality" 
                 filterTitle={ I18n.translate('Abte.Site:Main:inkQuality') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -52,7 +52,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productMinOutlet" 
                 filterTitle={ I18n.translate('Abte.Site:Main:passthroughMin') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -60,7 +60,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productMaxOutlet" 
                 filterTitle={ I18n.translate('Abte.Site:Main:passthroughMax') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -68,7 +68,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="printerResolution" 
                 filterTitle={ I18n.translate('Abte.Site:Main:printerResolution') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -76,7 +76,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="printerSpeed" 
                 filterTitle={ I18n.translate('Abte.Site:Main:printingSpeed') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -84,7 +84,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productInterfaces" 
                 filterTitle={ I18n.translate('Abte.Site:Main:Interface') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -92,7 +92,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="printerMedia" 
                 filterTitle={ I18n.translate('Abte.Site:Main:Media') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -100,7 +100,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productCompatability" 
                 filterTitle={ I18n.translate('Abte.Site:Main:Compatibility') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -108,7 +108,7 @@ prototype(Selfix.PrinterFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 @if.hasFilter={q(item).property('productOptions') }
                 filterProperty="productOptions" 
                 filterTitle={ I18n.translate('Abte.Site:Main:Options') }

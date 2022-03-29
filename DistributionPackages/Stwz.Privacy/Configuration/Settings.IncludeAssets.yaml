@@ -1,0 +1,8 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Stwz.Privacy':
+        Package: 'Stwz.Privacy'
+        General:
+          Head: Privacy.css

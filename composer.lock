@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2817c6e48076844bc855b5187c473f85",
+    "content-hash": "fd463450e2b1493d730a9083111a158c",
     "packages": [
         {
             "name": "abte/site",
@@ -311,21 +311,21 @@
         },
         {
             "name": "carbon/link",
-            "version": "1.8.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPackages/Carbon.Link.git",
-                "reference": "09f90ef6937defdf82ade1656ff6137ceb4ebdb1"
+                "reference": "120519d57d834070f62968b47f1ec4dbb5598e22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPackages/Carbon.Link/zipball/09f90ef6937defdf82ade1656ff6137ceb4ebdb1",
-                "reference": "09f90ef6937defdf82ade1656ff6137ceb4ebdb1",
+                "url": "https://api.github.com/repos/CarbonPackages/Carbon.Link/zipball/120519d57d834070f62968b47f1ec4dbb5598e22",
+                "reference": "120519d57d834070f62968b47f1ec4dbb5598e22",
                 "shasum": ""
             },
             "require": {
                 "carbon/eel": "^1.2 || ^2.0",
-                "neos/neos": "^5.3 || ^7.0"
+                "neos/neos": "^5.3 || ^7.0 || ^8.0"
             },
             "type": "neos-carbon",
             "extra": {
@@ -362,7 +362,7 @@
             ],
             "support": {
                 "issues": "https://github.com/CarbonPackages/Carbon.Link/issues",
-                "source": "https://github.com/CarbonPackages/Carbon.Link/tree/1.8.0"
+                "source": "https://github.com/CarbonPackages/Carbon.Link/tree/1.9.0"
             },
             "funding": [
                 {
@@ -374,7 +374,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-18T11:30:02+00:00"
+            "time": "2022-03-29T07:10:27+00:00"
         },
         {
             "name": "carbon/notification",
@@ -7239,87 +7239,6 @@
             "time": "2022-02-11T10:27:51+00:00"
         },
         {
-            "name": "roen/flickity",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "./DistributionPackages/Roen.Flickity",
-                "reference": "e9ee8acf60a1d6f78dba355ebd9e61b9fb049840"
-            },
-            "require": {
-                "neos/flow": "*"
-            },
-            "type": "neos-package",
-            "extra": {
-                "neos": {
-                    "package-key": "Roen.Flickity"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Roen\\Flickity\\": "Classes/"
-                }
-            },
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "roen/navigation",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "./DistributionPackages/Roen.Navigation",
-                "reference": "efecbfa7d56a5bfb1cedf66d05cb48cee49e7a77"
-            },
-            "require": {
-                "carbon/includeassets": "^5.3",
-                "carbon/link": "^1.7",
-                "neos/flow": "*"
-            },
-            "type": "neos-package",
-            "extra": {
-                "neos": {
-                    "package-key": "Roen.Navigation"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Roen\\Navigation\\": "Classes/"
-                }
-            },
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "roen/privacy",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "./DistributionPackages/Roen.Privacy",
-                "reference": "025c874e6518d2ec7c7cf93f3bfc4eb4bab58d9b"
-            },
-            "require": {
-                "kaufmanndigital/gdpr-cookieconsent": "^4.0",
-                "neos/flow": "*"
-            },
-            "type": "neos-package",
-            "extra": {
-                "neos": {
-                    "package-key": "Roen.Privacy"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Roen\\Privacy\\": "Classes/"
-                }
-            },
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
             "name": "seld/jsonlint",
             "version": "1.8.3",
             "source": {
@@ -7557,6 +7476,87 @@
                 "source": "https://github.com/sitegeist/Sitegeist.Slipstream/tree/v2.1.2"
             },
             "time": "2022-03-15T09:43:00+00:00"
+        },
+        {
+            "name": "stwz/flickity",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Stwz.Flickity",
+                "reference": "37d7189af1b10cf3cdfe8d7ebc896bac689f7a67"
+            },
+            "require": {
+                "neos/flow": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Stwz.Flickity"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stwz\\Flickity\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "stwz/navigation",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Stwz.Navigation",
+                "reference": "9944e0de51bec604febf0984f3ffcff8193ecdfa"
+            },
+            "require": {
+                "carbon/includeassets": "^5.3",
+                "carbon/link": "^1.7",
+                "neos/flow": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Stwz.Navigation"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stwz\\Navigation\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "stwz/privacy",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Stwz.Privacy",
+                "reference": "45c7cc5f17e8081af918e08513324285337c1a2a"
+            },
+            "require": {
+                "kaufmanndigital/gdpr-cookieconsent": "^4.0",
+                "neos/flow": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Stwz.Privacy"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stwz\\Privacy\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "symfony/cache",
@@ -11584,9 +11584,9 @@
     "stability-flags": {
         "abte/site": 20,
         "abteilung/gridsystem": 20,
-        "roen/navigation": 20,
-        "roen/flickity": 20,
-        "roen/privacy": 20
+        "stwz/navigation": 20,
+        "stwz/flickity": 20,
+        "stwz/privacy": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

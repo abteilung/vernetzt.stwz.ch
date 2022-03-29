@@ -1,0 +1,109 @@
+prototype(Stwz.Navigation:Component.Navbar.Mobile) < prototype(Neos.Fusion:Component) {
+  
+  menuItems = Neos.Neos:MenuItems {
+      itemCollection = ${ q(site).children('[instanceof Neos.Neos:Document]').get() }
+      filter = '!Stwz.Navigation:Document.MegaMenu, !Neos.Neos:ContentCollection'
+  }
+
+  metaItems = Stwz.Navigation:Component.Nav.Meta {
+    class = 'block'
+    linkClass = "whitespace-nowrap underline"
+
+    menuItems {
+        itemCollection >
+        startingPoint = ${ q(site).children('[uriPathSegment="meta"]').get(0) }
+    }
+  }
+
+  linkItemClass 		= ${ 'block text-lg md:text-xl font-bold whitespace-nowrap tracking-normal' + ' ' + (item.state == 'active' ? ' ' : item.state == 'current' ? ' py-1 border-b-2 border-b-white' : '') }
+  lastLinkItemClass 	= ${ 'block text-lg md:text-xl font-bold whitespace-nowrap tracking-normal' + ' ' + (item.state == 'active' ? ' ' : item.state == 'current' ? ' py-1 border-b-2 border-b-white' : '') }
+  nodeType 			= ${ item.node.nodetype.name }
+  linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
+
+  renderer = afx`
+    <nav 
+      x-show="showMenu"
+      x-transition:enter="transition duration-200" 
+      x-transition:enter-start="opacity-0 transform" 
+      x-transition:leave="transition duration-200" 
+      x-transition:leave-end="opacity-0 transform"
+      class="absolute left-0 z-40 w-full bg-white divide-y divide-gray-100 shadow-lg top-40 md:top-48 text-primary focus:outline-none"
+    >
+
+      <!-- With Subs -->
+      <div 
+        class="w-full space-y-3 overflow-y-auto gridPadding"
+      >
+        <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+
+          <div x-data="{ isOpen: false }">
+
+            <div>
+
+              <Neos.Neos:NodeLink 
+                  @if.isNoShortcutWithSubsites={ q(item.node).is('[instanceof !Neos.Neos:Shortcut]') }
+                  node={doNotLinkNode ? '#' : item.node} 
+                  attributes.class={props.linkItemClass}
+                  attributes.target={props.linkTarget}
+              >
+                  { q(item.node).property('title') }
+              </Neos.Neos:NodeLink>
+              <div class="flex items-center justify-between"
+                "@click"="isOpen = !isOpen"
+                @if.isShortcutWithSubsites={ q(item.node).is('[instanceof Neos.Neos:Shortcut]') }
+              >
+                <a 
+                    href="javascript:void();"
+                    class={ props.linkItemClass }
+                >
+                    { q(item.node).property('title') }
+                </a>
+                  
+                <Neos.Fusion:Augmenter :class="isOpen ? 'transform duration-200 rotate-45' : 'transform duration-200 rotate-0'">
+                  <Abte.Site:Icon.Plus 
+                    class="scale-75 text-accent" 
+                  />
+                </Neos.Fusion:Augmenter>
+              </div>
+
+            </div>
+
+            <ul 
+              x-show="isOpen" 
+              class="flex flex-col mt-3 mb-6"
+              x-transition:enter="transition duration-200" 
+              x-transition:enter-start="opacity-0 transform" 
+              x-transition:leave="transition duration-200" 
+              x-transition:leave-end="opacity-0 transform"
+            >
+
+              <Neos.Fusion:Loop items={item.subItems} iterationName="i">
+                <li class={i.isLast ? 'border-b-2 border-base-100 py-1' : 'border-b-2 border-base-100 py-1'}>
+                  <Neos.Neos:NodeLink node={item.node} attributes.class="">
+                      <div class="flex items-center justify-between space-x-4 group">
+                          <div class="">{item.label}</div>
+                          <Abte.Site:Icon.ArrowRight class="relative left-0 duration-150 scale-75 text-accent group-hover:left-2" />
+                      </div>
+                  </Neos.Neos:NodeLink>
+                </li>
+              </Neos.Fusion:Loop>
+
+            </ul>
+          </div>
+        </Neos.Fusion:Loop>
+
+      </div>
+
+<!--
+      <div class="w-full px-8 py-5 space-y-3 overflow-y-auto">
+        xxx
+      </div>
+-->
+
+      <div class="text-sm gridPadding">
+        {props.metaItems}
+      </div>
+
+    </nav>
+  `
+}

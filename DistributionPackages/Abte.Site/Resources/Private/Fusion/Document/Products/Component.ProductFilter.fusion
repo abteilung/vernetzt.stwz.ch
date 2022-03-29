@@ -1,4 +1,4 @@
-prototype(Roen.Navigation:Component.ProductFilter) < prototype(Neos.Fusion:Component) {
+prototype(Stwz.Navigation:Component.ProductFilter) < prototype(Neos.Fusion:Component) {
 
     filter = Neos.Fusion:Case {
         printer {
@@ -78,7 +78,7 @@ prototype(Roen.Navigation:Component.ProductFilter) < prototype(Neos.Fusion:Compo
             </div>
 
 
-            <Roen.Navigation:Component.ProductSearch />
+            <Stwz.Navigation:Component.ProductSearch />
         </div>
     `
 }

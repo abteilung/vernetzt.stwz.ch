@@ -1,0 +1,22 @@
+'Stwz.Flickity:Content.Slide':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'Jonnitto.PrettyEmbedVideoPlatforms:Mixin.VideoID': TRUE
+    'Jonnitto.PrettyEmbedHelper:Mixin.Groups': true
+    'Stwz.Flickity:Constraint.Content.Restricted': true
+  label: "${q(node).property('slide_text') || 'Slide-Item'}"
+  ui:
+    label: Slider Item
+    icon: 'angle-double-right'
+    group: ''
+    position: 55
+    inspector:
+      groups:
+        content:
+          label: content
+          position: 100
+  properties:
+    'slide_text':
+      options:
+        preset: 'text.free'

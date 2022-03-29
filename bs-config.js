@@ -33,7 +33,7 @@ module.exports = {
     },
     "server": false,
     // "proxy": "127.0.0.1:8081",
-    "proxy": "http://schweizer-roentgen.ch-2.0.0.ddev.site/",
+    "proxy": "http://vernetzt.stwz.ch.ddev.site/",
     "port": 3000,
     "middleware": false,
     "serveStatic": [],

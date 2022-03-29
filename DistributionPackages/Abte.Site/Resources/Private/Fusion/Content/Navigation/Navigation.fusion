@@ -27,7 +27,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
 
         renderHiddenInIndex = ${ false }
 
-        filter = '!Roen.Navigation:Document.MegaMenu, !Neos.Neos:ContentCollection'
+        filter = '!Stwz.Navigation:Document.MegaMenu, !Neos.Neos:ContentCollection'
     }
 
     hasMenuItems = ${!!menuItemsArray}

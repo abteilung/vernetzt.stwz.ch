@@ -31,7 +31,7 @@ prototype(Abte.Site:Document.Markets) < prototype(Abte.Site:Document.AbstractPag
                 <div class="container grid grid-cols-12 gridgap">
                     <main class="col-span-12 space-y-8 lg:col-span-8">
                         <div class="mb-20 xl:mb-24">
-                            <Roen.Navigation:Component.Nav.Breadcrumb />
+                            <Stwz.Navigation:Component.Nav.Breadcrumb />
                             <h2 class="h1">{props.pageTitle}</h2>
                             <Neos.Fusion:Augmenter class="lead">
                                 {props.teaser_short}

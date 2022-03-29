@@ -1,0 +1,18 @@
+prototype(Stwz.Flickity:Content.Flickity) < prototype(Neos.Neos:ContentComponent) {
+ 
+    slides = Neos.Fusion:Collection {
+        collection = ${ q(node).children('[instanceof Stwz.Flickity:Content.Slide]') }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Stwz.Flickity:Content.Slide
+    }
+
+  	renderer = afx`
+        <div class="carousel">
+            {props.slides}
+        </div>
+
+    `
+}
+
+// https://codepen.io/TheTomS/pen/poJjpNp

@@ -10,7 +10,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
     renderer =  afx`
 
         <div class="">
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 items={ q(documentNode).children('[uriPathSegment="kategorien"]').children('[instanceof Abte.Site:Document.Category]').get() }
                 filterTitle={ I18n.translate('Abte.Site:Main:category') }
                 filterProperty="title"
@@ -18,7 +18,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
         </div>
 
         <div class="">
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productWidth" 
                 filterTitle={ I18n.translate('Abte.Site:Main:width') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -26,7 +26,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productHeight" 
                 filterTitle={ I18n.translate('Abte.Site:Main:height') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -34,7 +34,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productForm" 
                 filterTitle={ I18n.translate('Abte.Site:Main:form') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -42,7 +42,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productMaterial" 
                 filterTitle={ I18n.translate('Abte.Site:Main:material') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -50,7 +50,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productColor" 
                 filterTitle={ I18n.translate('Abte.Site:Main:color') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -58,7 +58,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productGummierung" 
                 filterTitle={ I18n.translate('Abte.Site:Main:gumming') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -66,7 +66,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="productAusfuehrung" 
                 filterTitle={ I18n.translate('Abte.Site:Main:execution') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }
@@ -74,7 +74,7 @@ prototype(Selfix.LabelFilter) < prototype(Neos.Fusion:Component) {
             />
         </div>
         <div>
-            <Roen.Navigation:Component.ProductFilter.Item 
+            <Stwz.Navigation:Component.ProductFilter.Item 
                 filterProperty="printerType" 
                 filterTitle={ I18n.translate('Abte.Site:Main:printerType') }
                 noMatch={ I18n.translate('Abte.Site:Main:noMatchingFilter') }

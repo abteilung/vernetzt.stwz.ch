@@ -1,0 +1,28 @@
+##
+# Adding this as superType will prevent inserting it into default content collections
+#
+# [Youtube Tutorial explaining constraints](https://www.youtube.com/watch?v=ZCRYsYvxXFI&t=247s)
+#
+# Example:
+# Let's say you have a have a list of list items. List items should only be
+# created inside of lists, so use this:
+#
+# 'Stwz.Flickity:Content.List':
+#   superTypes:
+#     'Neos.Neos:Content': true
+#     'Neos.Neos:ContentCollection': true
+#   constraints:
+#     nodeTypes:
+#       '*': false
+#       'Stwz.Flickity:Content.List.Item': true
+#
+# 'Stwz.Flickity:Content.List.Item':
+#   superTypes:
+#     'Neos.Neos:Content': true
+#     'Stwz.Flickity:Constraint.Content.Restricted': true
+#   properties:
+#     ...
+#
+##
+'Stwz.Flickity:Constraint.Content.Restricted':
+  abstract: true

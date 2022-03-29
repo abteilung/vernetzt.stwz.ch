@@ -1,0 +1,18 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Stwz.Flickity':
+        Package: 'Stwz.Flickity'
+        ConditionPrototype: 'Stwz.Flickity:IncludeCase'
+        General:
+          Body: 
+            - Flickity.js[defer]
+            - Flickity.css[async]
+        
+        # Backend:
+        #   Head:
+        #     - Backend.css
+        #     - Backend.js[defer]
+        # Live:
+        #   Body: Main.js[defer]

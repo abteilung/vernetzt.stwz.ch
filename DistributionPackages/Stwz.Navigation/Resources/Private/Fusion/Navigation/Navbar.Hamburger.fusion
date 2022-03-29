@@ -1,0 +1,33 @@
+prototype(Stwz.Navigation:Component.Navbar.Hamburger) < prototype(Neos.Fusion:Component) {
+      
+    renderer = afx`
+      <button 
+        type="button" 
+        "@click.prevent"="showMenu = !showMenu "
+        "@keydown.escape"="showMenu = false"
+        class="flex items-center space-x-3 text-lg text-primary focus:outline-none lg:hidden" 
+        aria-expanded="false"
+      >
+        <div class="relative flex items-center justify-center w-6 md:w-10 text-alert">
+          <span 
+            x-bind:class="showMenu ? 'translate-y-0 rotate-45' : '-translate-y-2 md:-translate-y-3'"
+            class="absolute w-full h-[2px] transition transform bg-current">
+          </span>
+          
+          <span 
+            x-bind:class="showMenu ? 'opacity-0 translate-x-3' : 'opacity-100'"
+            class="absolute w-full h-[2px] transition transform bg-current">
+          </span>
+          
+          <span 
+            x-bind:class="showMenu ? 'translate-y-0 -rotate-45' : 'translate-y-2 md:translate-y-3'"
+            class="absolute w-full h-[2px] transition transform bg-current">
+          </span>
+        </div>
+ 
+        <span class="sr-only">Open menu</span>
+        <!-- <div class="hidden mr-6 text-xl font-bold tracking-normal md:block">Navigation</div> -->
+
+     </button>
+    `
+}

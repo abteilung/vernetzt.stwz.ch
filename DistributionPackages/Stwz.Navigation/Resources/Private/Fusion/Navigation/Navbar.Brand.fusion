@@ -1,0 +1,18 @@
+prototype(Stwz.Navigation:Component.Navbar.Brand) < prototype(Neos.Fusion:Component) {
+    
+    siteNode = ${site}
+
+    renderer = afx`
+        <div>
+            <span class="sr-only">Navigation</span>
+            <Neos.Neos:NodeLink 
+                node={props.siteNode} 
+                attributes.data-aos="fade-in"
+                attributes.data-aos-delay="500"
+            >
+                <Abte.Site:Component.Logo class="w-[100px] lg:w-[130px] 2xl:w-[140px] md:w-auto h-auto" />
+            </Neos.Neos:NodeLink>
+        </div>
+
+    `
+}
