@@ -34,6 +34,18 @@ packages:
     files:
       - Flickity.js
       - Flickity.pcss
+  - package: Stwz.AddressLookup
+    files:
+      - AddressLookup.js
+      - AddressLookup.pcss
+  - package: Stwz.Shop
+    files:
+      - Shop.js
+      - Shop.pcss
+  - package: Stwz.MovingLines
+    files:
+      - MovingLines.js
+      - MovingLines.pcss
   # - package: Stwz.Forms
   #   files:
   #     - Forms.js

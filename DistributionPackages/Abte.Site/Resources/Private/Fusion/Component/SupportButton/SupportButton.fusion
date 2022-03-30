@@ -21,8 +21,24 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
     class = ''
     
     renderer = afx`
-        <div class="fixed right-0 top-96 w-16 h-16 bg-white">
+
+    <div
+            x-data="\{ 'open' : false \}"
+    >
+
+        <div 
+            "@click.prevent"="open = !open" 
+            class="cursor-pointer text-base-300 hover:text-primary z-50 fixed top-56 right-0"
+        >
+            showxxx
+        </div>
+
+        <div class="fixed z-50 right-0 top-96 bg-white"
+            class="flex justify-between w-full navArea"
+            :class="open ? 'w-32 h-32 text-primary' : 'w-16 h-16 text-secondary'"
+        >
             Support
+        </div>
         </div>
     `
 

@@ -40,12 +40,12 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 	}
 
     renderer = afx`
-		<Abte.Site:Component.SupportButton />
 		<Abte.Site:TrackingScript.Ackee/>
         <header>
-            <Stwz.Navigation:Component.Navbar />
+			<Stwz.Navigation:Component.Navbar />
             {props.pageHeader}
         </header>
+		<Abte.Site:Component.SupportButton />
         {props.content}
         <Abte.Site:Component.Footer />
 

@@ -69,30 +69,30 @@
         },
         {
             "name": "behat/transliterator",
-            "version": "v1.3.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Transliterator.git",
-                "reference": "3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc"
+                "reference": "baac5873bac3749887d28ab68e2f74db3a4408af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc",
-                "reference": "3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc",
+                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/baac5873bac3749887d28ab68e2f74db3a4408af",
+                "reference": "baac5873bac3749887d28ab68e2f74db3a4408af",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.2"
             },
             "require-dev": {
                 "chuyskywalker/rolling-curl": "^3.1",
                 "php-yaoi/php-yaoi": "^1.0",
-                "phpunit/phpunit": "^4.8.36|^6.3"
+                "phpunit/phpunit": "^8.5.25 || ^9.5.19"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.x-dev"
                 }
             },
             "autoload": {
@@ -112,9 +112,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Behat/Transliterator/issues",
-                "source": "https://github.com/Behat/Transliterator/tree/v1.3.0"
+                "source": "https://github.com/Behat/Transliterator/tree/v1.5.0"
             },
-            "time": "2020-01-14T16:39:13+00:00"
+            "time": "2022-03-30T09:27:43+00:00"
         },
         {
             "name": "brick/math",
@@ -378,24 +378,23 @@
         },
         {
             "name": "carbon/notification",
-            "version": "2.2.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPackages/Carbon.Notification.git",
-                "reference": "355cf02e9722949897f9ac283f7b39b09551fcbe"
+                "reference": "3e2f4b4695eb0c4172bac412ff3018d8406ae2a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPackages/Carbon.Notification/zipball/355cf02e9722949897f9ac283f7b39b09551fcbe",
-                "reference": "355cf02e9722949897f9ac283f7b39b09551fcbe",
+                "url": "https://api.github.com/repos/CarbonPackages/Carbon.Notification/zipball/3e2f4b4695eb0c4172bac412ff3018d8406ae2a1",
+                "reference": "3e2f4b4695eb0c4172bac412ff3018d8406ae2a1",
                 "shasum": ""
             },
             "require": {
-                "neos/fusion": "^4.2 || ^5.0 || ^7.0"
+                "neos/fusion": "^4.2 || ^5.0 || ^7.0 || ^8.0"
             },
             "type": "neos-carbon",
             "extra": {
-                "marketplace-account": "me@jonnitto.ch",
                 "installer-name": "Carbon.Notification",
                 "neos": {
                     "package-key": "Carbon.Notification"
@@ -413,8 +412,8 @@
             "authors": [
                 {
                     "name": "Jon Uhlmann",
-                    "email": "me@jonnitto.ch",
-                    "homepage": "https://jonnitto.ch",
+                    "email": "hello@uhlmann.pro",
+                    "homepage": "https://www.uhlmann.pro",
                     "role": "Developer"
                 }
             ],
@@ -428,7 +427,7 @@
             ],
             "support": {
                 "issues": "https://github.com/CarbonPackages/Carbon.Notification/issues",
-                "source": "https://github.com/CarbonPackages/Carbon.Notification/tree/2.2.0"
+                "source": "https://github.com/CarbonPackages/Carbon.Notification/tree/2.3.1"
             },
             "funding": [
                 {
@@ -440,7 +439,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-02-17T22:44:36+00:00"
+            "time": "2022-03-30T18:08:14+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -520,39 +519,45 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.2.9",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "07eccf080ad63d55d95a7c9133506db7d9029264"
+                "reference": "c3777ea50f5ad561d4796b42fba4d180bb45cf77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/07eccf080ad63d55d95a7c9133506db7d9029264",
-                "reference": "07eccf080ad63d55d95a7c9133506db7d9029264",
+                "url": "https://api.github.com/repos/composer/composer/zipball/c3777ea50f5ad561d4796b42fba4d180bb45cf77",
+                "reference": "c3777ea50f5ad561d4796b42fba4d180bb45cf77",
                 "shasum": ""
             },
             "require": {
                 "composer/ca-bundle": "^1.0",
                 "composer/metadata-minifier": "^1.0",
-                "composer/pcre": "^1.0",
+                "composer/pcre": "^2 || ^3",
                 "composer/semver": "^3.0",
                 "composer/spdx-licenses": "^1.2",
-                "composer/xdebug-handler": "^2.0 || ^3.0",
+                "composer/xdebug-handler": "^2.0.2 || ^3.0.3",
                 "justinrainbow/json-schema": "^5.2.11",
-                "php": "^5.3.2 || ^7.0 || ^8.0",
-                "psr/log": "^1.0 || ^2.0",
-                "react/promise": "^1.2 || ^2.7",
+                "php": "^7.2.5 || ^8.0",
+                "psr/log": "^1.0 || ^2.0 || ^3.0",
+                "react/promise": "^2.8",
                 "seld/jsonlint": "^1.4",
-                "seld/phar-utils": "^1.0",
-                "symfony/console": "^2.8.52 || ^3.4.35 || ^4.4 || ^5.0",
-                "symfony/filesystem": "^2.8.52 || ^3.4.35 || ^4.4 || ^5.0 || ^6.0",
-                "symfony/finder": "^2.8.52 || ^3.4.35 || ^4.4 || ^5.0 || ^6.0",
-                "symfony/process": "^2.8.52 || ^3.4.35 || ^4.4 || ^5.0 || ^6.0"
+                "seld/phar-utils": "^1.2",
+                "symfony/console": "^5.4.1 || ^6.0",
+                "symfony/filesystem": "^5.4 || ^6.0",
+                "symfony/finder": "^5.4 || ^6.0",
+                "symfony/polyfill-php73": "^1.24",
+                "symfony/polyfill-php80": "^1.24",
+                "symfony/process": "^5.4 || ^6.0"
             },
             "require-dev": {
-                "phpspec/prophecy": "^1.10",
-                "symfony/phpunit-bridge": "^4.2 || ^5.0 || ^6.0"
+                "phpstan/phpstan": "^1.4.1",
+                "phpstan/phpstan-deprecation-rules": "^1",
+                "phpstan/phpstan-phpunit": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1",
+                "phpstan/phpstan-symfony": "^1.1",
+                "symfony/phpunit-bridge": "^6.0"
             },
             "suggest": {
                 "ext-openssl": "Enabling the openssl extension allows you to access https URLs for repositories and packages",
@@ -565,7 +570,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.2-dev"
+                    "dev-main": "2.3-dev"
                 }
             },
             "autoload": {
@@ -599,7 +604,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.2.9"
+                "source": "https://github.com/composer/composer/tree/2.3.2"
             },
             "funding": [
                 {
@@ -615,7 +620,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-15T21:13:37+00:00"
+            "time": "2022-03-30T18:45:25+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -688,30 +693,30 @@
         },
         {
             "name": "composer/pcre",
-            "version": "1.0.1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/pcre.git",
-                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560"
+                "reference": "e300eb6c535192decd27a85bc72a9290f0d6b3bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/pcre/zipball/67a32d7d6f9f560b726ab25a061b38ff3a80c560",
-                "reference": "67a32d7d6f9f560b726ab25a061b38ff3a80c560",
+                "url": "https://api.github.com/repos/composer/pcre/zipball/e300eb6c535192decd27a85bc72a9290f0d6b3bd",
+                "reference": "e300eb6c535192decd27a85bc72a9290f0d6b3bd",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.2 || ^7.0 || ^8.0"
+                "php": "^7.4 || ^8.0"
             },
             "require-dev": {
                 "phpstan/phpstan": "^1.3",
                 "phpstan/phpstan-strict-rules": "^1.1",
-                "symfony/phpunit-bridge": "^4.2 || ^5"
+                "symfony/phpunit-bridge": "^5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.x-dev"
+                    "dev-main": "3.x-dev"
                 }
             },
             "autoload": {
@@ -739,7 +744,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/pcre/issues",
-                "source": "https://github.com/composer/pcre/tree/1.0.1"
+                "source": "https://github.com/composer/pcre/tree/3.0.0"
             },
             "funding": [
                 {
@@ -755,7 +760,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-21T20:24:37+00:00"
+            "time": "2022-02-25T20:21:48+00:00"
         },
         {
             "name": "composer/semver",
@@ -3884,22 +3889,22 @@
         },
         {
             "name": "neos/fusion-form",
-            "version": "v2.0.8",
+            "version": "v2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/fusion-form.git",
-                "reference": "af3334b89ca89102b58def4dc0cc715a053bc2e2"
+                "reference": "4c373aec80515f77f369ced07477b25c7fca50fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/fusion-form/zipball/af3334b89ca89102b58def4dc0cc715a053bc2e2",
-                "reference": "af3334b89ca89102b58def4dc0cc715a053bc2e2",
+                "url": "https://api.github.com/repos/neos/fusion-form/zipball/4c373aec80515f77f369ced07477b25c7fca50fa",
+                "reference": "4c373aec80515f77f369ced07477b25c7fca50fa",
                 "shasum": ""
             },
             "require": {
-                "neos/flow": "^6.0 || ^7.0 || dev-master",
-                "neos/fusion": "^5.0 || ^7.0 || dev-master",
-                "neos/fusion-afx": "^1.2 || ^7.0 || dev-master",
+                "neos/flow": "^6.0 || ^7.0 || ^8.0 || dev-master",
+                "neos/fusion": "^5.0 || ^7.0 || ^8.0 || dev-master",
+                "neos/fusion-afx": "^1.2 || ^7.0 || ^8.0 || dev-master",
                 "neos/utility-arrays": "*",
                 "neos/utility-objecthandling": "*",
                 "php": ">7.2",
@@ -3926,7 +3931,7 @@
             "description": "Fusion Form",
             "support": {
                 "issues": "https://github.com/neos/fusion-form/issues",
-                "source": "https://github.com/neos/fusion-form/tree/v2.0.8"
+                "source": "https://github.com/neos/fusion-form/tree/v2.0.9"
             },
             "funding": [
                 {
@@ -3934,7 +3939,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-12-10T14:14:28+00:00"
+            "time": "2022-03-29T09:33:27+00:00"
         },
         {
             "name": "neos/http-factories",
@@ -3986,21 +3991,21 @@
         },
         {
             "name": "neos/imagine",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/imagine.git",
-                "reference": "2164a2d16c89c98aafde25317c06cd8015c6162e"
+                "reference": "25c1fcd717f914e0d036b56c6f40d5853a16e549"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/imagine/zipball/2164a2d16c89c98aafde25317c06cd8015c6162e",
-                "reference": "2164a2d16c89c98aafde25317c06cd8015c6162e",
+                "url": "https://api.github.com/repos/neos/imagine/zipball/25c1fcd717f914e0d036b56c6f40d5853a16e549",
+                "reference": "25c1fcd717f914e0d036b56c6f40d5853a16e549",
                 "shasum": ""
             },
             "require": {
                 "imagine/imagine": "^1.2",
-                "neos/flow": "^4.0 || ^5.0 || ^6.0 || ^7.0 || dev-master"
+                "neos/flow": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || dev-master"
             },
             "replace": {
                 "typo3/imagine": "self.version"
@@ -4117,15 +4122,15 @@
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/neos/imagine/tree/3.2.0"
+                "source": "https://github.com/neos/imagine/tree/3.3.0"
             },
             "funding": [
                 {
-                    "url": "https://neosfunding.sandstorm.de/en",
+                    "url": "https://shop.neos.io/neosfunding/",
                     "type": "custom"
                 }
             ],
-            "time": "2020-12-07T18:09:04+00:00"
+            "time": "2022-03-29T09:41:38+00:00"
         },
         {
             "name": "neos/kickstarter",
@@ -4609,20 +4614,20 @@
         },
         {
             "name": "neos/neos-setup",
-            "version": "1.1.3",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/neos-setup.git",
-                "reference": "9a4215fd80c438e95c4bb968f83c5e1493ca79c9"
+                "reference": "151db1ffb6d7297320b2abcd2a767a6278a15a8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/neos-setup/zipball/9a4215fd80c438e95c4bb968f83c5e1493ca79c9",
-                "reference": "9a4215fd80c438e95c4bb968f83c5e1493ca79c9",
+                "url": "https://api.github.com/repos/neos/neos-setup/zipball/151db1ffb6d7297320b2abcd2a767a6278a15a8e",
+                "reference": "151db1ffb6d7297320b2abcd2a767a6278a15a8e",
                 "shasum": ""
             },
             "require": {
-                "neos/neos": "^5.0 || ^7.0 || dev-master",
+                "neos/neos": "^5.0 || ^7.0 || ^8.0 || dev-master",
                 "neos/setup": "^4.0 || ^5.0 || dev-master"
             },
             "type": "neos-package",
@@ -4725,15 +4730,15 @@
             "description": "Custom neos/setup steps and configuration for Neos CMS",
             "support": {
                 "issues": "https://github.com/neos/neos-setup/issues",
-                "source": "https://github.com/neos/neos-setup/tree/1.1.3"
+                "source": "https://github.com/neos/neos-setup/tree/1.1.5"
             },
             "funding": [
                 {
-                    "url": "https://neosfunding.sandstorm.de/en",
+                    "url": "https://shop.neos.io/neosfunding/",
                     "type": "custom"
                 }
             ],
-            "time": "2020-12-28T18:48:43+00:00"
+            "time": "2022-03-29T09:30:14+00:00"
         },
         {
             "name": "neos/neos-ui",
@@ -5715,21 +5720,21 @@
         },
         {
             "name": "neos/seo",
-            "version": "3.2.1",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/neos-seo.git",
-                "reference": "bec87cb1c1aaf3f0c07c22ab902e2aa155e9908d"
+                "reference": "6875c7fab4ad1a4b4d16c3ffdb9a990e7b71e5ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/neos-seo/zipball/bec87cb1c1aaf3f0c07c22ab902e2aa155e9908d",
-                "reference": "bec87cb1c1aaf3f0c07c22ab902e2aa155e9908d",
+                "url": "https://api.github.com/repos/neos/neos-seo/zipball/6875c7fab4ad1a4b4d16c3ffdb9a990e7b71e5ea",
+                "reference": "6875c7fab4ad1a4b4d16c3ffdb9a990e7b71e5ea",
                 "shasum": ""
             },
             "require": {
-                "neos/fusion-afx": "~1.2 || ^7.0 || dev-master",
-                "neos/neos": "^4.3 || ^5.0 || ^7.0 || dev-master"
+                "neos/fusion-afx": "~1.2 || ^7.0 || ^8.0 || dev-master",
+                "neos/neos": "^4.3 || ^5.0 || ^7.0 || ^8.0 || dev-master"
             },
             "replace": {
                 "typo3/neos-seo": "self.version"
@@ -5822,7 +5827,7 @@
             "description": "SEO configuration and tools for Neos",
             "support": {
                 "issues": "https://github.com/neos/neos-seo/issues",
-                "source": "https://github.com/neos/neos-seo/tree/3.2.1"
+                "source": "https://github.com/neos/neos-seo/tree/3.3.1"
             },
             "funding": [
                 {
@@ -5830,7 +5835,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2021-10-05T18:54:55+00:00"
+            "time": "2022-03-29T10:16:14+00:00"
         },
         {
             "name": "neos/setup",
@@ -6043,20 +6048,20 @@
         },
         {
             "name": "neos/twitter-bootstrap",
-            "version": "3.0.6",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/twitter-bootstrap.git",
-                "reference": "6defdd85a7f9beb24ed9137700c9fb64b1fb0925"
+                "reference": "124c5903793d3fb05bb6e0d94157d51d56a5061e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/twitter-bootstrap/zipball/6defdd85a7f9beb24ed9137700c9fb64b1fb0925",
-                "reference": "6defdd85a7f9beb24ed9137700c9fb64b1fb0925",
+                "url": "https://api.github.com/repos/neos/twitter-bootstrap/zipball/124c5903793d3fb05bb6e0d94157d51d56a5061e",
+                "reference": "124c5903793d3fb05bb6e0d94157d51d56a5061e",
                 "shasum": ""
             },
             "require": {
-                "neos/flow": "^4.0 || ^5.0 || ^6.0 || ^7.0 || dev-master"
+                "neos/flow": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || dev-master"
             },
             "replace": {
                 "typo3/twitter-bootstrap": "self.version"
@@ -6124,15 +6129,15 @@
             ],
             "description": "Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions. Packaged for use with Neos Flow",
             "support": {
-                "source": "https://github.com/neos/twitter-bootstrap/tree/3.0.6"
+                "source": "https://github.com/neos/twitter-bootstrap/tree/3.0.7"
             },
             "funding": [
                 {
-                    "url": "https://neosfunding.sandstorm.de/en",
+                    "url": "https://shop.neos.io/neosfunding/",
                     "type": "custom"
                 }
             ],
-            "time": "2021-02-15T08:03:08+00:00"
+            "time": "2022-03-29T09:46:47+00:00"
         },
         {
             "name": "neos/utility-arrays",
@@ -7351,23 +7356,23 @@
         },
         {
             "name": "sitegeist/kaleidoscope",
-            "version": "v6.2.0",
+            "version": "v6.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sitegeist/Sitegeist.Kaleidoscope.git",
-                "reference": "62727186ff4b7af4d27f78c02e6624704f161afc"
+                "reference": "0d046e3104edc44b3adc067e60d42170fb414e62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sitegeist/Sitegeist.Kaleidoscope/zipball/62727186ff4b7af4d27f78c02e6624704f161afc",
-                "reference": "62727186ff4b7af4d27f78c02e6624704f161afc",
+                "url": "https://api.github.com/repos/sitegeist/Sitegeist.Kaleidoscope/zipball/0d046e3104edc44b3adc067e60d42170fb414e62",
+                "reference": "0d046e3104edc44b3adc067e60d42170fb414e62",
                 "shasum": ""
             },
             "require": {
-                "neos/fusion-afx": "^1.2 || ^7.0 || dev-master",
+                "neos/fusion-afx": "^1.2 || ^7.0 || ^8.0 || dev-master",
                 "neos/imagine": "*",
                 "neos/media": "*",
-                "neos/neos": "^5.0 || ^7.0 || dev-master"
+                "neos/neos": "^5.0 || ^7.0 || ^8.0 || dev-master"
             },
             "require-dev": {
                 "phpstan/phpstan": "^0.12.78"
@@ -7390,9 +7395,9 @@
             "description": "Responsive-images for Neos",
             "support": {
                 "issues": "https://github.com/sitegeist/Sitegeist.Kaleidoscope/issues",
-                "source": "https://github.com/sitegeist/Sitegeist.Kaleidoscope/tree/v6.2.0"
+                "source": "https://github.com/sitegeist/Sitegeist.Kaleidoscope/tree/v6.2.1"
             },
-            "time": "2021-10-26T15:31:06+00:00"
+            "time": "2022-03-29T14:20:49+00:00"
         },
         {
             "name": "sitegeist/lazybones",
@@ -9940,16 +9945,16 @@
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706"
+                "reference": "77a32518733312af16a44300404e945338981de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/93ebd0014cab80c4ea9f5e297ea48672f1b87706",
-                "reference": "93ebd0014cab80c4ea9f5e297ea48672f1b87706",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/77a32518733312af16a44300404e945338981de3",
+                "reference": "77a32518733312af16a44300404e945338981de3",
                 "shasum": ""
             },
             "require": {
@@ -9984,9 +9989,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.0"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.6.1"
             },
-            "time": "2022-01-04T19:58:01+00:00"
+            "time": "2022-03-15T21:29:03+00:00"
         },
         {
             "name": "phpspec/prophecy",
