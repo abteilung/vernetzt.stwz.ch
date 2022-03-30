@@ -23,7 +23,7 @@ prototype(Stwz.Navigation:Document.AbstractPage) < prototype(Neos.Neos:Page) {
     bodyTag {
         attributes {
             data-theme="stwztgen"
-            x-data="\{ showModal : false, showMenu : false, showBasket : false \}"
+            x-data="\{ showModal : false, showMenu : false \}"
         }
     }
 

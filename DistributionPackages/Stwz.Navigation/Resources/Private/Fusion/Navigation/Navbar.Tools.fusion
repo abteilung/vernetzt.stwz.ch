@@ -12,15 +12,6 @@ prototype(Stwz.Navigation:Component.Tools) < prototype(Neos.Fusion:Component) {
                 <Abte.Site:Icon.Search class="cursor-pointer" />
             </div>
             
-            <div class="scale-100 cart-with-count md:scale-100 group"
-                "@click.prevent"="showBasket = !showBasket" 
-                class="cursor-pointer text-accent group-hover:text-primary">
-                <button class="relative">
-                    <Abte.Site:Icon.Cart />
-                    <span class="absolute -top-4 -right-4 inline-flex items-center px-3 py-0.5 rounded-full text-xs bg-gradient-to-bl from-accent to-accent-focus group-hover:to-accent group-hover:from-accent-focus text-white">3</span>
-                </button>
-            </div>
-
             <Stwz.Navigation:Component.Navbar.Language caretColor="text-white" />
 
         </div>
@@ -37,7 +28,6 @@ prototype(Stwz.Navigation:Component.Navbar.Basket.CloseButton) < prototype(Neos.
   
 	renderer = afx`
         <div class="absolute cursor-pointer top-8 right-12"
-            "@click"="showBasket = false" 
         >
             <button 
                 class="w-auto px-6 text-lg text-white pill focus:outline-none"

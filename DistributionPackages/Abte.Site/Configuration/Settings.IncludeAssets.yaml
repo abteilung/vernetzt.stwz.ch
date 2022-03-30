@@ -6,8 +6,12 @@ Carbon:
       'Abte.Site':
         Package: 'Abte.Site'
         General:
-          Head: Stwz.css
-          Body: Stwz.js[defer]
+          Head: 
+            - //unpkg.com/aos@2.3.1/dist/aos.css
+            - Stwz.css
+          Body: 
+            - //unpkg.com/aos@next/dist/aos.js
+            - Stwz.js[defer]
         Backend:
           Head:
             # - Backend.css
