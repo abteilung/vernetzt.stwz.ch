@@ -1,0 +1,24 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    GoogleFonts: "Barlow+Semi+Condensed:400,600,700|Barlow+Condensed:600&display=swap[async]"
+    Packages:
+      'Stwz.MovingLines':
+        Package: 'Stwz.MovingLines'
+        General:
+          Head: MovingLines.css
+          Body: MovingLines.js[defer]
+        Backend:
+          Head:
+            # - Backend.css
+            # - Backend.js[defer]
+        Live:
+
+      "Sitegeist.Lazybones":
+        Package: Sitegeist.Lazybones
+        Path:
+          File:
+            JS: 'Public/JavaScript'
+        General:
+          Body:
+            - lazysizes.min.js

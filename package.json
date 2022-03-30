@@ -70,6 +70,7 @@
     "daisyui": "^2.8.0",
     "flickity": "^3.0.0",
     "flickity-as-nav-for": "^3.0.0",
+    "gsap": "^3.10.0",
     "mixitup": "^3.3.1"
   }
 }

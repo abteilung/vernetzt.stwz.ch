@@ -28,6 +28,7 @@ specifiers:
   flickity-as-nav-for: ^3.0.0
   fs-extra: ^10.0.1
   glob: ^7.2.0
+  gsap: ^3.10.0
   js-yaml: ^4.1.0
   list.js: ^2.3.1
   mixitup: ^3.3.1
@@ -58,6 +59,7 @@ dependencies:
   daisyui: 2.13.4_081650f2f4dba35b17265937ab2a2ec0
   flickity: 3.0.0
   flickity-as-nav-for: 3.0.0_flickity@3.0.0
+  gsap: 3.10.0
   mixitup: 3.3.1
 
 devDependencies:
@@ -1831,6 +1833,10 @@ packages:
   /graceful-fs/4.2.9:
     resolution: {integrity: sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==}
     dev: true
+
+  /gsap/3.10.0:
+    resolution: {integrity: sha512-WTefeoEYX3eepBBfrrVHfcf8n3lomM1jGgUlbRbWltrefgyo/btu3i9Ab18OVthjxDJnTSQSQ5pK5bDq3Uv/nw==}
+    dev: false
 
   /hard-rejection/2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}

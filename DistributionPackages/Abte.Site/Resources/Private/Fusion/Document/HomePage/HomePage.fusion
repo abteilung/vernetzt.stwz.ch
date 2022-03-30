@@ -5,28 +5,11 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
 
     body.content = Neos.Fusion:Component {
         renderer = afx`
-            <main class="pullUp">
+            <main>
                 <div class="">
                     {props.main}
                 </div>
-                <div class="gridPadding">
-                    <Abte.Site:Component.NewsAndTrends title="News & Trends"/>
-                </div>
 
-                <Abte.Site:Component.UnsereMaerkte />
-                
-                <div class="serviceCarousell">
-                    <Abte.Site:Component.ProductUpdates 
-                        itemsToShow={ Array.slice( q(site).find('[instanceof Abte.Site:Document.Service]').sort('datePublished', 'DESC').get(), 0, 11 )  } 
-                        title={ I18n.translate('Abte.Site:Main:druckService') } 
-                        further={ I18n.translate('Abte.Site:Main:toTop') } 
-                        target={ q(site).find('[instanceof Abte.Site:Document.Services]').get(0) }
-                    />
-                </div>
-                <div class="container">
-                    <Abte.Site:Component.ServiceBox />
-                </div>
-                   
                 <Abte.Site:Component.ProductUpdates 
                     itemsToShow={ Array.slice( q(site).find('[instanceof Abte.Site:Document.Product]').sort('datePublished', 'DESC').get(), 0, 11 )  } 
                     renderStyle="items"
@@ -34,6 +17,12 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
                     further={ I18n.translate('Abte.Site:Main:toTop') } 
                     target={ q(site).find('[instanceof Abte.Site:Document.ProductOverview]').get(0) }
                 />
+
+                Flex:
+                <div class="scene flex">
+                    <svg class="w-72 h-40 bg-none" id="animation" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"  role="img"></svg>
+                </div>
+                :Flex
                    
             </main>
         `
