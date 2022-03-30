@@ -1,0 +1,40 @@
+
+prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) {
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    
+    menuItemsArray = ${ q(node).property('supportItems') }
+    
+    @context {
+        menuItemsArray = ${ this.menuItemsArray }
+    }
+
+	menuItems = Neos.Neos:MenuItems {
+        itemCollection = ${ q(site).property('supportItems') ? q(site).property('supportItems') : null }
+        filter = ''
+        renderHiddenInIndex = ${ false }
+    }
+
+    class = ''
+    
+    renderer = afx`
+        <div class="fixed right-0 top-96 w-16 h-16 bg-white">
+            Support
+        </div>
+    `
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.nodeTag(menuItemsArray)}
+            3 = ${Neos.Caching.descendantOfTag(menuItemsArray)}
+        }
+    }    
+}

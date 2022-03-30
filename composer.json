@@ -38,7 +38,10 @@
         "stwz/navigation": "@dev",
 
         "stwz/flickity": "@dev",
-        "stwz/privacy": "@dev"
+        "stwz/privacy": "@dev",
+        "stwz/addresslookup": "@dev",
+        "stwz/shop": "@dev",
+        "stwz/movinglines": "@dev"
     },
     "require-dev": {
         "neos/buildessentials": "~7.3.0",

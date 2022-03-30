@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "stwz/shop",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stwz\\Shop\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Stwz.Shop"
+        }
+    }
+}

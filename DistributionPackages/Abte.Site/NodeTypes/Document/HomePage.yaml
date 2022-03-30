@@ -40,15 +40,20 @@
     'footerItems':
       type: references
       ui:
-        label: i18n
+        label: Footer Links
         reloadIfChanged: true
         inspector:
           group: general
           editorOptions:
             nodeTypes:
               - 'Neos.Neos:Document'
-    'downloadPic':
-      options:
-        preset: 'image.tvAsset'
+    'supportItems':
+      type: references
       ui:
-        label: 'Download Image Placeholder'
+        label: Support Links
+        reloadIfChanged: true
+        inspector:
+          group: general
+          editorOptions:
+            nodeTypes:
+              - 'Neos.Neos:Document'

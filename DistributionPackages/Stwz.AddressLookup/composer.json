@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "stwz/addresslookup",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stwz\\AddressLookup\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Stwz.AddressLookup"
+        }
+    }
+}

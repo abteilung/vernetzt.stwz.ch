@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd463450e2b1493d730a9083111a158c",
+    "content-hash": "0b0ae9b2d867114b94398bf3b563e450",
     "packages": [
         {
             "name": "abte/site",
@@ -7478,6 +7478,32 @@
             "time": "2022-03-15T09:43:00+00:00"
         },
         {
+            "name": "stwz/addresslookup",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Stwz.AddressLookup",
+                "reference": "433f323fc394c380e2aad61a792c1f2824bbf66d"
+            },
+            "require": {
+                "neos/flow": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Stwz.AddressLookup"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stwz\\AddressLookup\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "stwz/flickity",
             "version": "dev-main",
             "dist": {
@@ -7497,6 +7523,32 @@
             "autoload": {
                 "psr-4": {
                     "Stwz\\Flickity\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "stwz/movinglines",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Stwz.MovingLines",
+                "reference": "f8407df047491f43dd738d1b5b7d557062485275"
+            },
+            "require": {
+                "neos/flow": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Stwz.MovingLines"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stwz\\MovingLines\\": "Classes/"
                 }
             },
             "transport-options": {
@@ -7552,6 +7604,32 @@
             "autoload": {
                 "psr-4": {
                     "Stwz\\Privacy\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "stwz/shop",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Stwz.Shop",
+                "reference": "cb6cc11c49677978dea8a596a3b90f794fc00fe9"
+            },
+            "require": {
+                "neos/flow": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Stwz.Shop"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stwz\\Shop\\": "Classes/"
                 }
             },
             "transport-options": {
@@ -11586,7 +11664,10 @@
         "abteilung/gridsystem": 20,
         "stwz/navigation": 20,
         "stwz/flickity": 20,
-        "stwz/privacy": 20
+        "stwz/privacy": 20,
+        "stwz/addresslookup": 20,
+        "stwz/shop": 20,
+        "stwz/movinglines": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
