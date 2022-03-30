@@ -20,8 +20,9 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
 
                 Flex:
                 <div
-                    attributes.data-aos="fade-in"
-                    attributes.data-aos-delay="1500"
+                    data-aos="fade-in"
+                    data-aos-duration="3000"
+                    data-aos-delay="0"
                 >
                     <div class="scene flex justify-center items-center">
                         <svg class="w-72 h-40 bg-none" id="animation" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"  role="img"></svg>
