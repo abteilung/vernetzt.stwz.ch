@@ -32,7 +32,8 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
             >
                 <div 
                     class="fixed transition-all flex flex-wrap duration-500 p-5 z-50 right-0 top-96 bg-white shadow-xl rounded-l-xl"
-                    :class="open ? 'w-56 h-64 delay-150' : 'w-16 h-16'"
+                    :class="open ? 'w-56 h-52 delay-150' : 'w-16 h-16'"
+                    "@click.away"="open = !open" 
                 >
                     <div 
                         "@click.prevent"="open = !open" 
@@ -48,10 +49,16 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                     >
                         <nav>
                             <ul>
-                                <li><a href="#">xxx</a></li>
-                                <li><a href="#">xxx</a></li>
-                                <li><a href="#">xxx</a></li>
-                                <li><a href="#">xxx</a></li>
+                                <Neos.Fusion:Loop items={props.menuItems}>
+                                    <li>
+                                        <Carbon.Link:Link 
+                                            node={item.node}
+                                            attributes.class="block font-normal truncate"
+                                        >
+                                            {item.label}
+                                        </Carbon.Link:Link>
+                                    </li>
+                                </Neos.Fusion:Loop>
                             </ul>
                         </nav>
                     </div>
