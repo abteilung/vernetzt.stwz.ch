@@ -1,13 +1,9 @@
 prototype(Stwz.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neos.Neos:ContentComponent) {
     
-
-
     menuItems = Neos.Neos:MenuItems {
         entryLevel = 1
         maximumLevels = 1
     }
-
-
 
     phone = ${ q(site).property('helpdeskPhone') }
 
@@ -35,6 +31,5 @@ prototype(Stwz.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neos.Ne
           </div>
         </div>  
       </div>
-
     `
 }

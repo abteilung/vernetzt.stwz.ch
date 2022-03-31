@@ -1,7 +1,7 @@
 prototype(Stwz.Navigation:Component.Navbar.Navigation) < prototype(Neos.Fusion:Component) {
     
     menuItems = Neos.Neos:MenuItems {
-        itemCollection = ${ q(site).children('[instanceof Abte.Site:Document.World]').get() }
+        itemCollection = ${ q(site).children('[instanceof Abte.Site:Document.Page]').get() }
         maximumLevels = 2
         // filter = ${ 'Neos.Neos:Shortcut,Neos.Neos:Document,Abte.Site:Document.Categories' }
     }
