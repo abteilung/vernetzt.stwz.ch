@@ -24,16 +24,16 @@ Neos:
             label: DE
             values:
               - de
-            uriSegment: 'de'
-          fr:
-            label: FR
-            values:
-              - fr
-              - de
-            uriSegment: 'fr'
-          en:
-            label: EN
-            values:
-              - en
-              - de
-            uriSegment: 'en'
+            uriSegment: ''
+          # fr:
+          #   label: FR
+          #   values:
+          #     - fr
+          #     - de
+          #   uriSegment: 'fr'
+          # en:
+          #   label: EN
+          #   values:
+          #     - en
+          #     - de
+          #   uriSegment: 'en'

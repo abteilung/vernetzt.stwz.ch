@@ -47,7 +47,7 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                         class="flex transition-all duration-300 justify-between w-full navArea"
                         :class="open ? 'h-auto opacity-100 delay-500' : 'h-none delay-150 opacity-0'"
                     >
-                        <nav>
+                        <nav class="supportButton">
                             <ul>
                                 <Neos.Fusion:Loop items={props.menuItems}>
                                     <li>
