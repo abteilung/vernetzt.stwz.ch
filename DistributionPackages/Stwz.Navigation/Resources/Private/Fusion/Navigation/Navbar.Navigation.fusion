@@ -14,7 +14,6 @@ prototype(Stwz.Navigation:Component.Navbar.Navigation) < prototype(Neos.Fusion:C
         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
           <Stwz.Navigation:Navbar.LinkItem />
           <Stwz.Navigation:Navbar.LinkItemWithSub />
-          <Stwz.Navigation:Navbar.MegaMenuItem />
         </Neos.Fusion:Loop>
 
       </nav>

@@ -164,7 +164,7 @@ module.exports = {
         themes: [
             {
                 'default': {
-                    'primary': '#00337B',
+                    'primary': '#edfe0e',
                     'primary-focus': '#D8942E',
                     'primary-content': '#ffffff',
                     'secondary': '#E64545',

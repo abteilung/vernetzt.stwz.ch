@@ -10,6 +10,7 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
                     {props.main}
                 </div>
                 <Stwz.MovingLines:Component.Lines />
+                <Stwz.AddressLookup:Component.Form />
             </main>
         `
     }
