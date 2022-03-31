@@ -47,6 +47,5 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
         </div>
 
         <Stwz.Navigation:Component.Navbar.KontaktModal />
-        <Stwz.Navigation:Component.Navbar.Basket />
     `
 }

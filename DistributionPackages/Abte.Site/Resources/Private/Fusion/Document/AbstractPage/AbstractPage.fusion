@@ -22,7 +22,7 @@ prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 
     bodyTag {
         attributes {
-            data-theme="selfix"
+            data-theme="default"
             x-data="\{ showModal : false, showMenu : false \}"
         }
     }

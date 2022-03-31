@@ -122,7 +122,9 @@ class Animation {
 				{
 					// Use the shortest way to get to the destination angle
 					rotation: angle + "_short",
-					scaleX: 1.5 - distance,
+					// scaleX: 1,
+					// scaleY: this.strokeWidth 
+                    scaleX: 1.5 - distance,
 					scaleY: this.strokeWidth - 1.55 * distance
 				}
 			);

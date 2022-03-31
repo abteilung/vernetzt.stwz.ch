@@ -9,20 +9,9 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
                 <div class="">
                     {props.main}
                 </div>
-
-                Flex:
-                <div
-                    data-aos="fade-in"
-                    data-aos-duration="3000"
-                    data-aos-delay="0"
-                >
-                    <div class="flex items-center justify-center scene">
-                        <svg class="h-40 w-72 bg-none" id="animation" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"  role="img"></svg>
-                    </div>
-                </div>
-                :Flex
-                   
+                <Stwz.MovingLines:Component.Lines />
             </main>
         `
     }
 }
+

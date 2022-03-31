@@ -1,0 +1,17 @@
+prototype(Stwz.MovingLines:Component.Lines) < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <div
+            data-aos="fade-in"
+            data-aos-duration="3000"
+            data-aos-delay="0"
+        >
+            <svg 
+                class="h-40 w-72 bg-none"
+                id="animation"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMid slice"
+                role="img">
+            </svg>
+        </div>
+    `
+}
