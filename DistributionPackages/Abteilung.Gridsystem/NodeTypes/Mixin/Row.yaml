@@ -8,7 +8,7 @@
     label: i18n
     position: 100
     inlineEditable: true
-    group: general
+    group: structure
     icon: columns
   constraints:
     nodeTypes:

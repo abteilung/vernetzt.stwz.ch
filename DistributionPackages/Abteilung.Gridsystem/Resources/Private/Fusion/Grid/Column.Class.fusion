@@ -6,7 +6,7 @@ prototype(Abteilung.Gridsystem:Prototype.Class.Column) < prototype(Neos.Fusion:C
         lg = ${q(node).property('span-lg')}
         xl = ${q(node).property('span-xl')}
     }
-    
+
     paddingY = ${q(node).property('paddingY') ? 'col-spacing-y' : null}
     // offset = Neos.Fusion:DataStructure {
     //     xs = null

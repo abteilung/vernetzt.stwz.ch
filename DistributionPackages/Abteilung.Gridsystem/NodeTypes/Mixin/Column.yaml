@@ -6,8 +6,9 @@
     'Neos.Neos:ContentCollection': true
   ui:
     label: 'Column'
+    position: 110
     icon: columns
-    group: 'xxx'
+    group: 'structure'
     inspector:
       groups:
         layout:
