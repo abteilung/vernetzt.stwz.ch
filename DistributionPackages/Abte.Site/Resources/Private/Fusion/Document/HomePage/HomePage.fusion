@@ -10,22 +10,14 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
                     {props.main}
                 </div>
 
-                <Abte.Site:Component.ProductUpdates 
-                    itemsToShow={ Array.slice( q(site).find('[instanceof Abte.Site:Document.Product]').sort('datePublished', 'DESC').get(), 0, 11 )  } 
-                    renderStyle="items"
-                    title={ I18n.translate('Abte.Site:Main:neuImSortiment') } 
-                    further={ I18n.translate('Abte.Site:Main:toTop') } 
-                    target={ q(site).find('[instanceof Abte.Site:Document.ProductOverview]').get(0) }
-                />
-
                 Flex:
                 <div
                     data-aos="fade-in"
                     data-aos-duration="3000"
                     data-aos-delay="0"
                 >
-                    <div class="scene flex justify-center items-center">
-                        <svg class="w-72 h-40 bg-none" id="animation" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"  role="img"></svg>
+                    <div class="flex items-center justify-center scene">
+                        <svg class="h-40 w-72 bg-none" id="animation" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"  role="img"></svg>
                     </div>
                 </div>
                 :Flex
