@@ -927,14 +927,14 @@ https://flickity.metafizzy.co
      </node>
     </node>
     <node identifier="98b6262f-7552-4bd3-afd8-4f88cfb9f2d7" nodeName="node-h0591dkotgv8w">
-     <variant sortingIndex="700" workspace="live" nodeType="Neos.Neos:Shortcut" version="4" removed="" hidden="" hiddenInIndex="1">
+     <variant sortingIndex="673" workspace="live" nodeType="Neos.Neos:Shortcut" version="5" removed="" hidden="" hiddenInIndex="1">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:19+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">meta</uriPathSegment>
        <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
@@ -942,6 +942,34 @@ https://flickity.metafizzy.co
        <title __type="string">meta</title>
       </properties>
      </variant>
+     <node identifier="6c2ae4da-a5f7-422b-acf9-a04a991b7d7f" nodeName="node-7w2a92q6nw8xj">
+      <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Document.Page" version="3" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-01T15:18:59+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:01+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:01+00:00</lastPublicationDateTime>
+       <properties>
+        <uriPathSegment __type="string">asdf</uriPathSegment>
+        <hideHeader __type="boolean"></hideHeader>
+        <title __type="string">asdf</title>
+       </properties>
+      </variant>
+      <node identifier="a9e41c6c-a0f3-00eb-bc4e-a38979862875" nodeName="main">
+       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-01T15:18:59+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:01+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:01+00:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+      </node>
+     </node>
      <node identifier="6fa24c80-5078-47a9-bf3d-a80c8aea4b4f" nodeName="node-y63m4q68b1le6">
       <variant sortingIndex="150" workspace="live" nodeType="Abte.Site:Document.Page" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
@@ -1160,6 +1188,59 @@ https://flickity.metafizzy.co
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
+     </node>
+    </node>
+    <node identifier="fbf9fbc8-9b12-4679-8571-eb6ba14f2860" nodeName="node-zd8wuxaq5nkyh">
+     <variant sortingIndex="682" workspace="live" nodeType="KaufmannDigital.GDPR.CookieConsent:Document.CookieSettingsPage" version="4" removed="" hidden="" hiddenInIndex="1">
+      <dimensions>
+       <language>de</language>
+      </dimensions>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:10+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">cookies</uriPathSegment>
+       <title __type="string">Cookies</title>
+      </properties>
+     </variant>
+     <node identifier="2de042a4-8622-18f1-acf8-f7b848460977" nodeName="cookiesettings">
+      <variant sortingIndex="100" workspace="live" nodeType="KaufmannDigital.GDPR.CookieConsent:Content.CookieSettings" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:10+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastPublicationDateTime>
+       <properties>
+        <headline __type="string"></headline>
+        <mainDescription __type="string"></mainDescription>
+        <individualSettingsDescription __type="string"></individualSettingsDescription>
+        <acceptAllButtonLabel __type="string">Accept all</acceptAllButtonLabel>
+        <saveButtonLabel __type="string">Save</saveButtonLabel>
+        <acceptNecessaryCookiesLabel __type="string">Accept necessary cookies</acceptNecessaryCookiesLabel>
+        <imprintLabel __type="string">Imprint</imprintLabel>
+        <dataProtectionPolicyLabel __type="string">Privacy</dataProtectionPolicyLabel>
+        <openIndividualSettingsLabel __type="string">Individual settings</openIndividualSettingsLabel>
+        <closeIndividualSettingsLabel __type="string">Close settings</closeIndividualSettingsLabel>
+        <versionDate __type="object" __classname="DateTime">2022-04-01T15:19:08+00:00</versionDate>
+        <decisionTtl __type="integer">0</decisionTtl>
+        <closeButtonEnabled __type="boolean"></closeButtonEnabled>
+       </properties>
+      </variant>
+      <node identifier="8f4c25ef-9ced-6ea9-08fe-80edffbd3e5e" nodeName="settingelements">
+       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:10+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+      </node>
      </node>
     </node>
     <node identifier="d950b1a5-084e-4b8c-9a45-fca6959708f3" nodeName="node-zewdn0qh8v2b8">
