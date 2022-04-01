@@ -4,8 +4,8 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin.js";
 
 class Animation {
 	// todo: optimize the no of elements according to the screen size
-	cols = 7;
-	rows = 6;
+	cols = 12;
+	rows = 12;
 
 	lineWidth = 40;
 	spacingHorizontal = 80;
