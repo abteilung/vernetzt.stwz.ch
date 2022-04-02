@@ -116,32 +116,6 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
                         </div>
                     </aside>
                 </div>
-
-                <Abte.Site:Component.ProductUpdates 
-                    @if.hasFittingProducts={props.crossProducts}
-                    class=''
-                    itemsToShow={ props.crossProducts } 
-                    renderStyle="items"
-                    title={ I18n.translate('Abte.Site:Main:matchingProducts') } 
-                    further=''
-                    target=''
-                />
-
-                <div class="container"
-                    @if.NOhasFittingProducts={!props.crossProducts}
-                >
-                    <h2>{ I18n.translate('Abte.Site:Main:similarProducts') }</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gridgap">
-                        <Neos.Fusion:Loop items={props.productItems} iterationName="i">
-                            <Abte.Site:Component.ItemCard node={item.node} productItemClass='' />
-                        </Neos.Fusion:Loop>
-                    </div>
-                </div>
-                <div class="container !mt-24 lg:!mt-36 2xl:!mt-48">
-                    <Neos.NodeTypes.ContentReferences:ContentReferences 
-                        @context.referenceNodesArray={q(site).find('#2c1b0aa1-a5e6-41b5-9fc8-34ca32a71bcb')} 
-                    />
-                </div>
                 
             </div>
         `

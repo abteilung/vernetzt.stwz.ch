@@ -1,12 +1,13 @@
 Carbon:
   IncludeAssets:
     LoadJSforCSSAsynchron: true
-    GoogleFonts: "Barlow+Semi+Condensed:400,600,700|Barlow+Condensed:600&display=swap[async]"
+    # GoogleFonts: "Barlow+Semi+Condensed:400,600,700|Barlow+Condensed:600&display=swap[async]"
     Packages:
       'Abte.Site':
         Package: 'Abte.Site'
         General:
           Head: 
+            - //use.typekit.net/bev6plj.css
             - //unpkg.com/aos@2.3.1/dist/aos.css
             - Stwz.css
           Body: 

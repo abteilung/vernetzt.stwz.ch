@@ -1,8 +1,8 @@
-'Abte.Site:Document.Dimension.Width':
+'Abte.Site:Document.MenuSeparator':
   superTypes:
     'Abte.Site:Document.AbstractPage': true
     'Abte.Site:Constraint.Document.Restricted': true
   ui:
-    label: Breite
+    label: Menu Separator
     icon: arrows-alt-h
-    position: 410
+    position: 999

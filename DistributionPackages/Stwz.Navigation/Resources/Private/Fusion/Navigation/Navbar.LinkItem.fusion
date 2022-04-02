@@ -1,14 +1,14 @@
-prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
-    linkItemClass 		= ${ 'block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-primary activeLink' : item.state == 'current' ? ' py-1 text-primary activeLink' : 'text-base-300 hover:text-primary duration-200') }
-    lastLinkItemClass 	= ${ 'block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-primary activeLink' : item.state == 'current' ? ' py-1 text-primary' : 'text-base-300 hover:text-primary duration-200') }
-    nodeType 			= ${ item.node.nodetype.name }
-    linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
-    doNotLinkNode       = ${ q(documentNode).property('doNotLink') }
-    hasSubItems         = ${ item.subItems ? 'subs' : 'no Subs' }
+prototype(Stwz.Navigation:Navbar.LinkItemBasic) < prototype(Neos.Fusion:Component) {
+    
+    class = ''
+    linkItemClass 		= ${ this.class + ' ' + 'pb-1 border-b-2 block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black activeLink' : 'text-black hover:border-black duration-200 border-transparent') }
+    lastLinkItemClass 	= ${ this.class + ' ' + 'pb-1 border-b-2 block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black' : 'text-black hover:border-black duration-200 border-transparent') }
+    shortcutClass       = ${ '!border-none !pb-0 bg-white rounded-full py-0 px-4 shadow-md  hover:shadow-sm !text-primary !font-black' }
 
     renderer = afx`
         <button class="flex items-center justify-between focus:outline-none">
             <Neos.Neos:NodeLink 
+                @if.isNoShortcut={ q(item.node).is('[instanceof !Neos.Neos:Shortcut]') }
                 @if.isRegularLink={props.doNotLinkNode ? false : true }
                 node={item.node}
                 attributes.class={i.isLast ? props.lastLinkItemClass : props.linkItemClass}
@@ -19,6 +19,43 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
             </Neos.Neos:NodeLink>
 
             <Neos.Neos:NodeLink 
+                @if.isShortcut={ q(item.node).is('[instanceof Neos.Neos:Shortcut]') }
+                node={doNotLinkNode ? '#' : item.node} 
+                attributes.class={props.linkItemClass + ' ' + props.shortcutClass}
+                attributes.target={props.linkTarget}
+            >
+                { q(item.node).property('title') }
+            </Neos.Neos:NodeLink>
+
+        </button>
+    `
+}
+
+prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
+    class = ''
+    linkItemClass 		= ${ this.class + ' ' + 'py-1 border-b-2 block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black activeLink' : 'text-black hover:border-black duration-200 border-transparent') }
+    lastLinkItemClass 	= ${ this.class + ' ' + 'py-1 border-b-2 block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black' : 'text-black hover:border-black duration-200 border-transparent') }
+    shortcutClass       = ${ '!border-none !pb-0 bg-white rounded-full py-0 px-4 shadow-md  hover:shadow-sm !text-primary !font-black' }
+    nodeType 			= ${ item.node.nodetype.name }
+    linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
+    doNotLinkNode       = ${ q(documentNode).property('doNotLink') }
+    hasSubItems         = ${ item.subItems ? 'subs' : 'no Subs' }
+
+    renderer = afx`
+        <button class="flex items-center justify-between focus:outline-none">
+            <Neos.Neos:NodeLink 
+                @if.isNoShortcut={ q(item.node).is('[instanceof !Neos.Neos:Shortcut]') }
+                @if.isRegularLink={props.doNotLinkNode ? false : true }
+                node={item.node}
+                attributes.class={i.isLast ? props.lastLinkItemClass : props.linkItemClass}
+                attributes.target={props.linkTarget}
+                renderDefaultTagIfNoLink={false}
+            >
+                { q(item.node).property('titleOverride') ? q(item.node).property('titleOverride') : q(item.node).property('title') }
+            </Neos.Neos:NodeLink>
+
+            <Neos.Neos:NodeLink 
+                @if.isNoShortcut={ q(item.node).is('[instanceof !Neos.Neos:Shortcut]') }
                 @if.isNotLinked={props.doNotLinkNode ? true : false }
                 link={'#'}
                 attributes.class={ i.isLast ? props.lastLinkItemClass : props.linkItemClass }
@@ -28,124 +65,145 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
                 { q(item.node).property('title') }
             </Neos.Neos:NodeLink>
 
+            <Neos.Neos:NodeLink 
+                @if.isShortcut={ q(item.node).is('[instanceof Neos.Neos:Shortcut]') }
+                node={doNotLinkNode ? '#' : item.node} 
+                attributes.class={props.linkItemClass + ' ' + props.shortcutClass}
+                attributes.target={props.linkTarget}
+            >
+                { q(item.node).property('title') }
+            </Neos.Neos:NodeLink>
+
             <!-- <Stwz.Navigation:Navbar.MegaMenuIndicator /> -->
         </button>
 
     `
-    @if.hasSubs=${ !item.subItems }
+    // @if.hasSubs=${ !item.subItems }
+    @if.isSeparator=${ !q(item.node).is('[instanceof Abte.Site:Document.MenuSeparator]') }
     @if.hasMegaMenu=${ !Array.first(q(item.node).find('[instanceof Stwz.Navigation:Document.MegaMenu]')) }
 }
 
 
-prototype(Stwz.Navigation:Navbar.LinkItemWithSub) < prototype(Neos.Fusion:Component) {
-    linkItemClass 		= ${ 'block whitespace-nowrap ' + ' ' + (item.state == 'active' ? 'text-primary-focus active' : item.state == 'current' ? 'text-primary-focus active' : '') }
-    nodeType 			= ${ item.node.nodetype.name}
-    linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false}
-    hasSubItems         = ${ item.subItems ? 'subs' : 'no Subs' }
-
+prototype(Stwz.Navigation:Navbar.SeparatorItem) < prototype(Neos.Fusion:Component) {
     renderer = afx`
-        <div 
-            x-data="\{ open: false, megaMenu: false \}" 
-            "@click"="open = true"
-            class="group"
-        >
-            <div
-                "@click.away.debounce.50"="open = false"
-            >
-                <button 
-                    type="button" 
-                    class="relative flex items-center h-24 focus:outline-none" 
-                    aria-expanded="false"
-                >
-                    <Neos.Neos:NodeLink 
-                        @if.isNoShortcutWithSubsites={ q(item.node).is('[instanceof !Neos.Neos:Shortcut]') }
-                        node={doNotLinkNode ? '#' : item.node} 
-                        attributes.class={props.linkItemClass}
-                        attributes.target={props.linkTarget}
-                    >
-                        { q(item.node).property('title') }
-                    </Neos.Neos:NodeLink>
-                    <a 
-                        @if.isShortcutWithSubsites={ q(item.node).is('[instanceof Neos.Neos:Shortcut]') }
-                        href="javascript:void();"
-                        class={ props.linkItemClass }
-                    >
-                        { q(item.node).property('title') }
-                    </a>
-                    <Stwz.Navigation:Navbar.MegaMenuIndicator />
-                </button>
-                <Stwz.Navigation:Navbar.SubItems 
-                    @if.isNotHidden={ q(item.node).property('hideSubPages') ? false : true }
-                />
-            </div>
-        </div>
+        <div class="text-black">|</div>
     `
-
-    @if.hasSubs=${ item.subItems }
-    @if.hasMegaMenu=${ !Array.first(q(item.node).find('[instanceof Stwz.Navigation:Document.MegaMenu]')) }
-
+    @if.isSeparator=${ q(item.node).is('[instanceof Abte.Site:Document.MenuSeparator]') }
 }
 
 
-prototype(Stwz.Navigation:Navbar.MegaMenuItem) < prototype(Neos.Fusion:Component) {
+// prototype(Stwz.Navigation:Navbar.LinkItemWithSub) < prototype(Neos.Fusion:Component) {
+//     linkItemClass 		= ${ 'block whitespace-nowrap ' + ' ' + (item.state == 'active' ? 'text-black-focus active' : item.state == 'current' ? 'text-black-focus active' : '') }
+//     nodeType 			= ${ item.node.nodetype.name}
+//     linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false}
+//     hasSubItems         = ${ item.subItems ? 'subs' : 'no Subs' }
 
-    linkItemClass 		= ${ 'block whitespace-nowrap ' + ' ' + (item.state == 'active' ? 'active text-primary-focus' : item.state == 'current' ? 'active text-primary-focus' : '') }
+//     renderer = afx`
+//         <div 
+//             x-data="\{ open: false, megaMenu: false \}" 
+//             "@click"="open = true"
+//             class="group"
+//         >
+//             <div
+//                 "@click.away.debounce.50"="open = false"
+//             >
+//                 <button 
+//                     type="button" 
+//                     class="relative flex items-center h-24 focus:outline-none" 
+//                     aria-expanded="false"
+//                 >
+//                     <Neos.Neos:NodeLink 
+//                         @if.isNoShortcutWithSubsites={ q(item.node).is('[instanceof !Neos.Neos:Shortcut]') }
+//                         node={doNotLinkNode ? '#' : item.node} 
+//                         attributes.class={props.linkItemClass}
+//                         attributes.target={props.linkTarget}
+//                     >
+//                         { q(item.node).property('title') }
+//                     </Neos.Neos:NodeLink>
+//                     <a 
+//                         @if.isShortcutWithSubsites={ q(item.node).is('[instanceof Neos.Neos:Shortcut]') }
+//                         href="javascript:void();"
+//                         class={ props.linkItemClass }
+//                     >
+//                         { q(item.node).property('title') }
+//                     </a>
+//                     <Stwz.Navigation:Navbar.MegaMenuIndicator />
+//                 </button>
+//                 <Stwz.Navigation:Navbar.SubItems 
+//                     @if.isNotHidden={ q(item.node).property('hideSubPages') ? false : true }
+//                 />
+//             </div>
+//         </div>
+//     `
 
-    renderer = afx`
-        <div 
-            x-data="\{ megaMenu: false \}" 
-            "@click"="megaMenu = true"
-        >
-            <div
-                "@click.away.debounce.50"="megaMenu = false"
-            >
-                <button 
-                    type="button" 
-                    class="relative flex items-center h-24 group focus:outline-none" 
-                    aria-expanded="false"
-                >
+//     @if.hasSubs=${ item.subItems }
+//     @if.isSeparator=${ !q(item.node).is('[instanceof Abte.Site:Document.MenuSeparator]') }
+//     @if.hasMegaMenu=${ !Array.first(q(item.node).find('[instanceof Stwz.Navigation:Document.MegaMenu]')) }
 
-                    <Neos.Neos:NodeLink 
-                        @if.isNoShortcutWithSubsites={ q(item.node).is('[instanceof !Neos.Neos:Shortcut]') }
-                        node={doNotLinkNode ? '#' : item.node} 
-                        attributes.class={props.linkItemClass}
-                        attributes.target={props.linkTarget}
-                    >
-                        { q(item.node).property('title') }
-                    </Neos.Neos:NodeLink>
-                    <a 
-                        @if.isShortcutWithSubsites={ q(item.node).is('[instanceof Neos.Neos:Shortcut]') }
-                        href="javascript:void();"
-                        class={ props.linkItemClass }
-                    >
-                        { q(item.node).property('title') }
-                    </a>                
-
-                    <Stwz.Navigation:Navbar.MegaMenuIndicator />
-
-                </button>
-                <Neos.Fusion:Loop items={item.subItems} iterationName="i">
-                    <div class="container"
-                        @if.isFirst={i.isFirst}
-                    >
-                        <Stwz.Navigation:Navbar.MegaMenu node={item.node} />
-                    </div>
-                </Neos.Fusion:Loop>
-            </div>
-        </div>
-
-    `
-    @if.hasMegaMenu=${ q(item.node).find('[instanceof Stwz.Navigation:Document.MegaMenu]').get(0) }
-}
+// }
 
 
-prototype(Stwz.Navigation:Navbar.MegaMenuIndicator) < prototype(Neos.Fusion:Component) {
-    renderer = afx`
-        <div class="absolute -bottom-[16px] z-50 inline-block w-16 -ml-2 overflow-hidden left-1/2"
-            :class="megaMenu ? 'block' : 'hidden'"
-        >
-            <!-- :class="megaMenu ? 'block' : 'hidden'" -->
-            <div class="w-4 h-4 origin-bottom-left transform rotate-45 bg-white"></div>
-        </div>
-    `
-}
+
+
+// prototype(Stwz.Navigation:Navbar.MegaMenuItem) < prototype(Neos.Fusion:Component) {
+
+//     linkItemClass 		= ${ 'block whitespace-nowrap ' + ' ' + (item.state == 'active' ? 'active text-black-focus' : item.state == 'current' ? 'active text-black-focus' : '') }
+
+//     renderer = afx`
+//         <div 
+//             x-data="\{ megaMenu: false \}" 
+//             "@click"="megaMenu = true"
+//         >
+//             <div
+//                 "@click.away.debounce.50"="megaMenu = false"
+//             >
+//                 <button 
+//                     type="button" 
+//                     class="relative flex items-center h-24 group focus:outline-none" 
+//                     aria-expanded="false"
+//                 >
+
+//                     <Neos.Neos:NodeLink 
+//                         @if.isNoShortcutWithSubsites={ q(item.node).is('[instanceof !Neos.Neos:Shortcut]') }
+//                         node={doNotLinkNode ? '#' : item.node} 
+//                         attributes.class={props.linkItemClass}
+//                         attributes.target={props.linkTarget}
+//                     >
+//                         { q(item.node).property('title') }
+//                     </Neos.Neos:NodeLink>
+//                     <a 
+//                         @if.isShortcutWithSubsites={ q(item.node).is('[instanceof Neos.Neos:Shortcut]') }
+//                         href="javascript:void();"
+//                         class={ props.linkItemClass }
+//                     >
+//                         { q(item.node).property('title') }
+//                     </a>                
+
+//                     <Stwz.Navigation:Navbar.MegaMenuIndicator />
+
+//                 </button>
+//                 <Neos.Fusion:Loop items={item.subItems} iterationName="i">
+//                     <div class="container"
+//                         @if.isFirst={i.isFirst}
+//                     >
+//                         <Stwz.Navigation:Navbar.MegaMenu node={item.node} />
+//                     </div>
+//                 </Neos.Fusion:Loop>
+//             </div>
+//         </div>
+
+//     `
+//     @if.hasMegaMenu=${ q(item.node).find('[instanceof Stwz.Navigation:Document.MegaMenu]').get(0) }
+// }
+
+
+// prototype(Stwz.Navigation:Navbar.MegaMenuIndicator) < prototype(Neos.Fusion:Component) {
+//     renderer = afx`
+//         <div class="absolute -bottom-[16px] z-50 inline-block w-16 -ml-2 overflow-hidden left-1/2"
+//             :class="megaMenu ? 'block' : 'hidden'"
+//         >
+//             <!-- :class="megaMenu ? 'block' : 'hidden'" -->
+//             <div class="w-4 h-4 origin-bottom-left transform rotate-45 bg-white"></div>
+//         </div>
+//     `
+// }

@@ -1,8 +1,0 @@
-'Abte.Site:Document.Brand':
-  superTypes:
-    'Abte.Site:Document.AbstractPage': true
-    'Abte.Site:Constraint.Document.Restricted': true
-  ui:
-    label: Brand
-    icon: copyright
-    position: 500

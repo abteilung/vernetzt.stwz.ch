@@ -1,7 +1,7 @@
 prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) {
 
     renderer = afx`
-        <div class="bg-primary rounded-full w-10/12 left-1/12 relative h-36">
+        <div class="relative w-10/12 rounded-full bg-accent left-1/12 h-36">
             xxx
         </div>
 

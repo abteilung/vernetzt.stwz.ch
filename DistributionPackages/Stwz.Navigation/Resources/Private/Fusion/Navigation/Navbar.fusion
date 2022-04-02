@@ -7,34 +7,24 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
         <div 
             x-cloak
             id={props.menuID}
-            class="fixed top-0 z-10 w-full transition-all duration-500 transform isolate backdrop-blur-md"
+            class="fixed top-0 z-10 w-full transition-all transform border-2 duration-250 isolate border-primary "
         >
             <Stwz.Navigation:Component.Extra.Navbar.Navigation />
             
-            <div class="h-4 candyBar bg-gradient-to-b from-accent to-accent-focus"></div>
-
             <div class="flex justify-center bg-white">
-                <div class="container flex justify-between mx-0 gridPadding-x">
+                <div class="container flex mx-0 justify-right gridPadding-x">
                     <div class="flex items-center bg-white justify-left">
                         <Stwz.Navigation:Component.Navbar.Brand />
                     </div>
                     
                     <div 
-                        x-data="\{ 'showSearch' : false \}"
-                        class="flex justify-between w-full navArea"
-                        :class="showSearch ? 'left-0' : ''"
-                    >
-                    
-                        <div 
-                            x-data="\{ 'showMenu' : false \}" 
-                            class="flex justify-center w-full text-primary mainNavigation font-headings">
-                            <Stwz.Navigation:Component.Navbar.Navigation />
-                            <Stwz.Navigation:Component.Navbar.Hamburger />
-                            <!-- <Stwz.Navigation:Component.Navbar.KontaktButton /> -->
-                            <Stwz.Navigation:Component.Navbar.Mobile />
-                        </div>
-
+                        class="flex justify-end w-full text-black mainNavigation font-headings">
+                        <Stwz.Navigation:Component.Navbar.Navigation />
+                        <Stwz.Navigation:Component.Navbar.Hamburger />
+                        <!-- <Stwz.Navigation:Component.Navbar.KontaktButton /> -->
+                        <Stwz.Navigation:Component.Navbar.Mobile />
                     </div>
+
                 </div>
             </div>
         </div>

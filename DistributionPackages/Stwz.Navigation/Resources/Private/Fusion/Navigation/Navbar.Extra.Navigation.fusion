@@ -1,34 +1,30 @@
 prototype(Stwz.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neos.Neos:ContentComponent) {
     
-  menuItems = Neos.Neos:MenuItems {
-      entryLevel = 1
-      maximumLevels = 1
-  }
+	menuItems = Neos.Neos:MenuItems {
+		startingPoint = ${ q(site).children('[uriPathSegment="top"]').get(0) }
+	}
 
   phone = ${ q(site).property('helpdeskPhone') }
 
   renderer = afx`
-    <div class="extras bg-neutral">
-      <div class="container flex items-center justify-between h-12 gridPadding-x">
+    <div class="extras">
+      <div class="container flex items-center justify-end h-12 right gridPadding-x">
         <nav 
-          class="items-center hidden space-x-6 text-base md:flex"
+          class="items-center hidden space-x-6 text-xs md:flex"
         >
           <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
-            <Stwz.Navigation:Navbar.LinkItem />
+            <Stwz.Navigation:Navbar.LinkItem class="font-light" />
           </Neos.Fusion:Loop>
-          <div "@click.prevent"="showModal = !showModal" class="cursor-pointer text-base-300 hover:text-primary">
-            { I18n.translate('Stwz.Navigation:Main:contact') }
-          </div>
         </nav>
-        <div>
+        <!-- <div>
           <Carbon.Link:Link 
-              additionalClass="h3" 
+              additionalClass="h4" 
               link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
               renderDefaultTagIfNoLink='true'
           >
             <Neos.Neos:Editable property="helpdeskPhone" node={site} />
           </Carbon.Link:Link>
-        </div>
+        </div> -->
       </div>  
     </div>
   `

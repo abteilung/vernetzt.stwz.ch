@@ -23,14 +23,6 @@ prototype(Abte.Site:Document.Service) < prototype(Abte.Site:Document.AbstractPag
                 </div>
             </div>
 
-            <Abte.Site:Component.ProductUpdates 
-                itemsToShow={ Array.slice( q(site).find('#e76cab82-58d9-4a77-8ae4-964dd7a87939').children().children('[instanceof Abte.Site:Document.Product]').sort('datePublished', 'DESC').get(), 0, 11 )  }  
-                renderStyle="items"
-                title={ I18n.translate('Abte.Site:Main:passendeBlanko') }
-                further={ I18n.translate('Abte.Site:Main:allProducts') }
-                target={ q(site).find('#e76cab82-58d9-4a77-8ae4-964dd7a87939').get(0) }
-            />
-
         `
     }
 }
