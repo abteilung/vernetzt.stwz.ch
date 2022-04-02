@@ -124,8 +124,8 @@ class Animation {
 					rotation: angle + "_short",
 					// scaleX: 1,
 					// scaleY: this.strokeWidth 
-                    scaleX: 1.5 - distance,
-					scaleY: this.strokeWidth - 1.55 * distance
+                    scaleX: 1.5 - (distance/2),
+					scaleY: this.strokeWidth - 1.15 * (distance/2)
 				}
 			);
 		});
