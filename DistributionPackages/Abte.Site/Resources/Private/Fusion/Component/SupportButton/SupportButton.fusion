@@ -25,26 +25,28 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
             data-aos="fade-in"
             data-aos-duration="500"
             data-aos-delay="450"
+            class="fixed right-0 z-50 top-48"
         >
             <div
                 x-cloak
                 x-data="\{ 'open' : false \}"
             >
                 <div 
-                    class="fixed transition-all flex flex-wrap duration-500 p-5 z-50 right-0 top-96 bg-white shadow-xl rounded-l-xl"
-                    :class="open ? 'w-56 h-52 delay-150' : 'w-16 h-16'"
-                    "@click.away"="open = !open" 
+                    class="flex flex-wrap py-5 transition-all duration-500 bg-white shadow-xl rounded-l-xl"
+                    :class="open ? 'w-56 h-52 px-5' : 'px-0 w-20 h-20'"
+                    "@click.away"="open = false" 
                 >
                     <div 
                         "@click.prevent"="open = !open" 
-                        class="cursor-pointer relative text-base-300 hover:text-primary"
-                        :class="open ? 'text-error absolute delay-500' : 'delay-150'"
+                        class="relative flex flex-wrap justify-center text-center text-black transition-all cursor-pointer"
+                        :class="open ? 'text-error absolute delay-500 space-x-4' : 'space-x-0 delay-500'"
                     >
-                        <Abte.Site:Icon.Support />
+                        <Abte.Site:Icon.Support class="hover:text-primary" />
+                        <p class="text-sm">Support</p>
                     </div>
 
                     <div 
-                        class="flex transition-all duration-300 justify-between w-full navArea"
+                        class="flex justify-between w-full transition-all duration-300 navArea"
                         :class="open ? 'h-auto opacity-100 delay-500' : 'h-none delay-150 opacity-0'"
                     >
                         <nav class="supportButton">

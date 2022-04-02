@@ -5,38 +5,34 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
         node = ${ this.node }
     }
 
-    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
-        asset   = ${ q(node).property('image') }
+    serviceItemClass = 'rounded-xl block bg-white px-5 py-4'
+
+    icon = Abte.Site:Icon.Calendar {
+        class = ''
     }
 
-    width = '640'
-    height = '640'
-    
-    productItemClass = 'relative block w-full w-1/2 md:w-1/3 lg:w-1/4 pr-4 md:pr-8 xl:pr-12 mb-4 md:mb-8 lg:mb-12'
+    arrow = Abte.Site:Icon.ArrowRight {
+        class = ''
+    }
 
     renderer = afx`
         <Carbon.Link:Link 
             node={node}
-            attributes.class={props.productItemClass + ' ' + 'product'}
+            attributes.class={props.serviceItemClass + ' ' + 'service'}
         >
+            <div class="flex justify-between h-20 header">
+                {props.icon}
+                {props.arrow}
+            </div>
 
-            <Abte.Site:Component.Heading 
-                title={ q(node).property('title') }
-                style={ q(documentNode).is('[instanceof Abte.Site:Document.ProductOverview]') ? 'enlarged' : 'enlarged' }
-            />
-
-            <div class="h-auto overflow-hidden bg-base-100">
-                <Sitegeist.Lazybones:Image 
-                    @if.hasImage={props.imageSource}
-                    imageSource={props.imageSource} 
-                    width={props.width}
-                    height={props.height}
-                    class="w-full duration-300 scale-105 hover:scale-100"
-                />
-
-                <img src="https://via.placeholder.com/800x800" alt={props.title} width="640" height="640"
-                    @if.hasNoImage={!props.imageSource}
-                />
+            <div class="flex items-end space-x-2">
+                <div class="w-1/6 mb-6 text-primary">
+                    <h2 class="-rotate-90">{ q(node).property('title') }</h2>
+                </div>
+                <div class="w-5/6 content">
+                    <p class="font-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Quae, fuga accusantium numquam, eligendi veritatis fugiat repudiandae quaerat eius eaque hic?</p>
+                </div>
 
             </div>
 

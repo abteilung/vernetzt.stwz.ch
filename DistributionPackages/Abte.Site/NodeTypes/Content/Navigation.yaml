@@ -7,6 +7,10 @@
         group: structure
         position: 250
         inlineEditable: true
+        inspector:
+            groups: 
+                style:
+                    label: Style
     properties:
         'startingPoint':
             type: reference
@@ -40,15 +44,7 @@
             defaultValue: 'false'
             ui:
                 label: 'Show Arrow'
-                reloadIfChanged: true
-                inspector:
-                    group: general
-        'iconRight':
-            type: boolean
-            defaultValue: 'false'
-            ui:
-                label: 'Arrow right'
-                reloadIfChanged: true
+                reloadPageIfChanged: true
                 inspector:
                     group: general
         'showTitleOverride':
@@ -56,22 +52,37 @@
             defaultValue: 'false'
             ui:
                 label: 'Show Title Override'
-                reloadIfChanged: true
+                reloadPageIfChanged: true
                 inspector:
                     group: general
-        'twoCols':
+        'iconRight':
             type: boolean
             defaultValue: 'false'
             ui:
-                label: 'Render as 2 columns (md)'
-                reloadIfChanged: true
+                label: 'Arrow right'
+                reloadPageIfChanged: true
                 inspector:
                     group: general
-        'threeCols':
-            type: boolean
-            defaultValue: 'false'
+        'layout':
+            type: string
+            defaultValue: 'default'
             ui:
-                label: 'Render as 3 columns (md)'
+                label: 'Layout'
                 reloadIfChanged: true
                 inspector:
-                    group: general
+                    group: 'style'
+                    editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+                    editorOptions:
+                        values:
+                            default:
+                                label: 'Default'
+                                icon: 'bars'
+                            smallCircles:
+                                label: 'Small Circles'
+                                icon: 'circle'
+                            products:
+                                label: 'Products'
+                                icon: 'truck'
+                            service:
+                                label: 'Service'
+                                icon: 'heart'

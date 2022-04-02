@@ -11,7 +11,7 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
     
     dropShadow = ${ q(node).property('dropShadow') }
 
-    bgColor = Abte.Site:Mixin.BgColor
+    bgColor = ${ q(node).property('bgColor') }
     
     containerClass = ${ (this.dropShadow ? 'box-shadow' : null ) + ' ' + this.bgColor }
 
@@ -43,3 +43,5 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
         </div>
     `
 }
+
+// bg-base-100 bg-base-200 bg-base-300 bg-accent bg-primary bg-primary-focus bg-secondar bg-secondary-focus bg-accent-focus bg-error bg-neutral

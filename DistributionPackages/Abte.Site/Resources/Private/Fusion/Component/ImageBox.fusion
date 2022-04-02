@@ -5,7 +5,7 @@ prototype(Abte.Site:Component.ImageBox) < prototype(Neos.Neos:ContentComponent) 
 
     dropShadow = ${ q(node).property('dropShadow') }
 
-    bgColor = Abte.Site:Mixin.BgColor
+    bgColor = ${ q(node).property('bgColor') }
     
     containerClass = ${ this.class + ' ' + (this.dropShadow ? 'box-shadow' : null ) + ' ' + this.bgLight + ' ' + (q(node).property('image') ? 'grid md:grid-cols-3 gridgap' : null) }
 

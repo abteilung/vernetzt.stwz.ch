@@ -4,7 +4,7 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
     dropShadow = ${ q(node).property('dropShadow') }
 
-    bgColor = Abte.Site:Mixin.BgColor
+    bgColor = ${ q(node).property('bgColor') }
 
     accordionClass = ${ this.class + ' ' +  (this.dropShadow ? 'box-shadow' : null) + ' ' + this.bgColor + ' ' + (q(node).property('image') ? 'grid grid-cols-3 gridgap' : null) }
 

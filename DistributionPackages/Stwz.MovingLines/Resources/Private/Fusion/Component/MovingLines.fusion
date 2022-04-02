@@ -6,8 +6,7 @@ prototype(Stwz.MovingLines:Component.Lines) < prototype(Neos.Fusion:Component) {
             data-aos-delay="0"
         >
             <svg 
-                class="h-40 w-72 bg-none"
-                id="animation"
+                class="h-40 linesAnimation w-72 bg-none"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="xMidYMid slice"
                 role="img">

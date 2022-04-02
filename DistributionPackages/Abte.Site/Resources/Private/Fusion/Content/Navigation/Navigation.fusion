@@ -2,70 +2,149 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
   
     class       = 'navigation-element'
     liClass     = ''
-    ulClass     = ${ q(node).property('threeCols') ? 'grid md:grid-cols-2 lg:grid-cols-3 gridgap-x' : q(node).property('twoCols') ? 'grid lg:grid-cols-2 gridgap-x' : null }
+    ulClass     = ${ q(node).property('twoCols') ? 'grid lg:grid-cols-2 gridgap-x' : null }
     icon        = Abte.Site:Icon.ArrowRight {
-        class = 'relative left-0 duration-150 text-secondary group-hover:left-2'
+        class = 'relative left-0 duration-150 text-accent group-hover:left-2'
     }
     arrowIcon   = ${ q(node).property('arrowIcon') ? this.icon : false }
     iconRight   = ${ q(node).property('iconRight') ? true : false }
 
 
     showTitleOverride   = ${ q(node).property('showTitleOverride') }
+    subTitle   = ${ q(node).property('subTitle') }
 
-    menuItemsArray = ${ q(node).property('startingPoint') }
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+    menuItemsArray = ${ q(node).property('startingPoint') ? q(node).property('startingPoint') : q(node).property('navigationItems') }
     
     @context {
         menuItemsArray = ${ this.menuItemsArray }
     }
 
-	menuItems = Neos.Neos:MenuItems {
-        startingPoint = ${ q(node).property('startingPoint') }
-        startingPoint.@if.hasStartingpoint = ${ q(node).property('startingPoint') }
+    startingPoint = ${ q(node).property('startingPoint') }
+    navigationItems = ${ q(node).property('navigationItems') }
+    layout = ${ layout }
 
-        itemCollection = ${ q(node).property('navigationItems') }
-        itemCollection.@if.navigationItems = ${ q(node).property('navigationItems') }
-
-        renderHiddenInIndex = ${ false }
-
-        filter = '!Stwz.Navigation:Document.MegaMenu, !Neos.Neos:ContentCollection'
+    @context {
+        startingPoint = ${ this.startingPoint }
+        navigationItems = ${ this.navigationItems }
+        layout = ${ this.layout }
     }
 
-    hasMenuItems = ${!!menuItemsArray}
+	menuItems = Neos.Neos:MenuItems {
+        startingPoint = ${ startingPoint }
+        startingPoint.@if.hasStartingpoint = ${ startingPoint }
+
+        itemCollection = ${ navigationItems }
+        itemCollection.@if.navigationItems = ${ navigationItems }
+
+        renderHiddenInIndex = ${ navigationItems ? true : false }
+
+        filter = '!Roen.Navigation:Document.MegaMenu, !Neos.Neos:ContentCollection'
+    }
 
     limit = ${ q(node).property('limit') ? q(node).property('limit') : 999 }
 
-	renderer = afx`
-        <nav class={props.class}>
-            <ul class={props.ulClass}>
-                <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
-                    <li class={ q(item.node).is('[instanceof Abte.Site:Document.Product]') ? 'productLinks' : 'linkItems' }
-                        @if.isWithinRange={i.index < props.limit}
-                    >
-                        <Carbon.Link:Link 
-                            node={ item.node }
-                            attributes.class="whitespace-nowrap"
-                        >
-                            
-                            <div class="flex items-center justify-between group"
-                                @if.isProduct={ q(item.node).is('[instanceof !Abte.Site:Document.Product]') }
+    itemDate = ${ q(node).property('datePublished') ? Date.formatCldr(q(item).property('datePublished'), 'd. MMMM y', siteLocale) : false }
+
+	renderer = Neos.Fusion:Case {
+        smallCircles {
+            condition = ${ q(node).property('layout') == 'smallCircles' || layout == 'smallCircles' }
+            renderer = afx`
+                <nav class={props.class}>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gridgap">
+                        <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+                            <Carbon.Link:Link 
+                                node={ item.node }
+                                attributes.class="flex space-x-6 group lg:space-x-8"
+                                @if.isWithinRange={i.index < props.limit}
                             >
-                                <div class="tracking-normal hover:text-primary-focus ">{ props.showTitleOverride ? q(item.node).property('titleOverride') : item.label }</div> {props.arrowIcon}
-                            </div>
-
-                            
-                            <div
-                                @if.isProduct={ q(item.node).is('[instanceof Abte.Site:Document.Product]') }
+                                <div class="flex-none w-1/6 overflow-hidden sm:w-1/4">
+                                    <div class="w-full overflow-hidden rounded-full isolate">
+                                        <Abte.Site:Content.Image 
+                                            node={ q(item.node) } 
+                                            width="120" 
+                                            height="120" 
+                                            class="object-cover object-center duration-150 scale-110 group-hover:scale-100 aspect-square" 
+                                        />
+                                </div>
+                                </div>
+                                <div class="w-5/6 sm:w-3/4 ">
+                                    <p class="small"
+                                        @if.hasDate={props.itemDate}
+                                    >
+                                        {props.itemDate}
+                                    </p>
+                                    <h3 class="tracking-normal underline transition-all duration-200 underline-offset-1 decoration-primary/0 group-hover:decoration-current">{ props.showTitleOverride ? q(item.node).property('titleOverride') : item.label }</h3>
+                                    <p class="tracking-normal duration-200 text-base-300 line-clamp-3">{ q(item.node).property('subTitle') }</p>
+                                    {props.icon}
+                                </div>
+                            </Carbon.Link:Link>
+                        </Neos.Fusion:Loop>
+                    </div>
+                </nav>
+            `
+        }
+        products {
+            condition = ${ q(node).property('layout') == 'products' || layout == 'products' }
+            renderer = afx`
+                <nav class={props.class}>
+                    <ul class="grid md:grid-cols-2 lg:grid-cols-4 gridgap">
+                        <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+                            <li class="mb-4"
+                                @if.isWithinRange={i.index < props.limit}
                             >
-                                <Abte.Site:Component.ItemCard productItemClass="" node={item.node} />
-                            </div>
-
-
-                        </Carbon.Link:Link>
-                    </li>
-                </Neos.Fusion:Loop>
-            </ul>
-        </nav>
-	`
+                                <Abte.Site:Component.ImageCard node={item.node} />
+                            </li>
+                        </Neos.Fusion:Loop>
+                    </ul>
+                </nav>
+            `
+        }
+        service {
+            condition = ${ q(node).property('layout') == 'service' || layout == 'service' }
+            renderer = afx`
+                <nav class={props.class}>
+                    <ul class="grid grid-cols-4 gridgap-x">
+                        <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+                            <li class="mb-4"
+                                @if.isWithinRange={i.index < props.limit}
+                            >
+                                <Abte.Site:Component.ServiceCard node={item.node} />
+                            </li>
+                        </Neos.Fusion:Loop>
+                    </ul>
+                </nav>
+            `
+        }
+        fallback {
+            condition = ${ true }
+            renderer =  afx`
+                <nav class={props.class}>
+                    <ul class={props.ulClass}>
+                        <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+                            <li class={props.liClass}
+                                @if.isWithinRange={i.index < props.limit}
+                            >
+                                <Carbon.Link:Link 
+                                    node={ item.node }
+                                    attributes.target=''
+                                    attributes.class="whitespace-nowrap"
+                                    renderDefaultTagIfNoLink={true}
+                                >
+                                    <div class="flex items-center justify-between group">
+                                        <div class="tracking-normal hover:text-primary-focus ">{ props.showTitleOverride ? q(item.node).property('titleOverride') : item.label }</div> {props.arrowIcon}
+                                    </div>
+                                </Carbon.Link:Link>
+                            </li>
+                        </Neos.Fusion:Loop>
+                    </ul>
+                </nav>
+            `
+        }
+    }
 
     @cache {
         mode = 'cached'
@@ -78,5 +157,5 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
             3 = ${Neos.Caching.descendantOfTag(menuItemsArray)}
         }
     }
-
 }
+
