@@ -171,5 +171,4 @@ class Line {
 	}
 }
 
-const animation = new Animation(".linesAnimation");
-const animation = new Animation(".linesAnimation2");
+const animation = new Animation("#linesAnimation");
