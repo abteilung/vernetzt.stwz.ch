@@ -43,7 +43,7 @@ prototype(Abte.Site:Content.ContactBox) < prototype(Neos.Neos:ContentComponent) 
                         renderDefaultTagIfNoLink='true'
                     >
                         <div class="flex items-center">
-                            <Abte.Site:Icon.ColorPhone class="mr-2" />
+                            <Abte.Site:Icon.Phone class="mr-2" />
                             <Neos.Neos:Editable property="helpdeskPhone" node={site} />
                         </div>
                     </Carbon.Link:Link>

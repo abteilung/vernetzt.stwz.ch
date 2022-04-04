@@ -1,3 +1,0 @@
-prototype(Selfix.KeinFilter) < prototype(Neos.Fusion:Component) {
-    renderer = ''
-}

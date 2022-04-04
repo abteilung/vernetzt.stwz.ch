@@ -4,6 +4,11 @@ prototype(Abte.Site:TrackingScript.Ackee) < prototype(Neos.Fusion:Component) {
     domainID = 'c0e0a138-0efd-480e-a702-081606e7e3de'
 
     renderer = afx`
-        <script async src="https://ackee-noh4.onrender.com/tracker.js" data-ackee-server="https://ackee-noh4.onrender.com" data-ackee-domain-id={props.domainID}></script>
+        <script 
+            async 
+            src="https://ackee-noh4.onrender.com/tracker.js" 
+            data-ackee-server="https://ackee-noh4.onrender.com" 
+            data-ackee-domain-id={props.domainID}>
+        </script>
     `
 }

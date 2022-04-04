@@ -3,7 +3,6 @@
   superTypes:
     'Neos.Neos:Document': true
     'Abte.Site:Mixin.HideHeader': true
-    'Abte.Site:Mixin.FooterImage': true
     'Abte.Site:Mixin.InspectorGeneral': true
   childNodes:
     main:
@@ -24,6 +23,9 @@
         position: '5'
         inspector:
           group: document
+    'intro':
+      options:
+        preset: 'text.free'
     'hideSubPages':
       type: boolean
       ui:

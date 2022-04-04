@@ -15,8 +15,8 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
 
     cycle       = ''
     buttonClass = 'w-full py-2 text-left'
-    itemClass   = 'relative border-t-2 border-primary'
-    caretColor  = 'text-secondary scale-75 lg:scale-100'
+    itemClass   = 'relative border-b-[1px] border-black'
+    caretColor  = 'text-black scale-75 lg:scale-100'
 
     accordion_firstOpen = ${ q(node).closest('[instanceof Abte.Site:Content.Accordion]').property('accordion_firstOpen') ? 'show' : 'collapsed' }
 
@@ -32,8 +32,8 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
                 <div class="flex items-center justify-between">
                     <div class={props.headerClass}>{props.header}</div>
                     <div class={props.caretColor}>
-                        <Neos.Fusion:Augmenter x-bind:class={'selected == ' + i.cycle + ' ? \'transform rotate-45\' : \'\' '}>
-                            <Abte.Site:Icon.Plus class="transition" />
+                        <Neos.Fusion:Augmenter x-bind:class={'selected == ' + i.cycle + ' ? \'transform duration-300 rotate-180\' : \'\' '}>
+                            <Abte.Site:Icon.ChevronDown class="transition" />
                         </Neos.Fusion:Augmenter>
                     </div>
                 </div>

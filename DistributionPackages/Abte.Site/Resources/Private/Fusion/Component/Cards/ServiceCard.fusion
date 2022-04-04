@@ -5,14 +5,24 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
         node = ${ this.node }
     }
 
-    serviceItemClass = 'rounded-xl block bg-white px-5 py-4'
+    serviceItemClass = 'rounded-xl block group bg-white px-5 py-4 transition-all'
 
     icon = Abte.Site:Icon.Calendar {
         class = ''
     }
 
     arrow = Abte.Site:Icon.ArrowRight {
-        class = ''
+        class = 'left-0 group-hover:left-2 relative duration-150'
+    }
+
+    title = ${ q(node).property('title') }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }
+
+    intro = Neos.Neos:Editable {
+        property = 'intro'
     }
 
     renderer = afx`
@@ -20,18 +30,20 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
             node={node}
             attributes.class={props.serviceItemClass + ' ' + 'service'}
         >
-            <div class="flex justify-between h-20 header">
-                {props.icon}
-                {props.arrow}
+            <div class="h-24 header">
+                <div class="flex justify-between">
+                    <Abte.Site:Mixin.Icons class="scale-100 group-hover:scale-110 duration-150" />
+                    {props.arrow}
+                </div>
             </div>
 
             <div class="flex items-end space-x-2">
                 <div class="w-1/6 mb-6 text-primary">
-                    <h2 class="-rotate-90">{ q(node).property('title') }</h2>
+                    <h2 class="-rotate-90 block">{props.title}</h2>
                 </div>
                 <div class="w-5/6 content">
-                    <p class="font-black">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <p>Quae, fuga accusantium numquam, eligendi veritatis fugiat repudiandae quaerat eius eaque hic?</p>
+                    <strong>{String.toString(props.subTitle)}</strong>
+                    <p>{props.intro}</p>
                 </div>
 
             </div>

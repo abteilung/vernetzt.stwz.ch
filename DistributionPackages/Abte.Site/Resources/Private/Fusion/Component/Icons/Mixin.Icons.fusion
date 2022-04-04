@@ -14,12 +14,45 @@ prototype(Abte.Site:Mixin.Icons) < prototype(Neos.Fusion:Component) {
             }
         }
 
+        internet {
+            condition = ${ q(node).property('icon') == 'internet' }
+            renderer = Abte.Site:Icon.Internet {
+                class = ${ class }
+            }
+        }
+
+        TV {
+            condition = ${ q(node).property('icon') == 'TV' }
+            renderer = Abte.Site:Icon.TV {
+                class = ${ class }
+            }
+        }
+
+        phone {
+            condition = ${ q(node).property('icon') == 'phone' }
+            renderer = Abte.Site:Icon.Phone {
+                class = ${ class }
+            }
+        }
+
+        mobile {
+            condition = ${ q(node).property('icon') == 'mobile' }
+            renderer = Abte.Site:Icon.Mobile {
+                class = ${ class }
+            }
+        }
+
+
+
+
         times {
             condition = ${ q(node).property('icon') == 'times' }
             renderer = Abte.Site:Icon.X {
                 class = ${ class }
             }
         }
+
+
 
         basket {
             condition = ${ q(node).property('icon') == 'basket' }

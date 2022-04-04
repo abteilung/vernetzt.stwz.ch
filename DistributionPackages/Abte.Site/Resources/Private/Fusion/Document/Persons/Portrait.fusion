@@ -63,7 +63,7 @@ prototype(Abte.Site:Component.Portrait) < prototype(Neos.Fusion:Component) {
                                     renderDefaultTagIfNoLink='true' 
                                     additionalClass="flex space-x-2 items-center"
                                 >
-                                    <Abte.Site:Icon.ColorPhone />
+                                    <Abte.Site:Icon.Phone />
                                     <div class="font-bold">{props.phone}</div>
                                 </Carbon.Link:Link>
                             </div>

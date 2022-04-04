@@ -15,6 +15,18 @@
                             none:
                                 label: ''
                                 icon: ''
+                            internet:
+                                label: 'Internet'
+                                icon: 'desktop'
+                            TV:
+                                label: 'TV'
+                                icon: 'tv'
+                            phone:
+                                label: 'Telefonie'
+                                icon: 'phone-alt'
+                            mobile:
+                                label: 'Mobile'
+                                icon: 'mobile-alt'
                             check:
                                 label: 'Check'
                                 icon: 'check'
@@ -30,9 +42,6 @@
                             arrowLeft:
                                 label: 'Arrow Left'
                                 icon: 'arrow-left'
-                            phone:
-                                label: 'Phone'
-                                icon: 'phone'
                             envelope:
                                 label: 'Envelope'
                                 icon: 'envelope'

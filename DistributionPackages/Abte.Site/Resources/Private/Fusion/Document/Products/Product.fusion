@@ -1,122 +1,12 @@
 prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPage) {
     body.content = Neos.Fusion:Component {
 
-        productItems = Neos.Neos:MenuItems {
-            itemCollection = ${ Array.slice( q(documentNode).parent().find('[instanceof Abte.Site:Document.Product]').remove(documentNode).get(), 0, 4 )  } 
-            maximumLevels = 1
-        }
+        renderer = afx`
 
-        productDescription = ${ q(node).property('productDescription') }
-        productDescription.@process.headerOpen =  ${String.replace(value, '<h1', '<h2')}
-        productDescription.@process.headerClose =  ${String.replace(value, '</h1>', '</h2>')}
-        productDescription.@process.newLine =  ${String.replace(value, '\n', '<br/>')}
-
-        downloads = ${ q(node).property('downloads') }
-
-        crossProducts = Neos.Fusion:Map {
-            items = ${ q(node).property('productCrossSells') ? String.split( q(node).property('productCrossSells'), ',' ) : null }
-            itemRenderer = ${ q(site).find("[instanceof Abte.Site:Document.Product][productID*='" + item + "']").get(0)  } 
-            // itemRenderer = ${ q(site).find("[instanceof Abte.Site:Document.Product][productID*='" + item + "']").first().property('identifier') + '|' } 
-            // @process.makeArray = ${ String.split(value, '|') }
-        }
-
-        videos = Neos.Neos:ContentCollection {
-            nodePath = ${ q(node).children('video').property('_path') }
-            collection = ${ q(node).children('video').children() }
-            attributes.class = 'grid grid-cols-2 md:grid-cols-3 gridgap videoContainer'
-        }
-
-        hasVideo = ${ q(node).children('video').find('[instanceof Jonnitto.PrettyEmbedVideoPlatforms:Content.Video]') }
-
-         renderer = afx`
-
-            <div class="space-y-12 gridPadding">
-                <div class="container grid grid-cols-12 lg:gridgap">
-                    <main class="col-span-12 lg:col-span-8">
-                        <div x-data="{ tab: 'specs' }">
-                            <div class="w-full mb-12 space-x-4 border-b-2 md:space-x-8 border-base-100">
-                                <button class="pb-4 !-mb-[2px] lead text-primary-focus " :class="{ 'border-b-2 border-b-primary active !text-primary': tab === 'specs' }" "@click"="tab = 'specs'">
-                                    { I18n.translate('Abte.Site:Main:Specs') }
-                                </button>
-                                <button class="pb-4 !-mb-[2px] lead text-primary-focus" :class="{ 'border-b-2 border-b-primary active !text-primary': tab === 'desc' }" "@click"="tab = 'desc'">
-                                    { I18n.translate('Abte.Site:Main:Desc') }
-                                </button>
-                                <button class="pb-4 !-mb-[2px] lead text-primary-focus" :class="{ 'border-b-2 border-b-primary active !text-primary': tab === 'downloads' }" "@click"="tab = 'downloads'"
-                                    @if.hasDownloads={props.downloads}
-                                >
-                                    { I18n.translate('Abte.Site:Main:downloads') }
-                                </button>
-                                <button class="pb-4 !-mb-[2px] lead text-primary-focus" :class="{ 'border-b-2 border-b-primary active !text-primary': tab === 'video' }" "@click"="tab = 'video'"
-                                    @if.hasDownloads={props.hasVideo}
-                                >
-                                    { I18n.translate('Abte.Site:Main:videos') }
-                                </button>
-                            </div>
-
-
-                            <div x-show="tab === 'specs'"
-                                x-transition:enter="transition ease-out duration-150"
-                                x-transition:enter-start="transform opacity-0"
-                                x-transition:enter-end="transform opacity-150"
-                                x-transition:leave="transition ease-in duration-75"
-                                x-transition:leave-start="transform opacity-150"
-                                x-transition:leave-end="transform opacity-0"
-                            >
-                                <Abte.Site:Component.ProductFeatures />
-                            </div>
-
-
-                            <div x-show="tab === 'desc'"
-                                x-transition:enter="transition ease-out duration-150"
-                                x-transition:enter-start="transform opacity-0"
-                                x-transition:enter-end="transform opacity-150"
-                                x-transition:leave="transition ease-in duration-75"
-                                x-transition:leave-start="transform opacity-150"
-                                x-transition:leave-end="transform opacity-0"
-                            >
-                                <div class="prose containerMargin">
-                                    {props.productDescription}
-                                </div>
-
-                                {props.main}
-                            </div>
-
-
-                            <div x-show="tab === 'downloads'"
-                                x-transition:enter="transition ease-out duration-150"
-                                x-transition:enter-start="transform opacity-0"
-                                x-transition:enter-end="transform opacity-150"
-                                x-transition:leave="transition ease-in duration-75"
-                                x-transition:leave-start="transform opacity-150"
-                                x-transition:leave-end="transform opacity-0"
-                            >
-                                <div class="grid grid-cols-2 md:grid-cols-3 gridgap">
-                                    <Abte.Site:Content.DownloadBox />
-                                </div>
-                            </div>                            
-
-
-                            <div x-show="tab === 'video'"
-                                x-transition:enter="transition ease-out duration-150"
-                                x-transition:enter-start="transform opacity-0"
-                                x-transition:enter-end="transform opacity-150"
-                                x-transition:leave="transition ease-in duration-75"
-                                x-transition:leave-start="transform opacity-150"
-                                x-transition:leave-end="transform opacity-0"
-                            >
-                                {props.videos}
-                            </div>                            
-                        </div>
-                    </main>
-                    <aside class="col-span-12 lg:col-end-13 lg:col-span-3">
-                        <div class="sticky grid md:grid-cols-2 gridPadding-top top-24 lg:grid-cols-1 gridgap">
-                            <Abte.Site:Content.ContactBox />
-                            <!-- <Abte.Site:Content.DownloadBox /> -->
-                            {props.aside}
-                        </div>
-                    </aside>
-                </div>
-                
+            <div class="container">
+                <main class="">
+                    {props.main}
+                </main>
             </div>
         `
     }
