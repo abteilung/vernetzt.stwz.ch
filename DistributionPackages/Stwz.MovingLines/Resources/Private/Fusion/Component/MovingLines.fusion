@@ -1,9 +1,12 @@
 prototype(Stwz.MovingLines:Component.Lines) < prototype(Neos.Fusion:Component) {
     renderer = afx`
         <div
-            data-aos="fade-in"
-            data-aos-duration="3000"
-            data-aos-delay="0"
+            x-data="{ appear: false }" 
+            x-show="appear" 
+            x-init="setTimeout(() => appear = true, 500)"
+            x-transition:enter="transition duration-1000"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
         >
             <svg 
                 class="h-40 w-72 bg-none"

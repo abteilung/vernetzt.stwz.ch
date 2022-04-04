@@ -68,7 +68,6 @@
     "flickity": "^3.0.0",
     "gsap": "^3.10.2",
     "alpinejs": "^3.9.5",
-    "aos": "^2.3.4",
     "choices.js": "^10.1.0",
     "flickity-as-nav-for": "^3.0.0",
     "mixitup": "^3.3.1"

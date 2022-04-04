@@ -8,10 +8,8 @@ Carbon:
         General:
           Head: 
             - //use.typekit.net/bev6plj.css
-            - //unpkg.com/aos@2.3.1/dist/aos.css
             - Stwz.css
           Body: 
-            - //unpkg.com/aos@next/dist/aos.js
             - Stwz.js[defer]
         Backend:
           Head:
