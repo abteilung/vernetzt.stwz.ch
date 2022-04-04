@@ -47,7 +47,10 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
 	}
 
   	renderer = afx`
-        <div class={props.class + ' ' + props.removePadding + ' ' + props.shadowClass + ' ' + props.fullWidthClass}>
+        <div 
+            id={'id-' + q(node).property('_nodeName')}
+            class={props.class + ' ' + props.removePadding + ' ' + props.shadowClass + ' ' + props.fullWidthClass}
+        >
             
             <div class={props.contentFullWidth}>
                 <div class="flex items-start mb-4 md:mb-8 lg:mb-12 containerHeader space-x-6 items-center"

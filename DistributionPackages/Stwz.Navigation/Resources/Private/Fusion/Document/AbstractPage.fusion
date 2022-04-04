@@ -16,6 +16,7 @@ prototype(Stwz.Navigation:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 
     htmlTag {
         attributes {
+            class = "scroll-smooth"
             lang = ${ node.context.targetDimensions.language }
         }
     }
