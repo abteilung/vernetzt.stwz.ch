@@ -1,0 +1,11 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Stwz.Shop':
+        Package: 'Stwz.Shop'
+        General:
+          Head: 
+            - Shop.css
+          Body:
+            - Shop.js
