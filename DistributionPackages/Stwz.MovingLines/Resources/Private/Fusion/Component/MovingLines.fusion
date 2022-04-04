@@ -1,8 +1,9 @@
 prototype(Stwz.MovingLines:Component.Lines) < prototype(Neos.Fusion:Component) {
     renderer = afx`
-        <div>
+        <div
+            class="h-48 w-72 bg-none"
+        >
             <svg 
-                class="h-40 w-72 bg-none"
                 id="linesAnimation"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="xMidYMid slice"
