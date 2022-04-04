@@ -3,18 +3,18 @@
  <site name="Default" state="1" siteResourcesPackageKey="Abte.Site" siteNodeName="default">
   <nodes formatVersion="2.0">
    <node identifier="5e8af702-705c-4593-b9d6-7ef7af121fc7" nodeName="default">
-    <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Document.HomePage" version="13" removed="" hidden="" hiddenInIndex="">
+    <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Document.HomePage" version="20" removed="" hidden="" hiddenInIndex="">
      <dimensions>
       <language>de</language>
      </dimensions>
      <accessRoles __type="array"/>
      <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:20:58+00:00</creationDateTime>
-     <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-     <lastPublicationDateTime __type="object" __classname="DateTime">2021-12-14T18:58:26+00:00</lastPublicationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T11:34:39+00:00</lastModificationDateTime>
+     <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T11:34:39+00:00</lastPublicationDateTime>
      <properties>
       <uriPathSegment __type="string">home</uriPathSegment>
       <title __type="string">Home</title>
-      <footerInfo __type="string">SELFIX AG</footerInfo>
+      <footerInfo __type="string">StWZ</footerInfo>
       <helpdeskPhone __type="string">+41 44 308 66 88</helpdeskPhone>
       <helpdeskEmail __type="string">info@selfix.com</helpdeskEmail>
       <helpdeskSubTitle __type="string">Beratung</helpdeskSubTitle>
@@ -22,25 +22,12 @@
       <helpdeskPic __type="object" __identifier="5ac646af-5b5d-425f-bf62-78fb27711db0" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;5ac646af-5b5d-425f-bf62-78fb27711db0&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;d9aa0a89-83c7-4ee1-9758-b9431ac68b48&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;eta-LhNcIFse95A-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;4b16c5799c7f8508077ee3ed5ec9833ea5e5ac92&quot;,&quot;hash&quot;:&quot;4b16c5799c7f8508077ee3ed5ec9833ea5e5ac92&quot;,&quot;__identity&quot;:&quot;1b49b207-ec0f-4c5d-bd77-a2d33443d6ae&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1688,&quot;position&quot;:10,&quot;width&quot;:3000,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;3800af86-6138-4128-934f-782441b29277&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</helpdeskPic>
       <helpdeskTitle __type="string">Individuelle</helpdeskTitle>
       <hideHeader __type="boolean"></hideHeader>
-     </properties>
-    </variant>
-    <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Document.HomePage" version="10" removed="" hidden="" hiddenInIndex="">
-     <dimensions>
-      <language>en</language>
-     </dimensions>
-     <accessRoles __type="array"/>
-     <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:20:58+00:00</creationDateTime>
-     <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-     <lastPublicationDateTime __type="object" __classname="DateTime">2021-12-01T12:29:46+00:00</lastPublicationDateTime>
-     <properties>
-      <uriPathSegment __type="string">home</uriPathSegment>
-      <title __type="string">Home</title>
-      <footerInfo __type="string">SELFIX AG</footerInfo>
-      <hideHeader __type="boolean"></hideHeader>
-      <helpdeskTitle __type="string"></helpdeskTitle>
-      <helpdeskSubTitle __type="string"></helpdeskSubTitle>
-      <helpdeskPhone __type="string"></helpdeskPhone>
-      <helpdeskEmail __type="string"></helpdeskEmail>
+      <supportItems __type="array">
+       <entry0 __type="string">2faf60dc-c883-48b3-8600-84c73d9d4aa0</entry0>
+       <entry1 __type="string">8fe81709-be01-4bed-9551-45c0771cb8b4</entry1>
+      </supportItems>
+      <helpdeskWeb __type="string">www.stwz.ch</helpdeskWeb>
+      <address __type="string">&lt;p&gt;&lt;strong&gt;StWZ Energie AG&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Mühlegasse 7&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;4800 Zofingen&lt;/strong&gt;&lt;/p&gt;</address>
      </properties>
     </variant>
     <node identifier="5dfcc099-0f78-1253-93f2-91a8c8225006" nodeName="footer">
@@ -53,29 +40,168 @@
       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
       <properties/>
      </variant>
-     <variant sortingIndex="1075" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-      <dimensions>
-       <language>en</language>
-      </dimensions>
-      <accessRoles __type="array"/>
-      <creationDateTime __type="object" __classname="DateTime">2021-12-01T12:07:44+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-      <properties/>
-     </variant>
-     <node identifier="fe687b49-478d-4a2b-abd3-5c22a8db3a4f" nodeName="node-9rm3jlmofday5">
-      <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Text" version="5" removed="" hidden="" hiddenInIndex="">
+     <node identifier="34ed497d-84fa-43cf-84c4-565d7031f057" nodeName="node-kg0z1pj8p5kq6">
+      <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Row" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
-        <language>en</language>
+        <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-12-01T12:08:04+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-12-01T12:29:46+00:00</lastPublicationDateTime>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:19:53+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastPublicationDateTime>
        <properties>
-        <text __type="string">&lt;p&gt;Adresse&lt;/p&gt;&lt;p&gt;SELFIX AG&amp;nbsp;&lt;br&gt;Industriestrasse 53&amp;nbsp;&lt;br&gt;CH-8112 Otelfingen/ZH&amp;nbsp;&lt;br&gt;Routenplaner&lt;/p&gt;&lt;p&gt;SELFIX SA&lt;br&gt;Case postale 29&lt;br&gt;CH-1226 Thônex&lt;br&gt;Routenplaner&lt;/p&gt;</text>
-        <isLead __type="boolean"></isLead>
+        <count-md __type="string">6</count-md>
        </properties>
       </variant>
+      <node identifier="09264526-8063-4a30-b9c3-23c0acbd37c6" nodeName="node-1ch4zu90zkvox">
+       <variant sortingIndex="500" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:38+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastPublicationDateTime>
+        <properties>
+         <paddingY __type="boolean"></paddingY>
+         <span-md __type="string">1</span-md>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="421a4869-6f7b-4c4f-ae9f-f716e07dfb08" nodeName="node-7g2x9jatdi0by">
+       <variant sortingIndex="300" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:19:53+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
+        <properties>
+         <paddingY __type="boolean"></paddingY>
+         <span-md __type="string">1</span-md>
+        </properties>
+       </variant>
+       <node identifier="52b8195d-cc15-454d-8fb6-fa0f503d4ab7" nodeName="node-a7d3r5soxph9f">
+        <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Text" version="5" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:20:21+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
+         <properties>
+          <isLead __type="boolean"></isLead>
+          <text __type="string">&lt;p&gt;&lt;a href=&quot;node://0aafc2a0-a095-45b3-9669-1d220defb105&quot;&gt;Impressum&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;node://6fa24c80-5078-47a9-bf3d-a80c8aea4b4f&quot;&gt;Datenschutz&lt;/a&gt;&lt;/p&gt;</text>
+         </properties>
+        </variant>
+       </node>
+      </node>
+      <node identifier="05d1ed70-8ef7-4bf7-b3a0-b8e7bacba80c" nodeName="node-g9m56hhjzlojk">
+       <variant sortingIndex="400" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:19:53+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
+        <properties>
+         <paddingY __type="boolean"></paddingY>
+         <span-md __type="string">1</span-md>
+        </properties>
+       </variant>
+      </node>
+      <node identifier="7890c01a-7837-4c95-9274-9440e7fa71f8" nodeName="node-hlrq1ykp57uhr">
+       <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:19:53+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
+        <properties>
+         <paddingY __type="boolean"></paddingY>
+         <span-md __type="string">1</span-md>
+        </properties>
+       </variant>
+       <node identifier="ca6b3792-ec58-4e25-846c-f5749ea2ba35" nodeName="node-35gn8iluxb9sa">
+        <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Text" version="10" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:19:57+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
+         <properties>
+          <isLead __type="boolean"></isLead>
+          <text __type="string">&lt;p&gt;&lt;strong&gt;StWZ Energie AG&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Mühlegasse 7&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;4800 Zofingen&lt;/strong&gt;&lt;/p&gt;</text>
+         </properties>
+        </variant>
+       </node>
+      </node>
+      <node identifier="744fb2ef-9dad-40b6-8e08-316490b21a3d" nodeName="node-k4ngnvaomuy46">
+       <variant sortingIndex="200" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:19:53+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
+        <properties>
+         <paddingY __type="boolean"></paddingY>
+         <span-md __type="string">1</span-md>
+        </properties>
+       </variant>
+       <node identifier="bcb45018-10a7-494c-acba-a9e5ca1db791" nodeName="node-yaqeoxcdh7fse">
+        <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Text" version="11" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:20:18+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
+         <properties>
+          <isLead __type="boolean"></isLead>
+          <text __type="string">&lt;p&gt;&lt;a href=&quot;tel:+41627453232&quot;&gt;&lt;strong&gt;062 745 32 32&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;mailto:info@stwz.ch&quot;&gt;&lt;strong&gt;info@stwz.ch&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.stwz.ch&quot;&gt;&lt;strong&gt;www.stwz.ch&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</text>
+         </properties>
+        </variant>
+       </node>
+      </node>
+      <node identifier="967cd3ff-cbca-4e2a-8ab3-42f2e7573e7c" nodeName="node-werh2omlokqfx">
+       <variant sortingIndex="600" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:40+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastPublicationDateTime>
+        <properties>
+         <paddingY __type="boolean"></paddingY>
+         <span-md __type="string">1</span-md>
+        </properties>
+       </variant>
+       <node identifier="1159b332-f6c0-414e-b390-321e512a5bad" nodeName="node-thz21wmtbwvg3">
+        <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Image" version="2" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:40+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastPublicationDateTime>
+         <properties>
+          <image __type="object" __identifier="4aabb3d1-b2af-4288-9205-a047fb95217c" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;4aabb3d1-b2af-4288-9205-a047fb95217c&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;logo-stwz.svg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/svg+xml&quot;,&quot;sha1&quot;:&quot;160e0013e16e4d98275d3a546449aaef9e094120&quot;,&quot;hash&quot;:&quot;160e0013e16e4d98275d3a546449aaef9e094120&quot;,&quot;__identity&quot;:&quot;85db3449-d5bc-4a6b-9516-71e6b260d3b5&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[]}</image>
+         </properties>
+        </variant>
+       </node>
+      </node>
      </node>
     </node>
     <node identifier="41b568ef-2939-fdde-bfbd-3707d124fe87" nodeName="header">
@@ -88,29 +214,11 @@
       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:54+00:00</lastModificationDateTime>
       <properties/>
      </variant>
-     <variant sortingIndex="1000" workspace="live" nodeType="Neos.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
-      <dimensions>
-       <language>en</language>
-      </dimensions>
-      <accessRoles __type="array"/>
-      <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-      <properties/>
-     </variant>
     </node>
     <node identifier="b0493234-1486-aca4-66d2-634ef885aadd" nodeName="main">
      <variant sortingIndex="850" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
-      </dimensions>
-      <accessRoles __type="array"/>
-      <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:20:58+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-      <properties/>
-     </variant>
-     <variant sortingIndex="1050" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-      <dimensions>
-       <language>en</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:20:58+00:00</creationDateTime>
@@ -131,93 +239,10 @@
         <isLead __type="boolean"></isLead>
        </properties>
       </variant>
-      <variant sortingIndex="150" workspace="live" nodeType="Abte.Site:Content.Text" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:39:17+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T10:39:23+00:00</lastPublicationDateTime>
-       <properties>
-        <text __type="string">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</text>
-        <isLead __type="boolean"></isLead>
-       </properties>
-      </variant>
-     </node>
-     <node identifier="e430141b-0d3b-4374-8b7a-e699f4fd14f4" nodeName="node-12ln2ohmmh4lt">
-      <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Html" version="7" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-12-03T15:15:23+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2021-12-03T16:51:28+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-12-03T16:51:28+00:00</lastPublicationDateTime>
-       <properties>
-        <source __type="string">&lt;button class=&quot;snipcart-checkout&quot;&gt;Click here to checkout&lt;/button&gt;
-
-&lt;span class=&quot;snipcart-items-count&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;snipcart-total-price&quot;&gt;&lt;/span&gt;
-
-&lt;br/&gt;
-
-&lt;button class=&quot;snipcart-add-item&quot;
-  data-item-id=&quot;starry-night&quot;
-  data-item-price=&quot;79.99&quot;
-  data-item-url=&quot;/paintings/starry-night&quot;
-  data-item-description=&quot;High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh.&quot;
-  data-item-image=&quot;/assets/images/starry-night.jpg&quot;
-  data-item-name=&quot;The Starry Night&quot;&gt;
-  Add to cart
-&lt;/button&gt;
-</source>
-       </properties>
-      </variant>
-      <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Html" version="7" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>de</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-12-03T15:15:23+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2021-12-03T16:51:28+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-12-03T16:51:28+00:00</lastPublicationDateTime>
-       <properties>
-        <source __type="string">&lt;button class=&quot;snipcart-checkout&quot;&gt;Click here to checkout&lt;/button&gt;
-
-&lt;span class=&quot;snipcart-items-count&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;snipcart-total-price&quot;&gt;&lt;/span&gt;
-
-&lt;br/&gt;
-
-&lt;button class=&quot;snipcart-add-item&quot;
-  data-item-id=&quot;starry-night&quot;
-  data-item-price=&quot;79.99&quot;
-  data-item-url=&quot;/paintings/starry-night&quot;
-  data-item-description=&quot;High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh.&quot;
-  data-item-image=&quot;/assets/images/starry-night.jpg&quot;
-  data-item-name=&quot;The Starry Night&quot;&gt;
-  Add to cart
-&lt;/button&gt;
-</source>
-       </properties>
-      </variant>
      </node>
      <node identifier="62446a1e-997c-48ff-ac6e-22f27e2b8807" nodeName="node-a6ewcjddab8x6">
       <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Headline" version="3" removed="" hidden="" hiddenInIndex="">
        <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:39:04+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T10:39:08+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T10:39:08+00:00</lastPublicationDateTime>
-       <properties>
-        <title __type="string">Titelzeile</title>
-       </properties>
-      </variant>
-      <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Headline" version="3" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
@@ -229,90 +254,184 @@
        </properties>
       </variant>
      </node>
-     <node identifier="38099f43-dd69-4b29-9ac3-6b2295766447" nodeName="node-djs8eiv3q3viu">
-      <variant sortingIndex="175" workspace="live" nodeType="Abte.Site:Content.Html" version="5" removed="" hidden="" hiddenInIndex="">
+     <node identifier="dfdaf212-9308-471a-9aa5-ccb067082012" nodeName="node-yidfj5izddfnx">
+      <variant sortingIndex="163" workspace="live" nodeType="Abte.Site:Content.Container" version="7" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-12-10T16:03:52+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2021-12-10T16:04:43+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-12-10T16:04:43+00:00</lastPublicationDateTime>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:31:52+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:30:11+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:30:11+00:00</lastPublicationDateTime>
        <properties>
-        <source __type="string">&lt;div class=&quot;container grid grid-cols-2 gap-6&quot;&gt;
-  &lt;div class=&quot;h-75 box-shadow&quot;&gt;
-	xxx
-  &lt;/div&gt;
-  &lt;div class=&quot;h-75 box-shadow&quot;&gt;
-	xxx
-  &lt;/div&gt;
-&lt;/div&gt;</source>
+        <dropShadow __type="boolean"></dropShadow>
+        <bgColor __type="string">bg-base-200</bgColor>
+        <removePadding __type="boolean"></removePadding>
+        <fullWidth __type="boolean">1</fullWidth>
+        <title __type="string">Glasfaserangebot</title>
+        <linkText __type="string">Glasfaseranschluss schon geprüft?</linkText>
+        <link __type="string">#</link>
        </properties>
       </variant>
-     </node>
-     <node identifier="dd0f2451-b324-4446-8834-9e3e3e8c1ff5" nodeName="node-ul1kc37vtrblx">
-      <variant sortingIndex="175" workspace="live" nodeType="Abte.Site:Content.Html" version="8" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>de</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-12-13T22:06:27+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2021-12-13T22:16:36+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-12-13T22:16:36+00:00</lastPublicationDateTime>
-       <properties>
-        <source __type="string">&lt;div class=&quot;fader&quot; data-flickity='{ &quot;autoPlay&quot;: true }'&gt;
-  &lt;div class=&quot;carousel-cell&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;carousel-cell&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;carousel-cell&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;carousel-cell&quot;&gt;&lt;/div&gt;
-  &lt;div class=&quot;carousel-cell&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;style&gt;
-  
-  
-  /*! Flickity v2.2.2
-https://flickity.metafizzy.co
----------------------------------------------- */
-.flickity-enabled{position:relative}.flickity-enabled:focus{outline:0}.flickity-viewport{overflow:hidden;position:relative;height:100%}.flickity-slider{position:absolute;width:100%;height:100%}.flickity-enabled.is-draggable{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.flickity-enabled.is-draggable .flickity-viewport{cursor:move;cursor:-webkit-grab;cursor:grab}.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down{cursor:-webkit-grabbing;cursor:grabbing}.flickity-button{position:absolute;background:hsla(0,0%,100%,.75);border:none;color:#333}.flickity-button:hover{background:#fff;cursor:pointer}.flickity-button:focus{outline:0;box-shadow:0 0 0 5px #19f}.flickity-button:active{opacity:.6}.flickity-button:disabled{opacity:.3;cursor:auto;pointer-events:none}.flickity-button-icon{fill:currentColor}.flickity-prev-next-button{top:50%;width:44px;height:44px;border-radius:50%;transform:translateY(-50%)}.flickity-prev-next-button.previous{left:10px}.flickity-prev-next-button.next{right:10px}.flickity-rtl .flickity-prev-next-button.previous{left:auto;right:10px}.flickity-rtl .flickity-prev-next-button.next{right:auto;left:10px}.flickity-prev-next-button .flickity-button-icon{position:absolute;left:20%;top:20%;width:60%;height:60%}.flickity-page-dots{position:absolute;width:100%;bottom:-25px;padding:0;margin:0;list-style:none;text-align:center;line-height:1}.flickity-rtl .flickity-page-dots{direction:rtl}.flickity-page-dots .dot{display:inline-block;width:10px;height:10px;margin:0 8px;background:#333;border-radius:50%;opacity:.25;cursor:pointer}.flickity-page-dots .dot.is-selected{opacity:1}
-  
-  
-.flickity-enabled.is-fade .flickity-slider &gt; * {
-  pointer-events: none;
-  z-index: 0;
-}
-
-.flickity-enabled.is-fade .flickity-slider &gt; .is-selected {
-  pointer-events: auto;
-  z-index: 1;
-}
-  .slider, .fader {
-  background: #EEE;
-}
-
-.carousel-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: gallery-cell;
-}
-
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
-
-&lt;/style&gt;</source>
-       </properties>
-      </variant>
+      <node identifier="352d22c7-f813-7f69-1b7e-9aca22394d0f" nodeName="content">
+       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:31:52+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:32:05+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:32:05+00:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+       <node identifier="09ed5b42-941a-4e1c-bb08-5b64b6e007a4" nodeName="node-joa8neugq3fiu">
+        <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Navigation" version="4" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:31:58+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:46:33+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:46:33+00:00</lastPublicationDateTime>
+         <properties>
+          <limit __type="string"></limit>
+          <arrowIcon __type="boolean"></arrowIcon>
+          <showTitleOverride __type="boolean"></showTitleOverride>
+          <iconRight __type="boolean">1</iconRight>
+          <layout __type="string">service</layout>
+          <navigationItems __type="array">
+           <entry0 __type="string">55aa0ac8-7db6-45e2-b83a-83d33d4d0936</entry0>
+           <entry1 __type="string">d950b1a5-084e-4b8c-9a45-fca6959708f3</entry1>
+           <entry2 __type="string">f14dfee9-acd1-4150-98fe-41f82129e0cd</entry2>
+           <entry3 __type="string">159cb5f4-4a6d-4a4c-ad42-e3fa36dc24f5</entry3>
+          </navigationItems>
+         </properties>
+        </variant>
+       </node>
+      </node>
+      <node identifier="0cb103a8-e9a2-41e6-b160-1edbcfca3948" nodeName="node-lrtwjedsk838h">
+       <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Container" version="2" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:18+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
+        <properties>
+         <dropShadow __type="boolean"></dropShadow>
+         <bgColor __type="string">none</bgColor>
+         <removePadding __type="boolean"></removePadding>
+         <fullWidth __type="boolean"></fullWidth>
+        </properties>
+       </variant>
+       <node identifier="8bbfa2a6-2581-645d-a66c-714aab88eacd" nodeName="content">
+        <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:18+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
+         <properties/>
+        </variant>
+        <node identifier="d380e611-8424-447f-8a5b-063ab6ec5869" nodeName="node-xx4deh5ab7crp">
+         <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Accordion" version="2" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
+          <properties>
+           <dropShadow __type="boolean"></dropShadow>
+           <bgColor __type="string">none</bgColor>
+           <accordion_firstOpen __type="boolean"></accordion_firstOpen>
+          </properties>
+         </variant>
+         <node identifier="fb14074a-f68d-4a6e-baac-f2c72125efd7" nodeName="node-49cofxx1wtbq4">
+          <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="4" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastPublicationDateTime>
+           <properties>
+            <accordion_title __type="string">asdfasf asdf</accordion_title>
+           </properties>
+          </variant>
+          <node identifier="03fcf990-943c-d22c-4029-a8102bc698e5" nodeName="content">
+           <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
+            <properties/>
+           </variant>
+          </node>
+         </node>
+         <node identifier="c03fc337-cd3e-4764-8a42-84b5e27cf5e4" nodeName="node-hrfopul0j3xor">
+          <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="4" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastPublicationDateTime>
+           <properties>
+            <accordion_title __type="string">asf asdfasfdasdfa&amp;nbsp;</accordion_title>
+           </properties>
+          </variant>
+          <node identifier="7a17cedf-f5d3-4a15-85a4-171178bca15c" nodeName="content">
+           <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
+            <properties/>
+           </variant>
+          </node>
+         </node>
+         <node identifier="49bb076d-c9c2-4d1a-b9c2-2302132b34de" nodeName="node-wcm27h2xj3skk">
+          <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="4" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastPublicationDateTime>
+           <properties>
+            <accordion_title __type="string">fasdf asdf asdf asdfas af</accordion_title>
+           </properties>
+          </variant>
+          <node identifier="cd1afc89-cf0c-65db-5208-7755198e4e51" nodeName="content">
+           <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
+            <properties/>
+           </variant>
+          </node>
+         </node>
+        </node>
+       </node>
+      </node>
      </node>
     </node>
     <node identifier="3b2db5f6-1cbd-d2c8-0235-3fcb0806015b" nodeName="modal">
@@ -325,25 +444,16 @@ https://flickity.metafizzy.co
       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:54+00:00</lastModificationDateTime>
       <properties/>
      </variant>
-     <variant sortingIndex="1100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="1" removed="" hidden="" hiddenInIndex="">
-      <dimensions>
-       <language>en</language>
-      </dimensions>
-      <accessRoles __type="array"/>
-      <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-      <properties/>
-     </variant>
     </node>
     <node identifier="861ee17f-89a6-4cc9-a5fb-a90ce4535fed" nodeName="node-1grkxv2p38oiy">
-     <variant sortingIndex="650" workspace="live" nodeType="Abte.Site:Document.Page" version="3" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="650" workspace="live" nodeType="Abte.Site:Document.Service" version="5" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:08+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:45+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:45+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">services</uriPathSegment>
        <hideHeader __type="boolean"></hideHeader>
@@ -351,579 +461,60 @@ https://flickity.metafizzy.co
       </properties>
      </variant>
      <node identifier="67ba5bb8-a973-0fc4-6e4a-629f0b070fd7" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:08+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:45+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:45+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
-     </node>
-    </node>
-    <node identifier="fa905182-dd78-4567-ace6-3b82418afaa6" nodeName="node-47eeczygqvf6h">
-     <variant sortingIndex="175" workspace="live" nodeType="Abte.Site:Document.Page" version="4" removed="" hidden="" hiddenInIndex="">
-      <dimensions>
-       <language>en</language>
-      </dimensions>
-      <accessRoles __type="array"/>
-      <creationDateTime __type="object" __classname="DateTime">2021-11-29T11:12:37+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T11:12:57+00:00</lastPublicationDateTime>
-      <properties>
-       <uriPathSegment __type="string">druckservice</uriPathSegment>
-       <title __type="string">Druckservice</title>
-       <hideHeader __type="boolean"></hideHeader>
-      </properties>
-     </variant>
-     <node identifier="b2564054-3601-0a28-5c53-41da92d696c3" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T11:12:37+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T11:12:57+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T11:12:57+00:00</lastPublicationDateTime>
-       <properties/>
-      </variant>
-     </node>
-     <node identifier="2c0669e0-e5dd-46c1-b4b4-0459ff6552a8" nodeName="node-05agdkfnnkay7">
-      <variant sortingIndex="750" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:22+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">etiketten-mit-veredelung</uriPathSegment>
-        <title __type="string">Etiketten mit Veredelung</title>
-        <image __type="object" __identifier="b51754ac-690b-427b-9343-ca9cd2a74c2b" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;b51754ac-690b-427b-9343-ca9cd2a74c2b&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;c6f78f76-ec91-43e3-8218-33a73150f698&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;fly-d-s56H08cAlM0-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;8621bf6d5a982f6364a5eea51521521c8e905c5c&quot;,&quot;hash&quot;:&quot;8621bf6d5a982f6364a5eea51521521c8e905c5c&quot;,&quot;__identity&quot;:&quot;3510af59-6146-4629-895f-36a4da145b90&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1067,&quot;position&quot;:10,&quot;width&quot;:1067,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;0fe69492-f877-4632-9b75-bdf09193fd06&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="42188154-cd07-2d2d-56c0-40d24b0a32a7" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:22+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="c9943f70-cc5f-4a77-a43e-9cb78033297f" nodeName="node-2owoe4ftsc2p4">
-      <variant sortingIndex="800" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:34+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">etiketten-mit-ruckseitendruck</uriPathSegment>
-        <title __type="string">Etiketten mit Rückseitendruck</title>
-        <image __type="object" __identifier="7d8828b4-dcd2-4d87-9ac5-16d254690020" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;7d8828b4-dcd2-4d87-9ac5-16d254690020&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;77ce56b0-e93b-41cf-9cdb-518913f48a3d&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;christian-lue-GzSJTU3vlD0-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;5b59e5f53520658871f7d00a8190507072c086de&quot;,&quot;hash&quot;:&quot;5b59e5f53520658871f7d00a8190507072c086de&quot;,&quot;__identity&quot;:&quot;1407499c-c547-44b4-823a-5ae302b949d1&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1546,&quot;position&quot;:10,&quot;width&quot;:1546,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;fd0ed083-df6f-4f45-90ee-c37b3dcaf1eb&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="b2e2328d-ac44-333b-e91a-3682d113df67" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:34+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="d906c3d1-6938-4b9e-b7ff-ff2d1a774ad1" nodeName="node-3c8711as8ppab">
-      <variant sortingIndex="250" workspace="live" nodeType="Abte.Site:Document.Page" version="6" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T11:17:27+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T20:08:19+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">bogenetiketten</uriPathSegment>
-        <title __type="string">Bogenetiketten</title>
-        <image __type="object" __identifier="1db8d6ed-f594-445f-87a5-5836501e8e1a" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;1db8d6ed-f594-445f-87a5-5836501e8e1a&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;5d1c20c7-d04c-4c89-9592-090f3f4df36f&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;bank-phrom-Tzm3Oyu_6sk-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;07969f4ce90db47fa38546235720b8caaf67f8dc&quot;,&quot;hash&quot;:&quot;07969f4ce90db47fa38546235720b8caaf67f8dc&quot;,&quot;__identity&quot;:&quot;be852df6-7729-4999-a048-a61ba0c980ce&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1068,&quot;position&quot;:10,&quot;width&quot;:1069,&quot;x&quot;:141,&quot;y&quot;:0,&quot;__identity&quot;:&quot;cac29da4-7d22-4006-b2e3-74ce4929adfa&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="beeb5c85-0d23-d393-ebd8-e225367db2bf" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T11:17:27+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T11:54:46+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T11:54:45+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="6bef1580-abbc-43c5-a94d-f4800c5ec077" nodeName="node-7oisqvsitp0ns">
-      <variant sortingIndex="950" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:07+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">lebensmitteletiketten</uriPathSegment>
-        <title __type="string">Lebensmitteletiketten</title>
-        <image __type="object" __identifier="a359b571-4161-41e0-91bd-54e84afe2fc5" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;a359b571-4161-41e0-91bd-54e84afe2fc5&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;798b0866-cff6-4fec-8c49-228735b6f2f8&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;sandra-grunewald-O4irwJUtaOs-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;4304c9ad45160b0200218bfb50d056d194be3dd1&quot;,&quot;hash&quot;:&quot;4304c9ad45160b0200218bfb50d056d194be3dd1&quot;,&quot;__identity&quot;:&quot;c4376fba-2397-41d0-b589-1b07737657a4&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1067,&quot;position&quot;:10,&quot;width&quot;:1067,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;393fc90b-8fce-4230-b75c-6cba67f4a7a6&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="a05bdf2f-0d8f-b11d-c7fb-6c74ca27a583" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:07+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="27f58d7f-cb9e-49c8-8887-498c70dcc54a" nodeName="node-9dm8lcw5ss6on">
-      <variant sortingIndex="550" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:47+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">blickdichte-etiketten</uriPathSegment>
-        <title __type="string">Blickdichte Etiketten</title>
-        <image __type="object" __identifier="df51130a-797b-443f-81f9-3def914379d3" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;df51130a-797b-443f-81f9-3def914379d3&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;9601f0ba-939f-4d18-a66a-bd44163590bc&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;devin-avery-46n1T0BMKUM-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;d6f025d500e76590ebef25dacfa5c5583ff138e9&quot;,&quot;hash&quot;:&quot;d6f025d500e76590ebef25dacfa5c5583ff138e9&quot;,&quot;__identity&quot;:&quot;8b47a9bc-9477-4382-83cf-c634cfa239d8&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1601,&quot;position&quot;:10,&quot;width&quot;:1600,&quot;x&quot;:0,&quot;y&quot;:243,&quot;__identity&quot;:&quot;e3d0635f-eeb4-469c-984c-3a08b7c11e32&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="a60e3ca4-b54a-d2e7-dddf-6670440fa0bd" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:47+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="377b051b-6dc3-4929-b5ec-e619c20d4158" nodeName="node-d242p5o8cp02n">
-      <variant sortingIndex="500" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:37+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">tiefkuhletiketten</uriPathSegment>
-        <title __type="string">Tiefkühletiketten</title>
-        <image __type="object" __identifier="f29408bd-2c0e-49eb-9eb2-2cd97d17b888" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;f29408bd-2c0e-49eb-9eb2-2cd97d17b888&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;3132e9f4-8a69-45e0-9bec-a8f35bb35ef3&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;markus-spiske-HCIy15Z3GSU-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;584a43eb41073b6173b3bb1bc66cf841e309b641&quot;,&quot;hash&quot;:&quot;584a43eb41073b6173b3bb1bc66cf841e309b641&quot;,&quot;__identity&quot;:&quot;d9a91d28-1136-4005-a2a6-109c05787d1e&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1601,&quot;position&quot;:10,&quot;width&quot;:1600,&quot;x&quot;:0,&quot;y&quot;:119,&quot;__identity&quot;:&quot;e844fbda-5468-48f4-af52-d10bf7f7bffe&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="140176f2-5b9f-983c-b417-8ad236159080" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:37+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="ce875746-f116-497e-a31b-ed06d5e9f138" nodeName="node-eyl57juwkefvb">
-      <variant sortingIndex="400" workspace="live" nodeType="Abte.Site:Document.Page" version="6" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:23+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T20:09:54+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">booklet-etiketten</uriPathSegment>
-        <title __type="string">Booklet-Etiketten</title>
-        <image __type="object" __identifier="a862edd6-f5d5-4597-9992-3271b492247e" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;a862edd6-f5d5-4597-9992-3271b492247e&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;4f970fd0-40b6-4f54-8acc-e6b493e7ee0a&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;mnz-3uD8aoUBIso-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;d74d229c75022f61ff81e8bf7310637c374c1d51&quot;,&quot;hash&quot;:&quot;d74d229c75022f61ff81e8bf7310637c374c1d51&quot;,&quot;__identity&quot;:&quot;2ae3a7fa-def6-478a-8ce0-564e3bbd61da&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1280,&quot;position&quot;:10,&quot;width&quot;:1280,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;a0ac5c27-d2be-43d2-802b-2a53c9531f11&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="ed6c3fe6-6ac8-69c9-2107-188bf6c696cd" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:23+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="ef9bdfeb-30be-486e-80b3-cbfc358f62af" nodeName="node-h6xln3ydjovxe">
-      <variant sortingIndex="450" workspace="live" nodeType="Abte.Site:Document.Page" version="6" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:31+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T20:09:54+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">wiederablosbare-etiketten</uriPathSegment>
-        <title __type="string">Wiederablösbare Etiketten</title>
-        <image __type="object" __identifier="116df67e-aefa-4111-bc28-e3b98c068b77" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;116df67e-aefa-4111-bc28-e3b98c068b77&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;e740aabd-2a27-475a-b4f0-c1c005fb88d6&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;fredy-jacob-t0SlmanfFcg-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;e9e43c8d0b2792506933f989d8a71fa2ddfcd500&quot;,&quot;hash&quot;:&quot;e9e43c8d0b2792506933f989d8a71fa2ddfcd500&quot;,&quot;__identity&quot;:&quot;7f3766d5-efd0-41e5-a21f-d873b478c746&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:900,&quot;position&quot;:10,&quot;width&quot;:901,&quot;x&quot;:199,&quot;y&quot;:0,&quot;__identity&quot;:&quot;3a8393d3-91de-4789-9a5a-e288a0b90b53&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="9b16a5e4-ec49-8e8a-ad45-fef1573a85e6" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:31+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="19cc2ebc-e670-4b84-a0da-2c7eb4a6c12c" nodeName="node-iz58iuodnmd6q">
-      <variant sortingIndex="700" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:10+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">nummerierte-etiketten</uriPathSegment>
-        <title __type="string">Nummerierte Etiketten</title>
-        <image __type="object" __identifier="3f9c4957-4477-405a-8f60-1140f5c3f394" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;3f9c4957-4477-405a-8f60-1140f5c3f394&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;dd3a7820-78d0-4fe5-89db-9af1bca35536&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;anis-m-WnVrO-DvxcE-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;fa1a0de903538aebce6bacc295232299c208ad3a&quot;,&quot;hash&quot;:&quot;fa1a0de903538aebce6bacc295232299c208ad3a&quot;,&quot;__identity&quot;:&quot;d66cb1e0-79ce-409f-8b6b-0be6a8d1a83d&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1600,&quot;position&quot;:10,&quot;width&quot;:1600,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;1f200868-d072-4789-bb47-9dd97b37ee11&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="a4437128-d59e-40fe-674e-5a6e6df439ec" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:10+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="55753f2f-fe6b-4865-97e1-d97cf5f994b9" nodeName="node-lwr7zskd0hxk6">
-      <variant sortingIndex="600" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:54+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">leuchtfarben-etiketten</uriPathSegment>
-        <title __type="string">Leuchtfarben-Etiketten</title>
-        <image __type="object" __identifier="4c7c237c-2b88-4320-a650-ca8aec507137" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;4c7c237c-2b88-4320-a650-ca8aec507137&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;deb237e5-e3c3-4853-9265-d76c202f55be&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;vino-li-pZB4DGuKrYw-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;0c6916ed3ca1e7c753b86b66dc013e5b802150a5&quot;,&quot;hash&quot;:&quot;0c6916ed3ca1e7c753b86b66dc013e5b802150a5&quot;,&quot;__identity&quot;:&quot;65754f69-bd5d-4928-a1e4-6eff1c683189&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1601,&quot;position&quot;:10,&quot;width&quot;:1600,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;31b41d7c-8f70-441b-a677-00baa444979b&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="64e09709-bf4b-f64c-fcb4-14a6ccca6504" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:54+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="844780e1-2749-47de-9aef-7e9f001cd9a8" nodeName="node-pgwyedhxachle">
-      <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Document.Page" version="6" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T11:17:33+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T20:08:19+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">thermodruck-etiketten</uriPathSegment>
-        <title __type="string">Thermodruck-Etiketten</title>
-        <image __type="object" __identifier="731442b1-51b3-4768-9edc-4b19a13f669d" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;731442b1-51b3-4768-9edc-4b19a13f669d&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;6ef04d06-4b6f-424a-a195-7d4c1c531d47&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;keji-gao-yHI9CyBZlfE-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;bc53bbf6365dd80e8c2ac48b65994f0a34171a27&quot;,&quot;hash&quot;:&quot;bc53bbf6365dd80e8c2ac48b65994f0a34171a27&quot;,&quot;__identity&quot;:&quot;ec26e0fa-053a-4277-8145-05cc2a74ebd8&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1000,&quot;position&quot;:10,&quot;width&quot;:1000,&quot;x&quot;:87,&quot;y&quot;:0,&quot;__identity&quot;:&quot;2a3952e0-ece5-4953-9b46-20c2fe8a9028&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="392ed7dc-c938-69d6-2e84-19d09f154b0a" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T11:17:33+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T11:31:31+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T11:31:31+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="f6cc7b9a-7868-4c9b-9599-78a2c39782ee" nodeName="node-qyn29u7q6o6qc">
-      <variant sortingIndex="850" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:41+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">transparente-etiketten</uriPathSegment>
-        <title __type="string">Transparente Etiketten</title>
-        <image __type="object" __identifier="1097dd6e-5bb0-48d7-9b5a-cbdf39cc9979" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;1097dd6e-5bb0-48d7-9b5a-cbdf39cc9979&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;5ea4f97e-e5fc-4823-800b-e875b1f3f807&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;viktor-forgacs-5mGGOWD-Ths-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;980046fd150a43ffa4efb96fa16608ef00ffd11a&quot;,&quot;hash&quot;:&quot;980046fd150a43ffa4efb96fa16608ef00ffd11a&quot;,&quot;__identity&quot;:&quot;9b2355bb-d5a0-4576-84b8-4b96d77f1167&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1064,&quot;position&quot;:10,&quot;width&quot;:1064,&quot;x&quot;:147,&quot;y&quot;:0,&quot;__identity&quot;:&quot;214f083d-4302-4b2a-ae1e-5a25cca1b3d0&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="f10f7fe3-4195-52fb-93c8-50b218e0fcd4" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:41+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="b05cdc84-31c0-44e3-875c-c48d30bf1f91" nodeName="node-t5c82gc7g1f81">
-      <variant sortingIndex="900" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:56+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">sicherheitsetiketten</uriPathSegment>
-        <title __type="string">Sicherheitsetiketten</title>
-        <image __type="object" __identifier="a541a767-47b8-4faf-91b7-c6cc811dbb0b" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;a541a767-47b8-4faf-91b7-c6cc811dbb0b&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;8bc5279c-1f72-4443-8f6b-f16c3077bcdb&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;jon-tyson-KRedbshBxEk-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;cd2c82d49339a7ad20af907c6a62454d6d6a2ca5&quot;,&quot;hash&quot;:&quot;cd2c82d49339a7ad20af907c6a62454d6d6a2ca5&quot;,&quot;__identity&quot;:&quot;de03909b-f3cf-4fa6-9124-26d9e81cd304&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1600,&quot;position&quot;:10,&quot;width&quot;:1600,&quot;x&quot;:0,&quot;y&quot;:141,&quot;__identity&quot;:&quot;b9948ea4-114f-459e-9de1-0aafd70f1eef&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="cb6c0361-14ad-100e-692b-eb8590270a40" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:56+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="a4d8e802-fca3-4855-827a-0d9ae1b68c12" nodeName="node-u7grroeccf5c9">
-      <variant sortingIndex="650" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:03+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T22:22:33+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">metallisierte-etiketten</uriPathSegment>
-        <title __type="string">Metallisierte Etiketten</title>
-        <image __type="object" __identifier="19e751fa-2085-4571-b004-8b66c60ec056" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;19e751fa-2085-4571-b004-8b66c60ec056&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;00f8853f-09c4-4016-a14e-db9bc75b7341&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;marija-zaric-trJjdYTRuNw-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;c486fcf2f1c32f2e64f28a9b6d43757feee29fa8&quot;,&quot;hash&quot;:&quot;c486fcf2f1c32f2e64f28a9b6d43757feee29fa8&quot;,&quot;__identity&quot;:&quot;79451660-227a-42ff-8f66-391886bd9462&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1067,&quot;position&quot;:10,&quot;width&quot;:1067,&quot;x&quot;:357,&quot;y&quot;:0,&quot;__identity&quot;:&quot;8b01974c-515b-4231-a9a4-c6f95f37f69a&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="ef07bf95-48f4-157e-dec1-b5cae7c2be28" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:01:03+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="6fdce36e-4b8c-4572-a5b3-825f892a45e6" nodeName="node-wroobdu4uf825">
-      <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Document.Page" version="5" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T11:17:21+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T20:07:15+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">rollenetiketten</uriPathSegment>
-        <title __type="string">Rollenetiketten</title>
-        <image __type="object" __identifier="959b5e9f-622c-41d7-8de5-aec0af5e1bd8" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;959b5e9f-622c-41d7-8de5-aec0af5e1bd8&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;8cbc2305-adc6-4c92-9e59-3c4374d90cf6&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;dan-gold-dqyKtpAO2dE-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;86efc076fa8a645ca6dc2862c5271db5dc31c5f9&quot;,&quot;hash&quot;:&quot;86efc076fa8a645ca6dc2862c5271db5dc31c5f9&quot;,&quot;__identity&quot;:&quot;4dc33744-e25f-4285-9fd2-93211496ab5c&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1067,&quot;position&quot;:10,&quot;width&quot;:1067,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;b2183e67-d7c3-44a0-97f8-c7fc62db8f1e&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="9c4b5b68-2d6b-bdd3-4ea2-e9350dc5aa17" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T11:17:21+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T11:54:46+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T11:54:45+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
-     <node identifier="fc557cd5-e5c5-4057-9399-1d27d7b151a4" nodeName="node-zrosugf8e6y6q">
-      <variant sortingIndex="350" workspace="live" nodeType="Abte.Site:Document.Page" version="6" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>en</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:16+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T20:09:54+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">spezialform-etiketten</uriPathSegment>
-        <title __type="string">Spezialform-Etiketten</title>
-        <image __type="object" __identifier="3066a275-1531-4369-aba4-c54f0ec7252b" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;3066a275-1531-4369-aba4-c54f0ec7252b&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;1bcfb705-d981-4eec-a9bc-fa74c536d020&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;ilja-frei-z8q9fb3Wvvk-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;7dcd44e8002e5412894b6d3a119dc362f966cae5&quot;,&quot;hash&quot;:&quot;7dcd44e8002e5412894b6d3a119dc362f966cae5&quot;,&quot;__identity&quot;:&quot;6495b256-b83b-4ddf-92fa-b459799e60a3&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1200,&quot;position&quot;:10,&quot;width&quot;:1200,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;b5383d2b-8648-45a5-97e8-0fb466b353fb&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</image>
-        <hideHeader __type="boolean"></hideHeader>
-       </properties>
-      </variant>
-      <node identifier="ddb73905-7fa4-84a3-213b-45b7d4b3ea08" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T16:00:16+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T16:02:18+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
      </node>
     </node>
     <node identifier="55aa0ac8-7db6-45e2-b83a-83d33d4d0936" nodeName="node-5gz14j2qi7bar">
-     <variant sortingIndex="450" workspace="live" nodeType="Abte.Site:Document.Page" version="2" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="450" workspace="live" nodeType="Abte.Site:Document.Product" version="8" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T07:59:49+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T13:56:32+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T13:56:32+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">internet</uriPathSegment>
        <hideHeader __type="boolean"></hideHeader>
        <title __type="string">Internet</title>
+       <subTitle __type="string">Unser Internet ist omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
+       <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
+       <icon __type="string">internet</icon>
+       <image __type="object" __identifier="5506aedf-d1fe-444c-a1f8-b0d53c099134" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5506aedf-d1fe-444c-a1f8-b0d53c099134&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;jason-goodman-tHO1_OuKbg0-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;9fa22a2f410d199027adb72dbecabfd8bbdc8a3b&quot;,&quot;hash&quot;:&quot;9fa22a2f410d199027adb72dbecabfd8bbdc8a3b&quot;,&quot;__identity&quot;:&quot;133dfe6e-55f2-47a1-8e60-38fdcba676e3&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]}</image>
       </properties>
      </variant>
      <node identifier="bfc78b67-2a06-1892-a62f-6ae666acd1ae" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-03-31T07:59:49+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:39+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:39+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
      </node>
-    </node>
-    <node identifier="6aca0658-0be7-4e2c-8e17-ad3f7379b407" nodeName="node-9dugt3exxxb6k">
-     <variant sortingIndex="150" workspace="live" nodeType="Abte.Site:Document.Page" version="6" removed="" hidden="" hiddenInIndex="">
-      <dimensions>
-       <language>en</language>
-      </dimensions>
-      <accessRoles __type="array"/>
-      <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:40:00+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:19:55+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T19:33:37+00:00</lastPublicationDateTime>
-      <properties>
-       <uriPathSegment __type="string">etiketten-shop</uriPathSegment>
-       <title __type="string">Etiketten-Shop</title>
-       <image __type="object" __identifier="a4ce552f-f635-4d7c-bce0-281031a17da6" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;a4ce552f-f635-4d7c-bce0-281031a17da6&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;markus-spiske-hqCEQTc5gZA-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;877e2979f246e264c26094e599f087cd6ea66606&quot;,&quot;hash&quot;:&quot;877e2979f246e264c26094e599f087cd6ea66606&quot;,&quot;__identity&quot;:&quot;23be4fcd-1187-42f2-8539-423666f0db89&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]}</image>
-       <hideHeader __type="boolean"></hideHeader>
-      </properties>
-     </variant>
-     <node identifier="63e92671-cd7a-3651-089a-c90a1d393a05" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+     <node identifier="002f1340-b952-91d5-e168-697ab8df7305" nodeName="video">
+      <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
        <dimensions>
-        <language>en</language>
+        <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:40:00+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T10:40:11+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T10:40:11+00:00</lastPublicationDateTime>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:37+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:39+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:39+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
-      <node identifier="7a590fb5-097a-46f6-bfe7-6e57b81c5b90" nodeName="node-4emfv9a6vm8wg">
-       <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Headline" version="3" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>en</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:40:09+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2021-11-29T12:11:16+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T12:11:16+00:00</lastPublicationDateTime>
-        <properties>
-         <title __type="string">&lt;h2&gt;Titelzeile&lt;/h2&gt;</title>
-        </properties>
-       </variant>
-      </node>
      </node>
     </node>
     <node identifier="98b6262f-7552-4bd3-afd8-4f88cfb9f2d7" nodeName="node-h0591dkotgv8w">
@@ -942,34 +533,6 @@ https://flickity.metafizzy.co
        <title __type="string">meta</title>
       </properties>
      </variant>
-     <node identifier="6c2ae4da-a5f7-422b-acf9-a04a991b7d7f" nodeName="node-7w2a92q6nw8xj">
-      <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Document.Page" version="3" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>de</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2022-04-01T15:18:59+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:01+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:01+00:00</lastPublicationDateTime>
-       <properties>
-        <uriPathSegment __type="string">asdf</uriPathSegment>
-        <hideHeader __type="boolean"></hideHeader>
-        <title __type="string">asdf</title>
-       </properties>
-      </variant>
-      <node identifier="a9e41c6c-a0f3-00eb-bc4e-a38979862875" nodeName="main">
-       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>de</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2022-04-01T15:18:59+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:01+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:01+00:00</lastPublicationDateTime>
-        <properties/>
-       </variant>
-      </node>
-     </node>
      <node identifier="6fa24c80-5078-47a9-bf3d-a80c8aea4b4f" nodeName="node-y63m4q68b1le6">
       <variant sortingIndex="150" workspace="live" nodeType="Abte.Site:Document.Page" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
@@ -1028,14 +591,14 @@ https://flickity.metafizzy.co
      </node>
     </node>
     <node identifier="ee17102f-af68-4534-a87c-21bf8d0c267f" nodeName="node-jbxdmj0jkbkv5">
-     <variant sortingIndex="663" workspace="live" nodeType="Neos.Neos:Shortcut" version="3" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="663" workspace="live" nodeType="Neos.Neos:Shortcut" version="4" removed="" hidden="" hiddenInIndex="1">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:06+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:25+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:25+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">top</uriPathSegment>
        <metaRobotsNoindex __type="boolean">1</metaRobotsNoindex>
@@ -1142,6 +705,109 @@ https://flickity.metafizzy.co
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
         <properties/>
        </variant>
+       <node identifier="ad1e5318-90f5-45ec-b612-68b4be907db0" nodeName="node-nn0rajyx6esi0">
+        <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Accordion" version="2" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:12+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
+         <properties>
+          <dropShadow __type="boolean"></dropShadow>
+          <bgColor __type="string">none</bgColor>
+          <accordion_firstOpen __type="boolean"></accordion_firstOpen>
+         </properties>
+        </variant>
+        <node identifier="356f520a-02ac-470f-bd86-5026fbc37aee" nodeName="node-nvoqepjqs4yws">
+         <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="3" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:12+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
+          <properties/>
+         </variant>
+         <node identifier="9c2d351a-6325-c79a-9bb9-57cdab620bac" nodeName="content">
+          <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:12+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
+           <properties/>
+          </variant>
+         </node>
+        </node>
+        <node identifier="e8bd5f6f-8f07-4d57-aa93-8e8851b3f592" nodeName="node-ogewzmpvxrrhm">
+         <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="3" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:12+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
+          <properties/>
+         </variant>
+         <node identifier="0229bddc-9db1-994e-aa54-c03f2b3d70f0" nodeName="content">
+          <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:12+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
+           <properties/>
+          </variant>
+         </node>
+        </node>
+        <node identifier="025ebbad-e69d-427f-954b-f1ceed3298e8" nodeName="node-pb7ifn2zj4rio">
+         <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="3" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:12+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
+          <properties/>
+         </variant>
+         <node identifier="dc461896-0714-618d-1b32-e1b2f68ce8f4" nodeName="content">
+          <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:12+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
+           <properties/>
+          </variant>
+         </node>
+        </node>
+       </node>
+       <node identifier="d070b15e-a05f-4a1a-a275-b039f61e87f9" nodeName="node-qtee5f9oe8p8i">
+        <variant sortingIndex="50" workspace="live" nodeType="Abte.Site:Content.Text" version="5" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:16+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
+         <properties>
+          <isLead __type="boolean"></isLead>
+          <text __type="string">&lt;h1&gt;FAQ&lt;/h1&gt;</text>
+         </properties>
+        </variant>
+       </node>
       </node>
      </node>
      <node identifier="ee91cbcb-bb78-4c47-abfe-a5bf5a4dc2ed" nodeName="node-uh07u0xenshby">
@@ -1162,30 +828,73 @@ https://flickity.metafizzy.co
       </variant>
      </node>
     </node>
-    <node identifier="159cb5f4-4a6d-4a4c-ad42-e3fa36dc24f5" nodeName="node-yj17wcirjnfzc">
-     <variant sortingIndex="600" workspace="live" nodeType="Abte.Site:Document.Page" version="3" removed="" hidden="" hiddenInIndex="">
+    <node identifier="7c8202d3-c366-4782-a1e9-326e53678d1a" nodeName="node-s1a3612dgkf1h">
+     <variant sortingIndex="625" workspace="live" nodeType="Abte.Site:Document.MenuSeparator" version="4" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
-      <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:03+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:48+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:34:54+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:34:53+00:00</lastPublicationDateTime>
       <properties>
-       <uriPathSegment __type="string">mobile</uriPathSegment>
+       <uriPathSegment __type="string">x</uriPathSegment>
        <hideHeader __type="boolean"></hideHeader>
-       <title __type="string">Mobile</title>
+       <title __type="string">---</title>
       </properties>
      </variant>
-     <node identifier="d4d9c24d-e206-f43e-7ba7-7eb7720c6d4b" nodeName="main">
+     <node identifier="4677ea13-b14d-34c3-0864-8d9c4991ccb0" nodeName="main">
       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:48+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:50+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:50+00:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+     </node>
+    </node>
+    <node identifier="159cb5f4-4a6d-4a4c-ad42-e3fa36dc24f5" nodeName="node-yj17wcirjnfzc">
+     <variant sortingIndex="600" workspace="live" nodeType="Abte.Site:Document.Product" version="7" removed="" hidden="" hiddenInIndex="">
+      <dimensions>
+       <language>de</language>
+      </dimensions>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:03+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:53:27+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:53:27+00:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">mobile</uriPathSegment>
+       <hideHeader __type="boolean"></hideHeader>
+       <title __type="string">Mobile</title>
+       <subTitle __type="string">Sandi omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
+       <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
+       <icon __type="string">mobile</icon>
+      </properties>
+     </variant>
+     <node identifier="d4d9c24d-e206-f43e-7ba7-7eb7720c6d4b" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:03+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:43+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+     </node>
+     <node identifier="9dbf22d9-988f-2d02-3193-ad4999eab2e9" nodeName="video">
+      <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:22+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:43+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
      </node>
@@ -1205,28 +914,30 @@ https://flickity.metafizzy.co
       </properties>
      </variant>
      <node identifier="2de042a4-8622-18f1-acf8-f7b848460977" nodeName="cookiesettings">
-      <variant sortingIndex="100" workspace="live" nodeType="KaufmannDigital.GDPR.CookieConsent:Content.CookieSettings" version="2" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="100" workspace="live" nodeType="KaufmannDigital.GDPR.CookieConsent:Content.CookieSettings" version="6" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:10+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:37+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:37+00:00</lastPublicationDateTime>
        <properties>
-        <headline __type="string"></headline>
-        <mainDescription __type="string"></mainDescription>
+        <headline __type="string">Wir verwenden Cookies</headline>
+        <mainDescription __type="string">Um Ihnen ein besonders angenehmes Surf-Erlebnis zu bieten.</mainDescription>
         <individualSettingsDescription __type="string"></individualSettingsDescription>
-        <acceptAllButtonLabel __type="string">Accept all</acceptAllButtonLabel>
-        <saveButtonLabel __type="string">Save</saveButtonLabel>
-        <acceptNecessaryCookiesLabel __type="string">Accept necessary cookies</acceptNecessaryCookiesLabel>
-        <imprintLabel __type="string">Imprint</imprintLabel>
-        <dataProtectionPolicyLabel __type="string">Privacy</dataProtectionPolicyLabel>
-        <openIndividualSettingsLabel __type="string">Individual settings</openIndividualSettingsLabel>
-        <closeIndividualSettingsLabel __type="string">Close settings</closeIndividualSettingsLabel>
+        <acceptAllButtonLabel __type="string">Alle akzeptieren</acceptAllButtonLabel>
+        <saveButtonLabel __type="string">Speichern</saveButtonLabel>
+        <acceptNecessaryCookiesLabel __type="string">Nur benötigte Cookies erlauben</acceptNecessaryCookiesLabel>
+        <imprintLabel __type="string">Impressum</imprintLabel>
+        <dataProtectionPolicyLabel __type="string">Datenschutz</dataProtectionPolicyLabel>
+        <openIndividualSettingsLabel __type="string">Einstellungen</openIndividualSettingsLabel>
+        <closeIndividualSettingsLabel __type="string">Schliessen</closeIndividualSettingsLabel>
         <versionDate __type="object" __classname="DateTime">2022-04-01T15:19:08+00:00</versionDate>
         <decisionTtl __type="integer">0</decisionTtl>
         <closeButtonEnabled __type="boolean"></closeButtonEnabled>
+        <dataProtectionPolicyLink __type="string">node://6fa24c80-5078-47a9-bf3d-a80c8aea4b4f</dataProtectionPolicyLink>
+        <imprintLink __type="string">node://0aafc2a0-a095-45b3-9669-1d220defb105</imprintLink>
        </properties>
       </variant>
       <node identifier="8f4c25ef-9ced-6ea9-08fe-80edffbd3e5e" nodeName="settingelements">
@@ -1240,61 +951,207 @@ https://flickity.metafizzy.co
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-01T15:19:18+00:00</lastPublicationDateTime>
         <properties/>
        </variant>
+       <node identifier="c8889923-ce4b-485f-b1c7-253c315ce0ff" nodeName="node-5g8ox6id0esei">
+        <variant sortingIndex="100" workspace="live" nodeType="KaufmannDigital.GDPR.CookieConsent:Content.NecessarySettingGroup" version="3" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:00:45+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:00:56+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:00:56+00:00</lastPublicationDateTime>
+         <properties>
+          <headline __type="string"></headline>
+          <description __type="string"></description>
+          <identifier __type="string">Necessary</identifier>
+         </properties>
+        </variant>
+        <node identifier="ac04d5df-e3b6-6686-2f9c-3eb36efecf37" nodeName="cookies">
+         <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:00:45+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:00:56+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:00:56+00:00</lastPublicationDateTime>
+          <properties/>
+         </variant>
+         <node identifier="ffcbb420-1983-40ad-91f1-53027d3ba4f7" nodeName="node-6vp22xzfq40ir">
+          <variant sortingIndex="100" workspace="live" nodeType="KaufmannDigital.GDPR.CookieConsent:Content.Cookie" version="4" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:02:43+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:03:20+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:03:20+00:00</lastPublicationDateTime>
+           <properties>
+            <name __type="string"></name>
+            <description __type="string"></description>
+            <identifier __type="string">Shakalak</identifier>
+            <javaScriptCode __type="string">console.log('necessary cookie');</javaScriptCode>
+            <priority __type="integer">0</priority>
+           </properties>
+          </variant>
+          <node identifier="37bff4ae-f314-10b8-8286-9de51813e0b3" nodeName="attributes">
+           <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:02:43+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:02:48+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:02:48+00:00</lastPublicationDateTime>
+            <properties/>
+           </variant>
+          </node>
+         </node>
+        </node>
+       </node>
+       <node identifier="ce460632-5f41-410c-a694-d0ebe8b46839" nodeName="node-mktaibgymzmoa">
+        <variant sortingIndex="150" workspace="live" nodeType="KaufmannDigital.GDPR.CookieConsent:Content.CookieGroup" version="4" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:00+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:06+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:06+00:00</lastPublicationDateTime>
+         <properties>
+          <headline __type="string"></headline>
+          <description __type="string"></description>
+          <identifier __type="string">Tracking</identifier>
+         </properties>
+        </variant>
+        <node identifier="17a21e5d-7299-7aee-cc23-56be3b76d213" nodeName="cookies">
+         <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:00+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:06+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:06+00:00</lastPublicationDateTime>
+          <properties/>
+         </variant>
+         <node identifier="120df9ab-36de-4cee-8aa6-daeb4f5b067b" nodeName="node-sp7vk2wfgj891">
+          <variant sortingIndex="100" workspace="live" nodeType="KaufmannDigital.GDPR.CookieConsent:Content.Cookie" version="3" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:10+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:20+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:20+00:00</lastPublicationDateTime>
+           <properties>
+            <name __type="string"></name>
+            <description __type="string"></description>
+            <identifier __type="string">Analytics</identifier>
+            <javaScriptCode __type="string"></javaScriptCode>
+            <priority __type="integer">0</priority>
+           </properties>
+          </variant>
+          <node identifier="0cb202cd-fc3d-9aa7-cc5b-833cfe21c6c4" nodeName="attributes">
+           <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:10+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:20+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:20+00:00</lastPublicationDateTime>
+            <properties/>
+           </variant>
+          </node>
+         </node>
+        </node>
+       </node>
       </node>
      </node>
     </node>
     <node identifier="d950b1a5-084e-4b8c-9a45-fca6959708f3" nodeName="node-zewdn0qh8v2b8">
-     <variant sortingIndex="500" workspace="live" nodeType="Abte.Site:Document.Page" version="3" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="500" workspace="live" nodeType="Abte.Site:Document.Product" version="9" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T07:59:54+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T14:02:03+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T14:02:03+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">tv</uriPathSegment>
        <hideHeader __type="boolean"></hideHeader>
        <title __type="string">TV</title>
+       <subTitle __type="string">TV-Stuff a gogo?&amp;nbsp;&lt;br&gt;Sandi omnis comnienet everum quidebit,&amp;nbsp;&lt;br&gt;quam, comnienet remini, unto.</subTitle>
+       <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
+       <icon __type="string">TV</icon>
       </properties>
      </variant>
      <node identifier="558318c2-6e00-d2f0-09f4-58d673c73fd4" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-03-31T07:59:54+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:43+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+     </node>
+     <node identifier="8250dcf3-25e6-ae99-0aba-5fe475685fbd" nodeName="video">
+      <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:33+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:43+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
      </node>
     </node>
     <node identifier="f14dfee9-acd1-4150-98fe-41f82129e0cd" nodeName="node-zwnvnya6e50ko">
-     <variant sortingIndex="550" workspace="live" nodeType="Abte.Site:Document.Page" version="3" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="550" workspace="live" nodeType="Abte.Site:Document.Product" version="7" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T07:59:59+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:53:27+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:53:27+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">telefonie</uriPathSegment>
        <hideHeader __type="boolean"></hideHeader>
        <title __type="string">Telefonie</title>
+       <subTitle __type="string">Sandi omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
+       <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
+       <icon __type="string">phone</icon>
       </properties>
      </variant>
      <node identifier="35b8ffc8-8978-8d32-8014-8f133f569af5" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-03-31T07:59:59+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:38+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:43+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+     </node>
+     <node identifier="f26fe0f1-9100-eb32-4a30-df85fbd75d18" nodeName="video">
+      <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:28+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:43+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
      </node>
