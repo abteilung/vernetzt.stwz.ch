@@ -1,4 +1,3 @@
 prototype(Abte.Site:Document.MenuSeparator) < prototype(Abte.Site:Document.AbstractPage) {
 
-
 }

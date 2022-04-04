@@ -1,8 +1,10 @@
 prototype(Stwz.Navigation:Component.Navbar.Navigation) < prototype(Neos.Fusion:Component) {
     
     menuItems = Neos.Neos:MenuItems {
-        itemCollection = ${ q(site).children('[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.Service]').get() }
+        itemCollection = ${ q(site).children('[instanceof Neos.Neos:Document]').get() }
         maximumLevels = 1
+        filter = 'Abte.Site:Document.Story,Abte.Site:Document.Service,Abte.Site:Document.MenuSeparator'
+
     }
 
     renderer = afx`

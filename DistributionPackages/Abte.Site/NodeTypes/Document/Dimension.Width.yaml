@@ -1,8 +1,0 @@
-'Abte.Site:Document.Dimension.Width':
-  superTypes:
-    'Abte.Site:Document.AbstractPage': true
-    'Abte.Site:Constraint.Document.Restricted': true
-  ui:
-    label: Breite
-    icon: arrows-alt-h
-    position: 410
