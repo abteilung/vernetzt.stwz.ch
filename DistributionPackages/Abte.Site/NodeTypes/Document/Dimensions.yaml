@@ -1,0 +1,15 @@
+'Abte.Site:Document.Dimensions':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Dimensionen
+    icon: crop
+    position: 410
+    inlineEditable: true
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Document.Dimension.Width': true
+      'Abte.Site:Document.Dimension.Height': true
+      'Abte.Site:Document.Dimension.Diameter': true

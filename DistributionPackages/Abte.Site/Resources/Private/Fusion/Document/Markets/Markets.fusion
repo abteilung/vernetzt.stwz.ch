@@ -1,0 +1,67 @@
+prototype(Abte.Site:Document.Markets) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+
+        aside = Neos.Neos:ContentCollection {
+            nodePath = 'aside'
+        }
+
+        pageTitle = Neos.Neos:Editable {
+            property = 'titleOverride'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        subTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        teaser_short = Neos.Neos:Editable {
+            property = 'teaser_short'
+            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+                @position = 'end'
+            }
+        }
+
+        renderer = afx`
+            <div class="gridPadding">
+                <div class="container grid grid-cols-12 gridgap">
+                    <main class="col-span-12 space-y-8 lg:col-span-8">
+                        <div class="mb-20 xl:mb-24">
+                            <Stwz.Navigation:Component.Nav.Breadcrumb />
+                            <h2 class="h1">{props.pageTitle}</h2>
+                            <Neos.Fusion:Augmenter class="lead">
+                                {props.teaser_short}
+                            </Neos.Fusion:Augmenter>
+                        </div>
+
+                        <Abte.Site:Component.SubMenuAsCards cols="2" />
+                        
+                        {props.main}
+
+                    </main>
+                    <aside class="col-span-12 lg:col-end-13 lg:col-span-3">
+                        <div class="sticky grid md:grid-cols-2 gridPadding-top top-24 lg:grid-cols-1 gridgap">
+                            <Abte.Site:Content.ContactBox />
+                            <!--
+                                <Abte.Site:Component.ProductUpdates 
+                                title="Neu im Sortiment" 
+                                further="…" 
+                            />
+                            <Abte.Site:Component.SiblingsDropdown label="Weitere Etikettierlösungen" />
+                            -->
+
+                            {props.aside}
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        `
+    }
+}
+
+
+

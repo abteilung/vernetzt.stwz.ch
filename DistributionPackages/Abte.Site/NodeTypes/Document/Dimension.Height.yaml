@@ -1,0 +1,8 @@
+'Abte.Site:Document.Dimension.Height':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Höhe
+    icon: arrows-alt-v
+    position: 420
