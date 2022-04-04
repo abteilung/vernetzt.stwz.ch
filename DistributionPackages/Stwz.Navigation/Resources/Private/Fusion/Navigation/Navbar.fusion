@@ -7,13 +7,13 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
         <div 
             x-cloak
             id={props.menuID}
-            class="fixed top-0 z-10 w-full transition-all transform border-2 duration-250 isolate border-primary "
+            class="fixed top-0 z-30 w-full transition-all transform duration-250 isolate h-32"
         >
             <Stwz.Navigation:Component.Extra.Navbar.Navigation />
             
-            <div class="flex justify-center bg-white">
+            <div class="flex justify-center h-20">
                 <div class="container flex mx-0 justify-right gridPadding-x">
-                    <div class="flex items-center bg-white justify-left">
+                    <div class="flex items-center justify-left">
                         <Stwz.Navigation:Component.Navbar.Brand />
                     </div>
                     
@@ -28,7 +28,12 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
                 </div>
             </div>
         </div>
-
+        <div class="h-32 bg-slate-200  z-10">
+            
+        </div>
+        <div class="h-32 bg-slate-400 sticky top-0 z-10">
+            
+        </div>
         <Stwz.Navigation:Component.Navbar.KontaktModal />
     `
 }
