@@ -22,14 +22,16 @@
     nodeTypes:
       '*': false
       'Abte.Site:Document.Page': true
-      # 'Abte.Site:Document.PageWithAside': true
-      # 'Abte.Site:Document.FilterPage': true
-      # 'Abte.Site:Document.ProductOverview': true
       'Abte.Site:Document.Product': true
       'Abte.Site:Document.Service': true
       'Abte.Site:Document.MenuSeparator': true
-      # 'Abte.Site:Document.About': true
   properties:
+    'address':
+      options:
+        preset: 'text.free'
+    'contacts':
+      options:
+        preset: 'text.free'
     'footerInfo':
       type: string
       ui:

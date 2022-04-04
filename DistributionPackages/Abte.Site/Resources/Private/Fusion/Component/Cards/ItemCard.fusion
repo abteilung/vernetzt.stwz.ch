@@ -122,7 +122,7 @@ prototype(Abte.Site:Component.ItemCard) < prototype(Neos.Fusion:Component) {
             <div class="product-description">
                 <h3 class="break-words h4 title">{node.context.inBackend && props.isSynced ? '&#128260; ': ''}{props.title}</h3>
                 <p>{props.descriptionShort}</p>
-                <p class="font-bold h4 productPrice text-secondary"
+                <p class="font-semibold h4 productPrice text-secondary"
                     @if.hasPrice={props.productPrice}
                 >
                     CHF {props.productPrice} 

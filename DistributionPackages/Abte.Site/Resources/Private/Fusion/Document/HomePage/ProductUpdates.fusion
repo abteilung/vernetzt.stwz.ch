@@ -131,7 +131,7 @@ prototype(Abte.Site:Component.renderCardType) < prototype(Neos.Neos:ContentCompo
 //             <div class="divide-x-2 divide-base-100">
 //                 <h3>{q(node).property('title')}</h3>
 //                 <p>{q(node).property('productID')}</p>
-//                 <div class="font-bold text-secondary">{q(node).property('producPrice')}</div>
+//                 <div class="font-semibold text-secondary">{q(node).property('producPrice')}</div>
 //             </div>
 //         </Carbon.Link:Link>
 //     `

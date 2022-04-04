@@ -13,7 +13,7 @@ prototype(Stwz.Navigation:Component.Navbar.Navigation) < prototype(Neos.Fusion:C
       >
 
         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
-          <Stwz.Navigation:Navbar.LinkItem class="font-black" />
+          <Stwz.Navigation:Navbar.LinkItem class="font-semibold" />
           <!-- <Stwz.Navigation:Navbar.LinkItemWithSub /> -->
           <Stwz.Navigation:Navbar.SeparatorItem />
         </Neos.Fusion:Loop>

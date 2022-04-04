@@ -28,7 +28,7 @@ prototype(Abte.Site:Component.Heading) < prototype(Neos.Neos:ContentComponent) {
     }
 
     renderer = afx`
-        <header class={props.class + ' ' + 'flex flex-col relative font-bold text-white uppercase heading'}>
+        <header class={props.class + ' ' + 'flex flex-col relative font-semibold text-white uppercase heading'}>
             <div>
                 <div class={props.style == 'enlarged' ? props.classTitleEnlarged : props.classTitle }>
                     <div class="block">{props.title}</div>

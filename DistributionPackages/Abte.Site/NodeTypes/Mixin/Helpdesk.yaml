@@ -21,3 +21,8 @@
         preset: 'text.plain'
       ui:
         label: 'Helpdesk E-Mail'
+    'helpdeskWeb':
+      options:
+        preset: 'text.plain'
+      ui:
+        label: 'Helpdesk Internet'        

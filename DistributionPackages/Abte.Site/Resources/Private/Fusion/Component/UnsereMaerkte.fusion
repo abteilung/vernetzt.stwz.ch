@@ -56,7 +56,7 @@ prototype(Abte.Site:Component.UnsereMaerkte) < prototype(Neos.Neos:ContentCompon
                                         attributes.class="whitespace-nowrap"
                                     >
                                         <div class="relative flex items-center pl-6 space-x-2 group">
-                                            {props.icon} <div class="text-lg font-bold !tracking-normal lg:text-xl">{ props.showTitleOverride ? q(item.node).property('titleOverride') : item.label }</div>
+                                            {props.icon} <div class="text-lg font-semibold !tracking-normal lg:text-xl">{ props.showTitleOverride ? q(item.node).property('titleOverride') : item.label }</div>
                                         </div>
                                     </Carbon.Link:Link>
 

@@ -41,7 +41,7 @@ prototype(Abte.Site:Component.Portrait) < prototype(Neos.Fusion:Component) {
                     />
 
                     <div class="relative px-4 py-6">
-                        <header class="absolute left-0 z-10 flex flex-col max-w-full mt-10 font-bold text-white uppercase -top-10 heading">
+                        <header class="absolute left-0 z-10 flex flex-col max-w-full mt-10 font-semibold text-white uppercase -top-10 heading">
                             <div>
                                 <div class="left-0 inline-block absolute h-9 lg:h-12 w-auto px-4 py-1 lg:text-xl bg-primary -translate-y-9 lg:-translate-y-12 !tracking-normal">
                                     <div class="block whitespace-nowrap">
@@ -64,7 +64,7 @@ prototype(Abte.Site:Component.Portrait) < prototype(Neos.Fusion:Component) {
                                     additionalClass="flex space-x-2 items-center"
                                 >
                                     <Abte.Site:Icon.Phone />
-                                    <div class="font-bold">{props.phone}</div>
+                                    <div class="font-semibold">{props.phone}</div>
                                 </Carbon.Link:Link>
                             </div>
                             <div>

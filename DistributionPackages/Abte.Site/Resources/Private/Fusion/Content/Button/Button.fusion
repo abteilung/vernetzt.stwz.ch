@@ -1,7 +1,7 @@
 prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         
     class = ''
-    buttonClass = 'flex flex-row items-center px-5 py-3 space-x-2 text-lg font-bold tracking-normal bg-primary'
+    buttonClass = 'flex flex-row items-center px-5 py-3 space-x-2 text-lg font-semibold tracking-normal bg-primary'
     icon = ${ q(node).property('icon') ? '' : '' }
     iconPosition = ${ q(node).property('iconPosition') ? true : false }
     

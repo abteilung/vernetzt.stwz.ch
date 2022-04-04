@@ -5,15 +5,16 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
     }
 
     renderer = afx`
-        <div class="container">
+        <div class="container" id="addressLookup">
             <div class="relative flex items-center w-10/12 px-16 mx-auto space-x-8 rounded-full bg-accent h-36">
                 <div>{props.icon}</div>
                 <div class="">
                     <h3 class="text-black">Glasfaseranschluss prüfen</h3>
                     <div class="flex space-x-4">
-                        <input />
-                        <input />
-                        <input />
+                        <input type="text" placeholder="PLZ/Ort" />
+                        <input type="text" placeholder="Strasse" />
+                        <input type="text" placeholder="Nr." />
+                        <button class="button" type="submit">Prüfen</button>
                     </div>
                 </div>
             </div>

@@ -4,8 +4,8 @@ prototype(Stwz.Navigation:Component.Nav.Meta) < prototype(Neos.Fusion:Component)
         itemCollection = ${site.properties.footerItems}
     }
 
-	class = "space-x-4 md:flex"
-	linkClass = "xl:py-3 whitespace-nowrap hover:opacity-100 hover:underline"
+	class = ""
+	linkClass = "whitespace-nowrap hover:underline"
 
 	renderer = afx`
         <ul class={props.class}>

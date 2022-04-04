@@ -4,7 +4,7 @@ prototype(Abte.Site:Component.Link) < prototype(Neos.Neos:ContentComponent) {
 
     align = ''
 
-    linkClass = 'flex flex-row items-center space-x-2 text-lg lg:text-xl font-bold !tracking-normal'
+    linkClass = 'flex flex-row items-center space-x-2 text-lg lg:text-xl font-semibold !tracking-normal'
     
     text = ''
 

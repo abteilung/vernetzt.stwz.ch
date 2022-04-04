@@ -1,6 +1,6 @@
 prototype(Abte.Site:Content.BasketButton) < prototype(Neos.Neos:ContentComponent) {
 
-    buttonClass = 'border-white text-white snipcart-add-item flex flex-row items-center px-5 py-3 space-x-2 text-lg font-bold tracking-normal'
+    buttonClass = 'border-white text-white snipcart-add-item flex flex-row items-center px-5 py-3 space-x-2 text-lg font-semibold tracking-normal'
 
     iconAfter = Abte.Site:Icon.CartSmall {
         class='relative duration-150 left-1 text-secondary group-hover:scale-110'
