@@ -20,6 +20,24 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
         asset   = ${ q(node).property('image') }
     }
 
+       title = ${ q(node).property('title') }
+
+        subTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+        }
+
+        intro = Neos.Neos:Editable {
+            property = 'intro'
+        }
+
+        teaser_short = Neos.Neos:Editable {
+            property = 'teaser_short'
+        }
+        icon = Abte.Site:Icon.Calendar {
+            class = ''
+        }
+
+
     renderer = afx`
         <div class="gridPadding">
             <div class="container grid grid-cols-12 mt-12 mb-8 md:mt-36 2xl:mt-48 md:mb-12 2xl:mb-24 gridgap">
@@ -37,18 +55,41 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
                     />
 
                 </div>
-                <div class="col-span-12 space-y-8 md:col-span-6 lg:col-span-6 lg:col-end-13">
-
-                    <h1 class="h2">
-                        {props.pageTitle}
-                    </h1>
-
-                    {props.descriptionShort}
-                    
-                </div>
                
             </div>
         </div>
+
+        <div class="container">
+            <div class="grid grid-cols-2 gridgap-x">
+                <div class="gridColumn flex items-start space-x-2">
+                    <div class="-rotate-90 w-1/6 mb-6 text-primary">
+                        <h1 class=" block">{props.title}</h1>
+                    </div>
+                    <div class="w-5/6 content">
+                        <h3>{String.toString(props.subTitle)}</h3>
+                        <Neos.Fusion:Augmenter class="strong">
+                        {props.intro}
+                        </Neos.Fusion:Augmenter>
+                        <p>{props.intro}</p>
+                    </div>
+                </div>
+
+                <div class="gridColumn">
+
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        width="800"
+                        height="600"
+                        class="object-cover object-center w-full h-full"
+                    />
+
+                    <img src="https://via.placeholder.com/800x600" alt={props.title} width="800" height="600"
+                        @if.hasNoImage={!props.imageSource}
+                    />                        
+                </div>
+            </div>        
+        </div>        
     `
 
 	@cache {

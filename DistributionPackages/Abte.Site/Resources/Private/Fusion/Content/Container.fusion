@@ -1,43 +1,71 @@
 
 prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
 
-    removePadding = ${ q(node).property('removePadding') }
-    
-    fullWidth = ${ q(node).property('fullWidth') }
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
 
-    class = ${this.removePadding ? 'container' : 'container gridPadding' }
+    class = 'gridPadding'
+
+    fullWidth = ${ q(node).property('fullWidth') }
     
-    fullWidthClass = ${this.fullWidth ? 'cnt-container gridPaddingBig' : 'container' }
+    contentFullWidth = ${ q(node).property('contentFullWidth') ? null : 'container' }
+
+    fullWidthClass = ${ this.fullWidth ? 'cnt-container' : 'container' }
     
     dropShadow = ${ q(node).property('dropShadow') }
+    
+    removePadding = ${ q(node).property('removePadding') ? '!py-0' : '' }
 
     bgColor = ${ q(node).property('bgColor') }
-    
-    containerClass = ${ (this.dropShadow ? 'box-shadow' : null ) + ' ' + this.bgColor }
+
+    shadowClass = ${ (this.dropShadow ? 'box-shadow p-8' : null ) + ' ' + this.bgColor }
 
     title = Neos.Neos:Editable {
         property = 'title'
+        node = ${ node}
     }
 
     subTitle = Neos.Neos:Editable {
         property = 'subTitle'
+        node = ${ node}
+    }
+    
+    link = ${ q(node).property('link') }
+
+    linkText = Neos.Neos:Editable {
+        property = 'linkText'
+        node = ${ node}
+        block = ${ false }
     }
 
 	content = Neos.Neos:ContentCollectionRenderer {
-		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
 	}
 
   	renderer = afx`
-        <div class={'relative containerMargin' + ' ' + props.containerClass + ' ' + props.fullWidthClass}>
-            <Abte.Site:Component.Heading 
-                style="enlarged" 
-                title={props.title} 
-                subTitle={props.subTitle} 
-                @if.hasDropShadow={props.title}
-            />
-
-            <div class={props.class}>
-                {props.content}
+        <div class={props.class + ' ' + props.removePadding + ' ' + props.shadowClass + ' ' + props.fullWidthClass}>
+            
+            <div class={props.contentFullWidth}>
+                <div class="flex items-start mb-4 md:mb-8 lg:mb-12 containerHeader space-x-6 items-center"
+                    @if.hasTitleOrLink={ props.title ? true : props.link ? true : false }
+                >
+                    <h2 class="text-black">{props.title}</h2>
+                    <Abte.Site:Content.Button 
+                        text={props.linkText} 
+                        target={props.link}
+                        spacing="px-3 py-1"
+                        class="bg-accent text-black text-sm" 
+                        @if.hasLinkText={props.linkText}
+                    />
+                </div>
+                
+                <div>
+                    {props.content}
+                </div>
             </div>
             
         </div>

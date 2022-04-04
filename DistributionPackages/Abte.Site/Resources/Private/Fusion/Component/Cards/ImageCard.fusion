@@ -20,7 +20,6 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
             attributes.class={props.kates + ' ' + 'relative block group w-full h-full mix font-light' }
         >
 
-            <Abte.Site:Component.Heading style="" title={props.title} subTitle={props.subTitle} />
             <div class="overflow-hidden">
                 <Sitegeist.Lazybones:Image 
                     @if.hasImage={props.imageSource}

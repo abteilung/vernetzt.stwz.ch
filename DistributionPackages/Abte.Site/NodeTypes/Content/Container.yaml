@@ -11,21 +11,27 @@
     position: 120
     inlineEditable: true
   properties:
-    title:
+    'title':
       options:
         preset: 'text.title'
-    subTitle:
+    'subTitle':
       options:
         preset: 'text.title'
-    removePadding:
+    'link':
+      options:
+        preset: 'text.link'
+    'linkText':
+      options:
+        preset: 'text.plain'
+    'removePadding':
       type: boolean
-      defaultValue: false
+      defaultValue: true
       ui:
         label: Remove Padding
         reloadIfChanged: true
         inspector:
           group: style
-    fullWidth:
+    'fullWidth':
       type: boolean
       defaultValue: false
       ui:
@@ -33,7 +39,11 @@
         reloadIfChanged: true
         inspector:
           group: style
-  childNodes:
-    content:
-      position: 'end'
-      type: 'Neos.Neos:ContentCollection'
+    'contentFullWidth':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: Content Full width
+        reloadIfChanged: true
+        inspector:
+          group: style

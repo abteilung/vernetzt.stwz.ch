@@ -30,15 +30,6 @@ prototype(Abte.Site:Component.ImageBox) < prototype(Neos.Neos:ContentComponent) 
             <div
                 class={ props.imageSource ? 'relative md:col-span-2' : 'relative' }
             >
-
-                <Abte.Site:Component.Heading 
-                    class="mb-5" 
-                    style="enlarged" 
-                    title={props.title} 
-                    subTitle={props.subTitle} 
-                    @if.hasDropShadow={props.title}
-                />
-
                 {props.content}
             </div>
 

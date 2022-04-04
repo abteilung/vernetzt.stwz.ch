@@ -20,13 +20,6 @@ prototype(Abte.Site:Content.ContactBox) < prototype(Neos.Neos:ContentComponent) 
 
     renderer = afx`
         <div class="relative block w-full font-light mix box-shadow containerMargin">
-
-            <Abte.Site:Component.Heading 
-                style="enlarged"
-                title={props.title}
-                subTitle={props.subTitle} 
-            />
-
             <Sitegeist.Lazybones:Image 
                 @if.hasImage={props.imageSource}
                 imageSource={props.imageSource} 
