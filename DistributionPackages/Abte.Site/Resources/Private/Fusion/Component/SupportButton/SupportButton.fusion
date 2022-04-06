@@ -25,12 +25,12 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
             x-data="{ appear: false }" 
             x-show="appear" 
             x-init="setTimeout(() => appear = true, 500)"
-            x-transition:enter="transition duration-150"
+            x-transition:enter="transition duration-500"
             x-transition:enter-start="opacity-0"
             x-transition:enter-end="opacity-100"
+            class="fixed group right-0 z-100 top-48"
         >
             <div
-                class="fixed group right-0 z-50 top-48"
                 x-init="appear = (appear)"
                 x-cloak
             >
