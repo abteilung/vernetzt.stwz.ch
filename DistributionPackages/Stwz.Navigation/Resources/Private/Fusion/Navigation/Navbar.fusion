@@ -33,11 +33,11 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
             </div>
         </div>
 
-        <div class="h-32 relative z-30 bg-fixed bg-cover bg-[url('https://images.unsplash.com/photo-1550537687-c91072c4792d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80')]">
-            
+        <div class="h-32 relative z-30 bg-cover bg-fixed bg-[url('https://images.unsplash.com/photo-1604076913837-52ab5629fba9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80')]">
         </div>
+
         <div class="h-32 bg-transparent sticky top-0 z-0 container-wide">
-            <Stwz.Navigation:Component.Navbar.Brand />
+            <Stwz.Navigation:Component.Navbar.Brand class="w-[125px] lg:w-[160px] 2xl:w-[180px]" />
         </div>
 
     `

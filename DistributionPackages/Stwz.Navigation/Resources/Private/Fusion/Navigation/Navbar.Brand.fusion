@@ -2,13 +2,15 @@ prototype(Stwz.Navigation:Component.Navbar.Brand) < prototype(Neos.Fusion:Compon
     
     siteNode = ${site}
 
+    class = "w-[100px] lg:w-[130px] 2xl:w-[140px]"
+
     renderer = afx`
         <div>
             <span class="sr-only">Navigation</span>
             <Neos.Neos:NodeLink 
                 node={props.siteNode} 
             >
-                <Abte.Site:Component.Logo class="w-[100px] lg:w-[130px] 2xl:w-[140px] md:w-auto h-auto" />
+                <Abte.Site:Component.Logo class={props.class} />
             </Neos.Neos:NodeLink>
         </div>
 
