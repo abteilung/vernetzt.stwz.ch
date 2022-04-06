@@ -21,9 +21,15 @@ module.exports = {
 			'2xl': '1536px',
 			// => @media (min-width: 1536px) { ... }
 		},
+
+		backgroundImage: {
+			'hero-pattern': "url('img/jason-leung-UMncYEfO9-U-unsplash.jpg')",
+		},
+		
 		container: {
 			center: true,
 		},
+
 		extend: {
 
             spacing: {

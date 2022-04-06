@@ -21,14 +21,14 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 
     renderer = afx`
 		<Abte.Site:TrackingScript.Ackee/>
-        <header>
-			<Stwz.Navigation:Component.Navbar />
+		<Stwz.Navigation:Component.Navbar />
+        <header class="-mt-32 z-0  h-96 overflow-hidden bg-cover bg-fixed bg-[url('https://images.unsplash.com/photo-1550537687-c91072c4792d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80')]">
             {props.pageHeader}
         </header>
+		
 		<Abte.Site:Component.SupportButton />
         {props.content}
         <Abte.Site:Component.Footer />
-
 		
     `
 }
