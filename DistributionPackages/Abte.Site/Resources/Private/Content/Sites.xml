@@ -3,20 +3,20 @@
  <site name="Default" state="1" siteResourcesPackageKey="Abte.Site" siteNodeName="default">
   <nodes formatVersion="2.0">
    <node identifier="5e8af702-705c-4593-b9d6-7ef7af121fc7" nodeName="default">
-    <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Document.HomePage" version="20" removed="" hidden="" hiddenInIndex="">
+    <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Document.HomePage" version="21" removed="" hidden="" hiddenInIndex="">
      <dimensions>
       <language>de</language>
      </dimensions>
      <accessRoles __type="array"/>
      <creationDateTime __type="object" __classname="DateTime">2021-11-29T10:20:58+00:00</creationDateTime>
-     <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T11:34:39+00:00</lastModificationDateTime>
-     <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T11:34:39+00:00</lastPublicationDateTime>
+     <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:32:48+00:00</lastModificationDateTime>
+     <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:32:48+00:00</lastPublicationDateTime>
      <properties>
       <uriPathSegment __type="string">home</uriPathSegment>
       <title __type="string">Home</title>
       <footerInfo __type="string">StWZ</footerInfo>
       <helpdeskPhone __type="string">+41 44 308 66 88</helpdeskPhone>
-      <helpdeskEmail __type="string">info@selfix.com</helpdeskEmail>
+      <helpdeskEmail __type="string">info@stwz.ch</helpdeskEmail>
       <helpdeskSubTitle __type="string">Beratung</helpdeskSubTitle>
       <titleOverride __type="string">Individuelle</titleOverride>
       <helpdeskPic __type="object" __identifier="5ac646af-5b5d-425f-bf62-78fb27711db0" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;5ac646af-5b5d-425f-bf62-78fb27711db0&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;d9aa0a89-83c7-4ee1-9758-b9431ac68b48&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;eta-LhNcIFse95A-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;4b16c5799c7f8508077ee3ed5ec9833ea5e5ac92&quot;,&quot;hash&quot;:&quot;4b16c5799c7f8508077ee3ed5ec9833ea5e5ac92&quot;,&quot;__identity&quot;:&quot;1b49b207-ec0f-4c5d-bd77-a2d33443d6ae&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1688,&quot;position&quot;:10,&quot;width&quot;:3000,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;3800af86-6138-4128-934f-782441b29277&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</helpdeskPic>
@@ -254,15 +254,633 @@
        </properties>
       </variant>
      </node>
+     <node identifier="0cb103a8-e9a2-41e6-b160-1edbcfca3948" nodeName="node-lrtwjedsk838h">
+      <variant sortingIndex="157" workspace="live" nodeType="Abte.Site:Content.Container" version="3" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:18+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+       <properties>
+        <dropShadow __type="boolean"></dropShadow>
+        <bgColor __type="string">none</bgColor>
+        <removePadding __type="boolean"></removePadding>
+        <fullWidth __type="boolean"></fullWidth>
+        <title __type="string">Stellen Sie Ihr Angebot zusammen</title>
+       </properties>
+      </variant>
+      <node identifier="8bbfa2a6-2581-645d-a66c-714aab88eacd" nodeName="content">
+       <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:18+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+        <properties/>
+       </variant>
+       <node identifier="d380e611-8424-447f-8a5b-063ab6ec5869" nodeName="node-xx4deh5ab7crp">
+        <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Accordion" version="4" removed="" hidden="" hiddenInIndex="">
+         <dimensions>
+          <language>de</language>
+         </dimensions>
+         <accessRoles __type="array"/>
+         <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T12:05:09+00:00</lastModificationDateTime>
+         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T12:05:09+00:00</lastPublicationDateTime>
+         <properties>
+          <accordion_isShop __type="boolean">1</accordion_isShop>
+         </properties>
+        </variant>
+        <node identifier="fb14074a-f68d-4a6e-baac-f2c72125efd7" nodeName="node-49cofxx1wtbq4">
+         <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="7" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T12:23:24+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T12:23:24+00:00</lastPublicationDateTime>
+          <properties>
+           <accordion_title __type="string">Internet</accordion_title>
+           <icon __type="string">internet</icon>
+           <accordion_open __type="boolean">1</accordion_open>
+          </properties>
+         </variant>
+         <node identifier="03fcf990-943c-d22c-4029-a8102bc698e5" nodeName="content">
+          <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+           <properties/>
+          </variant>
+          <node identifier="401031ef-af53-421d-850e-d069da2d61b1" nodeName="node-zps12kg7g3b47">
+           <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Row" version="4" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-08T09:38:38+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+            <properties>
+             <count-md __type="string">3</count-md>
+            </properties>
+           </variant>
+           <node identifier="5b033431-979a-4682-8397-491f5666e052" nodeName="node-l480perjbvau3">
+            <variant sortingIndex="300" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="3" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T09:38:38+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="12edc11a-e4a2-4dd4-a205-650ccff328d8" nodeName="node-hq522777rwjd8">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="8" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T10:13:16+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T10:24:05+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:24:05+00:00</lastPublicationDateTime>
+              <properties>
+               <bgColor __type="string">bg-base-300</bgColor>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">89.–</price>
+               <title __type="string">bis 10 Gbit/s</title>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+           <node identifier="f6c1a3e5-45b4-425c-8cc3-3c08e500e10b" nodeName="node-szk7mo8fen7am">
+            <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="3" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T09:38:38+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="b861636c-dd08-4b31-a288-c2e313b446f3" nodeName="node-3xt4brv3mn3xz">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="10" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T09:43:25+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T10:24:05+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:24:05+00:00</lastPublicationDateTime>
+              <properties>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">49.–</price>
+               <title __type="string">200 Mbit/s</title>
+               <bgColor __type="string">bg-base-200</bgColor>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+           <node identifier="8df9e2b2-3d1d-4437-9441-3eb23e986c14" nodeName="node-x2i25rgnwzlhc">
+            <variant sortingIndex="200" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="3" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T09:38:38+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="af3570ed-17f8-4d15-9b01-9db9412e9ccf" nodeName="node-a7370j86b3d2p">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="6" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T09:53:12+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T10:13:33+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:13:33+00:00</lastPublicationDateTime>
+              <properties>
+               <bgColor __type="string">bg-base-100</bgColor>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">69.–</price>
+               <title __type="string">700 Mbit/s</title>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+          </node>
+         </node>
+        </node>
+        <node identifier="59250aa4-9102-4324-93c0-d28c324c735c" nodeName="node-8nfqvcf024wtt">
+         <variant sortingIndex="400" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="5" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-08T10:15:40+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T10:16:01+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:16:01+00:00</lastPublicationDateTime>
+          <properties>
+           <accordion_title __type="string">Mobile</accordion_title>
+           <icon __type="string">mobile</icon>
+          </properties>
+         </variant>
+         <node identifier="7f9c5622-dc89-412d-b2d4-00b0f4c4402d" nodeName="content">
+          <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-08T10:15:40+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T10:16:01+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:16:01+00:00</lastPublicationDateTime>
+           <properties/>
+          </variant>
+          <node identifier="e6565d30-6973-4690-a163-14e98cc29121" nodeName="node-nyruvltx1k0zr">
+           <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Row" version="2" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:50+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+            <properties>
+             <count-md __type="string">3</count-md>
+            </properties>
+           </variant>
+           <node identifier="2482cd37-4af1-46f7-8210-590f7c47a92b" nodeName="node-l480perjbvau3">
+            <variant sortingIndex="300" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:50+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="73c16a98-b577-4ce4-85a3-1be3d58054ef" nodeName="node-hq522777rwjd8">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:50+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <bgColor __type="string">bg-base-300</bgColor>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">89.–</price>
+               <title __type="string">bis 10 Gbit/s</title>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+           <node identifier="11cc74e4-f8eb-4905-840e-e154ebe378b9" nodeName="node-szk7mo8fen7am">
+            <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:50+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="f1e4dbd5-918a-46c0-bca3-feae843916fe" nodeName="node-3xt4brv3mn3xz">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:50+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">49.–</price>
+               <title __type="string">200 Mbit/s</title>
+               <bgColor __type="string">bg-base-200</bgColor>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+           <node identifier="03a1b7d7-6799-4dd1-a15f-7424768458c3" nodeName="node-x2i25rgnwzlhc">
+            <variant sortingIndex="200" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:50+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="d1c623ab-3242-48dd-acd4-dad5c2e7dc2d" nodeName="node-a7370j86b3d2p">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:50+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <bgColor __type="string">bg-base-100</bgColor>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">69.–</price>
+               <title __type="string">700 Mbit/s</title>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+          </node>
+         </node>
+        </node>
+        <node identifier="c03fc337-cd3e-4764-8a42-84b5e27cf5e4" nodeName="node-hrfopul0j3xor">
+         <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="6" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T10:16:01+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:16:01+00:00</lastPublicationDateTime>
+          <properties>
+           <accordion_title __type="string">Telefonie</accordion_title>
+           <icon __type="string">phone</icon>
+          </properties>
+         </variant>
+         <node identifier="7a17cedf-f5d3-4a15-85a4-171178bca15c" nodeName="content">
+          <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+           <properties/>
+          </variant>
+          <node identifier="81790df4-a723-4b8c-9fda-58c2725e13fe" nodeName="node-lohrkid6wd0ef">
+           <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Row" version="2" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:47+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+            <properties>
+             <count-md __type="string">3</count-md>
+            </properties>
+           </variant>
+           <node identifier="4e3e8016-5461-4230-b51b-3a2f22495029" nodeName="node-l480perjbvau3">
+            <variant sortingIndex="300" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:47+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="21a08db1-bde2-449b-8e7d-70dba780333f" nodeName="node-hq522777rwjd8">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:47+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <bgColor __type="string">bg-base-300</bgColor>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">89.–</price>
+               <title __type="string">bis 10 Gbit/s</title>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+           <node identifier="0b669e5a-2073-44be-b9e4-4d6470450a6f" nodeName="node-szk7mo8fen7am">
+            <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:47+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="fac318e3-b7be-4be2-816e-6a39e1ca1736" nodeName="node-3xt4brv3mn3xz">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:47+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">49.–</price>
+               <title __type="string">200 Mbit/s</title>
+               <bgColor __type="string">bg-base-200</bgColor>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+           <node identifier="c4ce5ffa-6c9d-4981-88e9-b8cc7aea47fc" nodeName="node-x2i25rgnwzlhc">
+            <variant sortingIndex="200" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:47+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="5d1fcbed-838a-43cc-adca-a99e171e9bb0" nodeName="node-a7370j86b3d2p">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:47+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <bgColor __type="string">bg-base-100</bgColor>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">69.–</price>
+               <title __type="string">700 Mbit/s</title>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+          </node>
+         </node>
+        </node>
+        <node identifier="49bb076d-c9c2-4d1a-b9c2-2302132b34de" nodeName="node-wcm27h2xj3skk">
+         <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="8" removed="" hidden="" hiddenInIndex="">
+          <dimensions>
+           <language>de</language>
+          </dimensions>
+          <accessRoles __type="array"/>
+          <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T12:23:36+00:00</lastModificationDateTime>
+          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T12:23:36+00:00</lastPublicationDateTime>
+          <properties>
+           <accordion_title __type="string">TV</accordion_title>
+           <icon __type="string">TV</icon>
+           <accordion_open __type="boolean"></accordion_open>
+          </properties>
+         </variant>
+         <node identifier="cd1afc89-cf0c-65db-5208-7755198e4e51" nodeName="content">
+          <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="3" removed="" hidden="" hiddenInIndex="">
+           <dimensions>
+            <language>de</language>
+           </dimensions>
+           <accessRoles __type="array"/>
+           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
+           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
+           <properties/>
+          </variant>
+          <node identifier="e6d0bbe7-47e2-403b-b45f-515f9f69bba3" nodeName="node-td8p8ltijsq13">
+           <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Row" version="2" removed="" hidden="" hiddenInIndex="">
+            <dimensions>
+             <language>de</language>
+            </dimensions>
+            <accessRoles __type="array"/>
+            <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:36+00:00</creationDateTime>
+            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+            <properties>
+             <count-md __type="string">3</count-md>
+            </properties>
+           </variant>
+           <node identifier="77e9913b-52c8-4df3-87c8-deaf5d695a30" nodeName="node-l480perjbvau3">
+            <variant sortingIndex="300" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:36+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="f2c6dbad-ec5b-4402-af51-54f812313113" nodeName="node-hq522777rwjd8">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:36+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <bgColor __type="string">bg-base-300</bgColor>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">89.–</price>
+               <title __type="string">bis 10 Gbit/s</title>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+           <node identifier="950afa61-3548-445c-95a9-e40a4ee78c06" nodeName="node-szk7mo8fen7am">
+            <variant sortingIndex="100" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:36+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="4cc7c8d9-935f-4225-8a2b-ea0aef330276" nodeName="node-3xt4brv3mn3xz">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:36+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">49.–</price>
+               <title __type="string">200 Mbit/s</title>
+               <bgColor __type="string">bg-base-200</bgColor>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+           <node identifier="2794cfb2-5096-434c-ab8f-8a9579b1e00e" nodeName="node-x2i25rgnwzlhc">
+            <variant sortingIndex="200" workspace="live" nodeType="Abteilung.Gridsystem:Content.Column" version="2" removed="" hidden="" hiddenInIndex="">
+             <dimensions>
+              <language>de</language>
+             </dimensions>
+             <accessRoles __type="array"/>
+             <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:36+00:00</creationDateTime>
+             <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+             <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+             <properties>
+              <paddingY __type="boolean"></paddingY>
+              <span-md __type="string">1</span-md>
+             </properties>
+            </variant>
+            <node identifier="b7ebbc42-e570-4a74-965b-199ef65fbee2" nodeName="node-a7370j86b3d2p">
+             <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.ProductCard" version="2" removed="" hidden="" hiddenInIndex="">
+              <dimensions>
+               <language>de</language>
+              </dimensions>
+              <accessRoles __type="array"/>
+              <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:36+00:00</creationDateTime>
+              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
+              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
+              <properties>
+               <bgColor __type="string">bg-base-100</bgColor>
+               <isHero __type="boolean"></isHero>
+               <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
+               <price __type="string">69.–</price>
+               <title __type="string">700 Mbit/s</title>
+               <subTitle __type="string">Zusatzinfo</subTitle>
+              </properties>
+             </variant>
+            </node>
+           </node>
+          </node>
+         </node>
+        </node>
+       </node>
+      </node>
+     </node>
      <node identifier="dfdaf212-9308-471a-9aa5-ccb067082012" nodeName="node-yidfj5izddfnx">
-      <variant sortingIndex="163" workspace="live" nodeType="Abte.Site:Content.Container" version="7" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="154" workspace="live" nodeType="Abte.Site:Content.Container" version="8" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:31:52+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:30:11+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:30:11+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
        <properties>
         <dropShadow __type="boolean"></dropShadow>
         <bgColor __type="string">bg-base-200</bgColor>
@@ -309,129 +927,6 @@
         </variant>
        </node>
       </node>
-      <node identifier="0cb103a8-e9a2-41e6-b160-1edbcfca3948" nodeName="node-lrtwjedsk838h">
-       <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Container" version="2" removed="" hidden="" hiddenInIndex="">
-        <dimensions>
-         <language>de</language>
-        </dimensions>
-        <accessRoles __type="array"/>
-        <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:18+00:00</creationDateTime>
-        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
-        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
-        <properties>
-         <dropShadow __type="boolean"></dropShadow>
-         <bgColor __type="string">none</bgColor>
-         <removePadding __type="boolean"></removePadding>
-         <fullWidth __type="boolean"></fullWidth>
-        </properties>
-       </variant>
-       <node identifier="8bbfa2a6-2581-645d-a66c-714aab88eacd" nodeName="content">
-        <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-         <dimensions>
-          <language>de</language>
-         </dimensions>
-         <accessRoles __type="array"/>
-         <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:18+00:00</creationDateTime>
-         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
-         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
-         <properties/>
-        </variant>
-        <node identifier="d380e611-8424-447f-8a5b-063ab6ec5869" nodeName="node-xx4deh5ab7crp">
-         <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Accordion" version="2" removed="" hidden="" hiddenInIndex="">
-          <dimensions>
-           <language>de</language>
-          </dimensions>
-          <accessRoles __type="array"/>
-          <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
-          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
-          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
-          <properties>
-           <dropShadow __type="boolean"></dropShadow>
-           <bgColor __type="string">none</bgColor>
-           <accordion_firstOpen __type="boolean"></accordion_firstOpen>
-          </properties>
-         </variant>
-         <node identifier="fb14074a-f68d-4a6e-baac-f2c72125efd7" nodeName="node-49cofxx1wtbq4">
-          <variant sortingIndex="100" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="4" removed="" hidden="" hiddenInIndex="">
-           <dimensions>
-            <language>de</language>
-           </dimensions>
-           <accessRoles __type="array"/>
-           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
-           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastModificationDateTime>
-           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastPublicationDateTime>
-           <properties>
-            <accordion_title __type="string">asdfasf asdf</accordion_title>
-           </properties>
-          </variant>
-          <node identifier="03fcf990-943c-d22c-4029-a8102bc698e5" nodeName="content">
-           <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-            <dimensions>
-             <language>de</language>
-            </dimensions>
-            <accessRoles __type="array"/>
-            <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
-            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
-            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
-            <properties/>
-           </variant>
-          </node>
-         </node>
-         <node identifier="c03fc337-cd3e-4764-8a42-84b5e27cf5e4" nodeName="node-hrfopul0j3xor">
-          <variant sortingIndex="300" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="4" removed="" hidden="" hiddenInIndex="">
-           <dimensions>
-            <language>de</language>
-           </dimensions>
-           <accessRoles __type="array"/>
-           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
-           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastModificationDateTime>
-           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastPublicationDateTime>
-           <properties>
-            <accordion_title __type="string">asf asdfasfdasdfa&amp;nbsp;</accordion_title>
-           </properties>
-          </variant>
-          <node identifier="7a17cedf-f5d3-4a15-85a4-171178bca15c" nodeName="content">
-           <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-            <dimensions>
-             <language>de</language>
-            </dimensions>
-            <accessRoles __type="array"/>
-            <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
-            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
-            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
-            <properties/>
-           </variant>
-          </node>
-         </node>
-         <node identifier="49bb076d-c9c2-4d1a-b9c2-2302132b34de" nodeName="node-wcm27h2xj3skk">
-          <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="4" removed="" hidden="" hiddenInIndex="">
-           <dimensions>
-            <language>de</language>
-           </dimensions>
-           <accessRoles __type="array"/>
-           <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
-           <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastModificationDateTime>
-           <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:37:59+00:00</lastPublicationDateTime>
-           <properties>
-            <accordion_title __type="string">fasdf asdf asdf asdfas af</accordion_title>
-           </properties>
-          </variant>
-          <node identifier="cd1afc89-cf0c-65db-5208-7755198e4e51" nodeName="content">
-           <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-            <dimensions>
-             <language>de</language>
-            </dimensions>
-            <accessRoles __type="array"/>
-            <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:52:25+00:00</creationDateTime>
-            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastModificationDateTime>
-            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:23:51+00:00</lastPublicationDateTime>
-            <properties/>
-           </variant>
-          </node>
-         </node>
-        </node>
-       </node>
-      </node>
      </node>
     </node>
     <node identifier="3b2db5f6-1cbd-d2c8-0235-3fcb0806015b" nodeName="modal">
@@ -446,14 +941,14 @@
      </variant>
     </node>
     <node identifier="861ee17f-89a6-4cc9-a5fb-a90ce4535fed" nodeName="node-1grkxv2p38oiy">
-     <variant sortingIndex="650" workspace="live" nodeType="Abte.Site:Document.Service" version="5" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="613" workspace="live" nodeType="Abte.Site:Document.Service" version="6" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:08+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:45+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:45+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:38+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:37+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">services</uriPathSegment>
        <hideHeader __type="boolean"></hideHeader>
@@ -461,14 +956,14 @@
       </properties>
      </variant>
      <node identifier="67ba5bb8-a973-0fc4-6e4a-629f0b070fd7" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="5" removed="" hidden="" hiddenInIndex="">
        <dimensions>
         <language>de</language>
        </dimensions>
        <accessRoles __type="array"/>
        <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:08+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:45+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:43:45+00:00</lastPublicationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:38+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:37+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
      </node>
@@ -484,7 +979,7 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T13:56:32+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">internet</uriPathSegment>
-       <hideHeader __type="boolean"></hideHeader>
+       <hideHeader __type="string">false</hideHeader>
        <title __type="string">Internet</title>
        <subTitle __type="string">Unser Internet ist omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
        <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
@@ -503,6 +998,22 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:39+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
+      <node identifier="b1558538-99d6-4b4a-be71-9daa9f6e127f" nodeName="node-t3b4mhkoipbxw">
+       <variant sortingIndex="257" workspace="live" nodeType="Neos.NodeTypes.ContentReferences:ContentReferences" version="4" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:41:36+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:15+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:15+00:00</lastPublicationDateTime>
+        <properties>
+         <references __type="array">
+          <entry0 __type="string">0cb103a8-e9a2-41e6-b160-1edbcfca3948</entry0>
+         </references>
+        </properties>
+       </variant>
+      </node>
      </node>
      <node identifier="002f1340-b952-91d5-e168-697ab8df7305" nodeName="video">
       <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
@@ -513,6 +1024,66 @@
        <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:37+00:00</creationDateTime>
        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:39+00:00</lastModificationDateTime>
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:39+00:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+     </node>
+    </node>
+    <node identifier="1139f030-9d62-4ff5-a54e-5886265af3dd" nodeName="node-928ewu8yjnqim">
+     <variant sortingIndex="582" workspace="live" nodeType="Abte.Site:Document.Product" version="4" removed="" hidden="" hiddenInIndex="">
+      <dimensions>
+       <language>de</language>
+      </dimensions>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:35+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:45+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:45+00:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">mobile</uriPathSegment>
+       <hideHeader __type="string">false</hideHeader>
+       <title __type="string">Mobile</title>
+       <subTitle __type="string">Sandi omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
+       <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
+       <icon __type="string">phone</icon>
+       <accordion_open __type="string">4</accordion_open>
+      </properties>
+     </variant>
+     <node identifier="b62e3655-4412-4eb1-a866-d0a77d0a05f0" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:35+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:45+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:45+00:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+      <node identifier="4e12550a-73ed-4b62-bfbb-60825aae3048" nodeName="node-gu2obzauyy46w">
+       <variant sortingIndex="357" workspace="live" nodeType="Neos.NodeTypes.ContentReferences:ContentReferences" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:36+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:40+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:40+00:00</lastPublicationDateTime>
+        <properties>
+         <references __type="array">
+          <entry0 __type="string">0cb103a8-e9a2-41e6-b160-1edbcfca3948</entry0>
+         </references>
+        </properties>
+       </variant>
+      </node>
+     </node>
+     <node identifier="eefb1e8b-5273-49e1-9706-6d788cabdbbb" nodeName="video">
+      <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:35+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:45+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:45+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
      </node>
@@ -714,11 +1285,7 @@
          <creationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:12+00:00</creationDateTime>
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
-         <properties>
-          <dropShadow __type="boolean"></dropShadow>
-          <bgColor __type="string">none</bgColor>
-          <accordion_firstOpen __type="boolean"></accordion_firstOpen>
-         </properties>
+         <properties/>
         </variant>
         <node identifier="356f520a-02ac-470f-bd86-5026fbc37aee" nodeName="node-nvoqepjqs4yws">
          <variant sortingIndex="200" workspace="live" nodeType="Abte.Site:Content.Accordion.Item" version="3" removed="" hidden="" hiddenInIndex="">
@@ -828,6 +1395,34 @@
       </variant>
      </node>
     </node>
+    <node identifier="e0ab4d0f-e290-4900-80d0-fadff6afb66e" nodeName="node-n3i797t8hnw28">
+     <variant sortingIndex="638" workspace="live" nodeType="Abte.Site:Document.Service" version="4" removed="" hidden="" hiddenInIndex="">
+      <dimensions>
+       <language>de</language>
+      </dimensions>
+      <accessRoles __type="array"/>
+      <creationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:24+00:00</creationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:31+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:31+00:00</lastPublicationDateTime>
+      <properties>
+       <uriPathSegment __type="string">business</uriPathSegment>
+       <hideHeader __type="boolean"></hideHeader>
+       <title __type="string">Business</title>
+      </properties>
+     </variant>
+     <node identifier="198778e9-c3fd-4c8b-9f09-d7838d9b4d74" nodeName="main">
+      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
+       <dimensions>
+        <language>de</language>
+       </dimensions>
+       <accessRoles __type="array"/>
+       <creationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:24+00:00</creationDateTime>
+       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:31+00:00</lastModificationDateTime>
+       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:31+00:00</lastPublicationDateTime>
+       <properties/>
+      </variant>
+     </node>
+    </node>
     <node identifier="7c8202d3-c366-4782-a1e9-326e53678d1a" nodeName="node-s1a3612dgkf1h">
      <variant sortingIndex="625" workspace="live" nodeType="Abte.Site:Document.MenuSeparator" version="4" removed="" hidden="" hiddenInIndex="">
       <dimensions>
@@ -852,49 +1447,6 @@
        <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:48+00:00</creationDateTime>
        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:50+00:00</lastModificationDateTime>
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:50+00:00</lastPublicationDateTime>
-       <properties/>
-      </variant>
-     </node>
-    </node>
-    <node identifier="159cb5f4-4a6d-4a4c-ad42-e3fa36dc24f5" nodeName="node-yj17wcirjnfzc">
-     <variant sortingIndex="600" workspace="live" nodeType="Abte.Site:Document.Product" version="7" removed="" hidden="" hiddenInIndex="">
-      <dimensions>
-       <language>de</language>
-      </dimensions>
-      <accessRoles __type="array"/>
-      <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:03+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:53:27+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:53:27+00:00</lastPublicationDateTime>
-      <properties>
-       <uriPathSegment __type="string">mobile</uriPathSegment>
-       <hideHeader __type="boolean"></hideHeader>
-       <title __type="string">Mobile</title>
-       <subTitle __type="string">Sandi omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
-       <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
-       <icon __type="string">mobile</icon>
-      </properties>
-     </variant>
-     <node identifier="d4d9c24d-e206-f43e-7ba7-7eb7720c6d4b" nodeName="main">
-      <variant sortingIndex="100" workspace="live" nodeType="Neos.Neos:ContentCollection" version="4" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>de</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2022-03-31T08:00:03+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:43+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
-       <properties/>
-      </variant>
-     </node>
-     <node identifier="9dbf22d9-988f-2d02-3193-ad4999eab2e9" nodeName="video">
-      <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
-       <dimensions>
-        <language>de</language>
-       </dimensions>
-       <accessRoles __type="array"/>
-       <creationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:22+00:00</creationDateTime>
-       <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:43+00:00</lastModificationDateTime>
-       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
      </node>
@@ -1071,21 +1623,22 @@
      </node>
     </node>
     <node identifier="d950b1a5-084e-4b8c-9a45-fca6959708f3" nodeName="node-zewdn0qh8v2b8">
-     <variant sortingIndex="500" workspace="live" nodeType="Abte.Site:Document.Product" version="9" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="500" workspace="live" nodeType="Abte.Site:Document.Product" version="10" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T07:59:54+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T14:02:03+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T14:02:03+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:14:49+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:14:47+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">tv</uriPathSegment>
-       <hideHeader __type="boolean"></hideHeader>
+       <hideHeader __type="string">false</hideHeader>
        <title __type="string">TV</title>
        <subTitle __type="string">TV-Stuff a gogo?&amp;nbsp;&lt;br&gt;Sandi omnis comnienet everum quidebit,&amp;nbsp;&lt;br&gt;quam, comnienet remini, unto.</subTitle>
        <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
        <icon __type="string">TV</icon>
+       <accordion_open __type="string">2</accordion_open>
       </properties>
      </variant>
      <node identifier="558318c2-6e00-d2f0-09f4-58d673c73fd4" nodeName="main">
@@ -1099,6 +1652,22 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
+      <node identifier="1917a046-de29-4665-9a9c-14542a32e61c" nodeName="node-yukfn5rlcc6kl">
+       <variant sortingIndex="357" workspace="live" nodeType="Neos.NodeTypes.ContentReferences:ContentReferences" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:21+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:40+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:40+00:00</lastPublicationDateTime>
+        <properties>
+         <references __type="array">
+          <entry0 __type="string">0cb103a8-e9a2-41e6-b160-1edbcfca3948</entry0>
+         </references>
+        </properties>
+       </variant>
+      </node>
      </node>
      <node identifier="8250dcf3-25e6-ae99-0aba-5fe475685fbd" nodeName="video">
       <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
@@ -1114,21 +1683,22 @@
      </node>
     </node>
     <node identifier="f14dfee9-acd1-4150-98fe-41f82129e0cd" nodeName="node-zwnvnya6e50ko">
-     <variant sortingIndex="550" workspace="live" nodeType="Abte.Site:Document.Product" version="7" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="550" workspace="live" nodeType="Abte.Site:Document.Product" version="8" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
       <accessRoles __type="array"/>
       <creationDateTime __type="object" __classname="DateTime">2022-03-31T07:59:59+00:00</creationDateTime>
-      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T09:53:27+00:00</lastModificationDateTime>
-      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T09:53:27+00:00</lastPublicationDateTime>
+      <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:14:49+00:00</lastModificationDateTime>
+      <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:14:47+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">telefonie</uriPathSegment>
-       <hideHeader __type="boolean"></hideHeader>
+       <hideHeader __type="string">false</hideHeader>
        <title __type="string">Telefonie</title>
        <subTitle __type="string">Sandi omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
        <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
        <icon __type="string">phone</icon>
+       <accordion_open __type="string">3</accordion_open>
       </properties>
      </variant>
      <node identifier="35b8ffc8-8978-8d32-8014-8f133f569af5" nodeName="main">
@@ -1142,6 +1712,22 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:33:42+00:00</lastPublicationDateTime>
        <properties/>
       </variant>
+      <node identifier="caab6fc4-8ef1-42f6-a1a4-46dc86913e89" nodeName="node-mkbeis0y2urxm">
+       <variant sortingIndex="357" workspace="live" nodeType="Neos.NodeTypes.ContentReferences:ContentReferences" version="3" removed="" hidden="" hiddenInIndex="">
+        <dimensions>
+         <language>de</language>
+        </dimensions>
+        <accessRoles __type="array"/>
+        <creationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:29+00:00</creationDateTime>
+        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:40+00:00</lastModificationDateTime>
+        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:43:40+00:00</lastPublicationDateTime>
+        <properties>
+         <references __type="array">
+          <entry0 __type="string">0cb103a8-e9a2-41e6-b160-1edbcfca3948</entry0>
+         </references>
+        </properties>
+       </variant>
+      </node>
      </node>
      <node identifier="f26fe0f1-9100-eb32-4a30-df85fbd75d18" nodeName="video">
       <variant sortingIndex="200" workspace="live" nodeType="Neos.Neos:ContentCollection" version="2" removed="" hidden="" hiddenInIndex="">
