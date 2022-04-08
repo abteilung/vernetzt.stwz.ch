@@ -41,7 +41,6 @@ prototype(Abte.Site:Document.Services) < prototype(Abte.Site:Document.AbstractPa
                     </div>
                     <aside class="col-span-12 lg:col-end-13 lg:col-span-3">
                         <div class="sticky grid md:grid-cols-2 gridPadding-top top-24 lg:grid-cols-1 gridgap">
-                            <Abte.Site:Content.ContactBox />
                             {props.aside}
                         </div>
                     </aside>

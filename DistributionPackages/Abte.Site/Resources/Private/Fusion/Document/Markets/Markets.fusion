@@ -45,7 +45,6 @@ prototype(Abte.Site:Document.Markets) < prototype(Abte.Site:Document.AbstractPag
                     </main>
                     <aside class="col-span-12 lg:col-end-13 lg:col-span-3">
                         <div class="sticky grid md:grid-cols-2 gridPadding-top top-24 lg:grid-cols-1 gridgap">
-                            <Abte.Site:Content.ContactBox />
                             <!--
                                 <Abte.Site:Component.ProductUpdates 
                                 title="Neu im Sortiment" 

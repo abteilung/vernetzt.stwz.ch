@@ -5,19 +5,24 @@ prototype(Abte.Site:Icon.Support) < prototype(Neos.Fusion:Component) {
     renderer = afx`
         <svg
             class={props.class}
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            >
-            <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M17 21C15.8954 21 15 20.1046 15 19V15C15 13.8954 15.8954 13 17 13H19V12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12V13H7C8.10457 13 9 13.8954 9 15V19C9 20.1046 8.10457 21 7 21H3V12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12V21H17ZM19 15H17V19H19V15ZM7 15H5V19H7V15Z"
-                fill="currentColor"
-            />
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="34.161"
+            height="41.669"
+            viewBox="0 0 34.161 41.669"
+        >
+            <defs>
+                <clipPath id="clip-path">
+                <rect id="Rechteck_2035" data-name="Rechteck 2035" width="34.161" height="41.669" fill="none"/>
+                </clipPath>
+            </defs>
+            <g id="Gruppe_4407" data-name="Gruppe 4407" transform="translate(0 0)">
+                <g id="Gruppe_4406" data-name="Gruppe 4406" transform="translate(0 0)" clip-path="url(#clip-path)">
+                <path id="Pfad_3647" data-name="Pfad 3647" d="M1.234,18.2H8.079v7.871h-6.3V16.979a15.229,15.229,0,1,1,30.458,0v9.392l-6.744.148.147-8.317h6.152" transform="translate(0.072 0.102)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                <line id="Linie_1213" data-name="Linie 1213" x1="8.929" transform="translate(15.543 36.345)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                <path id="Pfad_3648" data-name="Pfad 3648" d="M14.687,38.118h11.36a5.309,5.309,0,0,0,5.308-5.308V29.155" transform="translate(0.856 1.699)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                </g>
+            </g>
         </svg>
-
     `
 }

@@ -8,13 +8,17 @@
         @apply hidden;
     }
 
+    .cardItem {
+        @apply rounded-xl flex flex-col block  h-full px-5 py-4 transition-all;
+    }
+
     body {
         @apply text-sm lg:text-base;
         @apply bg-white;
         @apply font-sans font-light antialiased;
     }
 
-    strong {
+    strong, b {
         @apply font-semibold;
     }
 
@@ -188,14 +192,7 @@
         @apply !overflow-x-scroll;
     }
 
-    .subNavigation button a{
-        body[data-theme="human"] & {
-            @apply text-accent-focus;            
-        }
-        body[data-theme="vet"] & {
-            @apply text-accent-focus;            
-        }
-
+    .subNavigation button a {
         &.activeLink {
             @apply !text-primary;
         }
@@ -211,34 +208,10 @@
         @apply relative -top-48;
     }
 
-    .multicolumn-row.col-divider {
-        @apply divide-x-2 divide-base-100;
-    }
-
-    .serviceCard h3, .serviceCard h3 i{
-        @apply !text-white;
-    }
-    .serviceCard p{
-        @apply !text-white/75;
-    }
-    .serviceCard {
-        @apply bg-gradient-to-t from-black/50;
-    }
-
-    .box-newsletter.box-shadow {
-        @apply !bg-white;
-    }
     form fieldset {
         @apply grid gap-4 md:gap-6;
     }
-    #kurs-form fieldset, .kontaktModal fieldset{
-        @apply md:grid-cols-2 lg:grid-cols-3;
 
-        label {
-            @apply last:col-span-full;
-        }
-
-    }
     .kontaktModal fieldset {
         @apply lg:grid-cols-2;
 
@@ -254,44 +227,7 @@
         }
     }
 
-
-    #sib-form {
-        @apply !bg-white;
-        @apply !pt-8;
-        @apply !grid !grid-cols-2;
-    }
-
-    #sib-form .entry__specification {
-        @apply hidden;
-    }
-
-    #sib-form .input {
-        @apply !border-2 !border-primary;
-    }
-
-    .sib-form-block {
-    }
-
-    #sib-container {
-        @apply !w-full !max-w-full;
-        @apply !border-none;
-    }
-
     input, textarea {
         @apply md:p-3 md:text-base !important;
     }
-
-    .box-h-1 {
-        @apply h-64;
-    }
-
-    .box-h-2 {
-        @apply h-128;
-    }
-
-
-}
-
-.mixitup-control-active {
-    @apply !text-primary !border-primary pb-2 !border-b-2 mb-[-2px] ;
 }

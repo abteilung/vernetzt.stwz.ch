@@ -1,0 +1,17 @@
+prototype(Abte.Site:Icon.Star) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} id="Gruppe_4325" data-name="Gruppe 4325" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26.135" height="25.25" viewBox="0 0 26.135 25.25">
+            <defs>
+                <clipPath id="clip-path">
+                <rect id="Rechteck_1973" data-name="Rechteck 1973" width="26.135" height="25.25" fill="none"/>
+                </clipPath>
+            </defs>
+            <g id="Gruppe_4297" data-name="Gruppe 4297" clip-path="url(#clip-path)">
+                <path id="Pfad_3376" data-name="Pfad 3376" d="M15.1,3.016l1.739,3.523a2.271,2.271,0,0,0,1.709,1.242l3.888.565A2.27,2.27,0,0,1,23.7,12.218L20.884,14.96a2.268,2.268,0,0,0-.653,2.009l.664,3.872A2.271,2.271,0,0,1,17.6,23.235l-3.477-1.829a2.275,2.275,0,0,0-2.113,0L8.534,23.235A2.271,2.271,0,0,1,5.24,20.841L5.9,16.969a2.271,2.271,0,0,0-.653-2.009L2.438,12.218A2.27,2.27,0,0,1,3.7,8.346l3.888-.565A2.272,2.272,0,0,0,9.293,6.539l1.739-3.523A2.27,2.27,0,0,1,15.1,3.016Z" transform="translate(0 0)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+            </g>
+        </svg>
+    `
+}

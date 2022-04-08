@@ -1,0 +1,21 @@
+'Abte.Site:Mixin.IsHero':
+  abstract: true
+  ui:
+    label: Is Hero
+    icon: star
+    position: 300
+    inspector:
+      groups:
+        style:
+          label: 'Style'
+          position: 15
+          icon: 'clone'
+  properties:
+    'isHero':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: 'Is Lead'
+        reloadIfChanged: true
+        inspector:
+          group: 'style'

@@ -35,7 +35,7 @@ prototype(Abte.Site:Component.Header) < prototype(Neos.Fusion:Component) {
 
     renderer = afx`
 
-        <div class="absolute bg-accent mt-0 top-0 z-40 xl:mb-10 h-[250px] md:h-[350px] lg:h-[400px] overflow-visible">
+        <div class="absolute mt-0 top-0 z-20 xl:mb-10 w-full overflow-visible">
 
             <Sitegeist.Lazybones:Image 
                 @if.hasImage={props.imageSource}
@@ -44,8 +44,8 @@ prototype(Abte.Site:Component.Header) < prototype(Neos.Fusion:Component) {
                 height="600"
                 class="object-cover object-center w-full h-full mix-blend-multiply saturate-20"
             />
-            <div class="container relative h-full ">
-                <div class="absolute right-0 -bottom-28">
+            <div class="container relative h-[250px] md:h-[350px] lg:h-[400px]">
+                <div class="absolute z-10 right-0 -bottom-28">
                     <Stwz.MovingLines:Component.Lines />
                 </div>
             </div>

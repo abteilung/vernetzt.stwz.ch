@@ -2,11 +2,12 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
     class = ''
 
-    dropShadow = ${ q(node).property('dropShadow') }
+    isShop = ${ q(node).property('accordion_isShop') ? 'grid grid-cols-4 gridgap-x' : null }
 
     bgColor = ${ q(node).property('bgColor') }
 
-    accordionClass = ${ this.class + ' ' +  (this.dropShadow ? 'box-shadow' : null) + ' ' + this.bgColor + ' ' + (q(node).property('image') ? 'grid grid-cols-3 gridgap' : null) }
+    accordionClass = ${ this.class + ' ' +  this.isShop }
+    innerClass = ${ q(node).property('accordion_isShop') ? 'col-span-3' : null }
 
     accordionItems = Neos.Fusion:Collection {
         collection = ${ q(node).children('[instanceof Abte.Site:Content.Accordion.Item]') }
@@ -14,6 +15,22 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
         iterationName = 'i'
         itemRenderer = Abte.Site:Content.Accordion.Item
     }
+
+    isOpen = Neos.Fusion:Case {
+        pageOverride {
+            condition = ${ q(documentNode).property('accordion_open') }
+            renderer = ${ q(documentNode).property('accordion_open') }
+        }
+        fallback {
+            condition = ${ true }
+            renderer = Neos.Fusion:Collection {
+                collection = ${ q(node).children('[instanceof Abte.Site:Content.Accordion.Item]') }
+                itemName = 'node'
+                iterationName = 'i'
+                itemRenderer = ${ q(node).property('accordion_open') ? i.cycle : null }
+            }
+        }
+    } 
 
     title = Neos.Neos:Editable {
         property = 'title'
@@ -27,28 +44,43 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
         asset   = ${ q(node).property('image') }
     }
 
+    grandTotal = '89.–'
+
 
   	renderer = afx`
-        <div class={props.accordionClass}>
+        <div class={props.accordionClass}
+            x-data="ShopItems()"
+        >
+            <div class={props.innerClass}>
 
-            <div
-                class={ props.imageSource ? 'relative col-span-2' : 'relative' }
-            >
                 <div
-                    x-data="\{selected:null\}"
-                    class={props.dropShadow ? 'accordion pt-24 pl-5 md:pl-8 lg:pl-12' : 'accordion pt-4'}
+                    class={ props.imageSource ? 'relative col-span-2' : 'relative' }
                 >
-                    {props.accordionItems}
+                    <div
+                        x-data={"{selected: " + '\'' +  props.isOpen + '\'' + " }"}
+                        class='accordion border-t-[1px] border-black'
+                    >
+                        {props.accordionItems}
+                    </div>
+                </div>
+                <div class="h-full">
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                        width="700"
+                        height="700"
+                        class="object-cover object-center w-full h-full"
+                    />
                 </div>
             </div>
-            <div class="h-full">
-                <Sitegeist.Lazybones:Image 
-                    @if.hasImage={props.imageSource}
-                    imageSource={props.imageSource} 
-                    width="700"
-                    height="700"
-                    class="object-cover object-center w-full h-full"
-                />
+            <div class="">
+                <div class="bg-primary p-6">
+                    <div class="h1 text-white mb-0">Ihr Abo</div>
+                    <div class="pricing relative">
+                        <div class="text-xl text-white" x-text="value"></div>
+                            <Abte.Site:Icon.Diagonal class="absolute top-0 left-10 text-white" />
+                    </div>
+                </div>
             </div>
         </div>
     `

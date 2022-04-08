@@ -47,7 +47,7 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                             class="relative flex flex-wrap justify-center text-center text-black transition-all cursor-pointer"
                             :class="open ? 'absolute delay-500 space-x-4' : 'space-x-0 delay-500'"
                         >
-                            <Abte.Site:Icon.Support class="group-hover:text-primary duration-150" />
+                            <Abte.Site:Icon.Support class="scale-75 group-hover:text-primary duration-150" />
                             <p class="text-sm">Support</p>
                         </div>
 

@@ -9,6 +9,7 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
         <!-- mt-8 for top header spacing -->
         <div class="mt-4 container-x">
             {props.headerContent}
+
         </div>
     `
 

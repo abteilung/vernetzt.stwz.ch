@@ -3,18 +3,10 @@ prototype(Abte.Site:Icon.ChevronDown) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-        <svg
-            class={props.class} 
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            >
-            <path
-                d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
-                fill="currentColor"
-            />
+        <svg class={props.class} xmlns="http://www.w3.org/2000/svg" width="32.437" height="19.048" viewBox="0 0 32.437 19.048">
+            <g id="Gruppe_4324" data-name="Gruppe 4324" transform="translate(-1904.179 1503.904) rotate(-90)">
+                <path id="Pfad_3358" data-name="Pfad 3358" d="M167.086-8142.49l13.391,13.391-13.391,13.39" transform="translate(1320.598 10049.498)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="4"/>
+            </g>
         </svg>
     `
 }

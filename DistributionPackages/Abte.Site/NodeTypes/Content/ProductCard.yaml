@@ -1,0 +1,26 @@
+'Abte.Site:Content.ProductCard':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Mixin.BgColor': true
+    'Abte.Site:Mixin.IsHero': true
+  ui:
+    label: ProductCard
+    icon: cart-plus
+    position: 7
+    inlineEditable: true
+  properties:
+    'bgColor':
+      type: string
+      defaultValue: 'bg-base-200'
+    title:
+      options:
+        preset: 'text.title'
+    subTitle:
+      options:
+        preset: 'text.title'
+    description:
+      options:
+        preset: 'text.free'
+    price:
+      options:
+        preset: 'text.plain'

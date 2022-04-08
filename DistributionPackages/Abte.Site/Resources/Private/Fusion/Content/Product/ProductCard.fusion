@@ -1,0 +1,79 @@
+
+prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent) {
+    
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }
+
+    description = Neos.Neos:Editable {
+        property = 'description'
+    }
+
+    price = Neos.Neos:Editable {
+        property = 'price'
+    }
+
+    backgroundColor = ${ q(node).property('bgColor') }
+
+    renderer = afx`
+    <div class={props.backgroundColor + ' ' + 'product cursor-pointer cardItem text-black space-y-4'}
+        data-price={props.price}
+        "@click.prevent"="calculatePrice($event)"
+    >
+        <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 border-black">
+            <Abte.Site:Component.isHero/>
+            <Abte.Site:Component.SelectedProduct class="right-0 absolute" />
+        </div>
+        <div class="h2 text-black mb-0">{props.title}</div>
+        <div class="h3 font-semibold !mt-0">{props.subTitle}</div>
+        <div class="description">{props.description}</div>
+        <div class="price">
+            <div class="text-sm font-semibold">Preis pro Monat</div>
+            <div class="text-lg">{props.price}</div>
+        </div>
+    </div>
+    `
+}
+
+
+prototype(Abte.Site:Component.SelectedProduct) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    class = ''
+
+    checkIcon = Abte.Site:Icon.Check
+    plusIcon = Abte.Site:Icon.Plus
+    
+    renderer = afx`
+        <div class={props.class + ' ' + 'w-8 h-8 rounded-full bg-white flex justify-center items-center' }>
+            {props.plusIcon}
+        </div>
+    `
+}
+
+prototype(Abte.Site:Component.isHero) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    class = ''
+
+    checkIcon = Abte.Site:Icon.Check
+    plusIcon = Abte.Site:Icon.Plus
+    
+    renderer = afx`
+        <div class={props.class + ' ' + 'isHero text-sm flex justify-center bg-accent rounded-2xl px-2 py-1 space-x-4' }>
+            <div>Bestseller</div><Abte.Site:Icon.Star />
+        </div>
+    `
+}

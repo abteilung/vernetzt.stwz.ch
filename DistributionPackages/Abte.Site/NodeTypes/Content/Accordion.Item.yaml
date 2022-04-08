@@ -1,6 +1,7 @@
 'Abte.Site:Content.Accordion.Item':
   superTypes:
     'Neos.Neos:Content': true
+    'Abte.Site:Mixin.Icons': TRUE
     'Abte.Site:Constraint.Content.Restricted': TRUE
   label: "${q(node).property('accordion_title') || 'Accordion-Item'}"
   ui:
@@ -11,6 +12,14 @@
     'accordion_title':
       options:
         preset: 'text.title'
+    'accordion_open':
+      type: boolean
+      defaultValue: 'false'
+      ui:
+        label: Element öffnen
+        reloadPageIfChanged: true
+        inspector:
+          group: general
   childNodes:
     content:
       position: 'end'

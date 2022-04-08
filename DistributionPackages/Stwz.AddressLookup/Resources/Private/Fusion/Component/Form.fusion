@@ -1,6 +1,6 @@
 prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) {
 
-    icon = Abte.Site:Icon.Calendar {
+    icon = Abte.Site:Icon.Connection {
         class = ''
     }
 
@@ -22,4 +22,3 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
 
     `
 }
-

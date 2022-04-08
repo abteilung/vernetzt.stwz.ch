@@ -3,24 +3,26 @@ prototype(Abte.Site:Icon.Internet) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-        <svg
+        <svg 
             class={props.class}
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns="http://www.w3.org/2000/svg" 
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="27.509"
+            height="27.509"
+            viewBox="0 0 27.509 27.509"
         >
-            <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3 6C3 4.89543 3.89543 4 5 4H19C20.1046 4 21 4.89543 21 6V14C21 15.1046 20.1046 16 19 16H5C3.89543 16 3 15.1046 3 14V6ZM5 6H19V14H5V6Z"
-                fill="currentColor"
-            />
-            <path
-                d="M2 18C1.44772 18 1 18.4477 1 19C1 19.5523 1.44772 20 2 20H22C22.5523 20 23 19.5523 23 19C23 18.4477 22.5523 18 22 18H2Z"
-                fill="currentColor"
-            />
+            <defs>
+                <clipPath id="clip-path">
+                <rect id="Rechteck_1964" data-name="Rechteck 1964" width="27.509" height="27.509" transform="translate(0 0)" fill="none"/>
+                </clipPath>
+            </defs>
+            <g id="Gruppe_4293" data-name="Gruppe 4293" transform="translate(0 0)">
+                <g id="Gruppe_4287" data-name="Gruppe 4287" clip-path="url(#clip-path)">
+                <rect id="Rechteck_1963" data-name="Rechteck 1963" width="24.009" height="24.009" rx="4.93" transform="translate(1.75 1.75)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                <line id="Linie_1014" data-name="Linie 1014" x2="22.158" transform="translate(2.414 9.813)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                <path id="Pfad_3373" data-name="Pfad 3373" d="M21.711,19.208a2.222,2.222,0,1,1-2.222-2.222,2.222,2.222,0,0,1,2.222,2.222" fill="#241911"/>
+                </g>
+            </g>
         </svg>
     `
 }

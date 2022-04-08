@@ -5,9 +5,11 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
         property = 'accordion_title'
     }
 
-    headerClass = 'h3 text-primary'
+    headerClass = 'h1 text-primary space-x-4 flex items-center'
 
     accordion_title = ${ q(node).property('accordion_title') }
+    
+    accordion_open = ${ q(node).property('accordion_open') }
 
 	content = Neos.Neos:ContentCollectionRenderer {
 		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
@@ -22,7 +24,9 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
 
 
   	renderer = afx`
-        <div class={props.itemClass}>
+        <div 
+            class={props.itemClass}
+        >
             <button
                 type="button"
                 class={props.buttonClass}
@@ -30,7 +34,7 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
             >
 
                 <div class="flex items-center justify-between">
-                    <div class={props.headerClass}>{props.header}</div>
+                    <div class={props.headerClass}><Abte.Site:Content.Accordion.Icon />{props.header}</div>
                     <div class={props.caretColor}>
                         <Neos.Fusion:Augmenter x-bind:class={'selected == ' + i.cycle + ' ? \'transform duration-300 rotate-180\' : \'\' '}>
                             <Abte.Site:Icon.ChevronDown class="transition" />
@@ -45,7 +49,7 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
                 x-bind:style={'selected == ' + i.cycle + ' ? \'max-height: \' + $refs.container' + i.cycle + '.scrollHeight + \'px\' : \'\' '}
             >
                 <div
-                    class="py-4 text-primary"
+                    class="pb-6 text-primary"
                 >
                     {props.content}
                 </div>
@@ -53,3 +57,31 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
         </div>
     `
 }
+
+prototype(Abte.Site:Content.Accordion.Icon)  < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    icon = Abte.Site:Mixin.Icons {
+        class = 'scale-75 absolute left-0'
+    }
+
+    renderer = afx`
+        <div class="relative block w-24">
+            {props.icon}
+            <Abte.Site:Content.Accordion.IconDivider class="absolute left-0" />
+        </div>
+    `
+}
+
+prototype(Abte.Site:Content.Accordion.IconDivider)  < prototype(Neos.Fusion:Component) {
+    renderer = afx`
+        <svg xmlns="http://www.w3.org/2000/svg" width="76.024" height="54.482" viewBox="0 0 76.024 54.482">
+            <line id="Linie_1017" data-name="Linie 1017" y1="53.667" x2="75.444" transform="translate(0.29 0.407)" fill="none" stroke="#000" stroke-width="1"/>
+        </svg>
+    `
+}
+

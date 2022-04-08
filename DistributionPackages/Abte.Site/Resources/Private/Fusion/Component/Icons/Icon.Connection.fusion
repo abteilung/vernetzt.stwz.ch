@@ -1,0 +1,37 @@
+prototype(Abte.Site:Icon.Connection) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg
+            class={props.class}
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="55.731"
+            height="55.731"
+            viewBox="0 0 55.731 55.731"
+        >
+            <defs>
+                <clipPath id="clip-path">
+                <rect id="Rechteck_1975" data-name="Rechteck 1975" width="35.901" height="42.915" fill="none"/>
+                </clipPath>
+            </defs>
+            <g id="Gruppe_4327" data-name="Gruppe 4327" transform="translate(-507.171 -775.089)">
+                <g id="Gruppe_4303" data-name="Gruppe 4303" transform="translate(537.517 775.089) rotate(45)">
+                <g id="Gruppe_4300" data-name="Gruppe 4300" transform="translate(0 0)">
+                    <g id="Gruppe_4299" data-name="Gruppe 4299" clip-path="url(#clip-path)">
+                    <rect id="Rechteck_1974" data-name="Rechteck 1974" width="9.77" height="21.133" transform="translate(23.959 6.547)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                    </g>
+                </g>
+                <rect id="Rechteck_1976" data-name="Rechteck 1976" width="5.801" height="8.101" transform="translate(25.882 0)" fill="#241911"/>
+                <g id="Gruppe_4302" data-name="Gruppe 4302" transform="translate(0 0)">
+                    <g id="Gruppe_4301" data-name="Gruppe 4301" clip-path="url(#clip-path)">
+                    <line id="Linie_1015" data-name="Linie 1015" x1="10.294" transform="translate(23.437 20.758)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                    <path id="Pfad_3377" data-name="Pfad 3377" d="M27.546,17.621v4.753a7.4,7.4,0,0,1-7.4,7.4h-.356a7.4,7.4,0,0,1-7.4-7.4V6.342A6.343,6.343,0,0,0,6.044,0h.03A6.074,6.074,0,0,0,0,6.074V21.11" transform="translate(2.171 10.969)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                    </g>
+                </g>
+                </g>
+            </g>
+        </svg>
+    `
+}

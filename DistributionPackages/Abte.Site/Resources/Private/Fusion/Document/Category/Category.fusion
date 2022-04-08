@@ -9,7 +9,6 @@ prototype(Abte.Site:Document.Category) < prototype(Abte.Site:Document.AbstractPa
                         <Abte.Site:Component.ProductsSubmenu cols="3" />
                     </main>
                     <aside>
-                        <Abte.Site:Content.ContactBox />
                         {props.aside}
                     </aside>
                 </div>

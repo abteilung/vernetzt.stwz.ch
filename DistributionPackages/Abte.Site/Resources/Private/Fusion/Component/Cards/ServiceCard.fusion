@@ -5,7 +5,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
         node = ${ this.node }
     }
 
-    serviceItemClass = 'rounded-xl group h-full bg-white px-5 py-4 transition-all'
+    serviceItemClass = 'cardItem group service bg-white'
 
     icon = Abte.Site:Icon.Calendar {
         class = ''
@@ -26,28 +26,26 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
     }
 
     renderer = afx`
-            <Carbon.Link:Link 
-                node={node}
-                attributes.class="service"
-            >
-                <div class={props.serviceItemClass}>
-                    <div class="header">
-                        <div class="flex justify-between">
-                            <Abte.Site:Mixin.Icons class="scale-100 group-hover:scale-110 duration-150" />
-                            {props.arrow}
-                        </div>
-                    </div>
-
-                    <div class="flex items-end space-x-2 h-full">
-                        <div class="-rotate-90 w-1/6 mb-6 text-primary">
-                            <h2 class="block">{props.title}</h2>
-                        </div>
-                        <div class="w-5/6 content flex-1">
-                            <strong>{String.toString(props.subTitle)}</strong>
-                            <p>{props.intro}</p>
-                        </div>
-                    </div>
+        <Carbon.Link:Link 
+            node={node}
+            attributes.class={props.serviceItemClass}
+        >
+            <div class="header h-20">
+                <div class="flex justify-between">
+                    <Abte.Site:Mixin.Icons class="scale-100 group-hover:scale-110 duration-150" />
+                    {props.arrow}
                 </div>
-            </Carbon.Link:Link>
+                <Abte.Site:Icon.Diagonal />
+            </div>
+            <div class="flex flex-1 items-end space-x-2 h-auto">
+                <div class="-rotate-90 w-1/6 mb-6 text-primary">
+                    <h2 class="block">{props.title}</h2>
+                </div>
+                <div class="w-5/6 content flex-1">
+                    <strong>{String.toString(props.subTitle)}</strong>
+                    <p>{props.intro}</p>
+                </div>
+            </div>
+        </Carbon.Link:Link>
     `
 }

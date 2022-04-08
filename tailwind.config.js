@@ -178,14 +178,14 @@ module.exports = {
         themes: [
             {
                 'stwztgen': {
-                    'primary': '#cba303',
+                    'primary': '#CCA401',
                     'primary-focus': '#D8942E',
                     'primary-content': '#ffffff',
                     'secondary': '#E64545',
                     'secondary-focus': '#831111',
                     'neutral': '#EFEFEF',
                     'error': '#ff9900',
-                    'base-100': '#f7f6f6',
+                    'base-100': '#E6EEF1',
                     'base-200': '#d4e0e5',
                     'base-300': '#c0d3db',
                     // other colors

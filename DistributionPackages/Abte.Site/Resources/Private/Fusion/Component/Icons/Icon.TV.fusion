@@ -3,22 +3,24 @@ prototype(Abte.Site:Icon.TV) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-
-        <svg
+        <svg 
             class={props.class}
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            >
-            <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M8 6.11861L9.4131 4.70551L11.5371 6.82954L14.3667 4L15.7782 5.41151L13.3137 7.87598H18C19.1046 7.87598 20 8.77141 20 9.87598V16.876C20 17.9805 19.1046 18.876 18 18.876H6C4.89543 18.876 4 17.9805 4 16.876V9.87598C4 8.77141 4.89543 7.87598 6 7.87598H9.75736L8 6.11861ZM18 9.87598H6V16.876H18V9.87598Z"
-                fill="currentColor"
-            />
-            <path d="M8 19.876H16V20.876H8V19.876Z" fill="currentColor" />
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="27.509"
+            height="26.75" viewBox="0 0 27.509 26.75"
+        >
+            <defs>
+                <clipPath id="clip-path">
+                <rect id="Rechteck_1961" data-name="Rechteck 1961" width="27.509" height="26.75" transform="translate(0 0)" fill="none"/>
+                </clipPath>
+            </defs>
+            <g id="Gruppe_4292" data-name="Gruppe 4292" transform="translate(0 0)">
+                <g id="Gruppe_4285" data-name="Gruppe 4285" clip-path="url(#clip-path)">
+                <rect id="Rechteck_1960" data-name="Rechteck 1960" width="24.009" height="17.906" transform="translate(1.75 1.75)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                <line id="Linie_1013" data-name="Linie 1013" x2="15.187" transform="translate(6.438 25)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
+                </g>
+            </g>
         </svg>
     `
 }

@@ -39,10 +39,3 @@
                 label: 'Job Title'
                 inspector:
                     group: 'document'
-        quote:
-            options:
-                preset: 'text.free'
-            ui:
-                label: 'Zitat'
-                inspector:
-                    group: 'document'

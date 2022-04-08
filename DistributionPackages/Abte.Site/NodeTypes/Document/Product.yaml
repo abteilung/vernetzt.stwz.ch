@@ -30,15 +30,10 @@
       type: 'Neos.Neos:ContentCollection'
       position: 'after main'
   properties:
-    categories:
-      type: references
+    'accordion_open':
+      options:
+        preset: 'text.inspector'
       ui:
-        label: 'Kategorien'
-        reloadIfChanged: TRUE
+        label: 'Welches Accordion öffnen?'
         inspector:
-          group: 'document'
-          position: 20
-          editorOptions:
-            nodeTypes: ['Abte.Site:Document.Category']
-            # startingPoint: "ClientEval:node.properties._path.replace(/(.+)(\\/.+)/, '$1')"
-            # startingPoint: /Kategorien
+          group: document

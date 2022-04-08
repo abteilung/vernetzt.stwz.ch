@@ -33,13 +33,3 @@
         reloadPageIfChanged: true
         inspector:
           group: visibility
-    'zitatUser':
-      type: reference
-      ui:
-        label: Footer-Zitat
-        reloadIfChanged: true
-        inspector:
-          group: featureImages
-          position: 77
-          editorOptions:
-            nodeTypes: ['Abte.Site:Document.Person']
