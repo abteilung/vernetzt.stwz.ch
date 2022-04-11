@@ -18,9 +18,13 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
 
     renderer = afx`
 
-        <div class="grid gridgap md:grid-cols-3">
+        <fieldset 
+            class="grid gridgap md:grid-cols-3"
+            x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })"
+            x-init="init()"
+        >
             {props.shopItems}
-        </div>
+        </fieldset>
                     
     `
 }

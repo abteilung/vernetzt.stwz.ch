@@ -48,9 +48,7 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
                 x-ref={'container' + i.cycle}
                 x-bind:style={'selected == ' + i.cycle + ' ? \'max-height: \' + $refs.container' + i.cycle + '.scrollHeight + \'px\' : \'\' '}
             >
-                <div
-                    class="pb-6 text-primary"
-                >
+                <div class="pb-6 text-primary">
                     {props.content}
                 </div>
             </div>

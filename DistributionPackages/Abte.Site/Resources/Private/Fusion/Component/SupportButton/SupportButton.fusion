@@ -46,19 +46,19 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                         "@click.away"="open = false" 
                         :class="open ? 'w-56 h-80 px-3 justify-left' : 'px-0 w-20 h-20 justify-center'"
                     >
-                        <div class="flex items-center justify-center w-20 h-20">
+                        <div class="flex items-center justify-center w-20 h-20 cursor-pointer">
                             <div 
                                 "@click.prevent"="open = !open" 
-                                class="relative flex flex-wrap justify-center delay-500 text-center text-black transition-all cursor-pointer"
+                                class="relative flex flex-wrap justify-center delay-500 text-center text-black"
                             >
-                                <Abte.Site:Icon.Support class="scale-75 group-hover:text-primary duration-150" />
+                                <Abte.Site:Icon.Support class="scale-75" />
                                 <p class="text-sm">Support</p>
                             </div>
                         </div>
 
                         <div 
                             class="flex justify-between w-full transition-all duration-300 navArea"
-                            :class="open ? 'h-auto opacity-100 delay-500' : 'h-none delay-150 opacity-0'"
+                            :class="open ? 'opacity-100 delay-500' : 'delay-150 opacity-0'"
                         >
 
                             <div class="space-y-3">
@@ -94,7 +94,6 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                                         </Neos.Fusion:Loop>
                                     </ul>
                                 </nav>
-
 
                             </div>
                         </div>

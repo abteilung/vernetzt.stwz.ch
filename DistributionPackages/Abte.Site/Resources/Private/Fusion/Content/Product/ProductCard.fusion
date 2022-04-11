@@ -1,5 +1,10 @@
 prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent) {
-    
+
+    node = ${ node }    
+    @context {
+        node = ${ this.node }
+    }
+
     title = Neos.Neos:Editable {
         property = 'title'
     }
@@ -16,25 +21,42 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
         property = 'price'
     }
 
+    itemID = ${ String.replace( q(node).property('_nodeName') , 'node-', '') }
+
     backgroundColor = ${ q(node).property('bgColor') }
 
+    // relative bg-white border rounded-lg shadow-sm p-4 flex cursor-pointer focus:outline-none border-transparent border-indigo-500 ring-2 ring-indigo-500
+
     renderer = afx`
-    <div class={props.backgroundColor + ' ' + 'product cursor-pointer cardItem text-black space-y-4'}
-        data-price={props.price}
-        "@click.prevent"="calculatePrice($event)"
-    >
-        <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 border-black">
-            <Abte.Site:Component.isHero/>
-            <Abte.Site:Component.SelectedProduct class="right-0 absolute" />
-        </div>
-        <div class="h2 text-black mb-0">{props.title}</div>
-        <div class="h3 font-semibold !mt-0">{props.subTitle}</div>
-        <div class="description">{props.description}</div>
-        <div class="price">
-            <div class="text-sm font-semibold">Preis pro Monat</div>
-            <div class="text-lg">{props.price}</div>
-        </div>
-    </div>
+        <label 
+            class={'product cursor-pointer cardItem text-black bg-base-100 space-y-4 hover:bg-base-200'}
+            x-radio-group-option=""
+            data-price={props.price}
+            :class={"{ 'bg-base-100': (value === '" + props.itemID + "'), 'bg-base-100': !(value === '" + props.itemID + "'), 'bg-base-300': (active === '" + props.itemID + "'), 'bg-base-100': !(active === '" + props.itemID + "') }"}
+        >
+            <input 
+                type="radio" 
+                value={props.itemID} 
+                x-model="value" 
+                name={props.itemID} 
+                class="sr-only" />
+
+            <div class="flex-1 flex">
+                <div class="flex flex-col">
+                    <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 border-black">
+                        <Abte.Site:Component.isHero />
+                        <Abte.Site:Component.SelectedProduct activeItem={props.itemID} class="right-0 absolute" />
+                    </div>
+                    <div class="h2 text-black mb-0">{props.title}</div>
+                    <div class="h3 font-semibold !mt-0">{props.subTitle}</div>
+                    <div class="description">{props.description}</div>
+                    <div class="price">
+                        <div class="text-sm font-semibold">Preis pro Monat</div>
+                        <div class="text-lg">{props.price}</div>
+                    </div>
+                </div>
+            </div>
+        </label>
     `
 }
 
@@ -48,12 +70,19 @@ prototype(Abte.Site:Component.SelectedProduct) < prototype(Neos.Fusion:Component
 
     class = ''
 
+    activeItem = ''
+
     checkIcon = Abte.Site:Icon.Check
     plusIcon = Abte.Site:Icon.Plus
     
     renderer = afx`
         <div class={props.class + ' ' + 'w-8 h-8 rounded-full bg-white flex justify-center items-center' }>
-            {props.plusIcon}
+            <div
+                :class={"{ 'hidden': !(value === '" + props.activeItem + "'), 'block': (active === '" + props.activeItem + "') }"}
+            >{props.checkIcon}</div>
+            <div
+                :class={"{ 'block': !(value === '" + props.activeItem + "'), 'hidden': (active === '" + props.activeItem + "') }"}
+            >{props.plusIcon}</div>
         </div>
     `
 }
