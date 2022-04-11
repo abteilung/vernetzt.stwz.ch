@@ -2,6 +2,7 @@
     superTypes:
         'Abte.Site:Document.AbstractPage': true
         'Abte.Site:Mixin.Image': true
+        'Abte.Site:Mixin.Illustration': true
         'Abte.Site:Constraint.Document.Restricted': true
         'Abte.Site:Mixin.Searchable.SiteSearch': true
     ui:

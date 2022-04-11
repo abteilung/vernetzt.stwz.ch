@@ -15,8 +15,8 @@ prototype(Abte.Site:Component.Header) < prototype(Neos.Fusion:Component) {
     }
 
     imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
-        // asset   = ${ q(node).property('image') }
-        asset   = ${ q(node).closest("[instanceof Neos.Neos:Document][headerImage][headerImage != '']").property('headerImage') || q(node).closest("[instanceof Neos.Neos:Document][image][image != '']").property('image') }
+        asset   = ${ q(node).property('illustration') }
+        // asset   = ${ q(node).closest("[instanceof Neos.Neos:Document][headerImage][headerImage != '']").property('headerImage') || q(node).closest("[instanceof Neos.Neos:Document][image][image != '']").property('image') }
     }
 
     hideHeader = ${ q(node).property('hideHeader') }
