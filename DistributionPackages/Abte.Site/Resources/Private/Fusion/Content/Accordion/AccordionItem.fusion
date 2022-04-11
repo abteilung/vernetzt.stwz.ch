@@ -70,7 +70,9 @@ prototype(Abte.Site:Content.Accordion.Icon)  < prototype(Neos.Fusion:Component) 
     }
 
     renderer = afx`
-        <div class="relative block w-24">
+        <div class="relative block w-24"
+            @if.hasIcon={props.icon}
+        >
             {props.icon}
             <Abte.Site:Content.Accordion.IconDivider class="absolute left-0" />
         </div>
