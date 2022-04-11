@@ -24,8 +24,13 @@
           icon: 'pen'
   properties:
     illustration:
+      type: string
+      defaultValue: '<p>HTML Code</p>'
       ui:
+        label: Illustration (SVG Code)
+        reloadIfChanged: true
         inspector:
-          group: 'illustration'
-      options:
-        preset: 'image.asset'
+          group: general
+          editor: Neos.Neos/Inspector/Editors/CodeEditor
+          editorOptions:
+            buttonLabel: 'SVG bearbeiten'

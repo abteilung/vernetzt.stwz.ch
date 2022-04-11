@@ -9,9 +9,6 @@
     position: 7
     inlineEditable: true
   properties:
-    'bgColor':
-      type: string
-      defaultValue: 'bg-base-200'
     title:
       options:
         preset: 'text.title'

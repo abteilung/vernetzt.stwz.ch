@@ -6,11 +6,6 @@
     'helpdeskSubTitle':
       options:
         preset: 'text.plain'
-    'helpdeskPic':
-      options:
-        preset: 'image.tvAsset'
-      ui:
-        label: 'Helpdesk Image'
     'helpdeskPhone':
       options:
         preset: 'text.plain'
@@ -25,4 +20,4 @@
       options:
         preset: 'text.plain'
       ui:
-        label: 'Helpdesk Internet'        
+        label: 'Helpdesk Internet'

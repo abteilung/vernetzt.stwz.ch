@@ -15,7 +15,7 @@
       type: boolean
       defaultValue: 'false'
       ui:
-        label: 'Is Lead'
+        label: 'Ist Bestseller'
         reloadIfChanged: true
         inspector:
           group: 'style'

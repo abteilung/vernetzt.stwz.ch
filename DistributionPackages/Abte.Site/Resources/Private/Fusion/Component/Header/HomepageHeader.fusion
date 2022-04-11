@@ -14,9 +14,10 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
         }
     }
 
-    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
-        asset   = ${ q(node).property('illustration') }
-        // asset   = ${ q(node).closest("[instanceof Neos.Neos:Document][headerImage][headerImage != '']").property('headerImage') || q(node).closest("[instanceof Neos.Neos:Document][image][image != '']").property('image') }
+    svgIllustration = Neos.Fusion:Tag {
+        attributes.class = 'lineAnimation'
+        content = ${node.properties.illustration}
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
     }
 
     hideHeader = ${ q(node).property('hideHeader') }
@@ -35,17 +36,18 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
 
     renderer = afx`
 
-        <div class="absolute mt-0 top-0 z-20 xl:mb-10 w-full overflow-visible">
-
-            <Sitegeist.Lazybones:Image 
-                @if.hasImage={props.imageSource}
-                imageSource={props.imageSource} 
-                width="2200"
-                height="600"
-                class="object-cover object-center w-full h-full mix-blend-multiply saturate-20"
-            />
-            <div class="container relative h-[350px] md:h-[450px] lg:h-[500px]">
-                <div class="absolute z-10 right-0 -bottom-28">
+        <div class="relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
+            <div class="container relative pt-32 h-[350px] md:h-[450px] lg:h-[500px]">
+                
+                <div class="grid grid-cols-3 border-2 gridgap-x border-primary">
+                    <h1 class="text-black">{props.pageTitle}</h1>
+                        
+                    <div class="right-0 flex justify-end h-48 col-span-2 border-2 border-primary">
+                        {props.svgIllustration}
+                    </div>
+                </div>
+                
+                <div class="absolute right-0 z-10 -bottom-28">
                     <Stwz.MovingLines:Component.Lines />
                 </div>
             </div>

@@ -22,12 +22,12 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
     renderer = afx`
 		<Abte.Site:TrackingScript.Ackee/>
 		<Stwz.Navigation:Component.Navbar />
-        <header class="-mt-32 z-0 h-64 overflow-hidden bg-cover bg-fixed bg-[url('Media/Backdrops/MainBackdrop.svg')]">
+        <header class="bg-cover bg-fixed bg-[url('Media/Backdrops/MainBackdrop.svg')]">
             {props.pageHeader}
         </header>
 		
 		<Abte.Site:Component.SupportButton />
-        {props.content}
+			{props.content}
         <Abte.Site:Component.Footer />
 		
     `
