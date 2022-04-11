@@ -1,0 +1,45 @@
+prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+
+        imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+            asset   = ${ q(node).property('image') }
+        }
+
+        icon = Abte.Site:Icon.Calendar {
+            class = ''
+        }
+
+        arrow = Abte.Site:Icon.ArrowRight {
+            class = 'left-0 group-hover:left-2 relative duration-150'
+        }
+
+        title = ${ q(node).property('title') }
+
+        subTitle = Neos.Neos:Editable {
+            property = 'subTitle'
+        }
+
+        intro = Neos.Neos:Editable {
+            property = 'intro'
+        }
+
+        teaser_short = Neos.Neos:Editable {
+            property = 'teaser_short'
+        }
+
+
+        renderer = afx`
+
+            <div class="container">
+
+
+             
+
+
+                <main class="">
+                    {props.main}
+                </main>
+            </div>
+        `
+    }
+}

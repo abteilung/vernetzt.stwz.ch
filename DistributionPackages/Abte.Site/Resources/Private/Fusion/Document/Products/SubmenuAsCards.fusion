@@ -1,0 +1,63 @@
+prototype(Abte.Site:Component.SubMenuAsCards) < prototype(Neos.Fusion:Component) {
+    
+    items = Neos.Fusion:Case {
+        productsOverview {
+            condition = ${ q(documentNode).is('[instanceof Abte.Site:Document.ProductOverview]') }
+            renderer = ${ q(documentNode).children('[instanceof Abte.Site:Document.Products]').get()}
+        }
+        marketsOverview {
+            condition = ${ q(documentNode).is('[instanceof Abte.Site:Document.Markets]') }
+            renderer = ${ q(documentNode).children('[instanceof Abte.Site:Document.Market]').get()}
+        }
+        fallback {
+            condition = ${ true }
+            renderer = ${ q(documentNode).find('[instanceof Abte.Site:Document.Service],[instanceof Abte.Site:Document.Product],[instanceof Abte.Site:Document.Page]').get() }
+        }
+    }
+
+    @context {
+        items = ${ this.items }
+    }
+
+    subItemsForCards = Neos.Neos:MenuItems {
+        itemCollection = ${ items }
+        maximumLevels = 1
+    }
+
+    cols = ''
+    @context.cols = ${ this.cols }
+
+    columns = Neos.Fusion:Case {
+        four {
+            condition = ${cols == '4'}
+            renderer = 'grid grid-cols-1 sm:grid-cols-2 !gap-y-16 lg:grid-cols-4 gridgap'
+        }
+        three {
+            condition = ${cols == '3'}
+            renderer = 'grid grid-cols-1 sm:grid-cols-2 !gap-y-16 lg:grid-cols-3 gridgap'
+        }
+        fallback {
+            condition = true
+            renderer = 'grid grid-cols-1 md:grid-cols-2 !gap-y-16 gridgap'
+        }
+    }
+
+    renderer = afx`
+
+        <div id="productListing">
+            <!-- 
+                <button class="sort btn btn-primary" data-sort="productPrice">Filter me!</button>
+                <button class="sort btn btn-primary" data-sort="productWidth">Filter me!</button>
+                <input type="search" class="search" placeholder="normal search" />
+            -->
+
+            <div class={props.columns}>
+                <Neos.Fusion:Loop items={props.subItemsForCards} iterationName="i">
+                    <Abte.Site:Component.ImageCard node={item.node} />
+                </Neos.Fusion:Loop>
+            </div>
+            
+        </div>
+
+    `
+}
