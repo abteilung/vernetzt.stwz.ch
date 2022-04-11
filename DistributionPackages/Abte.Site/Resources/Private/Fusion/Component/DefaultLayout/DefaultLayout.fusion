@@ -8,8 +8,8 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 			renderer = Abte.Site:Component.HomepageHeader
 		}
 
-		Product {
-			condition = ${ q(node).is('[instanceof Abte.Site:Document.Product]') }
+		Service {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Service]') }
 			renderer = Abte.Site:Component.HeaderProduct
 		}
 
@@ -22,9 +22,7 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
     renderer = afx`
 		<Abte.Site:TrackingScript.Ackee/>
 		<Stwz.Navigation:Component.Navbar />
-        <header class="bg-cover bg-fixed bg-[url('Media/Backdrops/MainBackdrop.svg')]">
             {props.pageHeader}
-        </header>
 		
 		<Abte.Site:Component.SupportButton />
 			{props.content}

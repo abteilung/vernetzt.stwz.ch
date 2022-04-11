@@ -20,52 +20,59 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
         asset   = ${ q(node).property('image') }
     }
 
-       title = ${ q(node).property('title') }
+    title = ${ q(node).property('title') }
 
-        subTitle = Neos.Neos:Editable {
-            property = 'subTitle'
-        }
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }
 
-        intro = Neos.Neos:Editable {
-            property = 'intro'
-        }
+    intro = Neos.Neos:Editable {
+        property = 'intro'
+    }
 
-        teaser_short = Neos.Neos:Editable {
-            property = 'teaser_short'
-        }
-        icon = Abte.Site:Icon.Calendar {
-            class = ''
-        }
+    teaser_short = Neos.Neos:Editable {
+        property = 'teaser_short'
+    }
 
+    svgIllustration = Neos.Fusion:Tag {
+        attributes.class = 'lineAnimation'
+        content = ${node.properties.illustration}
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+    }
 
     renderer = afx`
-        <div class="gridPadding">
-            <div class="container grid grid-cols-12 mt-12 mb-8 md:mt-36 2xl:mt-48 md:mb-12 2xl:mb-24 gridgap">
-                <div class="col-span-12 md:col-span-6 lg:col-span-5">
-                    <Sitegeist.Lazybones:Image 
-                        @if.hasImage={props.imageSource}
-                        imageSource={props.imageSource} 
-                        width="800"
-                        height="800"
-                        class=""
-                    />
-
-                    <img src="https://via.placeholder.com/800x800" alt={props.title} width="800" height="800"
-                        @if.hasNoImage={!props.imageSource}
-                    />
-
+        <header class="bg-cover bg-fixed bg-[url('Media/Backdrops/MainBackdrop.svg')]">
+            <div class="relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
+                <div class="container relative pt-32 h-[250px] md:h-[350px] lg:h-[400px]">
+                    
+                    <div class="grid grid-cols-3 gridgap-x">
+                        <h1 class="text-black">{props.pageTitle}</h1>
+                            
+                        <div class="right-0 flex justify-end h-48 col-span-2">
+                            {props.svgIllustration}
+                        </div>
+                    </div>
                 </div>
-               
+                <div class="absolute right-0 z-10 -bottom-28">
+                    <Stwz.MovingLines:Component.Lines />
+                </div>
             </div>
-        </div>
+        </header>
 
         <div class="container">
+
+            <div class="relative w-24 h-16 header">
+                <div class="flex justify-between">
+                    <Abte.Site:Mixin.Icons class="duration-150 scale-100 group-hover:scale-110" />
+                    <Abte.Site:Icon.Diagonal class="absolute left-0" />
+                </div>
+            </div>
+
+
             <div class="grid grid-cols-2 gridgap-x">
-                <div class="gridColumn flex items-start space-x-2">
-                    <div class="-rotate-90 w-1/6 mb-6 text-primary">
-                        <h1 class=" block">{props.title}</h1>
-                    </div>
-                    <div class="w-5/6 content">
+                <div class="flex items-start space-x-2 gridColumn">
+                    <h1 class="block mb-6 space-x-2 -rotate-90 w-1/8 text-primary">{props.title}</h1>
+                    <div class="w-7/8 content">
                         <h3>{String.toString(props.subTitle)}</h3>
                         <Neos.Fusion:Augmenter class="strong">
                         {props.intro}
@@ -89,7 +96,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
                     />                        
                 </div>
             </div>        
-        </div>        
+        </div>
     `
 
 	@cache {

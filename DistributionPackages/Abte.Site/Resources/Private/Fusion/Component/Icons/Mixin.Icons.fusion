@@ -1,6 +1,11 @@
 
 prototype(Abte.Site:Mixin.Icons) < prototype(Neos.Fusion:Component) {
 
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
     class = ''
     @context {
         class = ${ this.class }

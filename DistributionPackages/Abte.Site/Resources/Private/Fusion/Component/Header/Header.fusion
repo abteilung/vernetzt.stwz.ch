@@ -34,22 +34,23 @@ prototype(Abte.Site:Component.Header) < prototype(Neos.Fusion:Component) {
     ##
 
     renderer = afx`
-
-        <div class="relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
-
-            <Sitegeist.Lazybones:Image 
-                @if.hasImage={props.imageSource}
-                imageSource={props.imageSource} 
-                width="2200"
-                height="600"
-                class="object-cover object-center w-full h-full mix-blend-multiply saturate-20"
-            />
-            <div class="container relative h-[250px] md:h-[350px] lg:h-[400px]">
+        <header class="bg-cover bg-fixed bg-[url('Media/Backdrops/MainBackdrop.svg')]">
+            <div class="relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
+                <div class="container relative pt-32 h-[250px] md:h-[350px] lg:h-[400px]">
+                    
+                    <div class="grid grid-cols-3 gridgap-x">
+                        <h1 class="text-black">{props.pageTitle}</h1>
+                            
+                        <div class="right-0 flex justify-end h-48 col-span-2">
+                            {props.svgIllustration}
+                        </div>
+                    </div>
+                </div>
                 <div class="absolute right-0 z-10 -bottom-28">
                     <Stwz.MovingLines:Component.Lines />
                 </div>
             </div>
-        </div>
+        </header>
 
     `
 

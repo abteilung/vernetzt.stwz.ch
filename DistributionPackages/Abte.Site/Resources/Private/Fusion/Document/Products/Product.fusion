@@ -10,7 +10,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
         }
 
         arrow = Abte.Site:Icon.ArrowRight {
-            class = 'left-0 group-hover:left-2 relative duration-150'
+            class = 'relative left-0 duration-150 group-hover:left-2'
         }
 
         title = ${ q(node).property('title') }
@@ -31,11 +31,6 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
         renderer = afx`
 
             <div class="container">
-
-
-             
-
-
                 <main class="">
                     {props.main}
                 </main>

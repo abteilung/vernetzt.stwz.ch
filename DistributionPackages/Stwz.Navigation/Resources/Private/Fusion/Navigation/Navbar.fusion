@@ -7,7 +7,7 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
         <div 
             x-cloak
             id={props.menuID}
-            class="fixed top-0 z-40 w-full h-32 transition-all duration-500 transform isolate"
+            class="fixed top-0 z-20 w-full h-32 transition-all duration-500 transform isolate"
         >
             <Stwz.Navigation:Component.Extra.Navbar.Navigation />
             
