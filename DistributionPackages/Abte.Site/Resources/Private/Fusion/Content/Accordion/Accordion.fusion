@@ -73,7 +73,9 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                     />
                 </div>
             </div>
-            <div class="">
+            <div class=""
+                @if.isShop={props.isShop}
+            >
                 <div class="bg-primary p-6">
                     <div class="h1 text-white mb-0">Ihr Abo</div>
                     <div class="pricing relative">

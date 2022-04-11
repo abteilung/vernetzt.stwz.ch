@@ -15,8 +15,12 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
 	menuItems = Neos.Neos:MenuItems {
         itemCollection = ${ q(site).property('supportItems') ? q(site).property('supportItems') : null }
         filter = 'Neos.Neos:Document,!Abte.Site:Document.MenuSeparator'
-        renderHiddenInIndex = ${ false }
+        renderHiddenInIndex = ${ true }
     }
+
+    phone = ${ q(site).property('helpdeskPhone') }
+
+    email = ${ q(site).property('helpdeskEmail') }
 
     class = ''
     
@@ -38,37 +42,61 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                     x-data="\{ 'open' : false \}"
                 >
                     <div 
-                        class="flex flex-wrap py-5 transition-all duration-500 bg-white shadow-xl rounded-l-xl"
-                        :class="open ? 'w-56 h-52 px-5' : 'px-0 w-20 h-20'"
+                        class="flex flex-wrap items-center transition-all duration-500 bg-white shadow-xl rounded-l-xl"
                         "@click.away"="open = false" 
+                        :class="open ? 'w-56 h-80 px-3 justify-left' : 'px-0 w-20 h-20 justify-center'"
                     >
-                        <div 
-                            "@click.prevent"="open = !open" 
-                            class="relative flex flex-wrap justify-center text-center text-black transition-all cursor-pointer"
-                            :class="open ? 'absolute delay-500 space-x-4' : 'space-x-0 delay-500'"
-                        >
-                            <Abte.Site:Icon.Support class="scale-75 group-hover:text-primary duration-150" />
-                            <p class="text-sm">Support</p>
+                        <div class="flex items-center justify-center w-20 h-20">
+                            <div 
+                                "@click.prevent"="open = !open" 
+                                class="relative flex flex-wrap justify-center delay-500 text-center text-black transition-all cursor-pointer"
+                            >
+                                <Abte.Site:Icon.Support class="scale-75 group-hover:text-primary duration-150" />
+                                <p class="text-sm">Support</p>
+                            </div>
                         </div>
 
                         <div 
                             class="flex justify-between w-full transition-all duration-300 navArea"
                             :class="open ? 'h-auto opacity-100 delay-500' : 'h-none delay-150 opacity-0'"
                         >
-                            <nav class="supportButton">
-                                <ul>
-                                    <Neos.Fusion:Loop items={props.menuItems}>
-                                        <li>
-                                            <Carbon.Link:Link 
-                                                node={item.node}
-                                                attributes.class="block font-normal truncate hover:text-primary"
-                                            >
-                                                {item.label}
-                                            </Carbon.Link:Link>
-                                        </li>
-                                    </Neos.Fusion:Loop>
-                                </ul>
-                            </nav>
+
+                            <div class="space-y-3">
+                                <Carbon.Link:Link 
+                                    additionalClass="text-sm block hover:underline rounded-full bg-accent font-semibold px-4 py-2" 
+                                    link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
+                                    renderDefaultTagIfNoLink='true'
+                                >
+                                    <Neos.Neos:Editable property="helpdeskPhone" node={site} />
+                                </Carbon.Link:Link>
+                                <Carbon.Link:Link 
+                                    additionalClass="text-sm block hover:underline rounded-full bg-base-300 font-semibold px-4 py-2" 
+                                    link={'mailto:' + props.email} 
+                                    renderDefaultTagIfNoLink='true'
+                                >
+                                    <Neos.Neos:Editable property="helpdeskEmail" node={site} />
+                                </Carbon.Link:Link>
+
+
+                                <nav class="supportButton">
+                                    <ul class="space-y-3">
+                                        <Neos.Fusion:Loop items={props.menuItems}>
+                                            <li>
+                                                <hr class="border-black border-t-[1px] mb-2"/>
+                                                <Carbon.Link:Link 
+                                                    node={item.node}
+                                                    attributes.class="block font-normal text-sm truncate hover:text-primary"
+                                                >
+                                                    {item.label}
+                                                </Carbon.Link:Link>
+
+                                            </li>
+                                        </Neos.Fusion:Loop>
+                                    </ul>
+                                </nav>
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
