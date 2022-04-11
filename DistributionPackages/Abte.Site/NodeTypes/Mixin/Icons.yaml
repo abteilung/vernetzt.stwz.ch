@@ -7,6 +7,7 @@
             ui:
                 label: 'Icon'
                 position: 99
+                reloadIfChanged: true
                 inspector:
                     group: 'general'
                     editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'

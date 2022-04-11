@@ -25,7 +25,7 @@
         preset: 'text.plain'
     'removePadding':
       type: boolean
-      defaultValue: true
+      defaultValue: false
       ui:
         label: Remove Padding
         reloadIfChanged: true

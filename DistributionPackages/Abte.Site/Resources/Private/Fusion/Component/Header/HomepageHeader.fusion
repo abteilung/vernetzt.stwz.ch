@@ -1,25 +1,65 @@
 prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component) {
-
-    headerContent = Neos.Neos:ContentCollection {
-        nodePath = ${ q(site).children('header').property('_path') }
-        collection = ${ q(site).children('header').children() }
-    }
     
-    renderer = afx`
-        <!-- mt-8 for top header spacing -->
-        <div class="mt-4 container-x">
-            {props.headerContent}
+    pageTitle = Neos.Neos:Editable {
+        property = 'title'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
 
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('illustration') }
+        // asset   = ${ q(node).closest("[instanceof Neos.Neos:Document][headerImage][headerImage != '']").property('headerImage') || q(node).closest("[instanceof Neos.Neos:Document][image][image != '']").property('image') }
+    }
+
+    hideHeader = ${ q(node).property('hideHeader') }
+
+    ##
+    # If you want to use a default rendering for a menu, you can just use:
+    ##
+    # <Neos.Neos:Menu
+    #     startingPoint={site}
+    #     attributes.class="navigation"
+    #     normal.attributes.class="navigation-item"
+    #     active.attributes.class="navigation-item navigation-item--state-active"
+    #     current.attributes.class="navigation-item navigation-item--state-current"
+    #     />
+    ##
+
+    renderer = afx`
+
+        <div class="absolute mt-0 top-0 z-20 xl:mb-10 w-full overflow-visible">
+
+            <Sitegeist.Lazybones:Image 
+                @if.hasImage={props.imageSource}
+                imageSource={props.imageSource} 
+                width="2200"
+                height="600"
+                class="object-cover object-center w-full h-full mix-blend-multiply saturate-20"
+            />
+            <div class="container relative h-[350px] md:h-[450px] lg:h-[500px]">
+                <div class="absolute z-10 right-0 -bottom-28">
+                    <Stwz.MovingLines:Component.Lines />
+                </div>
+            </div>
         </div>
+
     `
 
-	// @cache {
-	// 	mode = 'cached'
-	// 	entryIdentifier {
-	// 		documentNode = ${documentNode}
-	// 	}
-	// 	entryTags {
-	// 		1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
-	// 	}
-	// }
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			documentNode = ${documentNode}
+		}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
 }
