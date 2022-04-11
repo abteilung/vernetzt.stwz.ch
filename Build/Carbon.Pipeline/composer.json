@@ -1,0 +1,49 @@
+{
+    "name": "carbon/pipeline",
+    "description": "Ultra-fast build stack for Neos CMS based on esbuild and PostCSS",
+    "type": "neos-build",
+    "license": "MIT",
+    "keywords": [
+        "neos",
+        "esbuild",
+        "CSS",
+        "PostCSS",
+        "Tailwind",
+        "Sass",
+        "JavaScript",
+        "TypeScript",
+        "Vue",
+        "React",
+        "Preact",
+        "Svelte"
+    ],
+    "authors": [
+        {
+            "name": "Jon Uhlmann",
+            "email": "me@jonnitto.ch",
+            "homepage": "https://www.jonnitto.ch"
+        }
+    ],
+    "archive": {
+        "exclude": [
+            "/.github",
+            "/Test",
+            "/.editorconfig",
+            "/.gitattributes",
+            "/.gitignore",
+            "/CODE_OF_CONDUCT.md",
+            "/LICENSE",
+            "/Makefile",
+            "/package-lock.json",
+            "/pnpm-lock.yaml",
+            "/yarn.lock"
+        ]
+    },
+    "extra": {
+        "neos": {
+            "installer-resource-folders": [
+                "/Installer/"
+            ]
+        }
+    }
+}

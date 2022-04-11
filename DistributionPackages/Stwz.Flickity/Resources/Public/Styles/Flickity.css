@@ -1,0 +1,290 @@
+/*! Flickity v3.0.0
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  touch-action: pan-y;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.flickity-rtl .flickity-slider {
+  left: unset;
+  right: 0;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- flickity-cell ---- */
+
+.flickity-cell {
+  position: absolute;
+  left: 0;
+}
+
+.flickity-rtl .flickity-cell {
+  left: unset;
+  right: 0;
+}
+
+/* ---- flickity-button ---- */
+
+.flickity-button {
+  position: absolute;
+  border: none;
+  color: #333;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0px;
+  background-color: transparent;
+  transition-duration: 200ms;
+}
+
+.flickity-button:hover {
+  cursor: pointer;
+  margin-top: -1.5rem;
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.flickity-button:focus {
+  outline: none;
+}
+
+.flickity-button:active {
+  opacity: 0.6;
+}
+
+.flickity-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  /* prevent disabled button from capturing pointer up event. #716 */
+  pointer-events: none;
+}
+
+.flickity-button-icon {
+  fill: currentColor;
+  --tw-text-opacity: 1;
+  color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  top: 50%;
+  /* vertically center */
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button.previous { left: 10px; }
+
+.flickity-prev-next-button.next { right: 10px; }
+
+/* right to left */
+
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flickity-rtl .flickity-page-dots { direction: rtl; }
+
+.flickity-page-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin: 0 8px;
+  background: hsl(0 0% 20% / 25%);
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.flickity-rtl .flickity-page-dot {
+  text-indent: 9999px;
+}
+
+.flickity-page-dot:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #19F;
+}
+
+.flickity-page-dot.is-selected {
+  background: hsl(0 0% 20% / 100%);
+}
+
+/*! Additional Styles to Flickty
+---------------------------------------------- */
+
+.cellButton {
+  padding-top: 0.5rem;
+  position: relative;
+  top: -2px;
+  border-top-width: 2px;
+  border-color: transparent;
+}
+
+.cellButton.is-selected {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.cellButton p {
+  cursor: pointer;
+}
+
+.cellButton.is-selected p {
+  cursor: pointer;
+}
+
+.textBoxContainer {
+  position: relative;
+  top: -16rem;
+  z-index: 50;
+  border-top-width: 2px;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.4;
+}
+
+.textBox {
+  position: relative;
+  z-index: 20;
+  width: 100%;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.carousel-status {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  z-index: 10;
+  display: none;
+  font-size: 27px;
+  line-height: 32.4px;
+  letter-spacing: 0;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* ---- page dots ---- */
+
+.flickity-page-dot {
+  position: absolute;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  bottom: -25px;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dot { direction: rtl; }
+
+.flickity-page-dot {
+  margin-right: 0.25rem;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+  border-radius: 0px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  opacity: 0.3;
+}
+
+.flickity-page-dot.is-selected {
+  opacity: 1;
+}
+
+.sliderRemote .flickity-slider > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+@media (min-width: 768px) {
+
+  .flickity-page-dot {
+    margin-right: 0.5rem;
+  }
+
+  .flickity-page-dot {
+    height: 16px;
+  }
+
+  .flickity-page-dot {
+    width: 16px;
+  }
+}
+
+/*# sourceMappingURL=Flickity.css.map */
