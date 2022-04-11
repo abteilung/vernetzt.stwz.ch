@@ -13,3 +13,12 @@
             '*': false
             'Abte.Site:Document.Category': true
             'Abte.Site:Document.Person': true
+    properties:
+        'accordion_open':
+            type: string
+            defaultValue: ''
+            ui:
+                label: Element öffnen
+                reloadPageIfChanged: true
+                inspector:
+                    group: general

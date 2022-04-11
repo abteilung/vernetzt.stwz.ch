@@ -1,0 +1,29 @@
+'Abte.Site:Content.Products':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Neos.Neos:ContentCollection': true
+  ui:
+    label: Produkte
+    position: 8
+    inlineEditable: true
+    group: general
+    icon: shopping-basket
+  constraints:
+    nodeTypes:
+      '*': false
+      'Abte.Site:Content.ProductCard': true
+  properties:
+    'title':
+      options:
+        preset: 'text.title'
+  options:
+    template:
+      childNodes:
+        multipleAccordionNodes:
+          type: 'Abte.Site:Content.ProductCard'
+          properties:
+            title: '${"" + item + ""}'
+          withItems:
+            - 'Produkt 1'
+            - 'Produkt 2'
+            - 'Produkt 3'

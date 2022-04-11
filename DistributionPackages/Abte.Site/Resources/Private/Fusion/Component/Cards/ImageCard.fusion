@@ -33,7 +33,3 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
         </Neos.Neos:NodeLink>
     `
 }
-
-
-
-

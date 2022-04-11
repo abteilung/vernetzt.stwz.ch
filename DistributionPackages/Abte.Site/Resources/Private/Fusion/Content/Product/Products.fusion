@@ -1,0 +1,26 @@
+prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    
+    title = ${ q(node).property('title') }
+    subTitle = ${ q(node).parents('[instanceof Abte.Site:Document.Products]').property('title') }
+
+    shopItems = Neos.Fusion:Collection {
+        collection = ${ q(node).children('[instanceof Abte.Site:Content.ProductCard]') }
+        itemName = 'node'
+        iterationName = 'i'
+        itemRenderer = Abte.Site:Content.ProductCard
+    }
+
+
+    renderer = afx`
+
+        <div class="grid gridgap md:grid-cols-3">
+            {props.shopItems}
+        </div>
+                    
+    `
+}

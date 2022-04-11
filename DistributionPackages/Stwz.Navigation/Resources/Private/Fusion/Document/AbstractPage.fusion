@@ -35,3 +35,7 @@ prototype(Stwz.Navigation:Document.AbstractPage) < prototype(Neos.Neos:Page) {
     }
 
 }
+
+ContentCollectionRenderer {
+    @process.addClass=${value}
+}

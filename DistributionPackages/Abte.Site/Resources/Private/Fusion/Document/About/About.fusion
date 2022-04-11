@@ -59,7 +59,6 @@ prototype(Abte.Site:Document.About) < prototype(Abte.Site:Document.AbstractPage)
 
             <main>
                 {props.main}
-                <Abte.Site:Component.UnsereMaerkte />
                 
                 <div class="gridPadding">
 
