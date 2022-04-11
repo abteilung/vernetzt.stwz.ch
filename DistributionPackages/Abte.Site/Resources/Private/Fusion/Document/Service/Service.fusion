@@ -3,15 +3,11 @@ prototype(Abte.Site:Document.Service) < prototype(Abte.Site:Document.AbstractPag
         
         renderer = afx`
             <div class="gridPadding">
-                <div class="container grid grid-cols-12 gridgap">
-                    <main class="col-span-12 space-y-8 lg:col-span-8">
+                <div class="container">
+                    <main class="space-y-8">
                         <Abte.Site:Component.HeaderService />
                         {props.main}
                     </main>
-                    <aside class="col-span-12 lg:col-end-13 lg:col-span-3">
-                        <div class="sticky grid md:grid-cols-2 gridPadding-top top-24 lg:grid-cols-1 gridgap">
-                        </div>
-                    </aside>
                 </div>
             </div>
 

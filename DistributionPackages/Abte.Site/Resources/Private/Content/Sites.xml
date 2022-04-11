@@ -21,7 +21,6 @@
       <titleOverride __type="string">Individuelle</titleOverride>
       <helpdeskPic __type="object" __identifier="5ac646af-5b5d-425f-bf62-78fb27711db0" __classname="Neos\Media\Domain\Model\ImageVariant" __encoding="json">{&quot;__identity&quot;:&quot;5ac646af-5b5d-425f-bf62-78fb27711db0&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\ImageVariant&quot;,&quot;originalAsset&quot;:{&quot;__identity&quot;:&quot;d9aa0a89-83c7-4ee1-9758-b9431ac68b48&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;eta-LhNcIFse95A-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;4b16c5799c7f8508077ee3ed5ec9833ea5e5ac92&quot;,&quot;hash&quot;:&quot;4b16c5799c7f8508077ee3ed5ec9833ea5e5ac92&quot;,&quot;__identity&quot;:&quot;1b49b207-ec0f-4c5d-bd77-a2d33443d6ae&quot;},&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]},&quot;adjustments&quot;:[{&quot;aspectRatio&quot;:null,&quot;height&quot;:1688,&quot;position&quot;:10,&quot;width&quot;:3000,&quot;x&quot;:0,&quot;y&quot;:0,&quot;__identity&quot;:&quot;3800af86-6138-4128-934f-782441b29277&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Adjustment\\CropImageAdjustment&quot;}]}</helpdeskPic>
       <helpdeskTitle __type="string">Individuelle</helpdeskTitle>
-      <hideHeader __type="boolean"></hideHeader>
       <supportItems __type="array">
        <entry0 __type="string">2faf60dc-c883-48b3-8600-84c73d9d4aa0</entry0>
        <entry1 __type="string">8fe81709-be01-4bed-9551-45c0771cb8b4</entry1>
@@ -63,7 +62,6 @@
         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastPublicationDateTime>
         <properties>
-         <paddingY __type="boolean"></paddingY>
          <span-md __type="string">1</span-md>
         </properties>
        </variant>
@@ -78,7 +76,6 @@
         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
         <properties>
-         <paddingY __type="boolean"></paddingY>
          <span-md __type="string">1</span-md>
         </properties>
        </variant>
@@ -92,7 +89,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
          <properties>
-          <isLead __type="boolean"></isLead>
           <text __type="string">&lt;p&gt;&lt;a href=&quot;node://0aafc2a0-a095-45b3-9669-1d220defb105&quot;&gt;Impressum&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;node://6fa24c80-5078-47a9-bf3d-a80c8aea4b4f&quot;&gt;Datenschutz&lt;/a&gt;&lt;/p&gt;</text>
          </properties>
         </variant>
@@ -108,7 +104,6 @@
         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
         <properties>
-         <paddingY __type="boolean"></paddingY>
          <span-md __type="string">1</span-md>
         </properties>
        </variant>
@@ -123,7 +118,6 @@
         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
         <properties>
-         <paddingY __type="boolean"></paddingY>
          <span-md __type="string">1</span-md>
         </properties>
        </variant>
@@ -137,7 +131,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
          <properties>
-          <isLead __type="boolean"></isLead>
           <text __type="string">&lt;p&gt;&lt;strong&gt;StWZ Energie AG&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Mühlegasse 7&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;4800 Zofingen&lt;/strong&gt;&lt;/p&gt;</text>
          </properties>
         </variant>
@@ -153,7 +146,6 @@
         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
         <properties>
-         <paddingY __type="boolean"></paddingY>
          <span-md __type="string">1</span-md>
         </properties>
        </variant>
@@ -167,7 +159,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:21:25+00:00</lastPublicationDateTime>
          <properties>
-          <isLead __type="boolean"></isLead>
           <text __type="string">&lt;p&gt;&lt;a href=&quot;tel:+41627453232&quot;&gt;&lt;strong&gt;062 745 32 32&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;mailto:info@stwz.ch&quot;&gt;&lt;strong&gt;info@stwz.ch&lt;/strong&gt;&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://www.stwz.ch&quot;&gt;&lt;strong&gt;www.stwz.ch&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</text>
          </properties>
         </variant>
@@ -183,7 +174,6 @@
         <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastModificationDateTime>
         <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T10:22:53+00:00</lastPublicationDateTime>
         <properties>
-         <paddingY __type="boolean"></paddingY>
          <span-md __type="string">1</span-md>
         </properties>
        </variant>
@@ -236,7 +226,6 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2021-11-29T10:39:23+00:00</lastPublicationDateTime>
        <properties>
         <text __type="string">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</text>
-        <isLead __type="boolean"></isLead>
        </properties>
       </variant>
      </node>
@@ -264,10 +253,7 @@
        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
        <properties>
-        <dropShadow __type="boolean"></dropShadow>
         <bgColor __type="string">none</bgColor>
-        <removePadding __type="boolean"></removePadding>
-        <fullWidth __type="boolean"></fullWidth>
         <title __type="string">Stellen Sie Ihr Angebot zusammen</title>
        </properties>
       </variant>
@@ -344,7 +330,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -359,7 +344,6 @@
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:24:05+00:00</lastPublicationDateTime>
               <properties>
                <bgColor __type="string">bg-base-300</bgColor>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">89.–</price>
                <title __type="string">bis 10 Gbit/s</title>
@@ -378,7 +362,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -392,7 +375,6 @@
               <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T10:24:05+00:00</lastModificationDateTime>
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:24:05+00:00</lastPublicationDateTime>
               <properties>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">49.–</price>
                <title __type="string">200 Mbit/s</title>
@@ -412,7 +394,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -427,7 +408,6 @@
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T10:13:33+00:00</lastPublicationDateTime>
               <properties>
                <bgColor __type="string">bg-base-100</bgColor>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">69.–</price>
                <title __type="string">700 Mbit/s</title>
@@ -487,7 +467,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -502,7 +481,6 @@
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
                <bgColor __type="string">bg-base-300</bgColor>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">89.–</price>
                <title __type="string">bis 10 Gbit/s</title>
@@ -521,7 +499,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -535,7 +512,6 @@
               <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">49.–</price>
                <title __type="string">200 Mbit/s</title>
@@ -555,7 +531,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -570,7 +545,6 @@
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
                <bgColor __type="string">bg-base-100</bgColor>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">69.–</price>
                <title __type="string">700 Mbit/s</title>
@@ -630,7 +604,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -645,7 +618,6 @@
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
                <bgColor __type="string">bg-base-300</bgColor>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">89.–</price>
                <title __type="string">bis 10 Gbit/s</title>
@@ -664,7 +636,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -678,7 +649,6 @@
               <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">49.–</price>
                <title __type="string">200 Mbit/s</title>
@@ -698,7 +668,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -713,7 +682,6 @@
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
                <bgColor __type="string">bg-base-100</bgColor>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">69.–</price>
                <title __type="string">700 Mbit/s</title>
@@ -737,7 +705,6 @@
           <properties>
            <accordion_title __type="string">TV</accordion_title>
            <icon __type="string">TV</icon>
-           <accordion_open __type="boolean"></accordion_open>
           </properties>
          </variant>
          <node identifier="cd1afc89-cf0c-65db-5208-7755198e4e51" nodeName="content">
@@ -774,7 +741,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -789,7 +755,6 @@
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
                <bgColor __type="string">bg-base-300</bgColor>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">89.–</price>
                <title __type="string">bis 10 Gbit/s</title>
@@ -808,7 +773,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -822,7 +786,6 @@
               <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">49.–</price>
                <title __type="string">200 Mbit/s</title>
@@ -842,7 +805,6 @@
              <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:57+00:00</lastModificationDateTime>
              <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
              <properties>
-              <paddingY __type="boolean"></paddingY>
               <span-md __type="string">1</span-md>
              </properties>
             </variant>
@@ -857,7 +819,6 @@
               <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:40:56+00:00</lastPublicationDateTime>
               <properties>
                <bgColor __type="string">bg-base-100</bgColor>
-               <isHero __type="boolean"></isHero>
                <description __type="string">&lt;p&gt;Max. Up- &amp;amp; Download(1)&lt;br&gt;Gratis WLAN-Router&lt;br&gt;im Wert von 199.–(2)&lt;/p&gt;</description>
                <price __type="string">69.–</price>
                <title __type="string">700 Mbit/s</title>
@@ -882,9 +843,7 @@
        <lastModificationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:04+00:00</lastModificationDateTime>
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:50:03+00:00</lastPublicationDateTime>
        <properties>
-        <dropShadow __type="boolean"></dropShadow>
         <bgColor __type="string">bg-base-200</bgColor>
-        <removePadding __type="boolean"></removePadding>
         <fullWidth __type="boolean">1</fullWidth>
         <title __type="string">Glasfaserangebot</title>
         <linkText __type="string">Glasfaseranschluss schon geprüft?</linkText>
@@ -912,9 +871,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T08:46:33+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:46:33+00:00</lastPublicationDateTime>
          <properties>
-          <limit __type="string"></limit>
-          <arrowIcon __type="boolean"></arrowIcon>
-          <showTitleOverride __type="boolean"></showTitleOverride>
           <iconRight __type="boolean">1</iconRight>
           <layout __type="string">service</layout>
           <navigationItems __type="array">
@@ -951,7 +907,6 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:37+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">services</uriPathSegment>
-       <hideHeader __type="boolean"></hideHeader>
        <title __type="string">Services</title>
       </properties>
      </variant>
@@ -969,7 +924,7 @@
      </node>
     </node>
     <node identifier="55aa0ac8-7db6-45e2-b83a-83d33d4d0936" nodeName="node-5gz14j2qi7bar">
-     <variant sortingIndex="450" workspace="live" nodeType="Abte.Site:Document.Product" version="8" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="450" workspace="live" nodeType="Abte.Site:Document.Service" version="8" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
@@ -979,11 +934,10 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T13:56:32+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">internet</uriPathSegment>
-       <hideHeader __type="string">false</hideHeader>
+       <hideHeader __type="boolean"></hideHeader>
        <title __type="string">Internet</title>
        <subTitle __type="string">Unser Internet ist omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
        <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
-       <icon __type="string">internet</icon>
        <image __type="object" __identifier="5506aedf-d1fe-444c-a1f8-b0d53c099134" __classname="Neos\Media\Domain\Model\Image" __encoding="json">{&quot;__identity&quot;:&quot;5506aedf-d1fe-444c-a1f8-b0d53c099134&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Image&quot;,&quot;title&quot;:&quot;&quot;,&quot;copyrightNotice&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;resource&quot;:{&quot;filename&quot;:&quot;jason-goodman-tHO1_OuKbg0-unsplash.jpg&quot;,&quot;collectionName&quot;:&quot;persistent&quot;,&quot;relativePublicationPath&quot;:&quot;&quot;,&quot;mediaType&quot;:&quot;image\/jpeg&quot;,&quot;sha1&quot;:&quot;9fa22a2f410d199027adb72dbecabfd8bbdc8a3b&quot;,&quot;hash&quot;:&quot;9fa22a2f410d199027adb72dbecabfd8bbdc8a3b&quot;,&quot;__identity&quot;:&quot;133dfe6e-55f2-47a1-8e60-38fdcba676e3&quot;},&quot;tags&quot;:[],&quot;assetCollections&quot;:[{&quot;__identity&quot;:&quot;900c6581-8172-412d-bd2e-53ffe55734ca&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\AssetCollection&quot;,&quot;title&quot;:&quot;DummyPix&quot;,&quot;tags&quot;:[{&quot;__identity&quot;:&quot;1204f329-45c2-4b66-8f2b-cccd067bdd62&quot;,&quot;__type&quot;:&quot;Neos\\Media\\Domain\\Model\\Tag&quot;,&quot;label&quot;:&quot;Categories&quot;}]}]}</image>
       </properties>
      </variant>
@@ -1029,7 +983,7 @@
      </node>
     </node>
     <node identifier="1139f030-9d62-4ff5-a54e-5886265af3dd" nodeName="node-928ewu8yjnqim">
-     <variant sortingIndex="582" workspace="live" nodeType="Abte.Site:Document.Product" version="4" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="582" workspace="live" nodeType="Abte.Site:Document.Service" version="4" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
@@ -1039,12 +993,10 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:42:45+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">mobile</uriPathSegment>
-       <hideHeader __type="string">false</hideHeader>
+       <hideHeader __type="boolean"></hideHeader>
        <title __type="string">Mobile</title>
        <subTitle __type="string">Sandi omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
        <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
-       <icon __type="string">phone</icon>
-       <accordion_open __type="string">4</accordion_open>
       </properties>
      </variant>
      <node identifier="b62e3655-4412-4eb1-a866-d0a77d0a05f0" nodeName="main">
@@ -1115,7 +1067,6 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">datenschutz</uriPathSegment>
-        <hideHeader __type="boolean"></hideHeader>
         <title __type="string">Datenschutz</title>
        </properties>
       </variant>
@@ -1143,7 +1094,6 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">impressum</uriPathSegment>
-        <hideHeader __type="boolean"></hideHeader>
         <title __type="string">Impressum</title>
        </properties>
       </variant>
@@ -1188,7 +1138,6 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">ueber-stwz</uriPathSegment>
-        <hideHeader __type="boolean"></hideHeader>
         <title __type="string">Über StWZ</title>
        </properties>
       </variant>
@@ -1233,7 +1182,6 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">kontakt</uriPathSegment>
-        <hideHeader __type="boolean"></hideHeader>
         <title __type="string">Kontakt</title>
        </properties>
       </variant>
@@ -1261,7 +1209,6 @@
        <lastPublicationDateTime __type="object" __classname="DateTime">2022-03-31T08:18:37+00:00</lastPublicationDateTime>
        <properties>
         <uriPathSegment __type="string">faq</uriPathSegment>
-        <hideHeader __type="boolean"></hideHeader>
         <title __type="string">FAQ</title>
        </properties>
       </variant>
@@ -1370,7 +1317,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:06:23+00:00</lastPublicationDateTime>
          <properties>
-          <isLead __type="boolean"></isLead>
           <text __type="string">&lt;h1&gt;FAQ&lt;/h1&gt;</text>
          </properties>
         </variant>
@@ -1406,7 +1352,6 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T09:31:31+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">business</uriPathSegment>
-       <hideHeader __type="boolean"></hideHeader>
        <title __type="string">Business</title>
       </properties>
      </variant>
@@ -1434,7 +1379,6 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T08:34:53+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">x</uriPathSegment>
-       <hideHeader __type="boolean"></hideHeader>
        <title __type="string">---</title>
       </properties>
      </variant>
@@ -1477,7 +1421,6 @@
        <properties>
         <headline __type="string">Wir verwenden Cookies</headline>
         <mainDescription __type="string">Um Ihnen ein besonders angenehmes Surf-Erlebnis zu bieten.</mainDescription>
-        <individualSettingsDescription __type="string"></individualSettingsDescription>
         <acceptAllButtonLabel __type="string">Alle akzeptieren</acceptAllButtonLabel>
         <saveButtonLabel __type="string">Speichern</saveButtonLabel>
         <acceptNecessaryCookiesLabel __type="string">Nur benötigte Cookies erlauben</acceptNecessaryCookiesLabel>
@@ -1487,7 +1430,6 @@
         <closeIndividualSettingsLabel __type="string">Schliessen</closeIndividualSettingsLabel>
         <versionDate __type="object" __classname="DateTime">2022-04-01T15:19:08+00:00</versionDate>
         <decisionTtl __type="integer">0</decisionTtl>
-        <closeButtonEnabled __type="boolean"></closeButtonEnabled>
         <dataProtectionPolicyLink __type="string">node://6fa24c80-5078-47a9-bf3d-a80c8aea4b4f</dataProtectionPolicyLink>
         <imprintLink __type="string">node://0aafc2a0-a095-45b3-9669-1d220defb105</imprintLink>
        </properties>
@@ -1513,8 +1455,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:00:56+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:00:56+00:00</lastPublicationDateTime>
          <properties>
-          <headline __type="string"></headline>
-          <description __type="string"></description>
           <identifier __type="string">Necessary</identifier>
          </properties>
         </variant>
@@ -1539,8 +1479,6 @@
            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:03:20+00:00</lastModificationDateTime>
            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:03:20+00:00</lastPublicationDateTime>
            <properties>
-            <name __type="string"></name>
-            <description __type="string"></description>
             <identifier __type="string">Shakalak</identifier>
             <javaScriptCode __type="string">console.log('necessary cookie');</javaScriptCode>
             <priority __type="integer">0</priority>
@@ -1571,8 +1509,6 @@
          <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:06+00:00</lastModificationDateTime>
          <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:06+00:00</lastPublicationDateTime>
          <properties>
-          <headline __type="string"></headline>
-          <description __type="string"></description>
           <identifier __type="string">Tracking</identifier>
          </properties>
         </variant>
@@ -1597,10 +1533,7 @@
            <lastModificationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:20+00:00</lastModificationDateTime>
            <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-04T12:01:20+00:00</lastPublicationDateTime>
            <properties>
-            <name __type="string"></name>
-            <description __type="string"></description>
             <identifier __type="string">Analytics</identifier>
-            <javaScriptCode __type="string"></javaScriptCode>
             <priority __type="integer">0</priority>
            </properties>
           </variant>
@@ -1623,7 +1556,7 @@
      </node>
     </node>
     <node identifier="d950b1a5-084e-4b8c-9a45-fca6959708f3" nodeName="node-zewdn0qh8v2b8">
-     <variant sortingIndex="500" workspace="live" nodeType="Abte.Site:Document.Product" version="10" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="500" workspace="live" nodeType="Abte.Site:Document.Service" version="10" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
@@ -1633,12 +1566,10 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:14:47+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">tv</uriPathSegment>
-       <hideHeader __type="string">false</hideHeader>
+       <hideHeader __type="boolean"></hideHeader>
        <title __type="string">TV</title>
        <subTitle __type="string">TV-Stuff a gogo?&amp;nbsp;&lt;br&gt;Sandi omnis comnienet everum quidebit,&amp;nbsp;&lt;br&gt;quam, comnienet remini, unto.</subTitle>
        <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
-       <icon __type="string">TV</icon>
-       <accordion_open __type="string">2</accordion_open>
       </properties>
      </variant>
      <node identifier="558318c2-6e00-d2f0-09f4-58d673c73fd4" nodeName="main">
@@ -1683,7 +1614,7 @@
      </node>
     </node>
     <node identifier="f14dfee9-acd1-4150-98fe-41f82129e0cd" nodeName="node-zwnvnya6e50ko">
-     <variant sortingIndex="550" workspace="live" nodeType="Abte.Site:Document.Product" version="8" removed="" hidden="" hiddenInIndex="">
+     <variant sortingIndex="550" workspace="live" nodeType="Abte.Site:Document.Service" version="8" removed="" hidden="" hiddenInIndex="">
       <dimensions>
        <language>de</language>
       </dimensions>
@@ -1693,12 +1624,10 @@
       <lastPublicationDateTime __type="object" __classname="DateTime">2022-04-08T13:14:47+00:00</lastPublicationDateTime>
       <properties>
        <uriPathSegment __type="string">telefonie</uriPathSegment>
-       <hideHeader __type="string">false</hideHeader>
+       <hideHeader __type="boolean"></hideHeader>
        <title __type="string">Telefonie</title>
        <subTitle __type="string">Sandi omnis everum quidebit, quam, comnienet remini, unto.</subTitle>
        <intro __type="string">&lt;p&gt;Sandi omnis everum quidebit, quam, comnienet remini, unto.&lt;/p&gt;</intro>
-       <icon __type="string">phone</icon>
-       <accordion_open __type="string">3</accordion_open>
       </properties>
      </variant>
      <node identifier="35b8ffc8-8978-8d32-8014-8f133f569af5" nodeName="main">
