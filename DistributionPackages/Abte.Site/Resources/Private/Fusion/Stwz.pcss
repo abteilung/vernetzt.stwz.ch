@@ -33,6 +33,9 @@
     main a {
     }
 
+    .productCard {
+        @apply w-full md:w-[45%] lg:w-[30%] mr-[5%] last:mr-0;
+    }
     .ce-text {
         @apply space-y-4;
 
@@ -187,6 +190,10 @@
         @apply border-t-2 border-primary;
     }
 
+   
+
+
+
     .megaMenu nav li a {
         @apply py-1 block duration-100 hover:text-accent-focus !important;
         @apply !text-lg;
@@ -236,6 +243,24 @@
     input, textarea {
         @apply md:p-3 md:text-base !important;
     }
+}
+
+
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: 0px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
 }
 
 
@@ -295,3 +320,5 @@
         }
     }
 }
+
+

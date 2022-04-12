@@ -28,35 +28,37 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
     // relative bg-white border rounded-lg shadow-sm p-4 flex cursor-pointer focus:outline-none border-transparent border-indigo-500 ring-2 ring-indigo-500
 
     renderer = afx`
-        <label 
-            class={'product cursor-pointer cardItem text-black transition duration-250 bg-base-100 space-y-4 hover:bg-base-200'}
-            x-radio-group-option=""
-            data-price={props.price}
-            :class={"{ 'bg-base-100': (value === '" + props.itemID + "'), 'bg-base-100': !(value === '" + props.itemID + "'), 'bg-base-300': (active === '" + props.itemID + "'), 'bg-base-100': !(active === '" + props.itemID + "') }"}
-        >
-            <input 
-                type="radio" 
-                value={props.itemID} 
-                x-model="value" 
-                name={props.itemID} 
-                class="sr-only" />
+        <div class="productCard">
+            <label 
+                class={'product cursor-pointer cardItem text-black transition duration-250 bg-base-100 space-y-4 hover:bg-base-200'}
+                x-radio-group-option=""
+                data-price={props.price}
+                :class={"{ 'bg-base-100': (value === '" + props.itemID + "'), 'bg-base-100': !(value === '" + props.itemID + "'), 'bg-base-300': (active === '" + props.itemID + "'), 'bg-base-100': !(active === '" + props.itemID + "') }"}
+            >
+                <input 
+                    type="radio" 
+                    value={props.itemID} 
+                    x-model="value" 
+                    name={props.itemID} 
+                    class="sr-only" />
 
-            <div class="flex flex-1">
-                <div class="flex flex-col w-full">
-                    <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 border-black">
-                        <Abte.Site:Component.isHero />
-                        <Abte.Site:Component.SelectedProduct activeItem={props.itemID} class="absolute right-0" />
-                    </div>
-                    <div class="mb-0 text-black h2">{props.title}</div>
-                    <div class="h3 font-semibold !mt-0">{props.subTitle}</div>
-                    <div class="description">{props.description}</div>
-                    <div class="price">
-                        <div class="text-sm font-semibold">Preis pro Monat</div>
-                        <div class="text-lg">{props.price}</div>
+                <div class="flex flex-1">
+                    <div class="flex flex-col w-full">
+                        <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 border-black">
+                            <Abte.Site:Component.isHero />
+                            <Abte.Site:Component.SelectedProduct activeItem={props.itemID} class="absolute right-0" />
+                        </div>
+                        <div class="mb-0 text-black h2">{props.title}</div>
+                        <div class="h3 font-semibold !mt-0">{props.subTitle}</div>
+                        <div class="description">{props.description}</div>
+                        <div class="price">
+                            <div class="text-sm font-semibold">Preis pro Monat</div>
+                            <div class="text-lg">{props.price}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </label>
+            </label>
+        </div>
     `
 }
 

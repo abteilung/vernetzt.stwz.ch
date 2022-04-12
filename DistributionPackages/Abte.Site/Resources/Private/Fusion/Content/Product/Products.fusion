@@ -15,13 +15,24 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
         itemRenderer = Abte.Site:Content.ProductCard
     }
 
+    sliderConfig = Neos.Fusion:DataStructure {
+        cellSelector = '.productCard'
+        pageDots = true
+        contain = true
+        draggable = true
+        groupCells = true
+        adaptiveHeight = false
+        prevNextButtons = false
+        @process.stringify = ${ Json.stringify(value) }
+    }
 
     renderer = afx`
 
         <fieldset 
-            class="grid gridgap md:grid-cols-3"
+            class="w-full"
             x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })"
             x-init="init()"
+            data-flickity={props.sliderConfig}
         >
             {props.shopItems}
         </fieldset>
