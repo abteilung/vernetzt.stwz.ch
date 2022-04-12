@@ -107,7 +107,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
             condition = ${ q(node).property('layout') == 'service' || layout == 'service' }
             renderer = afx`
                 <nav class={props.class}>
-                    <div class="grid grid-cols-4 gridgap-x">
+                    <div class="grid lg:grid-cols-4 sm:grid-cols-2 gridgap lg:gridgap-x">
                         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
                             <Abte.Site:Component.ServiceCard node={item.node}
                                 @if.isWithinRange={i.index < props.limit}
