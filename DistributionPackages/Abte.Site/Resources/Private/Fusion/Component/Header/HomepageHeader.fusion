@@ -16,11 +16,11 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
 
     svgIllustration = Neos.Fusion:Tag {
         attributes.class = 'lineAnimation'
-        content = ${node.properties.illustration}
+        content = ${documentNode.properties.illustration}
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
     }
 
-    hideHeader = ${ q(node).property('hideHeader') }
+    hideHeader = ${ q(documentNode).property('hideHeader') }
 
     ##
     # If you want to use a default rendering for a menu, you can just use:
@@ -34,23 +34,19 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
     #     />
     ##
 
+
     renderer = afx`
-        <header class="bg-cover bg-fixed bg-[url('Media/Backdrops/MainBackdrop.svg')]">
-            <div class="relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
-                <div class="container relative pt-32 h-[350px] md:h-[450px] lg:h-[500px]">
-                    
-                    <div class="grid grid-cols-3 gridgap-x">
-                        <h1 class="text-black">{props.pageTitle}</h1>
-                            
-                        <div class="right-0 flex justify-end h-48 col-span-2">
-                            {props.svgIllustration}
-                        </div>
+        <header class={pageClass + ' ' + 'bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
+            <div class="container relative pt-32 h-[350px] md:h-[450px] lg:h-[500px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
+                <div class="grid grid-cols-3 gridgap-x">
+                    <h1 class="text-black">{props.pageTitle}</h1>
+                    <div class="col-span-2 illustrationContainer">
+                        {props.svgIllustration}
                     </div>
                 </div>
-                <div class="absolute right-0 z-10 -bottom-28">
-                    <Stwz.MovingLines:Component.Lines />
-                </div>
-
+            </div>
+            <div class="absolute right-0 z-10 -bottom-28">
+                <Stwz.MovingLines:Component.Lines />
             </div>
         </header>
     `

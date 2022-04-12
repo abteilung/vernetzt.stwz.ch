@@ -19,6 +19,9 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 		}		
 	}
 
+	// PageClass
+    @context.pageClass = ${ Carbon.String.urlize( q(documentNode).property('_nodeType') ) }
+
     renderer = afx`
 		<Abte.Site:TrackingScript.Ackee/>
 		<Stwz.Navigation:Component.Navbar />

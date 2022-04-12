@@ -820,6 +820,15 @@ select {
     .container {
   max-width: 1366px !important;
 }
+
+    .illustrationContainer {
+  position: relative;
+  top: 2rem;
+  right: 0px;
+  display: flex;
+  height: 24rem;
+  justify-content: flex-end;
+}
         .containerHeader .button {
   aspect-ratio: 1 / 1;
   padding: 0.75rem;
@@ -892,14 +901,17 @@ select {
   line-height: 28px !important;
   letter-spacing: 0 !important;
 }
+    
     .megaMenu nav li {
   border-bottom-width: 2px !important;
   --tw-border-opacity: 1 !important;
   border-color: hsl(var(--b1) / var(--tw-border-opacity)) !important;
 }
+    
     .megaMenu nav li:last-child {
   border-style: none !important;
 }
+    
     .subNavigation {
   overflow-x: scroll !important;
 }
@@ -922,6 +934,7 @@ select {
   --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
     .bg-nav-scrolled {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -930,11 +943,13 @@ select {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   transition-duration: 150ms;
 }
+
     .bg-nav-scrolled:hover {
   --tw-shadow: 0 0 55px 15px rgba(0, 0, 0, 0.15);
   --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
     .bg-nav-scrolled {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1361,9 +1376,6 @@ select {
 .-bottom-28 {
   bottom: -7rem;
 }
-.-bottom-24 {
-  bottom: -6rem;
-}
 .-top-8 {
   top: -2rem;
 }
@@ -1391,6 +1403,9 @@ select {
 .z-10 {
   z-index: 10;
 }
+.z-30 {
+  z-index: 30;
+}
 .z-40 {
   z-index: 40;
 }
@@ -1402,9 +1417,6 @@ select {
 }
 .z-100 {
   z-index: 100;
-}
-.z-30 {
-  z-index: 30;
 }
 .col-span-12 {
   grid-column: span 12 / span 12;
@@ -1440,13 +1452,13 @@ select {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 .my-3 {
   margin-top: 0.75rem;
@@ -1506,9 +1518,6 @@ select {
 }
 .mt-0 {
   margin-top: 0px;
-}
-.mt-12 {
-  margin-top: 3rem;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
@@ -1603,6 +1612,9 @@ select {
 .h-\[250px\] {
   height: 250px;
 }
+.h-16 {
+  height: 4rem;
+}
 .h-\[350px\] {
   height: 350px;
 }
@@ -1614,24 +1626,6 @@ select {
 }
 .h-\[768px\] {
   height: 768px;
-}
-.h-96 {
-  height: 24rem;
-}
-.h-72 {
-  height: 18rem;
-}
-.\!h-48 {
-  height: 12rem !important;
-}
-.h-2\/3 {
-  height: 66.666667%;
-}
-.h-28 {
-  height: 7rem;
-}
-.h-16 {
-  height: 4rem;
 }
 .max-h-full {
   max-height: 100%;
@@ -1705,11 +1699,14 @@ select {
 .w-5\/6 {
   width: 83.333333%;
 }
-.w-56 {
-  width: 14rem;
-}
 .w-24 {
   width: 6rem;
+}
+.w-7\/8 {
+  width: 87.5%;
+}
+.w-56 {
+  width: 14rem;
 }
 .\!w-full {
   width: 100% !important;
@@ -1719,15 +1716,6 @@ select {
 }
 .w-1\/3 {
   width: 33.333333%;
-}
-.w-32 {
-  width: 8rem;
-}
-.w-28 {
-  width: 7rem;
-}
-.w-7\/8 {
-  width: 87.5%;
 }
 .max-w-full {
   max-width: 100%;
@@ -1836,11 +1824,6 @@ select {
 .scale-110 {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.scale-50 {
-  --tw-scale-x: .5;
-  --tw-scale-y: .5;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {
@@ -2179,11 +2162,8 @@ select {
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
-.bg-\[url\(\'Media\/Backdrops\/MainBackdrop\.svg\'\)\] {
-  background-image: url('Media/Backdrops/MainBackdrop.svg');
-}
-.bg-contain {
-  background-size: contain;
+.bg-\[url\(\"Media\/Backdrops\/MainBackdrop\.svg\"\)\] {
+  background-image: url("Media/Backdrops/MainBackdrop.svg");
 }
 .bg-cover {
   background-size: cover;
@@ -2193,10 +2173,6 @@ select {
 }
 .fill-current {
   fill: currentColor;
-}
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .object-cover {
   -o-object-fit: cover;
@@ -2284,14 +2260,6 @@ select {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-.py-48 {
-  padding-top: 12rem;
-  padding-bottom: 12rem;
 }
 .pt-1 {
   padding-top: 0.25rem;
@@ -3023,14 +2991,6 @@ select {
     margin-top: -0.25rem;
   }
 
-  .md\:mt-36 {
-    margin-top: 9rem;
-  }
-
-  .md\:mb-12 {
-    margin-bottom: 3rem;
-  }
-
   .md\:block {
     display: block;
   }
@@ -3699,14 +3659,6 @@ select {
     margin-bottom: 3rem;
   }
 
-  .\32xl\:mt-48 {
-    margin-top: 12rem;
-  }
-
-  .\32xl\:mb-24 {
-    margin-bottom: 6rem;
-  }
-
   .\32xl\:h-\[980px\] {
     height: 980px;
   }
@@ -3769,6 +3721,7 @@ select {
     --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
+
     .dark\:bg-nav-scrolled {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
