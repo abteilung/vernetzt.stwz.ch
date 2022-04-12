@@ -3,7 +3,7 @@ prototype(Sitegeist.Kaleidoscope:DummyImageSource) {
 
     baseWidth = 600
     baseHeight = 400
-    backgroundColor = '385888'
+    backgroundColor = 'eefe10'
     foregroundColor = 'fff'
     text = null
 
