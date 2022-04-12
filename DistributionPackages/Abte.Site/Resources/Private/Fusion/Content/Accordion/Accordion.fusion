@@ -76,15 +76,79 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
             <div class=""
                 @if.isShop={props.isShop}
             >
-                <div class="bg-primary p-6">
-                    <div class="h1 text-white mb-0">Ihr Abo</div>
-                    <div class="pricing relative">
+                <div class="p-6 bg-primary">
+                    <div class="mb-0 text-white h1">Ihr Abo</div>
+                    <div class="relative h-24 pricing">
                         <div class="text-xl text-white" x-text="value"></div>
-                            <Abte.Site:Icon.Diagonal class="absolute top-0 left-10 text-white" />
+                            <Abte.Site:Icon.Diagonal class="absolute top-0 text-white left-10" />
                     </div>
+
+                    <Abte.Site:Component.Duration />
+
                 </div>
             </div>
         </div>
+    `
+
+}
+
+prototype(Abte.Site:Component.Duration) < prototype(Neos.Neos:ContentComponent) {
+
+    renderer = afx`
+        <fieldset class="relative w-full space-y-4">
+            <label class="relative flex items-center justify-between block cursor-pointer focus:outline-none">
+                <p 
+                    id="pricing-plans-0-description-1" 
+                    class="mb-0 text-sm font-semibold !text-black"
+                >
+                        Ich profitiere 12 Monate
+
+                </p>
+                <input 
+                    type="radio" 
+                    name="pricing-plan" 
+                    value="Startup" 
+                    class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500" 
+                    aria-labelledby="pricing-plans-0-label" 
+                    aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1" 
+                />
+            </label>
+            <hr class="border-[1px] border-b-black"/>
+            <label class="relative flex items-center justify-between block cursor-pointer focus:outline-none">
+                <p 
+                    id="pricing-plans-0-description-1" 
+                    class="mb-0 text-sm font-semibold !text-black"
+                >
+                        Ich profitiere 6 Monate
+                </p>
+                <input 
+                    type="radio" 
+                    name="pricing-plan" 
+                    value="Startup" 
+                    class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500" 
+                    aria-labelledby="pricing-plans-0-label" 
+                    aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1" 
+                />
+            </label>
+                <hr class="border-[1px] border-b-black"/>
+            <label class="relative flex items-center justify-between block cursor-pointer focus:outline-none">
+                <p 
+                    id="pricing-plans-0-description-1" 
+                    class="mb-0 text-sm font-semibold !text-black"
+                >
+                        Ich profitiere von den Standardpreisen
+                </p>
+                <input 
+                    type="radio" 
+                    name="pricing-plan" 
+                    value="Startup" 
+                    class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500" 
+                    aria-labelledby="pricing-plans-0-label" 
+                    aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1" 
+                />
+            </label>
+        </fieldset>
+
     `
 
 }
