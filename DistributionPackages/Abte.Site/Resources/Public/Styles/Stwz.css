@@ -1394,6 +1394,15 @@ select {
 .top-2 {
   top: 0.5rem;
 }
+.-bottom-32 {
+  bottom: -8rem;
+}
+.-bottom-48 {
+  bottom: -12rem;
+}
+.-bottom-40 {
+  bottom: -10rem;
+}
 .isolate {
   isolation: isolate;
 }
@@ -1912,6 +1921,9 @@ select {
 .gap-0 {
   gap: 0px;
 }
+.gap-4 {
+  gap: 1rem;
+}
 .\!gap-y-16 {
   row-gap: 4rem !important;
 }
@@ -2027,6 +2039,9 @@ select {
 }
 .rounded-2xl {
   border-radius: 1rem;
+}
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 .rounded-l-xl {
   border-top-left-radius: 0.75rem;
@@ -3176,6 +3191,15 @@ select {
     margin-bottom: calc(4rem * var(--tw-space-y-reverse));
   }
 
+    .md\:rounded-full {
+    border-radius: 9999px;
+  }
+
+    .md\:border-orange-400 {
+    --tw-border-opacity: 1;
+    border-color: rgb(251 146 60 / var(--tw-border-opacity));
+  }
+
     .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -3489,6 +3513,15 @@ select {
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+    .lg\:rounded-full {
+    border-radius: 9999px;
+  }
+
+    .lg\:border-red-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(239 68 68 / var(--tw-border-opacity));
+  }
+
     .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -3497,6 +3530,11 @@ select {
     .lg\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+    .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
     .lg\:pr-0 {
@@ -3737,6 +3775,11 @@ select {
 
   .xl\:grid-cols-9 {
     grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+
+  .xl\:border-cyan-400 {
+    --tw-border-opacity: 1;
+    border-color: rgb(34 211 238 / var(--tw-border-opacity));
   }
 
   .xl\:py-2 {

@@ -45,7 +45,7 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
                     </div>
                 </div>
             </div>
-            <div class="absolute right-0 z-10 -bottom-28">
+            <div class="absolute right-0 z-10 -bottom-40">
                 <Stwz.MovingLines:Component.Lines />
             </div>
         </header>
