@@ -12,7 +12,7 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
             <Stwz.Navigation:Component.Extra.Navbar.Navigation />
             
             <div class="flex justify-center h-20">
-                <div class="container flex justify-between mx-0 gridPadding-x">
+                <div class="container flex justify-between mx-0">
                     <Stwz.Navigation:Component.Navbar.Brand />
                     <div 
                         class="flex justify-end w-full text-black mainNavigation font-headings s">
