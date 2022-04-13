@@ -44,7 +44,7 @@ prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
 
         <footer class="relative z-10">
 
-            <div class="pt-8 pb-16 bg-white gridPadding">
+            <div class="pt-8 pb-16 bg-white ">
                 <div class="container border-black pt-4 border-t-[1px]">
                     <div class="grid grid-cols-6 text-sm">
                         <div>
