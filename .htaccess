@@ -1,1 +1,5 @@
 AddHandler application/x-httpd-php80 .php
+AuthType Basic
+AuthName "StWZ"
+AuthUserFile "/home/hostettl/.htpasswds/public_html/stwz/passwd"
+require valid-user
