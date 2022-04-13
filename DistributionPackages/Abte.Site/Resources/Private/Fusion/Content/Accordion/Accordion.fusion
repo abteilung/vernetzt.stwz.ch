@@ -2,12 +2,12 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
     class = ''
 
-    isShop = ${ q(node).property('accordion_isShop') ? 'grid grid-cols-4 gridgap-x' : null }
+    isShop = ${ q(node).property('accordion_isShop') ? 'grid md:grid-cols-3 xl:grid-cols-4 gridgap-x' : null }
 
     bgColor = ${ q(node).property('bgColor') }
 
     accordionClass = ${ this.class + ' ' +  this.isShop }
-    innerClass = ${ q(node).property('accordion_isShop') ? 'col-span-3' : null }
+    innerClass = ${ q(node).property('accordion_isShop') ? 'md:col-span-2 xl:col-span-3' : null }
 
     accordionItems = Neos.Fusion:Collection {
         collection = ${ q(node).children('[instanceof Abte.Site:Content.Accordion.Item]') }
@@ -76,7 +76,7 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
             <div class=""
                 @if.isShop={props.isShop}
             >
-                <div class="p-6 bg-primary">
+                <div class="p-6 bg-primary sticky top-12">
                     <div class="mb-0 text-white h1">Ihr Abo</div>
                     <div class="relative h-24 pricing">
                         <div class="text-xl text-white" x-text="value"></div>

@@ -23,7 +23,7 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
     @context.pageClass = ${ Carbon.String.urlize( q(documentNode).property('_nodeType') ) }
 
     renderer = afx`
-		<Abte.Site:TrackingScript.Ackee/>
+		<Abte.Site:TrackingScript.GoogleAnalytics/>
 		<Stwz.Navigation:Component.Navbar />
             {props.pageHeader}
 		

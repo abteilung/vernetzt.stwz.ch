@@ -629,7 +629,7 @@ select {
 
     .productCard {
   margin-right: 5%;
-  width: 100%;
+  width: 85%;
 }
 
     .productCard:last-child {
@@ -1401,6 +1401,9 @@ select {
 }
 .-top-8 {
   top: -2rem;
+}
+.top-12 {
+  top: 3rem;
 }
 .left-10 {
   left: 2.5rem;
@@ -2251,13 +2254,13 @@ select {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .py-0 {
   padding-top: 0px;
@@ -2757,6 +2760,10 @@ select {
 }
 @media (min-width: 640px) {
 
+  .productCard {
+    width: 42%;
+  }
+
   .container {
     max-width: 640px;
   }
@@ -2879,10 +2886,6 @@ select {
   }
 }
 @media (min-width: 768px) {
-
-  .productCard {
-    width: 45%;
-  }
 
   h2, .h2, h1.h2, h4.h2, h5.h2 {
     font-size: 27px;
@@ -3479,6 +3482,11 @@ select {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+    .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
     .lg\:px-16 {

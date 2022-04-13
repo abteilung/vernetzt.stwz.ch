@@ -6,7 +6,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
 
     renderer = afx`
         <div class="container" id="addressLookup">
-            <div class="relative z-30 flex items-center w-10/12 h-auto px-6 mx-auto my-16 space-x-8 lg:px-16 rounded-3xl md:rounded-full bg-accent">
+            <div class="relative z-30 flex items-center w-10/12 h-auto px-6 mx-auto py-4 lg:py-6 my-16 space-x-8 lg:px-16 rounded-3xl md:rounded-full bg-accent">
                 <div>{props.icon}</div>
                 <div class="w-full my-3">
                     <h3 class="mb-4 text-black">Glasfaseranschluss prüfen</h3>
