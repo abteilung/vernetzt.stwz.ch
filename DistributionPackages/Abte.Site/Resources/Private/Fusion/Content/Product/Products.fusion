@@ -17,19 +17,19 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
 
     sliderConfig = Neos.Fusion:DataStructure {
         cellSelector = '.productCard'
-        pageDots = true
+        pageDots = false
         contain = true
         draggable = true
         groupCells = true
         adaptiveHeight = false
-        prevNextButtons = false
+        prevNextButtons = true
         @process.stringify = ${ Json.stringify(value) }
     }
 
     renderer = afx`
 
         <fieldset 
-            class="w-full"
+            class="w-full productSlider"
             x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })"
             x-init="init()"
             data-flickity={props.sliderConfig}

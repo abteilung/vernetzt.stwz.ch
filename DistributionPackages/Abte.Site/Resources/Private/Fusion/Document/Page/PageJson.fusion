@@ -1,0 +1,47 @@
+prototype(Abte.Site:Document.Page.Json) < prototype(Neos.Fusion:Component) {
+    renderer = Abte.Site:DefaultView.Json {
+
+        nodeTitle = ${ q(node).property('title') }
+        nodeUri = Neos.Neos:NodeUri {
+            node = ${node}
+        }
+        nodePath = ${ q(node).property('_path') }
+
+
+        content = Abte.Site:ContentCollectionJson {
+            nodePath = 'main'
+        }
+
+        # TODO: Make recursive instead of 1 Level childpages.
+        # @process.stringify is only allowed on entry page.
+        childPages = Neos.Fusion:Map {
+            items = ${ q(node).children('[instanceof Neos.Neos:Document]') }
+            itemName = 'node'
+            itemRenderer = Abte.Site:DefaultView.Json {
+
+                nodeTitle = ${ q(node).property('title') }
+                subTitle = ${ q(node).property('subTitle') }
+                nodeUri = Neos.Neos:NodeUri {
+                    node = ${node}
+                }
+                nodePath = ${ q(node).property('_path') }
+
+                content = Abte.Site:ContentCollectionJson {
+                    nodePath = 'main'
+                }
+
+            }
+
+        }
+
+        @process.stringify = ${ Json.stringify(value) }
+
+        // @cache {
+        //     mode = 'uncached'
+        //     context {
+        //         1 = 'node'
+        //         2 = 'documentNode'
+        //     }
+        // }
+    }
+}

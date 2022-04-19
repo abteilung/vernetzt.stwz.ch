@@ -1,0 +1,32 @@
+prototype(Abte.Site:Document.SearchResults.Json) < prototype(Neos.Fusion:Component) {
+    renderer = Neos.Fusion:Map {
+        items = ${ q(site).find('[instanceof Abte.Site:Mixin.Searchable.SiteSearch]') }
+        itemName = 'node'
+        itemRenderer = Abte.Site:DefaultView.Json {
+
+            pageImage >
+            nodeType >
+
+            nodeTitle = ${ q(node).property('title') }
+            subTitle = ${ q(node).property('subTitle') }
+            // description = ${ String.stripTags( q(node).property('teaser_short') ) }
+            // nodeUri = Neos.Neos:NodeUri {
+            //     node = ${node}
+            // }
+            // nodePath = ${ q(node).property('_path') }
+        }
+
+    }
+
+    @process.stringify = ${ Json.stringify(value) }
+
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			documentNode = ${documentNode}
+		}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
+}
