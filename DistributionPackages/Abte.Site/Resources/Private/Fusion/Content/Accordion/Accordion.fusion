@@ -32,10 +32,6 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
         }
     } 
 
-    @context {
-        isOpen = ${ this.isOpen }
-    }
-
     title = Neos.Neos:Editable {
         property = 'title'
     }
@@ -98,6 +94,17 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
             </div>
         </div>
     `
+    
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${documentNode}
+        }
+        entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Abte.Site:Document.Product', documentNode)}
+        }
+    }
+
 
 }
 
@@ -159,17 +166,5 @@ prototype(Abte.Site:Component.Duration) < prototype(Neos.Neos:ContentComponent) 
         </fieldset>
 
     `
-
-    @cache {
-        mode = 'cached'
-        entryIdentifier {
-            node = ${node}
-        }
-        entryTags {
-            1 = ${Neos.Caching.nodeTag(node)}
-            2 = ${Neos.Caching.nodeTag(isOpen)}
-            3 = ${Neos.Caching.descendantOfTag(isOpen)}
-        }
-    }
 
 }
