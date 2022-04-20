@@ -50,12 +50,12 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
         <header class={pageClass + ' ' + 'relative bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
             <div class="container relative pt-32 h-[350px] md:h-[450px] lg:h-[500px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
                 <div class="grid grid-cols-3 gridgap-x">
-                    <div class="space-y-12">
+                    <div class="space-y-10">
                         <Neos.Fusion:Augmenter class="h1 text-black">
                             {props.teaserText}
                         </Neos.Fusion:Augmenter>
-
                         {props.productIcons}
+                        <Abte.Site:Content.Button class="text-white bg-black" text="Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
                     </div>
                     <div class="col-span-2 illustrationContainer">
                         {props.svgIllustration}

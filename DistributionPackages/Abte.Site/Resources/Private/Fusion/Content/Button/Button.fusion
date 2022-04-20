@@ -1,9 +1,9 @@
 prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         
-    class = 'text-lg font-semibold tracking-normal bg-primary'
-    buttonClass = 'flex flex-row items-center space-x-2 rounded-full bg-accent'
-    spacing = 'px-5 py-3'
-    icon = ${ q(node).property('icon') ? '' : '' }
+    class = 'text-lg tracking-normal bg-primary'
+    buttonClass = 'flex font-semibold flex-row items-center space-x-2 rounded-full bg-accent'
+    spacing = 'px-5 py-2'
+    icon = ${ q(node).property('icon') }
     iconPosition = ${ q(node).property('iconPosition') ? true : false }
     
     onDark = ${ q(node).property('onDark') ? 'border-white border-2 text-white' : 'border-primary text-primary' }

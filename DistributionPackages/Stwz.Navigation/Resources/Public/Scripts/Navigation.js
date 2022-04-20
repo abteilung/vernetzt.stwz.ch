@@ -32,7 +32,7 @@
       console.log(lastScroll);
       window.addEventListener("scroll", () => {
         const currentScroll = window.pageYOffset;
-        if (currentScroll <= alertHeight + 60) {
+        if (currentScroll <= alertHeight + 130) {
           navigation.classList.remove(scrollUp, scrollUpBg, scrollUpBgDark);
           return;
         }
