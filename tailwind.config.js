@@ -81,8 +81,8 @@ module.exports = {
 				}],
 			},
 			fontFamily: {
-				'sans': ['muli', 'Helvetica', 'Arial', 'sans-serif'],
-				'headings': ['muli', 'Helvetica', 'Arial', 'sans-serif'],
+				'sans': ['Mulish', 'Helvetica', 'Arial', 'sans-serif'],
+				'headings': ['Mulish', 'Helvetica', 'Arial', 'sans-serif'],
 				// 'sansCondensed': ['Barlow Condensed', 'Helvetica', 'Arial', 'sans-serif'],
 				// 'headings': ['chillax', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
 				// 'fancy': ['Sharpie', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
@@ -191,7 +191,6 @@ module.exports = {
                     // other colors
                     'accent': '#edfe0e',
                     'accent-focus': '#D8942E',
-					'alert': '#DF354D',
                 },
             },
         ],

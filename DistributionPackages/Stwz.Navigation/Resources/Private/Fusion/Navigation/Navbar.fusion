@@ -25,7 +25,7 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
                 </div>
             </div>
         </div>
-        <Stwz.Navigation:Component.Navbar.KontaktModal />
+        <!-- <Stwz.Navigation:Component.Navbar.KontaktModal /> -->
        
     `
 }
