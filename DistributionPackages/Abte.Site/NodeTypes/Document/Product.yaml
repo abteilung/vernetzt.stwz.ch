@@ -3,6 +3,8 @@
     'Abte.Site:Document.AbstractPage': true
     'Abte.Site:Mixin.Image': true
     'Abte.Site:Mixin.Icons': true
+    'Stwz.Flickity:Include': true
+    'Abte.Site:Mixin.Illustration': true
     'Abte.Site:Constraint.Document.Restricted': true
     'Abte.Site:Mixin.Searchable.SiteSearch': true
   ui:
@@ -25,20 +27,13 @@
   constraints:
     nodeTypes:
       '*': false
-  childNodes:
-    video:
-      type: 'Neos.Neos:ContentCollection'
-      position: 'after main'
   properties:
-    categories:
-      type: references
+    'accordion_open':
+      type: string
+      defaultValue: ''
+      position: 1
       ui:
-        label: 'Kategorien'
-        reloadIfChanged: TRUE
+        label: Shop-Element öffnen (Nr.)
+        reloadPageIfChanged: true
         inspector:
-          group: 'document'
-          position: 20
-          editorOptions:
-            nodeTypes: ['Abte.Site:Document.Category']
-            # startingPoint: "ClientEval:node.properties._path.replace(/(.+)(\\/.+)/, '$1')"
-            # startingPoint: /Kategorien
+          group: document

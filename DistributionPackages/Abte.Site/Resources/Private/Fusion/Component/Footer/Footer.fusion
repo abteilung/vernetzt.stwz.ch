@@ -1,112 +1,111 @@
-prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
-    
-    siteNode = ${site}
+    prototype(Abte.Site:Component.Footer) < prototype(Neos.Neos:ContentComponent) {
+        
+        siteNode = ${site}
 
-    year = ${Date.format(Date.now(), 'Y')}
-    
-    footerInfo = Neos.Neos:Editable {
-        node = ${site}
-        property = 'footerInfo'
-    }
-
-    footerContent = Neos.Neos:ContentCollection {
-        nodePath = ${ q(site).children('footer').property('_path') }
-        collection = ${ q(site).children('footer').children() }
-    }
-    
-    metaItems = Stwz.Navigation:Component.Nav.Meta {
-        menuItems {
-            itemCollection >
-            startingPoint = ${ q(site).children('[uriPathSegment="meta"]').get(0) }
+        year = ${Date.format(Date.now(), 'Y')}
+        
+        footerInfo = Neos.Neos:Editable {
+            node = ${site}
+            property = 'footerInfo'
         }
-    }
 
-    title = Neos.Neos:Editable {
-        property = 'title'
-    }
+        footerContent = Neos.Neos:ContentCollection {
+            nodePath = ${ q(site).children('footer').property('_path') }
+            collection = ${ q(site).children('footer').children() }
+        }
+        
+        metaItems = Stwz.Navigation:Component.Nav.Meta {
+            menuItems {
+                itemCollection >
+                startingPoint = ${ q(site).children('[uriPathSegment="meta"]').get(0) }
+            }
+        }
 
-    address = Neos.Neos:Editable {
-        property = 'address'
-    }
+        title = Neos.Neos:Editable {
+            property = 'title'
+        }
 
-    contacts = Neos.Neos:Editable {
-        property = 'contacts'
-    }
+        address = Neos.Neos:Editable {
+            property = 'address'
+        }
+
+        contacts = Neos.Neos:Editable {
+            property = 'contacts'
+        }
 
 
-    phone = ${ q(site).property('helpdeskPhone') }
-    
-    email = ${ q(site).property('helpdeskEmail') }
-    
-    web = ${ q(site).property('helpdeskWeb') }
+        phone = ${ q(site).property('helpdeskPhone') }
+        
+        email = ${ q(site).property('helpdeskEmail') }
+        
+        web = ${ q(site).property('helpdeskWeb') }
 
-    renderer = afx`
+        renderer = afx`
 
-        <footer class="relative z-10">
+            <footer class="relative z-10">
 
-            <div class="pt-8 pb-16 bg-white ">
-                <div class="container border-black pt-4 border-t-[1px]">
-                    <div class="grid grid-cols-6 text-sm">
-                        <div>
-                            {props.address}
+                <div class="pt-8 pb-16 bg-white">
+                    <div class="container border-black pt-4 border-t-[1px]">
+                        <div class="grid grid-cols-6 text-sm">
+                            <div>
+                                {props.address}
+                            </div>
+                            <div>
+                                <Carbon.Link:Link 
+                                    additionalClass="hover:underline font-semibold" 
+                                    link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
+                                    renderDefaultTagIfNoLink='true'
+                                >
+                                    <Neos.Neos:Editable property="helpdeskPhone" node={site} />
+                                </Carbon.Link:Link>
+                                <br/>
+                                <Carbon.Link:Link 
+                                    additionalClass="hover:underline font-semibold" 
+                                    link={'mailto:' + props.email} 
+                                    renderDefaultTagIfNoLink='true'
+                                >
+                                    <Neos.Neos:Editable property="helpdeskEmail" node={site} />
+                                </Carbon.Link:Link>
+                                <br/>
+
+                                <Carbon.Link:Link 
+                                    additionalClass="hover:underline font-semibold" 
+                                    link={'https://' + props.web} 
+                                    renderDefaultTagIfNoLink='true'
+                                >
+                                    <Neos.Neos:Editable property="helpdeskWeb" node={site} />
+                                </Carbon.Link:Link>
+                            </div>
+                            <div>
+                                {props.metaItems}
+                                © {props.year} {props.footerInfo}
+                            </div>
+
+
+                            <div class="col-span-3 flex justify-end">
+                                <Neos.Neos:NodeLink 
+                                    node={props.siteNode} 
+                                    >
+                                    <Abte.Site:Component.Logo class="h-12 w-auto" />
+                                </Neos.Neos:NodeLink>
+
+                            </div>
                         </div>
-                        <div>
-                            <Carbon.Link:Link 
-                                additionalClass="hover:underline font-semibold" 
-                                link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
-                                renderDefaultTagIfNoLink='true'
-                            >
-                                <Neos.Neos:Editable property="helpdeskPhone" node={site} />
-                            </Carbon.Link:Link>
-                            <br/>
-                            <Carbon.Link:Link 
-                                additionalClass="hover:underline font-semibold" 
-                                link={'mailto:' + props.email} 
-                                renderDefaultTagIfNoLink='true'
-                            >
-                                <Neos.Neos:Editable property="helpdeskEmail" node={site} />
-                            </Carbon.Link:Link>
-                            <br/>
 
-                            <Carbon.Link:Link 
-                                additionalClass="hover:underline font-semibold" 
-                                link={'https://' + props.web} 
-                                renderDefaultTagIfNoLink='true'
-                            >
-                                <Neos.Neos:Editable property="helpdeskWeb" node={site} />
-                            </Carbon.Link:Link>
-                        </div>
-                        <div>
-                            {props.metaItems}
-                            © {props.year} {props.footerInfo}
-                        </div>
-
-
-                        <div class="col-span-3 flex justify-end">
-                                        <Neos.Neos:NodeLink 
-                node={props.siteNode} 
-            >
-
-                            <Abte.Site:Component.Logo class="h-12 w-auto" />
-            </Neos.Neos:NodeLink>
-
-                        </div>
                     </div>
-
                 </div>
-            </div>
 
-        </footer>
-    `
+            </footer>
+        `
 
-    @cache {
-        mode = 'cached'
-        entryIdentifier {
-            site = ${site}
+        @cache {
+            mode = 'cached'
+            entryIdentifier {
+                site = ${site}
+            }
+            entryTags {
+                1 = ${Neos.Caching.nodeTag(site)}
+            }
         }
-        entryTags {
-            1 = ${Neos.Caching.nodeTag(site)}
-        }
+        
     }
-    
-}

@@ -1,7 +1,7 @@
 prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component) {
     
-    pageTitle = Neos.Neos:Editable {
-        property = 'title'
+    teaserText = Neos.Neos:Editable {
+        property = 'teaser_short'
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
             @position = 'end'
         }
@@ -35,11 +35,28 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
     ##
 
 
+    productIcons = Neos.Fusion:Loop {
+        items = ${ q(site).children('[instanceof Abte.Site:Document.Product]').get() }
+        itemRenderer = Neos.Neos:NodeLink {
+            node = ${ item }
+            content = Abte.Site:Mixin.Icons {
+                node = ${ q(item) }
+            }
+        }
+        @process.template = ${ '<div class="flex space-x-4">' + value + '</div>'}
+    }
+
     renderer = afx`
         <header class={pageClass + ' ' + 'relative bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
             <div class="container relative pt-32 h-[350px] md:h-[450px] lg:h-[500px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
                 <div class="grid grid-cols-3 gridgap-x">
-                    <h1 class="text-black">{props.pageTitle}</h1>
+                    <div class="space-y-12">
+                        <Neos.Fusion:Augmenter class="h1 text-black">
+                            {props.teaserText}
+                        </Neos.Fusion:Augmenter>
+
+                        {props.productIcons}
+                    </div>
                     <div class="col-span-2 illustrationContainer">
                         {props.svgIllustration}
                     </div>

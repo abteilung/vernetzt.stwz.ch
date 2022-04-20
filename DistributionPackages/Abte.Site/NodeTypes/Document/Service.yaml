@@ -14,8 +14,6 @@
     constraints:
         nodeTypes:
             '*': false
-            'Abte.Site:Document.Category': true
-            'Abte.Site:Document.Person': true
     properties:
         'accordion_open':
             type: string
