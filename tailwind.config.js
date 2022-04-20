@@ -191,6 +191,7 @@ module.exports = {
                     // other colors
                     'accent': '#edfe0e',
                     'accent-focus': '#D8942E',
+					'alert': '#DF354D',
                 },
             },
         ],

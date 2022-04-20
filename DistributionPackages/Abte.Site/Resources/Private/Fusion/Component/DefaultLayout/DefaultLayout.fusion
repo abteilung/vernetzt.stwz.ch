@@ -24,6 +24,7 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 
     renderer = afx`
 		<Abte.Site:TrackingScript.GoogleAnalytics/>
+		<Abte.Site:Component.Alert />
 		<Stwz.Navigation:Component.Navbar />
             {props.pageHeader}
 		

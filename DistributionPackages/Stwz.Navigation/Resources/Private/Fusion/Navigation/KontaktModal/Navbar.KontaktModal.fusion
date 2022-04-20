@@ -55,8 +55,11 @@ prototype(Stwz.Navigation:Component.Navbar.KontaktModal) < prototype(Neos.Fusion
 
 prototype(Stwz.Navigation:Component.Navbar.KontaktModal.CloseButton) < prototype(Neos.Fusion:Component) {
   
+    class = "absolute right-0 cursor-pointer"
+    position = "top-2 md:top-4 xl:top-8 md:right-4 xl:right-12"
+
 	renderer = afx`
-        <div class="absolute right-0 cursor-pointer top-2 md:top-4 xl:top-8 md:right-4 xl:right-12"
+        <div class={props.class + ' ' + props.position}
             "@click.prevent"="showModal = !showModal"
         >
             <button 

@@ -16,17 +16,19 @@ prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 
     htmlTag {
         attributes {
+            class = "scroll-smooth"
             lang = ${ node.context.targetDimensions.language }
         }
     }
 
     bodyTag {
         attributes {
-            data-theme="default"
-            x-data="\{ showModal : false, showMenu : false \}"
+            data-theme="stwztgen"
+            x-data="\{ showAlert : true, showMoadal: true, showMenu : false \}"
         }
     }
 
+    @context.siteLocale = ${ Array.first(node.context.dimensions.language) }
 
     body = Abte.Site:Component.DefaultLayout {
         content {
@@ -36,4 +38,9 @@ prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
             }
         }
     }
+}
+
+
+ContentCollectionRenderer {
+    @process.addClass=${value}
 }

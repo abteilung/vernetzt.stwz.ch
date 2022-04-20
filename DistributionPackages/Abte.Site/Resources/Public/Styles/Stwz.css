@@ -575,6 +575,7 @@ select {
   --b3: 198 27% 81%;
   --a: 64 99% 53%;
   --af: 36 69% 51%;
+  alert: #DF354D;
 }
 
     [x-cloak] {
@@ -620,8 +621,16 @@ select {
   z-index: 0;
 }
     
-    main p {
+    main p, #alert p {
   margin-bottom: 1.5rem;
+}
+
+    #alert h2 {
+  margin-bottom: 3rem;
+  font-size: 3.75rem;
+  line-height: 1;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
     main a {
@@ -1044,6 +1053,24 @@ select {
   margin-right: auto;
   margin-left: auto;
 }
+.alert {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.alert > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.alert > :where(*) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .avatar {
   position: relative;
   display: inline-flex;
@@ -1420,6 +1447,9 @@ select {
 .top-2 {
   top: 0.5rem;
 }
+.top-8 {
+  top: 2rem;
+}
 .isolate {
   isolation: isolate;
 }
@@ -1473,6 +1503,9 @@ select {
 }
 .col-span-9 {
   grid-column: span 9 / span 9;
+}
+.col-span-11 {
+  grid-column: span 11 / span 11;
 }
 .my-8 {
   margin-top: 2rem;
@@ -2282,6 +2315,10 @@ select {
   padding-left: 0px;
   padding-right: 0px;
 }
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -2969,6 +3006,16 @@ select {
 
   .container {
     max-width: 768px;
+  }
+
+  .alert {
+    flex-direction: row;
+  }
+
+  .alert > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .md\:right-2 {

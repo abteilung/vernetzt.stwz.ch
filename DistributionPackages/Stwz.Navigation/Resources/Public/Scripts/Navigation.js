@@ -23,14 +23,16 @@
   var require_NavScroll = __commonJS({
     "DistributionPackages/Stwz.Navigation/Resources/Private/Fusion/scripts/NavScroll.js"() {
       var navigation = document.querySelector("#primaryMenu");
+      var alertHeight = document.querySelector("#alert") ? document.querySelector("#alert").offsetHeight : 0;
       var scrollUp = "-translate-y-0";
       var scrollUpBg = "bg-nav-scrolled";
       var scrollUpBgDark = "dark:bg-nav-scrolled";
       var scrollDown = "-translate-y-32";
-      var lastScroll = 0;
+      var lastScroll = 0 + alertHeight;
+      console.log(lastScroll);
       window.addEventListener("scroll", () => {
         const currentScroll = window.pageYOffset;
-        if (currentScroll <= 60) {
+        if (currentScroll <= alertHeight + 60) {
           navigation.classList.remove(scrollUp, scrollUpBg, scrollUpBgDark);
           return;
         }

@@ -1,0 +1,65 @@
+prototype(Abte.Site:Component.Alert) < prototype(Neos.Neos:ContentComponent) {
+    
+    alertMessage = Neos.Neos:Editable {
+        property = 'alert'
+        node = ${ site }
+    }
+
+    showAlert = ${ q(site).property('showAlert') }
+    
+    renderer = afx`
+        <div
+            @if.hasAlert={props.showAlert}
+            x-cloak
+            x-show="showAlert" 
+            id="alert"
+            class="bg-secondary py-8 text-white w-full" 
+        >
+            <div 
+                "@click.away"="showAlert = false" 
+            >
+                <div class="container relative grid gridgap grid-cols-12">
+                    <div class="">
+                        <Abte.Site:Icon.Alert class="text-white" />
+                    </div>
+                    <div class="col-span-8">
+                        {props.alertMessage}
+                    </div>
+
+                    <Abte.Site:Component.CloseButton position="top-0 right-0" />
+                    
+                </div>
+            </div>
+        </div>
+    `
+}
+
+
+prototype(Abte.Site:Component.CloseButton) < prototype(Neos.Fusion:Component) {
+  
+    class = "absolute right-0 cursor-pointer"
+    position = "top-2 md:top-4 xl:top-8 md:right-4 xl:right-12"
+
+	renderer = afx`
+        <div class={props.class + ' ' + props.position}
+            "@click.prevent"="showAlert = !showAlert"
+        >
+            <button 
+                class="w-auto px-6 text-lg text-white pill focus:outline-none"
+                aria-expanded="false"
+            >
+                <div class="relative flex items-center justify-center w-6">
+                    <span 
+                        class="absolute w-full h-[2px] transition translate-y-0 rotate-45 transform bg-current">
+                    </span>
+                    <span 
+                        class="absolute w-full h-[2px] opacity-0 translate-x-3 transition transform bg-current">
+                    </span>
+                    <span 
+                        class="absolute w-full h-[2px] translate-y-0 -rotate-45 transition transform bg-current">
+                    </span>
+                </div>
+            </button>
+        </div>    
+    `
+}

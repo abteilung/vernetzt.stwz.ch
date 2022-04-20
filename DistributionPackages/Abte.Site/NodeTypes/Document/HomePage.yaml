@@ -7,6 +7,7 @@
     'Stwz.Flickity:Include': true
     'Abte.Site:Mixin.InspectorGeneral': true
     'Abte.Site:Mixin.Searchable.SiteSearch': true
+  label: "${ q(node).property('showAlert') && node.context.inBackend ? '<span class=\"hidden\">🔥 </span>' + q(node).property('title') : q(node).property('title') }"
   ui:
     label: i18n
     icon: icon-globe
@@ -27,10 +28,22 @@
       'Abte.Site:Document.Service': true
       'Abte.Site:Document.MenuSeparator': true
   properties:
+    'showAlert':
+      type: boolean
+      defaultValue: 'false'
+      position: 1
+      ui:
+        label: 🔥 Störungsmeldung anzeigen!
+        reloadIfChanged: true
+        inspector:
+          group: 'document'
     'address':
       options:
         preset: 'text.free'
     'contacts':
+      options:
+        preset: 'text.free'
+    'alert':
       options:
         preset: 'text.free'
     'footerInfo':
