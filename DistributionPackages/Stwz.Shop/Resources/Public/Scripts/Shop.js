@@ -106,17 +106,6 @@
       value: void 0,
       active: void 0,
       init() {
-        let t = Array.from(this.$el.querySelectorAll("input"));
-        this.value = t[e]?.value;
-        for (let e2 of t)
-          e2.addEventListener("change", () => {
-            this.active = e2.value;
-          }), e2.addEventListener("focus", () => {
-            this.active = e2.value;
-          });
-        window.addEventListener("focus", () => {
-          console.log("Focus change"), t.includes(document.activeElement) || (console.log("HIT"), this.active = void 0);
-        }, true);
       }
     };
   };

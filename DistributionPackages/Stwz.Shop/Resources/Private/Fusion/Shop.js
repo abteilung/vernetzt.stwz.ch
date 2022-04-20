@@ -10,16 +10,17 @@ window.Components.radioGroup = function({
       value: void 0,
       active: void 0,
       init() {
-          let t = Array.from(this.$el.querySelectorAll("input"));
-          this.value = t[e]?.value;
-          for (let e of t) e.addEventListener("change", (() => {
-              this.active = e.value
-          })), e.addEventListener("focus", (() => {
-              this.active = e.value
-          }));
-          window.addEventListener("focus", (() => {
-              console.log("Focus change"), t.includes(document.activeElement) || (console.log("HIT"), this.active = void 0)
-          }), !0)
+        // Todo: Better selector
+          // let t = Array.from(this.$el.querySelectorAll("input"));
+          // this.value = t[e]?.value;
+          // for (let e of t) e.addEventListener("change", (() => {
+          //     this.active = e.value
+          // })), e.addEventListener("focus", (() => {
+          //     this.active = e.value
+          // }));
+          // window.addEventListener("focus", (() => {
+          //     console.log("Focus change"), t.includes(document.activeElement) || (console.log("HIT"), this.active = void 0)
+          // }), !0)
       }
   }
 }
