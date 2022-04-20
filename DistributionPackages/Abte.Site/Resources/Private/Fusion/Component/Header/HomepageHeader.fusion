@@ -41,6 +41,7 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
             node = ${ item }
             content = Abte.Site:Mixin.Icons {
                 node = ${ q(item) }
+                class="scale-90 hover:scale-100 duration-150"
             }
         }
         @process.template = ${ '<div class="flex space-x-4">' + value + '</div>'}
@@ -48,18 +49,16 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
 
     renderer = afx`
         <header class={pageClass + ' ' + 'relative bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="container relative pt-32 h-[350px] md:h-[450px] lg:h-[500px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
-                <div class="grid grid-cols-3 gridgap-x">
-                    <div class="space-y-10">
-                        <Neos.Fusion:Augmenter class="h1 text-black">
-                            {props.teaserText}
-                        </Neos.Fusion:Augmenter>
-                        {props.productIcons}
-                        <Abte.Site:Content.Button class="text-white bg-black" text="Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
-                    </div>
-                    <div class="col-span-2 illustrationContainer">
-                        {props.svgIllustration}
-                    </div>
+            <div class="grid grid-cols-5 gridgap-x flex justify-between h-full items-center container relative h-[350px] md:h-[450px] lg:h-[500px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
+                <div class="space-y-10 col-span-2">
+                    <Neos.Fusion:Augmenter class="h1 text-black">
+                        {props.teaserText}
+                    </Neos.Fusion:Augmenter>
+                    {props.productIcons}
+                    <Abte.Site:Content.Button class="scale-100 hover:scale-105 duration-150 text-white bg-black" text="Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
+                </div>
+                <div class="col-span-3 h-full illustrationContainer">
+                    {props.svgIllustration}
                 </div>
             </div>
             <div class="absolute right-0 z-0 -bottom-40">

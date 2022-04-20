@@ -1520,6 +1520,10 @@ select {
   margin-left: 0px;
   margin-right: 0px;
 }
+.-my-24 {
+  margin-top: -6rem;
+  margin-bottom: -6rem;
+}
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -1681,6 +1685,15 @@ select {
 }
 .h-36 {
   height: 9rem;
+}
+.h-\[500px\] {
+  height: 500px;
+}
+.h-\[550px\] {
+  height: 550px;
+}
+.h-\[600px\] {
+  height: 600px;
 }
 .max-h-full {
   max-height: 100%;
@@ -2712,6 +2725,16 @@ select {
 }
 .last\:border-b-0:last-child {
   border-bottom-width: 0px;
+}
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.hover\:scale-100:hover {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .hover\:border-black:hover {
   --tw-border-opacity: 1;
