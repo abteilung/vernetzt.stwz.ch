@@ -48,6 +48,9 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
 
   	renderer = afx`
+
+                <Stwz.AddressLookup:Component.Form />
+
         <div class={props.accordionClass}
             x-data="ShopItems()"
         >

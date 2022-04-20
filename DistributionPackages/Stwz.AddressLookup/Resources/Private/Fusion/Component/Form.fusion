@@ -5,16 +5,16 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
     }
 
     renderer = afx`
-        <div class="container" id="addressLookup">
-            <div class="relative z-30 flex items-center w-10/12 h-auto px-6 mx-auto py-4 lg:py-6 my-16 space-x-8 lg:px-16 rounded-3xl md:rounded-full bg-accent">
+        <div class="container addressLookup" id="">
+            <div class="relative z-30 flex items-center w-10/12 h-36 px-6 mx-auto my-16 space-x-8 lg:px-16 rounded-3xl md:rounded-full bg-accent">
                 <div>{props.icon}</div>
-                <div class="w-full my-3">
-                    <h3 class="mb-4 text-black">Glasfaseranschluss prüfen</h3>
-                    <div class="grid w-full gap-4 sm:grid-cols-8 ">
+                <div class="w-full">
+                    <h3 class="mb-4 -mt-2 text-black">Glasfaseranschluss prüfen</h3>
+                    <div class="grid w-full gap-x-4 sm:grid-cols-8 ">
                         <input class="sm:col-span-3 lg:col-span-3 xl:col-span-3" type="text" placeholder="PLZ/Ort" />
                         <input class="sm:col-span-3 lg:col-span-2 xl:col-span-3" type="text" placeholder="Strasse" />
                         <input class="sm:col-span-2 lg:col-span-1 xl:col-span-1" type="text" placeholder="Nr." />
-                        <button class="sm:col-span-4 lg:col-span-2 xl:col-span-1 button" type="submit">Prüfen</button>
+                        <button class="sm:col-span-4 lg:col-span-2 xl:col-span-1 !mb-0 button" type="submit">Prüfen</button>
                     </div>
                 </div>
             </div>
