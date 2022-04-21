@@ -9,7 +9,7 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 		}
 
 		Service {
-			condition = ${ q(node).is('[instanceof Abte.Site:Document.Service]') }
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Service],[instanceof Abte.Site:Document.Product]') }
 			renderer = Abte.Site:Component.HeaderProduct
 		}
 

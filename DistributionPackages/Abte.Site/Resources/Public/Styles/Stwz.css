@@ -3485,6 +3485,10 @@ select {
     width: 75%;
   }
 
+    .lg\:w-24 {
+    width: 6rem;
+  }
+
     .lg\:flex-1 {
     flex: 1 1 0%;
   }

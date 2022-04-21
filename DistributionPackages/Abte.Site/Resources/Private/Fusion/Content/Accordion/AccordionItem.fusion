@@ -68,7 +68,7 @@ prototype(Abte.Site:Content.Accordion.Icon)  < prototype(Neos.Fusion:Component) 
     }
 
     renderer = afx`
-        <div class="relative block w-24"
+        <div class="relative block lg:w-24 w-20"
             @if.hasIcon={props.icon}
         >
             {props.icon}
