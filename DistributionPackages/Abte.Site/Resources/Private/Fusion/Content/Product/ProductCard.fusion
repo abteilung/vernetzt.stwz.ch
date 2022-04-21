@@ -31,9 +31,9 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
         <div class="productCard">
             <label 
                 class={'product cursor-pointer cardItem text-black transition duration-250 bg-base-100 space-y-4 hover:bg-base-200'}
+                :class={"{ 'bg-base-100': (value === '" + props.itemID + "'), 'bg-base-100': !(value === '" + props.itemID + "'), 'bg-base-300': (active === '" + props.itemID + "'), 'bg-base-100': !(active === '" + props.itemID + "') }"}
                 x-radio-group-option=""
                 data-price={props.price}
-                :class={"{ 'bg-base-100': (value === '" + props.itemID + "'), 'bg-base-100': !(value === '" + props.itemID + "'), 'bg-base-300': (active === '" + props.itemID + "'), 'bg-base-100': !(active === '" + props.itemID + "') }"}
             >
                 <input 
                     type="radio" 

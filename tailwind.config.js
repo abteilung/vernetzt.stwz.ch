@@ -185,7 +185,7 @@ module.exports = {
                     'secondary-focus': '#831111',
                     'neutral': '#EFEFEF',
                     'error': '#ff9900',
-                    'base-100': '#E6EEF1',
+                    'base-100': '#EBE8E8',
                     'base-200': '#d4e0e5',
                     'base-300': '#c0d3db',
                     // other colors

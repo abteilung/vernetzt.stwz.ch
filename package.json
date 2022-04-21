@@ -65,6 +65,7 @@
     "urlcat": "^2.0.4"
   },
   "dependencies": {
+    "@alpinejs/persist": "^3.10.2",
     "alpinejs": "^3.9.6",
     "choices.js": "^10.1.0",
     "flickity": "^3.0.0",

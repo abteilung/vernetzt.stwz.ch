@@ -48,6 +48,61 @@ import Flickity from 'flickity-as-nav-for';
 // }
 
 
+// var productSlider = document.getElementsByClassName('productSlider');
+// if (productSlider.length > 0) {
+
+// 	const flickity = (() => {
+
+// 		console.log('flickity is here');
+
+// 		var productSlider = document.querySelector('.productSlider');
+// 		var flkty = new Flickity(productSlider, {
+// 			pageDots: false,
+// 			groupCells: true,
+// 			contain: true,
+// 			cellSelector: '.productCard',
+// 			prevNextButtons: false,
+// 			adaptiveHeight: false,
+// 			draggable: (document.querySelector('.neos-backend') ? false : true ),
+// 		});
+
+// 		// previous
+// 		var previousButton = document.querySelector('.button--previous');
+// 		previousButton.addEventListener( 'click', function() {
+// 		    flkty.previous();
+// 		});
+// 		// next
+// 		var nextButton = document.querySelector('.button--next');
+// 		nextButton.addEventListener( 'click', function() {
+// 		    flkty.next();
+// 		});
+
+		
+// 		var slideNum = flkty.selectedIndex;
+
+// 		if( slideNum == 0 ){
+// 			document.querySelector('.button--previous').classList.add('hidden');
+// 		} else {
+// 			document.querySelector('.button--previous').classList.add('block');
+// 		}
+	
+// 		if( slideNum == flkty.slides.length - 1 ){
+// 			document.querySelector('.button--next').classList.add('hidden');
+// 		} else {
+// 			document.querySelector('.button--next').classList.add('block');
+// 		}
+	
+// 	})();
+
+// }
+
+
+
+
+
+
+
+
 var hasHeaderSlider = document.getElementsByClassName('headerSlider');
 if (hasHeaderSlider.length > 0) {
 

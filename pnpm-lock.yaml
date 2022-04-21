@@ -4,6 +4,7 @@ overrides:
   ansi-regex: ^5.0.1
 
 specifiers:
+  '@alpinejs/persist': ^3.10.2
   '@tailwindcss/forms': ^0.5.0
   '@tailwindcss/line-clamp': ^0.3.1
   '@tailwindcss/nesting': ^0.0.0-insiders.565cd3e
@@ -51,6 +52,7 @@ specifiers:
   urlcat: ^2.0.4
 
 dependencies:
+  '@alpinejs/persist': 3.10.2
   alpinejs: 3.9.6
   choices.js: 10.1.0
   flickity: 3.0.0
@@ -100,6 +102,10 @@ devDependencies:
   urlcat: 2.0.4
 
 packages:
+
+  /@alpinejs/persist/3.10.2:
+    resolution: {integrity: sha512-BYnc4CxiuBHEaMqeMkU9KVrmV88lOEkdWY6qo5ryDnPMJGg1T/YhAMl3JxPImLJTsdc4r9fmcRgWeCXNPSGJew==}
+    dev: false
 
   /@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==}

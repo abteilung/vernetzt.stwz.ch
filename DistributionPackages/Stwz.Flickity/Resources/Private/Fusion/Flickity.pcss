@@ -66,7 +66,6 @@ https://flickity.metafizzy.co
 
 .flickity-button:hover {
   cursor: pointer;
-  @apply scale-150 -mt-6;
 }
 
 .flickity-button:focus {
@@ -78,7 +77,7 @@ https://flickity.metafizzy.co
 }
 
 .flickity-button:disabled {
-  opacity: 0.3;
+  opacity: 0;
   cursor: auto;
   /* prevent disabled button from capturing pointer up event. #716 */
   pointer-events: none;
@@ -86,12 +85,12 @@ https://flickity.metafizzy.co
 
 .flickity-button-icon {
   fill: currentColor;
-  @apply text-primary;
 }
 
 /* ---- previous/next buttons ---- */
 
 .flickity-prev-next-button {
+  @apply lg:hidden;
   bottom: 00px;
   /* vertically center */
   transform: translateY(-50%);
@@ -186,6 +185,6 @@ https://flickity.metafizzy.co
   @apply pb-16;
   .flickity-button {
     @apply bottom-0;
-    @apply bg-base-200 duration-200 w-8 h-8 rounded-full;
+    @apply bg-base-100 duration-200 w-8 h-8 rounded-full;
   }  
 }
