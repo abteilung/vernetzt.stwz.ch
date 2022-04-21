@@ -79,13 +79,11 @@ prototype(Abte.Site:Component.SelectedProduct) < prototype(Neos.Fusion:Component
     plusIcon = Abte.Site:Icon.Plus
     
     renderer = afx`
-        <div class={props.class + ' ' + 'w-8 h-8 rounded-full bg-white flex justify-center items-center' }>
-            <div
-                :class={"{ 'hidden': !(value === '" + props.activeItem + "'), 'block': (active === '" + props.activeItem + "') }"}
-            >{props.checkIcon}</div>
-            <div
-                :class={"{ 'block': !(value === '" + props.activeItem + "'), 'hidden': (active === '" + props.activeItem + "') }"}
-            >{props.plusIcon}</div>
+        <div 
+            class={props.class + ' ' + 'w-8 h-8 rounded-full flex justify-center items-center bg-white' }
+            :class={"{ 'hidden': !(value === '" + props.activeItem + "'), 'block': (active === '" + props.activeItem + "') }"}
+        >
+            <div>{props.checkIcon}</div>
         </div>
     `
 }
