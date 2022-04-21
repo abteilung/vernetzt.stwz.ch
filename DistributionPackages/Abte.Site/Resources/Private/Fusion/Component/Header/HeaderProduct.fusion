@@ -7,7 +7,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
         }
     }
 
-    teaser_short = Neos.Neos:Editable {
+    teaserText = Neos.Neos:Editable {
         property = 'teaser_short'
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
             @position = 'end'
@@ -41,13 +41,16 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
     }
 
     renderer = afx`
-        <header class={pageClass + ' ' + 'relative bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="container relative pt-32 h-[250px] md:h-[350px] lg:h-[400px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
+        <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
+            <div class="container relative pt-32 h-[250px] md:h-[300px] relative top-0 z-20 w-full mt-0 overflow-visible">
                 <div class="grid grid-cols-3 gridgap-x">
-                    <h1 class="text-black">{props.pageTitle}</h1>
-                        
-                    <div class="col-span-2 illustrationContainer">
+                    <div class="col-span-1 illustrationContainer">
                         {props.svgIllustration}
+                    </div>
+                    <div class="col-span-2">
+                        <Neos.Fusion:Augmenter class="h1 text-black">
+                            {props.teaserText}
+                        </Neos.Fusion:Augmenter>
                     </div>
                 </div>
             </div>
@@ -56,43 +59,62 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
             </div>
         </header>
 
-        <div class="container">
-
-            <div class="relative w-24 h-16 header">
-                <div class="flex justify-between">
-                    <Abte.Site:Mixin.Icons class="duration-150 scale-100 group-hover:scale-110" />
-                    <Abte.Site:Icon.Diagonal class="absolute left-0" />
-                </div>
-            </div>
 
 
-            <div class="grid grid-cols-2 gridgap-x">
-                <div class="flex items-start space-x-2 gridColumn">
-                    <h1 class="block mb-6 space-x-2 -rotate-90 w-1/8 text-primary">{props.title}</h1>
-                    <div class="w-7/8 content">
-                        <h3>{String.toString(props.subTitle)}</h3>
-                        <Neos.Fusion:Augmenter class="strong">
-                        {props.intro}
-                        </Neos.Fusion:Augmenter>
-                        <p>{props.intro}</p>
+        <div class="bg-base-100 py-24">
+            <div class="container">
+
+                <div class="grid grid-cols-2 gridgap-x">
+
+                    <div class="gridColumn">
+                        <div class="flex flex-col relative h-24">
+                            <Abte.Site:Mixin.Icons class="absolute left-2" />
+                            <Abte.Site:Icon.DiagonalWide class="absolute -top-8 left-0" />
+                        </div>
+
+                        <div class="w-full grid grid-cols-6 bg-primary relative">
+                            
+                            <div class="-rotate-[90deg] flex flex-row origin-bottom-right">
+                                <h1 class="text-primary whitespace-nowrap bg-error">{props.title} xxxxx</h1>
+                            </div>
+
+                            <div class="col-span-4">
+
+                                <div class="flex items-start space-x-2">
+                                    <div class="w-3/4 content">
+                                        <h3>{String.toString(props.subTitle)}</h3>
+                                        <Neos.Fusion:Augmenter class="strong">
+                                        {props.intro}
+                                        </Neos.Fusion:Augmenter>
+                                        <p>{props.intro}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+
+                    </div>
+                    
+                    
+                    <div class="gridColumn">
+
+                        <Sitegeist.Lazybones:Image 
+                            @if.hasImage={props.imageSource}
+                            imageSource={props.imageSource} 
+                            width="800"
+                            height="600"
+                            class="object-cover object-center w-full h-full"
+                        />
+
+                        <img src="https://via.placeholder.com/800x600" 
+                            alt={props.title} 
+                            width="800" 
+                            height="600"
+                            @if.hasNoImage={!props.imageSource}
+                        />
                     </div>
                 </div>
-
-                <div class="gridColumn">
-
-                    <Sitegeist.Lazybones:Image 
-                        @if.hasImage={props.imageSource}
-                        imageSource={props.imageSource} 
-                        width="800"
-                        height="600"
-                        class="object-cover object-center w-full h-full"
-                    />
-
-                    <img src="https://via.placeholder.com/800x600" alt={props.title} width="800" height="600"
-                        @if.hasNoImage={!props.imageSource}
-                    />                        
-                </div>
-            </div>        
+            </div>
         </div>
     `
 

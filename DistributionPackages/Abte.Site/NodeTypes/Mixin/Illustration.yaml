@@ -26,11 +26,12 @@
     illustration:
       type: string
       defaultValue: '<p>HTML Code</p>'
+      position: 3
       ui:
         label: Illustration (SVG Code)
         reloadIfChanged: true
         inspector:
-          group: general
+          group: document
           editor: Neos.Neos/Inspector/Editors/CodeEditor
           editorOptions:
             buttonLabel: 'SVG bearbeiten'
