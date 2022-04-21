@@ -32,7 +32,7 @@ prototype(Abte.Site:Component.NewsAndTrends) < prototype(Neos.Fusion:Component) 
                             <p class="">
                                 {String.stripTags( String.cropAtWord( q(item.node).property('teaser_short'), 175, '…'))}
                             </p>
-                                <Abte.Site:Icon.ArrowRight class="absolute bottom-0 left-0 duration-150 text-secondary group-hover:left-2" />
+                                <Abte.Site:Icon.ArrowRight class="absolute w-6 bottom-0 left-0 duration-150 text-secondary group-hover:left-2" />
                         </Neos.Neos:NodeLink>
                     </div>
                 </Neos.Fusion:Loop>

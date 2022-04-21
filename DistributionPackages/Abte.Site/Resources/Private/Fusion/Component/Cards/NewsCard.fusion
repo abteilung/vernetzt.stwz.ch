@@ -50,7 +50,7 @@ prototype(Abte.Site:Component.NewsCard) < prototype(Neos.Fusion:Component) {
                 {String.stripTags(String.cropAtWord(props.teaser_short, 175, '…'))}
             </p>
 
-            <Abte.Site:Icon.ArrowRight class="absolute bottom-0 left-0 duration-150 text-secondary group-hover:left-2" />
+            <Abte.Site:Icon.ArrowRight class="w-6 absolute bottom-0 left-0 duration-150 text-secondary group-hover:left-2" />
 
         </Neos.Neos:NodeLink>
         </div>

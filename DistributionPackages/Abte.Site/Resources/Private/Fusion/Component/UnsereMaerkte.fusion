@@ -21,7 +21,7 @@ prototype(Abte.Site:Component.UnsereMaerkte) < prototype(Neos.Neos:ContentCompon
     }
 
     icon        = Abte.Site:Icon.ArrowRight {
-        class = 'absolute left-0 duration-150 scale-75 lg:scale-100 text-secondary group-hover:text-secondary group-hover:left-1'
+        class = 'absolute w-6 left-0 duration-150 scale-75 lg:scale-100 text-secondary group-hover:text-secondary group-hover:left-1'
     }
 
 	content = Neos.Neos:ContentCollectionRenderer {

@@ -31,7 +31,7 @@ prototype(Abte.Site:Document.About) < prototype(Abte.Site:Document.AbstractPage)
         }
 
         icon        = Abte.Site:Icon.ArrowRight {
-            class = 'relative left-0 duration-150 text-secondary'
+            class = 'relative w-6 left-0 duration-150 text-secondary'
         }
 
         target = ${ q(site).find('[instanceof Abte.Site:Document.Persons]').get(0) }

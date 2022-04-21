@@ -40,7 +40,8 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                     value={props.itemID} 
                     x-model="value" 
                     name={props.itemID} 
-                    class="sr-only" />
+                    class="sr-only" 
+                />
 
                 <div class="flex flex-1">
                     <div class="flex flex-col w-full">

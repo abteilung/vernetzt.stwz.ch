@@ -1,0 +1,13 @@
+prototype(Abte.Site:Icon.Message) < prototype(Neos.Fusion:Component) {
+
+    class = ''
+
+    renderer = afx`
+        <svg class={props.class} xmlns="http://www.w3.org/2000/svg" width="30.353" height="28.069" viewBox="0 0 30.353 28.069">
+            <path id="Pfad_3650" data-name="Pfad 3650" d="M434.433,31.028a14.026,14.026,0,1,1,12.795-8.262l3.523,7.619-8.9-1.473a13.949,13.949,0,0,1-7.413,2.116m0-24.569a10.534,10.534,0,1,0,6.021,19.179l.584-.408,3.762.623-1.463-3.162.408-.767a10.539,10.539,0,0,0-9.312-15.465" transform="translate(-420.398 -2.959)"/>
+        </svg>
+
+    `
+}
+
+

@@ -10,7 +10,7 @@ prototype(Abte.Site:Document.Product) < prototype(Abte.Site:Document.AbstractPag
         }
 
         arrow = Abte.Site:Icon.ArrowRight {
-            class = 'relative left-0 duration-150 group-hover:left-2'
+            class = 'relative w-6 left-0 duration-150 group-hover:left-2'
         }
 
         title = ${ q(node).property('title') }

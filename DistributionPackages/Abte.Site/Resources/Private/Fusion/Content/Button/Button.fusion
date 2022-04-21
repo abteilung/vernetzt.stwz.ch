@@ -21,12 +21,12 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
     }
 
     iconBefore = Abte.Site:Icon.ArrowRight {
-        class='relative left-0 duration-300 text-black group-hover:left-2'
+        class='w-6 relative left-0 duration-300 text-black group-hover:left-2'
         @if.buttonIsBefore=${this.positionBefore}
     }
 
     iconAfter = Abte.Site:Icon.ArrowRight {
-        class='relative left-0 duration-300 text-black group-hover:left-2'
+        class='w-6 relative left-0 duration-300 text-black group-hover:left-2'
         @if.buttonIsBefore=${!this.positionBefore}
     }
 

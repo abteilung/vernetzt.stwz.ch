@@ -4,7 +4,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
     liClass     = ''
     ulClass     = ${ q(node).property('twoCols') ? 'grid lg:grid-cols-2 gridgap-x' : null }
     icon        = Abte.Site:Icon.ArrowRight {
-        class = 'relative left-0 duration-150 text-accent group-hover:left-2'
+        class = 'relative w-6 left-0 duration-150 text-accent group-hover:left-2'
     }
     arrowIcon   = ${ q(node).property('arrowIcon') ? this.icon : false }
     iconRight   = ${ q(node).property('iconRight') ? true : false }

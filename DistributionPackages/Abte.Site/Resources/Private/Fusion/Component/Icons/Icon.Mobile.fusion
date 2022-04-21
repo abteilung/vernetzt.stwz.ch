@@ -3,25 +3,12 @@ prototype(Abte.Site:Icon.Mobile) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-        <svg
-            class={props.class}
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="27.509"
-            height="27.509"
-            viewBox="0 0 27.509 27.509"
-        >
-            <defs>
-                <clipPath id="clip-path">
-                <rect id="Rechteck_1968" data-name="Rechteck 1968" width="27.509" height="27.509" transform="translate(0 0)" fill="none"/>
-                </clipPath>
-            </defs>
-            <g id="Gruppe_4294" data-name="Gruppe 4294" transform="translate(0 0)">
-                <g id="Gruppe_4289" data-name="Gruppe 4289" clip-path="url(#clip-path)">
-                <rect id="Rechteck_1967" data-name="Rechteck 1967" width="24.009" height="24.009" rx="4.93" transform="translate(1.75 1.75)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
-                <path id="Pfad_3374" data-name="Pfad 3374" d="M16.253,19.656a2.222,2.222,0,1,1-2.222-2.222,2.222,2.222,0,0,1,2.222,2.222" fill="#241911"/>
-                </g>
+        <svg class={props.class} xmlns="http://www.w3.org/2000/svg" width="20.978" height="29.684" viewBox="0 0 20.978 29.684">
+            <g id="Gruppe_4421" data-name="Gruppe 4421" transform="translate(-9360.178 7287.949)">
+                <path id="Pfad_3658" data-name="Pfad 3658" d="M142.572,21.39a1.905,1.905,0,1,1-1.9-1.9,1.9,1.9,0,0,1,1.9,1.9" transform="translate(9230 -7287.977)"/>
+                <path id="Pfad_3661" data-name="Pfad 3661" d="M144.475.028h-7.616a6.689,6.689,0,0,0-6.681,6.68V23.032a6.688,6.688,0,0,0,6.681,6.68h7.616a6.687,6.687,0,0,0,6.68-6.68V6.708a6.687,6.687,0,0,0-6.68-6.68m3.18,23a3.184,3.184,0,0,1-3.18,3.18h-7.616a3.184,3.184,0,0,1-3.181-3.18V6.708a3.184,3.184,0,0,1,3.181-3.18h.561V6.709h6.494V3.528h.561a3.184,3.184,0,0,1,3.18,3.18Z" transform="translate(9230 -7287.977)"/>
             </g>
         </svg>
+
     `
 }

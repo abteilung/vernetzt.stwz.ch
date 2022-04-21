@@ -4,24 +4,9 @@ prototype(Abte.Site:Icon.Phone) < prototype(Neos.Fusion:Component) {
 
     renderer = afx`
 
-        <svg
-            class={props.class}
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="31.248"
-            height="28.097" viewBox="0 0 31.248 28.097"
-        >
-            <defs>
-                <clipPath id="clip-path">
-                <rect id="Rechteck_1959" data-name="Rechteck 1959" width="31.248" height="28.097" transform="translate(0 0)" fill="none"/>
-                </clipPath>
-            </defs>
-            <g id="Gruppe_4291" data-name="Gruppe 4291" transform="translate(0 0)">
-                <g id="Gruppe_4282" data-name="Gruppe 4282" clip-path="url(#clip-path)">
-                <path id="Pfad_3371" data-name="Pfad 3371" d="M22.61,15.4l6.212,5A15.075,15.075,0,0,1,4.61,2.441l6.9,4.969" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
-                <path id="Pfad_3372" data-name="Pfad 3372" d="M19.544,18.034A8.8,8.8,0,0,1,9.23,11.063" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
-                </g>
-            </g>
-        </svg>
+    <svg class={props.class} xmlns="http://www.w3.org/2000/svg" width="29.479" height="29.481" viewBox="0 0 29.479 29.481">
+        <path id="Pfad_3664" data-name="Pfad 3664" d="M193.179,30.425A21.012,21.012,0,0,1,172.191,9.437a8.56,8.56,0,0,1,7.454-8.47,2.874,2.874,0,0,1,2.969,1.646l3.437,6.428a2.876,2.876,0,0,1-.215,2.7l-1.862,2.936a10.113,10.113,0,0,0,4.238,4.226l2.964-1.84a2.821,2.821,0,0,1,2.7-.216l.1.048,6.01,3.1a2.875,2.875,0,0,1,1.661,2.979,8.559,8.559,0,0,1-8.468,7.454M179.661,4.513a5.052,5.052,0,0,0-3.97,4.924,17.507,17.507,0,0,0,17.487,17.488,5.054,5.054,0,0,0,4.923-3.966L192.752,20.2,189.8,22.038a2.867,2.867,0,0,1-2.788.18,13.637,13.637,0,0,1-6.344-6.322l0-.008a2.9,2.9,0,0,1,.18-2.81l1.847-2.91ZM193.081,20l-.044.028c.015-.009.03-.018.044-.028m-5.144-.924a.389.389,0,0,0-.04.025ZM183.8,14.958l-.006.009.006-.009m-.912-5.1,0,0Z" transform="translate(-172.191 -0.944)"/>
+    </svg>
+
     `
 }

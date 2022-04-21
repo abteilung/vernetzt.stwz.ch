@@ -1,3 +1,0 @@
-prototype(Abte.Site:Content.Headline.Json) < prototype(Abte.Site:DefaultView.Json) {
-    title = ${q(node).property('title')}
-}

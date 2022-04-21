@@ -22,7 +22,7 @@ prototype(Abte.Site:Component.ProductUpdates) < prototype(Neos.Fusion:Component)
     class = 'gridPadding'
 
     icon        = Abte.Site:Icon.ArrowRight {
-        class = 'relative left-0 duration-150 text-secondary'
+        class = 'relative w-6 left-0 duration-150 text-secondary'
     }
 
     renderer = afx`

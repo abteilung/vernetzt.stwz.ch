@@ -42,7 +42,7 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                     x-data="\{ 'open' : false \}"
                 >
                     <div 
-                        class="flex flex-wrap items-center transition-all duration-500 bg-white shadow-xl rounded-l-xl"
+                        class="flex flex-wrap items-center transition-all duration-500 bg-white shadow-xl overflow-hidden rounded-l-xl"
                         "@click.away"="open = false" 
                         :class="open ? 'w-56 h-80 px-3 justify-left' : 'px-0 w-20 h-20 justify-center'"
                     >

@@ -12,7 +12,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
     }
 
     arrow = Abte.Site:Icon.ArrowRight {
-        class = 'left-0 group-hover:left-2 relative duration-150'
+        class = 'w-6 left-0 group-hover:left-2 relative duration-150'
     }
 
     title = ${ q(node).property('title') }

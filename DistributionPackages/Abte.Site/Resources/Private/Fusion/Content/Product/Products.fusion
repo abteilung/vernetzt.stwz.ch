@@ -19,7 +19,7 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
         cellSelector = '.productCard'
         pageDots = false
         contain = true
-        draggable = true
+        draggable = ${ node.context.inBackend ? false : true }
         groupCells = true
         adaptiveHeight = false
         prevNextButtons = true

@@ -3,24 +3,13 @@ prototype(Abte.Site:Icon.TV) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-        <svg 
-            class={props.class}
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="27.509"
-            height="26.75" viewBox="0 0 27.509 26.75"
-        >
-            <defs>
-                <clipPath id="clip-path">
-                <rect id="Rechteck_1961" data-name="Rechteck 1961" width="27.509" height="26.75" transform="translate(0 0)" fill="none"/>
-                </clipPath>
-            </defs>
-            <g id="Gruppe_4292" data-name="Gruppe 4292" transform="translate(0 0)">
-                <g id="Gruppe_4285" data-name="Gruppe 4285" clip-path="url(#clip-path)">
-                <rect id="Rechteck_1960" data-name="Rechteck 1960" width="24.009" height="17.906" transform="translate(1.75 1.75)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
-                <line id="Linie_1013" data-name="Linie 1013" x2="15.187" transform="translate(6.438 25)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
-                </g>
+
+        <svg CLASS={props.class} xmlns="http://www.w3.org/2000/svg" width="31.837" height="26.778" viewBox="0 0 31.837 26.778">
+            <g id="Gruppe_4419" data-name="Gruppe 4419" transform="translate(-9230 7285.849)">
+                <path id="Pfad_3666" data-name="Pfad 3666" d="M31.837,22.6H0V2.128H31.837ZM3.5,19.1H28.337V5.628H3.5Z" transform="translate(9230 -7287.977)"/>
+                <rect id="Rechteck_2038" data-name="Rechteck 2038" width="17.926" height="3.5" transform="translate(9237.282 -7262.571)"/>
             </g>
         </svg>
+
     `
 }

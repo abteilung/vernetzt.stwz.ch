@@ -3,8 +3,8 @@ prototype(Abte.Site:Icon.Check) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-        <svg class={props.class}xmlns="http://www.w3.org/2000/svg" width="20.384" height="20.594" viewBox="0 0 20.384 20.594">
-            <path data-name="Pfad 3383" d="M1583.769-5918.724l4.862,4.783,10.613-15.45" transform="translate(-1581.294 5931.824)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="3.5"/>
+        <svg class={props.class} xmlns="http://www.w3.org/2000/svg" width="20.809" height="19.061" viewBox="0 0 20.809 19.061">
+            <path id="Pfad_3665" data-name="Pfad 3665" d="M43.857,71.795l-5.213-5.834a1.75,1.75,0,1,1,2.609-2.332l2.629,2.941L55.964,53.305a1.75,1.75,0,0,1,2.588,2.357Z" transform="translate(-38.199 -52.734)"/>
         </svg>
     `
 }

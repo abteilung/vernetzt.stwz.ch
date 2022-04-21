@@ -3,26 +3,12 @@ prototype(Abte.Site:Icon.Support) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-        <svg
-            class={props.class}
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="34.161"
-            height="41.669"
-            viewBox="0 0 34.161 41.669"
-        >
-            <defs>
-                <clipPath id="clip-path">
-                <rect id="Rechteck_2035" data-name="Rechteck 2035" width="34.161" height="41.669" fill="none"/>
-                </clipPath>
-            </defs>
-            <g id="Gruppe_4407" data-name="Gruppe 4407" transform="translate(0 0)">
-                <g id="Gruppe_4406" data-name="Gruppe 4406" transform="translate(0 0)" clip-path="url(#clip-path)">
-                <path id="Pfad_3647" data-name="Pfad 3647" d="M1.234,18.2H8.079v7.871h-6.3V16.979a15.229,15.229,0,1,1,30.458,0v9.392l-6.744.148.147-8.317h6.152" transform="translate(0.072 0.102)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
-                <line id="Linie_1213" data-name="Linie 1213" x1="8.929" transform="translate(15.543 36.345)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
-                <path id="Pfad_3648" data-name="Pfad 3648" d="M14.687,38.118h11.36a5.309,5.309,0,0,0,5.308-5.308V29.155" transform="translate(0.856 1.699)" fill="none" stroke="#241911" stroke-miterlimit="10" stroke-width="3.5"/>
-                </g>
+        <svg class={props.class} xmlns="http://www.w3.org/2000/svg" width="32.279" height="39.374" viewBox="0 0 32.279 39.374">
+            <g id="Gruppe_4423" data-name="Gruppe 4423" transform="translate(-9592.505 7287.977)">
+                <path id="Pfad_3651" data-name="Pfad 3651" d="M384.878,26.945l.2-11.4h6.189a12.64,12.64,0,0,0-25.252,0h5.938V26.484h-9.452V16.14a16.139,16.139,0,1,1,32.279,0V26.727Zm3.642-7.9-.078,4.32,2.842-.063V19.046Zm-22.515,3.938h2.452V19.046h-2.452Z" transform="translate(9230 -7287.977)"/>
+                <path id="Pfad_3652" data-name="Pfad 3652" d="M391.191,29.155v3.453a3.27,3.27,0,0,1-3.266,3.266h-2.3V32.593h-8.438v6.781h10.734a6.773,6.773,0,0,0,6.766-6.766V29.155Z" transform="translate(9230 -7287.977)"/>
             </g>
         </svg>
+
     `
 }
