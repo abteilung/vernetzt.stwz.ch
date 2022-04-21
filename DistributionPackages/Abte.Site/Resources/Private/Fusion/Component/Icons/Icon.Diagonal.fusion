@@ -3,11 +3,12 @@ prototype(Abte.Site:Icon.Diagonal) < prototype(Neos.Fusion:Component) {
     class = ''
 
     renderer = afx`
-        <svg class={props.class} xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 76.024 54.482">
+        <svg class={props.class} xmlns="http://www.w3.org/2000/svg" width="76.024" height="54.482" viewBox="0 0 76.024 54.482">
             <line id="Linie_983" data-name="Linie 983" y1="53.667" x2="75.444" transform="translate(0.29 0.407)" fill="none" stroke="currentColor" stroke-width="1"/>
         </svg>
     `
 }
+
 
 
 prototype(Abte.Site:Icon.DiagonalWide) < prototype(Neos.Fusion:Component) {

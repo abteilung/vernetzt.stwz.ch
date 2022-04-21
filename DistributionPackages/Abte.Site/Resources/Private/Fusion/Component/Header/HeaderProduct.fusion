@@ -72,13 +72,13 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
                             <Abte.Site:Icon.DiagonalWide class="absolute -top-8 left-0" />
                         </div>
 
-                        <div class="w-full grid grid-cols-6 bg-primary relative">
+                        <div class="w-full grid grid-cols-6 relative">
                             
-                            <div class="-rotate-[90deg] flex flex-row origin-bottom-right">
-                                <h1 class="text-primary whitespace-nowrap bg-error">{props.title} xxxxx</h1>
+                            <div class="rotate-90 absolute origin-bottom-left -mt-12">
+                                <h1 class="rotate-180 mb-0 text-primary whitespace-nowrap">{props.title} </h1>
                             </div>
 
-                            <div class="col-span-4">
+                            <div class="col-span-4 col-start-2">
 
                                 <div class="flex items-start space-x-2">
                                     <div class="w-3/4 content">
