@@ -13,20 +13,20 @@ prototype(Abte.Site:Component.Alert) < prototype(Neos.Neos:ContentComponent) {
             x-cloak
             x-show="showAlert" 
             id="alert"
-            class="bg-secondary py-8 text-white w-full" 
+            class="bg-accent py-8 w-full" 
         >
             <div 
                 "@click.away"="showAlert = false" 
             >
                 <div class="container relative grid gridgap grid-cols-12">
                     <div class="">
-                        <Abte.Site:Icon.Alert class="text-white" />
+                        <Abte.Site:Icon.Alert class="text-black" />
                     </div>
-                    <div class="col-span-8">
+                    <div class="col-span-8 text-black">
                         {props.alertMessage}
                     </div>
 
-                    <Abte.Site:Component.CloseButton position="top-0 right-0" />
+                    <Abte.Site:Component.CloseButton position="top-0 right-0 text-black" />
                     
                 </div>
             </div>
@@ -45,7 +45,7 @@ prototype(Abte.Site:Component.CloseButton) < prototype(Neos.Fusion:Component) {
             "@click.prevent"="showAlert = !showAlert"
         >
             <button 
-                class="w-auto px-6 text-lg text-white pill focus:outline-none"
+                class="w-auto px-6 text-lg pill focus:outline-none"
                 aria-expanded="false"
             >
                 <div class="relative flex items-center justify-center w-6">
