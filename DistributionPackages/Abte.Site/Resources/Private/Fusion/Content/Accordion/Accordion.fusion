@@ -89,6 +89,7 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                     </div>
 
                     <Abte.Site:Component.Duration />
+                    Jetzt konfigurieren
 
                 </div>
             </div>

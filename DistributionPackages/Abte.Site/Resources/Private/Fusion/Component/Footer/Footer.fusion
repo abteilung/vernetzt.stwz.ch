@@ -86,7 +86,7 @@
                                 <Neos.Neos:NodeLink 
                                     node={props.siteNode} 
                                     >
-                                    <Abte.Site:Component.Logo class="h-12 w-auto" />
+                                    <Abte.Site:Component.StWZLogo class="h-12 w-auto" />
                                 </Neos.Neos:NodeLink>
 
                             </div>
