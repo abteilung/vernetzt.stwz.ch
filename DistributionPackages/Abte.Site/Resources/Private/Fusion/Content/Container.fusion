@@ -10,9 +10,11 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
 
     fullWidth = ${ q(node).property('fullWidth') }
     
-    contentFullWidth = ${ q(node).property('contentFullWidth') ? null : 'container' }
+    wideContainer = ${ q(node).property('wideContainer') }
+    
+    contentFullWidth = ${ q(node).property('contentFullWidth') ? null : this.wideContainer ? 'container-wide' : 'container' }
 
-    fullWidthClass = ${ this.fullWidth ? 'cnt-container' : 'container' }
+    fullWidthClass = ${ this.fullWidth ? 'cnt-container' : this.wideContainer ? 'container-wide' : 'container' }
     
     dropShadow = ${ q(node).property('dropShadow') }
     
@@ -53,7 +55,7 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
         >
             
             <div class={props.contentFullWidth}>
-                <div class="flex items-start mb-4 md:mb-8 lg:mb-12 containerHeader space-x-6 items-center"
+                <div class="flex items-start items-center mb-4 space-x-6 md:mb-8 lg:mb-12 containerHeader"
                     @if.hasTitleOrLink={ props.title ? true : props.link ? true : false }
                 >
                     <h2 class="text-black">{props.title}</h2>
@@ -61,7 +63,7 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
                         text={props.linkText} 
                         target={props.link}
                         spacing="px-3 py-1"
-                        class="bg-accent text-black text-sm" 
+                        class="text-sm text-black bg-accent" 
                         @if.hasLinkText={props.linkText}
                     />
                 </div>

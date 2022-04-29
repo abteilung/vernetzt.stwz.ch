@@ -31,6 +31,14 @@
         reloadIfChanged: true
         inspector:
           group: style
+    'wideContainer':
+      type: boolean
+      defaultValue: false
+      ui:
+        label: Wide Container
+        reloadIfChanged: true
+        inspector:
+          group: style
     'fullWidth':
       type: boolean
       defaultValue: false

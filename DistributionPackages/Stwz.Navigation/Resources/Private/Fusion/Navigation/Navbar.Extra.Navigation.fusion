@@ -7,7 +7,7 @@ prototype(Stwz.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neos.Ne
   phone = ${ q(site).property('helpdeskPhone') }
 
   renderer = afx`
-    <div class="flex justify-end w-full h-12 extras right gridPadding-x">
+    <div class="flex justify-end w-full h-12 extras right gridPadding-x container-wide">
       <nav 
         class="items-center hidden space-x-6 text-xs md:flex"
       >
