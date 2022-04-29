@@ -41,7 +41,7 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
             node = ${ item }
             content = Abte.Site:Mixin.Icons {
                 node = ${ q(item) }
-                class="scale-90 hover:scale-100 duration-150"
+                class="duration-150 scale-90 hover:scale-100"
             }
         }
         @process.template = ${ '<div class="flex space-x-4">' + value + '</div>'}
@@ -49,15 +49,15 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
 
     renderer = afx`
         <header class={pageClass + ' ' + 'relative bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="grid grid-cols-5 gridgap-x flex justify-between h-full items-center container relative h-[350px] md:h-[450px] lg:h-[500px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
-                <div class="space-y-10 col-span-2">
-                    <Neos.Fusion:Augmenter class="h1 text-black">
+            <div class="grid grid-cols-5 gridgap-x flex justify-between h-full items-center max-w-screen-lg mx-auto relative h-[350px] md:h-[450px] lg:h-[500px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
+                <div class="col-span-2 space-y-10">
+                    <Neos.Fusion:Augmenter class="text-black h1">
                         {props.teaserText}
                     </Neos.Fusion:Augmenter>
                     {props.productIcons}
-                    <Abte.Site:Content.Button class="scale-100 hover:scale-105 duration-150 text-white bg-black" text="Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
+                    <Abte.Site:Content.Button class="text-white duration-150 scale-100 bg-black hover:scale-105" text="Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
                 </div>
-                <div class="col-span-3 h-full illustrationContainer">
+                <div class="h-full col-span-3 illustrationContainer">
                     {props.svgIllustration}
                 </div>
             </div>

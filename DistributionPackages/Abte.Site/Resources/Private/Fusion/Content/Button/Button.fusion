@@ -1,41 +1,39 @@
 prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         
-    class = 'text-lg tracking-normal bg-primary'
-    buttonClass = 'flex font-semibold flex-row items-center space-x-2 rounded-full bg-accent'
-    spacing = 'px-5 py-2'
-    icon = ${ q(node).property('icon') }
+    class = 'text-lg  bg-primary'
+    buttonClass = 'flex tracking-normal px-4 py-2 font-semibold flex-row items-center space-x-2 rounded-full bg-accent'
+    icon = ''
     iconPosition = ${ q(node).property('iconPosition') ? true : false }
     
-    onDark = ${ q(node).property('onDark') ? 'border-white border-2 text-white' : 'border-primary text-primary' }
+    onDark = ${ q(node).property('onDark') ? 'text-primary' : null }
     iconClass = 'text-secondary relative group-hover:left-2 duration-300'
-    style = ${ q(node).property('hollow') ? 'border-2 border-white text-white !bg-transparent' : 'text-white'  }
+    style = ${ q(node).property('hollow') ? this.onDark + ' ' + '' : this.onDark + ' text-primary bg-none' }
 
     text = Neos.Neos:Editable {
         property = 'text'
         block = ${ false }
     }
 
-    target = ${ q(node).property('target') }
-    target.@process.convertUris = Neos.Neos:ConvertUris {
-        forceConversion = true
+    @context {
+        icon = ${ this.icon }
     }
 
+    target = ${ q(node).property('target') }
+    // target.@process.convertUris = Neos.Neos:ConvertUris {
+    //     forceConversion = true
+    // }
+
     iconBefore = Abte.Site:Icon.ArrowRight {
-        class='w-6 relative left-0 duration-300 text-black group-hover:left-2'
+        class='relative left-0 duration-300 text-white group-hover:left-2'
         @if.buttonIsBefore=${this.positionBefore}
+        @if.hasIcon=${icon}
     }
 
     iconAfter = Abte.Site:Icon.ArrowRight {
-        class='w-6 relative left-0 duration-300 text-black group-hover:left-2'
+        class='relative left-0 duration-300 text-white group-hover:left-2'
         @if.buttonIsBefore=${!this.positionBefore}
+        @if.hasIcon=${icon}
     }
-
-    pageURL = Neos.Neos:NodeUri {
-        absolute = true
-    }
-
-    cartImage = ''
-
 
     blank = ${ q(node).property('blank') ? true : false }
 
@@ -43,7 +41,7 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         <div class="block">
             <div class="inline-block group">
                 <Carbon.Link:Link 
-                    additionalClass={ 'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style + ' ' + props.spacing } 
+                    additionalClass={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style} 
                     link={props.target} 
                     renderDefaultTagIfNoLink='true' 
                 >

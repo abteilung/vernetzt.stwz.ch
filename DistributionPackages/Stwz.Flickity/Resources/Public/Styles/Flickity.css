@@ -186,6 +186,15 @@ https://flickity.metafizzy.co
 
 .flickity-rtl .flickity-page-dot { direction: rtl; }
 
+.flickity-page-dot p, .flickity-page-dot h1, .flickity-page-dot .h1, .flickity-page-dot h2, .flickity-page-dot .h2, .flickity-page-dot h3, .flickity-page-dot .h3, .flickity-page-dot h4, .flickity-page-dot .h4, .flickity-page-dot h5, .flickity-page-dot .h5, .flickity-page-dot h6, .flickity-page-dot .h6 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.flickity-page-dot p {
+  color: rgb(255 255 255 / 0.6);
+}
+
 .flickity-page-dot {
   margin-right: 0.25rem;
   display: inline-block;
@@ -220,13 +229,7 @@ https://flickity.metafizzy.co
 
   .flickity-page-dot {
     margin-right: 0.5rem;
-  }
-
-  .flickity-page-dot {
     height: 16px;
-  }
-
-  .flickity-page-dot {
     width: 16px;
   }
 }

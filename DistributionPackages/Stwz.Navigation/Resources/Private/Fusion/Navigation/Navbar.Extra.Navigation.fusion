@@ -7,25 +7,23 @@ prototype(Stwz.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neos.Ne
   phone = ${ q(site).property('helpdeskPhone') }
 
   renderer = afx`
-    <div class="extras">
-      <div class="container flex items-center justify-end h-12 right gridPadding-x">
-        <nav 
-          class="items-center hidden space-x-6 text-xs md:flex"
+    <div class="flex justify-end w-full h-12 extras right gridPadding-x">
+      <nav 
+        class="items-center hidden space-x-6 text-xs md:flex"
+      >
+        <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
+          <Stwz.Navigation:Navbar.LinkItem class="font-light" />
+        </Neos.Fusion:Loop>
+      </nav>
+      <!-- <div>
+        <Carbon.Link:Link 
+            additionalClass="h4" 
+            link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
+            renderDefaultTagIfNoLink='true'
         >
-          <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
-            <Stwz.Navigation:Navbar.LinkItem class="font-light" />
-          </Neos.Fusion:Loop>
-        </nav>
-        <!-- <div>
-          <Carbon.Link:Link 
-              additionalClass="h4" 
-              link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
-              renderDefaultTagIfNoLink='true'
-          >
-            <Neos.Neos:Editable property="helpdeskPhone" node={site} />
-          </Carbon.Link:Link>
-        </div> -->
-      </div>  
-    </div>
+          <Neos.Neos:Editable property="helpdeskPhone" node={site} />
+        </Carbon.Link:Link>
+      </div> -->
+    </div>  
   `
 }

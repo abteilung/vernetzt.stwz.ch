@@ -1,5 +1,5 @@
 /*!
- * CSSPlugin 3.10.2
+ * CSSPlugin 3.10.4
  * https://greensock.com
  *
  * Copyright 2008-2022, GreenSock. All rights reserved.
@@ -8,7 +8,7 @@
  * @author: Jack Doyle, jack@greensock.com
 */
 /*!
- * GSAP 3.10.2
+ * GSAP 3.10.4
  * https://greensock.com
  *
  * @license Copyright 2008-2022, GreenSock. All rights reserved.

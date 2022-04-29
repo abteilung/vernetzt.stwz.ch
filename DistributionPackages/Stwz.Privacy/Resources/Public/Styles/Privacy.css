@@ -269,10 +269,7 @@
   
     .gdpr-cookieconsent-settings .gdpr-cookieconsent-settings__content h2 {
   
-        margin-bottom: 1rem
-    }
-  
-    .gdpr-cookieconsent-settings .gdpr-cookieconsent-settings__content h2 {
+        margin-bottom: 1rem;
   
         font-size: 27px;
   
@@ -283,10 +280,7 @@
   
     .gdpr-cookieconsent-settings .gdpr-cookieconsent-settings__content .gdpr-cookieconsent-settings__content__info__main-description {
   
-        margin-bottom: 1rem
-    }
-  
-    .gdpr-cookieconsent-settings .gdpr-cookieconsent-settings__content .gdpr-cookieconsent-settings__content__info__main-description {
+        margin-bottom: 1rem;
   
         font-size: 16px;
   
@@ -304,10 +298,7 @@
   
         padding-top: 0.5rem;
   
-        padding-bottom: 0.5rem
-    }
-  
-    .gdpr-cookieconsent-settings .gdpr-cookieconsent-settings__content .gdpr-cookieconsent-settings__content__cta button {
+        padding-bottom: 0.5rem;
   
         font-size: 16px;
   

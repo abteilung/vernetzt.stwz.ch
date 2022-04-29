@@ -50,7 +50,7 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
   	renderer = afx`
 
         <Stwz.AddressLookup:Component.Form 
-            @if.isShop={props.isShop}
+            @if.isOnPage={q(documentNode).is('[instanceof Abte.Site:Document.Product]')}
         />
 
         <div class={props.accordionClass}
@@ -89,7 +89,8 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                     </div>
 
                     <Abte.Site:Component.Duration />
-                    Jetzt konfigurieren
+
+                    <Abte.Site:Content.Button class="text-base text-white bg-black" text="Jetzt konfigurieren" />
 
                 </div>
             </div>

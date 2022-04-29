@@ -5,11 +5,11 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
     }
 
     renderer = afx`
-        <div class="container addressLookup" id="">
-            <div class="relative z-30 flex group items-center w-10/12 h-36 px-6 mx-auto my-16 space-x-8 lg:px-16 rounded-3xl md:rounded-full bg-accent">
+        <div class="max-w-screen-lg mx-auto addressLookup" id="">
+            <div class="relative z-30 flex items-center px-6 mx-auto my-16 space-x-8 group h-36 lg:px-16 rounded-3xl md:rounded-full bg-accent">
                 <div>{props.icon}</div>
                 <div class="w-full my-3">
-                    <h3 class="mb-4 text-black">Glasfaseranschluss prüfen</h3>
+                    <h3 class="mb-4 font-semibold text-black">Glasfaseranschluss prüfen</h3>
                     <div class="grid w-full gap-4 sm:grid-cols-8 "
                          x-data="{address:{city: '', country: '', zip_code: '', streetname: '', house_number: '', house_number_suffix: ''}}">
                         <input class="sm:col-span-4 lg:col-span-1 xl:col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ" />
@@ -18,8 +18,11 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                         <input class="sm:col-span-2 lg:col-span-1 xl:col-span-1" type="text" x-model="address.house_number" placeholder="Nr." />
                         <input type="hidden" x-model="address.country" placeholder="Land" value="Schweiz" />
 
-                        <button class="sm:col-span-4 lg:col-span-2 xl:col-span-1 button" type="submit"
-                                x-on:click="fetch('https://stwz.arc.fibx.ch/restapi/availabilitychecker/building_info?streetname='+ address.streetname +'e&city='+ address.city +'&country=Schweiz&zip_code='+ address.zip_code +'&house_number='+ address.house_number +'&house_number_suffix=', {method: 'GET', headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin': 'https://stwz.arc.fibx.ch/', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Allow-Headers': 'Content-Type, Cookie, Credentials', 'Authorization': 'stwz_fibx_api','X-Api-Key': 'eY2CqgexcQrwtV4u'}}).then(response => response.json()).then(console.log(response.data));">Prüfen</button>                    </div>
+                        <button class="sm:col-span-4 lg:col-span-2 xl:col-span-1 button !px-1" type="submit"
+                                x-on:click={"fetch('https://stwz.arc.fibx.ch/restapi/availabilitychecker/building_info?streetname='+ address.streetname +'e&city='+ address.city +'&country=Schweiz&zip_code='+ address.zip_code +'&house_number='+ address.house_number +'&house_number_suffix=', {method: 'GET', headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin': 'https://stwz.arc.fibx.ch/', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Allow-Headers': 'Content-Type, Cookie, Credentials', 'Authorization': 'stwz_fibx_api','X-Api-Key': 'eY2CqgexcQrwtV4u'}}).then(response => response.json()).then(console.log(response.data));"}>
+                                Prüfen
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

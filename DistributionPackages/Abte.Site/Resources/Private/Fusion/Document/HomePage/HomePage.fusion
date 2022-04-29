@@ -6,11 +6,10 @@ prototype(Abte.Site:Document.HomePage) < prototype(Abte.Site:Document.AbstractPa
     body.content = Neos.Fusion:Component {
         renderer = afx`
             <main>
-                <!-- <Stwz.AddressLookup:Component.Form /> -->
+                <Stwz.AddressLookup:Component.Form />
                 <div class="">
                     {props.main}
                 </div>
-
             </main>
         `
     }

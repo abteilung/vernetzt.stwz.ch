@@ -1,5 +1,5 @@
 (() => {
-  // node_modules/.pnpm/gsap@3.10.2/node_modules/gsap/gsap-core.js
+  // node_modules/.pnpm/gsap@3.10.4/node_modules/gsap/gsap-core.js
   function _assertThisInitialized(self) {
     if (self === void 0) {
       throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -2378,7 +2378,7 @@
     _proto3.resetTo = function resetTo(property, value, start, startIsRelative) {
       _tickerActive || _ticker.wake();
       this._ts || this.play();
-      var time = Math.min(this._dur, (this._dp._time - this._start) * this._ts), ratio, p;
+      var time = Math.min(this._dur, (this._dp._time - this._start) * this._ts), ratio;
       this._initted || _initTween(this, time);
       ratio = this._ease(time / this._dur);
       if (_updatePropTweens(this, property, value, start, startIsRelative, ratio, time)) {
@@ -2840,7 +2840,7 @@
       }
     }
   }, _buildModifierPlugin("roundProps", _roundModifier), _buildModifierPlugin("modifiers"), _buildModifierPlugin("snap", snap)) || _gsap;
-  Tween.version = Timeline.version = gsap.version = "3.10.2";
+  Tween.version = Timeline.version = gsap.version = "3.10.4";
   _coreReady = 1;
   _windowExists() && _wake();
   var Power0 = _easeMap.Power0;
@@ -2862,7 +2862,7 @@
   var Expo = _easeMap.Expo;
   var Circ = _easeMap.Circ;
 
-  // node_modules/.pnpm/gsap@3.10.2/node_modules/gsap/CSSPlugin.js
+  // node_modules/.pnpm/gsap@3.10.4/node_modules/gsap/CSSPlugin.js
   var _win2;
   var _doc2;
   var _docElement;
@@ -3778,7 +3778,7 @@
   });
   gsap.registerPlugin(CSSPlugin);
 
-  // node_modules/.pnpm/gsap@3.10.2/node_modules/gsap/index.js
+  // node_modules/.pnpm/gsap@3.10.4/node_modules/gsap/index.js
   var gsapWithCSS = gsap.registerPlugin(CSSPlugin) || gsap;
   var TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
