@@ -823,8 +823,6 @@ select{
     line-height: 27px;
     letter-spacing: 0;
     line-height: 1.5 !important;
-    --tw-text-opacity: 1;
-    color: hsl(var(--b3, var(--b2)) / var(--tw-text-opacity));
 }
 
     .container-wide{
@@ -1734,9 +1732,6 @@ select{
 .w-5\/12{
     width: 41.666667%;
 }
-.w-10\/12{
-    width: 83.333333%;
-}
 .w-72{
     width: 18rem;
 }
@@ -1779,11 +1774,11 @@ select{
 .w-1\/3{
     width: 33.333333%;
 }
-.max-w-full{
-    max-width: 100%;
-}
 .max-w-screen-lg{
     max-width: 1024px;
+}
+.max-w-full{
+    max-width: 100%;
 }
 .flex-1{
     flex: 1 1 0%;
@@ -2314,6 +2309,10 @@ select{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
+.\!px-1{
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+}
 .px-4{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2361,10 +2360,6 @@ select{
 .py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-}
-.\!px-1{
-    padding-left: 0.25rem !important;
-    padding-right: 0.25rem !important;
 }
 .pt-1{
     padding-top: 0.25rem;
@@ -2469,9 +2464,6 @@ select{
 }
 .\!font-semibold{
     font-weight: 600 !important;
-}
-.font-bold{
-    font-weight: 700;
 }
 .uppercase{
     text-transform: uppercase;
