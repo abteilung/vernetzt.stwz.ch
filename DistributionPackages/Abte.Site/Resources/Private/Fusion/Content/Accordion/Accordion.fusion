@@ -1,6 +1,6 @@
 prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
-    class = ''
+    class = 'overflow-hidden'
 
     isShop = ${ q(node).property('accordion_isShop') ? 'grid md:grid-cols-3 xl:grid-cols-4 gridgap-x' : null }
 
@@ -81,14 +81,14 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
             <div class=""
                 @if.isShop={props.isShop}
             >
-                <div class="p-6 bg-primary sticky top-12">
+                <div class="sticky p-6 bg-primary top-12">
                     <div class="mb-0 text-white h1">Ihr Abo</div>
                     <div class="relative h-24 pricing">
                         <div class="text-xl text-white" x-text="value"></div>
                             <Abte.Site:Icon.Diagonal class="absolute top-0 text-white left-10" />
                     </div>
 
-                    <Abte.Site:Component.Duration />
+                    <Abte.Site:Component.BestellUebersicht />
 
                     <Abte.Site:Content.Button class="text-base text-white bg-black" text="Jetzt konfigurieren" />
 
@@ -110,7 +110,9 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
 }
 
-prototype(Abte.Site:Component.Duration) < prototype(Neos.Neos:ContentComponent) {
+
+
+prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentComponent) {
 
     renderer = afx`
         <fieldset class="relative w-full space-y-4">

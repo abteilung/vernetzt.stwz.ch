@@ -44,7 +44,7 @@ prototype(Abte.Site:Content.Accordion.Item) < prototype(Neos.Neos:ContentCompone
             </button>
 
             <div
-                class="relative overflow-hidden transition-all duration-700 max-h-0"
+                class="overflow-hidden transition-all duration-700 max-h-0"
                 x-ref={'container' + i.cycle}
                 x-bind:style={'selected == ' + i.cycle + ' ? \'max-height: \' + $refs.container' + i.cycle + '.scrollHeight + \'px\' : \'\' '}
             >
@@ -64,11 +64,11 @@ prototype(Abte.Site:Content.Accordion.Icon)  < prototype(Neos.Fusion:Component) 
     }
 
     icon = Abte.Site:Mixin.Icons {
-        class = 'scale-75 absolute left-0'
+        class = 'absolute left-0 scale-75'
     }
 
     renderer = afx`
-        <div class="relative block lg:w-24 w-20"
+        <div class="relative block w-20 lg:w-24"
             @if.hasIcon={props.icon}
         >
             {props.icon}
