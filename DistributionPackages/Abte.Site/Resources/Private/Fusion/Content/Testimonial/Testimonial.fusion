@@ -1,0 +1,18 @@
+prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent) {
+    
+	content = Neos.Neos:ContentCollectionRenderer {
+		@process.contentElementWrapping = Neos.Neos:ContentElementWrapping
+	}
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+    }
+
+    renderer = afx`
+        <div class="relative bg-[url('Media/Backdrops/MainBackdrop.svg')] isolate py-24 testimonial bg-cover">
+            <div class="container flex justify-center items-center">
+                {props.content}
+            </div>
+        </div>	
+    `
+}

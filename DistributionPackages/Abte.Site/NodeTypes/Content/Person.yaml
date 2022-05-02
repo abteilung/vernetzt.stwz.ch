@@ -1,0 +1,48 @@
+'Abte.Site:Content.Person':
+    superTypes:
+        'Neos.Neos:Content': true
+        'Abte.Site:Mixin.Image': true
+        'Abte.Site:Constraint.Content.Restricted': true
+    ui:
+        label: Person
+        icon: user
+        position: 300
+    properties:
+        title:
+            options:
+                preset: 'text.plain'
+            ui:
+                inspector:
+                    group: 'general'
+        name:
+            options:
+                preset: 'text.plain'
+            ui:
+                inspector:
+                    group: 'general'
+        image:
+            options:
+                preset: 'image.squareAsset'
+            ui:
+                inspector:
+                    group: 'general'
+        phone:
+            options:
+                preset: 'phone'
+            ui:
+                inspector:
+                    group: 'general'
+        email:
+            options:
+                preset: 'text.link'
+            ui:
+                label: 'E-Mail'
+                inspector:
+                    group: 'general'
+        jobTitle:
+            options:
+                preset: 'text.plain'
+            ui:
+                label: 'Job Title'
+                inspector:
+                    group: 'general'

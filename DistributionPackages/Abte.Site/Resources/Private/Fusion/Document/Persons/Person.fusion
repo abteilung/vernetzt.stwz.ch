@@ -1,2 +1,0 @@
-prototype(Abte.Site:Document.Person) < prototype(Abte.Site:Document.AbstractPage) {
-}

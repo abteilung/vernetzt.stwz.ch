@@ -1,0 +1,78 @@
+prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
+
+    node = ${ node }    
+    @context {
+        node = ${ this.node }
+    }
+
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+
+    name = Neos.Neos:Editable {
+        property = 'name'
+    }
+
+    jobTitle = Neos.Neos:Editable {
+        property = 'jobTitle'
+    }
+
+    portrait = Sitegeist.Lazybones:Image {
+        imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+            asset   = ${ q(node).property('image') }
+        }
+        width =  800
+        height = 800
+        class = "h-full w-full"
+    }
+
+
+    phone = ${ q(node).property('phone') }
+    
+    email = ${ q(node).property('email') }
+
+    itemID = ${ String.replace( q(node).property('_nodeName') , 'node-', '') }
+
+    backgroundColor = ${ q(node).property('bgColor') }
+
+    // relative bg-white border rounded-lg shadow-sm p-4 flex cursor-pointer focus:outline-none border-transparent border-indigo-500 ring-2 ring-indigo-500
+
+    renderer = afx`
+        <div class="personCard" id={props.itemID}>
+            <div class="flex space-x-6">
+                <div class="h-24 w-24 overflow-hidden rounded-full">
+                    {props.portrait}
+                </div>
+                <div>
+                    <h2 class="mb-2">{props.title}</h2>
+                    
+                    <b>{props.name}</b>
+                    <p>{props.jobTitle}</p>
+                
+
+                    <div class="relative aspect-square w-16 flex justify-center items-center">
+                        <Carbon.Link:Link 
+                            additionalClass="hover:underline font-semibold" 
+                            link={'mailto:' + props.email} 
+                            renderDefaultTagIfNoLink='true'
+                        >
+                            <Abte.Site:Icon.Envelope class="absolute w-6 top-0 left-0 scale-100 hover:scale-110 duration-150" />
+                        </Carbon.Link:Link>
+                        
+                        <Abte.Site:Icon.Diagonal />
+
+                        <Carbon.Link:Link 
+                            additionalClass="hover:underline font-semibold" 
+                            link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
+                            renderDefaultTagIfNoLink='true'
+                        >
+                            <Abte.Site:Icon.Phone class="absolute w-6 bottom-0 right-0 scale-100 hover:scale-110 duration-150" />
+                        </Carbon.Link:Link>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    `
+}
