@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 overrides:
   ansi-regex: ^5.0.1
@@ -13,6 +13,7 @@ specifiers:
   autoprefixer: ^10.4.5
   browser-sync: ^2.27.9
   browserslist: ^4.20.3
+  carbon-pipeline: ^0.1.2
   choices.js: ^10.1.0
   chokidar: ^3.5.3
   concurrently: ^6.5.1
@@ -68,16 +69,17 @@ devDependencies:
   autoprefixer: 10.4.5_postcss@8.4.12
   browser-sync: 2.27.9
   browserslist: 4.20.3
+  carbon-pipeline: 0.1.2_postcss@8.4.12
   chokidar: 3.5.3
   concurrently: 6.5.1
   cssnano: 5.1.7_postcss@8.4.12
-  daisyui: 2.14.2_c01214db2e04c60602bae73116393d69
+  daisyui: 2.14.2_yajbjwzoatdamav244yrmoj5ne
   deepmerge: 4.2.2
   dependency-graph: 0.11.0
   esbuild: 0.14.38
   eslint: 8.14.0
   eslint-config-prettier: 8.5.0_eslint@8.14.0
-  eslint-plugin-prettier: 4.0.0_665eb419c9d7860ca0c224f7f6dcdace
+  eslint-plugin-prettier: 4.0.0_mzpligoj26dazigcet37nxg2zy
   fs-extra: 10.1.0
   glob: 7.2.0
   js-yaml: 4.1.0
@@ -671,6 +673,28 @@ packages:
     resolution: {integrity: sha512-kbaCEBRRVSoeNs74sCuq92MJyGrMtjWVfhltoHUCW4t4pXFvGjUBrfo47weBRViHkiV3eBYyIsfl956NtHGazw==}
     dev: true
 
+  /carbon-pipeline/0.1.2_postcss@8.4.12:
+    resolution: {integrity: sha512-blClZ2gLDa1NvKSpH5IiLKVscw7kWfwd1Pb1I8fm6Z2JNQjXSmz5k0M0d3+ENLIkZpMbLT83WtBpaxxy3l1snw==}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      browserslist: 4.20.3
+      chokidar: 3.5.3
+      deepmerge: 4.2.2
+      dependency-graph: 0.11.0
+      fs-extra: 10.1.0
+      glob: 7.2.0
+      js-yaml: 4.1.0
+      nanocolors: 0.2.13
+      postcss: 8.4.12
+      postcss-load-config: 3.1.4_postcss@8.4.12
+      prettyjson: 1.2.5
+      read-cache: 1.0.0
+      resolve: 1.22.0
+    transitivePeerDependencies:
+      - ts-node
+    dev: true
+
   /chalk/1.1.3:
     resolution: {integrity: sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=}
     engines: {node: '>=0.10.0'}
@@ -978,7 +1002,7 @@ packages:
       css-tree: 1.1.3
     dev: true
 
-  /daisyui/2.14.2_c01214db2e04c60602bae73116393d69:
+  /daisyui/2.14.2_yajbjwzoatdamav244yrmoj5ne:
     resolution: {integrity: sha512-/FxRBLC/xydIqxv+EJHfmmH+UndrwcaAxbWsS/oVLnoeOdb4MN4VlkJ3sYOYrl3tmw/D1L5Lp0PK07ebY0O6QA==}
     peerDependencies:
       autoprefixer: ^10.0.2
@@ -1456,7 +1480,7 @@ packages:
       eslint: 8.14.0
     dev: true
 
-  /eslint-plugin-prettier/4.0.0_665eb419c9d7860ca0c224f7f6dcdace:
+  /eslint-plugin-prettier/4.0.0_mzpligoj26dazigcet37nxg2zy:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:

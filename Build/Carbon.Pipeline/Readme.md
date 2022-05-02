@@ -16,11 +16,22 @@ You can choose between different package manager: [npm], [Yarn] and the ultra-fa
 
 Run `composer require carbon/pipeline --dev`. Some files (if not already existing) will be copied to your root folder during the installation. After installing the package, run the command `install` to install the required packages, defined in `package.json`. Feel free to modify and change dependencies before installing 👍
 
+#### Standalone use in custom projects without Neos
+
+Carbon.Pipeline is also a perfect choice for your non-Neos projects. Consider installing the composer package `neos/composer-plugin` beforehand, to get Carbon.Pipeline installed in the correct directory under `Build/Carbon.Pipeline`.
+
 ### Manual install
 
 If you want to make some significant adjustments to the build stack, you can also [download the code as zip file][main.zip] and put it in the folder `Build/Carbon.Pipeline`. Go to `Carbon.Pipeline/Installer/Distribution/Defaults` and copy the files to your root folder (Don't forget the hidden files, starting with a dot). After this is done, run the command `install` to install the required packages, defined in `package.json`. Feel free to modify and change dependencies before installing 👍
 
 ## Add files to the build stack
+
+Carbon.Pipeline assumes the following project directory structure for resources:
+
+A configured location under
+
+* `Resources/Private`: input files
+* `Resources/`: output files
 
 The whole configuration, including which files to build, is configured in [`pipeline.yaml`]. The default values are set in [`defaults.yaml`] and merged with your configuration. Under the key `packages`, you can either add an array with package settings or, if you have just one entry, you can directly add the configuration:
 
@@ -490,11 +501,17 @@ esbuild:
   plugins:
     svelte:
       enable: true
+      # Name of the esbuild plugin for svelte
+      # plugin: esbuild-svelte
+      # Name of the preprocess plugin
+      # preprocess: svelte-preprocess
       # Add here your options
       options:
         compilerOptions:
           css: true
 ```
+
+> You can also configure the esbuild plugin and preprocess package which should be used. Just add a key `plugin` or `preprocess` and add the plugin name.
 
 Your `tsconfig.json` may look like this:
 
@@ -529,19 +546,19 @@ If you want to use [Vue.js], add the following packages to `package.json`:
 For [pnpm]:
 
 ```bash
-pnpm add -D vue vue-template-compiler esbuild-vue
+pnpm add -D vue esbuild-plugin-vue3
 ```
 
 For [Yarn]:
 
 ```bash
-yarn add --dev vue vue-template-compiler esbuild-vue
+yarn add --dev vue esbuild-plugin-vue3
 ```
 
 For [npm]:
 
 ```bash
-npm add -D vue vue-template-compiler esbuild-vue
+npm add -D vue esbuild-plugin-vue3
 ```
 
 Enable the plugin in your [`pipeline.yaml`] file:
@@ -551,9 +568,13 @@ esbuild:
   plugins:
     vue:
       enable: true
+      # Name of the esbuild plugin for Vue
+      # plugin: esbuild-plugin-vue3
       # You can pass your needed options here
       # options:
 ```
+
+> You can also configure the esbuild plugin which should be used. Just add a key `plugin` and add the plugin name.
 
 </details>
 

@@ -46,7 +46,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 <div class="flex flex-1">
                     <div class="flex flex-col w-full">
                         <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 border-black">
-                            <Abte.Site:Component.isHero />
+                            <Abte.Site:Component.isHero node={node} />
                             <Abte.Site:Component.SelectedProduct activeItem={props.itemID} class="absolute right-0" />
                         </div>
                         <div class="mb-0 text-black h2">{props.title}</div>
