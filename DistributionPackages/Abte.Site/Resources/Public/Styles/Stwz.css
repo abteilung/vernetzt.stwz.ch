@@ -2239,6 +2239,9 @@ select{
 .bg-fixed{
     background-attachment: fixed;
 }
+.bg-right{
+    background-position: right;
+}
 .fill-current{
     fill: currentColor;
 }
@@ -3566,6 +3569,10 @@ select{
         --tw-space-x-reverse: 0;
         margin-right: calc(2rem * var(--tw-space-x-reverse));
         margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+
+    .lg\:bg-center{
+        background-position: center;
     }
 
     .lg\:px-16{
