@@ -26,7 +26,7 @@
       '*': false
       'Abte.Site:Document.Page': true
       'Abte.Site:Document.Product': true
-      'Abte.Site:Document.Service': true
+      'Abte.Site:Document.Services': true
       'Abte.Site:Document.MenuSeparator': true
   properties:
     'showAlert':
