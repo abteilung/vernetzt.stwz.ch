@@ -2,6 +2,7 @@ prototype(Stwz.MovingLines:Component.Lines) < prototype(Neos.Fusion:Component) {
     renderer = afx`
         <div
             class="h-48 w-72 bg-none"
+            @if.IsNotInBackend={!node.context.inBackend}
         >
             <svg 
                 id="linesAnimation"
