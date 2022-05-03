@@ -87,7 +87,7 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
 prototype(Stwz.Navigation:Navbar.SeparatorItem) < prototype(Neos.Fusion:Component) {
     
     class = ''
-    linkItemClass = ${ this.class + ' ' + 'pb-1 border-b-2 block whitespace-nowrap text-black hover:border-black duration-200 border-transparent' }
+    linkItemClass = ${ this.class + ' ' + 'pb-1 border-b-2 block whitespace-nowrap text-black hover:none duration-200 border-transparent' }
 
     renderer = afx`
         <div class="flex items-center justify-between focus:outline-none">

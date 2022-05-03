@@ -4,7 +4,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
     liClass     = ''
     ulClass     = ${ q(node).property('twoCols') ? 'grid lg:grid-cols-2 gridgap-x' : null }
     icon        = Abte.Site:Icon.ArrowRight {
-        class = 'relative w-6 left-0 duration-150 text-accent group-hover:left-2'
+        class = 'relative left-0 w-6 duration-150 text-accent group-hover:left-2'
     }
     arrowIcon   = ${ q(node).property('arrowIcon') ? this.icon : false }
     iconRight   = ${ q(node).property('iconRight') ? true : false }
@@ -26,6 +26,17 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
     startingPoint = ${ q(node).property('startingPoint') }
     navigationItems = ${ q(node).property('navigationItems') }
     layout = ${ layout }
+
+    cols = Neos.Fusion:Case {
+        three {
+            condition = ${ q(node).property('cols') == 'three'}
+            renderer = 'grid sm:grid-cols-2 lg:grid-cols-3 gridgap'
+        }
+        fallback {
+            condition = ${ true }
+            renderer = 'grid sm:grid-cols-2 lg:grid-cols-4 gridgap'
+        }
+    }
 
     @context {
         startingPoint = ${ this.startingPoint }
@@ -54,7 +65,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
             condition = ${ q(node).property('layout') == 'smallCircles' || layout == 'smallCircles' }
             renderer = afx`
                 <nav class={props.class}>
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gridgap">
+                    <div class={props.cols}>
                         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
                             <Carbon.Link:Link 
                                 node={ item.node }
@@ -91,7 +102,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
             condition = ${ q(node).property('layout') == 'products' || layout == 'products' }
             renderer = afx`
                 <nav class={props.class}>
-                    <ul class="grid md:grid-cols-2 lg:grid-cols-4 gridgap">
+                    <ul class={props.cols}>
                         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
                             <li class="mb-4"
                                 @if.isWithinRange={i.index < props.limit}
@@ -107,7 +118,7 @@ prototype(Abte.Site:Content.Navigation) < prototype(Neos.Neos:ContentComponent) 
             condition = ${ q(node).property('layout') == 'service' || layout == 'service' }
             renderer = afx`
                 <nav class={props.class}>
-                    <div class="grid lg:grid-cols-4 sm:grid-cols-2 gridgap lg:gridgap-x">
+                    <div class={props.cols}>
                         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
                             <Abte.Site:Component.ServiceCard node={item.node}
                                 @if.isWithinRange={i.index < props.limit}

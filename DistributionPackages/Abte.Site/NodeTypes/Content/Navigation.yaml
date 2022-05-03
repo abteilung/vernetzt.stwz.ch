@@ -63,6 +63,23 @@
                 reloadPageIfChanged: true
                 inspector:
                     group: general
+        'cols':
+            type: string
+            defaultValue: 'default'
+            ui:
+                label: 'Columns'
+                reloadIfChanged: true
+                inspector:
+                    group: 'style'
+                    editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+                    editorOptions:
+                        values:
+                            default:
+                                label: '4 Columns'
+                                icon: 'bars'
+                            three:
+                                label: '3 Columns'
+                                icon: 'bars'
         'layout':
             type: string
             defaultValue: 'default'
