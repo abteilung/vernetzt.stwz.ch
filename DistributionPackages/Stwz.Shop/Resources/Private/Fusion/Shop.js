@@ -5,6 +5,7 @@ console.log(urlcat('https://api.foo.com', ':name', { id: 25, name: 'knpwrs' }));
 document.addEventListener('alpine:init', () => {
   Alpine.data('cart', () => ({
       total: 0,
+      value: '',
       
       mobile: localStorage.getItem('Mobile') ? parseInt(document.getElementById(localStorage.getItem('Mobile')).dataset.price) : 0,
       internet: localStorage.getItem('Internet') ? parseInt(document.getElementById(localStorage.getItem('Internet')).dataset.price) : 0,
@@ -21,6 +22,26 @@ document.addEventListener('alpine:init', () => {
         
         this.total = this.internet + this.television + this.telephone + this.mobile;
       },
+
+      reset(group) {
+        console.log(group);
+        var id = localStorage.getItem(group);
+        if(id){
+          document.getElementById(id).querySelector('[value="'+ id +'"]').checked = false;
+          localStorage.removeItem(group);
+        }
+      },
+
+      resetAll(){
+        localStorage.removeItem('TV');
+        localStorage.removeItem('Mobile');
+        localStorage.removeItem('Telefonie');
+        // this.valueTV = 0;
+        // this.valueMobile = 0;
+        // this.valueTelefonie = 0;
+        // this.valueInternet = localStorage.getItem('Internet') || 0;
+        // localStorage.removeItem('Internet');
+      }
   }))
 });
 
@@ -32,27 +53,11 @@ window.Components.radioGroup = function({
   return {
       value: void 0,
       active: void 0,
-      init() {
-        // Todo: Better selector
-          // let t = Array.from(this.$el.querySelectorAll("input"));
-          // this.value = t[e]?.value;
-          // for (let e of t) e.addEventListener("change", (() => {
-          //     this.active = e.value
-          // })), e.addEventListener("focus", (() => {
-          //     this.active = e.value
-          // }));
-          // window.addEventListener("focus", (() => {
-          //     console.log("Focus change"), t.includes(document.activeElement) || (console.log("HIT"), this.active = void 0)
-          // }), !0)
-      }
+      valueTV: void 0,
+      valueMobile: void 0,
+      valueInternet: void 0,
+      valueTelefonie: void 0,
+      init(){}
   }
 }
-
-
-window.ShopItems = () => ({
-    value: 0,
-    calculatePrice(e) {
-      this.value = e.target.dataset.price;
-    },
-});
   
