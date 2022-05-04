@@ -80,12 +80,17 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
             </div>
             <div class=""
                 @if.isShop={props.isShop}
+                x-data="cart"
+                x-init="count"
+                "@item-changed.window"="count"
             >
                 <div class="sticky p-6 bg-primary top-12">
                     <div class="mb-0 text-white h1">Ihr Abo</div>
                     <div class="relative h-24 pricing">
-                        <div class="text-xl text-white" x-text="value"></div>
-                            <Abte.Site:Icon.Diagonal class="absolute top-0 text-white left-10" />
+                        <div class="text-xl text-white" x-text="total"></div>
+                            <Abte.Site:Icon.Diagonal class="absolute top-0 text-white left-8" />
+                        <div class="absolute top-8 left-20 text-xl text-white">CHF</div>
+
                     </div>
 
                     <Abte.Site:Component.BestellUebersicht />
@@ -115,6 +120,28 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentComponent) {
 
     renderer = afx`
+
+        <table class="table-auto w-full text-white mb-6">
+            <tbody>
+                <tr>
+                    <td>Internet:</td>
+                    <td class="text-right"><span x-text="internet"></span>.-</td>
+                </tr>
+                <tr>
+                    <td>TV:</td>
+                    <td class="text-right"><span x-text="television"></span>.-</td>
+                </tr>
+                <tr>
+                    <td>Telefonie:</td>
+                    <td class="text-right"><span x-text="telephone"></span>.-</td>
+                </tr>
+                <tr>
+                    <td>Mobile:</td>
+                    <td class="text-right"><span x-text="mobile"></span>.-</td>
+                </tr>
+            </tbody>
+        </table>
+
         <fieldset class="relative w-full space-y-4">
             <label class="relative flex items-center justify-between block cursor-pointer focus:outline-none">
                 <p 
