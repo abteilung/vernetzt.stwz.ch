@@ -21,19 +21,34 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
         property = 'price'
     }
 
-    itemID = ${ String.replace( q(node).property('_nodeName') , 'node-', '') }
+    productGroup = ''
+
+    // itemID = ${ String.replace( q(node).property('_nodeName') , 'node-', '') }
+    itemID = ${ q(node).property('_identifier') }
 
     backgroundColor = ${ q(node).property('bgColor') }
 
     // relative bg-white border rounded-lg shadow-sm p-4 flex cursor-pointer focus:outline-none border-transparent border-indigo-500 ring-2 ring-indigo-500
 
+//  refreshIcon = Abte.Site:Icon.Refresh
+//     <div 
+//             class={props.class + ' ' + 'w-8 h-8 rounded-full flex justify-center items-center bg-white' }
+//             :class={"{ 'hidden': !(value === '" + props.activeItem + "'), 'block': (active === '" + props.activeItem + "') }"}
+//         >
+//             <div>{props.refreshIcon}</div>
+//         </div>
+
     renderer = afx`
         <div class="productCard">
             <label 
+                id={props.itemID}
                 class={'product cursor-pointer cardItem text-black transition duration-250 bg-base-100 space-y-4 hover:bg-base-200'}
                 :class={"{ 'bg-base-100': (value === '" + props.itemID + "'), 'bg-base-100': !(value === '" + props.itemID + "'), 'bg-base-300': (active === '" + props.itemID + "'), 'bg-base-100': !(active === '" + props.itemID + "') }"}
                 x-radio-group-option=""
-                data-price={props.price}
+                x-init={"value = localStorage.getItem('"+ props.productGroup +"')"}
+                x-on:change={"localStorage.setItem('"+ props.productGroup +"', value); $dispatch('item-changed');" }
+                data-group={props.productGroup}
+                data-price={String.pregMatch(props.price,'/\d+/')}
             >
                 <input 
                     type="radio" 
@@ -76,8 +91,7 @@ prototype(Abte.Site:Component.SelectedProduct) < prototype(Neos.Fusion:Component
     activeItem = ''
 
     checkIcon = Abte.Site:Icon.Check
-    plusIcon = Abte.Site:Icon.Plus
-    
+   
     renderer = afx`
         <div 
             class={props.class + ' ' + 'w-8 h-8 rounded-full flex justify-center items-center bg-white' }
@@ -85,6 +99,7 @@ prototype(Abte.Site:Component.SelectedProduct) < prototype(Neos.Fusion:Component
         >
             <div>{props.checkIcon}</div>
         </div>
+
     `
 }
 

@@ -16,6 +16,13 @@
     'title':
       options:
         preset: 'text.title'
+    'group':
+      ui:
+        label: 'Gruppe'
+        inspector:
+          group: 'general'
+      options:
+        preset: 'text.title'
   options:
     template:
       childNodes:
