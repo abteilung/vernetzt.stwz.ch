@@ -100,7 +100,7 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                                 <Abte.Site:Icon.Refresh />
                             </div>
                             <div class="block my-auto">
-                                <span>Zurücksetzen</span>
+                                <span>Reset</span>
                             </div>
                     </button>
 
