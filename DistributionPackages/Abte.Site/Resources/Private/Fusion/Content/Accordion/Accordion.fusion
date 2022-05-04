@@ -146,10 +146,10 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                     <td>Telefonie:</td>
                     <td class="text-right"><span x-text="telephone"></span>.-</td>
                 </tr>
-                <tr>
+                <!-- <tr x-if="mobile">
                     <td>Mobile:</td>
                     <td class="text-right"><span x-text="mobile"></span>.-</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
 
