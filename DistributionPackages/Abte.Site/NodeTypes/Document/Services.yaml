@@ -4,6 +4,7 @@
     'Abte.Site:Mixin.Image': true
     'Abte.Site:Mixin.TeaserText': true
     'Stwz.Flickity:Include': true
+    'Abte.Site:Mixin.Illustration': true
     'Abte.Site:Constraint.Document.Restricted': true
   ui:
     label: i18n
