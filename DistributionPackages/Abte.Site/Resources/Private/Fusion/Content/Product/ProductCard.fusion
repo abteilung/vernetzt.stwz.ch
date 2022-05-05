@@ -97,6 +97,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
         entryTags {
             1 = ${Neos.Caching.descendantOfTag(node)}
             2 = ${Neos.Caching.nodeTag(node)}
+			3 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
         }
         maximumLifetime = ${q(node).context({'invisibleContentShown': true}).children().cacheLifetime()}
     }
