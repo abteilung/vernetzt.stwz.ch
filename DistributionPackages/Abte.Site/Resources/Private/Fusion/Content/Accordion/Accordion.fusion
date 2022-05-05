@@ -100,11 +100,11 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                         </div>
                     </button>                        
                     </div>
-                    <div class="relative h-24 pricing">
+                    <!-- <div class="relative h-24 pricing">
                         <div class="text-xl text-white" x-text="total + '.–'"></div>
                             <Abte.Site:Icon.Diagonal class="absolute top-0 text-white left-8" />
                         <div class="absolute text-xl text-white top-8 left-20">CHF</div>
-                    </div>
+                    </div> -->
 
                     <Abte.Site:Component.BestellUebersicht />
                     <Abte.Site:Content.Button outerClass="text-center" class="text-base text-white bg-black" text="Jetzt konfigurieren" />
@@ -132,22 +132,45 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
 
     renderer = afx`
 
-        <table class="w-full mb-6 text-white table-auto">
-            <tbody>
-                <tr>
-                    <td>Internet:</td>
-                    <td class="text-right"><span x-text="internet"></span>.-</td>
-                </tr>
-                <tr>
-                    <td>TV:</td>
-                    <td class="text-right"><span x-text="television"></span>.-</td>
-                </tr>
-                <tr>
-                    <td>Telefonie:</td>
-                    <td class="text-right"><span x-text="telephone"></span>.-</td>
-                </tr>
-            </tbody>
-        </table>
+        <template x-if="internet">
+            <div class="relative py-4 block border-t border-black h-26">
+                <strong>Internet</strong>
+                <div class="text-2xl text-white" x-text="internet + '.–'"></div>
+                <template x-if="internet-discount">
+                    <Abte.Site:Icon.Diagonal class="absolute top-16 text-white left-16" />
+                </template>
+            </div>
+        </template>
+
+        <template x-if="television">
+            <div class="relative py-4 block border-t border-black h-26">
+                <strong>TV</strong>
+                <div class="text-2xl text-white" x-text="television + '.–'"></div>
+                <template x-if="television-discount">
+                    <Abte.Site:Icon.Diagonal class="absolute top-16 text-white left-16" />
+                </template>            
+            </div>
+        </template>
+
+        <template x-if="telephone">
+            <div class="relative py-4 block border-t border-black h-26">
+                <strong>Telefonie</strong>
+                <div class="text-2xl text-white" x-text="telephone + '.–'"></div>
+                <template x-if="telephone-discount">
+                    <Abte.Site:Icon.Diagonal class="absolute top-16 text-white left-16" />
+                </template>             
+            </div>
+        </template>
+
+        <template x-if="total">
+            <div class="relative py-4 block border-y-2 border-black h-26 mb-4">
+                <strong>Total</strong>
+                <div class="text-2xl text-white" x-text="total + '.–'"></div>
+                <template x-if="total-discount">
+                    <Abte.Site:Icon.Diagonal class="absolute top-16 text-white left-16" />
+                </template>         
+            </div>
+        </template>
 
     `
 }
