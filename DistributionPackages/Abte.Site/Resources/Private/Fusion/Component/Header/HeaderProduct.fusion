@@ -1,4 +1,4 @@
-prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) {
+prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentComponent) {
 
     pageTitle = Neos.Neos:Editable {
         property = 'title'
@@ -30,14 +30,9 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
         property = 'intro'
     }
 
-    teaser_short = Neos.Neos:Editable {
-        property = 'teaser_short'
-    }
-
     svgIllustration = Neos.Fusion:Tag {
-        attributes.class = 'pb-24 -mt-32 lineAnimation'
+        attributes.class = 'relative z-0 mb-24 -mt-32 lineAnimation'
         content = ${node.properties.illustration}
-        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
     }
 
     renderer = afx`
@@ -69,10 +64,10 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
                     <div class="gridColumn">
                         <div class="relative flex flex-col h-24">
                             <Abte.Site:Mixin.Icons class="absolute left-2" />
-                            <Abte.Site:Icon.DiagonalWide class="absolute left-0 -top-8" />
+                            <Abte.Site:Icon.DiagonalWide class="absolute left-0 w-28 -top-4" />
                         </div>
 
-                        <div class="relative grid w-full grid-cols-6">
+                        <div class="relative z-20 grid w-full grid-cols-6">
                             
                             <div class="absolute -mt-12 origin-bottom-left rotate-90">
                                 <h1 class="mb-0 rotate-180 text-primary whitespace-nowrap">{props.title} </h1>
@@ -81,12 +76,8 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
                             <div class="col-span-4 col-start-2">
 
                                 <div class="flex items-start space-x-2">
-                                    <div class="w-3/4 content">
-                                        <h3>{String.toString(props.subTitle)}</h3>
-                                        <Neos.Fusion:Augmenter class="strong">
+                                    <div class="w-3/4 space-y-4 content">
                                         {props.intro}
-                                        </Neos.Fusion:Augmenter>
-                                        <p>{props.intro}</p>
                                     </div>
                                 </div>
                             </div>
@@ -103,7 +94,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
                             imageSource={props.imageSource} 
                             width="800"
                             height="600"
-                            class="object-cover object-center w-full h-full"
+                            class="object-cover object-center aspect-cinema"
                         />
 
                         <img src="https://via.placeholder.com/800x600" 

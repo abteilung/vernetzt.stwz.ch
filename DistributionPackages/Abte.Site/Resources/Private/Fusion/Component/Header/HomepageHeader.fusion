@@ -17,7 +17,6 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
     svgIllustration = Neos.Fusion:Tag {
         attributes.class = 'lineAnimation'
         content = ${documentNode.properties.illustration}
-        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
     }
 
     hideHeader = ${ q(documentNode).property('hideHeader') }
