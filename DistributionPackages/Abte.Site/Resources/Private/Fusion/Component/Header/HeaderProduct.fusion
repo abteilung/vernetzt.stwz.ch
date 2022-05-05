@@ -64,7 +64,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
             <div class="container flex">
 
                 <Abte.Site:Content.RotatedHeader />
-                <div class="relative ml-20">{props.headerContent}</div>
+                <div class="relative z-20 w-full ml-20">{props.headerContent}</div>
             </div>
         </div>
     `
