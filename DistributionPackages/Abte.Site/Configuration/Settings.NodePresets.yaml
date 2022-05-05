@@ -7,6 +7,7 @@ Neos:
             'title':
               type: string
               ui:
+                reloadIfChanged: true
                 inlineEditable: true
                 inline:
                   editorOptions:
@@ -23,6 +24,7 @@ Neos:
               type: string
               defaultValue: ''
               ui:
+                reloadIfChanged: true
                 inlineEditable: true
                 inline:
                   editorOptions:
@@ -33,6 +35,7 @@ Neos:
               type: string
               defaultValue: ''
               ui:
+                reloadIfChanged: true
                 inspector:
                   group: 'general'
                 label: 'Text (plain)'
@@ -48,6 +51,7 @@ Neos:
               type: string
               defaultValue: ''
               ui:
+                reloadIfChanged: true
                 inlineEditable: true
                 inline:
                   editorOptions:
