@@ -2,6 +2,7 @@
   superTypes:
     'Neos.Neos:Content': true
     'Neos.Neos:ContentCollection': true
+  label: "${ q(node).property('discount') && node.context.inBackend ? '<span class=\"hidden\">🔥 </span>' + q(node).property('discount') + '%' : q(node).property('title') }"
   ui:
     label: Produkte
     position: 8
@@ -16,6 +17,13 @@
     'title':
       options:
         preset: 'text.title'
+    'discount':
+      options:
+        preset: 'text.plain'
+      ui:
+        label: 'Rabatt (%)'
+        inspector:
+          group: 'general'
     'group':
       ui:
         label: 'Gruppe'
