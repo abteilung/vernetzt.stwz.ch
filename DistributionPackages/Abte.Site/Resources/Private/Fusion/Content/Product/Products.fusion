@@ -6,10 +6,10 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
     }
     
     title = ${ q(node).property('title') }
-    // subTitle = ${ q(node).parents('[instanceof Abte.Site:Document.Products]').property('title') }
-    productGroup = ${ q(node).property('group') }
 
+    productGroup = ${ q(node).property('group') }
     @context.productGroup = ${this.productGroup}
+
     shopItems = Neos.Fusion:Collection {
         collection = ${ q(node).children('[instanceof Abte.Site:Content.ProductCard]') }
         itemName = 'node'
@@ -31,25 +31,6 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
         @process.stringify = ${ Json.stringify(value) }
     }
 
-    // x-show={display}
-    // :class={"{'hidden': display,'block': !display}"}
-    // "@item-changed.window"={"display = (localStorage.getItem('"+ productGroup +"') ? 1 : 0); console.log(display)"}
-    // x-init={"display = localStorage.getItem('"+ productGroup +"') ? 1 : 0;"}
-    // <button 
-    //     x-data="cart" 
-    //     x-on:click={"reset('" + productGroup + "'); $dispatch('item-reset','"+productGroup+"');"}
-    //     class="absolute flex gap-1 top-8 right-12"
-    //     @if.isNotInternet={productGroup != 'Internet'}>
-    //         <div class="block my-auto">
-    //             <Abte.Site:Icon.Refresh />
-    //         </div>
-    //         <div class="block my-auto">
-    //             <span>Reset</span>
-    //         </div>
-    // </button>
-
-    // "@item-reset.window"={"value"+ productGroup +"= 0;"}
-
     renderer = afx`
 
         <fieldset 
@@ -63,4 +44,16 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
         </fieldset>
                     
     `
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            collection = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.descendantOfTag(node)}
+            2 = ${Neos.Caching.nodeTag(node)}
+        }
+        maximumLifetime = ${q(node).context({'invisibleContentShown': true}).children().cacheLifetime()}
+    }
+
 }
