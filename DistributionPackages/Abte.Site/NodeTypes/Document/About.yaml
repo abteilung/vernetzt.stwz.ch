@@ -7,10 +7,6 @@
     'Stwz.Flickity:Include': true
     'Abte.Site:Mixin.TeaserText': true
     'Abte.Site:Constraint.Document.Restricted': true
-  childNodes:
-    header:
-      type: 'Neos.Neos:ContentCollection'
-      position: 'before main'
   ui:
     label: i18n
     icon: building
@@ -19,3 +15,7 @@
     image:
       options:
         preset: 'image.headerAsset'
+  childNodes:
+    header:
+      type: 'Neos.Neos:ContentCollection'
+      position: 'before main'
