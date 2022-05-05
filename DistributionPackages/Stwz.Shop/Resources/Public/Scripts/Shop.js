@@ -107,6 +107,11 @@
       internet: localStorage.getItem("Internet") ? parseInt(document.getElementById(localStorage.getItem("Internet")).dataset.price) : 0,
       telephone: localStorage.getItem("Telefonie") ? parseInt(document.getElementById(localStorage.getItem("Telefonie")).dataset.price) : 0,
       television: localStorage.getItem("TV") ? parseInt(document.getElementById(localStorage.getItem("TV")).dataset.price) : 0,
+      totalDiscount: 0,
+      mobileDiscount: 0,
+      internetDiscount: 0,
+      telephoneDiscount: 0,
+      televisionDiscount: 0,
       count() {
         this.mobile = localStorage.getItem("Mobile") ? parseInt(document.getElementById(localStorage.getItem("Mobile")).dataset.price) : 0;
         this.internet = localStorage.getItem("Internet") ? parseInt(document.getElementById(localStorage.getItem("Internet")).dataset.price) : 0;

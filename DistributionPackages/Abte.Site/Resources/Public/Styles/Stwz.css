@@ -1511,6 +1511,9 @@ select{
 .top-24{
     top: 6rem;
 }
+.left-16{
+    left: 4rem;
+}
 .isolate{
     isolation: isolate;
 }
@@ -2338,6 +2341,10 @@ select{
 .border{
     border-width: 1px;
 }
+.border-y-2{
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
 .border-b-2{
     border-bottom-width: 2px;
 }
@@ -2346,6 +2353,9 @@ select{
 }
 .border-b-\[1px\]{
     border-bottom-width: 1px;
+}
+.border-t{
+    border-top-width: 1px;
 }
 .border-dashed{
     border-style: dashed;
