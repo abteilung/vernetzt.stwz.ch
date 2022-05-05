@@ -1,12 +1,14 @@
 prototype(Abte.Site:Content.LI) < prototype(Neos.Neos:ContentComponent) {
 
+    class = ''
+
     listIcon = Abte.Site:Mixin.Icons {
         // class = ${ q(node).property('textColor') }
-        class = ${'text-secondary'}
+        class = ${ 'text-secondary' }
     }
 
     renderer = afx`
-        <li class={props.listIcon ? 'flex space-x-3 items-center' : null}>
+        <li class={props.class + ' ' + (props.listIcon ? 'flex space-x-3 items-center' : null)}>
             {props.listIcon}
             <div>
                 <Neos.Fusion:Augmenter class="!mb-0">

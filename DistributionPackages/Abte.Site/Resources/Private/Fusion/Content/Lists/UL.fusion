@@ -1,15 +1,20 @@
 prototype(Abte.Site:Content.UL) < prototype(Neos.Neos:ContentComponent) {
 
-    isLead = ${ q(node).property('isLead') ? 'lead' : null }
+    class = Abte.Site:Component.AdditionalClass {
+        class = ${ q(node).property('dropShadow') ? 'box-shadow rounded-2xl px-8 py-4' : null }
+        divider = "divide-y divide-black"
+    }
 
-    tagOpen = ${ q(node).property('list_ol') ? '<ol class="' + this.isLead + '">': '<ul class="' + this.isLead + '">' }
+    tagOpen = ${ q(node).property('list_ol') ? '<ol class="' + this.class + '">': '<ul class="' + this.class + '">' }
     tagClose = ${ q(node).property('list_ol') ? '</ol>': '</ul>' }
 
     renderer =  Neos.Fusion:Collection {
         collection = ${ q(node).children('[instanceof Abte.Site:Content.LI]') }
         itemName = 'node'
         iterationName = 'i'
-        itemRenderer = Abte.Site:Content.LI
+        itemRenderer = Abte.Site:Content.LI {
+            class="py-2"
+        }
         @process.tmpl = ${ props.tagOpen + value + props.tagClose }
     }
 

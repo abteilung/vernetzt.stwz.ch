@@ -1217,6 +1217,19 @@ select{
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
+.divider{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+}
+.divider:before,
+  .divider:after{
+    content: "";
+    flex-grow: 1;
+    height: 0.125rem;
+    width: 100%;
+}
 .footer{
     display: grid;
     width: 100%;
@@ -2278,6 +2291,11 @@ select{
     border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
     border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
+.divide-y-8 > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(8px * calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(8px * var(--tw-divide-y-reverse));
+}
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 1;
     border-color: rgb(229 231 235 / var(--tw-divide-opacity));
@@ -2285,6 +2303,10 @@ select{
 .divide-gray-100 > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 1;
     border-color: rgb(243 244 246 / var(--tw-divide-opacity));
+}
+.divide-black > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-divide-opacity));
 }
 .overflow-auto{
     overflow: auto;
