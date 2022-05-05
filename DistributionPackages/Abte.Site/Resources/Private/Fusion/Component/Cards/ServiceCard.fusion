@@ -5,7 +5,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
         node = ${ this.node }
     }
 
-    serviceItemClass = 'cardItem group service bg-white'
+    serviceItemClass = 'cardItem group service bg-white min-h-[350px]'
 
     icon = Abte.Site:Icon.Calendar {
         class = ''
@@ -22,7 +22,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
     }
 
     intro = Neos.Neos:Editable {
-        property = 'intro'
+        property = 'teaser_short'
     }
 
     renderer = afx`

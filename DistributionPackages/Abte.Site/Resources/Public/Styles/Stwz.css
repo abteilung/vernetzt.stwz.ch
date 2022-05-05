@@ -1873,6 +1873,15 @@ select{
 .min-h-\[20px\]{
     min-height: 20px;
 }
+.min-h-\[500px\]{
+    min-height: 500px;
+}
+.min-h-\[400px\]{
+    min-height: 400px;
+}
+.min-h-\[350px\]{
+    min-height: 350px;
+}
 .w-10{
     width: 2.5rem;
 }
