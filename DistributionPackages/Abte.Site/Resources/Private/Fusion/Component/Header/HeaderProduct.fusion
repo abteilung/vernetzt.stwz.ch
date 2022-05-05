@@ -11,6 +11,10 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
         }
     }
 
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }    
+
     teaserText = Neos.Neos:Editable {
         property = 'teaser_short'
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
@@ -25,10 +29,6 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
     }
 
     title = ${ q(node).property('title') }
-
-    subTitle = Neos.Neos:Editable {
-        property = 'subTitle'
-    }
 
     intro = Neos.Neos:Editable {
         property = 'intro'
@@ -48,7 +48,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
                     </div>
                     <div class="col-span-1">
                         <Neos.Fusion:Augmenter class="text-black h1">
-                            {props.teaserText}
+                            {props.subTitle}
                         </Neos.Fusion:Augmenter>
                     </div>
                 </div>

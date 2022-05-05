@@ -17,7 +17,7 @@
   properties:
     'subTitle':
       options:
-        preset: 'text.title'
+        preset: 'text.plain'
       ui:
         label: 'Subtitle'
         position: '5'

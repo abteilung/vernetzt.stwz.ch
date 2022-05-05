@@ -6,6 +6,7 @@ prototype(Abte.Site:Component.ImageCard) < prototype(Neos.Fusion:Component) {
     }
     
     imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        // asset   = ${ q(node).property('image') || q(node).find('[instanceof Neos.Neos:Content][image instanceof "Neos\Media\Domain\Model\ImageInterface"]').get(0) }
         asset   = ${ q(node).property('image') }
     }
 
