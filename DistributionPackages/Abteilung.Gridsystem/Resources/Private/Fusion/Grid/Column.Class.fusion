@@ -7,14 +7,15 @@ prototype(Abteilung.Gridsystem:Prototype.Class.Column) < prototype(Neos.Fusion:C
         xl = ${q(node).property('span-xl')}
     }
 
+    offset = Neos.Fusion:DataStructure {
+        xs = ${q(node).property('offset')}
+        sm = ${q(node).property('offset-sm')}
+        md = ${q(node).property('offset-md')}
+        lg = ${q(node).property('offset-lg')}
+        xl = ${q(node).property('offset-xl')}
+    }
+
     paddingY = ${q(node).property('paddingY') ? 'col-spacing-y' : null}
-    // offset = Neos.Fusion:DataStructure {
-    //     xs = null
-    //     sm = null
-    //     md = null
-    //     lg = null
-    //     xl = null
-    // }
 
     renderer = Neos.Fusion:DataStructure {
         element = 'multicolumn-col'
@@ -42,30 +43,36 @@ prototype(Abteilung.Gridsystem:Prototype.Class.Column) < prototype(Neos.Fusion:C
             xl.@if.props = ${props.width.xl}
         }
 
-        // offset = Neos.Fusion:Join {
-        //     @glue = ' '
+        offset = Neos.Fusion:Join {
+            @glue = ' '
 
-        //     xs = ${props.offset.xs == 'reset' ? 'ml-0' : 'ml-' + props.offset.xs + '/12'}
-        //     xs.@if.props = ${props.offset.xs}
+            xs = ${props.offset.xs == 'reset' ? '' : 'col-start-' + props.offset.xs}
+            xs.@if.props = ${props.offset.xs}
 
-        //     sm = ${props.offset.sm == 'reset' ? 'sm:ml-0' : 'sm:ml-' + props.offset.sm + '/12'}
-        //     sm.@if.props = ${props.offset.sm}
+            sm = ${props.offset.sm == 'reset' ? '' : 'sm:col-start-' + props.offset.sm}
+            sm.@if.props = ${props.offset.sm}
 
-        //     md = ${props.offset.md == 'reset' ? 'md:ml-0' : 'md:ml-' + props.offset.md + '/12'}
-        //     md.@if.props = ${props.offset.md}
+            md = ${props.offset.md == 'reset' ? '' : 'md:col-start-' + props.offset.md}
+            md.@if.props = ${props.offset.md}
 
-        //     lg = ${props.offset.lg == 'reset' ? 'lg:ml-0' : 'lg:ml-' + props.offset.lg + '/12'}
-        //     lg.@if.props = ${props.offset.lg}
+            lg = ${props.offset.lg == 'reset' ? '' : 'lg:col-start-' + props.offset.lg}
+            lg.@if.props = ${props.offset.lg}
 
-        //     xl = ${props.offset.xl == 'reset' ? 'xl:ml-0' : 'xl:ml-' + props.offset.xl + '/12'}
-        //     xl.@if.props = ${props.offset.xl}
-        // }
+            xl = ${props.offset.xl == 'reset' ? '' : 'xl:col-start-' + props.offset.xl}
+            xl.@if.props = ${props.offset.xl}
+        }
     }
 }
 
 // Classes for SafeListing
-// 'col-span-1 col-span-2 col-span-3 col-span-4 col-span-5 col-span-6 col-span-7 col-span-8 col-span-9 col-span-1/12 col-span-1/12 col-span-1/12'
-// 'sm:col-span-1 sm:col-span-2 sm:col-span-3 sm:col-span-4 sm:col-span-5 sm:col-span-6 sm:col-span-7 sm:col-span-8 sm:col-span-9 sm:col-span-1/12 sm:col-span-1/12 sm:col-span-1/12'
-// 'md:col-span-1 md:col-span-2 md:col-span-3 md:col-span-4 md:col-span-5 md:col-span-6 md:col-span-7 md:col-span-8 md:col-span-9 md:col-span-1/12 md:col-span-1/12 md:col-span-1/12'
-// 'lg:col-span-1 lg:col-span-2 lg:col-span-3 lg:col-span-4 lg:col-span-5 lg:col-span-6 lg:col-span-7 lg:col-span-8 lg:col-span-9 lg:col-span-1/12 lg:col-span-1/12 lg:col-span-1/12'
-// 'xl:col-span-1 xl:col-span-2 xl:col-span-3 xl:col-span-4 xl:col-span-5 xl:col-span-6 xl:col-span-7 xl:col-span-8 xl:col-span-9 xl:col-span-1/12 xl:col-span-1/12 xl:col-span-1/12'
+// 'col-span-1 col-span-2 col-span-3 col-span-4 col-span-5 col-span-6 col-span-7 col-span-8 col-span-9 col-span-10 col-span-11 col-span-12'
+// 'sm:col-span-1 sm:col-span-2 sm:col-span-3 sm:col-span-4 sm:col-span-5 sm:col-span-6 sm:col-span-7 sm:col-span-8 sm:col-span-9 sm:col-span-10 sm:col-span-11 sm:col-span-12'
+// 'md:col-span-1 md:col-span-2 md:col-span-3 md:col-span-4 md:col-span-5 md:col-span-6 md:col-span-7 md:col-span-8 md:col-span-9 md:col-span-10 md:col-span-11 md:col-span-12'
+// 'lg:col-span-1 lg:col-span-2 lg:col-span-3 lg:col-span-4 lg:col-span-5 lg:col-span-6 lg:col-span-7 lg:col-span-8 lg:col-span-9 lg:col-span-10 lg:col-span-11 lg:col-span-12'
+// 'xl:col-span-1 xl:col-span-2 xl:col-span-3 xl:col-span-4 xl:col-span-5 xl:col-span-6 xl:col-span-7 xl:col-span-8 xl:col-span-9 xl:col-span-10 xl:col-span-11 xl:col-span-12'
+
+// 'col-start-1 col-start-2 col-start-3 col-start-4 col-start-5 col-start-6 col-start-7 col-start-8 col-start-9 col-start-10 col-start-11 col-start-12'
+// 'sm:col-start-1 sm:col-start-2 sm:col-start-3 sm:col-start-4 sm:col-start-5 sm:col-start-6 sm:col-start-7 sm:col-start-8 sm:col-start-9 sm:col-start-10 sm:col-start-11 sm:col-start-12'
+// 'md:col-start-1 md:col-start-2 md:col-start-3 md:col-start-4 md:col-start-5 md:col-start-6 md:col-start-7 md:col-start-8 md:col-start-9 md:col-start-10 md:col-start-11 md:col-start-12'
+// 'lg:col-start-1 lg:col-start-2 lg:col-start-3 lg:col-start-4 lg:col-start-5 lg:col-start-6 lg:col-start-7 lg:col-start-8 lg:col-start-9 lg:col-start-10 lg:col-start-11 lg:col-start-12'
+// 'xl:col-start-1 xl:col-start-2 xl:col-start-3 xl:col-start-4 xl:col-start-5 xl:col-start-6 xl:col-start-7 xl:col-start-8 xl:col-start-9 xl:col-start-10 xl:col-start-11 xl:col-start-12'

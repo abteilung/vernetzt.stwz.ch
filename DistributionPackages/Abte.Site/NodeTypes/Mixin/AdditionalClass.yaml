@@ -1,0 +1,17 @@
+'Abte.Site:Mixin.AdditionalClass':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        additionalClass:
+          label: 'Features'
+          position: 5
+          icon: 'icon-question'
+  properties:
+    additionalClass:
+      type: string
+      ui:
+        label: 'Additional Class'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'additionalClass'

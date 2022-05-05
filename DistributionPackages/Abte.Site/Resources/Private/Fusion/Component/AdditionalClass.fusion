@@ -1,0 +1,7 @@
+prototype(Abte.Site:Component.AdditionalClass) < prototype(Neos.Fusion:Join) {
+
+    @glue = ' '
+    class = ''
+    additionalClass = ${ q(node).property('additionalClass') ? q(node).property('additionalClass') : null }
+
+}

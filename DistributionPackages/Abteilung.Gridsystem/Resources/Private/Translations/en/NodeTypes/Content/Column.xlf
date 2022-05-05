@@ -12,7 +12,7 @@
                 <source>Span</source>
             </trans-unit>
             <trans-unit id="groups.offset" xml:space="preserve">
-                <source>Offset</source>
+                <source>Start (Offset)</source>
             </trans-unit>
         </body>
     </file>

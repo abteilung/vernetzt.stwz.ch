@@ -1,6 +1,7 @@
 'Abteilung.Gridsystem:Content.Column':
   superTypes:
     'Abteilung.Gridsystem:Mixin.Column': true
+    'Abteilung.Gridsystem:Mixin.Column.Offset': true
   properties:
     paddingY:
       type: boolean
@@ -10,3 +11,11 @@
         reloadIfChanged: true
         inspector:
           group: 'span'
+    theme:
+      type: string
+      defaultValue: ''
+      ui:
+        inspector:
+          group: general
+        label: 'Theme'
+        reloadIfChanged: true

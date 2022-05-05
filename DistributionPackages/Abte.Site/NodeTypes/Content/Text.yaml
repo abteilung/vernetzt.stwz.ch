@@ -2,6 +2,7 @@
   superTypes:
     'Neos.Neos:Content': true
     'Abte.Site:Mixin.IsLead': true
+    'Abte.Site:Mixin.AdditionalClass': true
   ui:
     label: Text
     icon: file-text

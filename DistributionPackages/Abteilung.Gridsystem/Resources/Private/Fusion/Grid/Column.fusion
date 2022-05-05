@@ -3,8 +3,10 @@ prototype(Abteilung.Gridsystem:Content.Column) < prototype(Abteilung.Gridsystem:
 
     class = Abteilung.Gridsystem:Prototype.Class.Column
 
+    theme = ${ q(node).property('theme') }
+
     renderer = afx`
-        <div class={props.class}>
+        <div class={props.class} data-theme={props.theme}>
             <Neos.Neos:ContentCollectionRenderer/>
         </div>
     `

@@ -7,19 +7,25 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
 
     title = Neos.Neos:Editable {
         property = 'title'
+        node = ${ node}
     }
 
     subTitle = Neos.Neos:Editable {
         property = 'subTitle'
+        node = ${ node}
     }
 
     description = Neos.Neos:Editable {
         property = 'description'
+        node = ${ node}
     }
 
     price = Neos.Neos:Editable {
         property = 'price'
+        node = ${ node }
     }
+
+    priceOnly = ${ q(node).property('price') }
 
     productGroup = ''
 
@@ -40,7 +46,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 x-init={"value" + props.productGroup + "= localStorage.getItem('"+ props.productGroup +"');"}
                 x-on:change={"localStorage.setItem('"+ props.productGroup +"', value"+props.productGroup+"); $dispatch('item-changed');" }
                 data-group={props.productGroup}
-                data-price={String.pregMatch(props.price,'/\d+/')}
+                data-price={String.pregMatch(props.priceOnly,'/\d+/')}
             >
                 <input 
                     type="radio" 
@@ -68,6 +74,18 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
             </label>
         </div>
     `
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            collection = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.descendantOfTag(node)}
+            2 = ${Neos.Caching.nodeTag(node)}
+        }
+        maximumLifetime = ${q(node).context({'invisibleContentShown': true}).children().cacheLifetime()}
+    }
 }
 
 

@@ -6,7 +6,7 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
     }
     
     title = ${ q(node).property('title') }
-    subTitle = ${ q(node).parents('[instanceof Abte.Site:Document.Products]').property('title') }
+    // subTitle = ${ q(node).parents('[instanceof Abte.Site:Document.Products]').property('title') }
     productGroup = ${ q(node).property('group') }
 
     @context.productGroup = ${this.productGroup}
@@ -38,7 +38,7 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
     // <button 
     //     x-data="cart" 
     //     x-on:click={"reset('" + productGroup + "'); $dispatch('item-reset','"+productGroup+"');"}
-    //     class="absolute top-8 right-12 flex gap-1"
+    //     class="absolute flex gap-1 top-8 right-12"
     //     @if.isNotInternet={productGroup != 'Internet'}>
     //         <div class="block my-auto">
     //             <Abte.Site:Icon.Refresh />

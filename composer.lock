@@ -1321,21 +1321,21 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "2.13.8",
+            "version": "2.13.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "dc9b3c3c8592c935a6e590441f9abc0f9eba335b"
+                "reference": "c480849ca3ad6706a39c970cdfe6888fa8a058b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/dc9b3c3c8592c935a6e590441f9abc0f9eba335b",
-                "reference": "dc9b3c3c8592c935a6e590441f9abc0f9eba335b",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/c480849ca3ad6706a39c970cdfe6888fa8a058b8",
+                "reference": "c480849ca3ad6706a39c970cdfe6888fa8a058b8",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": "^1.0|^2.0",
-                "doctrine/deprecations": "^0.5.3",
+                "doctrine/deprecations": "^0.5.3|^1",
                 "doctrine/event-manager": "^1.0",
                 "ext-pdo": "*",
                 "php": "^7.1 || ^8"
@@ -1410,7 +1410,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/dbal/issues",
-                "source": "https://github.com/doctrine/dbal/tree/2.13.8"
+                "source": "https://github.com/doctrine/dbal/tree/2.13.9"
             },
             "funding": [
                 {
@@ -1426,7 +1426,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-09T15:25:46+00:00"
+            "time": "2022-05-02T20:28:55+00:00"
         },
         {
             "name": "doctrine/deprecations",
@@ -1910,16 +1910,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.12.1",
+            "version": "2.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "2e4a8722721b934149ff53b191522a6829b6d73b"
+                "reference": "8291a7f09b12d14783ed6537b4586583d155869e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/2e4a8722721b934149ff53b191522a6829b6d73b",
-                "reference": "2e4a8722721b934149ff53b191522a6829b6d73b",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/8291a7f09b12d14783ed6537b4586583d155869e",
+                "reference": "8291a7f09b12d14783ed6537b4586583d155869e",
                 "shasum": ""
             },
             "require": {
@@ -1928,7 +1928,7 @@
                 "doctrine/collections": "^1.5",
                 "doctrine/common": "^3.0.3",
                 "doctrine/dbal": "^2.13.1 || ^3.2",
-                "doctrine/deprecations": "^0.5.3",
+                "doctrine/deprecations": "^0.5.3 || ^1",
                 "doctrine/event-manager": "^1.1",
                 "doctrine/inflector": "^1.4 || ^2.0",
                 "doctrine/instantiator": "^1.3",
@@ -1948,13 +1948,13 @@
                 "doctrine/annotations": "^1.13",
                 "doctrine/coding-standard": "^9.0",
                 "phpbench/phpbench": "^0.16.10 || ^1.0",
-                "phpstan/phpstan": "~1.4.10 || 1.5.0",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.4",
+                "phpstan/phpstan": "~1.4.10 || 1.6.3",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
                 "psr/log": "^1 || ^2 || ^3",
                 "squizlabs/php_codesniffer": "3.6.2",
                 "symfony/cache": "^4.4 || ^5.4 || ^6.0",
                 "symfony/yaml": "^3.4 || ^4.0 || ^5.0 || ^6.0",
-                "vimeo/psalm": "4.22.0"
+                "vimeo/psalm": "4.23.0"
             },
             "suggest": {
                 "symfony/cache": "Provides cache support for Setup Tool with doctrine/cache 2.0",
@@ -2003,28 +2003,28 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.12.1"
+                "source": "https://github.com/doctrine/orm/tree/2.12.2"
             },
-            "time": "2022-04-22T17:46:03+00:00"
+            "time": "2022-05-02T19:10:07+00:00"
         },
         {
             "name": "doctrine/persistence",
-            "version": "2.5.1",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "4473480044c88f30e0e8288e7123b60c7eb9efa3"
+                "reference": "4276c6cbc0ca692c190f650a2678623bf04af2d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/4473480044c88f30e0e8288e7123b60c7eb9efa3",
-                "reference": "4473480044c88f30e0e8288e7123b60c7eb9efa3",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/4276c6cbc0ca692c190f650a2678623bf04af2d2",
+                "reference": "4276c6cbc0ca692c190f650a2678623bf04af2d2",
                 "shasum": ""
             },
             "require": {
                 "doctrine/cache": "^1.11 || ^2.0",
                 "doctrine/collections": "^1.0",
-                "doctrine/deprecations": "^0.5.3",
+                "doctrine/deprecations": "^0.5.3 || ^1",
                 "doctrine/event-manager": "^1.0",
                 "php": "^7.1 || ^8.0",
                 "psr/cache": "^1.0 || ^2.0 || ^3.0"
@@ -2091,9 +2091,23 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/2.5.1"
+                "source": "https://github.com/doctrine/persistence/tree/2.5.2"
             },
-            "time": "2022-04-14T21:47:17+00:00"
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fpersistence",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-05-02T17:29:02+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2200,16 +2214,16 @@
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
-            "version": "v1.0.10",
+            "version": "v1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/proxy-manager-lts.git",
-                "reference": "88dda72c48633326c81a01b861c8b6a923948f56"
+                "reference": "d1eadf86d5b843c496614ef075a8f655a880f1d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/proxy-manager-lts/zipball/88dda72c48633326c81a01b861c8b6a923948f56",
-                "reference": "88dda72c48633326c81a01b861c8b6a923948f56",
+                "url": "https://api.github.com/repos/FriendsOfPHP/proxy-manager-lts/zipball/d1eadf86d5b843c496614ef075a8f655a880f1d8",
+                "reference": "d1eadf86d5b843c496614ef075a8f655a880f1d8",
                 "shasum": ""
             },
             "require": {
@@ -2266,7 +2280,7 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfPHP/proxy-manager-lts/issues",
-                "source": "https://github.com/FriendsOfPHP/proxy-manager-lts/tree/v1.0.10"
+                "source": "https://github.com/FriendsOfPHP/proxy-manager-lts/tree/v1.0.11"
             },
             "funding": [
                 {
@@ -2278,7 +2292,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-01T10:41:21+00:00"
+            "time": "2022-05-04T11:03:58+00:00"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -3890,22 +3904,22 @@
         },
         {
             "name": "neos/fusion-form",
-            "version": "v2.0.9",
+            "version": "v2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/fusion-form.git",
-                "reference": "4c373aec80515f77f369ced07477b25c7fca50fa"
+                "reference": "4def3ebe4b814993545a018a59eb9491499623b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/fusion-form/zipball/4c373aec80515f77f369ced07477b25c7fca50fa",
-                "reference": "4c373aec80515f77f369ced07477b25c7fca50fa",
+                "url": "https://api.github.com/repos/neos/fusion-form/zipball/4def3ebe4b814993545a018a59eb9491499623b1",
+                "reference": "4def3ebe4b814993545a018a59eb9491499623b1",
                 "shasum": ""
             },
             "require": {
                 "neos/flow": "^6.0 || ^7.0 || ^8.0 || dev-master",
-                "neos/fusion": "^5.0 || ^7.0 || ^8.0 || dev-master",
-                "neos/fusion-afx": "^1.2 || ^7.0 || ^8.0 || dev-master",
+                "neos/fusion": "^5.0 || ^7.0 || ^8.0 || ^9.0 || dev-master",
+                "neos/fusion-afx": "^1.2 || ^7.0 || ^8.0 || ^9.0 || dev-master",
                 "neos/utility-arrays": "*",
                 "neos/utility-objecthandling": "*",
                 "php": ">7.2",
@@ -3932,7 +3946,7 @@
             "description": "Fusion Form",
             "support": {
                 "issues": "https://github.com/neos/fusion-form/issues",
-                "source": "https://github.com/neos/fusion-form/tree/v2.0.9"
+                "source": "https://github.com/neos/fusion-form/tree/v2.0.10"
             },
             "funding": [
                 {
@@ -3940,7 +3954,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-03-29T09:33:27+00:00"
+            "time": "2022-05-03T13:01:11+00:00"
         },
         {
             "name": "neos/http-factories",
@@ -4615,20 +4629,20 @@
         },
         {
             "name": "neos/neos-setup",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/neos-setup.git",
-                "reference": "151db1ffb6d7297320b2abcd2a767a6278a15a8e"
+                "reference": "36cf8a8b5369e98b95fe9d4fa6c92e375ef03d69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/neos-setup/zipball/151db1ffb6d7297320b2abcd2a767a6278a15a8e",
-                "reference": "151db1ffb6d7297320b2abcd2a767a6278a15a8e",
+                "url": "https://api.github.com/repos/neos/neos-setup/zipball/36cf8a8b5369e98b95fe9d4fa6c92e375ef03d69",
+                "reference": "36cf8a8b5369e98b95fe9d4fa6c92e375ef03d69",
                 "shasum": ""
             },
             "require": {
-                "neos/neos": "^5.0 || ^7.0 || ^8.0 || dev-master",
+                "neos/neos": "^5.0 || ^7.0 || ^8.0 || ^9.0 || dev-master",
                 "neos/setup": "^4.0 || ^5.0 || dev-master"
             },
             "type": "neos-package",
@@ -4731,7 +4745,7 @@
             "description": "Custom neos/setup steps and configuration for Neos CMS",
             "support": {
                 "issues": "https://github.com/neos/neos-setup/issues",
-                "source": "https://github.com/neos/neos-setup/tree/1.1.5"
+                "source": "https://github.com/neos/neos-setup/tree/1.1.6"
             },
             "funding": [
                 {
@@ -4739,7 +4753,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-03-29T09:30:14+00:00"
+            "time": "2022-05-03T12:54:40+00:00"
         },
         {
             "name": "neos/neos-ui",
@@ -5369,16 +5383,16 @@
         },
         {
             "name": "neos/redirecthandler-databasestorage",
-            "version": "5.0.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/redirecthandler-databasestorage.git",
-                "reference": "7fbbaad0817146f86d2e5dd0598ed34ce14a7907"
+                "reference": "f8e5ea19d09aa4317172908ffcfceb3924773e8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/redirecthandler-databasestorage/zipball/7fbbaad0817146f86d2e5dd0598ed34ce14a7907",
-                "reference": "7fbbaad0817146f86d2e5dd0598ed34ce14a7907",
+                "url": "https://api.github.com/repos/neos/redirecthandler-databasestorage/zipball/f8e5ea19d09aa4317172908ffcfceb3924773e8b",
+                "reference": "f8e5ea19d09aa4317172908ffcfceb3924773e8b",
                 "shasum": ""
             },
             "require": {
@@ -5441,7 +5455,7 @@
             "description": "A plugin for neos/redirecthandler to store redirects in the database",
             "support": {
                 "issues": "https://github.com/neos/redirecthandler-databasestorage/issues",
-                "source": "https://github.com/neos/redirecthandler-databasestorage/tree/5.0.1"
+                "source": "https://github.com/neos/redirecthandler-databasestorage/tree/5.0.2"
             },
             "funding": [
                 {
@@ -5449,7 +5463,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-03-24T21:34:35+00:00"
+            "time": "2022-05-04T10:13:59+00:00"
         },
         {
             "name": "neos/redirecthandler-neosadapter",
@@ -5721,21 +5735,21 @@
         },
         {
             "name": "neos/seo",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/neos-seo.git",
-                "reference": "6875c7fab4ad1a4b4d16c3ffdb9a990e7b71e5ea"
+                "reference": "55a475010f52546c314e2ab633fcef2c4deb153d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/neos-seo/zipball/6875c7fab4ad1a4b4d16c3ffdb9a990e7b71e5ea",
-                "reference": "6875c7fab4ad1a4b4d16c3ffdb9a990e7b71e5ea",
+                "url": "https://api.github.com/repos/neos/neos-seo/zipball/55a475010f52546c314e2ab633fcef2c4deb153d",
+                "reference": "55a475010f52546c314e2ab633fcef2c4deb153d",
                 "shasum": ""
             },
             "require": {
-                "neos/fusion-afx": "~1.2 || ^7.0 || ^8.0 || dev-master",
-                "neos/neos": "^4.3 || ^5.0 || ^7.0 || ^8.0 || dev-master"
+                "neos/fusion-afx": "~1.2 || ^7.0 || ^8.0 || ^9.0 || dev-master",
+                "neos/neos": "^4.3 || ^5.0 || ^7.0 || ^8.0 || ^9.0 || dev-master"
             },
             "replace": {
                 "typo3/neos-seo": "self.version"
@@ -5828,7 +5842,7 @@
             "description": "SEO configuration and tools for Neos",
             "support": {
                 "issues": "https://github.com/neos/neos-seo/issues",
-                "source": "https://github.com/neos/neos-seo/tree/3.3.1"
+                "source": "https://github.com/neos/neos-seo/tree/3.3.2"
             },
             "funding": [
                 {
@@ -5836,7 +5850,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-03-29T10:16:14+00:00"
+            "time": "2022-05-03T13:14:17+00:00"
         },
         {
             "name": "neos/setup",

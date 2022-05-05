@@ -1,0 +1,231 @@
+Abteilung.Gridsystem:Mixin.Column.Offset:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Offset.All: true
+    Abteilung.Gridsystem:Mixin.Column.Offset.SM: true
+    Abteilung.Gridsystem:Mixin.Column.Offset.MD: true
+    Abteilung.Gridsystem:Mixin.Column.Offset.LG: true
+    Abteilung.Gridsystem:Mixin.Column.Offset.XL: true
+
+Abteilung.Gridsystem:Mixin.Column.Offset.Group:
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        offset:
+          label: 'Abteilung.Gridsystem:NodeTypes.Content.Column:groups.offset'
+
+Abteilung.Gridsystem:Mixin.Column.Offset.All:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Offset.Group: true
+  properties:
+    offset:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.all'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'start-0'
+              1:
+                label: 'start-1'
+              2:
+                label: 'start-2'
+              3:
+                label: 'start-3'
+              4:
+                label: 'start-4'
+              5:
+                label: 'start-5'
+              6:
+                label: 'start-6'
+              7:
+                label: 'start-7'
+              8:
+                label: 'start-8'
+              9:
+                label: 'start-9'
+              10:
+                label: 'start-10'
+              11:
+                label: 'start-11'
+              12:
+                label: 'start-12'
+
+Abteilung.Gridsystem:Mixin.Column.Offset.SM:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Offset.Group: true
+  properties:
+    offset-sm:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.sm'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'start-sm-0'
+              1:
+                label: 'start-sm-1'
+              2:
+                label: 'start-sm-2'
+              3:
+                label: 'start-sm-3'
+              4:
+                label: 'start-sm-4'
+              5:
+                label: 'start-sm-5'
+              6:
+                label: 'start-sm-6'
+              7:
+                label: 'start-sm-7'
+              8:
+                label: 'start-sm-8'
+              9:
+                label: 'start-sm-9'
+              10:
+                label: 'start-sm-10'
+              11:
+                label: 'start-sm-11'
+              12:
+                label: 'start-sm-12'
+
+Abteilung.Gridsystem:Mixin.Column.Offset.MD:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Offset.Group: true
+  properties:
+    offset-md:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.md'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'start-md-0'
+              1:
+                label: 'start-md-1'
+              2:
+                label: 'start-md-2'
+              3:
+                label: 'start-md-3'
+              4:
+                label: 'start-md-4'
+              5:
+                label: 'start-md-5'
+              6:
+                label: 'start-md-6'
+              7:
+                label: 'start-md-7'
+              8:
+                label: 'start-md-8'
+              9:
+                label: 'start-md-9'
+              10:
+                label: 'start-md-10'
+              11:
+                label: 'start-md-11'
+              12:
+                label: 'start-md-12'
+
+Abteilung.Gridsystem:Mixin.Column.Offset.LG:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Offset.Group: true
+  properties:
+    offset-lg:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.lg'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'start-lg-0'
+              1:
+                label: 'start-lg-1'
+              2:
+                label: 'start-lg-2'
+              3:
+                label: 'start-lg-3'
+              4:
+                label: 'start-lg-4'
+              5:
+                label: 'start-lg-5'
+              6:
+                label: 'start-lg-6'
+              7:
+                label: 'start-lg-7'
+              8:
+                label: 'start-lg-8'
+              9:
+                label: 'start-lg-9'
+              10:
+                label: 'start-lg-10'
+              11:
+                label: 'start-lg-11'
+              12:
+                label: 'start-lg-12'
+
+Abteilung.Gridsystem:Mixin.Column.Offset.XL:
+  abstract: true
+  superTypes:
+    Abteilung.Gridsystem:Mixin.Column.Offset.Group: true
+  properties:
+    offset-xl:
+      type: string
+      ui:
+        label: 'Abteilung.Gridsystem:Main:size.xl'
+        reloadIfChanged: true
+        inspector:
+          group: 'offset'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            allowEmpty: true
+            values:
+              reset:
+                label: 'start-xl-0'
+              1:
+                label: 'start-xl-1'
+              2:
+                label: 'start-xl-2'
+              3:
+                label: 'start-xl-3'
+              4:
+                label: 'start-xl-4'
+              5:
+                label: 'start-xl-5'
+              6:
+                label: 'start-xl-6'
+              7:
+                label: 'start-xl-7'
+              8:
+                label: 'start-xl-8'
+              9:
+                label: 'start-xl-9'
+              10:
+                label: 'start-xl-10'
+              11:
+                label: 'start-xl-11'
+              12:
+                label: 'start-xl-12'

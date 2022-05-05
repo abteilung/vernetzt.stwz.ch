@@ -10,7 +10,9 @@ prototype(Abte.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
 	# first content and should be loaded lazy otherwise not
 	lazy = ${q(node).prev().is()}
 
-    class = 'container-image'
+    class = Abte.Site:Component.AdditionalClass {
+        class = 'container-image'
+    }
 
     node = ${ node }
     @context {
