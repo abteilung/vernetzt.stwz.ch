@@ -85,24 +85,29 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
             >
                 <div class="sticky p-6 bg-primary top-12">
-                    <div class="mb-0 text-white h1">Ihr Abo</div>
-                    <div class="relative h-24 pricing">
-                        <div class="text-xl text-white" x-text="total"></div>
-                            <Abte.Site:Icon.Diagonal class="absolute top-0 text-white left-8" />
-                        <div class="absolute top-8 left-20 text-xl text-white">CHF</div>
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="!mb-0 text-white h1">Ihr Abo</div>
 
-                    </div>
-
-                    <button 
-                        x-on:click={"resetAll(); $dispatch('item-reset');"}
-                        class="absolute top-8 right-8 flex gap-1 text-white">
+                        <button 
+                            x-on:click={"resetAll(); $dispatch('item-reset');"}
+                            class="flex gap-1 text-white top-8 right-8"
+                        >
                             <div class="block my-auto">
                                 <Abte.Site:Icon.Refresh />
                             </div>
                             <div class="block my-auto">
-                                <span>Reset</span>
-                            </div>
-                    </button>
+                            <!-- <span>Reset</span> -->
+                        </div>
+                    </button>                        
+                    </div>
+                    <div class="relative h-24 pricing">
+                        <div class="text-xl text-white" x-text="total + '.–'"></div>
+                            <Abte.Site:Icon.Diagonal class="absolute top-0 text-white left-8" />
+                        <div class="absolute text-xl text-white top-8 left-20">CHF</div>
+
+                    </div>
+
+                    
 
                     <Abte.Site:Component.BestellUebersicht />
 
@@ -132,7 +137,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
 
     renderer = afx`
 
-        <table class="table-auto w-full text-white mb-6">
+        <table class="w-full mb-6 text-white table-auto">
             <tbody>
                 <tr>
                     <td>Internet:</td>

@@ -35,33 +35,36 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
     backgroundColor = ${ q(node).property('bgColor') }
 
     // relative bg-white border rounded-lg shadow-sm p-4 flex cursor-pointer focus:outline-none border-transparent border-indigo-500 ring-2 ring-indigo-500
-
+    // 'block': (active === '" + props.activeItem + "')
     renderer = afx`
         <div class="productCard">
             <label 
                 id={props.itemID}
-                class={'product cursor-pointer cardItem text-black transition duration-250 bg-base-100 space-y-4 hover:bg-base-200'}
-                :class={"{ 'bg-base-100': (value === '" + props.itemID + "'), 'bg-base-100': !(value === '" + props.itemID + "'), 'bg-base-300': (active === '" + props.itemID + "'), 'bg-base-100': !(active === '" + props.itemID + "') }"}
+                class={'product cursor-pointer cardItem text-black transition duration-250 bg-base-200 space-y-4 hover:opacity-100'}
+                :class={"{ 'opacity-60': !(value"+ props.productGroup+" === '" + props.itemID + "'), 'opacity-100': (active === '" + props.itemID + "') }"}
                 x-radio-group-option=""
                 x-init={"value" + props.productGroup + "= localStorage.getItem('"+ props.productGroup +"');"}
                 x-on:change={"localStorage.setItem('"+ props.productGroup +"', value"+props.productGroup+"); $dispatch('item-changed');" }
                 data-group={props.productGroup}
                 data-price={String.pregMatch(props.priceOnly,'/\d+/')}
             >
-                <input 
-                    type="radio" 
-                    value={props.itemID} 
-                    x-model={"value"+ props.productGroup}
-                    name={props.itemID} 
-                    class="sr-only" 
-                />
-
-                <div class="flex flex-1">
+              <div class="flex flex-1">
                     <div class="flex flex-col w-full">
-                        <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 border-black">
+                        <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 mb-4 border-black">
                             <Abte.Site:Component.isHero node={node} />
                             <Abte.Site:Component.SelectedProduct activeItem={props.itemID} productGroup={props.productGroup} class="absolute right-0" />
                         </div>
+
+                        <div class="flex items-center justify-between px-5 py-2 mb-2 -mx-5 text-white bg-black">
+                            <div>
+                                <p class="mb-0 text-sm text-accent">Rabatt<br/>
+                                <b>als Neukunde</b></p>
+                            </div>
+                            <div>
+                                <div class="text-xl font-light">50%</div>
+                            </div>
+                        </div>
+
                         <div class="mb-0 text-black h2">{props.title}</div>
                         <div class="h3 font-semibold !mt-0">{props.subTitle}</div>
                         <div class="description">{props.description}</div>
@@ -71,6 +74,13 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         </div>
                     </div>
                 </div>
+                <input 
+                    type="radio" 
+                    value={props.itemID} 
+                    x-model={"value"+ props.productGroup}
+                    name={props.itemID} 
+                    class="sr-only"
+                />                
             </label>
         </div>
     `

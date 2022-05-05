@@ -186,8 +186,8 @@ module.exports = {
                     'neutral': '#EFEFEF',
                     'error': '#ff9900',
                     'base-100': '#EBE8E8',
-                    'base-200': '#d4e0e5',
-                    'base-300': '#c0d3db',
+                    'base-200': '#e6eef1',
+                    'base-300': '#c1d3db',
                     // other colors
                     'accent': '#edfe0e',
                     'accent-focus': '#D8942E',
