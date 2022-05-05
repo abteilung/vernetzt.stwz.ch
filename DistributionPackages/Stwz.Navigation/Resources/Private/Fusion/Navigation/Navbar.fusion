@@ -15,7 +15,7 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
                 <div class="flex justify-between w-full mx-0">
                     <Stwz.Navigation:Component.Navbar.Brand />
                     <div 
-                        class="flex justify-end w-full text-black mainNavigation font-headings s">
+                        class="flex justify-end w-full text-black mainNavigation font-sans s">
                         <Stwz.Navigation:Component.Navbar.Navigation />
                         <Stwz.Navigation:Component.Navbar.Hamburger />
                         <!-- <Stwz.Navigation:Component.Navbar.KontaktButton /> -->

@@ -35,7 +35,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
     }
 
     svgIllustration = Neos.Fusion:Tag {
-        attributes.class = 'lineAnimation'
+        attributes.class = 'pb-24 -mt-32 lineAnimation'
         content = ${node.properties.illustration}
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping
     }
@@ -43,12 +43,12 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
     renderer = afx`
         <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
             <div class="container relative pt-32 h-[250px] md:h-[300px] relative top-0 z-20 w-full mt-0 overflow-visible">
-                <div class="grid grid-cols-3 gridgap-x">
+                <div class="grid grid-cols-2 gridgap-x">
                     <div class="col-span-1 illustrationContainer">
                         {props.svgIllustration}
                     </div>
-                    <div class="col-span-2">
-                        <Neos.Fusion:Augmenter class="h1 text-black">
+                    <div class="col-span-1">
+                        <Neos.Fusion:Augmenter class="text-black h1">
                             {props.teaserText}
                         </Neos.Fusion:Augmenter>
                     </div>
@@ -61,21 +61,21 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Fusion:Component) 
 
 
 
-        <div class="bg-base-100 py-24">
+        <div class="py-24 bg-base-100">
             <div class="container">
 
                 <div class="grid grid-cols-2 gridgap-x">
 
                     <div class="gridColumn">
-                        <div class="flex flex-col relative h-24">
+                        <div class="relative flex flex-col h-24">
                             <Abte.Site:Mixin.Icons class="absolute left-2" />
-                            <Abte.Site:Icon.DiagonalWide class="absolute -top-8 left-0" />
+                            <Abte.Site:Icon.DiagonalWide class="absolute left-0 -top-8" />
                         </div>
 
-                        <div class="w-full grid grid-cols-6 relative">
+                        <div class="relative grid w-full grid-cols-6">
                             
-                            <div class="rotate-90 absolute origin-bottom-left -mt-12">
-                                <h1 class="rotate-180 mb-0 text-primary whitespace-nowrap">{props.title} </h1>
+                            <div class="absolute -mt-12 origin-bottom-left rotate-90">
+                                <h1 class="mb-0 rotate-180 text-primary whitespace-nowrap">{props.title} </h1>
                             </div>
 
                             <div class="col-span-4 col-start-2">

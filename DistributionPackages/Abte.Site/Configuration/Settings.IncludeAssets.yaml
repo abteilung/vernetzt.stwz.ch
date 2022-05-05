@@ -1,7 +1,7 @@
 Carbon:
   IncludeAssets:
     LoadJSforCSSAsynchron: true
-    GoogleFonts: "Mulish:wght@300;400;800&display=swap[async]"
+    GoogleFonts: "Mulish:wght@300;400;800&display=swap"
     Packages:
       'Abte.Site':
         Package: 'Abte.Site'

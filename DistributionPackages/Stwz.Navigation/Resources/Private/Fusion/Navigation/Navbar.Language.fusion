@@ -10,7 +10,7 @@ prototype(Stwz.Navigation:Component.Navbar.Language) < prototype(Neos.Fusion:Com
     renderer = afx`
         <div 
             "@click.away"="open = false" 
-            class="relative font-headings" 
+            class="relative font-sans" 
             x-data="\{ open: false \}"
         >
             <Neos.Fusion:Loop 

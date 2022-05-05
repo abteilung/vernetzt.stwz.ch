@@ -12,7 +12,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
     }
 
     arrow = Abte.Site:Icon.ArrowRight {
-        class = 'w-6 left-0 group-hover:left-2 relative duration-150'
+        class = 'relative left-0 w-6 duration-150 group-hover:left-2'
     }
 
     title = ${ q(node).property('title') }
@@ -30,18 +30,18 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
             node={node}
             attributes.class={props.serviceItemClass}
         >
-            <div class="header h-20">
+            <div class="h-20 header">
                 <div class="flex justify-between">
-                    <Abte.Site:Mixin.Icons class="scale-100 group-hover:scale-110 duration-150" />
+                    <Abte.Site:Mixin.Icons class="duration-150 scale-100 group-hover:scale-110" />
                     {props.arrow}
                 </div>
                 <Abte.Site:Icon.Diagonal />
             </div>
-            <div class="flex flex-1 items-end space-x-2 h-auto">
-                <div class="-rotate-90 w-1/6 mb-6 text-primary">
-                    <h2 class="block">{props.title}</h2>
+            <div class="flex items-end flex-1 h-auto space-x-2">
+                <div class="w-1/6 mb-6 -rotate-90 text-primary">
+                    <h2 class="block h1">{props.title}</h2>
                 </div>
-                <div class="w-5/6 content flex-1">
+                <div class="flex-1 w-5/6 content">
                     <strong>{String.toString(props.subTitle)}</strong>
                     <p>{props.intro}</p>
                 </div>
