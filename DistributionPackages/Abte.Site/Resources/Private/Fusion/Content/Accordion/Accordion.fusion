@@ -104,15 +104,10 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                         <div class="text-xl text-white" x-text="total + '.–'"></div>
                             <Abte.Site:Icon.Diagonal class="absolute top-0 text-white left-8" />
                         <div class="absolute text-xl text-white top-8 left-20">CHF</div>
-
                     </div>
 
-                    
-
                     <Abte.Site:Component.BestellUebersicht />
-
-                    <Abte.Site:Content.Button class="text-base text-white bg-black" text="Jetzt konfigurieren" />
-
+                    <Abte.Site:Content.Button outerClass="text-center" class="text-base text-white bg-black" text="Jetzt konfigurieren" />
                 </div>
             </div>
         </div>

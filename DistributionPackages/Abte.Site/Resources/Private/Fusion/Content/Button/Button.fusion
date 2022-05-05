@@ -1,6 +1,7 @@
 prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         
-    class = 'text-lg  bg-primary'
+    outerClass = 'block'
+    class = 'text-lg bg-primary'
     buttonClass = 'flex tracking-normal px-4 py-2 font-semibold flex-row items-center space-x-2 rounded-full bg-accent'
     icon = ''
     iconPosition = ${ q(node).property('iconPosition') ? true : false }
@@ -24,13 +25,13 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
     // }
 
     iconBefore = Abte.Site:Icon.ArrowRight {
-        class='relative left-0 duration-300 text-white group-hover:left-2'
+        class='relative left-0 text-white duration-300 group-hover:left-2'
         @if.buttonIsBefore=${this.positionBefore}
         @if.hasIcon=${icon}
     }
 
     iconAfter = Abte.Site:Icon.ArrowRight {
-        class='relative left-0 duration-300 text-white group-hover:left-2'
+        class='relative left-0 text-white duration-300 group-hover:left-2'
         @if.buttonIsBefore=${!this.positionBefore}
         @if.hasIcon=${icon}
     }
@@ -38,7 +39,7 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
     blank = ${ q(node).property('blank') ? true : false }
 
     renderer = afx`
-        <div class="block">
+        <div class={props.outerClass}>
             <div class="inline-block group">
                 <Carbon.Link:Link 
                     additionalClass={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style} 

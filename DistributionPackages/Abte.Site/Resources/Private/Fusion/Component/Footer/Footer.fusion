@@ -27,6 +27,7 @@
 
         address = Neos.Neos:Editable {
             property = 'address'
+            node = ${ site }
         }
 
         contacts = Neos.Neos:Editable {
@@ -82,11 +83,11 @@
                             </div>
 
 
-                            <div class="col-span-3 flex justify-end">
+                            <div class="flex justify-end col-span-3">
                                 <Neos.Neos:NodeLink 
                                     node={props.siteNode} 
                                     >
-                                    <Abte.Site:Component.StWZLogo class="h-12 w-auto" />
+                                    <Abte.Site:Component.StWZLogo class="w-auto h-12" />
                                 </Neos.Neos:NodeLink>
 
                             </div>
