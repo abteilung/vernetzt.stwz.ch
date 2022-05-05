@@ -16,7 +16,7 @@ prototype(Sitegeist.Kaleidoscope:DummyImageSource) {
 
 
 // Defaults for responsive images
-prototype(Sitegeist.Lazybones:Image) {
+prototype(Sitegeist.Kaleidoscope:Image) {
     srcset="320w, 600w, 800w, 1200w, 2600w"
     sizes="(min-width: 800px) 1000px, (min-width: 480px) 800px, (min-width: 320px) 440px, 100vw"
     format="webp"

@@ -47,7 +47,7 @@ prototype(Stwz.Flickity:Content.ImageSlider.Item) < prototype(Neos.Neos:ContentC
                     </div>
                 </div>
             </div>
-            <Sitegeist.Lazybones:Image 
+            <Sitegeist.Kaleidoscope:Image 
                 @if.hasImage={props.imageSource}
                 imageSource={props.imageSource} 
                 width="1920"

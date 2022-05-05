@@ -17,7 +17,7 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
         property = 'jobTitle'
     }
 
-    portrait = Sitegeist.Lazybones:Image {
+    portrait = Sitegeist.Kaleidoscope:Image {
         imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
             asset   = ${ q(node).property('image') }
         }

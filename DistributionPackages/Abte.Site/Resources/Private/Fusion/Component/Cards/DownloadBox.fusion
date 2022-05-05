@@ -57,7 +57,7 @@ prototype(Abte.Site:Content.DownloadCard) < prototype(Neos.Neos:ContentComponent
 
         <div class="relative block w-full font-light mix box-shadow group mb-12">
 
-            <Sitegeist.Lazybones:Image 
+            <Sitegeist.Kaleidoscope:Image 
                 @if.hasImage={imageSource}
                 imageSource={imageSource} 
                 width="720"

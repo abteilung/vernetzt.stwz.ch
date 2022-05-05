@@ -31,10 +31,11 @@ prototype(Abte.Site:Content.Image) < prototype(Neos.Neos:ContentComponent) {
             renderer = Sitegeist.Kaleidoscope:DummyImageSource
         }
     }
-    alternativeText = ${q(node).property('alternativeText')}
+    
+    alternativeText = ${ q(node).property('alternativeText') }
 
     renderer = afx`
-        <Sitegeist.Lazybones:Image
+        <Sitegeist.Kaleidoscope:Image
             class={props.class}
             lazy={true}
             lazyWidth={200}

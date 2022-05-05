@@ -34,7 +34,7 @@ prototype(Abte.Site:Component.NewsCard) < prototype(Neos.Fusion:Component) {
             attributes.class="space-y-4"
         >   
             <div class="overflow-hidden">
-                <Sitegeist.Lazybones:Image 
+                <Sitegeist.Kaleidoscope:Image 
                     @if.hasImage={props.imageSource}
                     imageSource={props.imageSource} 
                     class="duration-300 scale-105 group-hover:scale-100"

@@ -8,9 +8,14 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 			renderer = Abte.Site:Component.HomepageHeader
 		}
 
-		Service {
-			condition = ${ q(node).is('[instanceof Abte.Site:Document.Service],[instanceof Abte.Site:Document.Product]') }
+		Products {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Product]') }
 			renderer = Abte.Site:Component.HeaderProduct
+		}
+
+		About {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.Service],[instanceof Abte.Site:Document.About]') }
+			renderer = Abte.Site:Component.HeaderAbout
 		}
 
 		fallback {

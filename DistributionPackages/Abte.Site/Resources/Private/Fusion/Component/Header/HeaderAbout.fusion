@@ -1,7 +1,7 @@
-prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentComponent) {
+prototype(Abte.Site:Component.HeaderAbout) < prototype(Neos.Neos:ContentComponent) {
 
     headerContent = Neos.Neos:ContentCollection {
-        nodePath = ${ q(documentNode).children('header').property('_path') }
+        nodePath = ${ q(node).children('header').property('_path') }
     }
 
     pageTitle = Neos.Neos:Editable {
@@ -58,13 +58,9 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
             </div>
         </header>
 
-
-
-        <div class="py-24 bg-base-100 headerProduct">
+        <div class="py-24">
             <div class="container flex">
-
-                <Abte.Site:Content.RotatedHeader />
-                <div class="relative z-20 w-full ml-20">{props.headerContent}</div>
+                <div class="relative z-20 w-full">{props.headerContent}</div>
             </div>
         </div>
     `

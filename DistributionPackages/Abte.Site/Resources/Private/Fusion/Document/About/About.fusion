@@ -1,90 +1,11 @@
 prototype(Abte.Site:Document.About) < prototype(Abte.Site:Document.AbstractPage) {
     body.content = Neos.Fusion:Component {
 
-        aside = Neos.Neos:ContentCollection {
-            nodePath = 'aside'
-        }
-
-        pageTitle = Neos.Neos:Editable {
-            property = 'titleOverride'
-            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
-                @position = 'end'
-            }
-        }
-
-        subTitle = Neos.Neos:Editable {
-            property = 'subTitle'
-            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
-                @position = 'end'
-            }
-        }
-
-        teaser_short = Neos.Neos:Editable {
-            property = 'teaser_short'
-            @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
-                @position = 'end'
-            }
-        }
-
-        teamMates = Neos.Neos:MenuItems {
-            itemCollection = ${ q(site).find('[instanceof Abte.Site:Document.Persons]').children().children('[instanceof Abte.Site:Document.Person]').get() }
-        }
-
-        icon        = Abte.Site:Icon.ArrowRight {
-            class = 'relative w-6 left-0 duration-150 text-secondary'
-        }
-
-        target = ${ q(site).find('[instanceof Abte.Site:Document.Persons]').get(0) }
-
         renderer = afx`
-
-            <div class="gridPadding">
-                <div class="container grid grid-cols-12 gridgap">
-                    <div class="col-span-12 space-y-8 lg:col-span-8">
-                        <div>
-                            <h1 class="h5">{props.subTitle}</h1>
-                            <h2 class="h1">{props.pageTitle}</h2>
-                            <Neos.Fusion:Augmenter class="lead">
-                                    {props.teaser_short}
-                            </Neos.Fusion:Augmenter>
-                        </div>
-                    </div>
-                    <aside class="col-span-12 lg:col-end-13 lg:col-span-3">
-                        <div class="sticky grid md:grid-cols-2 gridPadding-top top-24 lg:grid-cols-1 gridgap">
-                            {props.aside}
-                        </div>
-                    </aside>
-                </div>
-            </div>
 
             <main>
                 {props.main}
-                
-                <div class="gridPadding">
-
-                    <div class="container flex items-center justify-between mb-8">
-                        <h2>{ I18n.translate('Abte.Site:Main:dieMenschen') }</h2>
-                        <div class="cursor-pointer h3 group">
-                            <Carbon.Link:Link 
-                                node={props.target}
-                                renderDefaultTagIfNoLink="true"
-                                attributes.class="flex items-center space-x-2 truncate duration-100"
-                            >
-                                <div class="hidden md:block">{ I18n.translate('Abte.Site:Main:toTop') }</div> {props.icon}
-                            </Carbon.Link:Link>                    
-                        </div>
-                    </div>
-            
-                    <div class="container mb-20 aboutCarousell" data-flickity='{"pageDots": true, "groupCells": true, "prevNextButtons": false, "cellSelector": ".product"}'>
-                        <div class="flex flex-wrap">
-                            <Neos.Fusion:Loop items={props.teamMates}>
-                                <Abte.Site:Component.renderCardType node={item.node} renderStyle="team" />
-                            </Neos.Fusion:Loop>
-                        </div>
-                    </div>
-                </div>
             </main>
-
         `
     }
 }

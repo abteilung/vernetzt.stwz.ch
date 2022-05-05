@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abte.Site",
-                "reference": "bbd6ce1737e9da08869971334f4f6fa5269cf2fc"
+                "reference": "248d895478f6d78a3c49f4c6a2a0d11404116cf1"
             },
             "require": {
                 "carbon/includeassets": "^5.3",
@@ -21,7 +21,7 @@
                 "jonnitto/prettyembedvideoplatforms": "^2.0",
                 "neos/neos": "*",
                 "neos/nodetypes-contentreferences": "^7.2",
-                "sitegeist/lazybones": "^3.1"
+                "sitegeist/kaleidoscope": "^6.5"
             },
             "suggest": {
                 "neos/seo": "*"
@@ -2214,16 +2214,16 @@
         },
         {
             "name": "friendsofphp/proxy-manager-lts",
-            "version": "v1.0.11",
+            "version": "v1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/proxy-manager-lts.git",
-                "reference": "d1eadf86d5b843c496614ef075a8f655a880f1d8"
+                "reference": "8419f0158715b30d4b99a5bd37c6a39671994ad7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/proxy-manager-lts/zipball/d1eadf86d5b843c496614ef075a8f655a880f1d8",
-                "reference": "d1eadf86d5b843c496614ef075a8f655a880f1d8",
+                "url": "https://api.github.com/repos/FriendsOfPHP/proxy-manager-lts/zipball/8419f0158715b30d4b99a5bd37c6a39671994ad7",
+                "reference": "8419f0158715b30d4b99a5bd37c6a39671994ad7",
                 "shasum": ""
             },
             "require": {
@@ -2280,7 +2280,7 @@
             ],
             "support": {
                 "issues": "https://github.com/FriendsOfPHP/proxy-manager-lts/issues",
-                "source": "https://github.com/FriendsOfPHP/proxy-manager-lts/tree/v1.0.11"
+                "source": "https://github.com/FriendsOfPHP/proxy-manager-lts/tree/v1.0.12"
             },
             "funding": [
                 {
@@ -2292,7 +2292,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-04T11:03:58+00:00"
+            "time": "2022-05-05T09:31:05+00:00"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -4629,20 +4629,20 @@
         },
         {
             "name": "neos/neos-setup",
-            "version": "1.1.6",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/neos-setup.git",
-                "reference": "36cf8a8b5369e98b95fe9d4fa6c92e375ef03d69"
+                "reference": "3848c476ba480878291cd7ddc58fbccd93a7c37a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/neos-setup/zipball/36cf8a8b5369e98b95fe9d4fa6c92e375ef03d69",
-                "reference": "36cf8a8b5369e98b95fe9d4fa6c92e375ef03d69",
+                "url": "https://api.github.com/repos/neos/neos-setup/zipball/3848c476ba480878291cd7ddc58fbccd93a7c37a",
+                "reference": "3848c476ba480878291cd7ddc58fbccd93a7c37a",
                 "shasum": ""
             },
             "require": {
-                "neos/neos": "^5.0 || ^7.0 || ^8.0 || ^9.0 || dev-master",
+                "neos/neos": "^5.0 || ^7.0 || ^8.0 || dev-master",
                 "neos/setup": "^4.0 || ^5.0 || dev-master"
             },
             "type": "neos-package",
@@ -4745,7 +4745,7 @@
             "description": "Custom neos/setup steps and configuration for Neos CMS",
             "support": {
                 "issues": "https://github.com/neos/neos-setup/issues",
-                "source": "https://github.com/neos/neos-setup/tree/1.1.6"
+                "source": "https://github.com/neos/neos-setup/tree/1.1.7"
             },
             "funding": [
                 {
@@ -4753,7 +4753,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-05-03T12:54:40+00:00"
+            "time": "2022-05-05T11:05:32+00:00"
         },
         {
             "name": "neos/neos-ui",
@@ -5735,21 +5735,21 @@
         },
         {
             "name": "neos/seo",
-            "version": "3.3.2",
+            "version": "3.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/neos-seo.git",
-                "reference": "55a475010f52546c314e2ab633fcef2c4deb153d"
+                "reference": "25d71abad249abf398bc0b72bbe5ae3dd84a9c8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/neos-seo/zipball/55a475010f52546c314e2ab633fcef2c4deb153d",
-                "reference": "55a475010f52546c314e2ab633fcef2c4deb153d",
+                "url": "https://api.github.com/repos/neos/neos-seo/zipball/25d71abad249abf398bc0b72bbe5ae3dd84a9c8d",
+                "reference": "25d71abad249abf398bc0b72bbe5ae3dd84a9c8d",
                 "shasum": ""
             },
             "require": {
-                "neos/fusion-afx": "~1.2 || ^7.0 || ^8.0 || ^9.0 || dev-master",
-                "neos/neos": "^4.3 || ^5.0 || ^7.0 || ^8.0 || ^9.0 || dev-master"
+                "neos/fusion-afx": "~1.2 || ^7.0 || ^8.0 || dev-master",
+                "neos/neos": "^4.3 || ^5.0 || ^7.0 || ^8.0 || dev-master"
             },
             "replace": {
                 "typo3/neos-seo": "self.version"
@@ -5842,7 +5842,7 @@
             "description": "SEO configuration and tools for Neos",
             "support": {
                 "issues": "https://github.com/neos/neos-seo/issues",
-                "source": "https://github.com/neos/neos-seo/tree/3.3.2"
+                "source": "https://github.com/neos/neos-seo/tree/3.3.3"
             },
             "funding": [
                 {
@@ -5850,7 +5850,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2022-05-03T13:14:17+00:00"
+            "time": "2022-05-05T11:36:05+00:00"
         },
         {
             "name": "neos/setup",
@@ -7410,47 +7410,6 @@
                 "source": "https://github.com/sitegeist/Sitegeist.Kaleidoscope/tree/v6.5.0"
             },
             "time": "2022-04-27T14:52:48+00:00"
-        },
-        {
-            "name": "sitegeist/lazybones",
-            "version": "v3.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sitegeist/Sitegeist.Lazybones.git",
-                "reference": "a348e39c7a0e792aa48bf955071bb6e49c144329"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sitegeist/Sitegeist.Lazybones/zipball/a348e39c7a0e792aa48bf955071bb6e49c144329",
-                "reference": "a348e39c7a0e792aa48bf955071bb6e49c144329",
-                "shasum": ""
-            },
-            "require": {
-                "neos/fusion-afx": "^1.2 || ^7.0 || ^8.0 || dev-master",
-                "sitegeist/kaleidoscope": "^6.1 || dev-master"
-            },
-            "type": "neos-package",
-            "extra": {
-                "neos": {
-                    "package-key": "Sitegeist.Lazybones"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Sitegeist\\Lazybones\\": "Classes/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-3.0-or-later"
-            ],
-            "description": "Lazy loading for sitegeist/kaleidoscope",
-            "support": {
-                "issues": "https://github.com/sitegeist/Sitegeist.Lazybones/issues",
-                "source": "https://github.com/sitegeist/Sitegeist.Lazybones/tree/v3.1.1"
-            },
-            "abandoned": "sitegeist/kaleidoscope",
-            "time": "2022-04-01T08:56:59+00:00"
         },
         {
             "name": "sitegeist/slipstream",

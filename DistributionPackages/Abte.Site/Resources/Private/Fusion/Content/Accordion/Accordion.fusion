@@ -67,7 +67,7 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                     </div>
                 </div>
                 <div class="h-full">
-                    <Sitegeist.Lazybones:Image 
+                    <Sitegeist.Kaleidoscope:Image 
                         @if.hasImage={props.imageSource}
                         imageSource={props.imageSource} 
                         width="700"
