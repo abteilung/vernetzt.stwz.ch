@@ -136,7 +136,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
             <div class="relative py-4 block border-t border-black h-26">
                 <strong>Internet</strong>
                 <div class="text-2xl text-white" x-text="internet + '.–'"></div>
-                <template x-if="internet-discount">
+                <template x-if="internetDiscount">
                     <Abte.Site:Icon.Diagonal class="absolute top-16 text-white left-16" />
                 </template>
             </div>
@@ -146,7 +146,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
             <div class="relative py-4 block border-t border-black h-26">
                 <strong>TV</strong>
                 <div class="text-2xl text-white" x-text="television + '.–'"></div>
-                <template x-if="television-discount">
+                <template x-if="televisionDiscount">
                     <Abte.Site:Icon.Diagonal class="absolute top-16 text-white left-16" />
                 </template>            
             </div>
@@ -156,7 +156,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
             <div class="relative py-4 block border-t border-black h-26">
                 <strong>Telefonie</strong>
                 <div class="text-2xl text-white" x-text="telephone + '.–'"></div>
-                <template x-if="telephone-discount">
+                <template x-if="telephoneDiscount">
                     <Abte.Site:Icon.Diagonal class="absolute top-16 text-white left-16" />
                 </template>             
             </div>
@@ -166,7 +166,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
             <div class="relative py-4 block border-y-2 border-black h-26 mb-4">
                 <strong>Total</strong>
                 <div class="text-2xl text-white" x-text="total + '.–'"></div>
-                <template x-if="total-discount">
+                <template x-if="totalDiscount">
                     <Abte.Site:Icon.Diagonal class="absolute top-16 text-white left-16" />
                 </template>         
             </div>
