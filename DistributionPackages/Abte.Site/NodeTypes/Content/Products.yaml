@@ -22,6 +22,7 @@
         preset: 'text.plain'
       ui:
         label: 'Rabatt (%)'
+        reloadPageIfChanged: true
         inspector:
           group: 'general'
     'group':
