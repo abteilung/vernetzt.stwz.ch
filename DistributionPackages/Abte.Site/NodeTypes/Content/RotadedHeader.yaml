@@ -1,0 +1,8 @@
+'Abte.Site:Content.RotatedHeader':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Header (90°)
+    icon: icon-text
+    position: 16
+    group: media

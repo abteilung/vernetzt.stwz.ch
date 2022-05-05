@@ -1,5 +1,9 @@
 prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentComponent) {
 
+    headerContent = Neos.Neos:ContentCollection {
+        nodePath = ${ q(documentNode).children('header').property('_path') }
+    }
+
     pageTitle = Neos.Neos:Editable {
         property = 'title'
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
@@ -57,54 +61,10 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
 
 
         <div class="py-24 bg-base-100">
-            <div class="container">
+            <div class="container flex">
 
-                <div class="grid grid-cols-2 gridgap-x">
-
-                    <div class="gridColumn">
-                        <div class="relative flex flex-col h-24">
-                            <Abte.Site:Mixin.Icons class="absolute left-2" />
-                            <Abte.Site:Icon.DiagonalWide class="absolute left-0 w-28 -top-4" />
-                        </div>
-
-                        <div class="relative z-20 grid w-full grid-cols-6">
-                            
-                            <div class="absolute -mt-12 origin-bottom-left rotate-90">
-                                <h1 class="mb-0 rotate-180 text-primary whitespace-nowrap">{props.title} </h1>
-                            </div>
-
-                            <div class="col-span-4 col-start-2">
-
-                                <div class="flex items-start space-x-2">
-                                    <div class="w-3/4 space-y-4 content">
-                                        {props.intro}
-                                    </div>
-                                </div>
-                            </div>
-                            <div></div>
-                        </div>
-
-                    </div>
-                    
-                    
-                    <div class="gridColumn">
-
-                        <Sitegeist.Lazybones:Image 
-                            @if.hasImage={props.imageSource}
-                            imageSource={props.imageSource} 
-                            width="800"
-                            height="600"
-                            class="object-cover object-center aspect-cinema"
-                        />
-
-                        <img src="https://via.placeholder.com/800x600" 
-                            alt={props.title} 
-                            width="800" 
-                            height="600"
-                            @if.hasNoImage={!props.imageSource}
-                        />
-                    </div>
-                </div>
+                <Abte.Site:Content.RotatedHeader />
+                <div class="relative ml-20">{props.headerContent}</div>
             </div>
         </div>
     `

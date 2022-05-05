@@ -1,0 +1,20 @@
+prototype(Abte.Site:Content.RotatedHeader) < prototype(Neos.Fusion:Component) {
+        
+    title = ${ q(node).property('title') }
+
+    renderer = afx`
+        <div class="w-24 rotatedHeader">
+            <div class="relative flex flex-col h-24">
+                <Abte.Site:Mixin.Icons class="absolute left-2" />
+                <Abte.Site:Icon.DiagonalWide class="absolute left-0 w-28 -top-4" />
+            </div>
+
+            <div class="relative z-20 grid w-full grid-cols-6">
+                
+                <div class="absolute -mt-12 origin-bottom-left rotate-90">
+                    <h1 class="mb-0 rotate-180 text-primary whitespace-nowrap">{props.title} </h1>
+                </div>
+            </div>
+        </div>
+    `
+}
