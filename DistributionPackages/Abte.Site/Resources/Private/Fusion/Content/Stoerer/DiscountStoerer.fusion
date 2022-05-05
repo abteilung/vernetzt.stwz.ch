@@ -1,0 +1,39 @@
+prototype(Abte.Site:Content.DiscountStoerer) < prototype(Neos.Neos:ContentComponent) {
+    
+    class = Abte.Site:Component.AdditionalClass {
+        class = 'flex flex-col items-center justify-center w-40 h-40 p-5 text-center text-white bg-black rounded-full group'
+    }
+
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    
+    title = Neos.Neos:Editable {
+        property = 'title'
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+    }
+
+    arrow = Abte.Site:Icon.ArrowRight {
+        class = 'relative left-0 block w-6 duration-150 scale-75 top-1 text-accent text-arrow group-hover:left-2'
+    }
+
+    target = ${ q(node).property('target') }
+
+    renderer = afx`
+
+        <Carbon.Link:Link
+            link={props.target} 
+            renderDefaultTagIfNoLink='true' 
+            additionalClass={props.class}
+        >
+            <p class="mb-0 text-2xl font-light">{props.title}</p>
+            <p class="mb-0 font-bold !text-accent">{props.subTitle}</p>
+            {props.arrow}
+        </Carbon.Link:Link>
+                    
+    `
+}

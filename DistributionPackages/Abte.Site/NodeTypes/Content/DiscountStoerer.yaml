@@ -1,0 +1,19 @@
+'Abte.Site:Content.DiscountStoerer':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Mixin.AdditionalClass': true
+  ui:
+    label: Discount-Störer
+    icon: percent
+    position: 17
+    group: general
+  'properties':
+    'title':
+      options:
+        preset: 'text.title'
+    'subTitle':
+      options:
+        preset: 'text.title'
+    'target':
+      options:
+        preset: 'text.link'
