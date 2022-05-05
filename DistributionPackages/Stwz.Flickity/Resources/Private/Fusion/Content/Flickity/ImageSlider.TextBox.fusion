@@ -16,7 +16,7 @@ prototype(Stwz.Flickity:Content.ImageSlider.TextBox) < prototype(Neos.Neos:Conte
 
   	renderer = afx`
         <div class={i.isFirst ? 'group cellButton is-selected' : 'group cellButton'}>
-            <p class="font-semibold">{props.title}</p>
+            <p class="font-extrabold">{props.title}</p>
             <p class="hidden md:block">{props.subTitle}</p>
             <!-- 
                 <div class="absolute bottom-0 flex justify-between w-full text-sm">

@@ -52,7 +52,7 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
 
                     <div class="relative aspect-square w-16 flex justify-center items-center">
                         <Carbon.Link:Link 
-                            additionalClass="hover:underline font-semibold" 
+                            additionalClass="hover:underline font-extrabold" 
                             link={'mailto:' + props.email} 
                             renderDefaultTagIfNoLink='true'
                         >
@@ -62,7 +62,7 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
                         <Abte.Site:Icon.Diagonal />
 
                         <Carbon.Link:Link 
-                            additionalClass="hover:underline font-semibold" 
+                            additionalClass="hover:underline font-extrabold" 
                             link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
                             renderDefaultTagIfNoLink='true'
                         >

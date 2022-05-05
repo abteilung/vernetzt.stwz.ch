@@ -25,7 +25,7 @@ prototype(Abte.Site:Component.SubPages) < prototype(Neos.Neos:ContentComponent) 
                         class="relative w-full h-full font-light"
                     >
                         
-                        <header class="flex flex-col font-semibold text-white uppercase heading">
+                        <header class="flex flex-col font-extrabold text-white uppercase heading">
                             <div>
                                 <div class="absolute left-0 z-20 inline-block w-auto h-8 px-3 pt-1 -top-8 bg-primary">
                                     <div class="block whitespace-nowrap" x-text="page.nodeTitle"></div>

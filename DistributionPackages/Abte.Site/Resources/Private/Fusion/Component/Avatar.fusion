@@ -33,7 +33,7 @@ prototype(Abte.Site:Component.Avatar) < prototype(Neos.Fusion:Component) {
                 />
             </div>
 
-            <div class={props.class + ' ' + 'flex flex-col z-0 font-semibold text-white uppercase heading'}>
+            <div class={props.class + ' ' + 'flex flex-col z-0 font-extrabold text-white uppercase heading'}>
                 <div>
                     <div class={ props.classTitleEnlarged }>
                         <div class="block whitespace-nowrap">{props.title}</div>

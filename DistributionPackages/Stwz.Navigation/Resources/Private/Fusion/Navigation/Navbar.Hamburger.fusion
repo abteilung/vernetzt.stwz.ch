@@ -26,7 +26,7 @@ prototype(Stwz.Navigation:Component.Navbar.Hamburger) < prototype(Neos.Fusion:Co
         </div>
  
         <span class="sr-only">Open menu</span>
-        <!-- <div class="hidden mr-6 text-xl font-semibold tracking-normal md:block">Navigation</div> -->
+        <!-- <div class="hidden mr-6 text-xl font-extrabold tracking-normal md:block">Navigation</div> -->
 
      </button>
     `

@@ -53,7 +53,7 @@
                             </div>
                             <div>
                                 <Carbon.Link:Link 
-                                    additionalClass="hover:underline font-semibold" 
+                                    additionalClass="hover:underline font-extrabold" 
                                     link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
                                     renderDefaultTagIfNoLink='true'
                                 >
@@ -61,7 +61,7 @@
                                 </Carbon.Link:Link>
                                 <br/>
                                 <Carbon.Link:Link 
-                                    additionalClass="hover:underline font-semibold" 
+                                    additionalClass="hover:underline font-extrabold" 
                                     link={'mailto:' + props.email} 
                                     renderDefaultTagIfNoLink='true'
                                 >
@@ -70,7 +70,7 @@
                                 <br/>
 
                                 <Carbon.Link:Link 
-                                    additionalClass="hover:underline font-semibold" 
+                                    additionalClass="hover:underline font-extrabold" 
                                     link={'https://' + props.web} 
                                     renderDefaultTagIfNoLink='true'
                                 >

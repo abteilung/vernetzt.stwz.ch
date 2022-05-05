@@ -30,8 +30,12 @@ prototype(Abte.Site:Content.DiscountStoerer) < prototype(Neos.Neos:ContentCompon
             renderDefaultTagIfNoLink='true' 
             additionalClass={props.class}
         >
-            <p class="mb-0 text-2xl font-light">{props.title}</p>
-            <p class="mb-0 font-bold !text-accent">{props.subTitle}</p>
+            <Neos.Fusion:Augmenter class="mb-0 text-2xl font-light">
+                {props.title}
+            </Neos.Fusion:Augmenter>
+            <Neos.Fusion:Augmenter class="mb-0 font-extrabold !text-accent">
+                {props.subTitle}
+            </Neos.Fusion:Augmenter>
             {props.arrow}
         </Carbon.Link:Link>
                     

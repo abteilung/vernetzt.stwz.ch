@@ -146,67 +146,8 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                     <td>Telefonie:</td>
                     <td class="text-right"><span x-text="telephone"></span>.-</td>
                 </tr>
-                <!-- <tr x-if="mobile">
-                    <td>Mobile:</td>
-                    <td class="text-right"><span x-text="mobile"></span>.-</td>
-                </tr> -->
             </tbody>
         </table>
 
-        <!-- <fieldset class="relative w-full space-y-4">
-            <label class="relative flex items-center justify-between block cursor-pointer focus:outline-none">
-                <p 
-                    id="pricing-plans-0-description-1" 
-                    class="mb-0 text-sm font-semibold !text-black"
-                >
-                        Ich profitiere 12 Monate
-
-                </p>
-                <input 
-                    type="radio" 
-                    name="pricing-plan" 
-                    value="Startup" 
-                    class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500" 
-                    aria-labelledby="pricing-plans-0-label" 
-                    aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1" 
-                />
-            </label>
-            <hr class="border-[1px] border-b-black"/>
-            <label class="relative flex items-center justify-between block cursor-pointer focus:outline-none">
-                <p 
-                    id="pricing-plans-0-description-1" 
-                    class="mb-0 text-sm font-semibold !text-black"
-                >
-                        Ich profitiere 6 Monate
-                </p>
-                <input 
-                    type="radio" 
-                    name="pricing-plan" 
-                    value="Startup" 
-                    class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500" 
-                    aria-labelledby="pricing-plans-0-label" 
-                    aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1" 
-                />
-            </label>
-                <hr class="border-[1px] border-b-black"/>
-            <label class="relative flex items-center justify-between block cursor-pointer focus:outline-none">
-                <p 
-                    id="pricing-plans-0-description-1" 
-                    class="mb-0 text-sm font-semibold !text-black"
-                >
-                        Ich profitiere von den Standardpreisen
-                </p>
-                <input 
-                    type="radio" 
-                    name="pricing-plan" 
-                    value="Startup" 
-                    class="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500" 
-                    aria-labelledby="pricing-plans-0-label" 
-                    aria-describedby="pricing-plans-0-description-0 pricing-plans-0-description-1" 
-                />
-            </label>
-        </fieldset> -->
-
     `
-
 }

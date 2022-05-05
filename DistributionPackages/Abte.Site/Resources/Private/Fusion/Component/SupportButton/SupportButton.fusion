@@ -32,7 +32,7 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
             x-transition:enter="transition duration-500"
             x-transition:enter-start="opacity-0"
             x-transition:enter-end="opacity-100"
-            class="fixed group right-0 z-100 top-48"
+            class="fixed right-0 group z-100 top-48"
         >
             <div
                 x-init="appear = (appear)"
@@ -42,14 +42,14 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                     x-data="\{ 'open' : false \}"
                 >
                     <div 
-                        class="flex flex-wrap items-center transition-all duration-500 bg-white shadow-xl overflow-hidden rounded-l-xl"
+                        class="flex flex-wrap items-center overflow-hidden transition-all duration-500 bg-white shadow-xl rounded-l-xl"
                         "@click.away"="open = false" 
                         :class="open ? 'w-56 h-80 px-3 justify-left' : 'px-0 w-20 h-20 justify-center'"
                     >
                         <div class="flex items-center justify-center w-20 h-20 cursor-pointer">
                             <div 
                                 "@click.prevent"="open = !open" 
-                                class="relative flex flex-wrap justify-center delay-500 text-center text-black"
+                                class="relative flex flex-wrap justify-center text-center text-black delay-500"
                             >
                                 <Abte.Site:Icon.Support class="scale-75" />
                                 <p class="text-sm">Support</p>
@@ -63,14 +63,14 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
 
                             <div class="space-y-3">
                                 <Carbon.Link:Link 
-                                    additionalClass="text-sm block hover:underline rounded-full bg-accent font-semibold px-4 py-2" 
+                                    additionalClass="text-sm block hover:underline rounded-full bg-accent font-extrabold px-4 py-2" 
                                     link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
                                     renderDefaultTagIfNoLink='true'
                                 >
                                     <Neos.Neos:Editable property="helpdeskPhone" node={site} />
                                 </Carbon.Link:Link>
                                 <Carbon.Link:Link 
-                                    additionalClass="text-sm block hover:underline rounded-full bg-base-300 font-semibold px-4 py-2" 
+                                    additionalClass="text-sm block hover:underline rounded-full bg-base-300 font-extrabold px-4 py-2" 
                                     link={'mailto:' + props.email} 
                                     renderDefaultTagIfNoLink='true'
                                 >
@@ -85,7 +85,7 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                                                 <hr class="border-black border-t-[1px] mb-2"/>
                                                 <Carbon.Link:Link 
                                                     node={item.node}
-                                                    attributes.class="block font-normal text-sm truncate hover:text-primary"
+                                                    attributes.class="block text-sm font-normal truncate hover:text-primary"
                                                 >
                                                     {item.label}
                                                 </Carbon.Link:Link>

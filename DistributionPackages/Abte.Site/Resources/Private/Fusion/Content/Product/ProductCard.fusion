@@ -70,10 +70,10 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         </div>
 
                         <div class="mb-0 text-black h2">{props.title}</div>
-                        <div class="h3 font-semibold !mt-0">{props.subTitle}</div>
+                        <div class="h3 font-extrabold !mt-0">{props.subTitle}</div>
                         <div class="description">{props.description}</div>
                         <div class="price">
-                            <div class="text-sm font-semibold">Preis pro Monat</div>
+                            <div class="text-sm font-extrabold">Preis pro Monat</div>
                             <div class="text-lg">{props.price}</div>
                         </div>
                     </div>

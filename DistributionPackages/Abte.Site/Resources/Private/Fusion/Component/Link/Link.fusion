@@ -4,14 +4,14 @@ prototype(Abte.Site:Component.Link) < prototype(Neos.Neos:ContentComponent) {
 
     align = ''
 
-    linkClass = 'flex flex-row items-center space-x-2 text-lg lg:text-xl font-semibold !tracking-normal'
+    linkClass = 'flex flex-row items-center space-x-2 text-lg lg:text-xl font-extrabold !tracking-normal'
     
     text = ''
 
     target = ${ q(node).property('target') }
 
     iconAfter = Abte.Site:Icon.ArrowRight {
-        class='relative w-6 left-0 duration-150 text-secondary group-hover:left-2'
+        class='relative left-0 w-6 duration-150 text-secondary group-hover:left-2'
         @if.buttonIsBefore=${!this.positionBefore}
     }
 
