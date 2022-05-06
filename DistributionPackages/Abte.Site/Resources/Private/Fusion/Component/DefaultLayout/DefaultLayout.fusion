@@ -27,15 +27,32 @@ prototype(Abte.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) 
 	// PageClass
     @context.pageClass = ${ Carbon.String.urlize( q(documentNode).property('_nodeType') ) }
 
-    renderer = afx`
-		<Abte.Site:TrackingScript.GoogleAnalytics/>
-		<Abte.Site:Component.Alert />
-		<Stwz.Navigation:Component.Navbar />
-            {props.pageHeader}
-		
-		<Abte.Site:Component.SupportButton />
-			{props.content}
-        <Abte.Site:Component.Footer />
-		
-    `
+    renderer = Neos.Fusion:Case {
+		comingSoon {
+			condition = ${ q(node).is('[instanceof Abte.Site:Document.ComingSoon]') }
+			renderer = afx`
+			<div class="h-screen">
+				<Stwz.Navigation:Component.Navbar.ComingSoon />
+				<Abte.Site:Component.ComingSoonHeader />
+				{props.content}
+				<Abte.Site:Component.Footer />
+				</div>
+			`
+		}
+		fallback {
+			condition = ${ true }
+			renderer = afx`
+				<Abte.Site:TrackingScript.GoogleAnalytics/>
+				<Abte.Site:Component.Alert />
+				<Stwz.Navigation:Component.Navbar />
+					{props.pageHeader}
+				
+				<Abte.Site:Component.SupportButton />
+					{props.content}
+				<Abte.Site:Component.Footer />
+				
+			`
+		}
+	}
+	
 }

@@ -15,13 +15,36 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
                 <div class="flex justify-between w-full mx-0">
                     <Stwz.Navigation:Component.Navbar.Brand />
                     <div 
-                        class="flex justify-end w-full text-black mainNavigation font-sans s">
+                        class="flex justify-end w-full font-sans text-black mainNavigation">
                         <Stwz.Navigation:Component.Navbar.Navigation />
                         <Stwz.Navigation:Component.Navbar.Hamburger />
                         <!-- <Stwz.Navigation:Component.Navbar.KontaktButton /> -->
                         <Stwz.Navigation:Component.Navbar.Mobile />
                     </div>
 
+                </div>
+            </div>
+        </div>
+        <!-- <Stwz.Navigation:Component.Navbar.KontaktModal /> -->
+       
+    `
+}
+
+
+
+prototype(Stwz.Navigation:Component.Navbar.ComingSoon) < prototype(Neos.Fusion:Component) {
+
+    menuID = 'comingSoonMenu'
+
+    renderer = afx`
+
+        <div 
+            x-cloak
+            id={props.menuID}
+        >
+            <div class="fixed z-20 z-40 flex h-32 -translate-x-1/2 container-wide left-1/2">
+                <div class="flex items-center justify-between w-full mx-0 gridPadding-x">
+                    <Stwz.Navigation:Component.Navbar.Brand />
                 </div>
             </div>
         </div>

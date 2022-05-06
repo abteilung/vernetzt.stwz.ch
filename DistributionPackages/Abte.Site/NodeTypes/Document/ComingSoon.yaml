@@ -1,0 +1,13 @@
+'Abte.Site:Document.ComingSoon':
+  superTypes:
+    'Abte.Site:Document.AbstractPage': true
+    'Abte.Site:Mixin.Illustration': true
+    'Abte.Site:Mixin.TeaserText': true
+    'Abte.Site:Constraint.Document.Restricted': true
+  ui:
+    label: Coming Soon
+    icon: calendar
+    position: 999
+  constraints:
+    nodeTypes:
+      '*': false

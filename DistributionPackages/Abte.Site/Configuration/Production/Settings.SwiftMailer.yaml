@@ -1,0 +1,11 @@
+Neos:
+  SwiftMailer:
+    transport:
+      type: 'Swift_SmtpTransport'
+      options:
+        host: 'mail.cyon.ch'
+        port: '465'
+        encryption: 'ssl'
+        username: 'xxx@vernetzt.stwz.ch'
+        password: 'xxx'
+        localDomain: 'mail.cyon.ch'

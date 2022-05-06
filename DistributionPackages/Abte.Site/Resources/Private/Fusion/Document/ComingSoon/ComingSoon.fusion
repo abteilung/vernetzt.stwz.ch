@@ -1,0 +1,16 @@
+prototype(Abte.Site:Document.ComingSoon) < prototype(Abte.Site:Document.AbstractPage) {
+    # On the Homepage you typically want to use the brand name as the start,
+    # so don't append it again
+    head.titleTag.outputSuffixOnTitleOverride = false
+
+    body.content = Neos.Fusion:Component {
+        renderer = afx`
+            <main>
+                <div class="">
+                    {props.main}
+                </div>
+            </main>
+        `
+    }
+}
+

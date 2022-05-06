@@ -1,0 +1,73 @@
+prototype(Abte.Site:Component.ComingSoonHeader) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    teaserText = Neos.Neos:Editable {
+        property = 'teaser_short'
+        node = ${ node }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    subTitle = Neos.Neos:Editable {
+        property = 'subTitle'
+        node = ${ node }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    teaser = Neos.Neos:Editable {
+        property = 'teaser_short'
+        node = ${ node }
+        @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
+            @position = 'end'
+        }
+    }
+
+    svgIllustration = Neos.Fusion:Tag {
+        attributes.class = 'lineAnimation'
+        content = ${documentNode.properties.illustration}
+    }
+
+    productIcons = Neos.Fusion:Loop {
+        items = ${ q(site).children('[instanceof Abte.Site:Document.Product]').get() }
+        itemRenderer = Abte.Site:Mixin.Icons {
+            node = ${ q(item) }
+            class="scale-100"
+        }
+        @process.template = ${ '<div class="flex space-x-4">' + value + '</div>'}
+    }
+
+    renderer = afx`
+        <header class={pageClass + ' ' + 'relative  h-5/6 bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
+            <div class="container relative top-0 z-20 flex grid items-center justify-between w-full h-full grid-cols-5 mx-auto mt-0 overflow-visible gridPadding gridgap-x xl:mb-10">
+                <div class="col-span-2 space-y-10">
+                    <Neos.Fusion:Augmenter class="text-black h1">
+                        {props.subTitle}
+                    </Neos.Fusion:Augmenter>
+
+                    {props.teaser}
+
+                    {props.productIcons}
+                </div>
+                <div class="h-full col-span-3 illustrationContainer">
+                    {props.svgIllustration}
+                </div>
+            </div>
+        </header>
+    `
+
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			documentNode = ${documentNode}
+		}
+		entryTags {
+			1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+		}
+	}
+}

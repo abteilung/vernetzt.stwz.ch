@@ -75,8 +75,8 @@ module.exports = {
 					lineHeight: '48px',
 					letterSpacing: '0'
 				}],
-				'3xl': ['42px', {
-					lineHeight: '50px',
+				'3xl': ['48px', {
+					lineHeight: '56px',
 					letterSpacing: '0'
 				}],
 			},
