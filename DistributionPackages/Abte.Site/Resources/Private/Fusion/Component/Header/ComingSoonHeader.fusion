@@ -44,7 +44,7 @@ prototype(Abte.Site:Component.ComingSoonHeader) < prototype(Neos.Fusion:Componen
 
     renderer = afx`
         <header class={pageClass + ' ' + 'relative  h-5/6 bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="container relative top-0 z-20 flex grid items-center justify-between w-full h-full grid-cols-5 mx-auto mt-0 overflow-visible gridPadding gridgap-x xl:mb-10">
+            <div class="container relative top-0 z-20 flex grid items-center justify-between w-full h-full mx-auto mt-0 overflow-visible md:grid-cols-5 gridPadding gridgap-x xl:mb-10">
                 <div class="col-span-2 space-y-10">
                     <Neos.Fusion:Augmenter class="text-black h1">
                         {props.subTitle}
@@ -54,7 +54,7 @@ prototype(Abte.Site:Component.ComingSoonHeader) < prototype(Neos.Fusion:Componen
 
                     {props.productIcons}
                 </div>
-                <div class="h-full col-span-3 illustrationContainer">
+                <div class="hidden h-full col-span-3 md:block illustrationContainer">
                     {props.svgIllustration}
                 </div>
             </div>

@@ -4895,6 +4895,10 @@ select{
         margin-bottom: 2rem;
     }
 
+    .lg\:block{
+        display: block;
+    }
+
     .lg\:flex{
         display: flex;
     }

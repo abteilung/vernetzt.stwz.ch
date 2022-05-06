@@ -42,7 +42,7 @@ prototype(Stwz.Navigation:Component.Navbar.ComingSoon) < prototype(Neos.Fusion:C
             x-cloak
             id={props.menuID}
         >
-            <div class="fixed z-20 z-40 flex h-32 -translate-x-1/2 container-wide left-1/2">
+            <div class="absolute z-20 z-40 flex h-32 -translate-x-1/2 container-wide left-1/2">
                 <div class="flex items-center justify-between w-full mx-0 gridPadding-x">
                     <Stwz.Navigation:Component.Navbar.Brand />
                 </div>
