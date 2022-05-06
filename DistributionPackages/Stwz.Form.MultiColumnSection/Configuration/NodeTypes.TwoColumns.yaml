@@ -1,0 +1,42 @@
+'Stwz.Form.MultiColumnSection:TwoColumns':
+  superTypes:
+    'Neos.Form.Builder:FormElement': true
+    'Neos.Form.Builder:SectionMixin': true
+    'Neos.Form.Builder:IdentifierMixin': false
+    'Neos.Form.Builder:DefaultValueMixin': false
+    'Neos.Form.Builder:RequiredCheckboxMixin': false
+    'Neos.Form.Builder:ValidatorsMixin': false
+  ui:
+    label: 'Two Columns'
+    icon: icon-columns
+    group: form.container
+    inspector:
+      groups:
+        'formElement':
+          icon: icon-columns
+  childNodes:
+    'elements': ~
+    'column1Elements':
+      type: 'Neos.Form.Builder:ElementCollection'
+    'column2Elements':
+      type: 'Neos.Form.Builder:ElementCollection'
+  properties:
+    'layout':
+      defaultValue: '6-6'
+      ui:
+        reloadIfChanged: true
+        inspector:
+          group: formElement
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '6-6':
+                label: '50% / 50%'
+              '8-4':
+                label: '66% / 33%'
+              '4-8':
+                label: '33% / 66%'
+              '3-9':
+                label: '25% / 75%'
+              '9-3':
+                label: '75% / 25%'

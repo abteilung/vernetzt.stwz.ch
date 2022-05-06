@@ -1369,15 +1369,6 @@ select{
 .select-disabled, .select[disabled]{
     pointer-events: none;
 }
-.table{
-    position: relative;
-}
-.table th:first-child{
-    position: sticky;
-    position: -webkit-sticky;
-    left: 0px;
-    z-index: 11;
-}
 .sr-only{
     position: absolute;
     width: 1px;
@@ -1502,6 +1493,9 @@ select{
 .left-20{
     left: 5rem;
 }
+.left-16{
+    left: 4rem;
+}
 .left-1{
     left: 0.25rem;
 }
@@ -1510,9 +1504,6 @@ select{
 }
 .top-24{
     top: 6rem;
-}
-.left-16{
-    left: 4rem;
 }
 .isolate{
     isolation: isolate;
@@ -1850,9 +1841,6 @@ select{
 .flex{
     display: flex;
 }
-.table{
-    display: table;
-}
 .grid{
     display: grid;
 }
@@ -2016,9 +2004,6 @@ select{
 }
 .flex-none{
     flex: none;
-}
-.table-auto{
-    table-layout: auto;
 }
 .origin-bottom-left{
     transform-origin: bottom left;
@@ -2351,11 +2336,11 @@ select{
 .border-t-\[1px\]{
     border-top-width: 1px;
 }
-.border-b-\[1px\]{
-    border-bottom-width: 1px;
-}
 .border-t{
     border-top-width: 1px;
+}
+.border-b-\[1px\]{
+    border-bottom-width: 1px;
 }
 .border-dashed{
     border-style: dashed;
@@ -2762,9 +2747,6 @@ select{
 }
 .text-center{
     text-align: center;
-}
-.text-right{
-    text-align: right;
 }
 .font-sans{
     font-family: Mulish, Helvetica, Arial, sans-serif;
@@ -3864,32 +3846,16 @@ select{
         right: 1rem;
     }
 
-    .md\:col-span-2{
-        grid-column: span 2 / span 2;
-    }
-
-    .md\:col-span-1{
-        grid-column: span 1 / span 1;
-    }
-
-    .md\:col-span-3{
-        grid-column: span 3 / span 3;
-    }
-
     .md\:col-span-4{
         grid-column: span 4 / span 4;
-    }
-
-    .md\:col-span-5{
-        grid-column: span 5 / span 5;
     }
 
     .md\:col-span-6{
         grid-column: span 6 / span 6;
     }
 
-    .md\:col-span-7{
-        grid-column: span 7 / span 7;
+    .md\:col-span-3{
+        grid-column: span 3 / span 3;
     }
 
     .md\:col-span-8{
@@ -3898,6 +3864,22 @@ select{
 
     .md\:col-span-9{
         grid-column: span 9 / span 9;
+    }
+
+    .md\:col-span-2{
+        grid-column: span 2 / span 2;
+    }
+
+    .md\:col-span-1{
+        grid-column: span 1 / span 1;
+    }
+
+    .md\:col-span-5{
+        grid-column: span 5 / span 5;
+    }
+
+    .md\:col-span-7{
+        grid-column: span 7 / span 7;
     }
 
     .md\:col-span-10{
@@ -4234,6 +4216,10 @@ select{
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     }
 
+    .md\:grid-cols-12{
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
     .md\:grid-cols-3{
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -4278,8 +4264,8 @@ select{
         grid-template-columns: repeat(11, minmax(0, 1fr));
     }
 
-    .md\:grid-cols-12{
-        grid-template-columns: repeat(12, minmax(0, 1fr));
+    .md\:gap-6{
+        gap: 1.5rem;
     }
 
     .md\:space-x-12 > :not([hidden]) ~ :not([hidden]){

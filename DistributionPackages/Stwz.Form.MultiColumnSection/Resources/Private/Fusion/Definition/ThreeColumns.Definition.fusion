@@ -1,0 +1,40 @@
+prototype(Stwz.Form.MultiColumnSection:ThreeColumns.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
+    @class = 'Stwz\\Form\\MultiColumnSection\\Fusion\\ThreeColumnFormElementImplementation'
+    formElementType = 'Stwz.Form.MultiColumnSection:ThreeColumns'
+
+    column1Elements = Neos.Form.Builder:ElementCollection {
+        prototype(Neos.Form.Builder:FormElement.Definition) {
+            renderingOptions._column = 1
+        }
+    }
+    column2Elements = Neos.Form.Builder:ElementCollection {
+        prototype(Neos.Form.Builder:FormElement.Definition) {
+            renderingOptions._column = 2
+        }
+    }
+    column3Elements = Neos.Form.Builder:ElementCollection {
+        prototype(Neos.Form.Builder:FormElement.Definition) {
+            renderingOptions._column = 3
+        }
+    }
+}
+
+//prototype(Neos.Form.Builder:NodeBasedElementCollection) {
+//    itemRenderer {
+//        twoColumns {
+//            @position = 'start'
+//            condition = ${q(elementNode).is('[instanceof Stwz.Form.MultiColumnSection:TwoColumns]')}
+//            renderer = Neos.Form.Builder:NodeBasedFormElement {
+//                type = 'Stwz.Form.MultiColumnSection:TwoColumns.Definition'
+//                element {
+//                    column1Elements = Neos.Form.Builder:NodeBasedElementCollection {
+//                        collection = ${q(elementNode).children('column1Elements').children()}
+//                    }
+//                    column2Elements = Neos.Form.Builder:NodeBasedElementCollection {
+//                        collection = ${q(elementNode).children('column2Elements').children()}
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}

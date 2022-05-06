@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c5154e7a25fb62cad63bb0a338abc97",
+    "content-hash": "d794028bec23967c283cbecff25a48af",
     "packages": [
         {
             "name": "abte/site",
@@ -2009,16 +2009,16 @@
         },
         {
             "name": "doctrine/persistence",
-            "version": "2.5.2",
+            "version": "2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "4276c6cbc0ca692c190f650a2678623bf04af2d2"
+                "reference": "d7edf274b6d35ad82328e223439cc2bb2f92bd9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/4276c6cbc0ca692c190f650a2678623bf04af2d2",
-                "reference": "4276c6cbc0ca692c190f650a2678623bf04af2d2",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/d7edf274b6d35ad82328e223439cc2bb2f92bd9e",
+                "reference": "d7edf274b6d35ad82328e223439cc2bb2f92bd9e",
                 "shasum": ""
             },
             "require": {
@@ -2091,7 +2091,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/2.5.2"
+                "source": "https://github.com/doctrine/persistence/tree/2.5.3"
             },
             "funding": [
                 {
@@ -2107,7 +2107,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-02T17:29:02+00:00"
+            "time": "2022-05-03T09:16:53+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -7511,6 +7511,34 @@
             }
         },
         {
+            "name": "stwz/form-multicolumnsection",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Stwz.Form.MultiColumnSection",
+                "reference": "d25af543799a085be3878a4f9e4057d3f6024dbc"
+            },
+            "require": {
+                "neos/form": "*",
+                "neos/neos": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Stwz.Form.MultiColumnSection"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stwz\\Form\\MultiColumnSection\\": "Classes/"
+                }
+            },
+            "description": "A package for Neos CMS which render multi columns in form nodetypes.",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "stwz/movinglines",
             "version": "dev-main",
             "dist": {
@@ -9139,16 +9167,16 @@
     "packages-dev": [
         {
             "name": "carbon/pipeline",
-            "version": "0.10.6",
+            "version": "0.10.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPackages/Carbon.Pipeline.git",
-                "reference": "c711bb75468a914acf7cd771900551a3a0635589"
+                "reference": "7f25f24296bbad00639a60e79956c39c181e38e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPackages/Carbon.Pipeline/zipball/c711bb75468a914acf7cd771900551a3a0635589",
-                "reference": "c711bb75468a914acf7cd771900551a3a0635589",
+                "url": "https://api.github.com/repos/CarbonPackages/Carbon.Pipeline/zipball/7f25f24296bbad00639a60e79956c39c181e38e4",
+                "reference": "7f25f24296bbad00639a60e79956c39c181e38e4",
                 "shasum": ""
             },
             "type": "neos-build",
@@ -9187,7 +9215,7 @@
             ],
             "support": {
                 "issues": "https://github.com/CarbonPackages/Carbon.Pipeline/issues",
-                "source": "https://github.com/CarbonPackages/Carbon.Pipeline/tree/0.10.6"
+                "source": "https://github.com/CarbonPackages/Carbon.Pipeline/tree/0.10.7"
             },
             "funding": [
                 {
@@ -9199,7 +9227,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-26T10:11:23+00:00"
+            "time": "2022-05-05T17:35:14+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -11638,6 +11666,7 @@
         "abte/site": 20,
         "abteilung/gridsystem": 20,
         "stwz/navigation": 20,
+        "stwz/form-multicolumnsection": 20,
         "stwz/flickity": 20,
         "stwz/privacy": 20,
         "stwz/addresslookup": 20,

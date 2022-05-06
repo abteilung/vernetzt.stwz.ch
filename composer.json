@@ -37,6 +37,7 @@
         "abteilung/gridsystem": "@dev",
         "stwz/navigation": "@dev",
 
+        "stwz/form-multicolumnsection": "@dev",
         "stwz/flickity": "@dev",
         "stwz/privacy": "@dev",
         "stwz/addresslookup": "@dev",

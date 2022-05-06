@@ -1,11 +1,10 @@
-// cssnano and svgo optimisation has some issues with pleeease-filters
 module.exports = (ctx) => ({
     plugins: {
         "postcss-import": {
             resolve: ctx.resolve,
         },
         "tailwindcss/nesting": true,
-        tailwindcss: true,
+        tailwindcss: ctx.tailwindcss,
         "postcss-assets": {
             cachebuster: false,
             basePath: `${ctx.basePath}/`,

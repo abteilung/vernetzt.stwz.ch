@@ -1,0 +1,33 @@
+{namespace form=Neos\Form\ViewHelpers}
+<f:if condition="{container.label}">
+	<h2>{container.label}</h2>
+</f:if>
+<div class="row md:grid-cols-12 grid gap-4 md:gap-6">
+	<div class="
+		{f:if(condition: '{container.properties.layout}==4-4-4', then: 'md:col-span-4')}
+		{f:if(condition: '{container.properties.layout}==6-3-3', then: 'md:col-span-6')}
+		{f:if(condition: '{container.properties.layout}==3-6-3', then: 'md:col-span-3')}
+		{f:if(condition: '{container.properties.layout}==3-3-6', then: 'md:col-span-3')}">
+		<f:for each="{container.column1Elements}" as="element">
+			<form:renderRenderable renderable="{element}" />
+		</f:for>
+	</div>
+	<div class="
+		{f:if(condition: '{container.properties.layout}==4-4-4', then: 'md:col-span-4')}
+		{f:if(condition: '{container.properties.layout}==6-3-3', then: 'md:col-span-3')}
+		{f:if(condition: '{container.properties.layout}==3-6-3', then: 'md:col-span-6')}
+		{f:if(condition: '{container.properties.layout}==3-3-6', then: 'md:col-span-3')}">
+		<f:for each="{container.column2Elements}" as="element">
+			<form:renderRenderable renderable="{element}" />
+		</f:for>
+	</div>
+	<div class="
+		{f:if(condition: '{container.properties.layout}==4-4-4', then: 'md:col-span-4')}
+		{f:if(condition: '{container.properties.layout}==6-3-3', then: 'md:col-span-3')}
+		{f:if(condition: '{container.properties.layout}==3-6-3', then: 'md:col-span-3')}
+		{f:if(condition: '{container.properties.layout}==3-3-6', then: 'md:col-span-6')}">
+		<f:for each="{container.column3Elements}" as="element">
+			<form:renderRenderable renderable="{element}" />
+		</f:for>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+{
+    "description": "A package for Neos CMS which render multi columns in form nodetypes.",
+    "type": "neos-package",
+    "name": "stwz/form-multicolumnsection",
+    "require": {
+        "neos/neos": "*",
+        "neos/form": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stwz\\Form\\MultiColumnSection\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Stwz.Form.MultiColumnSection"
+        }
+    }
+}
