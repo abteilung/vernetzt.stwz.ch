@@ -73,7 +73,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         <div class="h3 font-extrabold !mt-0">{props.subTitle}</div>
                         <div class="description">{props.description}</div>
                         <div class="price">
-                            <div class="text-sm font-extrabold">Preis pro Monat</div>
+                            <div class="font-extrabold">Preis pro Monat</div>
                             <div class="text-xl">{props.price}</div>
                         </div>
                     </div>
