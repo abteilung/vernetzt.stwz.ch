@@ -23,7 +23,7 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
         }
         width =  800
         height = 800
-        class = "h-full w-full"
+        class = "w-full h-full"
     }
 
 
@@ -40,7 +40,7 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
     renderer = afx`
         <div class="personCard" id={props.itemID}>
             <div class="flex space-x-6">
-                <div class="h-24 w-24 overflow-hidden rounded-full">
+                <div class="overflow-hidden rounded-full w-36 h-36">
                     {props.portrait}
                 </div>
                 <div>
@@ -50,13 +50,13 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
                     <p>{props.jobTitle}</p>
                 
 
-                    <div class="relative aspect-square w-16 flex justify-center items-center">
+                    <div class="relative flex items-center justify-center w-16 aspect-square">
                         <Carbon.Link:Link 
                             additionalClass="hover:underline font-extrabold" 
                             link={'mailto:' + props.email} 
                             renderDefaultTagIfNoLink='true'
                         >
-                            <Abte.Site:Icon.Envelope class="absolute w-6 top-0 left-0 scale-100 hover:scale-110 duration-150" />
+                            <Abte.Site:Icon.Envelope class="absolute top-0 left-0 w-6 duration-150 scale-100 hover:scale-110" />
                         </Carbon.Link:Link>
                         
                         <Abte.Site:Icon.Diagonal />
@@ -66,7 +66,7 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
                             link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
                             renderDefaultTagIfNoLink='true'
                         >
-                            <Abte.Site:Icon.Phone class="absolute w-6 bottom-0 right-0 scale-100 hover:scale-110 duration-150" />
+                            <Abte.Site:Icon.Phone class="absolute bottom-0 right-0 w-6 duration-150 scale-100 hover:scale-110" />
                         </Carbon.Link:Link>
                     </div>
 
