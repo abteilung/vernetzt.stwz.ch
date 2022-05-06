@@ -694,8 +694,8 @@ select{
     h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
-    font-size: 27px;
-    line-height: 32.4px;
+    font-size: 24px;
+    line-height: 32px;
     letter-spacing: 0;
     font-weight: 800;
 }
@@ -713,8 +713,8 @@ select{
     h2, .h2, h1.h2, h4.h2, h5.h2{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
-    font-size: 21px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 26px;
     letter-spacing: 0;
     font-weight: 800;
 }
@@ -727,7 +727,7 @@ select{
     h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3{
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 18px;
-    line-height: 27px;
+    line-height: 23px;
     letter-spacing: 0;
     font-weight: 300;
     line-height: 1.25;
@@ -751,40 +751,40 @@ select{
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
-    font-size: 27px;
-    line-height: 32.4px;
+    font-size: 24px;
+    line-height: 32px;
     letter-spacing: 0;
     font-weight: 800;
 }
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
-    font-size: 27px;
-    line-height: 32.4px;
+    font-size: 24px;
+    line-height: 32px;
     letter-spacing: 0;
     font-weight: 800;
 }
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
-    font-size: 27px;
-    line-height: 32.4px;
+    font-size: 24px;
+    line-height: 32px;
     letter-spacing: 0;
     font-weight: 800;
 }
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
-    font-size: 27px;
-    line-height: 32.4px;
+    font-size: 24px;
+    line-height: 32px;
     letter-spacing: 0;
     font-weight: 800;
 }
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
-    font-size: 27px;
-    line-height: 32.4px;
+    font-size: 24px;
+    line-height: 32px;
     letter-spacing: 0;
     font-weight: 800;
 }
@@ -801,19 +801,19 @@ select{
 
     h4, .h4, h1.h4, h2.h4, h3.h4, h5.h4{
     font-family: Mulish, Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 20px;
+    line-height: 26px;
     letter-spacing: 0;
-    font-weight: 300;
-}
-        .headline h4, .headline .h4, .headline h1.h4, .headline h2.h4, .headline h3.h4, .headline h5.h4{
+    font-weight: 800;
     margin-bottom: 1rem;
 }
+        .headline h4, .headline .h4, .headline h1.h4, .headline h2.h4, .headline h3.h4, .headline h5.h4 {
+        }
 
     h5, .h5, h1.h5, h2.h5, h3.h5{
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 18px;
-    line-height: 27px;
+    line-height: 23px;
     letter-spacing: 0;
     font-weight: 300;
 }
@@ -824,7 +824,7 @@ select{
     .lead{
     margin-bottom: 1rem;
     font-size: 18px;
-    line-height: 27px;
+    line-height: 23px;
     letter-spacing: 0;
     line-height: 1.5 !important;
 }
@@ -938,8 +938,8 @@ select{
 
 
     .megaMenu nav li a{
-    font-size: 21px !important;
-    line-height: 28px !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
     letter-spacing: 0 !important;
 }
     
@@ -2755,18 +2755,18 @@ select{
     font-family: Mulish, Helvetica, Arial, sans-serif;
 }
 .text-lg{
-    font-size: 21px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 26px;
     letter-spacing: 0;
 }
 .text-xl{
-    font-size: 27px;
-    line-height: 32.4px;
+    font-size: 24px;
+    line-height: 32px;
     letter-spacing: 0;
 }
 .text-base{
     font-size: 18px;
-    line-height: 27px;
+    line-height: 23px;
     letter-spacing: 0;
 }
 .text-sm{
@@ -2780,13 +2780,14 @@ select{
     letter-spacing: 0;
 }
 .text-2xl{
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 35px;
+    line-height: 45px;
     letter-spacing: 0;
 }
 .text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0;
 }
 .font-extrabold{
     font-weight: 800;
@@ -3747,8 +3748,8 @@ select{
 @media (min-width: 768px){
 
     h2, .h2, h1.h2, h4.h2, h5.h2{
-        font-size: 27px;
-        line-height: 32.4px;
+        font-size: 24px;
+        line-height: 32px;
         letter-spacing: 0;
     }
 
@@ -3811,7 +3812,7 @@ select{
     input, textarea{
         padding: 0.75rem !important;
         font-size: 18px !important;
-        line-height: 27px !important;
+        line-height: 23px !important;
         letter-spacing: 0 !important;
     }
 
@@ -4501,14 +4502,14 @@ select{
     }
 
     .md\:text-lg{
-        font-size: 21px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 26px;
         letter-spacing: 0;
     }
 
     .md\:text-xl{
-        font-size: 27px;
-        line-height: 32.4px;
+        font-size: 24px;
+        line-height: 32px;
         letter-spacing: 0;
     }
 
@@ -4522,7 +4523,7 @@ select{
 
     body{
         font-size: 18px;
-        line-height: 27px;
+        line-height: 23px;
         letter-spacing: 0;
     }
 
@@ -4531,51 +4532,49 @@ select{
     }
 
     h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1{
-        font-size: 36px;
+        font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
     }
 
     h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3{
-        font-size: 21px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 26px;
         letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
-        font-size: 36px;
+        font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
-        font-size: 36px;
+        font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
-        font-size: 36px;
+        font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
-        font-size: 36px;
+        font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
-        font-size: 36px;
+        font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
     }
 
     .lead{
-        font-size: 21px;
-        line-height: 28px;
-        letter-spacing: 0;
+        font-size: 30px;
     }
 
     .container-wide{
@@ -4895,10 +4894,6 @@ select{
         margin-bottom: 2rem;
     }
 
-    .lg\:block{
-        display: block;
-    }
-
     .lg\:flex{
         display: flex;
     }
@@ -5212,8 +5207,8 @@ select{
     }
 
     .lg\:text-xl{
-        font-size: 27px;
-        line-height: 32.4px;
+        font-size: 24px;
+        line-height: 32px;
         letter-spacing: 0;
     }
 
@@ -5230,44 +5225,26 @@ select{
 
     h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1{
         margin-bottom: 1rem;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
         margin-bottom: 1rem;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
         margin-bottom: 1rem;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
         margin-bottom: 1rem;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
         margin-bottom: 1rem;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0;
     }
 
     .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
         margin-bottom: 1rem;
-        font-size: 48px;
-        line-height: 56px;
-        letter-spacing: 0;
     }
 
     .container-wide{

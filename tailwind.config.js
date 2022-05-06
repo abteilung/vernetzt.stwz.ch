@@ -60,22 +60,26 @@ module.exports = {
 					letterSpacing: '0'
 				}],
 				base:['18px', {
-					lineHeight: '27px',
+					lineHeight: '23px',
 					letterSpacing: '0'
 				}],
-				lg: ['21px', {
-					lineHeight: '28px',
+				lg: ['20px', {
+					lineHeight: '26px',
 					letterSpacing: '0'
 				}],
-				xl: ['27px', {
-					lineHeight: '32.4px',
+				xl: ['24px', {
+					lineHeight: '32px',
 					letterSpacing: '0'
 				}],
-				'2xl': ['36px', {
+				'2xl': ['35px', {
+					lineHeight: '45px',
+					letterSpacing: '0'
+				}],
+				'3xl': ['40px', {
 					lineHeight: '48px',
 					letterSpacing: '0'
 				}],
-				'3xl': ['48px', {
+				'4xl': ['48px', {
 					lineHeight: '56px',
 					letterSpacing: '0'
 				}],

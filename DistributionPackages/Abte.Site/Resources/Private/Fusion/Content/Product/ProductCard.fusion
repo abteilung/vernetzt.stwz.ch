@@ -74,7 +74,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         <div class="description">{props.description}</div>
                         <div class="price">
                             <div class="text-sm font-extrabold">Preis pro Monat</div>
-                            <div class="text-lg">{props.price}</div>
+                            <div class="text-xl">{props.price}</div>
                         </div>
                     </div>
                 </div>
