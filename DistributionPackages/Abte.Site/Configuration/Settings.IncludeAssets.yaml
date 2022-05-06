@@ -7,7 +7,6 @@ Carbon:
         Package: 'Abte.Site'
         General:
           Head: 
-            # - //use.typekit.net/bev6plj.css
             - Stwz.css
           Body: 
             - Stwz.js[defer]
@@ -15,10 +14,3 @@ Carbon:
           Head:
             # - Backend.css
             # - Backend.js[defer]
-        Live:
-
-      "Sitegeist.Lazybones":
-        Package: Sitegeist.Lazybones
-        Path:
-          File:
-            JS: 'Public/JavaScript'

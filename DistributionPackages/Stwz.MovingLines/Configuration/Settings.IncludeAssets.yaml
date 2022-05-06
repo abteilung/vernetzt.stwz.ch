@@ -1,7 +1,5 @@
 Carbon:
   IncludeAssets:
-    LoadJSforCSSAsynchron: true
-    GoogleFonts: "Barlow+Semi+Condensed:400,600,700|Barlow+Condensed:600&display=swap[async]"
     Packages:
       'Stwz.MovingLines':
         Package: 'Stwz.MovingLines'
