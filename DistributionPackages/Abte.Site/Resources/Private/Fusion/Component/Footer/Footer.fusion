@@ -15,6 +15,7 @@
         }
         
         metaItems = Stwz.Navigation:Component.Nav.Meta {
+            @if.isNotOnComingSoon=${!q(node).is('[instanceof Abte.Site:Document.ComingSoon]')}
             menuItems {
                 itemCollection >
                 startingPoint = ${ q(site).children('[uriPathSegment="meta"]').get(0) }
@@ -79,7 +80,6 @@
                             </div>
                             <div>
                                 {props.metaItems}
-                                © {props.year} {props.footerInfo}
                             </div>
 
 
