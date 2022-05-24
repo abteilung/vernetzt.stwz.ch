@@ -107,7 +107,7 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                     </div> -->
 
                     <Abte.Site:Component.BestellUebersicht />
-                    <Abte.Site:Content.Button outerClass="text-center" class="text-base text-white bg-black" text="Jetzt bestellen" />
+                    <Abte.Site:Content.Button outerClass="text-center" conditionalShow={true} class="text-base text-white bg-black" text="Jetzt bestellen" />
                 </div>
             </div>
         </div>

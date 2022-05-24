@@ -30,8 +30,17 @@ document.addEventListener('alpine:init', () => {
                     })
                     .then(response => response.json())
                     .then(data => {
-                        this.success = data.status == 'success' ? true : false;
-                        this.error = !this.success;
+                        if(data.status == 'success'){
+                            this.success = true;
+                            this.error = !this.success;
+                            let event = new CustomEvent('addresslookup-success', {});
+                            window.dispatchEvent(event);
+                        }else{
+                            this.success = false;
+                            this.error = !this.success;
+                            let event = new CustomEvent('addresslookup-error', {});
+                            window.dispatchEvent(event);
+                        }
                         return data;
                     })
                     .catch(error => {
