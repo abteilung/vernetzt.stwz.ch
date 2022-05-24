@@ -2,6 +2,8 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('addresslookup', () => ({
         
         url: document.getElementById('addressLookup').dataset.url,
+        error: false,
+        success: false,
         response: '',
         
         address: {
@@ -16,21 +18,26 @@ document.addEventListener('alpine:init', () => {
         check() {
             console.log(this.url);
             fetch(
-                this.url   +'?streetname='+ address.streetname 
-                           +'&city='+ address.city 
-                           +'&country='+address.country
-                           +'&zip='+ address.zip_code 
-                           +'&houseNumber='+ address.house_number 
-                           +'&houseNumberSuffix='
+                this.url   +'?streetname='+ this.address.streetname 
+                           +'&zip='+ this.address.zip_code 
+                           +'&city='+ this.address.city 
+                           +'&country='+ this.address.country
+                           +'&houseNumber='+ this.address.house_number 
+                           +'&houseNumberSuffix='+ this.address.house_number_suffix
                     ,{
                         method: 'GET', 
                         headers: { 'Content-Type': 'application/json'}
-                    }).then(response => console.log(response.json()));
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        this.success = data.status == 'success' ? true : false;
+                        this.error = !this.success;
+                        return data;
+                    })
+                    .catch(error => {
+                        return error;
+                    });
         },
-  
-        // reset() {
-          
-        // },
   
         // resetAll(){
         

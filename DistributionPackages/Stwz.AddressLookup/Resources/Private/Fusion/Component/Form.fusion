@@ -33,12 +33,20 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                                 x-on:click={"check"}>
                                 Prüfen
                         </button>
-                        <div id="addressMessages" class="sm:col-span-12 lg:col-span-12 xl:col-span-12 !px-1">
-                            <div class="error bg-red">
+                        <div id="addressMessages" class="fixed w-1/2 sm:col-span-12 lg:col-span-12 xl:col-span-12 !px-1">
+                            <div class="bg-error p-4"
+                                x-show="error"
+                                x-on:click.away="error = false">
                                 <span>Für diese Adresse exisitert noch keinen Anschluss.
                                 Überprüfe deine Angaben oder registriere dich um zu erfahren wann dein anschluss freigeschaltet wird.</span>
                             </div>
-                            <div class="success"></div>
+                            <div class="success"
+                                x-show="success"
+                                x-on:click.away="success = false">
+                                <span>
+                                    Die angefragte Adresse ist angeschlossen.
+                                </span>
+                            </div>
                         </div>  
 
                     </div>
