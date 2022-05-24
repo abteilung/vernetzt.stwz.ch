@@ -1,0 +1,9 @@
+-
+  name: 'Api - Address Look up'
+  uriPattern: 'api'
+  defaults:
+    '@package': 'Stwz.AddressLookup'
+    '@controller': 'Api'
+    '@action':     'fetch'
+    '@format':     'json'
+  appendExceedingArguments: true

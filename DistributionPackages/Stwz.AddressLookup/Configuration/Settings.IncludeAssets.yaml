@@ -1,0 +1,15 @@
+Carbon:
+  IncludeAssets:
+    LoadJSforCSSAsynchron: true
+    Packages:
+      'Stwz.AddressLookup':
+        Package: 'Stwz.AddressLookup'
+        General:
+          Head: 
+            - AddressLookup.css
+          Body: 
+            - AddressLookup.js
+        Backend:
+          Head:
+            # - Backend.css
+            # - Backend.js[defer]

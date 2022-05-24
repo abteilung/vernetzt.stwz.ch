@@ -1,0 +1,14 @@
+privilegeTargets:
+  
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    
+    Stwz.AddressLookup:Api:
+      matcher: 'method(Stwz\AddressLookup\Controller\ApiController->(?!initialize).*Action())'
+
+roles:
+
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: Stwz.AddressLookup:Api
+        permission: GRANT

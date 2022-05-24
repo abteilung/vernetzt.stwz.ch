@@ -1,5 +1,7 @@
-Neos:
-  Neos:
-    fusion:
-      autoInclude:
-        Stwz.AddressLookup: true
+Stwz:
+  AddressLookup:
+    Api:
+      URL: https://stwz.arc.fibx.ch/restapi/availabilitychecker/building_info
+      Key: eY2CqgexcQrwtV4u
+      Auth: stwz_fibx_api
+      Format: json

@@ -1993,17 +1993,14 @@ select{
 .w-56{
     width: 14rem;
 }
+.w-36{
+    width: 9rem;
+}
 .w-8{
     width: 2rem;
 }
 .w-40{
     width: 10rem;
-}
-.w-32{
-    width: 8rem;
-}
-.w-36{
-    width: 9rem;
 }
 .max-w-screen-lg{
     max-width: 1024px;

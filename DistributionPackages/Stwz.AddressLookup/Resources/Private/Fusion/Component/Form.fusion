@@ -4,24 +4,43 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
         class = ''
     }
 
+    url = Neos.Fusion:UriBuilder {
+        package = 'Stwz.AddressLookup'
+        controller = 'Api'
+        action = 'fetch'
+        format = 'json'
+    }
+
     renderer = afx`
-        <div class="max-w-screen-lg mx-auto addressLookup" id="">
+        <div id="addressLookup"
+             class="max-w-screen-lg mx-auto addressLookup"
+             x-data={"addresslookup"}
+             x-init={"{url: '" + props.url + "'}"} 
+             data-url={props.url} >
             <div class="relative z-30 flex items-center px-6 mx-auto my-16 space-x-8 group h-36 lg:px-16 rounded-3xl md:rounded-full bg-accent">
                 <div>{props.icon}</div>
                 <div class="w-full my-3">
                     <h3 class="mb-4 font-extrabold text-black">Glasfaseranschluss prüfen</h3>
-                    <div class="grid w-full gap-4 sm:grid-cols-8 "
-                         x-data="{address:{city: '', country: '', zip_code: '', streetname: '', house_number: '', house_number_suffix: ''}}">
-                        <input class="sm:col-span-4 lg:col-span-1 xl:col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ" />
-                        <input class="sm:col-span-4 lg:col-span-2 xl:col-span-2" type="text" x-model="address.city" placeholder="Ort*" />
-                        <input class="sm:col-span-6 lg:col-span-3 xl:col-span-3" type="text" x-model="address.streetname"placeholder="Strasse*" />
+                    <div class="grid w-full gap-4 sm:grid-cols-8">
+                        <input class="sm:col-span-4 lg:col-span-1 xl:col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ"  />
+                        <input class="sm:col-span-4 lg:col-span-2 xl:col-span-2" type="text" x-model="address.city" placeholder="Ort*" required=""/>
+                        <input class="sm:col-span-6 lg:col-span-3 xl:col-span-3" type="text" x-model="address.streetname"placeholder="Strasse*" required=""/>
                         <input class="sm:col-span-2 lg:col-span-1 xl:col-span-1" type="text" x-model="address.house_number" placeholder="Nr." />
                         <input type="hidden" x-model="address.country" placeholder="Land" value="Schweiz" />
+                        <input type="hidden" x-model="url" value={props.url} />
 
                         <button class="sm:col-span-4 lg:col-span-2 xl:col-span-1 button !px-1" type="submit"
-                                x-on:click={"fetch('https://stwz.arc.fibx.ch/restapi/availabilitychecker/building_info?streetname='+ address.streetname +'e&city='+ address.city +'&country=Schweiz&zip_code='+ address.zip_code +'&house_number='+ address.house_number +'&house_number_suffix=', {method: 'GET', headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin': 'https://stwz.arc.fibx.ch/', 'Access-Control-Allow-Credentials': 'false', 'Access-Control-Allow-Headers': 'Content-Type, Cookie, Credentials', 'Authorization': 'stwz_fibx_api','X-Api-Key': 'eY2CqgexcQrwtV4u'}}).then(response => response.json()).then(console.log(response.data));"}>
+                                x-on:click={"check"}>
                                 Prüfen
                         </button>
+                        <div id="addressMessages" class="sm:col-span-12 lg:col-span-12 xl:col-span-12 !px-1">
+                            <div class="error bg-red">
+                                <span>Für diese Adresse exisitert noch keinen Anschluss.
+                                Überprüfe deine Angaben oder registriere dich um zu erfahren wann dein anschluss freigeschaltet wird.</span>
+                            </div>
+                            <div class="success"></div>
+                        </div>  
+
                     </div>
                 </div>
             </div>
