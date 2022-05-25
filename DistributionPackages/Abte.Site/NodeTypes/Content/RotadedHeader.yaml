@@ -3,6 +3,6 @@
     'Neos.Neos:Content': true
   ui:
     label: Header (90°)
-    icon: icon-text
+    icon: heading
     position: 16
     group: media
