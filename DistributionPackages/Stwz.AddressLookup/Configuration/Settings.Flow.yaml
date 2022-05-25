@@ -1,0 +1,6 @@
+Neos:
+  Flow:
+    mvc:
+      routes:
+        Stwz.AddressLookup:
+          position: 'before Neos.Neos'
