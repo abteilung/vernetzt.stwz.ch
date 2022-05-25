@@ -5,7 +5,7 @@ prototype(Stwz.Navigation:Component.Navbar.Hamburger) < prototype(Neos.Fusion:Co
         type="button" 
         "@click.prevent"="showMenu = !showMenu "
         "@keydown.escape"="showMenu = false"
-        class="flex items-center space-x-3 text-lg text-primary focus:outline-none lg:hidden" 
+        class="flex items-center justify-center w-20 h-20 space-x-3 text-lg translate-x-4 md:h-28 md:w-28 text-primary focus:outline-none lg:hidden md:translate-x-8" 
         aria-expanded="false"
       >
         <div class="relative flex items-center justify-center w-6 md:w-10 text-alert">
