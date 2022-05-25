@@ -3074,6 +3074,9 @@ select{
 .duration-\[3430ms\]{
     transition-duration: 3430ms;
 }
+.duration-\[240ms\]{
+    transition-duration: 240ms;
+}
 .ease-in{
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }

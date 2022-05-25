@@ -109,6 +109,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
 
     // duration-[12000ms]
     // duration-[3430ms]
+    // duration-[240ms]
 
     @cache {
         mode = 'cached'
