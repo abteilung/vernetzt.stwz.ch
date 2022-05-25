@@ -98,21 +98,10 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         <div>60 Fotos (300 MB) hochladen</div>
                         <div class="whitespace-nowrap">{props.downloadTime} s</div>
                     </div>
-                    <div 
-                        class="bg-gray-200 h-1 w-full rounded-full"
-                        x-data="{val: 100, start: 0}"
-                        x-init="setTimeout(()=> start = val, 3000)"
-                    >
-                        <div 
-                            class="bg-accent h-1 w-1 rounded-full animate-pulse transition-all"
-                            :style={'width: $\{start\}%, transition: 0.24s'}
-                        >
-
-                        </div>
-
+                    <div class="bg-gray-200 h-1 w-full rounded-full overflow-hidden">
+                        <div class={'transition-all duration-[' + props.downloadTime * 1000 + 'ms] h-full bg-secondary relative w-1'} data-progressbar></div>
                     </div>
                 </div>
-
 
             </label>
         </div>

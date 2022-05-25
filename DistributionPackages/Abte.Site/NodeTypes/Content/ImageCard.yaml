@@ -1,0 +1,14 @@
+'Abte.Site:Content.ImageCard':
+  superTypes:
+    'Neos.Neos:Content': true
+    'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.AdditionalClass': true
+  ui:
+    label: ImageCard
+    icon: picture
+    group: media
+    position: 10
+  properties:
+    'target':
+      options:
+        preset: 'text.link'

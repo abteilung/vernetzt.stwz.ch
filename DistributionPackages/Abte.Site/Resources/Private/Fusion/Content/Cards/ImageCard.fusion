@@ -1,0 +1,61 @@
+prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+    
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        // asset   = ${ q(node).property('image') || q(node).find('[instanceof Neos.Neos:Content][image instanceof "Neos\Media\Domain\Model\ImageInterface"]').get(0) }
+        asset   = ${ q(node).property('image') }
+    }
+
+    title = ${ q(node).property('title') }
+    subTitle = ${ q(node).parents('[instanceof Abte.Site:Document.Products]').property('title') }
+
+    arrow = Abte.Site:Icon.ArrowRight {
+        class = 'absolute block w-6 text-black duration-150 scale-75 right-4 bottom-4 text-arrow group-hover:right-2'
+    }
+
+    target = ${ q(node).property('target') }
+    target.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
+    renderer = afx`
+        <Neos.Neos:NodeLink 
+            node={props.target} 
+            attributes.class={ 'relative block group w-full h-full mix font-light' }
+        >
+
+            <div class="relative overflow-hidden isolate rounded-t-2xl">
+                
+                <div class="absolute z-10 text-black bottom-4 left-4">
+                
+                    <div class="relative p-2 w-min bg-accent">
+
+                        <Abte.Site:Mixin.Icons node={q(item.node)} class="absolute w-5 duration-150 scale-100 top-4 left-4 top-2 left-2 group-hover:scale-110"/>
+                        <Abte.Site:Icon.Diagonal class="h-16" />
+                        <div class="relative ml-12 mr-2 -mt-6 font-extrabold bottom-2 whitespace-nowrap">{props.title}</div>
+                    </div>
+
+                </div>
+
+                <Sitegeist.Kaleidoscope:Image 
+                    @if.hasImage={props.imageSource}
+                    imageSource={props.imageSource} 
+                    width="700"
+                    height="350"
+                    class="object-cover object-center w-full h-full duration-300 scale-105 group-hover:scale-100 bg-tertiary-focus"
+                />
+
+            </div>
+            <div class="relative px-4 pt-4 pb-8 bg-white">
+                <h3 class="mb-2 font-extrabold">Servum quidebit</h3>
+                <p class="text-sm">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                {props.arrow}
+            </div>
+
+        </Neos.Neos:NodeLink>
+    `
+}

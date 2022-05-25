@@ -2846,5 +2846,12 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
   module_default.plugin(module_default2);
   window.Alpine = module_default;
   module_default.start();
+  document.addEventListener("DOMContentLoaded", function() {
+    let bar = document.querySelectorAll("[data-progressbar]");
+    bar.forEach(function(elem) {
+      elem.classList.remove("w-1");
+      elem.classList.add("w-1/2");
+    });
+  });
 })();
 //# sourceMappingURL=Stwz.js.map
