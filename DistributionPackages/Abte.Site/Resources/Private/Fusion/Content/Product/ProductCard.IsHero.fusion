@@ -1,0 +1,23 @@
+prototype(Abte.Site:Component.isHero) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    class = ''
+
+    isHero = ${ q(node).property('isHero') }
+
+    checkIcon = Abte.Site:Icon.Check
+    plusIcon = Abte.Site:Icon.Plus
+    
+    renderer = afx`
+        <div 
+            class={props.isHero ? (props.class + ' ' + 'isHero text-sm flex justify-center bg-accent rounded-2xl px-2 py-1 space-x-4') : (props.class + ' ' + 'opacity-0 isHero text-sm flex justify-center bg-accent rounded-2xl px-2 py-1 space-x-4') }
+        >
+            <div>
+            Bestseller</div><Abte.Site:Icon.Star />
+        </div>
+    `
+}

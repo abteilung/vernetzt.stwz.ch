@@ -1,0 +1,25 @@
+prototype(Abte.Site:Component.SelectedProduct) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    class = ''
+
+    productGroup = ''
+    activeItem = ''
+
+    checkIcon = Abte.Site:Icon.Check
+   
+    renderer = afx`
+        <div 
+            class={props.class + ' ' + 'w-8 h-8 rounded-full flex justify-center items-center bg-white' }
+        >
+            <div
+            :class={"{ 'hidden': !(value"+ props.productGroup+" === '" + props.activeItem + "'), 'block': (active === '" + props.activeItem + "') }"}
+            >{props.checkIcon}</div>
+        </div>
+
+    `
+}

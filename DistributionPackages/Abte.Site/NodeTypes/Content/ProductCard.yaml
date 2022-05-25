@@ -3,6 +3,7 @@
     'Neos.Neos:Content': true
     'Abte.Site:Mixin.BgColor': true
     'Abte.Site:Mixin.IsHero': true
+    'Abte.Site:Mixin.ShowSpeed': true
   ui:
     label: ProductCard
     icon: cart-plus

@@ -40,7 +40,9 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
             "@item-reset.window"={"value"+ productGroup +"= localStorage.getItem('"+ productGroup +"') || 0;"}
             data-flickity={props.sliderConfig}
         >
-            {props.shopItems}
+            <div class="flex">
+                {props.shopItems}
+            </div>
         </fieldset>
                     
     `

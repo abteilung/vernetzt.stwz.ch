@@ -1910,6 +1910,9 @@ select{
 .h-80{
     height: 20rem;
 }
+.h-1{
+    height: 0.25rem;
+}
 .h-40{
     height: 10rem;
 }
@@ -2004,6 +2007,9 @@ select{
 }
 .w-40{
     width: 10rem;
+}
+.w-1{
+    width: 0.25rem;
 }
 .max-w-screen-lg{
     max-width: 1024px;
@@ -2120,6 +2126,22 @@ select{
 }
 .transform{
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@-webkit-keyframes pulse{
+
+    50%{
+        opacity: .5;
+    }
+}
+@keyframes pulse{
+
+    50%{
+        opacity: .5;
+    }
+}
+.animate-pulse{
+    -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 .cursor-default{
     cursor: default;
@@ -2449,6 +2471,10 @@ select{
 .\!bg-transparent{
     background-color: transparent !important;
 }
+.bg-gray-200{
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
 .bg-opacity-20{
     --tw-bg-opacity: 0.2;
 }
@@ -2463,6 +2489,13 @@ select{
 }
 .bg-\[url\(\'Media\/Backdrops\/MainBackdrop\.svg\'\)\]{
     background-image: url('Media/Backdrops/MainBackdrop.svg');
+}
+.from-accent{
+    --tw-gradient-from: hsl(var(--a));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, hsl(var(--a) / 0));
+}
+.to-primary{
+    --tw-gradient-to: hsl(var(--p));
 }
 .bg-cover{
     background-size: cover;
@@ -2976,6 +3009,9 @@ select{
 .duration-700{
     transition-duration: 700ms;
 }
+.duration-\[2000ms\]{
+    transition-duration: 2000ms;
+}
 .ease-in{
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -2988,6 +3024,7 @@ select{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
 }
+.flickity-cell{ min-height: 100%; }
 /* position dots in carousel */
 .flickity-page-dots {
   bottom: 0px;

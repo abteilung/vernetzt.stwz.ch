@@ -31,18 +31,22 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
 
     productGroup = ''
 
-    // itemID = ${ String.replace( q(node).property('_nodeName') , 'node-', '') }
     itemID = ${ q(node).property('_identifier') }
 
     backgroundColor = ${ q(node).property('bgColor') }
 
-    // relative bg-white border rounded-lg shadow-sm p-4 flex cursor-pointer focus:outline-none border-transparent border-indigo-500 ring-2 ring-indigo-500
-    // 'block': (active === '" + props.activeItem + "')
+
+    downloadSpeed = ${ String.toInteger(q(node).property('loadingSpeed')) }
+
+    duration = ${String.toFloat('0.24')}
+
+    downloadTime = ${ Math.round( 10000 * this.duration / this.downloadSpeed , 2) }
+
     renderer = afx`
         <div class="productCard">
             <label 
                 id={props.itemID}
-                class={'product cursor-pointer cardItem text-black transition duration-250 bg-base-200 space-y-4 hover:opacity-100'}
+                class={'product h-full overflow-hidden cursor-pointer cardItem text-black transition duration-250 bg-base-200 space-y-4 hover:opacity-100'}
                 :class={"{ 'opacity-60': !(value" + props.productGroup + " === '" + props.itemID + "'), 'opacity-100': (active === '" + props.itemID + "') }"}
                 x-radio-group-option=""
                 x-init={"value" + props.productGroup + "= localStorage.getItem('" + props.productGroup + "');"}
@@ -50,7 +54,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 data-group={props.productGroup}
                 data-price={String.pregMatch(props.priceOnly,'/\d+/')}
             >
-              <div class="flex flex-1">
+              <div class="flex">
                     <div class="flex flex-col w-full">
                         <div class="w-full flex space-x-4 relative border-b-[1px] pb-4 mb-4 border-black">
                             <Abte.Site:Component.isHero node={node} />
@@ -84,7 +88,32 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                     x-model={"value"+ props.productGroup}
                     name={props.itemID} 
                     class="sr-only"
-                />                
+                />
+
+
+                <div class="mt-12"
+                    @if.hasCalc={props.downloadSpeed}
+                >
+                    <div class="flex justify-between text-sm">
+                        <div>60 Fotos (300 MB) hochladen</div>
+                        <div>{props.downloadTime} s</div>
+                    </div>
+                    <div 
+                        class="bg-gray-200 h-1 w-full rounded-full"
+                        x-data="{val: 100, start: 0}"
+                        x-init="setTimeout(()=> start = val, 3000)"
+                    >
+                        <div 
+                            class="bg-accent h-1 w-1 rounded-full animate-pulse transition-all"
+                            :style={'width: $\{start\}%, transition: 0.24s'}
+                        >
+
+                        </div>
+
+                    </div>
+                </div>
+
+
             </label>
         </div>
     `
@@ -101,55 +130,4 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
         }
         maximumLifetime = ${q(node).context({'invisibleContentShown': true}).children().cacheLifetime()}
     }
-}
-
-
-prototype(Abte.Site:Component.SelectedProduct) < prototype(Neos.Fusion:Component) {
-    
-    node = ${ node }
-    @context {
-        node = ${ this.node }
-    }
-
-    class = ''
-
-    productGroup = ''
-    activeItem = ''
-
-    checkIcon = Abte.Site:Icon.Check
-   
-    renderer = afx`
-        <div 
-            class={props.class + ' ' + 'w-8 h-8 rounded-full flex justify-center items-center bg-white' }
-        >
-            <div
-            :class={"{ 'hidden': !(value"+ props.productGroup+" === '" + props.activeItem + "'), 'block': (active === '" + props.activeItem + "') }"}
-            >{props.checkIcon}</div>
-        </div>
-
-    `
-}
-
-prototype(Abte.Site:Component.isHero) < prototype(Neos.Fusion:Component) {
-    
-    node = ${ node }
-    @context {
-        node = ${ this.node }
-    }
-
-    class = ''
-
-    isHero = ${ q(node).property('isHero') }
-
-    checkIcon = Abte.Site:Icon.Check
-    plusIcon = Abte.Site:Icon.Plus
-    
-    renderer = afx`
-        <div 
-            class={props.isHero ? (props.class + ' ' + 'isHero text-sm flex justify-center bg-accent rounded-2xl px-2 py-1 space-x-4') : (props.class + ' ' + 'opacity-0 isHero text-sm flex justify-center bg-accent rounded-2xl px-2 py-1 space-x-4') }
-        >
-            <div>
-            Bestseller</div><Abte.Site:Icon.Star />
-        </div>
-    `
 }
