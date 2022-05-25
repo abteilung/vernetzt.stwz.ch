@@ -1,0 +1,16 @@
+'Abte.Site:Content.RemoteSlider':
+    superTypes:
+        'Neos.Neos:Content': true
+        'Abte.Site:Mixin.Image': true
+    ui:
+        label: Slider
+        icon: user
+        position: 300
+    properties:
+        'images':
+            options:
+                preset: 'image.assets'
+            ui:
+                label: Slider Images
+                inspector:
+                    group: 'image'

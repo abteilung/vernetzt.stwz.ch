@@ -1,0 +1,129 @@
+prototype(Abte.Site:Component.RemoteSlider) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('reference') ? q( q(node).property('reference') ).property('image') : q(node).property('image') }
+        width   = 980
+        height  = 640
+        allowCropping = true
+    }
+
+    productImages = Neos.Fusion:Loop {
+        @if.hasImages = ${ q(node).property('reference') ? q( q(node).property('reference') ).property('images') : q(node).property('images') }
+        items = ${ q(node).property('reference') ? q( q(node).property('reference') ).property('images') : q(node).property('images') }
+        itemRenderer = Neos.Fusion:Tag {
+            attributes {
+                class = 'flex justify-center w-full slide'
+            }
+            content = Neos.Fusion:Tag {
+                tagName = 'img'
+                attributes {
+                    src = Neos.Neos:ImageUri {
+                        asset = ${ item }
+                        width = 980
+                        height = 640
+                        maximumWidth = 980
+                        maximumHeight = 640
+                        allowCropping = true
+                    }
+                    class="object-contain object-center h-full"
+                    // alt = ${item.title}
+                }
+            }
+        }
+    }
+
+    productMiniImages = Neos.Fusion:Loop {
+        @if.hasImages = ${ q(node).property('reference') ? q( q(node).property('reference') ).property('images') : q(node).property('images') }
+        items = ${ q(node).property('reference') ? q( q(node).property('reference') ).property('images') : q(node).property('images') }
+        itemRenderer = Neos.Fusion:Tag {
+            attributes {
+                class = 'flex justify-center w-1/5 slide'
+            }
+            content = Neos.Fusion:Tag {
+                tagName = 'img'
+                attributes {
+                    src = Neos.Neos:ImageUri {
+                        asset = ${ item }
+                        width = 160
+                        height = 90
+                        // maximumWidth = 180
+                        // maximumHeight = 120
+                        allowCropping = TRUE
+                    }
+                    class="object-cover object-center h-full"
+                    // alt = ${item.title}
+                }
+            }
+        }
+    }
+
+    remoteSliderConfig = Neos.Fusion:DataStructure {
+        cellSelector = '.slide'
+        pageDots = true
+        draggable = true
+        contain = true
+        adaptiveHeight = false
+        // prevNextButtons = ${ q(node).property('images') ? true : false }
+        prevNextButtons = ${ q( q(node).property('reference') ).property('images') ? true : q(node).property('images') ? true : false }
+        @process.stringify = ${ Json.stringify(value) }
+    }
+
+    sliderRemoteConfig = Neos.Fusion:DataStructure {
+        asNavFor = '.remoteSlider'
+        cellSelector = '.slide'
+        contain = true
+        groupCells = true
+        pageDots = false
+        draggable = true
+        prevNextButtons = false
+        @process.stringify = ${ Json.stringify(value) }
+    }
+
+    
+    renderer = afx`
+        <div class="mb-4 md:mb-8 sliderRemoteContainer"
+            data-aos="fade-in"
+        >
+
+            <div
+                class="remoteSlider" 
+                data-flickity={props.remoteSliderConfig}
+            >
+                <div class="slide"
+                    @if.hasImage={props.imageSource}
+                >
+                    <Sitegeist.Kaleidoscope:Image 
+                        imageSource={props.imageSource} 
+                        class="object-contain object-center h-full"
+                    />
+                </div>
+                {props.productImages}
+            </div>
+
+            <div 
+            @if.hasRemote={props.NOSET}
+                class="mt-8 sliderRemote" 
+                data-flickity={props.sliderRemoteConfig}
+                @if.hasMiniPics={props.productMiniImages}
+            >
+                <div class="flex justify-center w-1/5 slide"
+                    @if.hasImage={props.imageSource}
+                >
+                    <Sitegeist.Kaleidoscope:Image 
+                        imageSource={props.imageSource} 
+                        width="160"
+                        height="90"
+                        class="object-contain object-center h-full"
+                    />
+                </div>
+                {props.productMiniImages}
+            </div>
+
+        </div>    
+    `
+}

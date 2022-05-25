@@ -10,6 +10,8 @@ Neos:
                 inlineEditable: true
                 inline:
                   editorOptions:
+                    blockStyling:
+                      headerWeight: true
                     placeholder: 'Enter headline here...'
                     hyphens: true
                     formatting:
@@ -40,6 +42,7 @@ Neos:
                 inline:
                   editorOptions:
                     blockStyling:
+                      headerWeight: true
                       lists: true
                     placeholder: 'Enter Text here...'
                     autoparagraph: false
@@ -52,6 +55,7 @@ Neos:
                 inline:
                   editorOptions:
                     blockStyling:
+                      headerWeight: true
                       lists: true
                     placeholder: 'Enter text here...'
                     autoparagraph: true
