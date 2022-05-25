@@ -8,6 +8,7 @@
         "jonnitto/prettyembedvideoplatforms": "^2.0",
         "neos/nodetypes-contentreferences": "^7.2",
         "carbon/link": "^1.7",
+        "techdivision/ckstyles": "^1.5",
         "sitegeist/kaleidoscope": "^6.5"
     },
     "suggest": {

@@ -1,0 +1,44 @@
+TechDivision:
+  CkStyles:
+    BlockStyles:
+      presets:
+        'headerWeight':
+          label: 'Header Class'
+          options:
+            'h1':
+              label: 'H1'
+              cssClass: 'h1'
+            'h2':
+              label: 'H2'
+              cssClass: 'h2'
+            'h3':
+              label: 'H3'
+              cssClass: 'h3'
+            'h4':
+              label: 'H4'
+              cssClass: 'h4'
+        # 'dataAttribute':
+        #   label: 'Inline data attribute'
+        #   options:
+        #     'data':
+        #       label: 'Inline data'
+        #       attribute: 'data-attribute'
+        #       attributeValue: 'my-custom-attribute-value'
+    # BlockStyles:
+    #   presets:
+    #     'indent':
+    #       label: 'Indentation'
+    #       options:
+    #         'primary':
+    #           label: '2 rem'
+    #           cssClass: 'my-class-indent-2'
+    #         'secondary':
+    #           label: '4 rem'
+    #           cssClass: 'my-class-indent-4'
+    #     'dataAttribute':
+    #       label: 'Block data attribute'
+    #       options:
+    #         'data':
+    #           label: 'Block data'
+    #           attribute: 'data-attribute'
+    #           attributeValue: 'my-custom-attribute-value'

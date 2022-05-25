@@ -8,11 +8,11 @@
     "packages": [
         {
             "name": "abte/site",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abte.Site",
-                "reference": "248d895478f6d78a3c49f4c6a2a0d11404116cf1"
+                "reference": "43798db7cfcabf311470fe2369c41d474ae61639"
             },
             "require": {
                 "carbon/includeassets": "^5.3",
@@ -21,7 +21,8 @@
                 "jonnitto/prettyembedvideoplatforms": "^2.0",
                 "neos/neos": "*",
                 "neos/nodetypes-contentreferences": "^7.2",
-                "sitegeist/kaleidoscope": "^6.5"
+                "sitegeist/kaleidoscope": "^6.5",
+                "techdivision/ckstyles": "^1.5"
             },
             "suggest": {
                 "neos/seo": "*"
@@ -43,7 +44,7 @@
         },
         {
             "name": "abteilung/gridsystem",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abteilung.Gridsystem",
@@ -7498,7 +7499,7 @@
         },
         {
             "name": "stwz/addresslookup",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.AddressLookup",
@@ -7524,7 +7525,7 @@
         },
         {
             "name": "stwz/flickity",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Flickity",
@@ -7550,7 +7551,7 @@
         },
         {
             "name": "stwz/form-multicolumnsection",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Form.MultiColumnSection",
@@ -7579,7 +7580,7 @@
         },
         {
             "name": "stwz/movinglines",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.MovingLines",
@@ -7605,7 +7606,7 @@
         },
         {
             "name": "stwz/navigation",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Navigation",
@@ -7633,7 +7634,7 @@
         },
         {
             "name": "stwz/privacy",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Privacy",
@@ -7660,7 +7661,7 @@
         },
         {
             "name": "stwz/shop",
-            "version": "dev-develop",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Shop",
@@ -9159,6 +9160,64 @@
                 }
             ],
             "time": "2022-01-26T16:32:32+00:00"
+        },
+        {
+            "name": "techdivision/ckstyles",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/techdivision/ckstyles.git",
+                "reference": "eab87c68af43ad72cb077107e4cd8f4d96e7ea60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/techdivision/ckstyles/zipball/eab87c68af43ad72cb077107e4cd8f4d96e7ea60",
+                "reference": "eab87c68af43ad72cb077107e4cd8f4d96e7ea60",
+                "shasum": ""
+            },
+            "require": {
+                "neos/neos-ui": ">=3.8 <8.0"
+            },
+            "type": "neos-plugin",
+            "extra": {
+                "neos": {
+                    "package-key": "TechDivision.CkStyles",
+                    "loading-order": {
+                        "after": [
+                            "neos/neos"
+                        ]
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Neos developer team",
+                    "email": "neos@techdivision.com",
+                    "homepage": "https://www.techdivision.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Neos package which enables you adding your custom style classes for the CkEditor with a simple Yaml configuration",
+            "homepage": "https://www.techdivision.com",
+            "keywords": [
+                "CKEditor",
+                "Neos",
+                "classes",
+                "editing",
+                "flow",
+                "inline",
+                "styling",
+                "wysiwyg"
+            ],
+            "support": {
+                "issues": "https://github.com/techdivision/ckstyles/issues",
+                "source": "https://github.com/techdivision/ckstyles/tree/v1.5.0"
+            },
+            "time": "2022-04-11T10:51:33+00:00"
         },
         {
             "name": "typo3fluid/fluid",
