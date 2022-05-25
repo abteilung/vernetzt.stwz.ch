@@ -2031,6 +2031,9 @@ select{
 .w-0{
     width: 0px;
 }
+.w-1\/5{
+    width: 20%;
+}
 .max-w-screen-lg{
     max-width: 1024px;
 }
@@ -2598,6 +2601,10 @@ select{
 }
 .fill-current{
     fill: currentColor;
+}
+.object-contain{
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 .object-cover{
     -o-object-fit: cover;

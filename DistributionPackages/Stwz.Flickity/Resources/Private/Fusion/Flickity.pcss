@@ -122,10 +122,10 @@ https://flickity.metafizzy.co
 .flickity-page-dots {
   position: absolute;
   width: 100%;
+  bottom: -20px;
   text-align: center;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .flickity-rtl .flickity-page-dots { direction: rtl; }
@@ -160,12 +160,14 @@ https://flickity.metafizzy.co
 
 
 
+
+
+
 /*! Additional Styles to Flickty
 ---------------------------------------------- */
 
 .flickity-page-dot {
-  @apply absolute w-full p-0 m-0;
-  bottom: 15px;
+  @apply relative w-full p-0 m-0;
   list-style: none;
   text-align: center;
   line-height: 1;
@@ -174,7 +176,7 @@ https://flickity.metafizzy.co
 .flickity-rtl .flickity-page-dot { direction: rtl; }
 
 .flickity-page-dot  {
-  @apply inline-block md:w-[16px] w-[10px] h-[10px] md:h-[16px] rounded-none opacity-30 mr-1 md:mr-2 bg-primary cursor-pointer;
+  @apply inline-block md:w-[12px] w-[10px] h-[10px] md:h-[12px] rounded-none opacity-30 mr-1 md:mr-2 bg-primary cursor-pointer;
 }
 
 .flickity-page-dot.is-selected {

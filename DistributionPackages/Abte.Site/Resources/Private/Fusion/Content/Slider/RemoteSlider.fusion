@@ -1,0 +1,3 @@
+prototype(Abte.Site:Content.RemoteSlider) < prototype(Neos.Neos:ContentComponent) {
+    renderer = Abte.Site:Component.RemoteSlider
+}

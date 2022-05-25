@@ -132,10 +132,10 @@ https://flickity.metafizzy.co
 .flickity-page-dots {
   position: absolute;
   width: 100%;
+  bottom: -20px;
   text-align: center;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .flickity-rtl .flickity-page-dots { direction: rtl; }
@@ -174,11 +174,10 @@ https://flickity.metafizzy.co
 ---------------------------------------------- */
 
 .flickity-page-dot {
-  position: absolute;
+  position: relative;
   margin: 0px;
   width: 100%;
   padding: 0px;
-  bottom: 15px;
   list-style: none;
   text-align: center;
   line-height: 1;
@@ -229,8 +228,8 @@ https://flickity.metafizzy.co
 
   .flickity-page-dot {
     margin-right: 0.5rem;
-    height: 16px;
-    width: 16px;
+    height: 12px;
+    width: 12px;
   }
 }
 
