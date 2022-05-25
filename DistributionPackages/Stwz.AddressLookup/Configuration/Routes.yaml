@@ -1,5 +1,5 @@
 -
-  name: 'Api - Address Look up'
+  name: 'Stwz.AddressLookup :: Api - Address Look up'
   uriPattern: 'api'
   defaults:
     '@package': 'Stwz.AddressLookup'
