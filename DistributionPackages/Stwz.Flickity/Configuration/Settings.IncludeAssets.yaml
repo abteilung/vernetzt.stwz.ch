@@ -9,10 +9,3 @@ Carbon:
           Body: 
             - Flickity.js[defer]
             - Flickity.css[async]
-        
-        # Backend:
-        #   Head:
-        #     - Backend.css
-        #     - Backend.js[defer]
-        # Live:
-        #   Body: Main.js[defer]
