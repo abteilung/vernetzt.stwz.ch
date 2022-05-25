@@ -40,7 +40,7 @@ prototype(Abte.Site:Component.HeaderAbout) < prototype(Neos.Neos:ContentComponen
     }
 
     renderer = afx`
-        <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
+        <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
             <div class="container gridPadding-x relative pt-36 h-[250px] md:h-[300px] relative top-0 z-20 w-full mt-0 overflow-visible">
                 <div class="grid grid-cols-2 gridgap-x">
                     <div class="col-span-1 xl:col-end-3">
@@ -59,7 +59,7 @@ prototype(Abte.Site:Component.HeaderAbout) < prototype(Neos.Neos:ContentComponen
         </header>
 
         <div class="py-24">
-            <div class="container flex">
+            <div class="container flex gridPadding-x">
                 <div class="relative z-20 w-full">{props.headerContent}</div>
             </div>
         </div>
