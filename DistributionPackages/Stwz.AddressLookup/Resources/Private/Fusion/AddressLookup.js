@@ -4,8 +4,10 @@ document.addEventListener('alpine:init', () => {
         url: document.getElementById('addressLookup').dataset.url,
         error: false,
         success: false,
+        loading: false,
         response: '',
         
+
         address: {
             city: '',
             country: '',
@@ -16,6 +18,7 @@ document.addEventListener('alpine:init', () => {
         },
         
         check() {
+            this.loading = true;
             console.log(this.url);
             fetch(
                 this.url   +'?streetname='+ this.address.streetname 
@@ -31,11 +34,13 @@ document.addEventListener('alpine:init', () => {
                     .then(response => response.json())
                     .then(data => {
                         if(data.status == 'success'){
+                            this.loading = false;
                             this.success = true;
                             this.error = !this.success;
                             let event = new CustomEvent('addresslookup-success', {});
                             window.dispatchEvent(event);
                         }else{
+                            this.loading = false;
                             this.success = false;
                             this.error = !this.success;
                             let event = new CustomEvent('addresslookup-error', {});
@@ -44,6 +49,7 @@ document.addEventListener('alpine:init', () => {
                         return data;
                     })
                     .catch(error => {
+                        this.loading = false;
                         return error;
                     });
         },
