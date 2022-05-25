@@ -50,6 +50,7 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
                 attributes.class={i.isLast ? props.lastLinkItemClass : props.linkItemClass}
                 attributes.target={props.linkTarget}
                 renderDefaultTagIfNoLink={false}
+                
             >
                 { q(item.node).property('titleOverride') ? q(item.node).property('titleOverride') : q(item.node).property('title') }
             </Neos.Neos:NodeLink>
@@ -61,6 +62,7 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
                 attributes.class={ i.isLast ? props.lastLinkItemClass : props.linkItemClass }
                 attributes.target={props.linkTarget}
                 renderDefaultTagIfNoLink={false}
+                
             >
                 { q(item.node).property('title') }
             </Neos.Neos:NodeLink>
