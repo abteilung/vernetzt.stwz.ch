@@ -1,6 +1,6 @@
 -
   name: 'Stwz.AddressLookup :: Api - Address Look up'
-  uriPattern: 'api'
+  uriPattern: 'api/stwz.addresslookup/{@action}.{@format}'
   httpMethods: ['GET']
   defaults:
     '@package': 'Stwz.AddressLookup'
