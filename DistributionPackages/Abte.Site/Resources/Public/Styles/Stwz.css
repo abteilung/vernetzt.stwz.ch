@@ -1618,12 +1618,6 @@ select{
 .col-start-12{
     grid-column-start: 12;
 }
-.col-end-2{
-    grid-column-end: 2;
-}
-.col-end-3{
-    grid-column-end: 3;
-}
 .mx-auto{
     margin-left: auto;
     margin-right: auto;
@@ -2534,16 +2528,12 @@ select{
 .bg-current{
     background-color: currentColor;
 }
-.bg-gray-200{
-    --tw-bg-opacity: 1;
-    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-.\!bg-transparent{
-    background-color: transparent !important;
-}
 .bg-gray-500{
     --tw-bg-opacity: 1;
     background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+.\!bg-transparent{
+    background-color: transparent !important;
 }
 .bg-opacity-20{
     --tw-bg-opacity: 0.2;
@@ -2668,6 +2658,10 @@ select{
 .px-2{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+.py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 .pt-1{
     padding-top: 0.25rem;
@@ -4557,6 +4551,11 @@ select{
         padding-right: 2rem;
     }
 
+    .md\:py-24{
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
     .md\:pl-0{
         padding-left: 0px;
     }
@@ -4948,10 +4947,6 @@ select{
 
     .lg\:col-end-13{
         grid-column-end: 13;
-    }
-
-    .lg\:col-end-3{
-        grid-column-end: 3;
     }
 
     .lg\:mt-0{

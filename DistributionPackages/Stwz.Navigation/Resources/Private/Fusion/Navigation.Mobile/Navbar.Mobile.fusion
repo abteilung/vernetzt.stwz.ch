@@ -82,7 +82,7 @@ prototype(Stwz.Navigation:Component.Navbar.Mobile) < prototype(Neos.Fusion:Compo
                   <Neos.Neos:NodeLink node={item.node} attributes.class="">
                       <div class="flex items-center justify-between space-x-4 group">
                           <div class="">{item.label}</div>
-                          <Abte.Site:Icon.ArrowRight class="relative w-6 left-0 duration-150 scale-75 text-accent group-hover:left-2" />
+                          <Abte.Site:Icon.ArrowRight class="relative left-0 w-6 duration-150 scale-75 text-accent group-hover:left-2" />
                       </div>
                   </Neos.Neos:NodeLink>
                 </li>

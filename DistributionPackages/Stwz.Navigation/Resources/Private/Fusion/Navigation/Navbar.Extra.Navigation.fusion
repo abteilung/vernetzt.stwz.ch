@@ -9,7 +9,7 @@ prototype(Stwz.Navigation:Component.Extra.Navbar.Navigation) < prototype(Neos.Ne
   renderer = afx`
     <div class="flex justify-end w-full h-12 extras right gridPadding-x container-wide">
       <nav 
-        class="items-center hidden space-x-6 text-xs md:flex"
+        class="flex items-center space-x-6 text-xs"
       >
         <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
           <Stwz.Navigation:Navbar.LinkItem class="font-light" />
