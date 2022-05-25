@@ -1135,6 +1135,9 @@ select{
 .btn.loading, .btn.loading:hover{
     pointer-events: none;
 }
+.btn.\!loading, .btn.\!loading:hover{
+    pointer-events: none !important;
+}
 .btn.loading:before{
     margin-right: 0.5rem;
     height: 1rem;
@@ -1148,6 +1151,20 @@ select{
     border-left-color: transparent;
     border-bottom-color: currentColor;
     border-right-color: currentColor;
+}
+.btn.\!loading:before{
+    margin-right: 0.5rem !important;
+    height: 1rem !important;
+    width: 1rem !important;
+    border-radius: 9999px !important;
+    border-width: 2px !important;
+    -webkit-animation: spin 2s linear infinite !important;
+            animation: spin 2s linear infinite !important;
+    content: "" !important;
+    border-top-color: transparent !important;
+    border-left-color: transparent !important;
+    border-bottom-color: currentColor !important;
+    border-right-color: currentColor !important;
 }
 @-webkit-keyframes spin{
 
@@ -2142,6 +2159,16 @@ select{
 .animate-pulse{
     -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
             animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes spin{
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+.animate-spin{
+    -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
 }
 .cursor-default{
     cursor: default;
@@ -5964,6 +5991,11 @@ select{
     .btn.loading:before{
         -webkit-animation: spin 10s linear infinite;
                 animation: spin 10s linear infinite;
+    }
+
+    .btn.\!loading:before{
+        -webkit-animation: spin 10s linear infinite !important;
+                animation: spin 10s linear infinite !important;
     }
 }
 
