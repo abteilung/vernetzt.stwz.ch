@@ -4,7 +4,8 @@
     "name": "stwz/form-multicolumnsection",
     "require": {
         "neos/neos": "*",
-        "neos/form": "*"
+        "neos/form": "*",
+        "neos/form-builder": "*"
     },
     "autoload": {
         "psr-4": {

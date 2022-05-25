@@ -3,7 +3,8 @@
     "type": "neos-package",
     "name": "stwz/shop",
     "require": {
-        "neos/flow": "*"
+        "neos/flow": "*",
+        "stwz/form-multicolumnsection": "*"
     },
     "autoload": {
         "psr-4": {
