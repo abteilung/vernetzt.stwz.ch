@@ -45,6 +45,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                                 x-on:click.away="success = false">
                                 <span>
                                     Die angefragte Adresse ist angeschlossen.
+                                    <Abte.Site:Content.Button class="text-white duration-150 scale-100 bg-black hover:scale-105" text="Zum Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
                                 </span>
                             </div>
                         </div>  
