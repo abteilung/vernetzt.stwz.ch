@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 overrides:
   ansi-regex: ^5.0.1
@@ -73,13 +73,13 @@ devDependencies:
   chokidar: 3.5.3
   concurrently: 6.5.1
   cssnano: 5.1.7_postcss@8.4.13
-  daisyui: 2.14.3_1479244b7b1ab8346eed707106c1912f
+  daisyui: 2.14.3_cr4sis33dk4di3xnobyqnqmrf4
   deepmerge: 4.2.2
   dependency-graph: 0.11.0
   esbuild: 0.14.38
   eslint: 8.14.0
   eslint-config-prettier: 8.5.0_eslint@8.14.0
-  eslint-plugin-prettier: 4.0.0_665eb419c9d7860ca0c224f7f6dcdace
+  eslint-plugin-prettier: 4.0.0_mzpligoj26dazigcet37nxg2zy
   fs-extra: 10.1.0
   glob: 7.2.0
   js-yaml: 4.1.0
@@ -997,7 +997,7 @@ packages:
       css-tree: 1.1.3
     dev: true
 
-  /daisyui/2.14.3_1479244b7b1ab8346eed707106c1912f:
+  /daisyui/2.14.3_cr4sis33dk4di3xnobyqnqmrf4:
     resolution: {integrity: sha512-EH6cLLaieInq81ACE8FxHsWLsH08sZ62zLxctIHTnLhn0eHvtHdLYZ6yngsy7yd43ZFOstzbyYY4q5xByZdaQQ==}
     peerDependencies:
       autoprefixer: ^10.0.2
@@ -1473,7 +1473,7 @@ packages:
       eslint: 8.14.0
     dev: true
 
-  /eslint-plugin-prettier/4.0.0_665eb419c9d7860ca0c224f7f6dcdace:
+  /eslint-plugin-prettier/4.0.0_mzpligoj26dazigcet37nxg2zy:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
