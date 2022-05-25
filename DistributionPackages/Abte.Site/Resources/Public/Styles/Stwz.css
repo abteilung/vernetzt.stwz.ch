@@ -3058,6 +3058,18 @@ select{
 .duration-\[3200ms\]{
     transition-duration: 3200ms;
 }
+.duration-\[12000\]{
+    transition-duration: 12000;
+}
+.duration-\[3430\]{
+    transition-duration: 3430;
+}
+.duration-\[12000ms\]{
+    transition-duration: 12000ms;
+}
+.duration-\[3430ms\]{
+    transition-duration: 3430ms;
+}
 .ease-in{
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
