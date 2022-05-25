@@ -7,7 +7,6 @@ document.addEventListener('alpine:init', () => {
         loading: false,
         response: '',
         
-
         address: {
             city: '',
             country: '',
@@ -16,8 +15,25 @@ document.addEventListener('alpine:init', () => {
             house_number: '',
             house_number_suffix: ''
         },
+
+        validation: {
+            city: '',
+            street: '',
+            house_number: '',
+            required: {
+                message: 'Dies ist ein Pflichtfeld'
+            }
+        },
         
+        validate(field) {
+
+        },
+
         check() {
+            if (!this.address.city.length){ this.validation.city = this.validation.required.message; } 
+            if (!this.address.streetname.length){ this.validation.streetname = this.validation.required.message; } 
+            if (!this.address.house_number.length){ this.validation.house_number = this.validation.required.message; return; } 
+
             this.loading = true;
             console.log(this.url);
             fetch(
@@ -53,9 +69,7 @@ document.addEventListener('alpine:init', () => {
                         return error;
                     });
         },
-  
-        // resetAll(){
-        
-        // }
+
+            
     }))
   });

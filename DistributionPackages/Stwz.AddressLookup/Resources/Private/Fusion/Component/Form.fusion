@@ -27,9 +27,9 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     <h3 class="mb-4 font-extrabold text-black">Glasfaseranschluss prüfen</h3>
                     <div class="grid w-full gap-4 sm:grid-cols-8">
                         <input class="sm:col-span-4 lg:col-span-1 xl:col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ"  />
-                        <input class="sm:col-span-4 lg:col-span-2 xl:col-span-2" type="text" x-model="address.city" placeholder="Ort*" required=""/>
-                        <input class="sm:col-span-6 lg:col-span-3 xl:col-span-3" type="text" x-model="address.streetname"placeholder="Strasse*" required=""/>
-                        <input class="sm:col-span-2 lg:col-span-1 xl:col-span-1" type="text" x-model="address.house_number" placeholder="Nr." />
+                        <input class="sm:col-span-4 lg:col-span-2 xl:col-span-2" type="text" x-model="address.city" placeholder="Ort*" required="required"/>
+                        <input class="sm:col-span-6 lg:col-span-3 xl:col-span-3" type="text" x-model="address.streetname"placeholder="Strasse*" required="required"/>
+                        <input class="sm:col-span-2 lg:col-span-1 xl:col-span-1" type="text" x-model="address.house_number" placeholder="Nr.*" required="required" />
                         <input type="hidden" x-model="address.country" placeholder="Land" value="Schweiz" />
                         <input type="hidden" x-model="url" value={props.url} />
 
@@ -39,6 +39,85 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                                 <span x-show="!loading">Prüfen</span>
                         </button>
 
+                    </div>
+                    <!-- Validation -->
+                    <div class="grid w-full gap-4 sm:grid-cols-8">
+                        <div class="sm:col-span-4 lg:col-span-1 xl:col-span-1"></div>
+                        <div class="sm:col-span-4 lg:col-span-2 xl:col-span-2">
+                            <div x-show="validation.city" class="flex items-center py-1">
+                                <div 
+                                :class="{'bg-green-200 text-green-700': address.city,
+                                'bg-red-200 text-red-700': !address.city}"
+                                    class=" rounded-full p-1 fill-current ">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" 
+                                    stroke="currentColor">
+                                        <path
+                                            x-show="address.city"
+                                            stroke-linecap="round" stroke-linejoin="round" 
+                                            stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <path
+                                            x-show="!address.city"
+                                            stroke-linecap="round" stroke-linejoin="round" 
+                                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+                                <span
+                                    :class="{'text-green-700': address.city, 
+                                    'text-red-700': !address.city}"
+                                    class="font-medium text-sm ml-3"
+                                    x-text="validation.city"></span>
+                            </div>
+                        </div>
+                        <div class="sm:col-span-6 lg:col-span-3 xl:col-span-3">
+                            <div x-show="validation.streetname" class="flex items-center py-1">
+                                <div 
+                                :class="{'bg-green-200 text-green-700': address.streetname,
+                                'bg-red-200 text-red-700': !address.streetname}"
+                                    class=" rounded-full p-1 fill-current ">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" 
+                                    stroke="currentColor">
+                                        <path
+                                            x-show="address.streetname"
+                                            stroke-linecap="round" stroke-linejoin="round" 
+                                            stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <path
+                                            x-show="!address.streetname"
+                                            stroke-linecap="round" stroke-linejoin="round" 
+                                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+                                <span
+                                    :class="{'text-green-700': address.streetname, 
+                                    'text-red-700': !address.streetname}"
+                                    class="font-medium text-sm ml-3"
+                                    x-text="validation.streetname"></span>
+                            </div>
+                        </div>
+                        <div class="sm:col-span-6 lg:col-span-2 xl:col-span-2">
+                            <div x-show="validation.house_number" class="flex items-center py-1">
+                                <div 
+                                :class="{'bg-green-200 text-green-700': address.house_number,
+                                'bg-red-200 text-red-700': !address.house_number}"
+                                    class=" rounded-full p-1 fill-current ">
+                                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" 
+                                    stroke="currentColor">
+                                        <path
+                                            x-show="address.house_number"
+                                            stroke-linecap="round" stroke-linejoin="round" 
+                                            stroke-width="2" d="M5 13l4 4L19 7" />
+                                        <path
+                                            x-show="!address.house_number"
+                                            stroke-linecap="round" stroke-linejoin="round" 
+                                            stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </div>
+                                <span
+                                    :class="{'text-green-700': address.house_number, 
+                                    'text-red-700': !address.house_number}"
+                                    class="font-medium text-sm ml-3"
+                                    x-text="validation.house_number"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
