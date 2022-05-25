@@ -2922,6 +2922,10 @@ select{
     --tw-text-opacity: 1 !important;
     color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
+.text-error{
+    --tw-text-opacity: 1;
+    color: hsl(var(--er) / var(--tw-text-opacity));
+}
 .underline{
     -webkit-text-decoration-line: underline;
             text-decoration-line: underline;
@@ -5099,6 +5103,10 @@ select{
 
     .lg\:bg-center{
         background-position: center;
+    }
+
+    .lg\:p-16{
+        padding: 4rem;
     }
 
     .lg\:px-16{
