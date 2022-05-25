@@ -98,8 +98,8 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         <div>60 Fotos (300 MB) hochladen</div>
                         <div class="whitespace-nowrap">{props.downloadTime} s</div>
                     </div>
-                    <div class="bg-gray-200 h-1 w-full rounded-full overflow-hidden">
-                        <div data-progressbar class={'transition-all duration-[' + props.downloadTime * 1000 + 'ms] h-full bg-secondary relative w-1'} ></div>
+                    <div class="bg-gray-500 h-1 w-full rounded-full overflow-hidden">
+                        <div data-progressbar class={'transition-all duration-[' + props.downloadTime * 1000 + 'ms] h-full bg-accent relative w-1'} ></div>
                     </div>
                 </div>
 

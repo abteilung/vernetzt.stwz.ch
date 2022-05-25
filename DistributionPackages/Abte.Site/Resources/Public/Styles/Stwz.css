@@ -2541,6 +2541,10 @@ select{
 .\!bg-transparent{
     background-color: transparent !important;
 }
+.bg-gray-500{
+    --tw-bg-opacity: 1;
+    background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
 .bg-opacity-20{
     --tw-bg-opacity: 0.2;
 }
