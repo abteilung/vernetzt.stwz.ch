@@ -41,15 +41,15 @@ prototype(Abte.Site:Component.HeaderAbout) < prototype(Neos.Neos:ContentComponen
 
     renderer = afx`
         <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="container relative pt-32 h-[250px] md:h-[300px] relative top-0 z-20 w-full mt-0 overflow-visible">
+            <div class="container gridPadding-x relative pt-36 h-[250px] md:h-[300px] relative top-0 z-20 w-full mt-0 overflow-visible">
                 <div class="grid grid-cols-2 gridgap-x">
-                    <div class="col-span-1 illustrationContainer">
-                        {props.svgIllustration}
-                    </div>
-                    <div class="col-span-1">
+                    <div class="col-span-1 xl:col-end-3">
                         <Neos.Fusion:Augmenter class="text-black h1">
                             {props.subTitle}
                         </Neos.Fusion:Augmenter>
+                    </div>
+                    <div class="col-span-1 illustrationContainer">
+                        {props.svgIllustration}
                     </div>
                 </div>
             </div>
