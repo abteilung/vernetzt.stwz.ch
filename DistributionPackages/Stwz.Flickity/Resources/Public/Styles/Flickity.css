@@ -146,7 +146,7 @@ https://flickity.metafizzy.co
   height: 10px;
   padding: 0;
   margin: 0 8px;
-  background: hsl(0 0% 20% / 25%);
+  background: #c1d3db !important;
   border-radius: 50%;
   cursor: pointer;
   -webkit-appearance: none;
@@ -163,11 +163,11 @@ https://flickity.metafizzy.co
 
 .flickity-page-dot:focus {
   outline: none;
-  box-shadow: 0 0 0 5px #19F;
+  box-shadow: 0 0 0 3px #edfe0e !important;
 }
 
 .flickity-page-dot.is-selected {
-  background: hsl(0 0% 20% / 100%);
+  background: #edfe0e !important;
 }
 
 /*! Additional Styles to Flickty
