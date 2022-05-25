@@ -6,3 +6,13 @@
         preset: 'text.free'
       ui:
         label: i18n
+    'teaser_title':
+      options:
+        preset: 'text.free'
+      ui:
+        label: Teaser Title
+    'teaser_subTitle':
+      options:
+        preset: 'text.free'
+      ui:
+        label: Teaser SubTitle                

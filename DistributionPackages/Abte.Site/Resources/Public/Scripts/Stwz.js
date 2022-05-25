@@ -2849,8 +2849,10 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
   document.addEventListener("DOMContentLoaded", function() {
     let bar = document.querySelectorAll("[data-progressbar]");
     bar.forEach(function(elem) {
-      elem.classList.remove("w-1");
-      elem.classList.add("w-1/2");
+      setTimeout(function() {
+        elem.classList.remove("w-1");
+        elem.classList.add("w-full");
+      }, 2e3);
     });
   });
 })();

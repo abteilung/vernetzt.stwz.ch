@@ -25,6 +25,15 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
         property = 'teaser_short'
     }
 
+    teaser_title = Neos.Neos:Editable {
+        property = 'teaser_title'
+    }
+
+    teaser_subTitle = Neos.Neos:Editable {
+        property = 'teaser_subTitle'
+    }    
+
+
     renderer = afx`
         <Carbon.Link:Link 
             node={node}
@@ -42,8 +51,8 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
                     <h2 class="block h1">{props.title}</h2>
                 </div>
                 <div class="flex-1 w-5/6 content">
-                    <h4>{String.toString(props.subTitle)}</h4>
-                    {props.intro}
+                    <h4>{String.toString(props.teaser_title)}</h4>
+                    {props.teaser_subTitle}
                 </div>
             </div>
         </Carbon.Link:Link>

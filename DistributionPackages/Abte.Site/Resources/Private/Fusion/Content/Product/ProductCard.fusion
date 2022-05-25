@@ -99,13 +99,17 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         <div class="whitespace-nowrap">{props.downloadTime} s</div>
                     </div>
                     <div class="bg-gray-200 h-1 w-full rounded-full overflow-hidden">
-                        <div class={'transition-all duration-[' + props.downloadTime * 1000 + 'ms] h-full bg-secondary relative w-1'} data-progressbar></div>
+                        <div data-progressbar class={'transition-all duration-[' + props.downloadTime * 1000 + 'ms] h-full bg-secondary relative w-1'} ></div>
                     </div>
                 </div>
 
             </label>
         </div>
     `
+
+    // duration-[12000ms]
+    // duration-[3430ms]
+    // duration-[240ms]
 
     @cache {
         mode = 'cached'
