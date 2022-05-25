@@ -7,10 +7,11 @@ prototype(Stwz.Navigation:Component.Navbar) < prototype(Neos.Fusion:Component) {
         <div 
             x-cloak
             id={props.menuID}
-            class="sticky top-0 z-40 w-full h-32 transition-all duration-500 transform isolate"
+            class="sticky top-0 z-40 w-full transition-all duration-500 transform h-28 md:h-32 isolate"
         >
-            <Stwz.Navigation:Component.Extra.Navbar.Navigation />
-            
+            <div class="hidden lg:flex">
+                <Stwz.Navigation:Component.Extra.Navbar.Navigation />
+            </div>
             <div class="flex justify-center h-20 container-wide">
                 <div class="flex justify-between w-full mx-0 gridPadding-x">
                     <Stwz.Navigation:Component.Navbar.Brand />

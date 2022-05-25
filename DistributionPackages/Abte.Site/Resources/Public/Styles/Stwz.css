@@ -896,6 +896,9 @@ select{
     padding-left: 1rem;
     padding-right: 1rem;
 }
+    .gridPadding-right{
+    padding-right: 1.25rem;
+}
 
     .gridPadding-top{
     padding-top: 1.25rem;
@@ -1936,6 +1939,9 @@ select{
 .h-\[768px\]{
     height: 768px;
 }
+.h-28{
+    height: 7rem;
+}
 .max-h-full{
     max-height: 100%;
 }
@@ -2033,6 +2039,9 @@ select{
 }
 .flex-none{
     flex: none;
+}
+.\!flex-none{
+    flex: none !important;
 }
 .origin-bottom-left{
     transform-origin: bottom left;
@@ -2295,6 +2304,9 @@ select{
 .\!gap-y-16{
     row-gap: 4rem !important;
 }
+.gap-y-4{
+    row-gap: 1rem;
+}
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -2344,6 +2356,16 @@ select{
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+.space-x-0 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0px * var(--tw-space-x-reverse));
+    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]){
     --tw-divide-y-reverse: 0;
@@ -2635,6 +2657,10 @@ select{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 }
+.py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 .py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -2658,10 +2684,6 @@ select{
 .px-2{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-}
-.py-12{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
 }
 .pt-1{
     padding-top: 0.25rem;
@@ -3973,6 +3995,10 @@ select{
         padding-right: 2rem;
     }
 
+    .gridPadding-right{
+        padding-right: 2rem;
+    }
+
     .gridPadding-top{
         padding-top: 2rem;
     }
@@ -4514,6 +4540,10 @@ select{
         grid-template-columns: repeat(11, minmax(0, 1fr));
     }
 
+    .md\:items-center{
+        align-items: center;
+    }
+
     .md\:gap-6{
         gap: 1.5rem;
     }
@@ -4542,8 +4572,19 @@ select{
         margin-bottom: calc(4rem * var(--tw-space-y-reverse));
     }
 
+    .md\:space-x-6 > :not([hidden]) ~ :not([hidden]){
+        --tw-space-x-reverse: 0;
+        margin-right: calc(1.5rem * var(--tw-space-x-reverse));
+        margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+
     .md\:rounded-full{
         border-radius: 9999px;
+    }
+
+    .md\:py-24{
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
 
     .md\:px-8{
@@ -4551,9 +4592,9 @@ select{
         padding-right: 2rem;
     }
 
-    .md\:py-24{
-        padding-top: 6rem;
-        padding-bottom: 6rem;
+    .md\:py-8{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .md\:pl-0{
@@ -4835,6 +4876,10 @@ select{
     .gridPadding{
         padding-top: 6rem;
         padding-bottom: 6rem;
+    }
+
+    .gridPadding-right{
+        padding-right: 3rem;
     }
 
     .gridPadding-top{
@@ -5145,6 +5190,10 @@ select{
         margin-bottom: 2rem;
     }
 
+    .lg\:block{
+        display: block;
+    }
+
     .lg\:flex{
         display: flex;
     }
@@ -5315,6 +5364,10 @@ select{
         grid-template-columns: repeat(12, minmax(0, 1fr));
     }
 
+    .lg\:justify-end{
+        justify-content: flex-end;
+    }
+
     .lg\:space-x-8 > :not([hidden]) ~ :not([hidden]){
         --tw-space-x-reverse: 0;
         margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -5337,6 +5390,11 @@ select{
     .lg\:px-12{
         padding-left: 3rem;
         padding-right: 3rem;
+    }
+
+    .lg\:py-0{
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 
     .lg\:pl-0{
