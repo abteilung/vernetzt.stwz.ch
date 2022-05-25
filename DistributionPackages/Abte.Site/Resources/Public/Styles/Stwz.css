@@ -1529,6 +1529,9 @@ select{
 .top-24{
     top: 6rem;
 }
+.top-20{
+    top: 5rem;
+}
 .isolate{
     isolation: isolate;
 }
@@ -4069,6 +4072,10 @@ select{
 
     .md\:right-4{
         right: 1rem;
+    }
+
+    .md\:top-28{
+        top: 7rem;
     }
 
     .md\:col-span-4{
