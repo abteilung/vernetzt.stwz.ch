@@ -1,2 +1,9 @@
+#addressMessages label{
+        display: none;
+    }
+    #addressMessages button{
+        @extend .bg-primary;
+    }
+
 
 /*# sourceMappingURL=AddressLookup.css.map */
