@@ -1,9 +1,19 @@
 #addressMessages label{
         display: none;
     }
+
     #addressMessages button{
-        @extend .bg-primary;
-    }
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        --tw-bg-opacity: 1;
+        background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+        border-radius: 9999px;
+        font-weight: 800;
+}
 
 
 /*# sourceMappingURL=AddressLookup.css.map */
