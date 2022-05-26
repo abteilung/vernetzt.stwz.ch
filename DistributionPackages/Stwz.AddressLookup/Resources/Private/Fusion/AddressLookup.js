@@ -21,7 +21,7 @@ document.addEventListener('alpine:init', () => {
             street: '',
             house_number: '',
             required: {
-                message: 'Dies ist ein Pflichtfeld'
+                message: 'Pflichtfeld'
             }
         },
         

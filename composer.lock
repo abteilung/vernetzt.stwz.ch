@@ -8,7 +8,7 @@
     "packages": [
         {
             "name": "abte/site",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abte.Site",
@@ -44,7 +44,7 @@
         },
         {
             "name": "abteilung/gridsystem",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abteilung.Gridsystem",
@@ -5204,6 +5204,133 @@
             "time": "2021-11-22T10:49:45+00:00"
         },
         {
+            "name": "neos/nodetypes-form",
+            "version": "7.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neos/nodetypes-form.git",
+                "reference": "65514c2dabac84cd70ee3afefa488452917235d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neos/nodetypes-form/zipball/65514c2dabac84cd70ee3afefa488452917235d1",
+                "reference": "65514c2dabac84cd70ee3afefa488452917235d1",
+                "shasum": ""
+            },
+            "require": {
+                "neos/form": "*",
+                "neos/neos": "*",
+                "neos/nodetypes-basemixins": "*",
+                "php": "^7.3 || ^8.0"
+            },
+            "type": "neos-package",
+            "extra": {
+                "applied-flow-migrations": [
+                    "TYPO3.TYPO3CR-20150510103823",
+                    "TYPO3.FLOW3-201201261636",
+                    "TYPO3.Fluid-201205031303",
+                    "TYPO3.FLOW3-201205292145",
+                    "TYPO3.FLOW3-201206271128",
+                    "TYPO3.Flow-201211151101",
+                    "TYPO3.Neos.NodeTypes-130516220640",
+                    "TYPO3.TypoScript-130516234520",
+                    "TYPO3.TypoScript-130516235550",
+                    "TYPO3.TYPO3CR-130523180140",
+                    "TYPO3.Neos.NodeTypes-201309111655",
+                    "TYPO3.Neos-201310021548",
+                    "TYPO3.Flow-201310031523",
+                    "TYPO3.Flow-201405111147",
+                    "TYPO3.Neos-201409071922",
+                    "TYPO3.TYPO3CR-140911160326",
+                    "TYPO3.Neos-201410010000",
+                    "TYPO3.TYPO3CR-141101082142",
+                    "TYPO3.Neos-20141113115300",
+                    "TYPO3.Fluid-20141121091700",
+                    "TYPO3.Neos-20141218134700",
+                    "TYPO3.Fluid-20150214130800",
+                    "TYPO3.Neos-201407061038",
+                    "TYPO3.Flow-201212051340",
+                    "TYPO3.Fluid-20141113120800",
+                    "TYPO3.Flow-20141113121400",
+                    "Typo3.Neos.NodeTypes-201309111655",
+                    "TYPO3.TYPO3CR-20140911160326",
+                    "TYPO3.Flow-201209251426",
+                    "TYPO3.FLOW3-201209201112",
+                    "TYPO3.Neos-20150303231600",
+                    "TYPO3.Flow-20151113161300",
+                    "TYPO3.Form-20160601101500",
+                    "TYPO3.Flow-20161115140400",
+                    "TYPO3.Flow-20161115140430",
+                    "Neos.Flow-20161124204700",
+                    "Neos.Flow-20161124204701",
+                    "Neos.Twitter.Bootstrap-20161124204912",
+                    "Neos.Form-20161124205254",
+                    "Neos.Flow-20161124224015",
+                    "Neos.Party-20161124225257",
+                    "Neos.Eel-20161124230101",
+                    "Neos.Kickstart-20161124230102",
+                    "Neos.Setup-20161124230842",
+                    "Neos.Imagine-20161124231742",
+                    "Neos.Media-20161124233100",
+                    "Neos.NodeTypes-20161125002300",
+                    "Neos.SiteKickstarter-20161125002311",
+                    "Neos.Neos-20161125002322",
+                    "Neos.ContentRepository-20161125012000",
+                    "Neos.Fusion-20161125013710",
+                    "Neos.Setup-20161125014759",
+                    "Neos.SiteKickstarter-20161125095901",
+                    "Neos.Fusion-20161125104701",
+                    "Neos.NodeTypes-20161125104800",
+                    "Neos.Neos-20161125104802",
+                    "Neos.Kickstarter-20161125110814",
+                    "Neos.Flow-20161125124112",
+                    "Neos.Neos-20161125122412",
+                    "TYPO3.FluidAdaptor-20161130112935",
+                    "Neos.Fusion-20161201202543",
+                    "Neos.Neos-20161201222211",
+                    "Neos.Fusion-20161202215034",
+                    "Neos.Fusion-20161219092345",
+                    "Neos.ContentRepository-20161219093512",
+                    "Neos.Media-20161219094126",
+                    "Neos.Neos-20161219094403",
+                    "Neos.Neos-20161219122512",
+                    "Neos.Fusion-20161219130100",
+                    "Neos.Neos-20161220163741",
+                    "Neos.Fusion-20170120013047",
+                    "Neos.Neos-20170115114620",
+                    "Neos.Flow-20170125103800",
+                    "Neos.Seo-20170127154600",
+                    "Neos.Flow-20170127183102",
+                    "Neos.Fusion-20180211175500",
+                    "Neos.Fusion-20180211184832",
+                    "Neos.Flow-20180415105700",
+                    "Neos.Neos-20180907103800",
+                    "Neos.Neos.Ui-20190319094900",
+                    "Neos.Flow-20190515215000"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Neos\\NodeTypes\\Form\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "A simple form node type.",
+            "support": {
+                "source": "https://github.com/neos/nodetypes-form/tree/7.3.4"
+            },
+            "funding": [
+                {
+                    "url": "https://shop.neos.io/neosfunding/",
+                    "type": "custom"
+                }
+            ],
+            "time": "2021-11-22T10:49:45+00:00"
+        },
+        {
             "name": "neos/party",
             "version": "7.0.1",
             "source": {
@@ -6581,6 +6708,121 @@
             "time": "2021-08-15T18:05:19+00:00"
         },
         {
+            "name": "onedrop/ajaxform",
+            "version": "3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/1drop/Onedrop.AjaxForm.git",
+                "reference": "8476669d43742f524b952cc3ca6c503b44b73059"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/1drop/Onedrop.AjaxForm/zipball/8476669d43742f524b952cc3ca6c503b44b73059",
+                "reference": "8476669d43742f524b952cc3ca6c503b44b73059",
+                "shasum": ""
+            },
+            "require": {
+                "neos/neos": "~3.0 || ^4.0 || ^5.0 || ^7.0",
+                "neos/nodetypes-form": "~3.0 || ^4.0 || ^5.0 || ^7.0"
+            },
+            "type": "neos-package",
+            "extra": {
+                "applied-flow-migrations": [
+                    "TYPO3.FLOW3-201201261636",
+                    "TYPO3.Fluid-201205031303",
+                    "TYPO3.FLOW3-201205292145",
+                    "TYPO3.FLOW3-201206271128",
+                    "TYPO3.FLOW3-201209201112",
+                    "TYPO3.Flow-201209251426",
+                    "TYPO3.Flow-201211151101",
+                    "TYPO3.Flow-201212051340",
+                    "TYPO3.TypoScript-130516234520",
+                    "TYPO3.TypoScript-130516235550",
+                    "TYPO3.TYPO3CR-130523180140",
+                    "TYPO3.Neos.NodeTypes-201309111655",
+                    "TYPO3.Flow-201310031523",
+                    "TYPO3.Flow-201405111147",
+                    "TYPO3.Neos-201407061038",
+                    "TYPO3.Neos-201409071922",
+                    "TYPO3.TYPO3CR-140911160326",
+                    "TYPO3.Neos-201410010000",
+                    "TYPO3.TYPO3CR-141101082142",
+                    "TYPO3.Neos-20141113115300",
+                    "TYPO3.Fluid-20141113120800",
+                    "TYPO3.Flow-20141113121400",
+                    "TYPO3.Fluid-20141121091700",
+                    "TYPO3.Neos-20141218134700",
+                    "TYPO3.Fluid-20150214130800",
+                    "TYPO3.Neos-20150303231600",
+                    "TYPO3.TYPO3CR-20150510103823",
+                    "TYPO3.Flow-20151113161300",
+                    "TYPO3.Form-20160601101500",
+                    "TYPO3.Flow-20161115140400",
+                    "TYPO3.Flow-20161115140430",
+                    "Neos.Flow-20161124204700",
+                    "Neos.Flow-20161124204701",
+                    "Neos.Twitter.Bootstrap-20161124204912",
+                    "Neos.Form-20161124205254",
+                    "Neos.Flow-20161124224015",
+                    "Neos.Party-20161124225257",
+                    "Neos.Eel-20161124230101",
+                    "Neos.Kickstart-20161124230102",
+                    "Neos.Setup-20161124230842",
+                    "Neos.Imagine-20161124231742",
+                    "Neos.Media-20161124233100",
+                    "Neos.NodeTypes-20161125002300",
+                    "Neos.SiteKickstarter-20161125002311",
+                    "Neos.Neos-20161125002322",
+                    "Neos.ContentRepository-20161125012000",
+                    "Neos.Fusion-20161125013710",
+                    "Neos.Setup-20161125014759",
+                    "Neos.SiteKickstarter-20161125095901",
+                    "Neos.Fusion-20161125104701",
+                    "Neos.NodeTypes-20161125104800",
+                    "Neos.Neos-20161125104802",
+                    "Neos.Kickstarter-20161125110814",
+                    "Neos.Neos-20161125122412",
+                    "Neos.Flow-20161125124112",
+                    "TYPO3.FluidAdaptor-20161130112935",
+                    "Neos.Fusion-20161201202543",
+                    "Neos.Neos-20161201222211",
+                    "Neos.Fusion-20161202215034",
+                    "Neos.Fusion-20161219092345",
+                    "Neos.ContentRepository-20161219093512",
+                    "Neos.Media-20161219094126",
+                    "Neos.Neos-20161219094403",
+                    "Neos.Neos-20161219122512",
+                    "Neos.Fusion-20161219130100",
+                    "Neos.Neos-20161220163741",
+                    "Neos.Neos-20170115114620",
+                    "Neos.Fusion-20170120013047",
+                    "Neos.Flow-20170125103800",
+                    "Neos.Seo-20170127154600",
+                    "Neos.Flow-20170127183102",
+                    "Neos.Fusion-20180211175500",
+                    "Neos.Fusion-20180211184832",
+                    "Neos.Flow-20180415105700",
+                    "Neos.Neos-20180907103800",
+                    "Neos.Neos.Ui-20190319094900"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Onedrop\\AjaxForm\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Neos package that provides an additional Form prototype, Routes and JS to have Ajax forms",
+            "support": {
+                "issues": "https://github.com/1drop/Onedrop.AjaxForm/issues",
+                "source": "https://github.com/1drop/Onedrop.AjaxForm/tree/3.5.0"
+            },
+            "time": "2021-08-02T16:06:04+00:00"
+        },
+        {
             "name": "psr/cache",
             "version": "1.0.1",
             "source": {
@@ -7499,7 +7741,7 @@
         },
         {
             "name": "stwz/addresslookup",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.AddressLookup",
@@ -7525,7 +7767,7 @@
         },
         {
             "name": "stwz/flickity",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Flickity",
@@ -7551,7 +7793,7 @@
         },
         {
             "name": "stwz/form-multicolumnsection",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Form.MultiColumnSection",
@@ -7580,7 +7822,7 @@
         },
         {
             "name": "stwz/movinglines",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.MovingLines",
@@ -7606,7 +7848,7 @@
         },
         {
             "name": "stwz/navigation",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Navigation",
@@ -7634,7 +7876,7 @@
         },
         {
             "name": "stwz/privacy",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Privacy",
@@ -7661,14 +7903,15 @@
         },
         {
             "name": "stwz/shop",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Shop",
-                "reference": "2ceaef2aacea0c87b241a4e5919b7b2209d63219"
+                "reference": "fc34d3b5df27437e24885ac279526fd7d5a69938"
             },
             "require": {
                 "neos/flow": "*",
+                "onedrop/ajaxform": "^3.5",
                 "stwz/form-multicolumnsection": "*"
             },
             "type": "neos-package",

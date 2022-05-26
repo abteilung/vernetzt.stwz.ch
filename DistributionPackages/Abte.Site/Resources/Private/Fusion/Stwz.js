@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
         setTimeout(function() {
             elem.classList.remove('w-1');
             elem.classList.add('w-full');
-        }, 2000);
+        }, 3000);
 
     })
 });

@@ -4,6 +4,7 @@
     "name": "stwz/shop",
     "require": {
         "neos/flow": "*",
+        "onedrop/ajaxform": "^3.5",
         "stwz/form-multicolumnsection": "*"
     },
     "autoload": {
