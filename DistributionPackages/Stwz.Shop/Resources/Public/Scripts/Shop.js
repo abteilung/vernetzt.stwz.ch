@@ -103,10 +103,10 @@
     Alpine.data("cart", () => ({
       total: 0,
       value: "",
-      mobile: localStorage.getItem("Mobile") ? parseFloat(document.getElementById(localStorage.getItem("Mobile")).dataset.price).toFixed(2) : 0,
-      internet: localStorage.getItem("Internet") ? parseFloat(document.getElementById(localStorage.getItem("Internet")).dataset.price).toFixed(2) : 0,
-      telephone: localStorage.getItem("Telefonie") ? parseFloat(document.getElementById(localStorage.getItem("Telefonie")).dataset.price).toFixed(2) : 0,
-      television: localStorage.getItem("TV") ? parseFloat(document.getElementById(localStorage.getItem("TV")).dataset.price).toFixed(2) : 0,
+      mobile: localStorage.getItem("Mobile") ? parseFloat(document.getElementById(localStorage.getItem("Mobile")).dataset.price) : 0,
+      internet: localStorage.getItem("Internet") ? parseFloat(document.getElementById(localStorage.getItem("Internet")).dataset.price) : 0,
+      telephone: localStorage.getItem("Telefonie") ? parseFloat(document.getElementById(localStorage.getItem("Telefonie")).dataset.price) : 0,
+      television: localStorage.getItem("TV") ? parseFloat(document.getElementById(localStorage.getItem("TV")).dataset.price) : 0,
       totalDiscount: 0,
       mobileDiscount: 0,
       internetDiscount: 0,
@@ -114,11 +114,11 @@
       televisionDiscount: 0,
       count() {
         this.mobile = localStorage.getItem("Mobile") ? parseFloat(document.getElementById(localStorage.getItem("Mobile")).dataset.price) : 0;
-        this.internet = localStorage.getItem("Internet") ? parseFloat(document.getElementById(localStorage.getItem("Internet")).dataset.price) : 0;
+        this.internet = localStorage.getItem("Internet") ? Number.isInteger(document.getElementById(localStorage.getItem("Internet")).dataset.price) ? parseInt(document.getElementById(localStorage.getItem("Internet")).dataset.price) : parseFloat(document.getElementById(localStorage.getItem("Internet")).dataset.price) : 0;
         this.telephone = localStorage.getItem("Telefonie") ? parseFloat(document.getElementById(localStorage.getItem("Telefonie")).dataset.price) : 0;
         this.television = localStorage.getItem("TV") ? parseFloat(document.getElementById(localStorage.getItem("TV")).dataset.price) : 0;
         console.log(this.internet, this.television, this.telephone, this.mobile);
-        this.total = (this.internet + this.television + this.telephone + this.mobile).toFixed(2);
+        this.total = parseFloat(this.internet + this.television + this.telephone + this.mobile).toFixed(2);
       },
       reset(group) {
         console.log(group);
