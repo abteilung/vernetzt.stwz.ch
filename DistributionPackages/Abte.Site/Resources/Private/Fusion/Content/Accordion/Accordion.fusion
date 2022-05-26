@@ -165,7 +165,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
         <template x-if="total">
             <div class="relative block py-4 mb-4 border-t border-black h-26">
                 <strong>Total</strong>
-                <div class="text-2xl text-white" x-text="total + '.–'"></div>
+                    <div class="text-2xl text-white" x-text="'CHF ' + total"></div>
                 <template x-if="totalDiscount">
                     <Abte.Site:Icon.Diagonal class="absolute text-white top-16 left-16" />
                 </template>         
