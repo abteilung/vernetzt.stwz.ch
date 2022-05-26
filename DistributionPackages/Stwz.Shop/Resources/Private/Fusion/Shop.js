@@ -20,13 +20,13 @@ document.addEventListener('alpine:init', () => {
 
       count() {
         this.mobile = localStorage.getItem('Mobile') ? parseFloat(document.getElementById(localStorage.getItem('Mobile')).dataset.price) : 0;
-        this.internet = localStorage.getItem('Internet') ? (Number.isInteger(document.getElementById(localStorage.getItem('Internet')).dataset.price) ? parseInt(document.getElementById(localStorage.getItem('Internet')).dataset.price) : parseFloat(document.getElementById(localStorage.getItem('Internet')).dataset.price)) : 0;
+        this.internet = localStorage.getItem('Internet') ? parseFloat(document.getElementById(localStorage.getItem('Internet')).dataset.price) : 0;
         this.telephone = localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.price) : 0;
         this.television = localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.price) : 0;
         
         console.log(this.internet, this.television, this.telephone, this.mobile);
         
-        this.total = parseFloat(this.internet + this.television + this.telephone + this.mobile).toFixed(2);
+        this.total = Number.isInteger(this.internet + this.television + this.telephone + this.mobile) ? parseInt(this.internet + this.television + this.telephone + this.mobile) : parseFloat(this.internet + this.television + this.telephone + this.mobile);
       },
 
       reset(group) {
