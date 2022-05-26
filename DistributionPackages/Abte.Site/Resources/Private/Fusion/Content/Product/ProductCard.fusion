@@ -107,7 +107,10 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
         </div>
     `
 
+    // duration-[24000ms]
     // duration-[12000ms]
+    // duration-[10000ms]
+    // duration-[6860ms]
     // duration-[3430ms]
     // duration-[240ms]
 
