@@ -19,8 +19,6 @@
     footer:
       type: 'Neos.Neos:ContentCollection'
       position: 'after main'
-    modal:
-      type: 'Neos.Neos:ContentCollection'
   constraints:
     nodeTypes:
       '*': false

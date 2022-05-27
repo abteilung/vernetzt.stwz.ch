@@ -11,10 +11,6 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
         format = 'json'
     }
 
-    form = Neos.Neos:ContentCollection {
-        nodePath = ${ q(node).children('modal').property('_path') }
-    }
-
     renderer = afx`
         <div id="addressLookup"
              class="max-w-screen-lg mx-auto addressLookup"
@@ -62,12 +58,15 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0">
                     <!-- x-on:click.away="error = false" -->
-                    <div class="relative flex items-center mb-2">
-                        <p class="text-error">Für diese Adresse exisitert noch kein Anschluss.</p>
+                    <div class="mb-2">
+                        <h3 class="">Für diese Adresse exisitert noch kein Anschluss.</h3>
                         <p>Überprüfe deine Angaben oder registriere dich, um zu erfahren, wann dein Anschluss freigeschaltet wird.</p>
                     </div>
-                    <div class="relative flex items-center mt-2">
-                        {props.form}
+                    <div class="relative mt-2">
+
+                        <Carbon.IncludeAssets:File file="resource://Onedrop.AjaxForm/Public/JavaScript/form.js" />
+                        <Onedrop.AjaxForm:Form formIdentifier="contact-form" />                        
+
                     </div>
                 </div>
                 <div class="relative flex items-center px-6 mx-auto my-16 space-x-8 bg-white group h-36 lg:px-16 rounded-3xl box-shadow"

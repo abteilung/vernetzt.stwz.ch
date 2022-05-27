@@ -1,0 +1,100 @@
+type: 'Neos.Form:Form'
+identifier: order-form
+label: Order
+renderingOptions:
+  submitButtonLabel: Send
+renderables:
+  -
+    type: 'Neos.Form:Page'
+    identifier: page-one
+    label: 
+    renderables:
+      -
+        type: 'Neos.Form:OrderField'
+        identifier: order
+        label: Anfrage
+        properties:
+          placeholder: 'Ihre Anfrage'
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: first_name
+        label: Vorname
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: Vorname
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: last_name
+        label: Nachname
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: Nachname
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: email
+        label: E-Mail
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+          - identifier: 'Neos.Flow:EmailAddress'
+        properties:
+          placeholder: 'E-Mail'
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: address
+        label: Adresse
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: Strasse
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: zip
+        label: PLZ
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: PLZ
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: city
+        label: Ort
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: Ort
+        defaultValue: ''    
+      -
+        type: 'Neos.Form:MultiLineText'
+        identifier: message
+        label: Message
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: 'Your Message'
+        defaultValue: ''
+finishers:
+  -
+    identifier: 'Neos.Form:Email'
+    options:
+      templatePathAndFilename: resource://Roen.Forms/Private/Templates/Email/Order-DE.txt
+      subject: Eine Bestellung
+      recipientAddress: kontakt@abteilung.ch
+      recipientName: 'Office of Company'
+      senderAddress: kontakt@abteilung.ch
+      senderName: Schweizer Röntgen
+      replyToAddress: kontakt@abteilung.ch
+      format: plaintext
+  -
+    identifier: 'Neos.Form:Confirmation'
+    options:
+      message: >
+        <h3>Vielen Dank für Ihre Anfrage</h3>
+        # <p>We will process it as soon as possible.</p>
