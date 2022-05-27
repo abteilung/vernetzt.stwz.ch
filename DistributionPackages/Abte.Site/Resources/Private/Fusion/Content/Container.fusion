@@ -6,7 +6,7 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
         node = ${ this.node }
     }
 
-    class = 'gridPadding relative'
+    class = 'relative gridPadding'
 
     fullWidth = ${ q(node).property('fullWidth') }
     
@@ -55,7 +55,7 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
         >
             
             <div class={props.contentFullWidth}>
-                <div class="flex items-start items-center mb-4 space-x-6 md:mb-8 lg:mb-12 containerHeader"
+                <div class="flex flex-wrap items-start mb-4 gap-x-6 md:mb-8 lg:mb-12 containerHeader"
                     @if.hasTitleOrLink={ props.title ? true : props.link ? true : false }
                 >
                     <h2 class="text-black h1">{props.title}</h2>
