@@ -4,7 +4,7 @@
         'Abte.Site:Mixin.Image': true
     ui:
         label: Slider
-        icon: user
+        icon: clone
         position: 300
     properties:
         'image':
