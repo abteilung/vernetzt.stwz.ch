@@ -44,33 +44,33 @@ prototype(Abte.Site:Component.SupportButton) < prototype(Neos.Fusion:Component) 
                     <div 
                         class="flex flex-wrap items-center overflow-hidden transition-all duration-500 bg-white shadow-xl rounded-l-xl"
                         "@click.away"="open = false" 
-                        :class="open ? 'w-56 h-80 px-3 justify-left' : 'px-0 w-20 h-20 justify-center'"
+                        :class="open ? 'w-72 h-72 px-4 justify-left' : 'w-16 h-16 md:w-20 md:h-20 justify-center'"
                     >
-                        <div class="flex items-center justify-center w-20 h-20 cursor-pointer">
+                        <div class="flex items-center justify-center w-16 h-16 cursor-pointer md:w-20 md:h-20">
                             <div 
                                 "@click.prevent"="open = !open" 
                                 class="relative flex flex-wrap justify-center text-center text-black delay-500"
                             >
                                 <Abte.Site:Icon.Support class="scale-75" />
-                                <p class="text-sm">Support</p>
+                                <p class="hidden text-sm md:flex">Support</p>
                             </div>
                         </div>
 
                         <div 
-                            class="flex justify-between w-full transition-all duration-300 navArea"
+                            class="flex justify-between w-full pb-1 transition-all duration-300 md:pb-2 navArea"
                             :class="open ? 'opacity-100 delay-500' : 'delay-150 opacity-0'"
                         >
 
-                            <div class="space-y-3">
+                            <div class="w-full space-y-3">
                                 <Carbon.Link:Link 
-                                    additionalClass="text-sm block hover:underline rounded-full bg-accent font-extrabold px-4 py-2" 
+                                    additionalClass="w-fit text-sm block hover:underline rounded-full bg-accent font-extrabold px-4 py-2" 
                                     link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
                                     renderDefaultTagIfNoLink='true'
                                 >
                                     <Neos.Neos:Editable property="helpdeskPhone" node={site} />
                                 </Carbon.Link:Link>
                                 <Carbon.Link:Link 
-                                    additionalClass="text-sm block hover:underline rounded-full bg-base-300 font-extrabold px-4 py-2" 
+                                    additionalClass="w-fit text-sm block hover:underline rounded-full bg-base-300 font-extrabold px-4 py-2" 
                                     link={'mailto:' + props.email} 
                                     renderDefaultTagIfNoLink='true'
                                 >

@@ -91,15 +91,15 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 />
 
 
-                <div class="mt-12"
+                <div class="mt-12 pt-4 border-t-[1px] border-black"
                     @if.hasCalc={props.downloadSpeed}
                 >
-                    <div class="flex justify-between text-xs">
+                    <div class="flex justify-between mb-2 text-xs">
                         <div>60 Fotos (300 MB) hochladen</div>
                         <div class="whitespace-nowrap">{props.downloadTime} s</div>
                     </div>
-                    <div class="w-full h-1 overflow-hidden bg-gray-500 rounded-full">
-                        <div data-progressbar class={'transition-all duration-[' + props.downloadTime * 1000 + 'ms] h-full bg-accent relative w-1'} ></div>
+                    <div class="w-full h-4 overflow-hidden rounded-full bg-base-300">
+                        <div data-progressbar class={'transition-all rounded-full duration-[' + props.downloadTime * 1000 + 'ms] h-full rounded-full bg-accent relative w-1'} ></div>
                     </div>
                 </div>
 
