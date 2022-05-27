@@ -1088,8 +1088,8 @@ select {
   flex-shrink: 0;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -1168,8 +1168,8 @@ select {
 }
 .btn-group > input[type="radio"].btn {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .btn-group > input[type="radio"].btn:before {
   content: attr(data-title);
@@ -1247,8 +1247,8 @@ select {
 .label {
   display: flex;
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   align-items: center;
   justify-content: space-between;
 }
@@ -1272,7 +1272,7 @@ select {
 .link {
   cursor: pointer;
   -webkit-text-decoration-line: underline;
-  text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 .menu {
   display: flex;
@@ -1298,8 +1298,8 @@ select {
 .menu :where(li:not(.disabled):not(.menu-title)) > :where(*:not(ul)) {
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   align-items: center;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1357,11 +1357,11 @@ select {
   flex-shrink: 0;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   height: 3rem;
   padding-left: 1rem;
   padding-right: 2.5rem;
@@ -1655,15 +1655,9 @@ select {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
-<<<<<<< HEAD
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-=======
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
->>>>>>> 3272ad40e140087ee8aecc0d24126a32b337793d
 }
 .mx-0 {
   margin-left: 0px;
@@ -1887,15 +1881,6 @@ select {
 .\!mt-0 {
   margin-top: 0px !important;
 }
-.-mt-10 {
-  margin-top: -2.5rem;
-}
-.-mt-8 {
-  margin-top: -2rem;
-}
-.-mt-0 {
-  margin-top: -0px;
-}
 .block {
   display: block;
 }
@@ -1976,12 +1961,9 @@ select {
 }
 .h-\[400px\] {
   height: 400px;
-<<<<<<< HEAD
-=======
 }
 .h-80 {
   height: 20rem;
->>>>>>> 3272ad40e140087ee8aecc0d24126a32b337793d
 }
 .h-1 {
   height: 0.25rem;
@@ -1992,12 +1974,9 @@ select {
 .h-\[768px\] {
   height: 768px;
 }
-<<<<<<< HEAD
-=======
 .h-72 {
   height: 18rem;
 }
->>>>>>> 3272ad40e140087ee8aecc0d24126a32b337793d
 .max-h-full {
   max-height: 100%;
 }
@@ -4164,12 +4143,12 @@ select {
     right: 1rem;
   }
 
-    .md\:-top-4 {
-    top: -1rem;
-  }
-
     .md\:left-2 {
     left: 0.5rem;
+  }
+
+    .md\:-top-4 {
+    top: -1rem;
   }
 
     .md\:col-span-4 {
@@ -4488,14 +4467,6 @@ select {
 
     .md\:-mt-28 {
     margin-top: -7rem;
-  }
-
-    .md\:ml-20 {
-    margin-left: 5rem;
-  }
-
-    .md\:-mt-12 {
-    margin-top: -3rem;
   }
 
     .md\:block {
@@ -5590,14 +5561,14 @@ select {
     padding: 3rem;
   }
 
-  .lg\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .lg\:px-12 {
