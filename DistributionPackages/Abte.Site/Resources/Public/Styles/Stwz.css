@@ -2258,6 +2258,16 @@ select {
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.scale-50 {
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.scale-\[65\%\] {
+  --tw-scale-x: 65%;
+  --tw-scale-y: 65%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -2694,6 +2704,9 @@ select {
 }
 .p-5 {
   padding: 1.25rem;
+}
+.p-3 {
+  padding: 0.75rem;
 }
 .px-3 {
   padding-left: 0.75rem;
@@ -4511,6 +4524,10 @@ select {
     height: 5rem;
   }
 
+    .md\:h-40 {
+    height: 10rem;
+  }
+
     .md\:w-28 {
     width: 7rem;
   }
@@ -4529,6 +4546,10 @@ select {
 
     .md\:w-20 {
     width: 5rem;
+  }
+
+    .md\:w-40 {
+    width: 10rem;
   }
 
     .md\:flex-1 {
@@ -4636,6 +4657,12 @@ select {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+    .md\:scale-\[65\%\] {
+    --tw-scale-x: 65%;
+    --tw-scale-y: 65%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
     .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -4724,6 +4751,10 @@ select {
 
     .md\:rounded-full {
     border-radius: 9999px;
+  }
+
+    .md\:p-5 {
+    padding: 1.25rem;
   }
 
     .md\:py-8 {
@@ -4954,6 +4985,12 @@ select {
     .md\:text-xl {
     font-size: 24px;
     line-height: 32px;
+    letter-spacing: 0;
+  }
+
+    .md\:text-2xl {
+    font-size: 35px;
+    line-height: 45px;
     letter-spacing: 0;
   }
 

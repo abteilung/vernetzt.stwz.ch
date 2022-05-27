@@ -1,7 +1,7 @@
 prototype(Abte.Site:Content.DiscountStoerer) < prototype(Neos.Neos:ContentComponent) {
     
     class = Abte.Site:Component.AdditionalClass {
-        class = 'flex flex-col items-center justify-center w-40 h-40 p-5 text-center text-white bg-black rounded-full group'
+        class = 'flex flex-col items-center justify-center w-40 h-40 p-5 text-center text-white scale-[65%] bg-black rounded-full md:scale-100 group'
     }
 
     node = ${ node }
@@ -18,7 +18,7 @@ prototype(Abte.Site:Content.DiscountStoerer) < prototype(Neos.Neos:ContentCompon
     }
 
     arrow = Abte.Site:Icon.ArrowRight {
-        class = 'relative left-0 block w-6 duration-150 scale-75 top-1 text-accent text-arrow group-hover:left-2'
+        class = 'relative left-0 hidden block w-6 duration-150 scale-75 md:flex top-1 text-accent text-arrow group-hover:left-2'
     }
 
     target = ${ q(node).property('target') }
