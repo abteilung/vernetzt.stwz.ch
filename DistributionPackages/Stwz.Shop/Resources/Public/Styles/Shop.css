@@ -98,6 +98,8 @@
 
 #contact-form input, #contact-form textarea {
     
+    width: 100%;
+    
     --tw-bg-opacity: 1;
     
     background-color: hsl(var(--b1) / var(--tw-bg-opacity))
@@ -136,7 +138,7 @@
 
 @media (min-width: 1024px) {
     
-    #contact-form label:last-child {
+    #contact-form input:last-child {
     
         grid-column: span 2 / span 2
     }

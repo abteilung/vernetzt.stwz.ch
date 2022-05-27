@@ -1,19 +1,21 @@
 {namespace form=Neos\Form\ViewHelpers}
 <f:validation.results for="{element.identifier}">
-	<label>
-		<f:render section="field" />
-		<div class="{f:if(condition: validationResults.flattenedErrors, then: ' error')}"<f:if condition="{element.rootForm.renderingOptions.previewMode}"> data-element="{form:form.formElementRootlinePath(renderable:element)}"</f:if>>
-			<f:if condition="{validationResults.flattenedErrors}">
+	{element -> f:debug()}
+
+<div class="{element.identifier}">
+<f:render section="field" />
+	<div class="{f:if(condition: validationResults.flattenedErrors, then: ' error')}"<f:if condition="{element.rootForm.renderingOptions.previewMode}"> data-element="{form:form.formElementRootlinePath(renderable:element)}"</f:if>>
+		<f:if condition="{validationResults.flattenedErrors}">
+			<f:for each="{validationResults.errors}" as="error">
 				<div class="text-sm help-inline text-primary">
-					<f:for each="{validationResults.errors}" as="error">
-						{error -> f:translate(id: '{error.code}', arguments: error.arguments, package: '{element.renderingOptions.validationErrorTranslationPackage}', source: 'ValidationErrors')}
-						<br />
-					</f:for>
+					{error -> f:translate(id: '{error.code}', arguments: error.arguments, package: '{element.renderingOptions.validationErrorTranslationPackage}', source: 'ValidationErrors')}
+					<br />
 				</div>
-			</f:if>
-			<f:if condition="{element.properties.elementDescription}">
-				<span class="help-block">{element -> form:translateElementProperty(property: 'elementDescription')}</span>
-			</f:if>
-		</div>
-	</label>
+			</f:for>
+		</f:if>
+		<f:if condition="{element.properties.elementDescription}">
+			<span class="help-block">{element -> form:translateElementProperty(property: 'elementDescription')}</span>
+		</f:if>
+	</div>
+	</div>
 </f:validation.results>

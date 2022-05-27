@@ -18,6 +18,7 @@ packages:
   - package: Abte.Site
     files:
       - Stwz.pcss
+      - LineAnimation.pcss
       - Stwz.js
   # - package: Stwz.FuzzySearch
   #   files:

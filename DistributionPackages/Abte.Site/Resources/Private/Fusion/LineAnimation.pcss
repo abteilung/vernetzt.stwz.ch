@@ -1,0 +1,60 @@
+.lineAnimation {
+    svg {
+
+        #one {
+            animation: line 1s ease-in-out forwards;
+        }
+
+        #two {
+            animation: line 1s ease-in-out forwards;
+            animation-delay: .5s;
+        }
+        #three {
+            animation: line 1s ease-in-out forwards;
+            animation-delay: .75s;
+        }
+        stroke: #fff;
+        stroke-width: 1px;
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+
+        @media (max-width: 640px) {
+            max-width: 10vw;
+            max-height: 9vw;
+        }
+
+        @media (max-width: 450px) {
+            max-width: 30px;
+            max-height: 24px;
+            stroke-width: 2px;
+        }
+
+        @keyframes line {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        $delay: 0.6s;
+
+        &:nth-child(2) svg {
+            animation-delay: $delay;
+        }
+
+        &:nth-child(3) svg {
+            animation-delay: $delay * 2;
+        }
+
+        &:nth-child(4) svg {
+            animation-delay: $delay * 3;
+        }
+
+        &:nth-child(5) svg {
+            animation-delay: $delay * 4;
+        }
+
+        &:nth-child(6) svg {
+            animation-delay: $delay * 5;
+        }
+    }
+}

@@ -36,6 +36,7 @@
         "abte/site": "@dev",
         "abteilung/gridsystem": "@dev",
         "stwz/navigation": "@dev",
+        "abte/favicons": "@dev",
 
         "stwz/form-multicolumnsection": "@dev",
         "stwz/flickity": "@dev",

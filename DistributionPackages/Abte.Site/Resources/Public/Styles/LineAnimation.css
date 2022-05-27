@@ -1,0 +1,81 @@
+.lineAnimation svg #one {
+            -webkit-animation: line 1s ease-in-out forwards;
+                    animation: line 1s ease-in-out forwards;
+        }
+
+        .lineAnimation svg #two {
+            -webkit-animation: line 1s ease-in-out forwards;
+                    animation: line 1s ease-in-out forwards;
+            -webkit-animation-delay: .5s;
+                    animation-delay: .5s;
+        }
+
+        .lineAnimation svg #three {
+            -webkit-animation: line 1s ease-in-out forwards;
+                    animation: line 1s ease-in-out forwards;
+            -webkit-animation-delay: .75s;
+                    animation-delay: .75s;
+        }
+
+        .lineAnimation svg {
+        stroke: #fff;
+        stroke-width: 1px;
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+}
+
+        @-webkit-keyframes line {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes line {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .lineAnimation svg {
+
+        $delay: 0.6s;
+}
+
+        .lineAnimation svg:nth-child(2) svg {
+            -webkit-animation-delay: $delay;
+                    animation-delay: $delay;
+        }
+
+        .lineAnimation svg:nth-child(3) svg {
+            -webkit-animation-delay: $delay * 2;
+                    animation-delay: $delay * 2;
+        }
+
+        .lineAnimation svg:nth-child(4) svg {
+            -webkit-animation-delay: $delay * 3;
+                    animation-delay: $delay * 3;
+        }
+
+        .lineAnimation svg:nth-child(5) svg {
+            -webkit-animation-delay: $delay * 4;
+                    animation-delay: $delay * 4;
+        }
+
+        .lineAnimation svg:nth-child(6) svg {
+            -webkit-animation-delay: $delay * 5;
+                    animation-delay: $delay * 5;
+        }
+
+        @media (max-width: 640px) {.lineAnimation svg {
+            max-width: 10vw;
+            max-height: 9vw
+    }
+}
+
+        @media (max-width: 450px) {.lineAnimation svg {
+            max-width: 30px;
+            max-height: 24px;
+            stroke-width: 2px
+    }
+}
+/*# sourceMappingURL=LineAnimation.css.map */

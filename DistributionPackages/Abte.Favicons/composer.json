@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "abte/favicons",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Abte\\Favicons\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Abte.Favicons"
+        }
+    }
+}

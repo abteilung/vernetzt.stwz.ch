@@ -4,8 +4,34 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d794028bec23967c283cbecff25a48af",
+    "content-hash": "a149b9142c5041c346112009f5e3070a",
     "packages": [
+        {
+            "name": "abte/favicons",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Abte.Favicons",
+                "reference": "85d592f107f08c5dc8b368dfe70328f1e8b566f9"
+            },
+            "require": {
+                "neos/flow": "*"
+            },
+            "type": "neos-package",
+            "extra": {
+                "neos": {
+                    "package-key": "Abte.Favicons"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Abte\\Favicons\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "abte/site",
             "version": "dev-develop",
@@ -12008,6 +12034,7 @@
         "abte/site": 20,
         "abteilung/gridsystem": 20,
         "stwz/navigation": 20,
+        "abte/favicons": 20,
         "stwz/form-multicolumnsection": 20,
         "stwz/flickity": 20,
         "stwz/privacy": 20,
