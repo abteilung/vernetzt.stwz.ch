@@ -41,7 +41,7 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
 
     renderer = afx`
         <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="container relative pt-32 h-[250px] md:h-[300px] relative top-0 z-20 w-full mt-0 overflow-visible">
+            <div class="container relative pt-32 h-[250px] md:h-[350px] relative top-0 z-20 w-full mt-0 overflow-visible">
                 <div class="grid grid-cols-2 gridgap-x">
                     <div class="col-span-1 illustrationContainer">
                         {props.svgIllustration}

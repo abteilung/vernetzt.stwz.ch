@@ -20,11 +20,11 @@ prototype(Abte.Site:Component.ServiceBox) < prototype(Neos.Fusion:Component) {
             <div class="gridPadding md:pr-0 lg:pr-0">
                 <ul class="">
                     <Neos.Fusion:Loop items={props.menuItems} iterationName="i">
-                        <li class="py-1 border-b-2 last:border-b-0 border-base-100 first:hidden">
+                        <li class="py-1 border-b last:border-b-0 border-base-100 first:hidden">
                             <Neos.Neos:NodeLink node={item.node} attributes.class="">
                                 <div class="flex items-center justify-between space-x-4 group">
                                     <div class="h3">{item.label}</div>
-                                    <Abte.Site:Icon.ArrowRight class="relative w-6 left-0 duration-150 scale-75 lg:scale-100 text-secondary group-hover:left-2" />
+                                    <Abte.Site:Icon.ArrowRight class="relative left-0 w-6 duration-150 scale-75 lg:scale-100 text-secondary group-hover:left-2" />
                                 </div>
                             </Neos.Neos:NodeLink>
                         </li>

@@ -33,8 +33,8 @@ prototype(Stwz.Navigation:Navbar.LinkItemBasic) < prototype(Neos.Fusion:Componen
 
 prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
     class = ''
-    linkItemClass 		= ${ this.class + ' ' + 'py-1 border-b-2 block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black activeLink' : 'text-black hover:border-black duration-200 border-transparent') }
-    lastLinkItemClass 	= ${ this.class + ' ' + 'py-1 border-b-2 block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black' : 'text-black hover:border-black duration-200 border-transparent') }
+    linkItemClass 		= ${ this.class + ' ' + 'py-1 border-b block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black activeLink' : 'text-black hover:border-black duration-200 border-transparent') }
+    lastLinkItemClass 	= ${ this.class + ' ' + 'py-1 border-b block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black' : 'text-black hover:border-black duration-200 border-transparent') }
     shortcutClass       = ${ '!border-none bg-white rounded-full py-0 px-4 shadow-md  hover:shadow-sm !text-primary !font-extrabold' }
     nodeType 			= ${ item.node.nodetype.name }
     linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
