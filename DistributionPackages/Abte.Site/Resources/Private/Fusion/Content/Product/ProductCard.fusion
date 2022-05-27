@@ -31,7 +31,9 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
 
     productGroup = ''
 
-    itemID = ${ q(node).property('_identifier') }
+    itemID      = ${ q(node).property('_identifier') }
+    productGUID = ${ q(node).property('productGUID') }
+    productIV   = ${ q(node).property('productIV') }
 
     backgroundColor = ${ q(node).property('bgColor') }
 
@@ -53,6 +55,8 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 x-on:change={"localStorage.setItem('" + props.productGroup + "', value" + props.productGroup + "); $dispatch('item-changed');" }
                 data-group={props.productGroup}
                 data-price={Array.first(String.pregMatch(props.priceOnly,'(\d+.(\d{1,2})|\d{1,2})')) }
+                data-guid={props.productGUID}
+                data-IV={props.productIV}
             >
               <div class="flex">
                     <div class="flex flex-col w-full">

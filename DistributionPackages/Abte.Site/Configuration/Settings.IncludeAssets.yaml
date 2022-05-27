@@ -8,6 +8,7 @@ Carbon:
         General:
           Head: 
             - Stwz.css
+            - LineAnimation.css
           Body: 
             - Stwz.js[defer]
         Backend:
