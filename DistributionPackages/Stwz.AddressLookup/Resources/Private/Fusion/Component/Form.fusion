@@ -3,6 +3,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
     icon = Abte.Site:Icon.Connection {
         class = ''
     }
+    class = ''
 
     url = Neos.Fusion:UriBuilder {
         package = 'Stwz.AddressLookup'
@@ -13,7 +14,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
 
     renderer = afx`
         <div 
-             class="max-w-screen-lg mx-auto addressLookup gridPadding-x"
+             class={props.class + ' ' + 'max-w-screen-lg mx-auto addressLookup'}
              x-data={"addresslookup"}
              x-init={"{url: '" + props.url + "'}"} 
              data-url={props.url} >
