@@ -82,6 +82,7 @@ Neos:
               ui:
                 label: 'Link'
                 reloadPageIfChanged: false
+                reloadIfChanged: true
                 inspector:
                   group: 'general'
                   editor: 'Neos.Neos/Inspector/Editors/LinkEditor'

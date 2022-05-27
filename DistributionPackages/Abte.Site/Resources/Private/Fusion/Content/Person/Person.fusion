@@ -23,7 +23,7 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
         }
         width =  800
         height = 800
-        class = "w-full h-full"
+        class = "w-full h-full aspect-square"
     }
 
 
@@ -39,9 +39,11 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
 
     renderer = afx`
         <div class="personCard" id={props.itemID}>
-            <div class="flex space-x-6">
-                <div class="overflow-hidden rounded-full w-36 h-36">
-                    {props.portrait}
+            <div class="flex space-x-4">
+                <div class="w-full">
+                    <div class="rounded-full overflow-hidden">
+                        {props.portrait}
+                    </div>
                 </div>
                 <div>
                     <h2 class="mb-2">{props.title}</h2>

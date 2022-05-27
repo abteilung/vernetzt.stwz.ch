@@ -5,10 +5,19 @@
     'Abte.Site:Mixin.AdditionalClass': true
   ui:
     label: ImageCard
-    icon: picture
+    icon: portrait
     group: media
     position: 10
   properties:
+    'title':
+      options:
+        preset: 'text.title'
+    'subTitle':
+      options:
+        preset: 'text.title'
     'target':
       options:
         preset: 'text.link'
+    'image':
+      options:
+        preset: 'image.cinemaAsset'
