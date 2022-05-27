@@ -8,7 +8,7 @@
     "packages": [
         {
             "name": "abte/site",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abte.Site",
@@ -44,7 +44,7 @@
         },
         {
             "name": "abteilung/gridsystem",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Abteilung.Gridsystem",
@@ -7741,7 +7741,7 @@
         },
         {
             "name": "stwz/addresslookup",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.AddressLookup",
@@ -7767,7 +7767,7 @@
         },
         {
             "name": "stwz/flickity",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Flickity",
@@ -7793,7 +7793,7 @@
         },
         {
             "name": "stwz/form-multicolumnsection",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Form.MultiColumnSection",
@@ -7822,7 +7822,7 @@
         },
         {
             "name": "stwz/movinglines",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.MovingLines",
@@ -7848,7 +7848,7 @@
         },
         {
             "name": "stwz/navigation",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Navigation",
@@ -7876,7 +7876,7 @@
         },
         {
             "name": "stwz/privacy",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Privacy",
@@ -7903,7 +7903,7 @@
         },
         {
             "name": "stwz/shop",
-            "version": "dev-main",
+            "version": "dev-develop",
             "dist": {
                 "type": "path",
                 "url": "./DistributionPackages/Stwz.Shop",
