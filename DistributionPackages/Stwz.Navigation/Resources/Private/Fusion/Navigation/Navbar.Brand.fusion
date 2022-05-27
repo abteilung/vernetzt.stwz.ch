@@ -2,7 +2,7 @@ prototype(Stwz.Navigation:Component.Navbar.Brand) < prototype(Neos.Fusion:Compon
     
     siteNode = ${site}
 
-    class = "w-[100px] lg:w-[130px] 2xl:w-[140px]"
+    class = "lg:-translate-y-1/4 w-[100px] xl:w-[130px] 2xl:w-[140px]"
 
     renderer = afx`
         <div class="pt-4 md:pt-8 lg:pt-0">

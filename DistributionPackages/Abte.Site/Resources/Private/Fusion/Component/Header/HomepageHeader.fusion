@@ -47,16 +47,16 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
     }
 
     renderer = afx`
-        <header class={pageClass + ' ' + 'relative bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="grid grid-cols-5 gridgap-x flex justify-between h-full items-center max-w-screen-lg mx-auto relative h-[350px] md:h-[450px] lg:h-[500px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
-                <div class="col-span-2 space-y-10">
+        <header class={pageClass + ' ' + '-mt-20 md:-mt-28 lg:-mt-32 bg-center-top relative bg-cover bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
+            <div class="gridPadding-x grid grid-cols-5 md:gridgap-x justify-between pb-8 lg:pb-0 place-content-end lg:place-content-center md:items-center max-w-screen-lg mx-auto h-[400px] md:h-[500px] lg:h-[550px] xl:h-[650px] relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
+                <div class="col-span-5 space-y-10 md:col-span-2">
                     <Neos.Fusion:Augmenter class="text-black h1">
                         {props.teaserText}
                     </Neos.Fusion:Augmenter>
                     {props.productIcons}
                     <Abte.Site:Content.Button class="text-white duration-150 scale-100 bg-black hover:scale-105" text="Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
                 </div>
-                <div class="h-full col-span-3 illustrationContainer">
+                <div class="absolute h-full col-span-3 col-end-6 -z-10 md:relative illustrationContainer">
                     {props.svgIllustration}
                 </div>
             </div>

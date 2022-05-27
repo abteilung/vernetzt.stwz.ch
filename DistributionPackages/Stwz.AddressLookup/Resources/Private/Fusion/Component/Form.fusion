@@ -13,17 +13,16 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
 
     renderer = afx`
         <div id="addressLookup"
-            class="max-w-screen-lg mx-auto addressLookup"
-            x-data={"addresslookup"}
-            x-init={"{url: '" + props.url + "'}"} 
-            data-url={props.url}
-        >
-            <div class="relative z-30 flex items-center px-6 mx-auto my-16 space-x-8 group h-36 lg:px-16 rounded-3xl md:rounded-full bg-accent">
-                <div>{props.icon}</div>
+             class="max-w-screen-lg mx-auto addressLookup gridPadding-x"
+             x-data={"addresslookup"}
+             x-init={"{url: '" + props.url + "'}"} 
+             data-url={props.url} >
+            <div class="relative z-30 flex items-center px-6 py-4 mx-auto my-4 md:my-16 md:space-x-8 lg:py-0 group lg:h-36 lg:px-16 rounded-3xl md:rounded-full bg-accent">
+                <div class="hidden md:flex">{props.icon}</div>
                 <div class="w-full my-3">
                     <h3 class="mb-4 font-extrabold text-black">Glasfaseranschluss prüfen</h3>
-                    <form id="addressLookup" class="grid w-full grid-cols-9 gap-4">
-                        <input class="col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ" />
+                    <form class="grid w-full grid-cols-4 gap-4 md:grid-cols-8 lg:grid-cols-9">
+                        <input class="col-span-1" type="number" x-model="address.zip_code" placeholder="PLZ" />
                         <div class="relative col-span-3">
                             <input 
                                 id="city" 
@@ -39,15 +38,13 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                             <Stwz.AddressLookup:Component.FormValidation property="streetname" />
                         </div>
                         <div class="col-span-1">
-                            <input id="house_number" class="w-full" type="text" x-model="address.house_number" placeholder="Nr.*" required="required" />
+                            <input class="w-full" type="number" x-model="address.house_number" placeholder="Nr.*" required="required" />
                             <Stwz.AddressLookup:Component.FormValidation property="house_number" />
                         </div>
                         <input type="hidden" x-model="address.country" placeholder="Land" value="Schweiz" />
                         <input type="hidden" x-model="url" value={props.url} />
 
-                        <button 
-                            class="col-span-1 button !px-1" 
-                            type="submit"
+                        <button class="col-span-2 lg:col-span-1 button !px-1" type="submit"
                             x-on:click={"check"}
                         >
                             <span x-cloak x-show="loading">
@@ -113,7 +110,7 @@ prototype(Stwz.AddressLookup:Component.FormValidation) < prototype(Neos.Fusion:C
             x-show={'validation.' + props.property} class="flex items-center py-1"
         >
             <span
-                class="text-xs ml-2 font-medium"
+                class="ml-2 text-xs font-medium"
                 :class={"{'opacity-0': address." + props.property + ", 'text-black': !address." + props.property + "}"} 
                 x-text={'validation.' + props.property}>
             </span>

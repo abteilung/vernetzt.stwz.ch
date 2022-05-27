@@ -23,6 +23,8 @@
           message: "Pflichtfeld"
         }
       },
+      validate(field) {
+      },
       check() {
         if (!this.address.city.length) {
           this.validation.city = this.validation.required.message;
