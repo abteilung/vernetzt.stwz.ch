@@ -2,14 +2,14 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
         
     class = 'text-lg bg-primary'
     outerClass = 'block'
-    buttonClass = 'flex tracking-normal px-4 py-2 font-extrabold flex-row items-center space-x-2 rounded-full bg-accent'
+    buttonClass = 'flex tracking-normal px-4 py-2 font-extrabold flex-row items-center space-x-2 rounded-full bg-primary'
     
     icon = ''
     iconClass = 'text-secondary relative group-hover:left-2 duration-300'
     iconPosition = ${ q(node).property('iconPosition') ? true : false }
     
-    style = ${ q(node).property('hollow') ? this.onDark + ' ' + '' : this.onDark + ' text-primary bg-none' }
-    onDark = ${ q(node).property('onDark') ? 'text-primary' : null }
+    style = ${ q(node).property('hollow') ? this.onDark + ' ' + '' : this.onDark + ' bg-none' }
+    onDark = ${ q(node).property('onDark') ? 'bg-white' : null }
 
     conditionalShow = ${ false }
 
