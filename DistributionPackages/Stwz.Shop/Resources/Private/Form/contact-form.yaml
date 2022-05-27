@@ -96,5 +96,5 @@ finishers:
     identifier: 'Neos.Form:Confirmation'
     options:
       message: >
-        <h3>Thank you for your feedback</h3>
-        <p>We will process it as soon as possible.</p>
+        <h3>Herzlichen Dank für Ihre Anfrage</h3>
+        <p>Wir informieren Sie, sobald unser Angebot an Ihrer Adresse verfügbar ist.</p>
