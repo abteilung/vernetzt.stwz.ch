@@ -5,7 +5,7 @@
     'Abte.Site:Mixin.AdditionalClass': true
   ui:
     label: ImageCard
-    icon: picture
+    icon: portrait
     group: media
     position: 10
   properties:
