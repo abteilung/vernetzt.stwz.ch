@@ -12,12 +12,15 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
     }
 
     renderer = afx`
-        <div id="addressLookup"
+        <div 
              class="max-w-screen-lg mx-auto addressLookup gridPadding-x"
              x-data={"addresslookup"}
              x-init={"{url: '" + props.url + "'}"} 
              data-url={props.url} >
-            <div class="relative z-30 flex items-center px-6 py-4 mx-auto my-4 md:my-16 md:space-x-8 lg:py-0 group lg:h-36 lg:px-16 rounded-3xl md:rounded-full bg-accent">
+            <div 
+                class="relative z-30 flex items-center px-6 py-4 mx-auto my-4 md:my-16 md:space-x-8 lg:py-0 group lg:h-36 lg:px-16 rounded-3xl md:rounded-full bg-accent"
+                id="addressLookup"                    
+            >
                 <div class="hidden md:flex">{props.icon}</div>
                 <div class="w-full my-3">
                     <h3 class="mb-4 font-extrabold text-black">Glasfaseranschluss prüfen</h3>
