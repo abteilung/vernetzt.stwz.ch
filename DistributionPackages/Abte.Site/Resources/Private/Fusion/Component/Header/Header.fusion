@@ -34,7 +34,7 @@ prototype(Abte.Site:Component.Header) < prototype(Neos.Fusion:Component) {
     ##
 
     renderer = afx`
-        <header class={pageClass + ' ' + 'relative bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
+        <header class={pageClass + ' ' + 'relative bg-cover bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
             <div class="container relative pt-32 h-[250px] md:h-[350px] lg:h-[400px]relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
                 <div class="grid grid-cols-3 gridgap-x">
                     <h1 class="text-black">{props.pageTitle}</h1>

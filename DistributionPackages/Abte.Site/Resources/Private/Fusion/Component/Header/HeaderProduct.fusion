@@ -40,10 +40,10 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
     }
 
     renderer = afx`
-        <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-fixed bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="container relative pt-32 h-[250px] md:h-[350px] relative top-0 z-20 w-full mt-0 overflow-visible">
-                <div class="grid grid-cols-2 gridgap-x">
-                    <div class="col-span-1 illustrationContainer">
+        <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
+            <div class="container gridPadding-x relative pt-32 h-[250px] md:h-[350px] relative top-0 z-20 w-full mt-0 overflow-visible">
+                <div class="grid md:grid-cols-2 gridgap-x">
+                    <div class="hidden col-span-1 md:flex illustrationContainer">
                         {props.svgIllustration}
                     </div>
                     <div class="col-span-1">
@@ -53,18 +53,18 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
                     </div>
                 </div>
             </div>
-            <div class="absolute right-0 z-10 -bottom-28">
+            <div class="absolute right-0 z-10 hidden md:flex -bottom-28">
                 <Stwz.MovingLines:Component.Lines />
             </div>
         </header>
 
 
 
-        <div class="py-24 bg-base-100 headerProduct">
+        <div class="py-12 md:py-24 bg-base-100 headerProduct">
             <div class="container flex gridPadding-x">
 
                 <Abte.Site:Content.RotatedHeader />
-                <div class="relative z-20 w-full ml-10 lg:ml-20">{props.headerContent}</div>
+                <div class="relative z-20 w-full md:ml-10 lg:ml-20">{props.headerContent}</div>
             </div>
         </div>
     `
