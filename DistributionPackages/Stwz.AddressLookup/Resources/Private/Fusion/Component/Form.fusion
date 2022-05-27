@@ -13,7 +13,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
 
     renderer = afx`
         <div id="addressLookup"
-             class="max-w-screen-lg mx-auto addressLookup"
+             class="max-w-screen-lg mx-auto addressLookup gridPadding-x"
              x-data={"addresslookup"}
              x-init={"{url: '" + props.url + "'}"} 
              data-url={props.url} >
