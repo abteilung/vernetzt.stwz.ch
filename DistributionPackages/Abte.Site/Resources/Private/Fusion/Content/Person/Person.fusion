@@ -39,14 +39,14 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
 
     renderer = afx`
         <div class="personCard" id={props.itemID}>
-            <div class="flex space-x-4">
+            <div class="grid grid-cols-3 gap-4">
                 <div class="w-full">
-                    <div class="rounded-full overflow-hidden">
+                    <div class="overflow-hidden rounded-full">
                         {props.portrait}
                     </div>
                 </div>
-                <div>
-                    <h2 class="mb-2">{props.title}</h2>
+                <div class="col-span-2">
+                    <h2 class="mb-2 !text-black">{props.title}</h2>
                     
                     <b>{props.name}</b>
                     <p>{props.jobTitle}</p>
