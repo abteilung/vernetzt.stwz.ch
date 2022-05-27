@@ -52,7 +52,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 x-init={"value" + props.productGroup + "= localStorage.getItem('" + props.productGroup + "');"}
                 x-on:change={"localStorage.setItem('" + props.productGroup + "', value" + props.productGroup + "); $dispatch('item-changed');" }
                 data-group={props.productGroup}
-                data-price={String.pregMatch(props.priceOnly,'/\d+/')}
+                data-price={Array.first(String.pregMatch(props.priceOnly,'(\d+.(\d{1,2})|\d{1,2})')) }
             >
               <div class="flex">
                     <div class="flex flex-col w-full">
@@ -98,7 +98,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         <div>60 Fotos (300 MB) hochladen</div>
                         <div class="whitespace-nowrap">{props.downloadTime} s</div>
                     </div>
-                    <div class="bg-gray-500 h-1 w-full rounded-full overflow-hidden">
+                    <div class="w-full h-1 overflow-hidden bg-gray-500 rounded-full">
                         <div data-progressbar class={'transition-all duration-[' + props.downloadTime * 1000 + 'ms] h-full bg-accent relative w-1'} ></div>
                     </div>
                 </div>
@@ -107,7 +107,10 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
         </div>
     `
 
+    // duration-[24000ms]
     // duration-[12000ms]
+    // duration-[10000ms]
+    // duration-[6860ms]
     // duration-[3430ms]
     // duration-[240ms]
 

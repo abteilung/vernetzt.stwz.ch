@@ -1,0 +1,97 @@
+
+type: 'Neos.Form:Form'
+identifier: kurs-form
+label: Contact
+renderingOptions:
+  submitButtonLabel: Send
+renderables:
+  -
+    type: 'Neos.Form:Page'
+    identifier: page-one
+    label: 
+    renderables:
+      - 
+        type: 'Neos.Form:HiddenField'
+        identifier: date
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: first_name
+        label: Vorname
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: Vorname
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: last_name
+        label: Nachname
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: Nachname
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: email
+        label: E-Mail
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+          - identifier: 'Neos.Flow:EmailAddress'
+        properties:
+          placeholder: 'E-Mail'
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: address
+        label: Adresse
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: Strasse
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: zip
+        label: PLZ
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: PLZ
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: city
+        label: Ort
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: Ort
+        defaultValue: ''    
+      -
+        type: 'Neos.Form:MultiLineText'
+        identifier: message
+        label: Message
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: 'Ihre Nachricht'
+        defaultValue: ''
+finishers:
+  -
+    identifier: 'Neos.Form:Email'
+    options:
+      templatePathAndFilename: resource://Vendor.Site/Private/Templates/Email/Message.txt
+      subject: Contact from example.net
+      recipientAddress: office@example.net
+      recipientName: 'Office of Company'
+      senderAddress: server@example.net
+      senderName: Server example.net
+      replyToAddress: office@example.net
+      format: plaintext
+  -
+    identifier: 'Neos.Form:Confirmation'
+    options:
+      message: >
+        <h3>Thank you for your feedback</h3>
+        <p>We will process it as soon as possible.</p>

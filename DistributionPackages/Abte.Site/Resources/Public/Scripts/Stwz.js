@@ -2852,7 +2852,7 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
       setTimeout(function() {
         elem.classList.remove("w-1");
         elem.classList.add("w-full");
-      }, 2e3);
+      }, 3e3);
     });
   });
 })();

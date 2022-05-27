@@ -1,6 +1,5 @@
 .addressLookup {
     
-    
     input,
     .button {
         @apply !py-2;
@@ -13,6 +12,31 @@
     
     .button {
         @apply font-sans h-10 rounded-full bg-white px-6 py-2 hover:scale-105 duration-150;
+    }
+}
+
+#contact-form {
+
+    fieldset {
+        @apply grid grid-cols-2 gap-4 md:gap-6;
+    }
+
+    input, textarea {
+        @apply bg-base-100;
+        
+        &::placeholder {
+            @apply text-black opacity-40;
+        }
+    }
+
+    textarea {
+        @apply md:h-32;
+    }
+
+    label {
+        &:last-child {
+            @apply lg:col-span-2;
+        }
     }
 
 }

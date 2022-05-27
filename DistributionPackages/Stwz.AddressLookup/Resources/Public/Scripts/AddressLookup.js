@@ -15,7 +15,27 @@
         house_number: "",
         house_number_suffix: ""
       },
+      validation: {
+        city: "",
+        street: "",
+        house_number: "",
+        required: {
+          message: "Pflichtfeld"
+        }
+      },
+      validate(field) {
+      },
       check() {
+        if (!this.address.city.length) {
+          this.validation.city = this.validation.required.message;
+        }
+        if (!this.address.streetname.length) {
+          this.validation.streetname = this.validation.required.message;
+        }
+        if (!this.address.house_number.length) {
+          this.validation.house_number = this.validation.required.message;
+          return;
+        }
         this.loading = true;
         console.log(this.url);
         fetch(this.url + "?streetname=" + this.address.streetname + "&zip=" + this.address.zip_code + "&city=" + this.address.city + "&country=" + this.address.country + "&houseNumber=" + this.address.house_number + "&houseNumberSuffix=" + this.address.house_number_suffix, {

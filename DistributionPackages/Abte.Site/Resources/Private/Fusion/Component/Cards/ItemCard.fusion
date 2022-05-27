@@ -1,0 +1,134 @@
+prototype(Abte.Site:Component.ItemCard) < prototype(Neos.Fusion:Component) {
+    
+    node = ${ node }
+    @context {
+        node = ${ this.node }
+    }
+
+    pageURL = Neos.Neos:NodeUri {
+        absolute = true
+    }
+
+    imageSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(node).property('image') }
+        width = 800
+        height = 800
+    }
+
+    id = ${ q(node).property('productID')}
+    // productPrice = ${ q(node).property('productPrice') }
+
+    productPrice = ${ String.format( "%01.2f", String.split( q(node).property('productPrice'), '.') ) }
+
+    productWidth = ${ q(node).property('productWidth')}
+    productHeight = ${ q(node).property('productHeight')}
+    productLength = ${ q(node).property('productLength')}
+    productStock = ${ q(node).property('productStock')}
+    productForm = ${ q(node).property('productForm')}
+    productLowStock = ${ q(node).property('productLowStock') ? true : false }
+    description = ${ q(node).property('productDescription')}
+    descriptionShort = ${ q(node).property('productDescriptionShort')}
+    
+    title = ${ q(node).property('title') }
+    subTitle = ${ q(node).property('subTitle') }
+    teaser_short = ${ q(node).property('teaser_short') }
+
+    isSynced = ${ q(node).property('productIsSynced') }
+
+    kates = Neos.Fusion:Join {
+        @glue = ' '
+
+        self = Neos.Fusion:Loop {
+            items = Neos.Fusion:Map {
+                items = ${ q(node).property('categories') }
+                itemRenderer = ${ q(item).get(0) }
+                @process.removeDuplicates = ${Array.unique(value)}
+            }
+
+            itemName = 'pcat'
+            itemRenderer        = ${ 'fil-' + Carbon.String.urlize(q(pcat).property('title')) + '-title fil-title' }
+        }
+        productWidth            = ${ q(node).property('productWidth')           ? Carbon.String.urlize( 'fil-' + q(node).property('productWidth') + ' ' + 'productWidth ') : null }
+        productWidthEmtpy       = ${ q(node).property('productWidth')           ? Carbon.String.urlize( 'fil-' + 'productWidth ') : null }
+        productHeight           = ${ q(node).property('productHeight')          ? Carbon.String.urlize( 'fil-' + q(node).property('productHeight') + ' ' + 'productHeight ') : null }
+        productHeightEmpty      = ${ q(node).property('productHeight')          ? Carbon.String.urlize( 'fil-' + 'productHeight ') : null }
+        productLabelWidth       = ${ q(node).property('productLabelWidth')      ? Carbon.String.urlize( 'fil-' + q(node).property('productLabelWidth') + ' ' + 'productLabelWidth ') : null }
+        productLabelWidthEmpty  = ${ q(node).property('productLabelWidth')      ? Carbon.String.urlize( 'fil-' + 'productLabelWidth ') : null }
+        productLabelHeight      = ${ q(node).property('productLabelHeight')     ? Carbon.String.urlize( 'fil-' + q(node).property('productLabelHeight') + ' ' + 'productLabelHeight ') : null }
+        productLabelHeightEmpty = ${ q(node).property('productLabelHeight')     ? Carbon.String.urlize( 'fil-' + 'productLabelHeight ') : null }
+        productForm             = ${ q(node).property('productForm')            ? Carbon.String.urlize( 'fil-' + q(node).property('productForm') + ' ' + 'productForm ') : null }
+        productFormEmpty        = ${ q(node).property('productForm')            ? Carbon.String.urlize( 'fil-' + 'productForm ') : null }
+        productMaterial         = ${ q(node).property('productMaterial')        ? Carbon.String.urlize( 'fil-' + q(node).property('productMaterial') + ' ' + 'productMaterial ') : null }
+        productMaterialEmpty    = ${ q(node).property('productMaterial')        ? Carbon.String.urlize( 'fil-' + 'productMaterial ') : null }
+        productGummierung       = ${ q(node).property('productGummierung')      ? Carbon.String.urlize( 'fil-' + q(node).property('productGummierung') + ' ' + 'productGummierung ') : null }
+        productGummierungEmtpy  = ${ q(node).property('productGummierung')      ? Carbon.String.urlize( 'fil-' + 'productGummierung ') : null }
+        productAusfuehrung      = ${ q(node).property('productAusfuehrung')     ? Carbon.String.urlize( 'fil-' + q(node).property('productAusfuehrung') + ' ' + 'productAusfuehrung ') : null }
+        printerType             = ${ q(node).property('printerType')            ? Carbon.String.urlize( 'fil-' + q(node).property('printerType') + ' ' + 'printerType ') : null }
+        printerTypeEmpty        = ${ q(node).property('printerType')            ? Carbon.String.urlize( 'fil-' + 'printerType ') : null }
+        printerHead             = ${ q(node).property('printerHead')            ? Carbon.String.urlize( 'fil-' + q(node).property('printerHead') + ' ' + 'printerHead ') : null }
+        printerHeadEmpty        = ${ q(node).property('printerHead')            ? Carbon.String.urlize( 'fil-' + 'printerHead ') : null }
+        inkQuality              = ${ q(node).property('inkQuality')             ? Carbon.String.urlize( 'fil-' + q(node).property('inkQuality') + ' ' + 'inkQuality ') : null }
+        inkQualityEmpty         = ${ q(node).property('inkQuality')             ? Carbon.String.urlize( 'fil-' + 'inkQuality ') : null }
+        productMinOutlet        = ${ q(node).property('productMinOutlet')       ? Carbon.String.urlize( 'fil-' + q(node).property('productMinOutlet') + ' ' + 'productMinOutlet ') : null }
+        productMinOutletEmpty   = ${ q(node).property('productMinOutlet')       ? Carbon.String.urlize( 'fil-' + 'productMinOutlet ') : null }
+        productMaxOutlet        = ${ q(node).property('productMaxOutlet')       ? Carbon.String.urlize( 'fil-' + q(node).property('productMaxOutlet') + ' ' + 'productMaxOutlet ') : null }
+        productMaxOutletEmpty   = ${ q(node).property('productMaxOutlet')       ? Carbon.String.urlize( 'fil-' + 'productMaxOutlet ') : null }
+        passthroughMin          = ${ q(node).property('passthroughMin')         ? Carbon.String.urlize( 'fil-' + q(node).property('passthroughMin') + ' ' + 'passthroughMin ') : null }
+        passthroughMinEmpty     = ${ q(node).property('passthroughMin')         ? Carbon.String.urlize( 'fil-' + 'passthroughMin ') : null }
+        passthroughMax          = ${ q(node).property('passthroughMax')         ? Carbon.String.urlize( 'fil-' + q(node).property('passthroughMax') + ' ' + 'passthroughMax ') : null }
+        passthroughMaxEmpty     = ${ q(node).property('passthroughMax')         ? Carbon.String.urlize( 'fil-' + 'passthroughMax ') : null }
+        printerResolution       = ${ q(node).property('printerResolution')      ? Carbon.String.urlize( 'fil-' + q(node).property('printerResolution') + ' ' + 'printerResolution ') : null }
+        printerResolutionEmpty  = ${ q(node).property('printerResolution')      ? Carbon.String.urlize( 'fil-' + 'printerResolution ') : null }
+        printerSpeed            = ${ q(node).property('printerSpeed')           ? Carbon.String.urlize( 'fil-' + q(node).property('printerSpeed') + ' ' + 'printerSpeed ') : null }
+        printerSpeedEmpty       = ${ q(node).property('printerSpeed')           ? Carbon.String.urlize( 'fil-' + 'printerSpeed ') : null }
+        productInterfaces       = ${ q(node).property('productInterfaces')      ? Carbon.String.urlize( 'fil-' + q(node).property('productInterfaces') + ' ' + 'productInterfaces ') : null }
+        productInterfacesEmpty  = ${ q(node).property('productInterfaces')      ? Carbon.String.urlize( 'fil-' + 'productInterfaces ') : null }
+        printerMedia            = ${ q(node).property('printerMedia')           ? Carbon.String.urlize( 'fil-' + q(node).property('printerMedia') + ' ' + 'printerMedia ') : null }
+        printerMediaEmpty       = ${ q(node).property('printerMedia')           ? Carbon.String.urlize( 'fil-' + 'printerMedia ') : null }
+        productCompatability    = ${ q(node).property('productCompatability')   ? Carbon.String.urlize( 'fil-' + q(node).property('productCompatability') + ' ' + 'productCompatability ') : null }
+        productCompatabilityEmpty    = ${ q(node).property('productCompatability')   ? Carbon.String.urlize( 'fil-' + 'productCompatability ') : null }
+        productOptions          = ${ q(node).property('productOptions')         ? Carbon.String.urlize( 'fil-' + q(node).property('productOptions') + ' ' + 'productOptions ') : null }
+        productOptionsEmpty     = ${ q(node).property('productOptions')         ? Carbon.String.urlize( 'fil-' + 'productOptions ') : null }
+        subs = Neos.Fusion:Loop {
+            items = ${ q(node).parent('[instanceof Abte.Site:Document.Category]').parent('[instanceof Abte.Site:Document.Category]') }
+            itemRenderer = ${ String.replace(q(item).property('_nodeName').property('_nodeName'), 'node-', 'filter-' )}
+            // @if.hasParentParent=${ q(node).parent('[instanceof Abte.Site:Document.Category]').parent('[instanceof Abte.Site:Document.Category]') }
+        }
+    }
+
+    productItemClass = 'relative block w-1/2 md:w-1/3 lg:w-1/4 px-4 md:px-8 mb-4 md:mb-8 lg:mb-12'
+
+
+    renderer = afx`
+
+        <Neos.Neos:NodeLink 
+            node={node} 
+            attributes.class={props.kates + ' ' + props.productItemClass + ' ' + 'mix group block product' }
+        >
+            <div class="mb-4 overflow-hidden">
+                <Neos.Fusion:Augmenter class="duration-300 scale-105 group-hover:scale-100">
+                    <Sitegeist.Lazybones:Image 
+                        @if.hasImage={props.imageSource}
+                        imageSource={props.imageSource} 
+                    />
+
+                    <img src="https://via.placeholder.com/800x800" alt={props.title} width="800" height="800"
+                        @if.hasNoImage={!props.imageSource}
+                    />
+
+                </Neos.Fusion:Augmenter>
+            </div>
+
+            <div class="product-description">
+                <h3 class="break-words h4 title">{node.context.inBackend && props.isSynced ? '&#128260; ': ''}{props.title}</h3>
+                <p>{props.descriptionShort}</p>
+                <p class="font-semibold h4 productPrice text-secondary"
+                    @if.hasPrice={props.productPrice}
+                >
+                    CHF {props.productPrice} 
+                </p>
+            </div>
+
+        </Neos.Neos:NodeLink>
+    `
+}

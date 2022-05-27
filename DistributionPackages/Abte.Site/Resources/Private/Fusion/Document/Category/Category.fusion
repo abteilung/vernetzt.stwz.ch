@@ -1,0 +1,52 @@
+prototype(Abte.Site:Document.Category) < prototype(Abte.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        
+        renderer = afx`
+            <div class="container">
+                <div class="grid grid-cols-4 gridgap">
+                    <main class="col-span-3">
+                        {props.main}
+                        <Abte.Site:Component.ProductsSubmenu cols="3" />
+                    </main>
+                    <aside>
+                        {props.aside}
+                    </aside>
+                </div>
+            </div>
+        `
+    }
+}
+
+// Output Mapping queries: <Abte.Site:Component.ImportMapping />
+
+prototype(Abte.Site:Component.ProductsSubmenu) < prototype(Neos.Fusion:Component) {
+    
+    subItemsForCards = Neos.Neos:MenuItems {
+        itemCollection = ${ q(documentNode).children('[instanceof Abte.Site:Document.Product]').get() }
+        maximumLevels = 1
+    }
+
+    renderer = afx`
+        <div class="grid grid-cols-2 md:grid-cols-3 gridgap">
+            <Neos.Fusion:Loop items={props.subItemsForCards} iterationName="i">
+                <Abte.Site:Component.ItemCard node={item.node} productItemClass='' />
+
+            </Neos.Fusion:Loop>
+        </div>
+
+    `
+}
+
+prototype(Abte.Site:Component.ImportMapping) < prototype(Neos.Fusion:Component) {
+    
+    subItemsForCards = Neos.Neos:MenuItems {
+        itemCollection = ${ q(documentNode).children('[instanceof Abte.Site:Document.Product]').get() }
+        maximumLevels = 1
+    }
+
+    renderer = afx`
+        <Neos.Fusion:Loop items={props.subItemsForCards} iterationName="i">
+            UPDATE ttree_contentrepositoryimporter_domain_model_recordmapping SET nodeIdentifier='{item.node.nodeData.identifier}', nodePath='{item.node.nodeData.path}' WHERE externalIdentifier = '{item.node.properties.productID}'; <br />
+        </Neos.Fusion:Loop>
+    `
+}

@@ -11,10 +11,6 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
         format = 'json'
     }
 
-    form = Neos.Neos:ContentCollection {
-        nodePath = ${ q(node).children('modal').property('_path') }
-    }
-
     renderer = afx`
         <div id="addressLookup"
              class="max-w-screen-lg mx-auto addressLookup"
@@ -26,19 +22,28 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                 <div class="w-full my-3">
                     <h3 class="mb-4 font-extrabold text-black">Glasfaseranschluss prüfen</h3>
                     <div class="grid w-full gap-4 sm:grid-cols-8">
-                        <input class="sm:col-span-4 lg:col-span-1 xl:col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ"  />
-                        <input class="sm:col-span-4 lg:col-span-2 xl:col-span-2" type="text" x-model="address.city" placeholder="Ort*" required=""/>
-                        <input class="sm:col-span-6 lg:col-span-3 xl:col-span-3" type="text" x-model="address.streetname"placeholder="Strasse*" required=""/>
-                        <input class="sm:col-span-2 lg:col-span-1 xl:col-span-1" type="text" x-model="address.house_number" placeholder="Nr." />
+                        <input class="sm:col-span-4 lg:col-span-1 xl:col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ" />
+                        <div class="relative sm:col-span-4 lg:col-span-2 xl:col-span-2">
+                            <input type="text" x-model="address.city" placeholder="Ort*" required="required" />
+                            <Stwz.AddressLookup:Component.FormValidation property="city" />
+                        </div>
+                        <div class="relative sm:col-span-6 lg:col-span-3 xl:col-span-3">
+                            <input type="text" x-model="address.streetname"placeholder="Strasse*" required="required" />
+                            <Stwz.AddressLookup:Component.FormValidation property="streetname" />
+                        </div>
+                        <div class="relative sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                            <input type="text" x-model="address.house_number" placeholder="Nr.*" required="required" />
+                            <Stwz.AddressLookup:Component.FormValidation property="house_number" />
+                        </div>
                         <input type="hidden" x-model="address.country" placeholder="Land" value="Schweiz" />
                         <input type="hidden" x-model="url" value={props.url} />
 
                         <button class="sm:col-span-4 lg:col-span-2 xl:col-span-1 button !px-1" type="submit"
-                                x-on:click={"check"}>
-                                <span x-show="loading"><Abte.Site:Icon.Refresh class="animate-spin inline" /></span>
-                                <span x-show="!loading">Prüfen</span>
+                            x-on:click={"check"}
+                        >
+                            <span x-cloak x-show="loading"><Abte.Site:Icon.Refresh class="inline animate-spin" /></span>
+                            <span x-cloak x-show="!loading">Prüfen</span>
                         </button>
-
                     </div>
                 </div>
             </div>
@@ -53,16 +58,18 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0">
                     <!-- x-on:click.away="error = false" -->
-                    <div class="relative flex items-center mb-2">
-                        <p class="text-error">Für diese Adresse exisitert noch keinen Anschluss.</p>
-                        <p>Überprüfe deine Angaben oder registriere dich um zu erfahren wann dein Anschluss freigeschaltet wird.</p>
+                    <div class="mb-2">
+                        <h3 class="">Für diese Adresse exisitert noch kein Anschluss.</h3>
+                        <p>Überprüfe deine Angaben oder registriere dich, um zu erfahren, wann dein Anschluss freigeschaltet wird.</p>
                     </div>
-                    <div class="relative flex items-center mt-2">
+                    <div class="relative mt-2">
 
-                        {props.form}
+                        <Carbon.IncludeAssets:File file="resource://Onedrop.AjaxForm/Public/JavaScript/form.js" />
+                        <Onedrop.AjaxForm:Form formIdentifier="contact-form" />                        
+
                     </div>
                 </div>
-                <div class="relative flex items-center px-6 mx-auto my-16 space-x-8 group h-36 lg:px-16 rounded-3xl bg-white box-shadow"
+                <div class="relative flex items-center px-6 mx-auto my-16 space-x-8 bg-white group h-36 lg:px-16 rounded-3xl box-shadow"
                     x-show="success"
                     x-on:click.away="success = false"
                     x-transition:enter="transition duration-300"
@@ -74,11 +81,46 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     <p>
                         Die angefragte Adresse ist angeschlossen.
                     </p>
-                    <Abte.Site:Content.Button class="text-white duration-150 scale-100 bg-black hover:scale-105 align-right" text="Zum Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
+                    <Abte.Site:Content.Button class="text-white duration-150 scale-100 bg-black hover:scale-105 align-right" text="Zum Angebot" iconAfter="" target="#id-node-lrtwjedsk838h" />
                 </div>
             </div> 
 
         </div>
 
+    `
+}
+
+
+
+prototype(Stwz.AddressLookup:Component.FormValidation) < prototype(Neos.Fusion:Component) {
+
+    property = ''
+
+    renderer = afx`
+        <div 
+            x-cloak 
+            x-show={'validation.' + props.property} class="flex items-center py-1"
+        >
+            <div 
+                class="p-1 rounded-full fill-current "
+                :class="{'bg-green-200 text-green-700': address.city,
+                'bg-red-200 text-red-700': !address.city}"
+            >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path
+                        x-show={'address.' + props.property}
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    <path
+                        x-show={'!address.' + props.property}
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
+            <span
+                class="ml-3 text-sm font-medium"
+                 :class={"{'text-green-700': address." + props.property + ", 'text-red-700': !address." + props.property + "}"} 
+
+                x-text={'validation.' + props.property}>
+            </span>
+        </div>
     `
 }
