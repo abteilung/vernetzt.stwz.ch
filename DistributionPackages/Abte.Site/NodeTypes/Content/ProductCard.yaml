@@ -25,3 +25,14 @@
     discount:
       options:
         preset: 'text.plain'
+
+    productGUID:
+      options:
+        preset: 'text.inspector'
+      ui:
+        label: GUID (Shop)
+    productIV:
+      options:
+        preset: 'text.inspector'
+      ui:
+        label: IV (Shop)
