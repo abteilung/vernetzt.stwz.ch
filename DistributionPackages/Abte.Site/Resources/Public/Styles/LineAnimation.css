@@ -65,17 +65,4 @@
             -webkit-animation-delay: $delay * 5;
                     animation-delay: $delay * 5;
         }
-
-        @media (max-width: 640px) {.lineAnimation svg {
-            max-width: 10vw;
-            max-height: 9vw
-    }
-}
-
-        @media (max-width: 450px) {.lineAnimation svg {
-            max-width: 30px;
-            max-height: 24px;
-            stroke-width: 2px
-    }
-}
 /*# sourceMappingURL=LineAnimation.css.map */
