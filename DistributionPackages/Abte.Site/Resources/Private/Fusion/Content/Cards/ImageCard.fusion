@@ -36,7 +36,7 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
         <Carbon.Link:Link 
             link={props.target} 
             renderDefaultTagIfNoLink={true}
-            attributes.class={ props.additionalClass }
+            attributes.class={ props.class }
         >
 
             <div class="relative overflow-hidden isolate rounded-t-2xl">
