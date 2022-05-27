@@ -14,13 +14,14 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
 
     renderer = afx`
         <div 
-             class={props.class + ' ' + 'max-w-screen-lg mx-auto addressLookup'}
-             x-data={"addresslookup"}
-             x-init={"{url: '" + props.url + "'}"} 
-             data-url={props.url} >
+            class={props.class + ' ' + 'max-w-screen-lg mx-auto addressLookup'}
+            id="addressLookup"                    
+            x-data={"addresslookup"}
+            x-init={"{url: '" + props.url + "'}"} 
+            data-url={props.url} 
+        >
             <div 
                 class="relative z-30 flex items-center px-6 py-4 mx-auto my-4 md:my-16 md:space-x-8 lg:py-0 group lg:h-36 lg:px-16 rounded-3xl md:rounded-full bg-accent"
-                id="addressLookup"                    
             >
                 <div class="hidden md:flex">{props.icon}</div>
                 <div class="w-full my-3">
@@ -108,31 +109,15 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     <p>
                         Die angefragte Adresse ist angeschlossen.
                     </p>
-                    <Abte.Site:Content.Button class="text-white duration-150 scale-100 bg-black hover:scale-105 align-right" text="Zum Angebot" iconAfter="" target="#id-node-lrtwjedsk838h" />
+                    <Abte.Site:Content.Button 
+                        class="text-white duration-150 scale-100 bg-black hover:scale-105 align-right" 
+                        text="Zum Angebot" 
+                        iconAfter="" 
+                        target="#id-node-lrtwjedsk838h" />
                 </div>
             </div> 
 
         </div>
 
-    `
-}
-
-
-
-prototype(Stwz.AddressLookup:Component.FormValidation) < prototype(Neos.Fusion:Component) {
-
-    property = ''
-
-    renderer = afx`
-        <div 
-            x-cloak 
-            x-show={'validation.' + props.property} class="flex items-center py-1"
-        >
-            <span
-                class="ml-2 text-xs font-medium"
-                :class={"{'opacity-0': address." + props.property + ", 'text-black': !address." + props.property + "}"} 
-                x-text={'validation.' + props.property}>
-            </span>
-        </div>
     `
 }
