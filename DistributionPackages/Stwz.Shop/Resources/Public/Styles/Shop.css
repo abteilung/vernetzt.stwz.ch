@@ -89,7 +89,7 @@
     
     display: grid;
     
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     
     gap: 1rem
 }
@@ -120,6 +120,24 @@
     
     opacity: 0.4
 }
+
+#contact-form .email, #contact-form .message {
+    
+    grid-column: span 6 / span 6
+}
+
+#contact-form .first_name, #contact-form .last_name {
+    
+    grid-column: span 3 / span 3
+}
+
+#contact-form .street, #contact-form .city {
+    
+    grid-column: span 2 / span 2
+}
+
+#contact-form .nr {
+    }
 
 @media (min-width: 768px) {
     

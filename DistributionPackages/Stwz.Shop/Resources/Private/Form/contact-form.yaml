@@ -29,22 +29,21 @@ renderables:
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'
-        identifier: email
-        label: E-Mail
+        identifier: street
+        label: Strasse
         validators:
           - identifier: 'Neos.Flow:NotEmpty'
-          - identifier: 'Neos.Flow:EmailAddress'
         properties:
-          placeholder: 'E-Mail'
+          placeholder: Strasse
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'
-        identifier: address
-        label: Adresse
+        identifier: nr
+        label: Nr.
         validators:
           - identifier: 'Neos.Flow:NotEmpty'
         properties:
-          placeholder: Adresse
+          placeholder: Nr.
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'
@@ -63,7 +62,17 @@ renderables:
           - identifier: 'Neos.Flow:NotEmpty'
         properties:
           placeholder: Ort
-        defaultValue: ''    
+        defaultValue: ''
+      -
+        type: 'Neos.Form:SingleLineText'
+        identifier: email
+        label: E-Mail
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+          - identifier: 'Neos.Flow:EmailAddress'
+        properties:
+          placeholder: 'E-Mail'
+        defaultValue: ''
       -
         type: 'Neos.Form:MultiLineText'
         identifier: message
