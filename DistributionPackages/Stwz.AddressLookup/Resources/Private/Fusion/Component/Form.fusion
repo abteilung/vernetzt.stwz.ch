@@ -102,23 +102,19 @@ prototype(Stwz.AddressLookup:Component.FormValidation) < prototype(Neos.Fusion:C
             x-show={'validation.' + props.property} class="flex items-center py-1"
         >
             <div 
-                class="p-1 rounded-full fill-current "
-                :class="{'bg-green-200 text-green-700': address.city,
-                'bg-red-200 text-red-700': !address.city}"
             >
-                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <!-- <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path
                         x-show={'address.' + props.property}
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     <path
                         x-show={'!address.' + props.property}
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                </svg> -->
             </div>
             <span
-                class="ml-3 text-sm font-medium"
-                 :class={"{'text-green-700': address." + props.property + ", 'text-red-700': !address." + props.property + "}"} 
-
+                class="text-xs ml-2 font-medium"
+                :class={"{'opacity-0': address." + props.property + ", 'text-black': !address." + props.property + "}"} 
                 x-text={'validation.' + props.property}>
             </span>
         </div>

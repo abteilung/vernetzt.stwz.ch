@@ -1867,6 +1867,9 @@ select {
 .\!mt-0 {
   margin-top: 0px !important;
 }
+.ml-2 {
+  margin-left: 0.5rem;
+}
 .block {
   display: block;
 }
