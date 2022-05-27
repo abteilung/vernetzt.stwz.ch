@@ -49,7 +49,8 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
             "@addresslookup-error.window"="showBtn = false"
             "@addresslookup-success.window"="showBtn = true"
             "@addresslookup-error".@if={props.conditionalShow}
-            "@addresslookup-success".@if={props.conditionalShow}>
+            "@addresslookup-success".@if={props.conditionalShow}
+        >
             <div class="inline-block group">
                 <Carbon.Link:Link 
                     additionalClass={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style} 
