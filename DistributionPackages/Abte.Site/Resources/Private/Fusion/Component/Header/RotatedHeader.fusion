@@ -5,8 +5,8 @@ prototype(Abte.Site:Content.RotatedHeader) < prototype(Neos.Fusion:Component) {
     renderer = afx`
         <div class="w-24 rotatedHeader">
             <div class="relative flex flex-col h-24">
-                <Abte.Site:Mixin.Icons class="absolute left-2" />
-                <Abte.Site:Icon.DiagonalWide class="absolute left-0 w-28 -top-4" />
+                <Abte.Site:Mixin.Icons class="absolute left-0 md:left-2" />
+                <Abte.Site:Icon.DiagonalWide class="absolute left-0 w-12 md:w-20 lg:w-28 -top-2 md:-top-4" />
             </div>
 
             <div class="relative z-20 grid w-full grid-cols-6">

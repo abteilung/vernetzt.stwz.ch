@@ -61,10 +61,10 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
 
 
         <div class="py-24 bg-base-100 headerProduct">
-            <div class="container flex">
+            <div class="container flex gridPadding-x">
 
                 <Abte.Site:Content.RotatedHeader />
-                <div class="relative z-20 w-full ml-20">{props.headerContent}</div>
+                <div class="relative z-20 w-full ml-10 lg:ml-20">{props.headerContent}</div>
             </div>
         </div>
     `
