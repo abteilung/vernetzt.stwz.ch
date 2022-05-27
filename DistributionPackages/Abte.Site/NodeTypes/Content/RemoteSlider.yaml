@@ -4,13 +4,17 @@
         'Abte.Site:Mixin.Image': true
     ui:
         label: Slider
-        icon: user
+        icon: clone
         position: 300
     properties:
+        'image':
+            ui:
+                reloadIfChanged: true
         'images':
             options:
                 preset: 'image.assets'
             ui:
                 label: Slider Images
+                reloadPageIfChanged: true
                 inspector:
                     group: 'image'

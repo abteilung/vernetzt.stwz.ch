@@ -1,0 +1,17 @@
+prototype(Stwz.AddressLookup:Component.FormValidation) < prototype(Neos.Fusion:Component) {
+
+    property = ''
+
+    renderer = afx`
+        <div 
+            x-cloak 
+            x-show={'validation.' + props.property} class="flex items-center py-1"
+        >
+            <span
+                class="ml-2 text-xs font-medium"
+                :class={"{'opacity-0': address." + props.property + ", 'text-black': !address." + props.property + "}"} 
+                x-text={'validation.' + props.property}>
+            </span>
+        </div>
+    `
+}
