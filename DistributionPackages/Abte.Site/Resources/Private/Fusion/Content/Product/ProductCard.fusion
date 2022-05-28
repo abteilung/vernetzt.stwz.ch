@@ -35,6 +35,43 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
     productGUID = ${ q(node).property('productGUID') }
     productIV   = ${ q(node).property('productIV') }
 
+    // https://codepen.io/abteilung/pen/rNJppNZ?editors=1111
+
+    // 200
+
+    // https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx
+    // ?GUID_ID=7d56a53a-6339-4262-86d9-11b9479d473d
+    // &lang=de
+    // &IV_2140144261-Attr-2140070229=6340
+    // &IV_2140144261-Attr-2140070227=Baar
+    // &IV_2140144261-Attr-2140070235=Schutzengelstrasse
+    // &IV_2140144261-Attr-2140070231=49
+
+
+    // 700
+
+    // https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx
+    // ?GUID_ID=da90a9fa-dee2-4fdd-bff5-bce8a4298e2a
+    // &lang=de
+    // &IV_2140144199-Attr-2140070229=6340
+    // &IV_2140144199-Attr-2140070227=Baar
+    // &IV_2140144199-Attr-2140070235=Schutzengelstrasse
+    // &IV_2140144199-Attr-2140070231=49
+
+
+    // 1000
+
+    // https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx
+    // ?GUID_ID=ddb9f186-41ee-491f-ae3c-4b72addb3ef0
+    // &lang=de
+    // &IV_2140144173-Attr-2140070229=6340
+    // &IV_2140144173-Attr-2140070227=Baar
+    // &IV_2140144173-Attr-2140070235=Schutzengelstrasse
+    // &IV_2140144173-Attr-2140070231=49
+
+
+    // https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx?GUID_ID=ddb9f186-41ee-491f-ae3c-4b72addb3ef0&lang=de&IV_2140144173-Attr-2140070229=6340&IV_2140144173-Attr-2140070227=Baar&IV_2140144173-Attr-2140070235=Schutzengelstrasse&IV_2140144173-Attr-2140070231=49
+
     backgroundColor = ${ q(node).property('bgColor') }
 
 
