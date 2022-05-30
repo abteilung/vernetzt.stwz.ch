@@ -2377,6 +2377,10 @@ select{
     height: 768px;
 
 }
+.\!h-full{
+    height: 100% !important;
+
+}
 .max-h-full{
     max-height: 100%;
 

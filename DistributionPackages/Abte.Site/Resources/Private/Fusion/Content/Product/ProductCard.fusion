@@ -117,10 +117,10 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                             <div class="font-extrabold">Preis pro Monat</div>
                             <div class="relative">
                                 <div class="text-xl">{props.rabattPrice ? props.rabattPrice : props.price}</div>
-                                <div class="text-xs absolute top-0 leading-snug"
+                                <div class="absolute top-0 text-xs leading-snug"
                                     @if.hasRabatt={props.discount}
                                 >
-                                    <Abte.Site:Icon.Diagonal class="absolute text-black top-0 left-14 w-12 -rotate-12" />
+                                    <Abte.Site:Icon.Diagonal class="absolute top-0 w-12 text-black left-14 -rotate-12" />
                                     <div class="absolute left-28">Anstatt<br/>{props.price}</div>
                                 </div>
                             </div>
