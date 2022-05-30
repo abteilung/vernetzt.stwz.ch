@@ -2,6 +2,7 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('addresslookup', () => ({
         
         url: document.getElementById('addressLookup').dataset.url,
+        fatal: false,
         error: false,
         success: false,
         loading: false,
