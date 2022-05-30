@@ -27,14 +27,15 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                 <div class="w-full my-3">
                     <h3 class="mb-4 font-extrabold text-black">Glasfaseranschluss prüfen</h3>
                     <div id="addressLookupForm" class="grid w-full grid-cols-4 gap-4 md:grid-cols-8 lg:grid-cols-9">
-                        <input class="col-span-1" type="number" x-model="address.zip_code" placeholder="PLZ" />
+                        <input class="col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ" readonly="" />
                         <div class="relative col-span-3">
                             <input 
                                 id="city" 
                                 class="w-full" 
                                 :class="validation.city == 'Pflichtfeld' ? '!border-primary' : '!border-black'"
-                                type="text" x-model="address.city" placeholder="Ort*" 
+                                type="text" x-model="address.city" placeholder="Ort" 
                                 required="required" 
+                                readonly=""
                             />
                             <Stwz.AddressLookup:Component.FormValidation property="city" />
                         </div>
@@ -85,8 +86,8 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     x-transition:leave-end="opacity-0"
                 >
                     <div class="mb-2">
-                        <h3 class="">Für diese Adresse exisitert noch kein Anschluss.</h3>
-                        <p>Überprüfe deine Angaben oder registriere dich, um zu erfahren, wann dein Anschluss freigeschaltet wird.</p>
+                        <h3 class="">Objekt nicht erschlossen</h3>
+                        <p>Leider ist Ihr zu Hause noch nicht mit Glasfaser erschlossen. Bitte teilen Sie uns Ihr Interesse an einem Anschluss ans Glasfasernetz mit diesem Formular mit. Wir werden Sie kontaktieren, wenn wir Ihr zu Hause erschliessen.</p>
                     </div>
                     <div class="relative mt-2">
 
@@ -106,14 +107,30 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0"
                 >
-                    <p>
-                        Die angefragte Adresse ist angeschlossen.
-                    </p>
+                    <div class="mb-2">
+                        <h3 class="">Objekt bereits erschlossen</h3>
+                        <p>Ihr zu Hause haben wir mit Glasfaser erschlossen, so dass Sie unser ultraschnelles Internet und weitere Produkte bestellen können. Konfigurieren Sie jetzt Ihr Abo.</p>
+                    </div>
                     <Abte.Site:Content.Button 
                         class="text-white duration-150 scale-100 bg-black hover:scale-105 align-right" 
                         text="Zum Angebot" 
                         iconAfter="" 
                         target="#id-node-lrtwjedsk838h" />
+                </div>
+                <div 
+                    class="relative p-6 my-16 group lg:p-12 rounded-3xl box-shadow"
+                    x-show="fatal"
+                    x-transition:enter="transition duration-300"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition duration-300"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                >
+                    <div class="mb-2">
+                        <h3 class="">Fehlermeldung</h3>
+                        <p>Die Adresse ist nicht in unserem Versorgungsgebiet und kann leider nicht mit dem Glasfasernetz von «StWZ vernetzt» erschlossen werden.</p>
+                    </div>
                 </div>
             </div> 
 
