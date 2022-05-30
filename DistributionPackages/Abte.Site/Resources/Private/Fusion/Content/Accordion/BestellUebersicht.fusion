@@ -24,7 +24,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                 <template x-if="televisionDiscount">
                     <Abte.Site:Icon.Diagonal class="absolute text-white top-16 left-16" />
                 </template>   
-                <p class="text-sm">
+                <p class="mb-0 text-sm font-black !text-white">
                     inkl. kostenlose TV-Box 
                 </p>
             </div>
