@@ -48,7 +48,7 @@ prototype(Abte.Site:Component.HeaderAbout) < prototype(Neos.Neos:ContentComponen
                             {props.subTitle}
                         </Neos.Fusion:Augmenter>
                     </div>
-                    <div class="col-span-2 illustrationContainer h-fit">
+                    <div class="col-span-2 illustrationContainer">
                         {props.svgIllustration}
                     </div>
                 </div>
