@@ -42,14 +42,7 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
     blank = ${ q(node).property('blank') ? true : false }
 
     renderer = afx`
-        <div class={props.outerClass}
-            x-data="{showBtn:false}"
-            x-show="showBtn"
-            x-show.@if={props.conditionalShow}
-            "@addresslookup-error.window"="showBtn = false"
-            "@addresslookup-success.window"="showBtn = true"
-            "@addresslookup-error".@if={props.conditionalShow}
-            "@addresslookup-success".@if={props.conditionalShow}>
+        <div class={props.outerClass}>
             <div class="inline-block group">
                 <Carbon.Link:Link 
                     additionalClass={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style} 

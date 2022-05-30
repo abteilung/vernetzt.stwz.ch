@@ -1088,8 +1088,8 @@ select {
   flex-shrink: 0;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
@@ -1168,8 +1168,8 @@ select {
 }
 .btn-group > input[type="radio"].btn {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 .btn-group > input[type="radio"].btn:before {
   content: attr(data-title);
@@ -1243,8 +1243,8 @@ select {
 .label {
   display: flex;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   align-items: center;
   justify-content: space-between;
 }
@@ -1268,7 +1268,7 @@ select {
 .link {
   cursor: pointer;
   -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .menu {
   display: flex;
@@ -1294,8 +1294,8 @@ select {
 .menu :where(li:not(.disabled):not(.menu-title)) > :where(*:not(ul)) {
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   align-items: center;
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1353,11 +1353,11 @@ select {
   flex-shrink: 0;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   height: 3rem;
   padding-left: 1rem;
   padding-right: 2.5rem;
@@ -1524,23 +1524,17 @@ select {
 .left-1 {
   left: 0.25rem;
 }
-.left-24 {
-  left: 6rem;
+.left-14 {
+  left: 3.5rem;
+}
+.left-28 {
+  left: 7rem;
 }
 .top-1 {
   top: 0.25rem;
 }
 .top-24 {
   top: 6rem;
-}
-.left-28 {
-  left: 7rem;
-}
-.left-14 {
-  left: 3.5rem;
-}
-.left-12 {
-  left: 3rem;
 }
 .isolate {
   isolation: isolate;
