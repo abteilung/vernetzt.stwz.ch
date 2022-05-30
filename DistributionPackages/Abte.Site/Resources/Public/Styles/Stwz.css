@@ -1971,6 +1971,11 @@ select {
 .h-\[768px\] {
   height: 768px;
 }
+.h-fit {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
 .max-h-full {
   max-height: 100%;
 }
@@ -2556,6 +2561,10 @@ select {
 .border-indigo-500 {
   --tw-border-opacity: 1;
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
+}
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 .border-b-white {
   --tw-border-opacity: 1;
