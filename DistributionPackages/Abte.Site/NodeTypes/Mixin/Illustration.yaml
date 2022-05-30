@@ -25,7 +25,7 @@
   properties:
     illustration:
       type: string
-      defaultValue: '<p>HTML Code</p>'
+      defaultValue: ''
       position: 3
       ui:
         label: Illustration (SVG Code)
