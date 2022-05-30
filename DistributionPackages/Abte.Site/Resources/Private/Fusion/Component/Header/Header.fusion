@@ -34,17 +34,20 @@ prototype(Abte.Site:Component.Header) < prototype(Neos.Fusion:Component) {
     ##
 
     renderer = afx`
-        <header class={pageClass + ' ' + 'relative bg-cover bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="container relative pt-32 h-[300px] md:h-[250px] lg:h-[400px]relative top-0 z-20 w-full mt-0 overflow-visible xl:mb-10">
-                <div class="grid grid-cols-3 gridgap-x">
-                    <h1 class="text-black">{props.pageTitle}</h1>
-                        
-                    <div class="col-span-2 illustrationContainer">
+        <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
+            <div class="container gridPadding-x relative pt-48 h-[250px] md:h-[400px] relative top-0 z-20 w-full mt-0 overflow-visible">
+                <div class="grid md:grid-cols-5 gridgap-x">
+                    <div class="col-span-3 h-fit">
+                        <Neos.Fusion:Augmenter class="text-black h1">
+                            {props.pageTitle}
+                        </Neos.Fusion:Augmenter>
+                    </div>
+                    <div class="col-span-2 illustrationContainer h-fit">
                         {props.svgIllustration}
                     </div>
-                </div>
-                <div class="absolute right-0 z-10 -bottom-28">
-                    <Stwz.MovingLines:Component.Lines />
+                    <div class="absolute right-0 z-10 -bottom-28">
+                        <Stwz.MovingLines:Component.Lines />
+                    </div>
                 </div>
             </div>
         </header>
