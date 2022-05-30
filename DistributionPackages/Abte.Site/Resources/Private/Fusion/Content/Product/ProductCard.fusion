@@ -87,7 +87,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 x-init={"value" + props.productGroup + "= localStorage.getItem('" + props.productGroup + "');"}
                 x-on:change={"localStorage.setItem('" + props.productGroup + "', value" + props.productGroup + "); $dispatch('item-changed');" }
                 data-group={props.productGroup}
-                data-price={Array.first(String.pregMatch(props.price,'(\d+.(\d{1,2})|\d{1,2})')) }
+                data-price={Array.first(String.pregMatch(props.rabattPrice,'(\d+.(\d{1,2})|\d{1,2})')) }
                 data-guid={props.productGUID}
                 data-IV={props.productIV}
             >
