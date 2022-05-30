@@ -38,6 +38,20 @@ prototype(Abte.Site:Component.Favicons) < prototype(Neos.Neos:ContentComponent) 
         <meta name="msapplication-config" content="/path/to/browserconfig.xml" />
 
     `
+    @if.hasFavicon = ${ q(site).property('favIcon') }
+}
+
+prototype(Abte.Site:Component.FaviconSource) < prototype(Neos.Neos:ContentComponent) {
+    
+    renderer = afx`
+        <Sitegeist.Kaleidoscope:Image 
+            @if.hasImage={props.imageSource}
+            imageSource={props.imageSource} 
+            width={item}
+            height={item}
+            class="object-cover object-center w-full h-full"
+        />
+    `
 }
 
 
