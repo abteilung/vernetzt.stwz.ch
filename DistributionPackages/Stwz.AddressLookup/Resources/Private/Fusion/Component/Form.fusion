@@ -52,7 +52,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                                 id="house_number"
                                 class="w-full" 
                                 :class="validation.house_number == 'Pflichtfeld' ? '!border-primary' : '!border-black'"
-                                type="number" x-model="address.house_number" placeholder="Nr.*" required="required" />
+                                type="text" x-model="address.house_number" placeholder="Nr.*" required="required" />
                             <Stwz.AddressLookup:Component.FormValidation property="house_number" />
                         </div>
                         <input type="hidden" x-model="address.country" placeholder="Land" value="Schweiz" />
