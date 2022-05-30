@@ -88,12 +88,17 @@
         .headGrid & i, .headGrid & em {
             @apply not-italic !text-accent-focus;
         }
+        hyphens: auto;
     }
 
     h2, .h2, h1.h2, h4.h2, h5.h2 {
-        @apply mb-2 font-sans font-extrabold text-base md:text-lg lg:text-xl xl:text-[30px] 2xl:text-2xl !leading-tight;
+        @apply mb-2 font-sans font-extrabold text-base md:text-lg lg:text-xl xl:text-[30px] !leading-tight;
         i, em {
             @apply not-italic text-accent-focus;
+        }
+        hyphens: auto;
+        .-rotate-90 & {
+            hyphens: none;
         }
     }
 
@@ -105,6 +110,8 @@
         i strong {
             @apply not-italic text-base-300;
         }
+        hyphens: auto;
+
     }
     .testimonial .lead p{
         @apply h1;
