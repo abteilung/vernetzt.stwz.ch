@@ -3,14 +3,15 @@
   document.addEventListener("alpine:init", () => {
     Alpine.data("addresslookup", () => ({
       url: document.getElementById("addressLookup").dataset.url,
+      fatal: false,
       error: false,
       success: false,
       loading: false,
       response: "",
       address: {
-        city: "",
+        city: "Zofingen",
         country: "",
-        zip_code: "",
+        zip_code: "4800",
         streetname: "",
         house_number: "",
         house_number_suffix: ""
