@@ -50,7 +50,7 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
                 @if.isRegularLink={props.doNotLinkNode ? false : true }
                 node={item.node}
                 attributes.class={i.isLast ? props.lastLinkItemClass : props.linkItemClass}
-                attributes.target={props.linkTarget}
+                attributes.target={String.startsWith(item.node.properties.target,'http') ? '_blank' : null }
                 renderDefaultTagIfNoLink={false}
                 
             >
@@ -62,7 +62,7 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
                 @if.isNotLinked={props.doNotLinkNode ? true : false }
                 link={'#'}
                 attributes.class={ i.isLast ? props.lastLinkItemClass : props.linkItemClass }
-                attributes.target={props.linkTarget}
+                attributes.target={String.startsWith(item.node.properties.target,'http') ? '_blank' : null }
                 renderDefaultTagIfNoLink={false}
                 
             >
@@ -73,7 +73,7 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
                 @if.isShortcut={ q(item.node).is('[instanceof Neos.Neos:Shortcut]') }
                 node={doNotLinkNode ? '#' : item.node} 
                 attributes.class={props.linkItemClass + ' ' + props.shortcutClass}
-                attributes.target={String.startsWith(item.node.properties.target,'http') ? '_blank' : '_self'}
+                attributes.target={String.startsWith(item.node.properties.target,'http') ? '_blank' : null }
             >
                 { q(item.node).property('title') }
                 
