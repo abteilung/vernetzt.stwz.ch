@@ -2,7 +2,7 @@
 prototype(Abte.Site:Content.Hr) < prototype(Neos.Neos:ContentComponent) {
 
     class = Abte.Site:Component.AdditionalClass {
-        class = 'ce-hr'
+        class = 'ce-hr my-8 border-black'
     }
 
   	renderer = afx`
