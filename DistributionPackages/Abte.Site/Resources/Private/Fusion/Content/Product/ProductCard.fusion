@@ -20,20 +20,53 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
         node = ${ node}
     }
 
-    price = Neos.Neos:Editable {
-        property = 'price'
-        node = ${ node }
-    }
 
+    price = ${ q(node).property('price') }
     discount = ${ q(node).parents('[instanceof Abte.Site:Content.Products]').property('discount') }
-
-    priceOnly = ${ q(node).property('price') }
+    rabattPrice = ${ this.discount ? String.toInteger(q(node).property('price')) * String.toInteger(this.discount) / 100 + '0' : q(node).property('price') }
 
     productGroup = ''
 
     itemID      = ${ q(node).property('_identifier') }
     productGUID = ${ q(node).property('productGUID') }
     productIV   = ${ q(node).property('productIV') }
+
+    // https://codepen.io/abteilung/pen/rNJppNZ?editors=1111
+
+    // 200
+
+    // https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx
+    // ?GUID_ID=7d56a53a-6339-4262-86d9-11b9479d473d
+    // &lang=de
+    // &IV_2140144261-Attr-2140070229=6340
+    // &IV_2140144261-Attr-2140070227=Baar
+    // &IV_2140144261-Attr-2140070235=Schutzengelstrasse
+    // &IV_2140144261-Attr-2140070231=49
+
+
+    // 700
+
+    // https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx
+    // ?GUID_ID=da90a9fa-dee2-4fdd-bff5-bce8a4298e2a
+    // &lang=de
+    // &IV_2140144199-Attr-2140070229=6340
+    // &IV_2140144199-Attr-2140070227=Baar
+    // &IV_2140144199-Attr-2140070235=Schutzengelstrasse
+    // &IV_2140144199-Attr-2140070231=49
+
+
+    // 1000
+
+    // https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx
+    // ?GUID_ID=ddb9f186-41ee-491f-ae3c-4b72addb3ef0
+    // &lang=de
+    // &IV_2140144173-Attr-2140070229=6340
+    // &IV_2140144173-Attr-2140070227=Baar
+    // &IV_2140144173-Attr-2140070235=Schutzengelstrasse
+    // &IV_2140144173-Attr-2140070231=49
+
+
+    // https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx?GUID_ID=ddb9f186-41ee-491f-ae3c-4b72addb3ef0&lang=de&IV_2140144173-Attr-2140070229=6340&IV_2140144173-Attr-2140070227=Baar&IV_2140144173-Attr-2140070235=Schutzengelstrasse&IV_2140144173-Attr-2140070231=49
 
     backgroundColor = ${ q(node).property('bgColor') }
 
@@ -54,7 +87,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 x-init={"value" + props.productGroup + "= localStorage.getItem('" + props.productGroup + "');"}
                 x-on:change={"localStorage.setItem('" + props.productGroup + "', value" + props.productGroup + "); $dispatch('item-changed');" }
                 data-group={props.productGroup}
-                data-price={Array.first(String.pregMatch(props.priceOnly,'(\d+.(\d{1,2})|\d{1,2})')) }
+                data-price={Array.first(String.pregMatch(props.rabattPrice,'(\d+.(\d{1,2})|\d{1,2})')) }
                 data-guid={props.productGUID}
                 data-IV={props.productIV}
             >
@@ -82,10 +115,19 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         <div class="description">{props.description}</div>
                         <div class="price">
                             <div class="font-extrabold">Preis pro Monat</div>
-                            <div class="text-xl">{props.price}</div>
+                            <div class="relative">
+                                <div class="text-xl">{props.rabattPrice ? props.rabattPrice : props.price}</div>
+                                <div class="text-xs absolute top-0 leading-snug"
+                                    @if.hasRabatt={props.discount}
+                                >
+                                    <Abte.Site:Icon.Diagonal class="absolute text-black top-0 left-14 w-12 -rotate-12" />
+                                    <div class="absolute left-28">Anstatt<br/>{props.price}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <input 
                     type="radio" 
                     value={props.itemID} 
@@ -93,7 +135,6 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                     name={props.itemID} 
                     class="sr-only"
                 />
-
 
                 <div class="mt-12 pt-4 border-t-[1px] border-black"
                     @if.hasCalc={props.downloadSpeed}

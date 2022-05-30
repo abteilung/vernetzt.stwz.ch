@@ -98,7 +98,35 @@
 
   // DistributionPackages/Stwz.Shop/Resources/Private/Fusion/Shop.js
   var urlcat = require_dist().default;
-  console.log(urlcat("https://api.foo.com", ":name", { id: 25, name: "knpwrs" }));
+  document.addEventListener("alpine:init", () => {
+    Alpine.data("shop", () => ({
+      showBtn: false,
+      api_url: "https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx",
+      lang: document.documentElement.lang || "de",
+      guid: document.getElementById(localStorage.getItem("Internet")).dataset.guid,
+      iv: document.getElementById(localStorage.getItem("Internet")).dataset.iv,
+      id: "",
+      zip: "",
+      city: "",
+      street: "",
+      id_key: "",
+      zip_key: "",
+      city_key: "",
+      street_key: "",
+      shop_url: "",
+      getShopUrl() {
+        this.guid = document.getElementById(localStorage.getItem("Internet")).dataset.guid, this.iv = document.getElementById(localStorage.getItem("Internet")).dataset.iv, this.id = document.getElementById("addressLookupForm").querySelector('[x-model="address.house_number"').value, this.zip = document.getElementById("addressLookupForm").querySelector('[x-model="address.zip_code"').value, this.city = document.getElementById("addressLookupForm").querySelector('[x-model="address.city"').value, this.street = document.getElementById("addressLookupForm").querySelector('[x-model="address.streetname"').value, this.id_key = this.iv + "2140070229", this.zip_key = this.iv + "2140070227", this.city_key = this.iv + "2140070235", this.street_key = this.iv + "2140070231", this.shop_url = urlcat(this.api_url, "/", {
+          GUID_ID: this.guid,
+          lang: this.lang,
+          IV: this.iv,
+          [this.id_key]: this.zip,
+          [this.zip_key]: this.city,
+          [this.city_key]: this.street,
+          [this.street_key]: this.id
+        });
+      }
+    }));
+  });
   document.addEventListener("alpine:init", () => {
     Alpine.data("cart", () => ({
       total: 0,

@@ -1,0 +1,23 @@
+prototype(Abte.Site:Content.ShopButton) < prototype(Abte.Site:Content.Button) {
+
+    renderer = afx`
+        <div class={props.outerClass}
+            x-data="shop"
+            x-show="showBtn"
+            x-init="getShopUrl"
+            "@item-changed.window"="getShopUrl"
+            "@addresslookup-error.window"="showBtn = false"
+            "@addresslookup-success.window"="showBtn = true">
+            <div class="inline-block group">
+                <a  href='#'
+                    target="_blank"
+                    x-bind:href="shop_url"
+                    class={'cursor-pointer' + ' ' + props.buttonClass + ' ' + props.class + ' ' + props.style}>
+                    {props.iconBefore}
+                    <span>{props.text}</span>
+                    {props.iconAfter}
+                </a>
+            </div>
+        </div>
+    `
+}
