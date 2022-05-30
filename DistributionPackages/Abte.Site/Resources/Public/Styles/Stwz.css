@@ -1524,11 +1524,23 @@ select {
 .left-1 {
   left: 0.25rem;
 }
+.left-24 {
+  left: 6rem;
+}
 .top-1 {
   top: 0.25rem;
 }
 .top-24 {
   top: 6rem;
+}
+.left-28 {
+  left: 7rem;
+}
+.left-14 {
+  left: 3.5rem;
+}
+.left-12 {
+  left: 3rem;
 }
 .isolate {
   isolation: isolate;
@@ -2200,6 +2212,10 @@ select {
   --tw-rotate: 90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.-rotate-12 {
+  --tw-rotate: -12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .scale-75 {
   --tw-scale-x: .75;
   --tw-scale-y: .75;
@@ -2496,11 +2512,11 @@ select {
 .border-t-\[1px\] {
   border-top-width: 1px;
 }
-.border-t {
-  border-top-width: 1px;
-}
 .border-b-\[1px\] {
   border-bottom-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
 }
 .border-dashed {
   border-style: dashed;
@@ -2978,6 +2994,9 @@ select {
 }
 .leading-normal {
   line-height: 1.5;
+}
+.leading-snug {
+  line-height: 1.375;
 }
 .tracking-normal {
   letter-spacing: 0em;

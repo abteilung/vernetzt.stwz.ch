@@ -21,7 +21,9 @@
         preset: 'text.free'
     price:
       options:
-        preset: 'text.plain'
+        preset: 'text.inspector'
+      ui:
+        label: 'Prouktpreis'
     discount:
       options:
         preset: 'text.plain'
