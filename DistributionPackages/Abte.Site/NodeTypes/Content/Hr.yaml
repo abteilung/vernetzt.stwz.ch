@@ -1,0 +1,8 @@
+'Abte.Site:Content.Hr':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Divider (Horizontal)
+    icon: arrows-alt-h
+    position: 200
+    group: structure
