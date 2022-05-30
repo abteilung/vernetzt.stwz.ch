@@ -86,8 +86,8 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     x-transition:leave-end="opacity-0"
                 >
                     <div class="mb-2">
-                        <h3 class="">Für diese Adresse exisitert noch kein Anschluss.</h3>
-                        <p>Überprüfe deine Angaben oder registriere dich, um zu erfahren, wann dein Anschluss freigeschaltet wird.</p>
+                        <h3 class="">Objekt nicht erschlossen</h3>
+                        <p>Leider ist Ihr zu Hause noch nicht mit Glasfaser erschlossen. Bitte teilen Sie uns Ihr Interesse an einem Anschluss ans Glasfasernetz mit diesem Formular mit. Wir werden Sie kontaktieren, wenn wir Ihr zu Hause erschliessen.</p>
                     </div>
                     <div class="relative mt-2">
 
@@ -107,9 +107,10 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0"
                 >
-                    <p>
-                        Die angefragte Adresse ist angeschlossen.
-                    </p>
+                    <div class="mb-2">
+                        <h3 class="">Objekt bereits erschlossen</h3>
+                        <p>Ihr zu Hause haben wir mit Glasfaser erschlossen, so dass Sie unser ultraschnelles Internet und weitere Produkte bestellen können. Konfigurieren Sie jetzt Ihr Abo.</p>
+                    </div>
                     <Abte.Site:Content.Button 
                         class="text-white duration-150 scale-100 bg-black hover:scale-105 align-right" 
                         text="Zum Angebot" 
