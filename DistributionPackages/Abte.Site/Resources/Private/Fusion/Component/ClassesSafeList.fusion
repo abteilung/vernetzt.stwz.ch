@@ -1,3 +1,8 @@
+// Display
+// hidden sm:hidden md:hidden lg:hidden xl:hidden
+// block sm:block md:block lg:block xl:block
+// inline-block sm:inline-block md:inline-block lg:inline-block xl:inline-block
+
 // Top
 // top-0 top-6 top-10 top-12 top-16 top-24 top-28 top-32 top-36 top-40 top-44 top-48
 // sm:top-0 sm:top-6 sm:top-10 sm:top-12 sm:top-16 sm:top-24 sm:top-28 sm:top-32 sm:top-36 sm:top-40 sm:top-44 sm:top-48

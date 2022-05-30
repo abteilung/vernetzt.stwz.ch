@@ -16,6 +16,9 @@
     'subTitle':
       options:
         preset: 'text.title'
+    'boxTitle':
+      options:
+        preset: 'text.title'
     'target':
       options:
         preset: 'text.link'

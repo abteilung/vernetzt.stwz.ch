@@ -1080,35 +1080,13 @@ select{
     --tw-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.1);
     --tw-shadow-colored: 0 0 35px 10px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    transition-duration: 150ms;
-
-}
-
-    .box-shadow:hover{
-    --tw-shadow: 0 0 55px 15px rgba(0, 0, 0, 0.15);
-    --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
 }
 
     .bg-nav-scrolled{
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     --tw-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.1);
     --tw-shadow-colored: 0 0 35px 10px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    transition-duration: 150ms;
-
-}
-
-    .bg-nav-scrolled:hover{
-    --tw-shadow: 0 0 55px 15px rgba(0, 0, 0, 0.15);
-    --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-
-}
-
-    .bg-nav-scrolled{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 
@@ -4640,6 +4618,21 @@ select{
 
     }
 
+    .sm\:block{
+        display: block;
+
+    }
+
+    .sm\:inline-block{
+        display: inline-block;
+
+    }
+
+    .sm\:hidden{
+        display: none;
+
+    }
+
     .sm\:w-1\/4{
         width: 25%;
 
@@ -5805,8 +5798,18 @@ select{
 
     }
 
+    .md\:inline-block{
+        display: inline-block;
+
+    }
+
     .md\:flex{
         display: flex;
+
+    }
+
+    .md\:hidden{
+        display: none;
 
     }
 
@@ -7006,6 +7009,16 @@ select{
 
     }
 
+    .lg\:block{
+        display: block;
+
+    }
+
+    .lg\:inline-block{
+        display: inline-block;
+
+    }
+
     .lg\:flex{
         display: flex;
 
@@ -8137,6 +8150,21 @@ select{
 
     }
 
+    .xl\:block{
+        display: block;
+
+    }
+
+    .xl\:inline-block{
+        display: inline-block;
+
+    }
+
+    .xl\:hidden{
+        display: none;
+
+    }
+
     .xl\:h-\[650px\]{
         height: 650px;
 
@@ -8649,23 +8677,9 @@ select{
 @media (prefers-color-scheme: dark){
 
     .dark\:bg-nav-scrolled{
-        --tw-bg-opacity: 1;
-        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
         --tw-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.1);
         --tw-shadow-colored: 0 0 35px 10px var(--tw-shadow-color);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-        transition-duration: 150ms;
-
-    }
-
-    .dark\:bg-nav-scrolled:hover{
-        --tw-shadow: 0 0 55px 15px rgba(0, 0, 0, 0.15);
-        --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
-        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-
-    }
-
-    .dark\:bg-nav-scrolled{
         --tw-bg-opacity: 1;
         background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 

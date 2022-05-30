@@ -18,6 +18,10 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
         property = 'subTitle'
     }
 
+    boxTitle = Neos.Neos:Editable {
+        property = 'boxTitle'
+    }
+
     arrow = Abte.Site:Icon.ArrowRight {
         class = 'absolute block w-6 text-black duration-150 scale-75 right-4 bottom-4 text-arrow group-hover:right-2'
         @if.hasLink = ${ q(node).property('target') }
@@ -29,7 +33,7 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
     }
 
     class = Abte.Site:Component.AdditionalClass {
-        class = 'relative block group w-full h-full mix font-light'
+        class = 'relative block group w-full h-full rounded-t-2xl overflow-hidden bg-white font-light'
     }
 
     renderer = afx`
@@ -39,7 +43,7 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
             attributes.class={ props.class }
         >
 
-            <div class="relative overflow-hidden isolate rounded-t-2xl">
+            <div class="relative isolate">
 
 
                 <div class="absolute z-10 text-black bottom-4 left-4"
@@ -50,7 +54,7 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
 
                         <Abte.Site:Mixin.Icons  class="absolute w-5 duration-150 scale-100 top-4 left-4 top-2 left-2 group-hover:scale-110"/>
                         <Abte.Site:Icon.Diagonal class="h-16" />
-                        <div class="relative ml-12 mr-2 -mt-6 font-extrabold bottom-2 whitespace-nowrap">{props.title}</div>
+                        <div class="relative ml-12 mr-2 -mt-6 font-extrabold bottom-2 whitespace-nowrap">{props.boxTitle}</div>
                     </div>
 
                 </div>
@@ -65,7 +69,7 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
                 />
 
             </div>
-            <div class={ q(node).property('target') ? 'relative px-4 pt-4 pb-8 bg-white' : 'relative px-4 pt-4 pb-4 bg-white' }>
+            <div class={ q(node).property('target') ? 'relative px-4 pt-4 pb-8' : 'relative px-4 pt-4 pb-4' }>
                 <h3 class="mb-2 font-extrabold">{props.title}</h3>
                 <p class="text-sm">{props.subTitle}</p>
                 {props.arrow}
