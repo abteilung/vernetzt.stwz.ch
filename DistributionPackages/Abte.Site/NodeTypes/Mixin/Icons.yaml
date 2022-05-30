@@ -14,7 +14,7 @@
                     editorOptions:
                         values:
                             none:
-                                label: ''
+                                label: 'Kein Icon'
                                 icon: ''
                             internet:
                                 label: 'Internet'
