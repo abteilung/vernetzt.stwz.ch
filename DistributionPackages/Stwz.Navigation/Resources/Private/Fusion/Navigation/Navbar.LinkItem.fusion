@@ -4,6 +4,7 @@ prototype(Stwz.Navigation:Navbar.LinkItemBasic) < prototype(Neos.Fusion:Componen
     linkItemClass 		= ${ this.class + ' ' + 'pb-1 border-b-2 block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black activeLink' : 'text-black hover:border-black duration-200 border-transparent') }
     lastLinkItemClass 	= ${ this.class + ' ' + 'pb-1 border-b-2 block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black' : 'text-black hover:border-black duration-200 border-transparent') }
     shortcutClass       = ${ '!border-none bg-white rounded-full py-0 px-4 shadow-md  hover:shadow-sm !text-primary !font-extrabold' }
+    linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
 
     renderer = afx`
         <button class="flex items-center justify-between focus:outline-none">
@@ -24,7 +25,7 @@ prototype(Stwz.Navigation:Navbar.LinkItemBasic) < prototype(Neos.Fusion:Componen
                 attributes.class={props.linkItemClass + ' ' + props.shortcutClass}
                 attributes.target={props.linkTarget}
             >
-                { q(item.node).property('title') }
+                { q(item.node).property('title') } t: item.node.properties.linktarget
             </Neos.Neos:NodeLink>
 
         </button>
@@ -37,7 +38,8 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
     lastLinkItemClass 	= ${ this.class + ' ' + 'py-1 border-b block whitespace-nowrap' + ' ' + (item.state == 'active' ? 'text-black border-black activeLink' : item.state == 'current' ? ' border-black' : 'text-black hover:border-black duration-200 border-transparent') }
     shortcutClass       = ${ '!border-none bg-white rounded-full py-0 px-4 shadow-md  hover:shadow-sm !text-primary !font-extrabold' }
     nodeType 			= ${ item.node.nodetype.name }
-    linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
+    // linkTarget 			= ${ this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false }
+    linkTarget          = ${ item.node.nodetype.name } 
     doNotLinkNode       = ${ q(documentNode).property('doNotLink') }
     hasSubItems         = ${ item.subItems ? 'subs' : 'no Subs' }
 
@@ -73,7 +75,7 @@ prototype(Stwz.Navigation:Navbar.LinkItem) < prototype(Neos.Fusion:Component) {
                 attributes.class={props.linkItemClass + ' ' + props.shortcutClass}
                 attributes.target={props.linkTarget}
             >
-                { q(item.node).property('title') }
+                { q(item.node).property('title') } t: {item.node.nodetype}
             </Neos.Neos:NodeLink>
 
             <!-- <Stwz.Navigation:Navbar.MegaMenuIndicator /> -->
