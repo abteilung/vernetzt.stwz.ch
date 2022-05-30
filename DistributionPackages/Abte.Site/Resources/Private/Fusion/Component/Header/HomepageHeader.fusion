@@ -1,5 +1,9 @@
 prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component) {
     
+    headerContent = Neos.Neos:ContentCollection {
+        nodePath = ${ q(node).children('header').property('_path') }
+    }
+    
     teaserText = Neos.Neos:Editable {
         property = 'teaser_short'
         @process.contentElementWrapping = Neos.Neos:ContentElementWrapping {
@@ -63,6 +67,7 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
             <div class="absolute right-0 z-0 -bottom-40">
                 <Stwz.MovingLines:Component.Lines />
             </div>
+            {props.headerContent}
         </header>
     `
 
