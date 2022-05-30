@@ -3079,12 +3079,16 @@ select{
     border-width: 2px;
 
 }
+.border-0{
+    border-width: 0px;
+
+}
 .border{
     border-width: 1px;
 
 }
-.border-0{
-    border-width: 0px;
+.border-t{
+    border-top-width: 1px;
 
 }
 .border-b-2{
@@ -3101,10 +3105,6 @@ select{
 }
 .border-b-\[1px\]{
     border-bottom-width: 1px;
-
-}
-.border-t{
-    border-top-width: 1px;
 
 }
 .border-dashed{
@@ -5141,6 +5141,13 @@ select{
 
     }
 
+    .lead{
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0;
+
+    }
+
     .container-wide{
         max-width: 768px;
 
@@ -6466,7 +6473,9 @@ select{
     }
 
     .lead{
-        font-size: 30px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0;
 
     }
 
