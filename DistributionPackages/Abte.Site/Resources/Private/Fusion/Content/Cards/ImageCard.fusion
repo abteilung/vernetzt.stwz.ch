@@ -40,6 +40,21 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
         >
 
             <div class="relative overflow-hidden isolate rounded-t-2xl">
+
+
+                <div class="absolute z-10 text-black bottom-4 left-4"
+                    @if.hasIcon={q(node).property('icon') != 'none'}
+                >
+                
+                    <div class="relative p-2 w-min bg-accent">
+
+                        <Abte.Site:Mixin.Icons  class="absolute w-5 duration-150 scale-100 top-4 left-4 top-2 left-2 group-hover:scale-110"/>
+                        <Abte.Site:Icon.Diagonal class="h-16" />
+                        <div class="relative ml-12 mr-2 -mt-6 font-extrabold bottom-2 whitespace-nowrap">{props.title}</div>
+                    </div>
+
+                </div>
+
                 
                 <Sitegeist.Kaleidoscope:Image 
                     @if.hasImage={props.imageSource}

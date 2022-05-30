@@ -2,6 +2,7 @@
   superTypes:
     'Neos.Neos:Content': true
     'Abte.Site:Mixin.Image': true
+    'Abte.Site:Mixin.Icons': true
     'Abte.Site:Mixin.AdditionalClass': true
   ui:
     label: ImageCard
