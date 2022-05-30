@@ -752,11 +752,6 @@ select{
     color: hsl(var(--af, var(--a)) / var(--tw-text-opacity)) !important;
 
 }
-        h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1{
-        -webkit-hyphens: auto;
-                hyphens: auto;
-
-}
 
     h2, .h2, h1.h2, h4.h2, h5.h2{
     margin-bottom: 0.5rem;
@@ -872,11 +867,6 @@ select{
     font-style: normal;
     --tw-text-opacity: 1 !important;
     color: hsl(var(--af, var(--a)) / var(--tw-text-opacity)) !important;
-
-}
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
-        -webkit-hyphens: auto;
-                hyphens: auto;
 
 }
     .testimonial .lead p{
@@ -1193,8 +1183,8 @@ select{
     flex-shrink: 0;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -1285,8 +1275,8 @@ select{
 }
 .btn-group > input[type="radio"].btn{
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    -moz-appearance: none;
+         appearance: none;
 
 }
 .btn-group > input[type="radio"].btn:before{
@@ -1376,8 +1366,8 @@ select{
 .label{
     display: flex;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     align-items: center;
     justify-content: space-between;
 
@@ -1404,7 +1394,7 @@ select{
 .link{
     cursor: pointer;
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
 
 }
 .menu{
@@ -1436,8 +1426,8 @@ select{
 .menu :where(li:not(.disabled):not(.menu-title)) > :where(*:not(ul)){
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     align-items: center;
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -1506,11 +1496,11 @@ select{
     flex-shrink: 0;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    -moz-appearance: none;
+         appearance: none;
     height: 3rem;
     padding-left: 1rem;
     padding-right: 2.5rem;
@@ -5134,6 +5124,13 @@ select{
 
     }
 
+    .lead{
+        font-size: 20px;
+        line-height: 26px;
+        letter-spacing: 0;
+
+    }
+
     .container-wide{
         max-width: 768px;
 
@@ -6469,7 +6466,9 @@ select{
     }
 
     .lead{
-        font-size: 30px;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0;
 
     }
 
