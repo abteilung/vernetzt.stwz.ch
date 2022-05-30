@@ -185,6 +185,15 @@ https://flickity.metafizzy.co
 
 .flickity-rtl .flickity-page-dot { direction: rtl; }
 
+.flickity-page-dot p, .flickity-page-dot h1, .flickity-page-dot .h1, .flickity-page-dot h2, .flickity-page-dot .h2, .flickity-page-dot h3, .flickity-page-dot .h3, .flickity-page-dot h4, .flickity-page-dot .h4, .flickity-page-dot h5, .flickity-page-dot .h5, .flickity-page-dot h6, .flickity-page-dot .h6 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.flickity-page-dot p {
+  color: rgb(255 255 255 / 0.6);
+}
+
 .flickity-page-dot {
   margin-right: 0.25rem;
   display: inline-block;
@@ -213,6 +222,17 @@ https://flickity.metafizzy.co
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
   transition-duration: 200ms;
+}
+
+.slide,
+.productCard {
+    display: flex;
+    align-items: stretch;
+    min-height: 100%;
+}
+
+.remoteSlider .flickity-slider {
+	height: 100%;
 }
 
 @media (min-width: 768px) {

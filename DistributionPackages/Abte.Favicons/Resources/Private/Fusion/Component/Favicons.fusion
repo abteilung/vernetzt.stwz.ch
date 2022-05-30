@@ -1,0 +1,66 @@
+prototype(Abte.Site:Component.Favicons) < prototype(Neos.Neos:ContentComponent) {
+
+    iconSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(site).property('favIcon') }
+    }
+    
+    defaultIconSizes    = ${ [32,57,76,96,128,192,228] }
+    androidIconSizes    = ${ [196] }
+    appleIconSizes      = ${ [120,152,180] }
+    msIconSizes         = ${ [144] }
+
+    tileColor           = ${ '#edfe0e' }
+
+    renderer = afx`
+ 
+        <!-- generics -->
+        <Neos.Fusion:Loop items={props.defaultIconSizes}>
+            <link rel="icon" href="gen" sizes={item + 'x' + item} />
+        </Neos.Fusion:Loop>
+
+        <!-- Android -->
+        <Neos.Fusion:Loop items={props.androidIconSizes}>
+            <link rel="icon" href="and" sizes={item + 'x' + item} />
+        </Neos.Fusion:Loop>
+
+        <!-- iOS -->
+        <Neos.Fusion:Loop items={props.appleIconSizes}>
+            <link rel="apple-touch-icon" href="apple" sizes={item + 'x' + item} />
+        </Neos.Fusion:Loop>
+
+        <!-- Windows 8 IE 10-->
+        <meta name="msapplication-TileColor" content={props.tileColor} />
+        <Neos.Fusion:Loop items={props.appleIconSizes}>
+            <meta name="msapplication-TileImage" content="win" />
+        </Neos.Fusion:Loop>
+
+        <!-- Windows 8.1 + IE11 and above -->
+        <meta name="msapplication-config" content="/path/to/browserconfig.xml" />
+
+    `
+}
+
+
+// <!-- generics -->
+// <link rel="icon" href="/path/to/favicon-32.png" sizes="32x32">
+// <link rel="icon" href="/path/to/favicon-57.png" sizes="57x57">
+// <link rel="icon" href="/path/to/favicon-76.png" sizes="76x76">
+// <link rel="icon" href="/path/to/favicon-96.png" sizes="96x96">
+// <link rel="icon" href="/path/to/favicon-128.png" sizes="128x128">
+// <link rel="icon" href="/path/to/favicon-192.png" sizes="192x192">
+// <link rel="icon" href="/path/to/favicon-228.png" sizes="228x228">
+
+// <!-- Android -->
+// <link rel="shortcut icon" sizes="196x196" href=“/path/to/favicon-196.png">
+
+// <!-- iOS -->
+// <link rel="apple-touch-icon" href="/path/to/favicon-120.png" sizes="120x120">
+// <link rel="apple-touch-icon" href="path/to/favicon-152.png" sizes="152x152">
+// <link rel="apple-touch-icon" href="path/to/favicon-180.png" sizes="180x180">
+
+// <!-- Windows 8 IE 10-->
+// <meta name="msapplication-TileColor" content="#f09">
+// <meta name="msapplication-TileImage" content="/path/to/favicon-144.png">
+
+// <!— Windows 8.1 + IE11 and above —>
+// <meta name="msapplication-config" content="/path/to/browserconfig.xml" />

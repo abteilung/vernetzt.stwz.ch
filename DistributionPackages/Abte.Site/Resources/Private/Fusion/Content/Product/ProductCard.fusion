@@ -78,7 +78,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
     downloadTime = ${ Math.round( 10000 * this.duration / this.downloadSpeed , 2) }
 
     renderer = afx`
-        <div class="productCard">
+        <div class="productCard" style="min-height: 100%;">
             <label 
                 id={props.itemID}
                 class={'product h-full overflow-hidden cursor-pointer cardItem text-black transition duration-250 bg-base-200 space-y-4 hover:opacity-100'}
