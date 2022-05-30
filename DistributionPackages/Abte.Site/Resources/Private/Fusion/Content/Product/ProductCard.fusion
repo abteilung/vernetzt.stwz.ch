@@ -23,7 +23,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
 
     price = ${ q(node).property('price') }
     discount = ${ q(node).parents('[instanceof Abte.Site:Content.Products]').property('discount') }
-    rabattPrice = ${ this.discount ? String.toInteger(q(node).property('price')) * String.toInteger(this.discount) / 100 + '.–' : q(node).property('price') }
+    rabattPrice = ${ this.discount ? String.toInteger(q(node).property('price')) * String.toInteger(this.discount) / 100 + '0' : q(node).property('price') }
 
     productGroup = ''
 
