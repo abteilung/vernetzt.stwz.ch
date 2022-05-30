@@ -148,9 +148,9 @@
       tween && tween._lazy && (tween.render(tween._lazy[0], tween._lazy[1], true)._lazy = 0);
     }
   };
-  var _lazySafeRender = function _lazySafeRender2(animation2, time, suppressEvents, force) {
+  var _lazySafeRender = function _lazySafeRender2(animation, time, suppressEvents, force) {
     _lazyTweens.length && _lazyRender();
-    animation2.render(time, suppressEvents, force);
+    animation.render(time, suppressEvents, force);
     _lazyTweens.length && _lazyRender();
   };
   var _numericIfPossible = function _numericIfPossible2(value) {
@@ -262,30 +262,30 @@
     child.parent && (!onlyIfParentHasAutoRemove || child.parent.autoRemoveChildren) && child.parent.remove(child);
     child._act = 0;
   };
-  var _uncache = function _uncache2(animation2, child) {
-    if (animation2 && (!child || child._end > animation2._dur || child._start < 0)) {
-      var a = animation2;
+  var _uncache = function _uncache2(animation, child) {
+    if (animation && (!child || child._end > animation._dur || child._start < 0)) {
+      var a = animation;
       while (a) {
         a._dirty = 1;
         a = a.parent;
       }
     }
-    return animation2;
+    return animation;
   };
-  var _recacheAncestors = function _recacheAncestors2(animation2) {
-    var parent = animation2.parent;
+  var _recacheAncestors = function _recacheAncestors2(animation) {
+    var parent = animation.parent;
     while (parent && parent.parent) {
       parent._dirty = 1;
       parent.totalDuration();
       parent = parent.parent;
     }
-    return animation2;
+    return animation;
   };
-  var _hasNoPausedAncestors = function _hasNoPausedAncestors2(animation2) {
-    return !animation2 || animation2._ts && _hasNoPausedAncestors2(animation2.parent);
+  var _hasNoPausedAncestors = function _hasNoPausedAncestors2(animation) {
+    return !animation || animation._ts && _hasNoPausedAncestors2(animation.parent);
   };
-  var _elapsedCycleDuration = function _elapsedCycleDuration2(animation2) {
-    return animation2._repeat ? _animationCycle(animation2._tTime, animation2 = animation2.duration() + animation2._rDelay) * animation2 : 0;
+  var _elapsedCycleDuration = function _elapsedCycleDuration2(animation) {
+    return animation._repeat ? _animationCycle(animation._tTime, animation = animation.duration() + animation._rDelay) * animation : 0;
   };
   var _animationCycle = function _animationCycle2(tTime, cycleDuration) {
     var whole = Math.floor(tTime /= cycleDuration);
@@ -294,17 +294,17 @@
   var _parentToChildTotalTime = function _parentToChildTotalTime2(parentTime, child) {
     return (parentTime - child._start) * child._ts + (child._ts >= 0 ? 0 : child._dirty ? child.totalDuration() : child._tDur);
   };
-  var _setEnd = function _setEnd2(animation2) {
-    return animation2._end = _roundPrecise(animation2._start + (animation2._tDur / Math.abs(animation2._ts || animation2._rts || _tinyNum) || 0));
+  var _setEnd = function _setEnd2(animation) {
+    return animation._end = _roundPrecise(animation._start + (animation._tDur / Math.abs(animation._ts || animation._rts || _tinyNum) || 0));
   };
-  var _alignPlayhead = function _alignPlayhead2(animation2, totalTime) {
-    var parent = animation2._dp;
-    if (parent && parent.smoothChildTiming && animation2._ts) {
-      animation2._start = _roundPrecise(parent._time - (animation2._ts > 0 ? totalTime / animation2._ts : ((animation2._dirty ? animation2.totalDuration() : animation2._tDur) - totalTime) / -animation2._ts));
-      _setEnd(animation2);
-      parent._dirty || _uncache(parent, animation2);
+  var _alignPlayhead = function _alignPlayhead2(animation, totalTime) {
+    var parent = animation._dp;
+    if (parent && parent.smoothChildTiming && animation._ts) {
+      animation._start = _roundPrecise(parent._time - (animation._ts > 0 ? totalTime / animation._ts : ((animation._dirty ? animation.totalDuration() : animation._tDur) - totalTime) / -animation._ts));
+      _setEnd(animation);
+      parent._dirty || _uncache(parent, animation);
     }
-    return animation2;
+    return animation;
   };
   var _postAddChecks = function _postAddChecks2(timeline2, child) {
     var t;
@@ -334,8 +334,8 @@
     skipChecks || _postAddChecks(timeline2, child);
     return timeline2;
   };
-  var _scrollTrigger = function _scrollTrigger2(animation2, trigger) {
-    return (_globals.ScrollTrigger || _missingPlugin("scrollTrigger", trigger)) && _globals.ScrollTrigger.create(trigger, animation2);
+  var _scrollTrigger = function _scrollTrigger2(animation, trigger) {
+    return (_globals.ScrollTrigger || _missingPlugin("scrollTrigger", trigger)) && _globals.ScrollTrigger.create(trigger, animation);
   };
   var _attemptInitTween = function _attemptInitTween2(tween, totalTime, force, suppressEvents) {
     _initTween(tween, totalTime);
@@ -397,10 +397,10 @@
       tween._zTime = totalTime;
     }
   };
-  var _findNextPauseTween = function _findNextPauseTween2(animation2, prevTime, time) {
+  var _findNextPauseTween = function _findNextPauseTween2(animation, prevTime, time) {
     var child;
     if (time > prevTime) {
-      child = animation2._first;
+      child = animation._first;
       while (child && child._start <= time) {
         if (child.data === "isPause" && child._start > prevTime) {
           return child;
@@ -408,7 +408,7 @@
         child = child._next;
       }
     } else {
-      child = animation2._last;
+      child = animation._last;
       while (child && child._start >= time) {
         if (child.data === "isPause" && child._start < prevTime) {
           return child;
@@ -417,25 +417,25 @@
       }
     }
   };
-  var _setDuration = function _setDuration2(animation2, duration, skipUncache, leavePlayhead) {
-    var repeat = animation2._repeat, dur = _roundPrecise(duration) || 0, totalProgress = animation2._tTime / animation2._tDur;
-    totalProgress && !leavePlayhead && (animation2._time *= dur / animation2._dur);
-    animation2._dur = dur;
-    animation2._tDur = !repeat ? dur : repeat < 0 ? 1e10 : _roundPrecise(dur * (repeat + 1) + animation2._rDelay * repeat);
-    totalProgress > 0 && !leavePlayhead ? _alignPlayhead(animation2, animation2._tTime = animation2._tDur * totalProgress) : animation2.parent && _setEnd(animation2);
-    skipUncache || _uncache(animation2.parent, animation2);
-    return animation2;
+  var _setDuration = function _setDuration2(animation, duration, skipUncache, leavePlayhead) {
+    var repeat = animation._repeat, dur = _roundPrecise(duration) || 0, totalProgress = animation._tTime / animation._tDur;
+    totalProgress && !leavePlayhead && (animation._time *= dur / animation._dur);
+    animation._dur = dur;
+    animation._tDur = !repeat ? dur : repeat < 0 ? 1e10 : _roundPrecise(dur * (repeat + 1) + animation._rDelay * repeat);
+    totalProgress > 0 && !leavePlayhead ? _alignPlayhead(animation, animation._tTime = animation._tDur * totalProgress) : animation.parent && _setEnd(animation);
+    skipUncache || _uncache(animation.parent, animation);
+    return animation;
   };
-  var _onUpdateTotalDuration = function _onUpdateTotalDuration2(animation2) {
-    return animation2 instanceof Timeline ? _uncache(animation2) : _setDuration(animation2, animation2._dur);
+  var _onUpdateTotalDuration = function _onUpdateTotalDuration2(animation) {
+    return animation instanceof Timeline ? _uncache(animation) : _setDuration(animation, animation._dur);
   };
   var _zeroPosition = {
     _start: 0,
     endTime: _emptyFunc,
     totalDuration: _emptyFunc
   };
-  var _parsePosition = function _parsePosition2(animation2, position, percentAnimation) {
-    var labels = animation2.labels, recent = animation2._recent || _zeroPosition, clippedDuration = animation2.duration() >= _bigNum ? recent.endTime(false) : animation2._dur, i, offset, isPercent;
+  var _parsePosition = function _parsePosition2(animation, position, percentAnimation) {
+    var labels = animation.labels, recent = animation._recent || _zeroPosition, clippedDuration = animation.duration() >= _bigNum ? recent.endTime(false) : animation._dur, i, offset, isPercent;
     if (_isString(position) && (isNaN(position) || position in labels)) {
       offset = position.charAt(0);
       isPercent = position.substr(-1) === "%";
@@ -452,7 +452,7 @@
       if (isPercent && percentAnimation) {
         offset = offset / 100 * (_isArray(percentAnimation) ? percentAnimation[0] : percentAnimation).totalDuration();
       }
-      return i > 1 ? _parsePosition2(animation2, position.substr(0, i - 1), percentAnimation) + offset : clippedDuration + offset;
+      return i > 1 ? _parsePosition2(animation, position.substr(0, i - 1), percentAnimation) + offset : clippedDuration + offset;
     }
     return position == null ? clippedDuration : +position;
   };
@@ -718,21 +718,21 @@
     }
     return label;
   };
-  var _callback = function _callback2(animation2, type, executeLazyFirst) {
-    var v = animation2.vars, callback = v[type], params, scope;
+  var _callback = function _callback2(animation, type, executeLazyFirst) {
+    var v = animation.vars, callback = v[type], params, scope;
     if (!callback) {
       return;
     }
     params = v[type + "Params"];
-    scope = v.callbackScope || animation2;
+    scope = v.callbackScope || animation;
     executeLazyFirst && _lazyTweens.length && _lazyRender();
     return params ? callback.apply(scope, params) : callback.call(scope);
   };
-  var _interrupt = function _interrupt2(animation2) {
-    _removeFromParent(animation2);
-    animation2.scrollTrigger && animation2.scrollTrigger.kill(false);
-    animation2.progress() < 1 && _callback(animation2, "onInterrupt");
-    return animation2;
+  var _interrupt = function _interrupt2(animation) {
+    _removeFromParent(animation);
+    animation.scrollTrigger && animation.scrollTrigger.kill(false);
+    animation.progress() < 1 && _callback(animation, "onInterrupt");
+    return animation;
   };
   var _quickTween;
   var _createPlugin = function _createPlugin2(config3) {
@@ -1159,7 +1159,7 @@
     this.set = harness ? harness.getSetter : _getSetter;
   };
   var Animation = /* @__PURE__ */ function() {
-    function Animation3(vars) {
+    function Animation2(vars) {
       this.vars = vars;
       this._delay = +vars.delay || 0;
       if (this._repeat = vars.repeat === Infinity ? -2 : vars.repeat || 0) {
@@ -1171,7 +1171,7 @@
       this.data = vars.data;
       _tickerActive || _ticker.wake();
     }
-    var _proto = Animation3.prototype;
+    var _proto = Animation2.prototype;
     _proto.delay = function delay(value) {
       if (value || value === 0) {
         this.parent && this.parent.smoothChildTiming && this.startTime(this._start + value - this._delay);
@@ -1276,10 +1276,10 @@
       return !parent ? this._tTime : wrapRepeats && (!this._ts || this._repeat && this._time && this.totalProgress() < 1) ? this._tTime % (this._dur + this._rDelay) : !this._ts ? this._tTime : _parentToChildTotalTime(parent.rawTime(wrapRepeats), this);
     };
     _proto.globalTime = function globalTime(rawTime) {
-      var animation2 = this, time = arguments.length ? rawTime : animation2.rawTime();
-      while (animation2) {
-        time = animation2._start + time / (animation2._ts || 1);
-        animation2 = animation2._dp;
+      var animation = this, time = arguments.length ? rawTime : animation.rawTime();
+      while (animation) {
+        time = animation._start + time / (animation._ts || 1);
+        animation = animation._dp;
       }
       return time;
     };
@@ -1377,7 +1377,7 @@
     _proto.kill = function kill() {
       _interrupt(this);
     };
-    return Animation3;
+    return Animation2;
   }();
   _setDefaults(Animation.prototype, {
     _time: 0,
@@ -3783,124 +3783,127 @@
   var TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
   // DistributionPackages/Stwz.MovingLines/Resources/Private/Fusion/MovingLines.js
-  var Animation2 = class {
-    cols = 12;
-    rows = 12;
-    lineWidth = 40;
-    spacingHorizontal = 80;
-    spacingVertical = 80;
-    strokeColor = getComputedStyle(document.documentElement).getPropertyValue("--lines");
-    strokeWidth = 2.35;
-    svgMargin = 40;
-    svgHeight = 0;
-    svgWidth = 0;
-    lines = [];
-    screen = {
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-    mouse = {
-      x: window.innerWidth / 2,
-      y: window.innerHeight / 2
-    };
-    mouseStored = Object.assign({}, this.mouse);
-    constructor(selector3) {
-      this.svg = document.querySelector(selector3);
-      this.svgWidth = this.cols * this.lineWidth + 2 * this.svgMargin + (this.cols - 1) * this.spacingHorizontal;
-      this.svgHeight = this.rows + 2 * this.svgMargin + (this.rows - 1) * this.spacingVertical;
-      this.svg.setAttribute("viewBox", `0 0 ${this.svgWidth} ${this.svgHeight}`);
-      this.svg.setAttribute("stroke-linecap", "square");
-      this.addEventListeners();
-      this.draw();
-      window.matchMedia("(prefers-reduced-motion: no-preference)").matches ? this.animate() : null;
-    }
-    addEventListeners() {
-      let self = this;
-      window.addEventListener("resize", function() {
-        self.screen.width = window.innerWidth;
-        self.screen.height = window.innerHeight;
-        self.setLineCenters();
-      });
-    }
-    getPercentage(partial, total) {
-      return partial * 100 / total;
-    }
-    draw() {
-      for (var i = 0; i < this.rows; i++) {
-        for (var j = 0; j < this.cols; j++) {
-          let c = new Line(this.svgMargin + j * this.lineWidth + j * this.spacingHorizontal, this.svgMargin + (j + 1) * this.lineWidth + j * this.spacingHorizontal, this.svgMargin + i * this.spacingVertical, this.svgMargin + i * this.spacingVertical, this.strokeColor, this.strokeWidth);
-          const cElement = c.getElement();
-          gsapWithCSS.set(cElement, { transformOrigin: "50% 50%" });
-          this.svg.appendChild(cElement);
-          this.lines.push(cElement);
-        }
+  var movingLinesContainer = document.getElementById("linesAnimation");
+  if (typeof movingLinesContainer != "undefined" && movingLinesContainer != null) {
+    class Animation2 {
+      cols = 12;
+      rows = 12;
+      lineWidth = 40;
+      spacingHorizontal = 80;
+      spacingVertical = 80;
+      strokeColor = getComputedStyle(document.documentElement).getPropertyValue("--lines");
+      strokeWidth = 2.35;
+      svgMargin = 40;
+      svgHeight = 0;
+      svgWidth = 0;
+      lines = [];
+      screen = {
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+      mouse = {
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2
+      };
+      mouseStored = Object.assign({}, this.mouse);
+      constructor(selector3) {
+        this.svg = document.querySelector(selector3);
+        this.svgWidth = this.cols * this.lineWidth + 2 * this.svgMargin + (this.cols - 1) * this.spacingHorizontal;
+        this.svgHeight = this.rows + 2 * this.svgMargin + (this.rows - 1) * this.spacingVertical;
+        this.svg.setAttribute("viewBox", `0 0 ${this.svgWidth} ${this.svgHeight}`);
+        this.svg.setAttribute("stroke-linecap", "square");
+        this.addEventListeners();
+        this.draw();
+        window.matchMedia("(prefers-reduced-motion: no-preference)").matches ? this.animate() : null;
       }
-      this.setLineCenters();
-    }
-    setMouseCoords(event) {
-      this.mouse.x = event.clientX;
-      this.mouse.y = event.clientY;
-    }
-    setLineCenters() {
-      this.lines.forEach((line) => {
-        const boundingRect = line.getBoundingClientRect();
-        line.center = {
-          x: boundingRect.x + boundingRect.width / 2,
-          y: boundingRect.y + boundingRect.height / 2
-        };
-      });
-    }
-    animate() {
-      window.addEventListener("mousemove", this.setMouseCoords.bind(this));
-      gsapWithCSS.ticker.add(this.setLineRotation.bind(this));
-    }
-    setLineRotation() {
-      if (this.mouseStored.x === this.mouse.x && this.mouseStored.y === this.mouse.y)
-        return;
-      this.lines.forEach((line) => {
-        let angle = Math.atan2(this.mouse.x - line.center.x, -(this.mouse.y - line.center.y)) * (180 / Math.PI) - 90;
-        let distance = Math.sqrt(Math.pow((line.center.x - this.mouse.x) / this.screen.width, 2) + Math.pow((line.center.y - this.mouse.y) / this.screen.height, 2));
-        gsapWithCSS.to(line, {
-          rotation: angle + "_short",
-          scaleX: 1.5 - distance / 2,
-          scaleY: this.strokeWidth - 1.15 * (distance / 2)
+      addEventListeners() {
+        let self = this;
+        window.addEventListener("resize", function() {
+          self.screen.width = window.innerWidth;
+          self.screen.height = window.innerHeight;
+          self.setLineCenters();
         });
-      });
-      this.mouseStored.x = this.mouse.x;
-      this.mouseStored.y = this.mouse.y;
+      }
+      getPercentage(partial, total) {
+        return partial * 100 / total;
+      }
+      draw() {
+        for (var i = 0; i < this.rows; i++) {
+          for (var j = 0; j < this.cols; j++) {
+            let c = new Line(this.svgMargin + j * this.lineWidth + j * this.spacingHorizontal, this.svgMargin + (j + 1) * this.lineWidth + j * this.spacingHorizontal, this.svgMargin + i * this.spacingVertical, this.svgMargin + i * this.spacingVertical, this.strokeColor, this.strokeWidth);
+            const cElement = c.getElement();
+            gsapWithCSS.set(cElement, { transformOrigin: "50% 50%" });
+            this.svg.appendChild(cElement);
+            this.lines.push(cElement);
+          }
+        }
+        this.setLineCenters();
+      }
+      setMouseCoords(event) {
+        this.mouse.x = event.clientX;
+        this.mouse.y = event.clientY;
+      }
+      setLineCenters() {
+        this.lines.forEach((line) => {
+          const boundingRect = line.getBoundingClientRect();
+          line.center = {
+            x: boundingRect.x + boundingRect.width / 2,
+            y: boundingRect.y + boundingRect.height / 2
+          };
+        });
+      }
+      animate() {
+        window.addEventListener("mousemove", this.setMouseCoords.bind(this));
+        gsapWithCSS.ticker.add(this.setLineRotation.bind(this));
+      }
+      setLineRotation() {
+        if (this.mouseStored.x === this.mouse.x && this.mouseStored.y === this.mouse.y)
+          return;
+        this.lines.forEach((line) => {
+          let angle = Math.atan2(this.mouse.x - line.center.x, -(this.mouse.y - line.center.y)) * (180 / Math.PI) - 90;
+          let distance = Math.sqrt(Math.pow((line.center.x - this.mouse.x) / this.screen.width, 2) + Math.pow((line.center.y - this.mouse.y) / this.screen.height, 2));
+          gsapWithCSS.to(line, {
+            rotation: angle + "_short",
+            scaleX: 1.5 - distance / 2,
+            scaleY: this.strokeWidth - 1.15 * (distance / 2)
+          });
+        });
+        this.mouseStored.x = this.mouse.x;
+        this.mouseStored.y = this.mouse.y;
+      }
     }
-  };
-  var Line = class {
-    x1;
-    x2;
-    y1;
-    y2;
-    strokeColor;
-    strokeWidth;
-    element;
-    constructor(x1, x2, y1, y2, strokeColor, strokeWidth) {
-      this.x1 = x1;
-      this.x2 = x2;
-      this.y1 = y1;
-      this.y2 = y2;
-      this.strokeColor = strokeColor;
-      this.strokeWidth = strokeWidth;
-      this.element = document.createElementNS("http://www.w3.org/2000/svg", "line");
-      this.setElement();
+    class Line {
+      x1;
+      x2;
+      y1;
+      y2;
+      strokeColor;
+      strokeWidth;
+      element;
+      constructor(x1, x2, y1, y2, strokeColor, strokeWidth) {
+        this.x1 = x1;
+        this.x2 = x2;
+        this.y1 = y1;
+        this.y2 = y2;
+        this.strokeColor = strokeColor;
+        this.strokeWidth = strokeWidth;
+        this.element = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        this.setElement();
+      }
+      getElement() {
+        return this.element;
+      }
+      setElement(x1, x2, y1, y2, strokeColor, strokeWidth) {
+        this.element.setAttribute("x1", x1 ? x1 : this.x1);
+        this.element.setAttribute("x2", x2 ? x2 : this.x2);
+        this.element.setAttribute("y1", y1 ? y1 : this.y1);
+        this.element.setAttribute("y2", y2 ? y2 : this.y2);
+        this.element.style.stroke = strokeColor ? strokeColor : this.strokeColor;
+        this.element.style.strokeWidth = strokeWidth ? strokeWidth : this.strokeWidth;
+      }
     }
-    getElement() {
-      return this.element;
-    }
-    setElement(x1, x2, y1, y2, strokeColor, strokeWidth) {
-      this.element.setAttribute("x1", x1 ? x1 : this.x1);
-      this.element.setAttribute("x2", x2 ? x2 : this.x2);
-      this.element.setAttribute("y1", y1 ? y1 : this.y1);
-      this.element.setAttribute("y2", y2 ? y2 : this.y2);
-      this.element.style.stroke = strokeColor ? strokeColor : this.strokeColor;
-      this.element.style.strokeWidth = strokeWidth ? strokeWidth : this.strokeWidth;
-    }
-  };
-  var animation = new Animation2("#linesAnimation");
+    const animation = new Animation2("#linesAnimation");
+  }
 })();
 /*! For license information please see MovingLines.js.LEGAL.txt */
 //# sourceMappingURL=MovingLines.js.map
