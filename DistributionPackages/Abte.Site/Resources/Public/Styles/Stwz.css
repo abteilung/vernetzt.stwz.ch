@@ -879,6 +879,9 @@ select{
                 hyphens: auto;
 
 }
+    .testimonial .lead p{
+        hayphens: auto;
+    }
 
     h4, .h4, h1.h4, h2.h4, h3.h4, h5.h4{
     font-family: Mulish, Helvetica, Arial, sans-serif;
