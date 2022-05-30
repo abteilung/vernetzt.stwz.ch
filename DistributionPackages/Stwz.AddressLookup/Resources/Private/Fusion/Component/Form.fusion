@@ -27,14 +27,15 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                 <div class="w-full my-3">
                     <h3 class="mb-4 font-extrabold text-black">Glasfaseranschluss prüfen</h3>
                     <div id="addressLookupForm" class="grid w-full grid-cols-4 gap-4 md:grid-cols-8 lg:grid-cols-9">
-                        <input class="col-span-1" type="number" x-model="address.zip_code" placeholder="PLZ" />
+                        <input class="col-span-1" type="text" x-model="address.zip_code" placeholder="PLZ" readonly="" />
                         <div class="relative col-span-3">
                             <input 
                                 id="city" 
                                 class="w-full" 
                                 :class="validation.city == 'Pflichtfeld' ? '!border-primary' : '!border-black'"
-                                type="text" x-model="address.city" placeholder="Ort*" 
+                                type="text" x-model="address.city" placeholder="Ort" 
                                 required="required" 
+                                readonly=""
                             />
                             <Stwz.AddressLookup:Component.FormValidation property="city" />
                         </div>
