@@ -3083,6 +3083,10 @@ select{
     border-width: 1px;
 
 }
+.border-0{
+    border-width: 0px;
+
+}
 .border-b-2{
     border-bottom-width: 2px;
 
