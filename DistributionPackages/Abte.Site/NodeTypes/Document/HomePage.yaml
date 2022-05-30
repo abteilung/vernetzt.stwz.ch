@@ -76,3 +76,19 @@
           editorOptions:
             nodeTypes:
               - 'Neos.Neos:Document'
+    'favIcon':
+      ui:
+        label: 'FavIcon (min. 228x228)'
+        inspector:
+          group: 'seometa'
+          position: 1
+      options:
+        preset: 'image.squareAsset'
+    'manifestFile':
+      ui:
+        label: 'Manifest File'
+        inspector:
+          group: 'seometa'
+          position: 2
+      options:
+        preset: 'image.alternativeText'
