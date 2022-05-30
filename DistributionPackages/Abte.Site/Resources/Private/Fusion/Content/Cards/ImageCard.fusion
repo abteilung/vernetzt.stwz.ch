@@ -18,6 +18,10 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
         property = 'subTitle'
     }
 
+    boxTitle = Neos.Neos:Editable {
+        property = 'boxTitle'
+    }
+
     arrow = Abte.Site:Icon.ArrowRight {
         class = 'absolute block w-6 text-black duration-150 scale-75 right-4 bottom-4 text-arrow group-hover:right-2'
         @if.hasLink = ${ q(node).property('target') }
@@ -50,7 +54,7 @@ prototype(Abte.Site:Content.ImageCard) < prototype(Neos.Neos:ContentComponent) {
 
                         <Abte.Site:Mixin.Icons  class="absolute w-5 duration-150 scale-100 top-4 left-4 top-2 left-2 group-hover:scale-110"/>
                         <Abte.Site:Icon.Diagonal class="h-16" />
-                        <div class="relative ml-12 mr-2 -mt-6 font-extrabold bottom-2 whitespace-nowrap">{props.title}</div>
+                        <div class="relative ml-12 mr-2 -mt-6 font-extrabold bottom-2 whitespace-nowrap">{props.boxTitle}</div>
                     </div>
 
                 </div>
