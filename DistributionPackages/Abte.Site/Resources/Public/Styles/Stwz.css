@@ -1080,35 +1080,13 @@ select{
     --tw-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.1);
     --tw-shadow-colored: 0 0 35px 10px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    transition-duration: 150ms;
-
-}
-
-    .box-shadow:hover{
-    --tw-shadow: 0 0 55px 15px rgba(0, 0, 0, 0.15);
-    --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
 }
 
     .bg-nav-scrolled{
-    --tw-bg-opacity: 1;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
     --tw-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.1);
     --tw-shadow-colored: 0 0 35px 10px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    transition-duration: 150ms;
-
-}
-
-    .bg-nav-scrolled:hover{
-    --tw-shadow: 0 0 55px 15px rgba(0, 0, 0, 0.15);
-    --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-
-}
-
-    .bg-nav-scrolled{
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 
@@ -3079,12 +3057,16 @@ select{
     border-width: 2px;
 
 }
+.border-0{
+    border-width: 0px;
+
+}
 .border{
     border-width: 1px;
 
 }
-.border-0{
-    border-width: 0px;
+.border-t{
+    border-top-width: 1px;
 
 }
 .border-b-2{
@@ -3101,10 +3083,6 @@ select{
 }
 .border-b-\[1px\]{
     border-bottom-width: 1px;
-
-}
-.border-t{
-    border-top-width: 1px;
 
 }
 .border-dashed{
@@ -8640,23 +8618,9 @@ select{
 @media (prefers-color-scheme: dark){
 
     .dark\:bg-nav-scrolled{
-        --tw-bg-opacity: 1;
-        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
         --tw-shadow: 0 0 35px 10px rgba(0, 0, 0, 0.1);
         --tw-shadow-colored: 0 0 35px 10px var(--tw-shadow-color);
         box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-        transition-duration: 150ms;
-
-    }
-
-    .dark\:bg-nav-scrolled:hover{
-        --tw-shadow: 0 0 55px 15px rgba(0, 0, 0, 0.15);
-        --tw-shadow-colored: 0 0 55px 15px var(--tw-shadow-color);
-        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-
-    }
-
-    .dark\:bg-nav-scrolled{
         --tw-bg-opacity: 1;
         background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 
