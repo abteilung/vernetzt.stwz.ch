@@ -325,7 +325,7 @@
         const cellClassName = "flickity-cell";
         function Cell(elem) {
           this.element = elem;
-          this.element.height = 100%;
+          this.element.height = '100%';
           this.element.classList.add(cellClassName);
           this.x = 0;
           this.unselect();

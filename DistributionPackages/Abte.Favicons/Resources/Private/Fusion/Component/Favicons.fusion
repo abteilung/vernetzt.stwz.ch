@@ -12,30 +12,30 @@ prototype(Abte.Site:Component.Favicons) < prototype(Neos.Neos:ContentComponent) 
     tileColor           = ${ '#edfe0e' }
 
     renderer = afx`
+
+        <!-- https://codepen.io/fuzzywalrus/pen/BWWMjJ -->
  
         <!-- generics -->
         <Neos.Fusion:Loop items={props.defaultIconSizes}>
-            <link rel="icon" href="gen" sizes={item + 'x' + item} />
+            <Abte.Site:Component.FaviconSource size={item} rel="icon" />
         </Neos.Fusion:Loop>
 
         <!-- Android -->
         <Neos.Fusion:Loop items={props.androidIconSizes}>
-            <link rel="icon" href="and" sizes={item + 'x' + item} />
+            <Abte.Site:Component.FaviconSource size={item} rel="icon" />
         </Neos.Fusion:Loop>
 
         <!-- iOS -->
         <Neos.Fusion:Loop items={props.appleIconSizes}>
-            <link rel="apple-touch-icon" href="apple" sizes={item + 'x' + item} />
+            <Abte.Site:Component.FaviconSource size={item} rel="apple-touch-icon" />
         </Neos.Fusion:Loop>
 
         <!-- Windows 8 IE 10-->
         <meta name="msapplication-TileColor" content={props.tileColor} />
-        <Neos.Fusion:Loop items={props.appleIconSizes}>
-            <meta name="msapplication-TileImage" content="win" />
-        </Neos.Fusion:Loop>
+        <meta name="msapplication-TileImage" content="win" />
 
         <!-- Windows 8.1 + IE11 and above -->
-        <meta name="msapplication-config" content="/path/to/browserconfig.xml" />
+        <!-- <meta name="msapplication-config" content="/path/to/browserconfig.xml" /> -->
 
     `
     @if.hasFavicon = ${ q(site).property('favIcon') }
@@ -43,14 +43,21 @@ prototype(Abte.Site:Component.Favicons) < prototype(Neos.Neos:ContentComponent) 
 
 prototype(Abte.Site:Component.FaviconSource) < prototype(Neos.Neos:ContentComponent) {
     
+    size    = ''
+    rel     = 'icon'
+
+    @context {
+        size = ${ this.size }
+    }
+
+    iconSource = Sitegeist.Kaleidoscope:AssetImageSource {
+        asset   = ${ q(site).property('favIcon') }
+        width   = ${ size }
+        height  = ${ size }
+    }
+
     renderer = afx`
-        <Sitegeist.Kaleidoscope:Image 
-            @if.hasImage={props.imageSource}
-            imageSource={props.imageSource} 
-            width={item}
-            height={item}
-            class="object-cover object-center w-full h-full"
-        />
+        <link rel={props.rel} href={props.iconSource} sizes={size + 'x' + size} />
     `
 }
 
