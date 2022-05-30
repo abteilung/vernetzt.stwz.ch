@@ -913,6 +913,10 @@ select{
 
 }
 
+    .lead {
+        hypens: auto;
+    }
+
     .container-wide{
     max-width: 1366px !important;
     width: 100%;
@@ -1612,6 +1616,102 @@ select{
     bottom: 0px;
 
 }
+.top-0{
+    top: 0px;
+
+}
+.top-6{
+    top: 1.5rem;
+
+}
+.top-10{
+    top: 2.5rem;
+
+}
+.top-12{
+    top: 3rem;
+
+}
+.top-16{
+    top: 4rem;
+
+}
+.top-24{
+    top: 6rem;
+
+}
+.top-28{
+    top: 7rem;
+
+}
+.top-32{
+    top: 8rem;
+
+}
+.top-36{
+    top: 9rem;
+
+}
+.top-40{
+    top: 10rem;
+
+}
+.top-44{
+    top: 11rem;
+
+}
+.top-48{
+    top: 12rem;
+
+}
+.-top-0{
+    top: -0px;
+
+}
+.-top-6{
+    top: -1.5rem;
+
+}
+.-top-10{
+    top: -2.5rem;
+
+}
+.-top-12{
+    top: -3rem;
+
+}
+.-top-16{
+    top: -4rem;
+
+}
+.-top-24{
+    top: -6rem;
+
+}
+.-top-28{
+    top: -7rem;
+
+}
+.-top-32{
+    top: -8rem;
+
+}
+.-top-36{
+    top: -9rem;
+
+}
+.-top-40{
+    top: -10rem;
+
+}
+.-top-44{
+    top: -11rem;
+
+}
+.-top-48{
+    top: -12rem;
+
+}
 .right-0{
     right: 0px;
 
@@ -1620,16 +1720,8 @@ select{
     left: 0px;
 
 }
-.top-0{
-    top: 0px;
-
-}
 .top-1\/2{
     top: 50%;
-
-}
-.top-16{
-    top: 4rem;
 
 }
 .left-1\/2{
@@ -1642,10 +1734,6 @@ select{
 }
 .-bottom-\[16px\]{
     bottom: -16px;
-
-}
-.top-48{
-    top: 12rem;
 
 }
 .top-20{
@@ -1688,10 +1776,6 @@ select{
     bottom: 0px;
 
 }
-.-top-32{
-    top: -8rem;
-
-}
 .-bottom-28{
     bottom: -7rem;
 
@@ -1706,10 +1790,6 @@ select{
 }
 .-top-8{
     top: -2rem;
-
-}
-.top-12{
-    top: 3rem;
 
 }
 .top-8{
@@ -1746,82 +1826,6 @@ select{
 }
 .top-1{
     top: 0.25rem;
-
-}
-.top-24{
-    top: 6rem;
-
-}
-.top-6{
-    top: 1.5rem;
-
-}
-.top-10{
-    top: 2.5rem;
-
-}
-.top-28{
-    top: 7rem;
-
-}
-.top-32{
-    top: 8rem;
-
-}
-.top-36{
-    top: 9rem;
-
-}
-.top-40{
-    top: 10rem;
-
-}
-.top-44{
-    top: 11rem;
-
-}
-.-top-0{
-    top: -0px;
-
-}
-.-top-6{
-    top: -1.5rem;
-
-}
-.-top-10{
-    top: -2.5rem;
-
-}
-.-top-12{
-    top: -3rem;
-
-}
-.-top-16{
-    top: -4rem;
-
-}
-.-top-24{
-    top: -6rem;
-
-}
-.-top-28{
-    top: -7rem;
-
-}
-.-top-36{
-    top: -9rem;
-
-}
-.-top-40{
-    top: -10rem;
-
-}
-.-top-44{
-    top: -11rem;
-
-}
-.-top-48{
-    top: -12rem;
 
 }
 .isolate{
@@ -3113,6 +3117,11 @@ select{
     border-color: hsl(var(--p) / var(--tw-border-opacity));
 
 }
+.border-black{
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+
+}
 .border-gray-100{
     --tw-border-opacity: 1;
     border-color: rgb(243 244 246 / var(--tw-border-opacity));
@@ -3126,11 +3135,6 @@ select{
 .\!border-black{
     --tw-border-opacity: 1 !important;
     border-color: rgb(0 0 0 / var(--tw-border-opacity)) !important;
-
-}
-.border-black{
-    --tw-border-opacity: 1;
-    border-color: rgb(0 0 0 / var(--tw-border-opacity));
 
 }
 .border-transparent{
@@ -5235,41 +5239,6 @@ select{
 
     }
 
-    .md\:right-2{
-        right: 0.5rem;
-
-    }
-
-    .md\:top-2{
-        top: 0.5rem;
-
-    }
-
-    .md\:top-28{
-        top: 7rem;
-
-    }
-
-    .md\:left-2{
-        left: 0.5rem;
-
-    }
-
-    .md\:-top-4{
-        top: -1rem;
-
-    }
-
-    .md\:top-4{
-        top: 1rem;
-
-    }
-
-    .md\:right-4{
-        right: 1rem;
-
-    }
-
     .md\:top-0{
         top: 0px;
 
@@ -5297,6 +5266,11 @@ select{
 
     .md\:top-24{
         top: 6rem;
+
+    }
+
+    .md\:top-28{
+        top: 7rem;
 
     }
 
@@ -5382,6 +5356,36 @@ select{
 
     .md\:-top-48{
         top: -12rem;
+
+    }
+
+    .md\:right-2{
+        right: 0.5rem;
+
+    }
+
+    .md\:top-2{
+        top: 0.5rem;
+
+    }
+
+    .md\:left-2{
+        left: 0.5rem;
+
+    }
+
+    .md\:-top-4{
+        top: -1rem;
+
+    }
+
+    .md\:top-4{
+        top: 1rem;
+
+    }
+
+    .md\:right-4{
+        right: 1rem;
 
     }
 
@@ -7621,16 +7625,6 @@ select{
 
     }
 
-    .xl\:top-8{
-        top: 2rem;
-
-    }
-
-    .xl\:right-12{
-        right: 3rem;
-
-    }
-
     .xl\:top-0{
         top: 0px;
 
@@ -7748,6 +7742,16 @@ select{
 
     .xl\:-top-48{
         top: -12rem;
+
+    }
+
+    .xl\:top-8{
+        top: 2rem;
+
+    }
+
+    .xl\:right-12{
+        right: 3rem;
 
     }
 
