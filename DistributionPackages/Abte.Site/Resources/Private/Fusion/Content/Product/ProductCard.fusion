@@ -115,7 +115,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                         >
                             <div>
                                 <p class="mb-0 text-sm text-accent">Rabatt<br/>
-                                <b>als Neukunde</b></p>
+                                <b>als Neukunde<sup>*</sup></b></p>
                             </div>
                             <div>
                                 <div class="text-xl font-light">{props.discount}%</div>
