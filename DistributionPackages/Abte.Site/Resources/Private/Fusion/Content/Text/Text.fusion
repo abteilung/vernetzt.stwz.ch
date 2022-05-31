@@ -11,6 +11,6 @@ prototype(Abte.Site:Content.Text) < prototype(Neos.Neos:ContentComponent) {
     }
 
     renderer = afx`
-        <div class={props.class + ' ' + props.isLead }>{props.text}</div>
+        <div class={props.class + ' ' + props.isLead}>{props.text}</div>
     `
 }
