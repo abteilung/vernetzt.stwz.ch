@@ -67,8 +67,8 @@ prototype(Abte.Site:Component.RemoteSlider) < prototype(Neos.Fusion:Component) {
         pageDots = true
         draggable = true
         contain = true
-        selectedAttraction = "0.2"
-        friction = "0.5"
+        // selectedAttraction = "0.2"
+        // friction = "0.5"
         adaptiveHeight = false
         setGallerySize = true
         // prevNextButtons = ${ q(node).property('images') ? true : false }
