@@ -90,13 +90,15 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
             <label 
                 id={props.itemID}
                 class={'product h-full overflow-hidden cursor-pointer cardItem text-black transition duration-250 bg-base-200 space-y-4 hover:opacity-100'}
-                :class={"{ 'opacity-60': !(value" + props.productGroup + " === '" + props.itemID + "'), 'opacity-100': (active === '" + props.itemID + "') }"}
+                :class={"{ 'opacity-60': (value" + props.productGroup + " != '" + props.itemID + "'), 'opacity-100': (value" + props.productGroup + " == '" + props.itemID + "') }"}
+                x-ref={"label-"+props.itemID}
                 x-radio-group-option=""
-                x-init={"value" + props.productGroup + "= localStorage.getItem('" + props.productGroup + "');"}
-                x-on:change={"localStorage.setItem('" + props.productGroup + "', value" + props.productGroup + "); $dispatch('item-changed');" }
+                x-init={"value" + props.productGroup + " = localStorage.getItem('" + props.productGroup + "') || 0; $watch('value" + props.productGroup + "', value => console.log('isi-'+value));"}
+                x-on:change={"change('" + props.productGroup + "'); $dispatch('item-changed');"}
+                x-on:click={"value" + props.productGroup + " === '" + props.itemID + "' && localStorage.getItem('" + props.productGroup + "') ? value" + props.productGroup + " = click('" + props.productGroup + "')    : console.log('Not me');"}
+                data-group={props.productGroup}
                 data-title={props.title}
                 data-discount={props.rabattPrice}
-                data-group={props.productGroup}
                 data-price={Array.first(String.pregMatch(props.rabattPrice,'(\d+.(\d{1,2})|\d{1,2})')) }
                 data-guid={props.productGUID}
                 data-IV={props.productIV}
@@ -119,7 +121,6 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                                 <div class="text-xl font-light">{props.discount}%</div>
                             </div>
                         </div>
-
                         <div class="mb-0 text-black h2">{props.title}</div>
                         <div class="h3 font-extrabold !mt-0">{props.subTitle}</div>
                         <div class="description">{props.description}</div>
@@ -141,6 +142,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 <input 
                     type="radio" 
                     value={props.itemID} 
+                    x-ref={"radio-"+props.itemID}
                     x-model={"value"+ props.productGroup}
                     name={"value"+ props.productGroup} 
                     class="sr-only"

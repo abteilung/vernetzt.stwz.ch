@@ -39,7 +39,7 @@ prototype(Abte.Site:Content.Products) < prototype(Neos.Neos:ContentComponent) {
 
         <fieldset 
             class="w-full h-full productSlider"
-            x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })"
+            x-data="radioGroup"
             x-init="init()"
             "@item-reset.window"={"value"+ productGroup +"= localStorage.getItem('"+ productGroup +"') || 0;"}
             data-flickity={props.sliderConfig}

@@ -106,19 +106,38 @@ document.addEventListener('alpine:init', () => {
   }))
 });
 
+document.addEventListener('alpine:init', () => {
+  Alpine.data('radioGroup', () => ({
 
-window.Components={},
-window.Components.radioGroup = function({
-  initialCheckedIndex: e = 0
-} = {}) {
-  return {
       value: void 0,
       active: void 0,
-      valueTV: void 0,
-      valueMobile: void 0,
-      valueInternet: void 0,
-      valueTelefonie: void 0,
-      init(){}
-  }
-}
+      valueTV: localStorage.getItem('TV') ? localStorage.getItem('TV') :0,
+      valueMobile: localStorage.getItem('Mobile') ? localStorage.getItem('Mobile') : 0,
+      valueInternet: localStorage.getItem('Internet') ? localStorage.getItem('Internet') : 0,
+      valueTelefonie: localStorage.getItem('Telefonie') ? localStorage.getItem('Telefonie') : 0,
+      preventChange: false,
+      init(){
+        
+      },
+      change(group){
+        if(this.preventChange == true){this.preventChange = false; this['value' + group] = 0; return }
+        // console.log('change-bevor: '+this.active +'-'+ this['value' + group]  +'-'+ localStorage.getItem(group));
+        if(!this['value' + group] || this['value' + group] != localStorage.getItem(group)){
+          localStorage.setItem(group, this['value' + group]); 
+        }
+        // console.log('change-after: '+this.active +'-'+ this['value' + group]  +'-'+localStorage.getItem(group));
+        
+      },
+      click(group){
+        // console.log('click-bevor - '+group+' - '+this['value' + group]+' - '+localStorage.getItem(group));
+        if(this['value' + group] && group != 'Internet' && this['value' + group] == localStorage.getItem(group)){
+          this['value' + group] = 0;
+          localStorage.removeItem(group);
+          this.preventChange = true;
+          return 0;
+        }
+        // console.log('click-after - '+group+' - '+this['value' + group]+' - '+localStorage.getItem(group));
+      }
+  }))
+});
   

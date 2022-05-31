@@ -17,7 +17,7 @@ prototype(Abte.Site:Component.SelectedProduct) < prototype(Neos.Fusion:Component
             class={props.class + ' ' + 'w-8 h-8 rounded-full flex justify-center items-center bg-white' }
         >
             <div
-            :class={"{ 'hidden': !(value"+ props.productGroup+" === '" + props.activeItem + "'), 'block': (active === '" + props.activeItem + "') }"}
+            :class={"{ 'hidden': (value"+ props.productGroup+" != '" + props.activeItem + "'), 'block': (value"+ props.productGroup+" == '" + props.activeItem + "') }"}
             >{props.checkIcon}</div>
         </div>
 
