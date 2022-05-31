@@ -7,8 +7,8 @@ document.addEventListener('alpine:init', () => {
 
     api_url: 'https://portal.stwz-vernetzt.ch/Shop/Wizard/PlainOrderWizard.aspx',
     lang: document.documentElement.lang || 'de',
-    guid: document.getElementById(localStorage.getItem('Internet')).dataset.guid,
-    iv: document.getElementById(localStorage.getItem('Internet')).dataset.iv,
+    guid: localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.guid : '',
+    iv: localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.iv : '',
     id: '',
     zip: '',
     city: '',
@@ -20,8 +20,8 @@ document.addEventListener('alpine:init', () => {
     shop_url: '',
 
     getShopUrl(){
-      this.guid = document.getElementById(localStorage.getItem('Internet')).dataset.guid,
-      this.iv = document.getElementById(localStorage.getItem('Internet')).dataset.iv,
+      this.guid = localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.guid: '',
+      this.iv = localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.iv : '',
 
       this.id = document.getElementById('addressLookupForm').querySelector('[x-model="address.house_number"').value,
       this.zip = document.getElementById('addressLookupForm').querySelector('[x-model="address.zip_code"').value,
@@ -73,6 +73,7 @@ document.addEventListener('alpine:init', () => {
         
         this.total = Number.isInteger(this.internet + this.television + this.telephone + this.mobile) ? parseInt(this.internet + this.television + this.telephone + this.mobile) : parseFloat(this.internet + this.television + this.telephone + this.mobile);
       },
+
 
       reset(group) {
         console.log(group);

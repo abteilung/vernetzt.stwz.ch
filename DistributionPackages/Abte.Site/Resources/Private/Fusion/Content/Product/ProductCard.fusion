@@ -132,7 +132,7 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                     type="radio" 
                     value={props.itemID} 
                     x-model={"value"+ props.productGroup}
-                    name={props.itemID} 
+                    name={"value"+ props.productGroup} 
                     class="sr-only"
                 />
 
