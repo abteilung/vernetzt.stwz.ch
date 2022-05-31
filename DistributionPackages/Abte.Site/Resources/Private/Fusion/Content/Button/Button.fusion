@@ -9,7 +9,7 @@ prototype(Abte.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
     iconPosition = ${ q(node).property('iconPosition') ? true : false }
     
     style = ${ q(node).property('hollow') ? this.onDark + ' ' + '' : this.onDark + ' bg-none' }
-    onDark = ${ q(node).property('onDark') ? 'bg-white' : null }
+    onDark = ${ q(node).property('onDark') ? 'bg-accent' : null }
 
     conditionalShow = ${ false }
 
