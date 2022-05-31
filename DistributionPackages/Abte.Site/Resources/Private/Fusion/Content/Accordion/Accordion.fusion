@@ -107,7 +107,8 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                     </div> -->
 
                     <Abte.Site:Component.BestellUebersicht />
-                    <Abte.Site:Content.ShopButton outerClass="text-center" class="text-base text-white bg-black" text="Jetzt bestellen" />
+                    <Abte.Site:Content.Button outerClass="text-center" class="text-base text-black" text="Bestellungen sind erst ab 13. Juni 2022 möglich." />
+                    <Abte.Site:Content.ShopButton @if.isHidden={false} outerClass="text-center" class="text-base text-white bg-black" text="Jetzt bestellen" />
                 </div>
             </div>
         </div>
