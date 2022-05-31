@@ -57,6 +57,11 @@ document.addEventListener('alpine:init', () => {
       telephone: localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.price) : 0,
       television: localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.price) : 0,
 
+      internetTitle: localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title : 0,
+      televisionTitle: localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title : 0,
+      telephoneTitle: localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title : 0,
+
+
       totalDiscount: 0,
       mobileDiscount: 0,
       internetDiscount: 0,
@@ -69,6 +74,10 @@ document.addEventListener('alpine:init', () => {
         this.telephone = localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.price) : 0;
         this.television = localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.price) : 0;
         
+        this.internetTitle = localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title : 0;
+        this.televisionTitle = localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title : 0;
+        this.telephoneTitle = localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title : 0;
+
         console.log(this.internet, this.television, this.telephone, this.mobile);
         
         this.total = Number.isInteger(this.internet + this.television + this.telephone + this.mobile) ? parseInt(this.internet + this.television + this.telephone + this.mobile) : parseFloat(this.internet + this.television + this.telephone + this.mobile);

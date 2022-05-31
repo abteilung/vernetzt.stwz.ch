@@ -192,19 +192,11 @@ https://flickity.metafizzy.co
 }
 
 
-.slide,
-.productCard {
-    display: flex;
-    align-items: stretch;
-    min-height: 100%;
-}
-.remoteSlider .flickity-slider {
-	height: 100%;
+
+.flickity-slider {
+  @apply flex;
 }
 
-/* inherit height from parent */
-.remoteSlider { height: 100%; }
-
-.remoteSlider .flickity-cell,
-.flickity-cell .product { height: 100% }
-
+.product {
+  @apply flex-1;
+}

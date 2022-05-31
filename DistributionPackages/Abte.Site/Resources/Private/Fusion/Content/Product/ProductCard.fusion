@@ -1,8 +1,11 @@
 prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent) {
 
+    class = ''
+
     node = ${ node }    
     @context {
         node = ${ this.node }
+        class = ${ this.class }
     }
 
     title = Neos.Neos:Editable {
@@ -77,8 +80,13 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
 
     downloadTime = ${ Math.round( 10000 * this.duration / this.downloadSpeed , 2) }
 
+    objectClass = Abte.Site:Component.AdditionalClass {
+        additionalClass = "productCard"
+        class = ${ class }
+    }
+
     renderer = afx`
-        <div class="productCard" style="min-height: 100%;">
+        <div class={props.objectClass}>
             <label 
                 id={props.itemID}
                 class={'product h-full overflow-hidden cursor-pointer cardItem text-black transition duration-250 bg-base-200 space-y-4 hover:opacity-100'}
@@ -86,6 +94,8 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 x-radio-group-option=""
                 x-init={"value" + props.productGroup + "= localStorage.getItem('" + props.productGroup + "');"}
                 x-on:change={"localStorage.setItem('" + props.productGroup + "', value" + props.productGroup + "); $dispatch('item-changed');" }
+                data-title={props.title}
+                data-discount={props.rabattPrice}
                 data-group={props.productGroup}
                 data-price={Array.first(String.pregMatch(props.rabattPrice,'(\d+.(\d{1,2})|\d{1,2})')) }
                 data-guid={props.productGUID}

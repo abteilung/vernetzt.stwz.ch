@@ -50,7 +50,6 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
                     
                     <b>{props.name}</b>
                     <p>{props.jobTitle}</p>
-                
 
                     <div class="relative flex items-center justify-center w-16 aspect-square">
                         <Carbon.Link:Link 
