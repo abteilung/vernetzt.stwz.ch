@@ -38,6 +38,6 @@ prototype(Abte.Site:Content.DiscountStoerer) < prototype(Neos.Neos:ContentCompon
             </Neos.Fusion:Augmenter>
             {props.arrow}
         </Carbon.Link:Link>
-                    
+
     `
 }

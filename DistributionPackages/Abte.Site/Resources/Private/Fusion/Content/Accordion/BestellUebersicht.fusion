@@ -9,11 +9,15 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
 
         <template x-if="internet">
             <div class="relative block py-4 border-t border-black h-26">
+                <Abte.Site:Content.DiscountStoererSmall />
                 <strong>Internet</strong>
-                <div class="text-2xl text-white" x-text="Number.isInteger(internet) ? internet + '.–' : internet.toFixed(2)"></div>
-                <template x-if="internetDiscount">
-                    <Abte.Site:Icon.Diagonal class="absolute text-white top-16 left-16" />
-                </template>
+                <div class="w-2/3 block relative flex justify-between items-center">
+                    <div class="text-2xl text-white" x-text="Number.isInteger(internet) ? internet + '.–' : internet.toFixed(2)"></div>
+                    <div class="w-12 mt-8 overflow-visible">
+                        <Abte.Site:Icon.Diagonal class="relative -left-6 text-white w-24" />
+                    </div>
+                    <div class="text-xs leading-snug mt-12">Anstatt<br/>353.–</div>
+                </div>
             </div>
         </template>
 
@@ -50,5 +54,27 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
             </div>
         </template>
 
+    `
+}
+
+
+prototype(Abte.Site:Content.DiscountStoererSmall) < prototype(Neos.Neos:ContentComponent) {
+    
+    class = Abte.Site:Component.AdditionalClass {
+        class = 'absolute right-0 bottom-6 flex flex-col items-center justify-center w-10 h-10 p-5 text-center text-white scale-[65%] bg-black rounded-full md:scale-100 group'
+    }
+
+    arrow = Abte.Site:Icon.ArrowRight {
+        class = 'relative left-0 hidden block w-6 duration-150 scale-75 md:flex top-1 text-accent text-arrow group-hover:left-2'
+    }
+
+    renderer = afx`
+
+        <div class={props.class}>
+            <div class="mb-0 text-lg font-light">
+                %
+            </div>
+            {props.arrow}
+        </div>
     `
 }

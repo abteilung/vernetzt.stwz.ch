@@ -235,6 +235,13 @@ https://flickity.metafizzy.co
 	height: 100%;
 }
 
+/* inherit height from parent */
+
+.remoteSlider { height: 100%; }
+
+.remoteSlider .flickity-cell,
+.flickity-cell .product { height: 100% }
+
 @media (min-width: 768px) {
 
   .flickity-page-dot {
@@ -250,4 +257,6 @@ https://flickity.metafizzy.co
     display: none;
   }
 }
+
+
 /*# sourceMappingURL=Flickity.css.map */

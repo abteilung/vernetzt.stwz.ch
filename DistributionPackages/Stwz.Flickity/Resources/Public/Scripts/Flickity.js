@@ -281,7 +281,7 @@
             return $1 + "-" + $2;
           }).toLowerCase();
         };
-        let console2 = global.console;
+        let console = global.console;
         utils.htmlInit = function(WidgetClass, namespace) {
           utils.docReady(function() {
             let dashedNamespace = utils.toDashed(namespace);
@@ -294,8 +294,8 @@
               try {
                 options = attr && JSON.parse(attr);
               } catch (error) {
-                if (console2) {
-                  console2.error(`Error parsing ${dataAttr} on ${elem.className}: ${error}`);
+                if (console) {
+                  console.error(`Error parsing ${dataAttr} on ${elem.className}: ${error}`);
                 }
                 return;
               }
@@ -325,7 +325,6 @@
         const cellClassName = "flickity-cell";
         function Cell(elem) {
           this.element = elem;
-          this.element.height = '100%';
           this.element.classList.add(cellClassName);
           this.x = 0;
           this.unselect();
@@ -551,15 +550,15 @@
           window2.Flickity = factory(window2, window2.EvEmitter, window2.getSize, window2.fizzyUIUtils, _Flickity.Cell, _Flickity.Slide, _Flickity.animatePrototype);
         }
       })(typeof window != "undefined" ? window : exports, function factory(window2, EvEmitter, getSize, utils, Cell, Slide, animatePrototype) {
-        const { getComputedStyle: getComputedStyle2, console: console2 } = window2;
+        const { getComputedStyle: getComputedStyle2, console } = window2;
         let { jQuery } = window2;
         let GUID = 0;
         let instances = {};
         function Flickity2(element, options) {
           let queryElement = utils.getQueryElement(element);
           if (!queryElement) {
-            if (console2)
-              console2.error(`Bad element for Flickity: ${queryElement || element}`);
+            if (console)
+              console.error(`Bad element for Flickity: ${queryElement || element}`);
             return;
           }
           this.element = queryElement;
@@ -2025,7 +2024,7 @@
         }
       })(typeof window !== "undefined" ? window : exports, function factory(window2, EvEmitter) {
         let $ = window2.jQuery;
-        let console2 = window2.console;
+        let console = window2.console;
         function makeArray(obj) {
           if (Array.isArray(obj))
             return obj;
@@ -2043,7 +2042,7 @@
             queryElem = document.querySelectorAll(elem);
           }
           if (!queryElem) {
-            console2.error(`Bad element for imagesLoaded ${queryElem || elem}`);
+            console.error(`Bad element for imagesLoaded ${queryElem || elem}`);
             return;
           }
           this.elements = makeArray(queryElem);
@@ -2136,8 +2135,8 @@
           if (this.progressedCount === this.images.length) {
             this.complete();
           }
-          if (this.options.debug && console2) {
-            console2.log(`progress: ${message}`, image, elem);
+          if (this.options.debug && console) {
+            console.log(`progress: ${message}`, image, elem);
           }
         };
         ImagesLoaded.prototype.complete = function() {
@@ -2375,42 +2374,6 @@
 
   // DistributionPackages/Stwz.Flickity/Resources/Private/Fusion/Flickity.js
   var import_flickity_as_nav_for = __toESM(require_as_nav_for());
-  var hasHeaderSlider = document.getElementsByClassName("headerSlider");
-  if (hasHeaderSlider.length > 0) {
-    const flickity = (() => {
-      console.log("flickity for Header is here");
-      var utils = window.fizzyUIUtils;
-      var headerSlider = document.querySelector(".headerSlider");
-      var flkty = new import_flickity_as_nav_for.default(headerSlider, {
-        fade: false,
-        pageDots: false,
-        draggable: document.querySelector(".neos-backend") ? false : true,
-        prevNextButtons: document.querySelector(".neos-backend") ? true : false,
-        cellSelector: ".carousel-cell",
-        autoPlay: 1e4
-      });
-      var cellsButtonGroup = document.querySelector(".button-group--cells");
-      var cellsButtons = cellsButtonGroup.querySelectorAll(".cellButton");
-      flkty.on("select", function() {
-        var previousSelectedButton = cellsButtonGroup.querySelector(".is-selected");
-        var selectedButton = cellsButtonGroup.children[flkty.selectedIndex];
-        previousSelectedButton.classList.remove("is-selected");
-        selectedButton.classList.add("is-selected");
-      });
-      for (const [i, cellsButton] of cellsButtons.entries()) {
-        cellsButton.addEventListener("click", function(event) {
-          flkty.select(i);
-        });
-      }
-      var carouselStatus = document.querySelector(".carousel-status");
-      function updateStatus() {
-        var slideNumber = flkty.selectedIndex + 1;
-        carouselStatus.textContent = slideNumber + "/" + flkty.slides.length;
-      }
-      updateStatus();
-      flkty.on("select", updateStatus);
-    })();
-  }
 })();
 /*! For license information please see Flickity.js.LEGAL.txt */
 //# sourceMappingURL=Flickity.js.map
