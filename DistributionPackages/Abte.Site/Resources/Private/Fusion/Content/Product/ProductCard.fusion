@@ -98,8 +98,8 @@ prototype(Abte.Site:Content.ProductCard) < prototype(Neos.Neos:ContentComponent)
                 x-on:click={"value" + props.productGroup + " === '" + props.itemID + "' && localStorage.getItem('" + props.productGroup + "') ? value" + props.productGroup + " = click('" + props.productGroup + "')    : console.log('Not me');"}
                 data-group={props.productGroup}
                 data-title={props.title}
-                data-discount={props.rabattPrice}
-                data-price={Array.first(String.pregMatch(props.rabattPrice,'(\d+.(\d{1,2})|\d{1,2})')) }
+                data-discount={Array.first(String.pregMatch(props.price,'(\d+.(\d{1,2})|\d{1,2})')) }
+                data-price={Array.first(String.pregMatch((props.rabattPrice ? props.rabattPrice : props.price),'(\d+.(\d{1,2})|\d{1,2})')) }
                 data-guid={props.productGUID}
                 data-IV={props.productIV}
             >

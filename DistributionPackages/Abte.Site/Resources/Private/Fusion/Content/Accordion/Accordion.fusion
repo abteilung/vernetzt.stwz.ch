@@ -107,7 +107,7 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                     </div> -->
 
                     <Abte.Site:Component.BestellUebersicht />
-                    <Abte.Site:Content.Button outerClass="text-center" class="text-base text-black" text="Bestellungen sind erst ab 13. Juni 2022 möglich." />
+                    <Abte.Site:Content.Button outerClass="text-center" class="text-base text-black" text="Möchten Sie diese Produkte bestellen? Bitte kontaktieren Sie uns via E-Mail unter info@stwz-vernetzt.ch oder unter 062 745 32 32" />
                     <Abte.Site:Content.ShopButton @if.isHidden={false} outerClass="text-center" class="text-base text-white bg-black" text="Jetzt bestellen" />
                 </div>
             </div>

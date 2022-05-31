@@ -13,10 +13,14 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                 <strong x-text="'Internet ' + internetTitle">Internet</strong>
                 <div class="w-2/3 block relative flex justify-between items-center">
                     <div class="text-2xl text-white" x-text="Number.isInteger(internet) ? internet + '.–' : internet.toFixed(2)"></div>
-                    <div class="w-12 mt-8 overflow-visible">
-                        <Abte.Site:Icon.Diagonal class="relative -left-6 text-white w-24" />
-                    </div>
-                    <div class="text-xs leading-snug mt-12">Anstatt<br/>XX.–</div>
+                    <template x-if="internet != internetDiscount">
+                        <div class="w-12 mt-8 overflow-visible">
+                            <Abte.Site:Icon.Diagonal class="relative -left-6 text-white w-24" x-show="internetDiscount"/>
+                        </div>
+                    </template>  
+                    <template x-if="internet != internetDiscount">
+                        <div class="text-xs leading-snug mt-12">Anstatt<br/><span x-text="Number.isInteger(internetDiscount) ? internetDiscount + '.–' : internetDiscount.toFixed(2)"></span></div>
+                    </template>
                 </div>
             </div>
         </template>
@@ -25,9 +29,14 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
             <div class="relative block py-4 border-t border-black h-26">
                 <strong x-text="'TV ' + televisionTitle">Internet</strong>
                 <div class="text-2xl text-white" x-text="Number.isInteger(television) ? television + '.–' : television.toFixed(2)"></div>
-                <template x-if="televisionDiscount">
-                    <Abte.Site:Icon.Diagonal class="absolute text-white top-16 left-16" />
-                </template>   
+                <template x-if="television != televisionDiscount">
+                    <div class="w-12 mt-8 overflow-visible">
+                        <Abte.Site:Icon.Diagonal class="absolute text-white top-16 left-16" />
+                    </div>  
+                </template> 
+                <template x-if="television != televisionDiscount">
+                    <div class="text-xs leading-snug mt-12">Anstatt<br/><span x-text="Number.isInteger(televisionDiscount) ? televisionDiscount + '.–' : televisionDiscount.toFixed(2)"></span></div>
+                </template>
                 <p class="mb-0 text-sm font-black !text-white">
                     inkl. kostenlose TV-Box 
                 </p>
@@ -38,8 +47,13 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
             <div class="relative block py-4 border-t border-black h-26">
                 <strong x-text="'Telefonie ' + telephoneTitle">Internet</strong>
                 <div class="text-2xl text-white" x-text="Number.isInteger(telephone) ? telephone + '.–' : telephone.toFixed(2)"></div>
-                <template x-if="telephoneDiscount">
-                    <Abte.Site:Icon.Diagonal class="absolute text-white top-16 left-16" />
+                <template x-if="telephone != telephoneDiscount">
+                    <div class="w-12 mt-8 overflow-visible">
+                        <Abte.Site:Icon.Diagonal class="absolute text-white top-16 left-16" />
+                    </div>
+                </template>
+                <template x-if="telephone != telephoneDiscount">
+                    <div class="text-xs leading-snug mt-12">Anstatt<br/><span x-text="Number.isInteger(telephoneDiscount) ? telephoneDiscount + '.–' : telephoneDiscount.toFixed(2)"></span></div>
                 </template>             
             </div>
         </template>
@@ -49,15 +63,15 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                 <strong>Total pro Monat</strong>
                 <div class="w-2/3 block relative flex justify-between items-center">
                     <div class="text-2xl text-white" x-text="Number.isInteger(total) ? total + '.–' : total.toFixed(2)"></div>
-                    <div class="w-12 mt-8 overflow-visible">
-                        <Abte.Site:Icon.Diagonal class="relative -left-6 text-white w-24" />
-                    </div>
-                    <div class="text-xs leading-snug mt-12">Anstatt<br/>XX.–</div>
+                    <template x-if="total != totalDiscount">
+                        <div class="w-12 mt-8 overflow-visible">
+                            <Abte.Site:Icon.Diagonal class="relative -left-6 text-white w-24" />
+                        </div>
+                    </template>         
+                    <template x-if="total != totalDiscount">                     
+                        <div class="text-xs leading-snug mt-12">Anstatt<br/><span x-text="Number.isInteger(totalDiscount) ? totalDiscount + '.–' : totalDiscount.toFixed(2)"></span></div>
+                    </template>                
                 </div>
-
-                <template x-if="totalDiscount">
-                    <Abte.Site:Icon.Diagonal class="absolute text-white top-16 left-16" />
-                </template>         
             </div>
         </template>
 

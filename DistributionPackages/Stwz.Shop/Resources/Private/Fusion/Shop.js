@@ -57,16 +57,16 @@ document.addEventListener('alpine:init', () => {
       telephone: localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.price) : 0,
       television: localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.price) : 0,
 
-      internetTitle: localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title : 0,
-      televisionTitle: localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title : 0,
-      telephoneTitle: localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title : 0,
-
+      mobileTitle: localStorage.getItem('Mobile') ? document.getElementById(localStorage.getItem('Mobile')).dataset.title : '',
+      internetTitle: localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title : '',
+      televisionTitle: localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title : '',
+      telephoneTitle: localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title : '',
 
       totalDiscount: 0,
-      mobileDiscount: 0,
-      internetDiscount: 0,
-      telephoneDiscount: 0,
-      televisionDiscount: 0,
+      mobileDiscount: localStorage.getItem('Mobile') ? parseFloat(document.getElementById(localStorage.getItem('Mobile')).dataset.discount) : 0,
+      internetDiscount: localStorage.getItem('Internet') ? parseFloat(document.getElementById(localStorage.getItem('Internet')).dataset.discount) : 0,
+      telephoneDiscount: localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.discount) : 0,
+      televisionDiscount: localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.discount) : 0,
 
       count() {
         this.mobile = localStorage.getItem('Mobile') ? parseFloat(document.getElementById(localStorage.getItem('Mobile')).dataset.price) : 0;
@@ -74,13 +74,19 @@ document.addEventListener('alpine:init', () => {
         this.telephone = localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.price) : 0;
         this.television = localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.price) : 0;
         
-        this.internetTitle = localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title : 0;
-        this.televisionTitle = localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title : 0;
-        this.telephoneTitle = localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title : 0;
-
-        console.log(this.internet, this.television, this.telephone, this.mobile);
+        this.mobileTitle = localStorage.getItem('Mobile') ? document.getElementById(localStorage.getItem('Mobile')).dataset.title : '',
+        this.internetTitle = localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title : '';
+        this.televisionTitle = localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title : '';
+        this.telephoneTitle = localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title : '';
+        
+        this.mobileDiscount = localStorage.getItem('Mobile') ? parseFloat(document.getElementById(localStorage.getItem('Mobile')).dataset.discount) : 0,
+        this.internetDiscount = localStorage.getItem('Internet') ? parseFloat(document.getElementById(localStorage.getItem('Internet')).dataset.discount) : 0,
+        this.telephoneDiscount = localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.discount) : 0,
+        this.televisionDiscount = localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.discount) : 0,
+        // console.log(this.internet, this.television, this.telephone, this.mobile);
         
         this.total = Number.isInteger(this.internet + this.television + this.telephone + this.mobile) ? parseInt(this.internet + this.television + this.telephone + this.mobile) : parseFloat(this.internet + this.television + this.telephone + this.mobile);
+        this.totalDiscount = Number.isInteger(this.internetDiscount + this.televisionDiscount + this.telephoneDiscount + this.mobileDiscount) ? parseInt(this.internetDiscount + this.televisionDiscount + this.telephoneDiscount + this.mobileDiscount) : parseFloat(this.internetDiscount + this.televisionDiscount + this.telephoneDiscount + this.mobileDiscount);
       },
 
 
