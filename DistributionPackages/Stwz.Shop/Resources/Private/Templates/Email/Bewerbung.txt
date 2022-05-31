@@ -1,0 +1,12 @@
+Es ist eine neue Bewerbung eingegangen:
+
+Von: {formValues.firstName} {formValues.lastName}, {formValues.eMail}
+Telefon: {formValues.phone}
+
+Adresse:
+{formValues.street} {formValues.nr}
+{formValues.zip} {formValues.city}
+
+Mitteilung: {formValues.message}
+
+Bewerbungsunterlagen: {formValues.asset}

@@ -1,0 +1,18 @@
+<h1>Kursanfrage von Website!</h1>
+<br/>
+<h3>Anfrage für:</h3>
+<p>{form.formState.formValues.kurs}</p><br/>
+<h3>Wunschdatum:</h3>
+<p>{form.formState.formValues.date}</p>
+<h3>Anzahl Kursteilnehmer:</h3>
+<p>{form.formState.formValues.teilnehmer}</p>
+<h3>Von:</h3>
+<p>{form.formState.formValues.title} {form.formState.formValues.first_name} {form.formState.formValues.last_name} <br/>
+{form.formState.formValues.phone}<br/>
+{form.formState.formValues.email}</p>
+<h3>Adresse:</h3>
+<p>{form.formState.formValues.address}<br/>
+  {form.formState.formValues.zip} {form.formState.formValues.city}</p>
+<br/>
+<h3>Mitteilung:</h3>
+<p>{form.formState.formValues.message}</p>

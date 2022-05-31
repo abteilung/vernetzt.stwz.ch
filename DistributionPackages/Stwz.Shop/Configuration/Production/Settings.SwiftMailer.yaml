@@ -1,0 +1,10 @@
+Neos:
+  SwiftMailer:
+    transport:
+      type: 'Swift_SmtpTransport'
+      options:
+        host: 'mail.cyon.ch'
+        port: '465'
+        encryption: 'ssl'
+        username: 'order@stwz-vernetzt.ch'
+        password: 'u,M,>Mp&>57&jv'

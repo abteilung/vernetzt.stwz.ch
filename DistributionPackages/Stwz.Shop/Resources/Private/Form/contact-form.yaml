@@ -84,14 +84,14 @@ finishers:
   -
     identifier: 'Neos.Form:Email'
     options:
-      templatePathAndFilename: resource://Vendor.Site/Private/Templates/Email/Message.txt
-      subject: Contact from example.net
-      recipientAddress: office@example.net
-      recipientName: 'Office of Company'
-      senderAddress: server@example.net
-      senderName: Server example.net
-      replyToAddress: office@example.net
-      format: plaintext
+      templatePathAndFilename: resource://Stwz.Shop/Private/Templates/Email/contact-form.txt
+      subject: Anfrage für Aufschaltung
+      recipientAddress: info@stwz.ch
+      recipientName: 'StWZ-vernetzt'
+      senderAddress: '{email}'
+      senderName: '{first_name} {last_name}'
+      replyToAddress: '{email}'
+      format: html
   -
     identifier: 'Neos.Form:Confirmation'
     options:
