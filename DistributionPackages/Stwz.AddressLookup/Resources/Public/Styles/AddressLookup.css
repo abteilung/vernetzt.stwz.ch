@@ -1,13 +1,2 @@
-#addressMessages button {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-    border-radius: 9999px;
-    font-weight: 800
-}
+#addressMessages button{--tw-bg-opacity:1;--tw-text-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity));border-radius:9999px;color:rgb(255 255 255/var(--tw-text-opacity));font-weight:800;padding:.5rem 1rem}
 /*# sourceMappingURL=AddressLookup.css.map */

@@ -5,7 +5,8 @@
     "require": {
         "neos/flow": "*",
         "onedrop/ajaxform": "^3.5",
-        "stwz/form-multicolumnsection": "*"
+        "stwz/form-multicolumnsection": "*",
+        "punktde/form-persistence": "^3.0"
     },
     "autoload": {
         "psr-4": {
