@@ -15,8 +15,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
     renderer = afx`
         <div 
             class={props.class + ' ' + 'max-w-screen-lg mx-auto addressLookup'}
-            id="addressLookup"                    
-            x-data={"addresslookup"}
+            id="addressLookup"        
             x-init={"{url: '" + props.url + "'}"} 
             data-url={props.url} 
         >
@@ -87,7 +86,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                 >
                     <div class="mb-2">
                         <h3 class="">Objekt nicht erschlossen</h3>
-                        <p>Leider ist Ihr zu Hause noch nicht mit Glasfaser erschlossen. Bitte teilen Sie uns Ihr Interesse an einem Anschluss ans Glasfasernetz mit diesem Formular mit. Wir werden Sie kontaktieren, wenn wir Ihr zu Hause erschliessen.</p>
+                        <p>Leider ist Ihr Zuhause noch nicht mit Glasfaser erschlossen. Bitte teilen Sie uns Ihr Interesse an einem Anschluss ans Glasfasernetz mit diesem Formular mit. Wir werden Sie kontaktieren, wenn wir Ihr Zuhause erschliessen.</p>
                     </div>
                     <div class="relative mt-2">
 

@@ -49,9 +49,11 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
   	renderer = afx`
 
-        <Stwz.AddressLookup:Component.Form 
-            @if.isOnPage={q(documentNode).is('[instanceof Abte.Site:Document.Product]')}
-        />
+        <div x-show="addressLookup" x-transition>
+            <Stwz.AddressLookup:Component.Form 
+                @if.isOnPage={q(documentNode).is('[instanceof Abte.Site:Document.Product]')}
+            />
+        </div>
 
         <div class={props.accordionClass}>
             <div class={props.innerClass}>
