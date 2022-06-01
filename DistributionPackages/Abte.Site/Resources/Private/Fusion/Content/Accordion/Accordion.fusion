@@ -49,7 +49,11 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
   	renderer = afx`
 
-        <div x-show="addressLookup" x-transition>
+        <div x-data={"{addressLookupShow:false}"}
+             x-show="addressLookupShow"
+             x-transition
+             x-cloak
+             "@toggle-addresslookup.window"="addressLookupShow = true;" >
             <Stwz.AddressLookup:Component.Form 
                 @if.isOnPage={q(documentNode).is('[instanceof Abte.Site:Document.Product]')}
             />

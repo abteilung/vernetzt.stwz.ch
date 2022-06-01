@@ -59,7 +59,7 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
                     @if.hasTitleOrLink={ props.title ? true : props.link ? true : false }
                 >
                     <h2 class="text-black h1">{props.title}</h2>
-                    <Neos.Fusion:Augmenter "@:click"="addressLookup = !open">
+                    <Neos.Fusion:Augmenter "@click"="$dispatch('toggle-addresslookup');">
                         <Abte.Site:Content.Button 
                             text={props.linkText} 
                             target={props.link}
