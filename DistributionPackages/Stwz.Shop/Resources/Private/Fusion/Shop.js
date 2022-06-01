@@ -57,16 +57,20 @@ document.addEventListener('alpine:init', () => {
       telephone: localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.price) : 0,
       television: localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.price) : 0,
 
-      mobileTitle: localStorage.getItem('Mobile') ? document.getElementById(localStorage.getItem('Mobile')).dataset.title.replace('<br/>','') : '',
-      internetTitle: localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title.replace('<br/>','') : '',
-      televisionTitle: localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title.replace('<br/>','') : '',
-      telephoneTitle: localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title.replace('<br/>','') : '',
+      mobileTitle: localStorage.getItem('Mobile') ? document.getElementById(localStorage.getItem('Mobile')).dataset.title.replace('<br/>','').replace('<br>','') : '',
+      internetTitle: localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title.replace('<br/>','').replace('<br>','') : '',
+      televisionTitle: localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title.replace('<br/>','').replace('<br>','') : '',
+      telephoneTitle: localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title.replace('<br/>','').replace('<br>','') : '',
 
       totalDiscount: 0,
       mobileDiscount: localStorage.getItem('Mobile') ? parseFloat(document.getElementById(localStorage.getItem('Mobile')).dataset.discount) : 0,
       internetDiscount: localStorage.getItem('Internet') ? parseFloat(document.getElementById(localStorage.getItem('Internet')).dataset.discount) : 0,
       telephoneDiscount: localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.discount) : 0,
       televisionDiscount: localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.discount) : 0,
+
+      // _checkItem(type){},
+      // _parseItem(el){},
+      // _getStore(store){},
 
       count() {
         this.mobile = localStorage.getItem('Mobile') ? parseFloat(document.getElementById(localStorage.getItem('Mobile')).dataset.price) : 0;
