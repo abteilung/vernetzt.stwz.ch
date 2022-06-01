@@ -78,10 +78,10 @@ document.addEventListener('alpine:init', () => {
         this.telephone = localStorage.getItem('Telefonie') ? parseFloat(document.getElementById(localStorage.getItem('Telefonie')).dataset.price) : 0;
         this.television = localStorage.getItem('TV') ? parseFloat(document.getElementById(localStorage.getItem('TV')).dataset.price) : 0;
         
-        this.mobileTitle = localStorage.getItem('Mobile') ? document.getElementById(localStorage.getItem('Mobile')).dataset.title.replace('<br/>','') : '',
-        this.internetTitle = localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title.replace('<br/>','') : '';
-        this.televisionTitle = localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title.replace('<br/>','') : '';
-        this.telephoneTitle = localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title.replace('<br/>','') : '';
+        this.mobileTitle = localStorage.getItem('Mobile') ? document.getElementById(localStorage.getItem('Mobile')).dataset.title.replace('<br/>','').replace('<br>','') : '',
+        this.internetTitle = localStorage.getItem('Internet') ? document.getElementById(localStorage.getItem('Internet')).dataset.title.replace('<br/>','').replace('<br>','') : '';
+        this.televisionTitle = localStorage.getItem('TV') ? document.getElementById(localStorage.getItem('TV')).dataset.title.replace('<br/>','').replace('<br>','') : '';
+        this.telephoneTitle = localStorage.getItem('Telefonie') ? document.getElementById(localStorage.getItem('Telefonie')).dataset.title.replace('<br/>','').replace('<br>','') : '';
         
         this.mobileDiscount = localStorage.getItem('Mobile') ? parseFloat(document.getElementById(localStorage.getItem('Mobile')).dataset.discount) : 0,
         this.internetDiscount = localStorage.getItem('Internet') ? parseFloat(document.getElementById(localStorage.getItem('Internet')).dataset.discount) : 0,
