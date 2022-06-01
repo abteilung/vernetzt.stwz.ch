@@ -32,6 +32,8 @@
 
         "neos/setup": "*",
         "neos/neos-setup": "^1.1",
+
+        "punktde/neos-environment-display": "*",
         
         "abte/site": "@dev",
         "abteilung/gridsystem": "@dev",
