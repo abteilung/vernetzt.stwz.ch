@@ -52,7 +52,8 @@ document.addEventListener('alpine:init', () => {
                     .then(data => {
                         if(data.status == 'success'){
                             this.loading = false;
-                            this.success = true;
+                            // this.success = true;
+                            this.success = false;
                             this.error = !this.success;
                             let event = new CustomEvent('addresslookup-success', {});
                             window.dispatchEvent(event);
