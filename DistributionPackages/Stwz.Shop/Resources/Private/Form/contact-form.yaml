@@ -35,6 +35,7 @@ renderables:
           - identifier: 'Neos.Flow:NotEmpty'
         properties:
           placeholder: Strasse
+          x-value: address.streetname
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'
@@ -44,6 +45,7 @@ renderables:
           - identifier: 'Neos.Flow:NotEmpty'
         properties:
           placeholder: Nr.
+          x-value: address.house_number
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'
@@ -53,6 +55,7 @@ renderables:
           - identifier: 'Neos.Flow:NotEmpty'
         properties:
           placeholder: PLZ
+          x-value: address.zip_code
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'
@@ -62,6 +65,7 @@ renderables:
           - identifier: 'Neos.Flow:NotEmpty'
         properties:
           placeholder: Ort
+          x-value: address.city
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'

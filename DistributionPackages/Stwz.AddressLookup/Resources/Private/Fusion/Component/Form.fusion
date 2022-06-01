@@ -44,7 +44,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                                 id="streetname" 
                                 class="w-full" 
                                 :class="validation.streetname == 'Pflichtfeld' ? '!border-primary' : '!border-black'"
-                                type="text" x-model="address.streetname"placeholder="Strasse*" required="required" />
+                                type="text" x-model="address.streetname"placeholder="Strasse" required="required" />
 
                             <Stwz.AddressLookup:Component.FormValidation property="streetname" />
                         </div>
@@ -53,7 +53,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                                 id="house_number"
                                 class="w-full" 
                                 :class="validation.house_number == 'Pflichtfeld' ? '!border-primary' : '!border-black'"
-                                type="text" x-model="address.house_number" placeholder="Nr.*" required="required" />
+                                type="text" x-model="address.house_number" placeholder="Nr." required="required" />
                             <Stwz.AddressLookup:Component.FormValidation property="house_number" />
                         </div>
                         <input type="hidden" x-model="address.country" placeholder="Land" value="Schweiz" />

@@ -4,5 +4,5 @@
 	<f:form.textfield 
 		property="{element.identifier}"
 		id="{element.uniqueIdentifier}"
-		class="block border-none shadow-sm focus:ring-accent focus:border-accent sm:text-sm" placeholder="{element -> form:translateElementProperty(property: 'placeholder')}" errorClass="{element.properties.elementErrorClassAttribute}" maxlength="{element.properties.maxlength}" />
+		class="block border-none shadow-sm focus:ring-accent focus:border-accent sm:text-sm" additionalAttributes="{':value': element.properties.x-value}" placeholder="{element -> form:translateElementProperty(property: 'placeholder')}" errorClass="{element.properties.elementErrorClassAttribute}" maxlength="{element.properties.maxlength}" />
 </f:section>
