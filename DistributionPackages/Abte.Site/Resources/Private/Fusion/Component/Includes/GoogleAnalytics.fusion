@@ -4,13 +4,13 @@ prototype(Abte.Site:TrackingScript.GoogleAnalytics) < prototype(Neos.Fusion:Comp
 
     renderer = afx`
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-xxx"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WE3JNB3SWE"></script>
         <script>{"
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'G-xxx');
+            gtag('config', 'G-WE3JNB3SWE');
         "}</script>
     `
 }

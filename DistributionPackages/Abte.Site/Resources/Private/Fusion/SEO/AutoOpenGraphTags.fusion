@@ -10,7 +10,7 @@ prototype(Neos.Seo:OpenGraphMetaTags) < prototype(Neos.Fusion:Component) {
 
         contentImage {
             @position = 'start'
-            firstContentWithImage = ${ q(node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Neos:Content][image instanceof "Neos\Media\Domain\Model\ImageInterface"]') }
+            firstContentWithImage = ${ q(documentNode).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Neos:Content][image instanceof "Neos\Media\Domain\Model\ImageInterface"]') }
             condition = ${this.firstContentWithImage.count()}
             renderer = ${this.firstContentWithImage.property('image')}
         }
