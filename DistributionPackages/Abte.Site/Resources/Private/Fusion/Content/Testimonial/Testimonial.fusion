@@ -9,7 +9,7 @@ prototype(Abte.Site:Content.Testimonial) < prototype(Neos.Neos:ContentComponent)
     }
 
     renderer = afx`
-        <div class="relative bg-[url('Media/Backdrops/MainBackdrop.svg')] dark-backdrop isolate py-24 testimonial bg-center-top relative bg-cover">
+        <div class="relative bg-[url('Media/Backdrops/MainBackdrop.svg')] light-backdrop isolate py-24 testimonial bg-center-top relative bg-cover">
             <div class="container gridPadding-x">
                 {props.content}
             </div>

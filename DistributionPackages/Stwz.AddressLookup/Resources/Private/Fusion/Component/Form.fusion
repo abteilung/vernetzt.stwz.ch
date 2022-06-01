@@ -109,7 +109,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                 >
                     <div class="mb-2">
                         <h3 class="">Objekt bereits erschlossen</h3>
-                        <p>Ihr zu Hause haben wir mit Glasfaser erschlossen, so dass Sie unser ultraschnelles Internet und weitere Produkte bestellen können. Konfigurieren Sie jetzt Ihr Abo.</p>
+                        <p>Ihr Zuhause haben wir mit Glasfaser erschlossen, so dass Sie unser ultraschnelles Internet und weitere Produkte bestellen können. Konfigurieren Sie jetzt Ihr Abo.</p>
                     </div>
                     <Abte.Site:Content.Button 
                         class="text-white duration-150 scale-100 bg-black hover:scale-105 align-right" 
