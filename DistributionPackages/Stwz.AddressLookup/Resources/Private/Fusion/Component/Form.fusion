@@ -15,7 +15,8 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
     renderer = afx`
         <div 
             class={props.class + ' ' + 'max-w-screen-lg mx-auto addressLookup'}
-            id="addressLookup"        
+            id="addressLookup"                    
+            x-data={"addresslookup"}
             x-init={"{url: '" + props.url + "'}"} 
             data-url={props.url} 
         >
