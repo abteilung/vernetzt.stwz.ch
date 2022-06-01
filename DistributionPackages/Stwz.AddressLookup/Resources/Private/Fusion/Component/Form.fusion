@@ -112,7 +112,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                         <p>Ihr Zuhause haben wir mit Glasfaser erschlossen, so dass Sie unser ultraschnelles Internet und weitere Produkte bestellen können. Konfigurieren Sie jetzt Ihr Abo.</p>
                     </div>
                     <Abte.Site:Content.Button 
-                        class="text-white duration-150 scale-100 bg-black hover:scale-105 align-right" 
+                        class="text-white duration-150 scale-100 bg-black whitespace-nowrap hover:scale-105 align-right" 
                         text="Zum Angebot" 
                         iconAfter="" 
                         target="#id-node-lrtwjedsk838h" />
