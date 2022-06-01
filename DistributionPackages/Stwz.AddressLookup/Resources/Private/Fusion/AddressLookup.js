@@ -8,6 +8,12 @@ document.addEventListener('alpine:init', () => {
         loading: false,
         response: '',
         
+        user: {
+            first_name: '',
+            last_name: '',
+            email: ''
+        },
+
         address: {
             city: 'Zofingen',
             country: '',

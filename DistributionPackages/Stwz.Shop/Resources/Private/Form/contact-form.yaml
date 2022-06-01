@@ -17,6 +17,7 @@ renderables:
           - identifier: 'Neos.Flow:NotEmpty'
         properties:
           placeholder: Vorname
+          x-value: user.first_name
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'
@@ -26,6 +27,7 @@ renderables:
           - identifier: 'Neos.Flow:NotEmpty'
         properties:
           placeholder: Nachname
+          x-value: user.last_name
         defaultValue: ''
       -
         type: 'Neos.Form:SingleLineText'
@@ -76,6 +78,7 @@ renderables:
           - identifier: 'Neos.Flow:EmailAddress'
         properties:
           placeholder: 'E-Mail'
+          x-value: user.email
         defaultValue: ''
       -
         type: 'Neos.Form:MultiLineText'
