@@ -67,7 +67,17 @@ prototype(Abte.Site:Content.Person) < prototype(Neos.Neos:ContentComponent) {
                             link={'tel:' + String.replace(String.pregReplace(props.phone, "'/[^0-9]/'", ''), ' ', '')} 
                             renderDefaultTagIfNoLink='true'
                         >
-                            <Abte.Site:Icon.Phone class="absolute bottom-0 right-0 w-6 duration-150 scale-100 hover:scale-110" />
+                            <div class="flex flex-col items-center group">
+                                <Abte.Site:Icon.Phone class="absolute bottom-0 right-0 w-6 duration-150 scale-100 hover:scale-110" />
+
+                                <div class="absolute bottom-0 flex flex-col items-center hidden mb-8 -ml-2 whitespace-nowrap group-hover:flex"
+                                    @if.hasPhone={props.phone}
+                                >
+                                    <span class="relative z-10 p-2 text-xs leading-none text-white whitespace-no-wrap bg-black shadow-lg">{props.phone}</span>
+                                    <div class="w-3 h-3 -mt-2 rotate-45 bg-black"></div>
+                                </div>
+
+                            </div>
                         </Carbon.Link:Link>
                     </div>
 
