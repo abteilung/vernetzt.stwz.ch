@@ -64,7 +64,7 @@ prototype(Abte.Site:Content.Container) < prototype(Neos.Neos:ContentComponent) {
                             text={props.linkText} 
                             target={props.link}
                             spacing="px-3 py-1"
-                            class="text-sm text-black bg-accent" 
+                            class="text-sm text-black bg-accent mt-3" 
                             @if.hasLinkText={props.linkText}
                         />
                     </Neos.Fusion:Augmenter>

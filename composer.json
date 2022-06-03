@@ -53,7 +53,7 @@
         "phpunit/phpunit": "^9.0",
         "symfony/css-selector": "~2.0",
         "neos/behat": "~7.3.0",
-        "carbon/pipeline": "^0.10.6"
+        "carbon/pipeline": "^0.10.8"
     },
     "repositories": {
         "distributionPackages": {

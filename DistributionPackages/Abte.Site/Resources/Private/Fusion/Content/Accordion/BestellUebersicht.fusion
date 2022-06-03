@@ -19,7 +19,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                         </div>
                     </template>  
                     <template x-if="internet != internetDiscount">
-                        <div class="text-xs leading-snug mt-12">Anstatt<br/><span x-text="Number.isInteger(internetDiscount) ? internetDiscount + '.–' : internetDiscount.toFixed(2)"></span></div>
+                        <div class="text-xs leading-snug mt-12">anstatt<br/><span x-text="Number.isInteger(internetDiscount) ? internetDiscount + '.–' : internetDiscount.toFixed(2)"></span></div>
                     </template>
                 </div>
             </div>
@@ -35,7 +35,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                     </div>  
                 </template> 
                 <template x-if="television != televisionDiscount">
-                    <div class="text-xs leading-snug mt-12">Anstatt<br/><span x-text="Number.isInteger(televisionDiscount) ? televisionDiscount + '.–' : televisionDiscount.toFixed(2)"></span></div>
+                    <div class="text-xs leading-snug mt-12">anstatt<br/><span x-text="Number.isInteger(televisionDiscount) ? televisionDiscount + '.–' : televisionDiscount.toFixed(2)"></span></div>
                 </template>
                 <p class="mb-0 text-sm font-black !text-white">
                     inkl. kostenlose TV-Box 
@@ -53,14 +53,14 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                     </div>
                 </template>
                 <template x-if="telephone != telephoneDiscount">
-                    <div class="text-xs leading-snug mt-12">Anstatt<br/><span x-text="Number.isInteger(telephoneDiscount) ? telephoneDiscount + '.–' : telephoneDiscount.toFixed(2)"></span></div>
+                    <div class="text-xs leading-snug mt-12">anstatt<br/><span x-text="Number.isInteger(telephoneDiscount) ? telephoneDiscount + '.–' : telephoneDiscount.toFixed(2)"></span></div>
                 </template>             
             </div>
         </template>
 
         <template x-if="total">
             <div class="relative block py-4 mb-4 border-t border-black h-26">
-                <strong>Total pro Monat</strong>
+                <strong>CHF pro Monat</strong>
                 <div class="w-2/3 block relative flex justify-between items-center">
                     <div class="text-2xl text-white" x-text="Number.isInteger(total) ? total + '.–' : total.toFixed(2)"></div>
                     <template x-if="total != totalDiscount">
@@ -69,7 +69,7 @@ prototype(Abte.Site:Component.BestellUebersicht) < prototype(Neos.Neos:ContentCo
                         </div>
                     </template>         
                     <template x-if="total != totalDiscount">                     
-                        <div class="text-xs leading-snug mt-12">Anstatt<br/><span x-text="Number.isInteger(totalDiscount) ? totalDiscount + '.–' : totalDiscount.toFixed(2)"></span></div>
+                        <div class="text-xs leading-snug mt-12">anstatt<br/><span x-text="Number.isInteger(totalDiscount) ? totalDiscount + '.–' : totalDiscount.toFixed(2)"></span></div>
                     </template>                
                 </div>
             </div>
