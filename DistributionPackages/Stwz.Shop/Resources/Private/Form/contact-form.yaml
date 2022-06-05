@@ -89,6 +89,8 @@ renderables:
         defaultValue: ''
 finishers:
   -
+    identifier: 'PunktDe.Form.Persistence:SaveFormDataFinisher'
+  -
     identifier: 'Neos.Form:Email'
     options:
       templatePathAndFilename: resource://Stwz.Shop/Private/Templates/Email/contact-form.txt
