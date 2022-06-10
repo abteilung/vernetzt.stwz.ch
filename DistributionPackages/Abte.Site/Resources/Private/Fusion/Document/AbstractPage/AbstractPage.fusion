@@ -24,6 +24,11 @@ prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
             scale = '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
             favIcons = Abte.Site:Component.Favicons
         }
+
+        titleTag = Neos.Fusion:Tag {
+            tagName = 'title'
+            content = ${ q(node).property('title') +  '| StWZ Vernetzt' }
+        }
     }
 
     htmlTag {
