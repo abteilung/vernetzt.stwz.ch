@@ -27,7 +27,7 @@ prototype(Abte.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) {
 
         titleTag = Neos.Fusion:Tag {
             tagName = 'title'
-            content = ${ q(node).property('title') +  '| StWZ Vernetzt' }
+            content = ${ q(node).property('title') +  ' | StWZ Vernetzt' }
         }
     }
 
