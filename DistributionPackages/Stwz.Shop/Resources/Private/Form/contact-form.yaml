@@ -95,7 +95,7 @@ finishers:
     options:
       templatePathAndFilename: resource://Stwz.Shop/Private/Templates/Email/contact-form.txt
       subject: Anfrage für Aufschaltung
-      recipientAddress: info@stwz.ch
+      recipientAddress: info@stwz-vernetzt.ch
       recipientName: 'StWZ-vernetzt'
       senderAddress: '{email}'
       senderName: '{first_name} {last_name}'
