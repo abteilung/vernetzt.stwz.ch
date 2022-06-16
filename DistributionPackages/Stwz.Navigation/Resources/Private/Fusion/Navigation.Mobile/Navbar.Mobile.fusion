@@ -45,6 +45,7 @@ prototype(Stwz.Navigation:Component.Navbar.Mobile) < prototype(Neos.Fusion:Compo
                   node={doNotLinkNode ? '#' : item.node} 
                   attributes.class={props.linkItemClass}
                   attributes.target={props.linkTarget}
+                  @if.isNoSeparator={ !q(item.node).is('[instanceof Abte.Site:Document.MenuSeparator]') }
               >
                   { q(item.node).property('title') }
               </Neos.Neos:NodeLink>
