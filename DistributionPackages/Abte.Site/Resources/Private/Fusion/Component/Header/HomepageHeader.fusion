@@ -60,7 +60,7 @@ prototype(Abte.Site:Component.HomepageHeader) < prototype(Neos.Fusion:Component)
                     {props.productIcons}
                     <Abte.Site:Content.Button class="text-white duration-150 scale-100 bg-black hover:scale-105" text="Angebot" iconAfter="" target="#id-node-yidfj5izddfnx" />
                 </div>
-                <div class="absolute h-full col-span-3 col-end-6 -z-10 md:relative illustrationContainer">
+                <div class="absolute h-full col-span-3 col-end-6 mt-8 md:mt-0 -z-10 md:relative illustrationContainer">
                     {props.svgIllustration}
                 </div>
             </div>
