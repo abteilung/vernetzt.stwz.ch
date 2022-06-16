@@ -44,7 +44,7 @@ prototype(Abte.Site:Component.ServiceCard) < prototype(Neos.Neos:ContentComponen
                     <Abte.Site:Mixin.Icons class="duration-150 scale-100 group-hover:scale-110" />
                     {props.arrow}
                 </div>
-                <Abte.Site:Icon.Diagonal />
+                <Abte.Site:Icon.Diagonal class="w-12 md:w-auto" />
             </div>
             <div class="flex items-end flex-1 h-auto space-x-2">
                 <div class="w-1/6 mb-6 -rotate-90 text-primary">
