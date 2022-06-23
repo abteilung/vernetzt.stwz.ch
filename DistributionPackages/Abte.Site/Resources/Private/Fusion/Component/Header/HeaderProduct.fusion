@@ -35,13 +35,13 @@ prototype(Abte.Site:Component.HeaderProduct) < prototype(Neos.Neos:ContentCompon
     }
 
     svgIllustration = Neos.Fusion:Tag {
-        attributes.class = 'relative z-0 mb-48 -mt-32 md:mb-24 md:-mt-32 lineAnimation'
+        attributes.class = 'relative z-0 md:mb-24 md:-mt-32 lineAnimation'
         content = ${node.properties.illustration}
     }
 
     renderer = afx`
         <header class={pageClass + ' ' + 'relative -top-32 -mb-32 bg-cover bg-[url("Media/Backdrops/MainBackdrop.svg")]' }>
-            <div class="container gridPadding-x relative pt-36 h-[250px] md:h-[400px] relative top-0 z-20 w-full mt-0 overflow-visible">
+            <div class="container gridPadding-x relative pt-36 md:h-[400px] relative top-0 z-20 w-full mt-0 overflow-visible">
                 <div class="grid grid-cols-5 md:grid-cols-2 gridgap-x">
                     <div class="order-last col-span-2 md:col-span-1 md:order-first illustrationContainer">
                         {props.svgIllustration}
