@@ -35,7 +35,7 @@ prototype(Abte.Site:Component.HeaderAbout) < prototype(Neos.Neos:ContentComponen
     }
 
     svgIllustration = Neos.Fusion:Tag {
-        attributes.class = 'relative z-0 mb-24 -mt-32 lineAnimation'
+        attributes.class = 'relative z-0 -mt-32 md:mb-24 lineAnimation'
         content = ${node.properties.illustration}
     }
 
@@ -44,10 +44,10 @@ prototype(Abte.Site:Component.HeaderAbout) < prototype(Neos.Neos:ContentComponen
             <div class="container gridPadding-x relative pt-48 h-fit md:h-[400px] relative top-0 z-20 w-full mt-0 overflow-visible">
 
                 <div class="grid grid-cols-2 md:grid-cols-5 gridgap-x">
-                    <div class="order-last inline-block pt-16 md:col-span-2 md:pt-0 illustrationContainer">
+                    <div class={node.properties.illustration ? 'order-last inline-block pt-16 md:col-span-2 md:pt-0 illustrationContainer' : 'hidden'}>
                         {props.svgIllustration}
                     </div>
-                    <div class="md:col-span-3 h-fit">
+                    <div class={node.properties.illustration ? 'md:col-span-3 h-fit' : 'col-span-2'}>
                         <Neos.Fusion:Augmenter class="text-black h1">
                             {props.subTitle}
                         </Neos.Fusion:Augmenter>
