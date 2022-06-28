@@ -8,6 +8,14 @@
       success: false,
       loading: false,
       response: "",
+<<<<<<< Updated upstream
+=======
+      isReady: false,
+      rfcu_date: "",
+      rfcu_ready: "",
+      rollout_status: "",
+      acquisiton_status: "",
+>>>>>>> Stashed changes
       user: {
         first_name: "",
         last_name: "",
@@ -48,9 +56,30 @@
           method: "GET",
           headers: { "Content-Type": "application/json" }
         }).then((response) => response.json()).then((data) => {
+<<<<<<< Updated upstream
           if (data.status == "success") {
             this.loading = false;
             this.success = false;
+=======
+          this.rfcu_date = data.data[0]["rfcu_date"], this.rfcu_ready = data.data[0]["rfcu_ready"], this.rollout_status = data.data[0]["rollout_status"], this.acquisiton_status = data.data[0]["acquisiton_status"];
+          var today = new Date();
+          var objDate = new Date(this.rfcu_date);
+          console.log(today.getTime());
+          console.log(objDate.getTime());
+          console.log(data.data[0]["rfcu_date"]);
+          if (objDate != "null" && today.getTime() > objDate.getTime() && objDate.getTime() > 0) {
+            console.log(today.getTime());
+            console.log(objDate.getTime());
+            this.isReady = true;
+            console.log("Today is great!");
+          } else {
+            this.isReady = false;
+            console.log("Today is not great!");
+          }
+          if (data.status == "success" && this.isReady) {
+            this.loading = false;
+            this.success = true;
+>>>>>>> Stashed changes
             this.error = !this.success;
             let event = new CustomEvent("addresslookup-success", {});
             window.dispatchEvent(event);
@@ -64,6 +93,13 @@
           return data;
         }).catch((error) => {
           this.loading = false;
+<<<<<<< Updated upstream
+=======
+          this.success = false;
+          this.error = !this.success;
+          let event = new CustomEvent("addresslookup-error", {});
+          window.dispatchEvent(event);
+>>>>>>> Stashed changes
           return error;
         });
       }
