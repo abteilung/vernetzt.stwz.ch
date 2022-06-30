@@ -1,4 +1,12 @@
 'Neos.Neos:Shortcut':
+  superTypes:
+    'Neos.Seo:TitleTagMixin': true
+    'Neos.Seo:SeoMetaTagsMixin': true
+    'Neos.Seo:NoindexMixin': false
+    'Neos.Seo:TwitterCardMixin': true
+    'Neos.Seo:CanonicalLinkMixin': true
+    'Neos.Seo:OpenGraphMixin': true
+    'Neos.Seo:XmlSitemapMixin': true
   constraints:
     nodeTypes:
       '*': false
