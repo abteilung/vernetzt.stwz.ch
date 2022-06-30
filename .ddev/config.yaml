@@ -11,11 +11,10 @@ additional_fqdns: []
 database:
   type: mariadb
   version: "10.3"
+mutagen_enabled: true
 nfs_mount_enabled: false
-mutagen_enabled: false
 use_dns_when_possible: true
 composer_version: "2"
-web_environment: []
 nodejs_version: "16"
 
 web_environment:

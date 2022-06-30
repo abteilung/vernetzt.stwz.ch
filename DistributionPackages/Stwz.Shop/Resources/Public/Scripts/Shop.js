@@ -115,7 +115,7 @@
       street_key: "",
       shop_url: "",
       getShopUrl() {
-        this.guid = localStorage.getItem("Internet") ? document.getElementById(localStorage.getItem("Internet")).dataset.guid : "", this.iv = localStorage.getItem("Internet") ? document.getElementById(localStorage.getItem("Internet")).dataset.iv : "", this.id = document.getElementById("addressLookupForm").querySelector('[x-model="address.house_number"').value, this.zip = document.getElementById("addressLookupForm").querySelector('[x-model="address.zip_code"').value, this.city = document.getElementById("addressLookupForm").querySelector('[x-model="address.city"').value, this.street = document.getElementById("addressLookupForm").querySelector('[x-model="address.streetname"').value, this.id_key = this.iv + "2140070229", this.zip_key = this.iv + "2140070227", this.city_key = this.iv + "2140070235", this.street_key = this.iv + "2140070231", this.shop_url = urlcat(this.api_url, "/", {
+        this.guid = localStorage.getItem("Internet") ? document.getElementById(localStorage.getItem("Internet")).dataset.guid : "", this.iv = localStorage.getItem("Internet") ? document.getElementById(localStorage.getItem("Internet")).dataset.iv : "", this.id = document.getElementById("addressLookupForm").querySelector('[x-model="address.house_number"').value, this.zip = document.getElementById("addressLookupForm").querySelector('[x-model="address.zip_code"').value, this.city = document.getElementById("addressLookupForm").querySelector('[x-model="address.city"').value, this.street = document.getElementById("addressLookupForm").querySelector('[x-model="address.streetname"').value, this.id_key = "IV_" + this.iv + "-Attr-2140070229", this.zip_key = "IV_" + this.iv + "-Attr-2140070227", this.city_key = "IV_" + this.iv + "-Attr-2140070235", this.street_key = "IV_" + this.iv + "-Attr-2140070231", this.shop_url = urlcat(this.api_url, "/", {
           GUID_ID: this.guid,
           lang: this.lang,
           IV: this.iv,
@@ -131,6 +131,7 @@
     Alpine.data("cart", () => ({
       total: 0,
       value: "",
+      showBtn: false,
       mobile: localStorage.getItem("Mobile") ? parseFloat(document.getElementById(localStorage.getItem("Mobile")).dataset.price) : 0,
       internet: localStorage.getItem("Internet") ? parseFloat(document.getElementById(localStorage.getItem("Internet")).dataset.price) : 0,
       telephone: localStorage.getItem("Telefonie") ? parseFloat(document.getElementById(localStorage.getItem("Telefonie")).dataset.price) : 0,

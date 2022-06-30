@@ -18,6 +18,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
             id="addressLookup"                    
             x-data={"addresslookup"}
             x-init={"{url: '" + props.url + "'}"} 
+            "@keyup.enter"="check"
             data-url={props.url} 
         >
             <div 

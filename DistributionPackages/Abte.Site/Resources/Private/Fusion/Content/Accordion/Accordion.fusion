@@ -88,7 +88,8 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
                 x-init="count"
                 "@item-reset.window"="count"
                 "@item-changed.window"="count"
-
+                "@addresslookup-success.window"="showBtn = true"
+                "@addresslookup-error.window"="showBtn = false"
             >
                 <div class="sticky p-6 bg-primary top-12">
                     <div class="flex items-center justify-between mb-6">
@@ -114,10 +115,17 @@ prototype(Abte.Site:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
 
                     <Abte.Site:Component.BestellUebersicht />
                     <!-- <Abte.Site:Content.Button outerClass="text-center" class="text-base text-black" text="Möchten Sie diese Produkte bestellen? Bitte kontaktieren Sie uns via E-Mail unter info@stwz-vernetzt.ch oder unter 062 745 32 32" /> -->
-                    <p class="text-black" x-cloak x-data="{show:true}" x-show="show" "@addresslookup-success.window"="show = false;" "@addresslookup-error.window"="show = true;">
-                        Möchten Sie diese Produkte bestellen?<br/>Bitte kontaktieren Sie uns unter <a class="underline" href="mailto:info@stwz-vernetzt.ch">info@stwz-vernetzt.ch</a> oder unter <a class="underline" href="tel:062 745 32 32">062 745 32 32</a>.
-                    </p>
-                    <Abte.Site:Content.ShopButton x-cloak x-data="{show:false}" x-show="show" "@addresslookup-success.window"="show = true;" "@addresslookup-error.window"="show = false;" outerClass="text-center" class="text-base text-white bg-black" text="Jetzt bestellen" />
+                    <div>
+                        <p class="text-black" x-cloak x-show="!showBtn">
+                            Möchten Sie diese Produkte bestellen?<br/>Bitte kontaktieren Sie uns unter <a class="underline" href="mailto:info@stwz-vernetzt.ch">info@stwz-vernetzt.ch</a> oder unter <a class="underline" href="tel:062 745 32 32">062 745 32 32</a>.
+                        </p>
+                        <p class="text-black" x-cloak x-show="total == 0 && showBtn">
+                            Wählen Sie wenigstens ein Internet Abo um fortzufahren.
+                        </p>
+                        <div x-cloak x-show="total != 0 && showBtn" >
+                            <Abte.Site:Content.ShopButton outerClass="text-center" class="text-base text-white bg-black" text="Jetzt bestellen" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

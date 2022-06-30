@@ -7,7 +7,7 @@ prototype(Abte.Site:Content.ShopButton) < prototype(Abte.Site:Content.Button) {
             x-init="getShopUrl"
             "@item-changed.window"="getShopUrl"
             "@addresslookup-error.window"="showBtn = false"
-            "@addresslookup-success.window"="showBtn = true">
+            "@addresslookup-success.window"="showBtn = true; getShopUrl()">
             <div class="inline-block group">
                 <a  href='#'
                     target="_blank"
