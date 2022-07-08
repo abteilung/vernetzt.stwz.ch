@@ -81,6 +81,16 @@ renderables:
           x-value: user.email
         defaultValue: ''
       -
+        type: 'Neos.Form:SingleLineText'
+        identifier: phone
+        label: Telefon
+        validators:
+          - identifier: 'Neos.Flow:NotEmpty'
+        properties:
+          placeholder: 'Telefon'
+          x-value: user.phoneemail
+        defaultValue: ''
+      -
         type: 'Neos.Form:MultiLineText'
         identifier: message
         label: Message

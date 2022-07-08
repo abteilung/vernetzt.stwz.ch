@@ -3,7 +3,8 @@
 <br/><br/>
 <h3>Von:</h3>
 <p>{form.formState.formValues.title} {form.formState.formValues.first_name} {form.formState.formValues.last_name} <br/>
-{form.formState.formValues.email}</p><br/>
+{form.formState.formValues.email}<br/>
+{form.formState.formValues.phone}</p><br/>
 <br/>
 <h3>Mitteilung:</h3>
 <p>{form.formState.formValues.message}</p>

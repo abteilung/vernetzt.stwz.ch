@@ -133,7 +133,12 @@
         gap: 1.5rem
     }
     
-    #contact-form .email, #contact-form .message {
+    #contact-form .email, #contact-form .phone {
+    
+        grid-column: span 3 / span 3
+    }
+    
+    #contact-form .message {
     
         grid-column: span 6 / span 6
     }
