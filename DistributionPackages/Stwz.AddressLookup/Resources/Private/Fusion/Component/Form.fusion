@@ -45,7 +45,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                                 <Stwz.AddressLookup:Component.FormValidation property="city" />
                             </div>
                         </div>
-                        <div class="col-span-4 md:col-span-3">
+                        <div class="col-span-2 md:col-span-3">
                             <input 
                                 id="streetname" 
                                 class="w-full" 
