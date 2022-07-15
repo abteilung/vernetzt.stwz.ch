@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.6 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -164,6 +164,7 @@ select,
 textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
   line-height: inherit; /* 1 */
   color: inherit; /* 1 */
   margin: 0; /* 2 */
@@ -365,14 +366,6 @@ img,
 video {
   max-width: 100%;
   height: auto;
-}
-
-/*
-Ensure the default browser behavior of the `hidden` attribute.
-*/
-
-[hidden] {
-  display: none;
 }
 
 [type='text'],[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{
@@ -641,7 +634,7 @@ select{
 
 }
 
-    strong, b{
+    strong,  b{
     font-weight: 800 !important;
 
 }
@@ -652,7 +645,8 @@ select{
 
 }
     
-    main p, #alert p{
+    main p, 
+    #alert p{
     margin-bottom: 1.5rem;
 
 }
@@ -683,7 +677,7 @@ select{
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 
 }
-        .neos-contentcollection .ce-text, .neos-contentcollection .container-image, .neos-contentcollection .button{
+        .neos-contentcollection .ce-text,  .neos-contentcollection .container-image,  .neos-contentcollection .button{
     margin-bottom: 2rem;
 
 }
@@ -718,12 +712,37 @@ select{
 
 }
 
-        .bg-primary p, .dark-backdrop p, .bg-primary h1, .dark-backdrop h1, .bg-primary .h1, .dark-backdrop .h1, .bg-primary h2, .dark-backdrop h2, .bg-primary .h2, .dark-backdrop .h2, .bg-primary h3, .dark-backdrop h3, .bg-primary .h3, .dark-backdrop .h3, .bg-primary h4, .dark-backdrop h4, .bg-primary .h4, .dark-backdrop .h4, .bg-primary h5, .dark-backdrop h5, .bg-primary .h5, .dark-backdrop .h5, .bg-primary h6, .dark-backdrop h6, .bg-primary .h6, .dark-backdrop .h6{
+        .bg-primary p, 
+        .dark-backdrop p, 
+        .bg-primary h1, 
+        .dark-backdrop h1, 
+        .bg-primary .h1, 
+        .dark-backdrop .h1, 
+        .bg-primary h2, 
+        .dark-backdrop h2, 
+        .bg-primary .h2, 
+        .dark-backdrop .h2, 
+        .bg-primary h3, 
+        .dark-backdrop h3, 
+        .bg-primary .h3, 
+        .dark-backdrop .h3, 
+        .bg-primary h4, 
+        .dark-backdrop h4, 
+        .bg-primary .h4, 
+        .dark-backdrop .h4, 
+        .bg-primary h5, 
+        .dark-backdrop h5, 
+        .bg-primary .h5, 
+        .dark-backdrop .h5, 
+        .bg-primary h6, 
+        .dark-backdrop h6, 
+        .bg-primary .h6, 
+        .dark-backdrop .h6{
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 
 }
-        .light-backdrop p, .light-backdrop h1, .light-backdrop .h1, .light-backdrop h2, .light-backdrop .h2, .light-backdrop h3, .light-backdrop .h3, .light-backdrop h4, .light-backdrop .h4, .light-backdrop h5, .light-backdrop .h5, .light-backdrop h6, .light-backdrop .h6{
+        .light-backdrop p,  .light-backdrop h1,  .light-backdrop .h1,  .light-backdrop h2,  .light-backdrop .h2,  .light-backdrop h3,  .light-backdrop .h3,  .light-backdrop h4,  .light-backdrop .h4,  .light-backdrop h5,  .light-backdrop .h5,  .light-backdrop h6,  .light-backdrop .h6{
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
 
@@ -736,7 +755,7 @@ select{
     h1, .h1, h2, .h2 {
     }
 
-    h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1{
+    h1,  .h1,  h2.h1,  h3.h1,  h4.h1,  h5.h1{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 24px;
@@ -745,20 +764,20 @@ select{
     font-weight: 800;
 
 }
-        h1 i, h1 em, .h1 i, .h1 em, h2.h1 i, h2.h1 em, h3.h1 i, h3.h1 em, h4.h1 i, h4.h1 em, h5.h1 i, h5.h1 em{
+        h1 i,  h1 em,  .h1 i,  .h1 em,  h2.h1 i,  h2.h1 em,  h3.h1 i,  h3.h1 em,  h4.h1 i,  h4.h1 em,  h5.h1 i,  h5.h1 em{
     font-style: normal;
     --tw-text-opacity: 1;
     color: hsl(var(--af, var(--a)) / var(--tw-text-opacity));
 
 }
-        .headGrid h1 i, .headGrid h1 em, .headGrid .h1 i, .headGrid .h1 em, .headGrid h2.h1 i, .headGrid h2.h1 em, .headGrid h3.h1 i, .headGrid h3.h1 em, .headGrid h4.h1 i, .headGrid h4.h1 em, .headGrid h5.h1 i, .headGrid h5.h1 em{
+        .headGrid h1 i,  .headGrid h1 em,  .headGrid .h1 i,  .headGrid .h1 em,  .headGrid h2.h1 i,  .headGrid h2.h1 em,  .headGrid h3.h1 i,  .headGrid h3.h1 em,  .headGrid h4.h1 i,  .headGrid h4.h1 em,  .headGrid h5.h1 i,  .headGrid h5.h1 em{
     font-style: normal;
     --tw-text-opacity: 1 !important;
     color: hsl(var(--af, var(--a)) / var(--tw-text-opacity)) !important;
 
 }
 
-    h2, .h2, h1.h2, h4.h2, h5.h2{
+    h2,  .h2,  h1.h2,  h4.h2,  h5.h2{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 18px;
@@ -768,7 +787,7 @@ select{
     line-height: 1.25 !important;
 
 }
-        h2 i, h2 em, .h2 i, .h2 em, h1.h2 i, h1.h2 em, h4.h2 i, h4.h2 em, h5.h2 i, h5.h2 em{
+        h2 i,  h2 em,  .h2 i,  .h2 em,  h1.h2 i,  h1.h2 em,  h4.h2 i,  h4.h2 em,  h5.h2 i,  h5.h2 em{
     font-style: normal;
     --tw-text-opacity: 1;
     color: hsl(var(--af, var(--a)) / var(--tw-text-opacity));
@@ -784,7 +803,7 @@ select{
                     hyphens: none;
         }
 
-    h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3{
+    h3,  .h3,  h1.h3,  h2.h3,  .h4.h3,  h5.h3{
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 18px;
     line-height: 23px;
@@ -793,13 +812,13 @@ select{
     line-height: 1.25 !important;
 
 }
-        h3 i, h3 em, .h3 i, .h3 em, h1.h3 i, h1.h3 em, h2.h3 i, h2.h3 em, .h4.h3 i, .h4.h3 em, h5.h3 i, h5.h3 em{
+        h3 i,  h3 em,  .h3 i,  .h3 em,  h1.h3 i,  h1.h3 em,  h2.h3 i,  h2.h3 em,  .h4.h3 i,  .h4.h3 em,  h5.h3 i,  h5.h3 em{
     font-style: normal;
     --tw-text-opacity: 1;
     color: hsl(var(--af, var(--a)) / var(--tw-text-opacity));
 
 }
-        h3 i strong, .h3 i strong, h1.h3 i strong, h2.h3 i strong, .h4.h3 i strong, h5.h3 i strong{
+        h3 i strong,  .h3 i strong,  h1.h3 i strong,  h2.h3 i strong,  .h4.h3 i strong,  h5.h3 i strong{
     font-style: normal;
     --tw-text-opacity: 1;
     color: hsl(var(--b3, var(--b2)) / var(--tw-text-opacity));
@@ -810,19 +829,21 @@ select{
                 hyphens: auto;
 
 }
-    .bg-primary .testimonial .lead p, .dark-backdrop .testimonial .lead p{
+    
+        .bg-primary .testimonial .lead p,  
+        .dark-backdrop .testimonial .lead p{
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 
 }
-    .light-backdrop .testimonial .lead p{
+     .light-backdrop .testimonial .lead p{
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
 
 }
-    .testimonial .lead p {
+     .testimonial .lead p {
     }
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 24px;
@@ -831,7 +852,7 @@ select{
     font-weight: 800;
 
 }
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 24px;
@@ -840,7 +861,7 @@ select{
     font-weight: 800;
 
 }
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 24px;
@@ -849,7 +870,7 @@ select{
     font-weight: 800;
 
 }
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 24px;
@@ -858,7 +879,7 @@ select{
     font-weight: 800;
 
 }
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
     margin-bottom: 0.5rem;
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 24px;
@@ -867,13 +888,13 @@ select{
     font-weight: 800;
 
 }
-    .testimonial .lead p i, .testimonial .lead p em, h2.testimonial .lead p i, h2.testimonial .lead p em, h3.testimonial .lead p i, h3.testimonial .lead p em, h4.testimonial .lead p i, h4.testimonial .lead p em, h5.testimonial .lead p i, h5.testimonial .lead p em{
+     .testimonial .lead p i,   .testimonial .lead p em,   h2.testimonial .lead p i,   h2.testimonial .lead p em,   h3.testimonial .lead p i,   h3.testimonial .lead p em,   h4.testimonial .lead p i,   h4.testimonial .lead p em,   h5.testimonial .lead p i,   h5.testimonial .lead p em{
     font-style: normal;
     --tw-text-opacity: 1;
     color: hsl(var(--af, var(--a)) / var(--tw-text-opacity));
 
 }
-    .headGrid .testimonial .lead p i, .headGrid .testimonial .lead p em, .headGrid h2.testimonial .lead p i, .headGrid h2.testimonial .lead p em, .headGrid h3.testimonial .lead p i, .headGrid h3.testimonial .lead p em, .headGrid h4.testimonial .lead p i, .headGrid h4.testimonial .lead p em, .headGrid h5.testimonial .lead p i, .headGrid h5.testimonial .lead p em{
+     .headGrid .testimonial .lead p i,   .headGrid .testimonial .lead p em,   .headGrid h2.testimonial .lead p i,   .headGrid h2.testimonial .lead p em,   .headGrid h3.testimonial .lead p i,   .headGrid h3.testimonial .lead p em,   .headGrid h4.testimonial .lead p i,   .headGrid h4.testimonial .lead p em,   .headGrid h5.testimonial .lead p i,   .headGrid h5.testimonial .lead p em{
     font-style: normal;
     --tw-text-opacity: 1 !important;
     color: hsl(var(--af, var(--a)) / var(--tw-text-opacity)) !important;
@@ -883,7 +904,7 @@ select{
         hayphens: auto;
     }
 
-    h4, .h4, h1.h4, h2.h4, h3.h4, h5.h4{
+    h4,  .h4,  h1.h4,  h2.h4,  h3.h4,  h5.h4{
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 20px;
     line-height: 26px;
@@ -895,7 +916,7 @@ select{
         .headline h4, .headline .h4, .headline h1.h4, .headline h2.h4, .headline h3.h4, .headline h5.h4 {
         }
 
-    h5, .h5, h1.h5, h2.h5, h3.h5{
+    h5,  .h5,  h1.h5,  h2.h5,  h3.h5{
     font-family: Mulish, Helvetica, Arial, sans-serif;
     font-size: 18px;
     line-height: 23px;
@@ -1091,6 +1112,104 @@ select{
 }
 
 *, ::before, ::after{
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+
+}
+
+::-webkit-backdrop{
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x:  ;
+    --tw-pan-y:  ;
+    --tw-pinch-zoom:  ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-ordinal:  ;
+    --tw-slashed-zero:  ;
+    --tw-numeric-figure:  ;
+    --tw-numeric-spacing:  ;
+    --tw-numeric-fraction:  ;
+    --tw-ring-inset:  ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / 0.5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur:  ;
+    --tw-brightness:  ;
+    --tw-contrast:  ;
+    --tw-grayscale:  ;
+    --tw-hue-rotate:  ;
+    --tw-invert:  ;
+    --tw-saturate:  ;
+    --tw-sepia:  ;
+    --tw-drop-shadow:  ;
+    --tw-backdrop-blur:  ;
+    --tw-backdrop-brightness:  ;
+    --tw-backdrop-contrast:  ;
+    --tw-backdrop-grayscale:  ;
+    --tw-backdrop-hue-rotate:  ;
+    --tw-backdrop-invert:  ;
+    --tw-backdrop-opacity:  ;
+    --tw-backdrop-saturate:  ;
+    --tw-backdrop-sepia:  ;
+
+}
+
+::backdrop{
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
     --tw-translate-x: 0;
     --tw-translate-y: 0;
     --tw-rotate: 0;
@@ -1191,8 +1310,8 @@ select{
     flex-shrink: 0;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -1213,15 +1332,18 @@ select{
     min-height: 3rem;
 
 }
-.btn-disabled, .btn[disabled]{
+.btn-disabled, 
+  .btn[disabled]{
     pointer-events: none;
 
 }
-.btn.loading, .btn.loading:hover{
+.btn.loading, 
+    .btn.loading:hover{
     pointer-events: none;
 
 }
-.btn.\!loading, .btn.\!loading:hover{
+.btn.\!loading, 
+    .btn.\!loading:hover{
     pointer-events: none !important;
 
 }
@@ -1318,7 +1440,8 @@ select{
     content: "";
 
 }
-.card.image-full:before, .card.image-full > *{
+.card.image-full:before, 
+    .card.image-full > *{
     grid-column-start: 1;
     grid-row-start: 1;
 
@@ -1374,8 +1497,8 @@ select{
 .label{
     display: flex;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     align-items: center;
     justify-content: space-between;
 
@@ -1395,14 +1518,15 @@ select{
     line-height: 2;
 
 }
-.input-group > *, .input-group > .input{
+.input-group > *, 
+  .input-group > .input{
     border-radius: 0px;
 
 }
 .link{
     cursor: pointer;
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
 
 }
 .menu{
@@ -1434,8 +1558,8 @@ select{
 .menu :where(li:not(.disabled):not(.menu-title)) > :where(*:not(ul)){
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     align-items: center;
     outline: 2px solid transparent;
     outline-offset: 2px;
@@ -1489,7 +1613,9 @@ select{
     align-items: center;
 
 }
-.modal-open, .modal:target, .modal-toggle:checked + .modal{
+.modal-open, 
+.modal:target, 
+.modal-toggle:checked + .modal{
     pointer-events: auto;
     visibility: visible;
     opacity: 1;
@@ -1504,8 +1630,8 @@ select{
     flex-shrink: 0;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+         user-select: none;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -1518,8 +1644,8 @@ select{
     min-height: 3rem;
 
 }
-.select-disabled, .select[disabled]{
-    pointer-events: none;
+.select[multiple]{
+    height: auto;
 
 }
 .table{
@@ -2794,6 +2920,54 @@ select{
     resize: both;
 
 }
+.snap-y{
+    scroll-snap-type: y var(--tw-scroll-snap-strictness);
+
+}
+.snap-mandatory{
+    --tw-scroll-snap-strictness: mandatory;
+
+}
+.snap-start{
+    scroll-snap-align: start;
+
+}
+.snap-center{
+    scroll-snap-align: center;
+
+}
+.scroll-mt-24{
+    scroll-margin-top: 6rem;
+
+}
+.scroll-mb-24{
+    scroll-margin-bottom: 6rem;
+
+}
+.scroll-mt-12{
+    scroll-margin-top: 3rem;
+
+}
+.scroll-mt-32{
+    scroll-margin-top: 8rem;
+
+}
+.scroll-mt-48{
+    scroll-margin-top: 12rem;
+
+}
+.scroll-mt-44{
+    scroll-margin-top: 11rem;
+
+}
+.scroll-pt-24{
+    scroll-padding-top: 6rem;
+
+}
+.scroll-pt-12{
+    scroll-padding-top: 3rem;
+
+}
 .grid-cols-12{
     grid-template-columns: repeat(12, minmax(0, 1fr));
 
@@ -3400,6 +3574,11 @@ select{
 .py-24{
     padding-top: 6rem;
     padding-bottom: 6rem;
+
+}
+.py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
 }
 .pt-1{
@@ -5108,56 +5287,56 @@ select{
 }
 @media (min-width: 768px){
 
-    h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1{
+    h1,  .h1,  h2.h1,  h3.h1,  h4.h1,  h5.h1{
         font-size: 35px;
         line-height: 45px;
         letter-spacing: 0;
 
     }
 
-    h2, .h2, h1.h2, h4.h2, h5.h2{
+    h2,  .h2,  h1.h2,  h4.h2,  h5.h2{
         font-size: 20px;
         line-height: 26px;
         letter-spacing: 0;
 
     }
 
-    h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3{
+    h3,  .h3,  h1.h3,  h2.h3,  .h4.h3,  h5.h3{
         font-size: 20px;
         line-height: 26px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 35px;
         line-height: 45px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 35px;
         line-height: 45px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 35px;
         line-height: 45px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 35px;
         line-height: 45px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 35px;
         line-height: 45px;
         letter-spacing: 0;
@@ -5429,11 +5608,6 @@ select{
 
     .md\:right-4{
         right: 1rem;
-
-    }
-
-    .md\:right-12{
-        right: 3rem;
 
     }
 
@@ -5844,21 +6018,6 @@ select{
 
     }
 
-    .md\:mt-4{
-        margin-top: 1rem;
-
-    }
-
-    .md\:ml-4{
-        margin-left: 1rem;
-
-    }
-
-    .md\:mr-4{
-        margin-right: 1rem;
-
-    }
-
     .md\:block{
         display: block;
 
@@ -5909,8 +6068,8 @@ select{
 
     }
 
-    .md\:h-24{
-        height: 6rem;
+    .md\:h-36{
+        height: 9rem;
 
     }
 
@@ -5941,11 +6100,6 @@ select{
 
     .md\:w-20{
         width: 5rem;
-
-    }
-
-    .md\:w-24{
-        width: 6rem;
 
     }
 
@@ -6071,13 +6225,6 @@ select{
     .md\:scale-100{
         --tw-scale-x: 1;
         --tw-scale-y: 1;
-        transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-
-    }
-
-    .md\:scale-150{
-        --tw-scale-x: 1.5;
-        --tw-scale-y: 1.5;
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 
     }
@@ -6214,6 +6361,12 @@ select{
     .md\:py-24{
         padding-top: 6rem;
         padding-bottom: 6rem;
+
+    }
+
+    .md\:py-6{
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
 
     }
 
@@ -6514,56 +6667,56 @@ select{
 
     }
 
-    h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1{
+    h1,  .h1,  h2.h1,  h3.h1,  h4.h1,  h5.h1{
         font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
 
     }
 
-    h2, .h2, h1.h2, h4.h2, h5.h2{
+    h2,  .h2,  h1.h2,  h4.h2,  h5.h2{
         font-size: 24px;
         line-height: 32px;
         letter-spacing: 0;
 
     }
 
-    h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3{
+    h3,  .h3,  h1.h3,  h2.h3,  .h4.h3,  h5.h3{
         font-size: 24px;
         line-height: 32px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         font-size: 40px;
         line-height: 48px;
         letter-spacing: 0;
@@ -7650,7 +7803,7 @@ select{
 }
 @media (min-width: 1366px){
 
-    h1, .h1, h2.h1, h3.h1, h4.h1, h5.h1{
+    h1,  .h1,  h2.h1,  h3.h1,  h4.h1,  h5.h1{
         margin-bottom: 1rem;
         font-size: 48px;
         line-height: 56px;
@@ -7658,17 +7811,17 @@ select{
 
     }
 
-    h2, .h2, h1.h2, h4.h2, h5.h2{
+    h2,  .h2,  h1.h2,  h4.h2,  h5.h2{
         font-size: 30px;
 
     }
 
-    h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3{
+    h3,  .h3,  h1.h3,  h2.h3,  .h4.h3,  h5.h3{
         font-size: 30px;
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         margin-bottom: 1rem;
         font-size: 48px;
         line-height: 56px;
@@ -7676,7 +7829,7 @@ select{
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         margin-bottom: 1rem;
         font-size: 48px;
         line-height: 56px;
@@ -7684,7 +7837,7 @@ select{
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         margin-bottom: 1rem;
         font-size: 48px;
         line-height: 56px;
@@ -7692,7 +7845,7 @@ select{
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         margin-bottom: 1rem;
         font-size: 48px;
         line-height: 56px;
@@ -7700,7 +7853,7 @@ select{
 
     }
 
-    .testimonial .lead p, h2.testimonial .lead p, h3.testimonial .lead p, h4.testimonial .lead p, h5.testimonial .lead p{
+     .testimonial .lead p,   h2.testimonial .lead p,   h3.testimonial .lead p,   h4.testimonial .lead p,   h5.testimonial .lead p{
         margin-bottom: 1rem;
         font-size: 48px;
         line-height: 56px;
@@ -8695,7 +8848,7 @@ select{
 }
 @media (min-width: 1536px){
 
-    h3, .h3, h1.h3, h2.h3, .h4.h3, h5.h3{
+    h3,  .h3,  h1.h3,  h2.h3,  .h4.h3,  h5.h3{
         font-size: 35px;
         line-height: 45px;
         letter-spacing: 0;
