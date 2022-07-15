@@ -76,7 +76,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                         <input type="hidden" x-model="url" value={props.url} />
 
                         <button 
-                            class="col-span-2 lg:col-span-1 button !px-1" 
+                            class="col-span-2 lg:col-span-1 button !px-1 !mb-0" 
                             type="submit"
                             id="addressCheckButton"
                             x-on:click={"check"}
