@@ -20,7 +20,7 @@ prototype(Stwz.Flickity:Content.ImageSlider.Item) < prototype(Neos.Neos:ContentC
         property = 'caption'
     }
 
-    target = ${ q(node).property('target') }
+    target = ${ q(node).property('target') }
     target.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
