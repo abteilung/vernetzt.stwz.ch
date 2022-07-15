@@ -27,11 +27,11 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                 <div class="hidden md:flex">{props.icon}</div>
                 <div class="w-full my-3">
                     <h3 class="mb-4 font-extrabold text-black">Glasfaseranschluss prüfen</h3>
-                    <div id="addressLookupForm" class="grid w-full grid-cols-4 gap-4 md:grid-cols-8 lg:grid-cols-9">
+                    <div id="addressLookupForm" class="grid w-full grid-cols-5 gap-4 md:grid-cols-8 lg:grid-cols-9">
                         
                         
 
-                        <div class="flex col-span-4 md:col-span-3">
+                        <div class="flex col-span-5 md:col-span-3">
                             <input class="w-20 !rounded-r-none" type="text" x-model="address.zip_code" placeholder="PLZ" readonly="" />
                             <div class="relative w-full">
                                 <input 
@@ -45,7 +45,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                                 <Stwz.AddressLookup:Component.FormValidation property="city" />
                             </div>
                         </div>
-                        <div class="col-span-2 md:col-span-3">
+                        <div class="col-span-3">
                             <input 
                                 id="streetname" 
                                 class="w-full" 
@@ -76,7 +76,7 @@ prototype(Stwz.AddressLookup:Component.Form) < prototype(Neos.Fusion:Component) 
                         <input type="hidden" x-model="url" value={props.url} />
 
                         <button 
-                            class="col-span-2 lg:col-span-1 button !px-1 !mb-0" 
+                            class="col-span-5 md:col-span-2 lg:col-span-1 button !px-1 !mb-0" 
                             type="submit"
                             id="addressCheckButton"
                             x-on:click={"check"}
